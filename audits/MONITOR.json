@@ -10,12 +10,13 @@
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         }
       },
-      "last_examined_sha": "fcd26a01d2c559c54fea30ad69c1b5a496712223",
+      "last_examined_sha": "234fba55e07b5edb38f471a376e3caa944cc70ce",
       "scoped_checkpoints": {
         "reset_js_source_and_live_fixture": "79b358f",
         "homepage_1440_390_noindex_and_exact_pages_sha": "79b358f",
         "campaign_attribution_and_prerequisite_deltas": "79b358f",
-        "new_prerequisite_catalog_delta_and_exact_build": "fcd26a0"
+        "new_prerequisite_catalog_delta_and_exact_build": "fcd26a0",
+        "catalog_publication_metadata_and_exact_pages_sha": "234fba5"
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -28,9 +29,10 @@
         "Detailed lesson, syllabus and exam evidence/semantic review since baseline, including new 22-course batch and introductions",
         "WIA-006 editorial/evidence release gate and WIA-007 human pilots/rubrics",
         "Browser differential sanitizer testing",
-        "Full factual/example/exam review of new fnd-102, fnd-105 and mod-201; structural/selected-claim triage only so far"
+        "Full factual/example/exam review of new fnd-102, fnd-105 and mod-201; structural/selected-claim triage only so far",
+        "Full bulk US-localization factual/code review; full new AI-instructor design/scenario/exercise review and future implementation checks"
       ],
-      "last_examined_sha": "d07b9db",
+      "last_examined_sha": "b59e47605ca20941a6d1c5e2e30888a6ab310838",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -39,15 +41,16 @@
         "WIA_009_original_vector_verified_fixed": "fdfc5bc",
         "runtime_learner_source_and_80_committed_tests": "fdfc5bc",
         "new_runtime_refund_free_enroll_deltas_and_94_tests": "37942d4",
-        "structural_inventory": "37942d4",
+        "structural_inventory": "b59e476",
         "WIA_010_original_race_verified_fixed": "e2d5361",
         "campaign_signup_admin_build_deltas_and_102_tests": "e42a0c5",
         "WIA_011_live_UI_handoff_verified_fixed": "site:a35e268/79b358f",
-        "fnd102_fnd105_mod201_structural_and_selected_lesson_triage": "9350a68"
+        "fnd102_fnd105_mod201_structural_and_selected_lesson_triage": "9350a68",
+        "US_validator_and_selected_instructor_design_triage": "b59e476"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-17T19:14:11Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1914.md"
+  "last_check_started_utc": "2026-10-17T20:16:11Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-2016.md"
 }
