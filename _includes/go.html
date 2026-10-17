@@ -1,6 +1,7 @@
 {%- comment -%}
   Reddit campaign landing page (/go/*). Everything about a course comes from _data/catalog.json
-  (titles, lessons, exam facts, prerequisites and their status); prices come live from the Worker
+  (titles, lessons, exam facts, prerequisites and their status, and prerequisiteEquivalents: free intro
+  courses that count in place of a not-yet-open prerequisite, shown as "free" and not blocking); prices come live from the Worker
   through [data-price-for] (site.js). Page front matter supplies only the copy:
     campaign_page  event name suffix for the landing view, e.g. go-dev  (inst.go-dev)
     cta_key        short page key used in CTA event names, e.g. dev  (inst.cta-free-dev)
@@ -19,6 +20,7 @@
     cta-prog-<key>            the program link
 {%- endcomment -%}
 {%- assign all = site.data.catalog.courses -%}
+{%- assign eqv = site.data.catalog.prerequisiteEquivalents -%}
 {%- assign f0 = all | where: "id", page.free[0] | first -%}
 <section class="go-hero">
   <div class="wrap go-wrap">
@@ -101,6 +103,7 @@
 
 {%- if page.paid and page.paid.size > 0 %}
 {%- assign has_wait = false %}
+{%- assign has_eq = false %}
 <section class="section tight" aria-labelledby="paid-h">
   <div class="wrap go-wrap">
     <div class="sec-head">
@@ -124,12 +127,21 @@
             <ul>
               {%- for p in c.prerequisites %}
               {%- assign pc = all | where: "id", p | first %}
+              {%- comment -%} eqc: an on-sale free intro course that counts in place of a not-yet-open
+                prerequisite (catalog prerequisiteEquivalents). A prerequisite it covers is treated as open. {%- endcomment -%}
+              {%- assign eqc = nil %}
+              {%- if pc and pc.status != "on_sale" %}
+              {%- for e in eqv[pc.id] %}{% assign ec = all | where: "id", e | first %}{% if eqc == nil and ec and ec.status == "on_sale" %}{% assign eqc = ec %}{% endif %}{% endfor %}
+              {%- endif %}
               {%- if pc %}
               {%- if pc.status == "on_sale" %}
               {%- assign deeper = false %}
-              {%- for q in pc.prerequisites %}{% assign qc = all | where: "id", q | first %}{% if qc and qc.status != "on_sale" %}{% assign deeper = true %}{% endif %}{% endfor %}
+              {%- for q in pc.prerequisites %}{% assign qc = all | where: "id", q | first %}{% if qc and qc.status != "on_sale" %}{% assign qok = false %}{% for e in eqv[qc.id] %}{% assign ec = all | where: "id", e | first %}{% if ec and ec.status == "on_sale" %}{% assign qok = true %}{% endif %}{% endfor %}{% unless qok %}{% assign deeper = true %}{% endunless %}{% endif %}{% endfor %}
               {%- if deeper %}{% assign has_wait = true %}{% endif %}
               <li><a href="/courses/{{ pc.id }}/">{{ pc.id }} {{ pc.title | escape }}</a> <span class="go-tag ok">{% if pc.level == "intro" %}free{% else %}available{% endif %}</span>{% if deeper %} <span class="go-tag wait">its own prerequisites include a course not open yet</span>{% endif %}</li>
+              {%- elsif eqc %}
+              {%- assign has_eq = true %}
+              <li><a href="/courses/{{ pc.id }}/">{{ pc.id }} {{ pc.title | escape }}</a> — not open yet; the free <a href="/courses/{{ eqc.id }}/">{{ eqc.id }} {{ eqc.title | escape }}</a> counts instead <span class="go-tag ok">free</span></li>
               {%- else %}
               {%- assign has_wait = true %}
               <li><a href="/courses/{{ pc.id }}/">{{ pc.id }} {{ pc.title | escape }}</a> <span class="go-tag wait">not open yet (waitlist)</span></li>
@@ -161,6 +173,9 @@
       {%- endif %}
       {%- endif %}
     </ul>
+    {%- if has_eq %}
+    <p class="small go-after">Prerequisites are recommendations. Where a beginner course is not open yet, the free intro course named next to it counts in its place.</p>
+    {%- endif %}
     {%- if has_wait %}
     <p class="small go-after"><b>"Not open yet"</b> means that prerequisite course is still on the waitlist. Read the course page before you buy and check you already have the background it assumes.</p>
     {%- endif %}

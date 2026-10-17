@@ -141,7 +141,16 @@ layout: default
           {%- assign pc = site.data.catalog.courses | where: "id", w | first -%}
           {%- if pc %}
           {%- assign rest = p | remove_first: w | strip %}
-        <li><a href="/courses/{{ pc.id }}/">{{ pc.title | escape }}</a> <span class="faint mono small">{{ pc.id }}</span>{% if rest != "" %} <span class="faint">— {{ rest | escape }}</span>{% endif %}</li>
+          {%- comment -%} A not-yet-open course with a free intro equivalent (catalog-seed.json
+            prerequisiteEquivalents): name the free course that counts in its place. {%- endcomment -%}
+          {%- assign eqc = nil -%}
+          {%- if pc.status != "on_sale" -%}
+            {%- for e in site.data.catalog.prerequisiteEquivalents[pc.id] -%}
+              {%- assign ec = site.data.catalog.courses | where: "id", e | first -%}
+              {%- if eqc == nil and ec and ec.status == "on_sale" %}{% assign eqc = ec %}{% endif -%}
+            {%- endfor -%}
+          {%- endif %}
+        <li><a href="/courses/{{ pc.id }}/">{{ pc.title | escape }}</a> <span class="faint mono small">{{ pc.id }}</span>{% if rest != "" %} <span class="faint">— {{ rest | escape }}</span>{% endif %}{% if eqc %} <span class="faint">— not open yet; the free</span> <a href="/courses/{{ eqc.id }}/">{{ eqc.title | escape }}</a> <span class="faint mono small">{{ eqc.id }}</span> <span class="faint">counts instead</span>{% endif %}</li>
           {%- else %}
         <li>{{ p | escape }}</li>
           {%- endif %}
