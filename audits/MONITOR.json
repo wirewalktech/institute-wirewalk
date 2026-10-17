@@ -2,30 +2,40 @@
   "review_date": "2026-10-17",
   "repositories": {
     "wirewalktech/institute-wirewalk": {
-      "reviewed_sha": "39ca6b97fe64382d54d67a332b270a72ec6d634e",
-      "scope": "Holding-page source, Jekyll configuration, protocol and audit records reviewed. Exact-SHA Pages build is built; ordinary HTTPS returns 200 and page retains noindex. Responsive visual verification pending."
+      "reviewed_sha": "3368c2d",
+      "scope": "Holding-page source, Jekyll configuration, protocol and audit records reviewed. Exact-SHA Pages build is built; ordinary HTTPS returns 200 and page retains noindex. Responsive visual verification pending.",
+      "branches_examined": {
+        "site-v1": {
+          "sha": "c6d7b3d81f71f527a9884d8c878b7fb9ff86d53f",
+          "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
+        }
+      }
     },
     "wirewalktech/wirewalk-institute-worker": {
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
       "scope": "Whole-repository cursor deliberately remains at baseline: new course content still requires detailed factual/editorial review. Scoped checkpoints track completed source/metric/fix review without claiming full content approval.",
       "outstanding": [
-        "Detailed review of new and existing lessons and syllabuses since baseline",
-        "Independent semantic review of rewritten exam items, mapping and distractor validity",
-        "New Markdown renderer finding WIA-009 pending coordinator fix and verification",
-        "WIA-006 source evidence/editorial release process; WIA-007 prelaunch rubrics and timing pilots",
-        "Runtime/security and permutation grading review once src/test are committed",
-        "Responsive visual verification"
+        "WIA-010 refund/reconciliation race: fix and verify local interleaving reproduction",
+        "WIA-011 admin reset-link / site-v1 fragment handoff mismatch",
+        "Remaining admin/API/console semantic review and full site-v1 review",
+        "Independent billing/webhook/refund code review in orders repository branch institute",
+        "Detailed lesson, syllabus and exam semantic/evidence review since baseline",
+        "WIA-006 editorial/evidence release gate and WIA-007 prelaunch pilots/rubrics",
+        "Free-intro enrollment integration once implemented",
+        "Browser differential sanitizer tests and responsive/accessibility review"
       ],
-      "last_examined_sha": "d816759",
+      "last_examined_sha": "fdfc5bcfbd903087c6772508c1ec2dc165c318f2",
       "scoped_checkpoints": {
-        "validator_build_and_commit_helper_source": "d816759",
+        "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "d816759",
         "WIA_002_003_004_005_008_fix_followup": "d816759",
-        "protocol_and_board_responses": "d816759"
+        "protocol_and_board_responses": "fdfc5bc",
+        "WIA_009_original_vector_verified_fixed": "fdfc5bc",
+        "runtime_learner_source_and_80_committed_tests": "fdfc5bc"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-17T15:13:40Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1513.md"
+  "last_check_started_utc": "2026-10-17T16:11:40Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1611.md"
 }
