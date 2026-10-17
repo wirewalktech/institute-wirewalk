@@ -1,56 +1,213 @@
 ---
-title: Wirewalk Institute of AI
+layout: default
+description: "Professional AI courses from foundations to executive level across 18 tracks. Every course ends in a timed, automatically scored exam and a verifiable certificate of completion and assessment."
 ---
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wirewalk Institute of AI</title>
-<meta name="description" content="{{ site.description | strip }}">
-<!-- Holding page while the catalog is built. noindex until the full site replaces it. -->
-<meta name="robots" content="noindex">
-<style>
-:root{--bg:#FAF9F5;--alt:#F4F2EC;--ln:#E4E0D5;--tx:#1F1E1D;--tx2:#5C5A54;--tx3:#8A8781;--ac:#D97757;--ac2:#C2603F;
---sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,'Helvetica Neue',Arial,sans-serif;--pad:clamp(20px,4vw,48px)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 var(--sans)}
-.wrap{max-width:1160px;margin:0 auto;padding:0 var(--pad)}
-header{border-top:3px solid rgba(217,119,87,.28);padding:22px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--tx);text-decoration:none}
-.mark{display:grid;grid-template-columns:repeat(2,9px);gap:3px}.mark i{width:9px;height:9px;background:var(--ac);display:block}
-.mark i:nth-child(2){opacity:.7}.mark i:nth-child(3){opacity:.45}.mark i:nth-child(4){background:transparent;box-shadow:inset 0 0 0 1.8px var(--ac)}
-main{padding:clamp(48px,9vw,120px) 0}
-.eyebrow{color:var(--ac2);font-weight:600;letter-spacing:.02em;margin:0 0 12px}
-h1{font-size:clamp(31px,3.5vw,44px);font-weight:600;line-height:1.15;margin:0 0 18px;text-wrap:balance;max-width:20ch}
-.lead{font-size:clamp(18px,1.6vw,21px);color:var(--tx2);max-width:60ch;margin:0 0 32px}
-ul{list-style:none;padding:0;margin:0 0 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
-li{background:var(--alt);border:1px solid var(--ln);padding:12px 14px;border-radius:6px;color:var(--tx2);font-size:15px}
-a.btn{display:inline-block;background:var(--ac);color:#fff;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600}
-a.btn:hover{background:var(--ac2)}
-footer{border-top:1px solid var(--ln);padding:24px 0;color:var(--tx3);font-size:14px}
-footer a{color:var(--tx2)}
-</style>
-</head>
-<body>
-<header><div class="wrap"><a class="brand" href="/"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Wirewalk Institute of AI</a></div></header>
-<main class="wrap">
-  <p class="eyebrow">Opening soon</p>
-  <h1>Professional AI training, assessed and certified.</h1>
-  <p class="lead">Courses from foundations to expert level, each ending in an automated exam and a verifiable certificate of completion. Built by the team behind Wirewalk's AI and HPC infrastructure practice.</p>
-  <ul>
-    <li>AI models and vendors</li>
-    <li>Prompt and context engineering</li>
-    <li>Building AI applications and agents</li>
-    <li>Model development and fine-tuning</li>
-    <li>Training at scale</li>
-    <li>AI infrastructure, HPC and hardware</li>
-    <li>AI in software development</li>
-    <li>AI security and AI for cyber defense</li>
-    <li>Governance, risk and compliance</li>
-    <li>Executive and board programs</li>
-  </ul>
-  <a class="btn" href="mailto:sales@wirewalk.com?subject=Wirewalk%20Institute%20of%20AI%20%E2%80%94%20notify%20me">Tell me when it opens</a>
-</main>
-<footer><div class="wrap">© {{ 'now' | date: '%Y' }} Wirewalk · <a href="https://www.wirewalk.com/">wirewalk.com</a> · <a href="mailto:sales@wirewalk.com">sales@wirewalk.com</a></div></footer>
-</body>
-</html>
+{%- assign all = site.data.catalog.courses -%}
+{%- assign live = all | where: "status", "on_sale" -%}
+{%- assign flagships = all | where: "flagship", true | where: "status", "on_sale" -%}
+{%- assign levels = "basic,intermediate,expert,executive" | split: "," -%}
+{%- assign intros = all | where: "level", "intro" -%}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Wirewalk Institute of AI</p>
+      <h1>Learn AI properly.<br> <span class="l2"><em>Prove it</em> with an exam.</span></h1>
+      <p class="lead">Practical courses on the models, tools and infrastructure your work now depends on — from a first plain-language grounding to GPU clusters and board-level governance. Each course ends in a timed exam and a certificate anyone can verify.</p>
+      <div class="cta-row">
+        <a class="btn" href="/courses/">Browse the catalog <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="/certification/">How certification works</a>
+      </div>
+      <div class="facts">
+        <div><b>{{ all.size }}</b><span>courses in the catalog</span></div>
+        <div><b>{{ site.data.catalog.tracks.size }}</b><span>subject tracks</span></div>
+        <div><b>4</b><span>levels, Basic to Executive</span></div>
+        <div><b>{{ live.size }}</b><span>open for enrolment now</span></div>
+      </div>
+    </div>
+    <div class="hero-vis" aria-hidden="true">
+      {%- assign h1c = all | where: "id", "bld-201" | first -%}
+      {%- assign h2c = all | where: "id", "inf-201" | first -%}
+      <div class="stack-card c1">
+        <div class="sc-top"><span class="code">{{ h2c.id }}</span><span class="pill lvl">{{ h2c.levelLabel | escape }}</span></div>
+        <h4>{{ h2c.title | escape }}</h4>
+        <p>{{ h2c.hours }} hours · {{ h2c.lessonCount }} lessons · {{ h2c.exam.questions }}-question exam</p>
+      </div>
+      <div class="stack-card c2">
+        <div class="sc-top"><span class="code">{{ h1c.id }}</span><span class="pill lvl">{{ h1c.levelLabel | escape }}</span></div>
+        <h4>{{ h1c.title | escape }}</h4>
+        <p>{{ h1c.hours }} hours · {{ h1c.lessonCount }} lessons · {{ h1c.exam.questions }}-question exam</p>
+      </div>
+      {% include cert-sample.html class="cert-mini" course=h1c.title %}
+    </div>
+  </div>
+</section>
+
+{%- if intros.size > 0 %}
+<section class="section start-free" aria-labelledby="free-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Start free</p>
+        <h2 id="free-h">New to AI? Begin with a free one-hour course.</h2>
+        <p>Each intro course takes about an hour and ends in a short exam and a verifiable certificate, like every course here. Then go deeper with the paid courses it points to.</p>
+      </div>
+      <a class="link-arrow" href="/courses/?free=1">All free courses <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cards">
+      {%- for c in intros limit: 6 %}
+      {% include course-card.html course=c %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section alt" aria-labelledby="levels-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Four levels</p>
+        <h2 id="levels-h">Start where you are. Go as deep as the job needs.</h2>
+        <p>Every course sits at one level. Prerequisites are named on each course page, so you can see the path before you enrol.</p>
+      </div>
+    </div>
+    <div class="ladder">
+      {%- for l in levels %}
+      {%- assign L = site.data.catalog.levels[l] %}
+      {%- assign n = all | where: "level", l | size %}
+      <a class="rung" data-l="{{ forloop.index }}" href="/courses/?level={{ l }}" style="text-decoration:none;color:inherit">
+        <span class="step" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <h3>{{ L.label | escape }}</h3>
+        <p>{% case l %}{% when "basic" %}No prior experience assumed. Plain-language foundations and confident everyday use of the major assistants.{% when "intermediate" %}For practitioners who use or build with AI: prompting, applications, vendor platforms, security and governance in practice.{% when "expert" %}Deep technical work for specialists: training at scale, GPU infrastructure, serving, model development.{% else %}Decision-level programs for leaders, boards and risk owners: strategy, oversight, investment and accountability.{% endcase %}</p>
+        <span class="meta"><span><b>{{ n }}</b> courses</span><span>{{ L.blurb | split: "." | first | escape }}</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="tracks-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">The map</p>
+        <h2 id="tracks-h">Eighteen tracks across the whole AI stack</h2>
+        <p>From using assistants well, through building and training models, down to the GPUs, networks and power underneath — and up to the security, governance and leadership decisions on top.</p>
+      </div>
+      <a class="link-arrow" href="/tracks/">All tracks <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="tmap">
+      {%- for t in site.data.catalog.tracks %}
+      {%- assign tc = all | where: "track", t.id %}
+      {%- assign nb = tc | where: "level", "basic" | size %}{% assign ni = tc | where: "level", "intermediate" | size %}{% assign nx = tc | where: "level", "expert" | size %}{% assign ne = tc | where: "level", "executive" | size %}
+      {%- assign nl = tc | where: "status", "on_sale" | size %}
+      <a class="tile" href="/tracks/{{ t.id }}/">
+        <span class="tile-top"><span class="code">{{ t.prefix | escape }}</span><span class="cnt">{{ tc.size }} courses</span></span>
+        <h3>{{ t.title | escape }}</h3>
+        <p>{{ t.summary | escape }}</p>
+        <span class="spread" role="img" aria-label="{{ nb }} basic, {{ ni }} intermediate, {{ nx }} expert, {{ ne }} executive">{% if nb > 0 %}<i class="b" style="flex:{{ nb }}"></i>{% endif %}{% if ni > 0 %}<i class="i" style="flex:{{ ni }}"></i>{% endif %}{% if nx > 0 %}<i class="x" style="flex:{{ nx }}"></i>{% endif %}{% if ne > 0 %}<i class="e" style="flex:{{ ne }}"></i>{% endif %}</span>
+        {%- if nl > 0 %}<span class="live">{{ nl }} available now</span>{% endif %}
+      </a>
+      {%- endfor %}
+    </div>
+    <div class="legend" aria-hidden="true"><span><i class="b"></i>Basic</span><span><i class="i"></i>Intermediate</span><span><i class="x"></i>Expert</span><span><i class="e"></i>Executive</span></div>
+  </div>
+</section>
+
+<section class="section alt" aria-labelledby="flag-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Flagship courses</p>
+        <h2 id="flag-h">Open for enrolment now</h2>
+        <p>Complete courses with every lesson written and the exam bank reviewed. More open each month; the rest of the catalog takes waitlist sign-ups.</p>
+      </div>
+      <a class="link-arrow" href="/courses/?status=on_sale">All available courses <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cards">
+      {%- for c in flagships limit: 6 %}
+      {% include course-card.html course=c %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section panel" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-h">Study, sit the exam, get a certificate anyone can check</h2>
+        <p>The same four steps for every course, at every level.</p>
+      </div>
+    </div>
+    <ol class="steps" style="padding:0;margin:0">
+      <li><h3>Work through the lessons</h3><p>Written lessons with worked examples and hands-on exercises, at your own pace. Your progress is saved as you go.</p></li>
+      <li><h3>Unlock the exam</h3><p>When every lesson is complete, a timed exam opens: questions drawn from a larger bank across every module, options shuffled.</p></li>
+      <li><h3>Pass at 80%</h3><p>Scored automatically the moment you submit. Fall short and you see how you did per module, then retry after 24 hours.</p></li>
+      <li><h3>Share a verifiable certificate</h3><p>A certificate with a unique ID and a public verification page. Add it to LinkedIn in one click.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="prog-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Certification programs</p>
+        <h2 id="prog-h">Four courses, one program certificate</h2>
+        <p>Programs bundle the courses a role needs, in a sensible order, at a lower price than buying them separately. Pass all four and the program certificate is issued automatically.</p>
+      </div>
+      <a class="link-arrow" href="/programs/">All {{ site.data.catalog.programs.size }} programs <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="prog-list">
+      {%- for p in site.data.catalog.programs limit: 3 %}
+      {% include program-card.html program=p %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt" aria-labelledby="cert-h">
+  <div class="wrap split r" style="align-items:center">
+    <div>
+      {% include cert-sample.html %}
+    </div>
+    <div>
+      <p class="eyebrow">The certificate</p>
+      <h2 id="cert-h">Honest about what it proves</h2>
+      <p class="muted">A Wirewalk certificate states that the named person completed every lesson of a course and passed its timed exam, with the score and the date. Employers can confirm it in seconds at <a href="/verify/">institute.wirewalk.com/verify</a>.</p>
+      <p class="muted">It is a certificate of completion and assessment from an independent institute. It is not an accredited qualification, a licence, or a certification from any AI vendor — and we say so on every course page.</p>
+      <div class="cta-row" style="margin-top:22px">
+        <a class="btn ghost" href="/certification/">What a certificate attests</a>
+        <a class="link-arrow" href="/verify/">Verify a certificate <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section panel" aria-labelledby="teams-h">
+  <div class="wrap cta-band">
+    <div>
+      <p class="eyebrow">Teams and enterprise</p>
+      <h2 id="teams-h">Training a team? Buy seats, pay by invoice.</h2>
+      <p>Choose courses or whole programs for a group, pay by card, or ask for a quote, invoice or purchase order. We will help you pick a path for each role.</p>
+      <div class="cta-row" style="margin-top:26px">
+        <a class="btn" href="/teams/">Talk to us about a team <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn ghost" href="mailto:sales@wirewalk.com?subject=Wirewalk%20Institute%20team%20training">sales@wirewalk.com</a>
+      </div>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Invoices and purchase orders</b>For organisations that cannot pay by card.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>A path per role</b>Practitioners, engineers, infrastructure, security, governance and executives.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Verifiable results</b>Every certificate checks out against our public register.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tight" aria-label="Independence">
+  <div class="wrap-n" style="text-align:center">
+    <p class="muted" style="margin:0 auto;max-width:62ch">The Wirewalk Institute of AI is independent. Our courses teach publicly documented products from many vendors and are not affiliated with or endorsed by any of them. Product and company names are trademarks of their respective owners.</p>
+  </div>
+</section>

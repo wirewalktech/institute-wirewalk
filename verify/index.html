@@ -1,0 +1,23 @@
+---
+title: Verify a certificate
+description: "Check that a Wirewalk Institute of AI certificate is genuine and has not been revoked."
+---
+<div class="wrap">
+  <header class="page-head" style="padding-bottom:24px">
+    <p class="eyebrow">Certificate register</p>
+    <h1>Verify a certificate</h1>
+    <p class="lead">Enter the ID printed at the top right of the certificate. The result comes straight from our register at the moment you check.</p>
+  </header>
+</div>
+<div class="wrap" style="padding-bottom:clamp(64px,9vw,120px)">
+  <div class="verify-box">
+    <form class="verify-form" id="verify-form" action="/verify/" method="get">
+      <label class="sr" for="cert-id">Certificate ID</label>
+      <input type="text" id="cert-id" name="id" placeholder="WIA-XXXX-XXXX-XXXX" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="40" required>
+      <button class="btn" type="submit">Verify</button>
+    </form>
+    <noscript><p class="note" style="margin-top:16px">Verification needs JavaScript. Without it, email <a href="mailto:sales@wirewalk.com?subject=Certificate%20verification">sales@wirewalk.com</a> with the certificate ID and we will confirm it.</p></noscript>
+    <div id="verify-result" class="result" tabindex="-1" aria-live="polite" hidden></div>
+    <p class="small faint" style="margin-top:28px">A valid result confirms the certificate was issued by the Wirewalk Institute of AI and has not been revoked. Read <a href="/certification/#limits">what a certificate attests and what it does not</a> before relying on it.</p>
+  </div>
+</div>

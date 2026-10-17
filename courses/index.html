@@ -1,0 +1,97 @@
+---
+title: Course catalog
+description: "Every Wirewalk Institute of AI course, filterable by track, level, vendor and availability. Each course ends in a timed exam and a verifiable certificate."
+---
+{%- assign all = site.data.catalog.courses -%}
+{%- assign live = all | where: "status", "on_sale" -%}
+{%- assign levels = "intro,basic,intermediate,expert,executive" | split: "," -%}
+{%- assign free_n = all | where: "listPrice", 0 | size -%}
+<div class="wrap">
+  <header class="page-head" style="padding-bottom:28px">
+    <p class="eyebrow">Course catalog</p>
+    <h1>{{ all.size }} courses. Find yours.</h1>
+    <p class="lead">{{ live.size }} are open for enrolment now; the rest take waitlist sign-ups and open as their lessons and exams pass review.</p>
+  </header>
+</div>
+
+<div class="wrap" style="padding-bottom:clamp(56px,8vw,110px)" data-catalog>
+  <div class="catalog">
+    <form class="filters" id="filter-form" role="search" aria-label="Filter courses">
+      <div class="field">
+        <label for="f-q">Search</label>
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="f-q" name="q" placeholder="Title, topic, tool or code" autocomplete="off">
+        </div>
+      </div>
+      <div class="field">
+        <span class="flabel" id="lvl-l">Level</span>
+        <div class="chips" role="group" aria-labelledby="lvl-l">
+          {%- for l in levels %}
+          <button type="button" class="chip" data-level-chip="{{ l }}" aria-pressed="false">{{ site.data.catalog.levels[l].label | escape }}</button>
+          {%- endfor %}
+        </div>
+      </div>
+      <div class="field">
+        <span class="flabel" id="st-l">Availability</span>
+        <div class="chips" role="group" aria-labelledby="st-l">
+          <button type="button" class="chip" data-status-chip="" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-status-chip="on_sale" aria-pressed="false">Available now</button>
+          <button type="button" class="chip" data-status-chip="waitlist" aria-pressed="false">Waitlist</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="flabel" id="pr-l">Price</span>
+        <div class="chips" role="group" aria-labelledby="pr-l">
+          <button type="button" class="chip" data-free-chip aria-pressed="false">Free</button>
+        </div>
+      </div>
+      <button type="button" class="btn ghost sm filters-toggle" aria-expanded="false" aria-controls="more-filters">More filters</button>
+      <div class="more" id="more-filters">
+        <div class="field">
+          <label for="f-track">Track</label>
+          <select id="f-track" name="track">
+            <option value="">All tracks</option>
+            {%- for t in site.data.catalog.tracks %}
+            <option value="{{ t.id }}">{{ t.title | escape }} ({{ t.courseCount }})</option>
+            {%- endfor %}
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-vendor">Vendor or tool</label>
+          <select id="f-vendor" name="vendor">
+            <option value="">Any vendor</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-sort">Sort</label>
+          <select id="f-sort" name="sort">
+            <option value="">Available first</option>
+            <option value="track">By track</option>
+            <option value="level">By level</option>
+            <option value="title">A–Z</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="result-mini" id="result-mini" aria-controls="course-grid"><b>{{ all.size }}</b> courses</button>
+      <p class="small faint" style="margin:0">Vendor names identify the products a course teaches. No vendor has endorsed or sponsored any course.</p>
+    </form>
+
+    <div>
+      <div class="results-bar">
+        <p id="result-count" aria-live="polite"><b>{{ all.size }}</b> courses</p>
+        <button type="button" class="clear" id="clear-filters" hidden>Clear filters</button>
+      </div>
+      <div class="cards" id="course-grid">
+        {%- for c in all %}
+        {% include course-card.html course=c %}
+        {%- endfor %}
+      </div>
+      <div class="empty" id="empty" hidden>
+        <p style="margin:0 0 12px"><strong>No courses match those filters.</strong></p>
+        <p class="small" style="margin:0 0 16px">Try fewer filters, or tell us what you were looking for — it helps us decide what to write next.</p>
+        <button type="button" class="btn ghost sm" id="clear-filters-2">Clear filters</button>
+      </div>
+    </div>
+  </div>
+</div>

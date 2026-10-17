@@ -1,0 +1,16 @@
+{%- assign pp_ = include.program -%}
+<article class="prog">
+  <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 1.6 2.9-.2 1 2.7 2.3 1.8-.9 2.8.9 2.8-2.3 1.8-1 2.7-2.9-.2L12 21l-2.4-1.6-2.9.2-1-2.7-2.3-1.8.9-2.8-.9-2.8 2.3-1.8 1-2.7 2.9.2z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.6"/></svg></span>
+  <h3><a href="/programs/{{ pp_.id }}/">{{ pp_.title | escape }}</a></h3>
+  <p>{{ pp_.summary | escape }}</p>
+  <ol>
+    {%- for cid in pp_.courses %}
+    {%- assign ppc_ = site.data.catalog.courses | where: "id", cid | first %}
+    <li>{{ ppc_.title | escape }}</li>
+    {%- endfor %}
+  </ol>
+  <div class="card-foot">
+    <span>{{ pp_.courses | size }} courses · {{ pp_.hours }} h</span>
+    <span class="price" data-price-for="{{ pp_.id }}" data-kind="program"><span class="fallback">{% if pp_.status == 'on_sale' %}See price at checkout{% else %}Opens with its courses{% endif %}</span></span>
+  </div>
+</article>

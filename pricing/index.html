@@ -1,0 +1,81 @@
+---
+title: Pricing
+description: "How Wirewalk Institute of AI courses and certification programs are priced: one price per course by level, program bundles, sales, discount codes, and invoices for teams."
+---
+{%- assign all = site.data.catalog.courses -%}
+{%- assign levels = "basic,intermediate,expert,executive" | split: "," -%}
+<script type="application/json" id="course-levels">{ {%- for c in all -%}"{{ c.id }}":"{{ c.level }}"{% unless forloop.last %},{% endunless %}{%- endfor -%} }</script>
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Pricing</p>
+    <h1>One price per course. No subscription.</h1>
+    <p class="lead">You pay once for a course, and its lessons, exam attempts and certificate are included. Prices are set by level and shown live from our billing system, so what you see here is what checkout charges before any code or offer.</p>
+    <p class="free-line"><span class="pill ok">Free</span> Intro courses are free: about an hour each, with the same exam and verifiable certificate. Sign in and enroll, no card needed. <a href="/courses/?free=1">See the free courses</a>.</p>
+  </header>
+</div>
+
+<div class="wrap" style="padding-bottom:clamp(48px,7vw,90px)">
+  <div class="tbl-wrap" role="region" aria-labelledby="price-cap" tabindex="0">
+    <table class="tbl-stack">
+      <caption class="sr" id="price-cap">Course prices by level</caption>
+      <thead><tr><th scope="col">Level</th><th scope="col">Typical course price</th><th scope="col">Who it is for</th><th scope="col">Exam</th></tr></thead>
+      <tbody>
+        {%- for l in levels %}
+        {%- assign L = site.data.catalog.levels[l] %}
+        {%- assign lc = all | where: "level", l %}
+        {%- assign ex = lc | first %}
+        <tr>
+          <th scope="row" class="lvl-h">{{ L.label | escape }}<br><a class="small" href="/courses/?level={{ l }}">{{ lc.size }} courses</a></th>
+          <td class="t-price"><span class="price" data-level-price="{{ l }}"><span class="fallback">See price at checkout</span></span></td>
+          <td class="muted t-who">{{ L.blurb | escape }}</td>
+          <td class="muted nowrap t-exam"><span class="t-lbl">Exam: </span>{{ ex.exam.questions }} questions</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="small faint" style="margin-top:12px">"Typical" is the price most courses at that level carry today. Each course page shows its own price, and any sale on it, before you buy.</p>
+</div>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Ways to save</p><h2>Bundles, sales and codes</h2></div></div>
+    <div class="grid3">
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>Certification programs</h3>
+        <p>Four courses for a role, bought together for less than separately. Each program page shows the bundle price against the separate total. <a href="/programs/">See programs</a>.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></div>
+        <h3>Sales with an end date</h3>
+        <p>When a course is on sale, its page shows the sale price, the regular price struck through, and a countdown to the moment the sale ends. No fake timers: the end date is the one checkout uses.</p>
+      </div>
+      <div class="feature">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+        <h3>Codes and personal offers</h3>
+        <p>Enter a discount code in your cart. If an offer applies to you or your organisation, it appears in the cart once you are signed in. The single best offer is applied to each item — a program's bundle saving counts as an offer — and offers never stack.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Paying</h2>
+      <p class="muted">Checkout is handled by Stripe; we never see your card details. Your enrolment starts as soon as Stripe confirms the payment.</p>
+      <p class="muted">Organisations that need a quote, an invoice or a purchase order can <a href="/teams/">arrange that with us</a> instead of paying by card.</p>
+    </div>
+    <div>
+      <h2>What every course includes</h2>
+      <ul class="ticks">
+        <li>All lessons in the course, self-paced</li>
+        <li>A timed exam, with up to three attempts</li>
+        <li>A certificate of completion and assessment with a public verification page</li>
+        <li>Module-level feedback after each attempt</li>
+      </ul>
+      <p class="small faint">Prices are in US dollars.</p>
+    </div>
+  </div>
+</section>

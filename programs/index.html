@@ -1,0 +1,26 @@
+---
+title: Certification programs
+description: "Certification programs bundle four Wirewalk Institute of AI courses for a role, at a lower price than buying them separately, with a program certificate on completion."
+---
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Certification programs</p>
+    <h1>A program certificate for the role, not just the topic</h1>
+    <p class="lead">Each program is four courses chosen for a role and taken in order. Pass every course exam and the program certificate is issued automatically. Bought together, a program costs less than its courses bought separately.</p>
+  </header>
+</div>
+<div class="wrap" style="padding-bottom:clamp(40px,6vw,72px)">
+  <h2 class="sr">All certification programs</h2>
+  <div class="prog-list">
+    {%- for p in site.data.catalog.programs %}
+    {% include program-card.html program=p %}
+    {%- endfor %}
+  </div>
+</div>
+<section class="section alt tight">
+  <div class="wrap grid3">
+    <div class="feature"><h3>Opens with its courses</h3><p>A program goes on sale once every course in it is open. Until then, buy the courses that are already available and they still count towards the program.</p></div>
+    <div class="feature"><h3>Issued automatically</h3><p>When you hold a course certificate for all four courses, the program certificate is issued with its own ID and verification page.</p></div>
+    <div class="feature"><h3>For a whole team</h3><p>Enrolling several people in a program? <a href="/teams/">Ask about team seats</a> and invoicing.</p></div>
+  </div>
+</section>

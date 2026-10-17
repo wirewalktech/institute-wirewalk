@@ -1,0 +1,101 @@
+---
+title: How certification works
+description: "How Wirewalk Institute of AI exams are run and scored, what a certificate of completion and assessment attests, what it does not, and how anyone can verify one."
+---
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Certification</p>
+    <h1>An exam you have to earn, and a certificate that says exactly what it means</h1>
+    <p class="lead">Every course ends in a timed, automatically scored exam. Pass it and you receive a certificate of completion and assessment that anyone can check against our public register.</p>
+  </header>
+</div>
+
+<section class="section panel" aria-labelledby="assess-h">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Assessment</p><h2 id="assess-h">How the exam works</h2></div></div>
+    <ol class="steps" style="padding:0;margin:0">
+      <li><h3>Earned access</h3><p>The exam unlocks only after you have completed every lesson in the course.</p></li>
+      <li><h3>A fresh paper</h3><p>Questions are drawn from a larger bank, spread across every module, and the answer options are shuffled for each attempt.</p></li>
+      <li><h3>Timed and scored</h3><p>The clock runs on our server. Answers are scored automatically on submission, and the pass mark is shown on each course page — 80% for every current course.</p></li>
+      <li><h3>Retakes with a pause</h3><p>Miss the mark and you can try again after 24 hours, up to three attempts per course.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>The rules, in full</h2>
+      <ul class="ticks">
+        <li><strong>Question count and time limit</strong> are set per course and listed on its page: typically 20 questions in 40–45 minutes at Basic and Intermediate, 25 in 50–60 at Expert, and 15 in 30 at Executive.</li>
+        <li><strong>Questions with several correct answers</strong> score only when you select exactly the right set — no part marks.</li>
+        <li><strong>The deadline is firm.</strong> A short grace period covers network delay; a paper submitted later than that is scored as unanswered.</li>
+        <li><strong>Interrupted?</strong> Opening the exam again resumes your open attempt with the same clock rather than starting a new one.</li>
+        <li><strong>Feedback</strong> after each attempt shows your score per module, so you know what to revise. We never release the answer key.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="note ac">
+        <p style="margin:0 0 10px"><strong>Why no answer key?</strong></p>
+        <p style="margin:0">The bank is reused across attempts and learners. Publishing answers would make every later certificate worth less — including yours. Module-level feedback tells you where to look; the lessons have the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="limits" aria-labelledby="att-h">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">The certificate</p><h2 id="att-h">What it attests — and what it does not</h2></div></div>
+    <div class="split">
+      <div class="feature">
+        <h3>It attests that</h3>
+        <ul class="ticks" style="margin-top:12px">
+          <li>The account holder completed every lesson of the named course.</li>
+          <li>They passed its timed exam, with the score and date shown.</li>
+          <li>The certificate was issued by the Wirewalk Institute of AI and has not been revoked, as the verification page confirms.</li>
+        </ul>
+      </div>
+      <div class="feature">
+        <h3>It does not attest that</h3>
+        <ul class="ticks" style="margin-top:12px">
+          <li>The holder's identity was checked. The name is the one on the learner's account when they passed.</li>
+          <li>The exam was proctored. It is taken online, unsupervised.</li>
+          <li>The holder is competent in a workplace. A multiple-choice exam samples knowledge; it does not observe practice.</li>
+          <li>Any vendor recognises it. It is not a certification from OpenAI, Anthropic, Google, Microsoft, NVIDIA or anyone else.</li>
+          <li>It is accredited. It is not an academic credit, degree, licence or regulated qualification.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small muted" style="margin-top:20px;max-width:75ch">We may revoke a certificate issued in error or obtained by misconduct. A revoked certificate shows as revoked on its verification page.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sample-h">
+  <div class="wrap split r" style="align-items:center">
+    {%- assign sc = site.data.catalog.courses | where: "id", "gov-210" | first %}
+    <div>{% include cert-sample.html course=sc.title %}</div>
+    <div>
+      <p class="eyebrow">Sample</p>
+      <h2 id="sample-h">What you receive</h2>
+      <p class="muted">A landscape certificate you can print or save as a PDF, showing your name, the course, the issue date, your exam score and a unique certificate ID. It links to its own verification page, and its page in your learner account has a one-click “Add to LinkedIn” link.</p>
+      <p class="muted">Complete every course in a <a href="/programs/">certification program</a> and a program certificate is issued automatically, with its own ID.</p>
+      <p class="small faint">The name, ID, course and score shown are placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section panel" aria-labelledby="ver-h">
+  <div class="wrap cta-band">
+    <div>
+      <p class="eyebrow">Verification</p>
+      <h2 id="ver-h">Anyone can check a certificate in seconds</h2>
+      <p>Enter the certificate ID, or follow the link printed on it. The page shows the holder's name, the course or program, the issue date, the score, and whether the certificate is valid or revoked. It shows nothing else — no email address, no account details.</p>
+      <div class="cta-row" style="margin-top:24px"><a class="btn" href="/verify/">Verify a certificate <span class="arr" aria-hidden="true">→</span></a></div>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Unique ID</b>Format WIA-XXXX-XXXX-XXXX, printed on every certificate.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Live status</b>Read from our register at the moment you check, so a revocation shows immediately.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Minimal data</b>Only what is printed on the certificate itself.</span></li>
+    </ul>
+  </div>
+</section>

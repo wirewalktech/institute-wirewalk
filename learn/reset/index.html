@@ -1,0 +1,29 @@
+---
+layout: default
+title: Reset your password
+description: Reset the password for your Wirewalk Institute of AI account.
+permalink: /learn/reset/
+extra_css: [learn]
+extra_js: [api, learn/common, learn/reset]
+noindex: true
+sitemap: false
+---
+<div class="wl" data-page="reset">
+  <nav class="wl-subnav" aria-label="Learner app">
+    <div class="wl-subnav-in">
+      <a href="/learn/">Dashboard</a>
+      <a href="/courses/">Catalog</a>
+      <a href="/learn/cart/">Cart <span class="wl-count" data-cart-count hidden></span></a>
+      <a href="/learn/account/" data-when-signed-in hidden>Account</a>
+    </div>
+  </nav>
+  <div id="learn-app" class="wl-app" aria-live="polite" aria-busy="true">
+    <noscript>
+      <div class="wl-notice wl-notice-error"><strong class="wl-notice-title">JavaScript is required</strong>
+        <div class="wl-notice-body">This part of the Institute needs JavaScript. Please enable it and reload the page.</div></div>
+    </noscript>
+    <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
+  </div>
+  <div id="wl-turnstile-config" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+</div>
+{% include learn-catalog.html %}

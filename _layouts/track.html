@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign t = site.data.catalog.tracks | where: "id", page.track_id | first -%}
+{%- assign tc = site.data.catalog.courses | where: "track", t.id -%}
+{%- assign live = tc | where: "status", "on_sale" -%}
+<div class="wrap">
+  <header class="page-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/tracks/">Tracks</a></nav>
+    <p class="eyebrow"><span class="code">{{ t.prefix | escape }}</span>&nbsp; Track</p>
+    <h1>{{ t.title | escape }}</h1>
+    <p class="lead">{{ t.summary | escape }}</p>
+    <div class="cta-row" style="margin-top:22px">
+      <span class="pill">{{ tc.size }} courses</span>
+      {%- if live.size > 0 %}<span class="pill ok">{{ live.size }} available now</span>{% endif %}
+      {%- assign levels = "intro,basic,intermediate,expert,executive" | split: "," %}
+      {%- for l in levels %}{% assign n = tc | where: "level", l | size %}{% if n > 0 %}<span class="pill lvl">{{ n }} {{ site.data.catalog.levels[l].label | escape }}</span>{% endif %}{% endfor %}
+      <a class="link-arrow" style="margin-left:6px" href="/courses/?track={{ t.id }}">Filter in the catalog <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+</div>
+
+<div class="wrap" style="padding-bottom:clamp(56px,8vw,100px)">
+  {%- for l in levels %}
+  {%- assign lc = tc | where: "level", l %}
+  {%- if lc.size > 0 %}
+  <div class="group-h"><h2>{{ site.data.catalog.levels[l].label | escape }}</h2><span>{{ site.data.catalog.levels[l].blurb | escape }} · {{ lc.size }} course{% if lc.size != 1 %}s{% endif %}</span></div>
+  <div class="cards">
+    {%- for c in lc %}
+    {% include course-card.html course=c hide_track=true %}
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  {%- endfor %}
+
+  {%- assign progs = "" | split: "" %}
+  {%- for p in site.data.catalog.programs %}
+    {%- for pid in p.courses %}
+      {%- assign pcourse = tc | where: "id", pid | first %}
+      {%- if pcourse %}{% assign progs = progs | push: p %}{% break %}{% endif %}
+    {%- endfor %}
+  {%- endfor %}
+  {%- if progs.size > 0 %}
+  <div class="group-h" style="margin-top:56px"><h2>Certification programs using this track</h2></div>
+  <div class="prog-list">
+    {%- for p in progs %}
+    {% include program-card.html program=p %}
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</div>

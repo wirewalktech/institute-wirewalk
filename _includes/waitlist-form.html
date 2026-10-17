@@ -1,0 +1,24 @@
+{%- comment -%}
+  Waitlist sign-up for a course or program that is not yet on sale. Posts to the same portal
+  enquiry endpoint as /teams/ (site.enquiry_endpoint), so every sign-up is recorded in the
+  portal console with the course id, not left to a mail client. The mailto link stays as a
+  secondary route for anyone who prefers email.
+  Params: id (course or program id), kind ("course" | "program"), title.
+{%- endcomment -%}
+{%- capture wl_subject_ %}Waitlist {{ include.id }}{% endcapture -%}
+<form class="wl-form" action="{{ site.enquiry_endpoint }}" method="POST" aria-label="Join the waitlist for {{ include.title | escape }}">
+  <input type="hidden" name="_subject" value="Wirewalk Institute of AI — waitlist {{ include.id }}">
+  <input type="hidden" name="_next" value="{{ site.url }}/waitlist/thanks/">
+  <input type="hidden" name="page" value="/{{ include.kind }}s/{{ include.id }}/">
+  <input type="hidden" name="practice" value="institute">
+  <input type="hidden" name="request" value="waitlist">
+  <input type="hidden" name="interest" value="{{ include.id }}">
+  <input type="hidden" name="message" value="Please tell me when {{ include.id }} ({{ include.title | escape }}) opens for enrolment.">
+  <div class="honeypot" aria-hidden="true"><label>Leave blank<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+  <label for="wl-email-{{ include.id }}">Your email</label>
+  <div class="wl-row">
+    <input type="email" id="wl-email-{{ include.id }}" name="email" required autocomplete="email" maxlength="254" placeholder="you@example.com">
+    <button class="btn" type="submit">Join the waitlist</button>
+  </div>
+  <p class="wl-note">We email you once when it opens. No payment is taken until then. Or <a href="mailto:sales@wirewalk.com?subject={{ wl_subject_ | uri_escape }}">email us</a>. <a href="/privacy/">Privacy</a>.</p>
+</form>

@@ -1,0 +1,20 @@
+{%- assign cc_ = include.course -%}
+{%- assign cct_ = site.data.catalog.tracks | where: "id", cc_.track | first -%}
+{%- assign cto_ = 0 -%}{%- for t_ in site.data.catalog.tracks -%}{%- if t_.id == cc_.track -%}{%- assign cto_ = forloop.index -%}{%- break -%}{%- endif -%}{%- endfor -%}
+{%- capture cctext_ -%}{{ cc_.id }} {{ cc_.title }} {{ cc_.subtitle }} {{ cc_.tags | join: " " }} {{ cc_.vendors | join: " " }} {{ cct_.title }} {{ cc_.levelLabel }}{%- endcapture -%}
+<article class="card" data-course="{{ cc_.id }}" data-track="{{ cc_.track }}" data-track-order="{{ cto_ }}" data-level="{{ cc_.level }}" data-status="{{ cc_.status }}" data-free="{% if cc_.listPrice == 0 %}1{% else %}0{% endif %}" data-vendors="{{ cc_.vendors | join: '|' | escape }}" data-text="{{ cctext_ | downcase | strip_newlines | escape }}">
+  <div class="card-top">
+    <span class="code">{{ cc_.id }}</span>
+    <span class="pill lvl">{{ cc_.levelLabel | escape }}</span>
+    <span class="pill {% if cc_.status == 'on_sale' %}ok{% else %}wait{% endif %}" data-status-pill="{{ cc_.id }}">{% if cc_.status == 'on_sale' %}Available{% else %}Waitlist{% endif %}</span>
+  </div>
+  <h{{ include.h | default: 3 }}><a href="/courses/{{ cc_.id }}/">{{ cc_.title | escape }}</a></h{{ include.h | default: 3 }}>
+  {%- unless include.hide_track %}
+  <div class="trk">{{ cct_.title | escape }}</div>
+  {%- endunless %}
+  <p>{{ cc_.summary | escape }}</p>
+  <div class="card-foot">
+    <span>{{ cc_.hours }} h · {{ cc_.lessonCount }} lessons</span>
+    <span class="price" data-price-for="{{ cc_.id }}" data-kind="course" data-status="{{ cc_.status }}">{% if cc_.listPrice == 0 %}<span class="fallback">{{ cc_.levelLabel | escape }}</span>{% elsif cc_.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Join the waitlist</span>{% endif %}</span>
+  </div>
+</article>
