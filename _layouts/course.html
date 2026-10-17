@@ -34,8 +34,19 @@ layout: default
     <aside class="buy" aria-label="Enrolment">
       <p class="eyebrow" style="margin-bottom:6px">Course fee</p>
       <div class="sale-line" data-sale-for="{{ c.id }}" hidden></div>
-      <div class="p-big price" data-price-for="{{ c.id }}" data-kind="course" data-mode="big">{% if c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Not yet open for enrolment</span>{% endif %}</div>
-      <div data-show-when="on_sale" data-for="{{ c.id }}"{% unless c.status == 'on_sale' %} hidden{% endunless %}>
+      <div class="p-big price" data-price-for="{{ c.id }}" data-kind="course" data-mode="big">{% if c.listPrice == 0 %}<span class="fallback">{{ c.levelLabel | escape }}</span>{% elsif c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Not yet open for enrolment</span>{% endif %}</div>
+      {%- comment -%} Free course (live price 0). The static build keys this on the level's list price
+        (D-003 allows the "Free intro" level label as a no-JS fallback); site.js then shows
+        exactly one of this block and the Buy block from the live API price. {%- endcomment %}
+      {%- assign enroll_next = "/courses/" | append: c.id | append: "/?enroll=free" | url_encode %}
+      <div data-free-for="{{ c.id }}"{% unless c.status == 'on_sale' and c.listPrice == 0 %} hidden{% endunless %}>
+        <div class="acts">
+          <a class="btn block" href="/learn/?next={{ enroll_next }}" data-enroll-free="{{ c.id }}">Enroll free <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <p class="free-note">No card needed. Sign in or create an account and the course opens straight away.</p>
+        <p class="free-err" data-enroll-msg="{{ c.id }}" role="alert" hidden></p>
+      </div>
+      <div data-show-when="on_sale" data-for="{{ c.id }}"{% unless c.status == 'on_sale' and c.listPrice != 0 %} hidden{% endunless %}>
         <div class="acts">
           <a class="btn block" href="/learn/cart/?add=course:{{ c.id }}&amp;buy=1">Buy now <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn ghost block" href="/learn/cart/?add=course:{{ c.id }}">Add to cart</a>

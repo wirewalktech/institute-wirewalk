@@ -199,7 +199,7 @@
       h("h3", { class: "wl-card-title" }, h("a", { href: W.courseUrl(e.courseId) }, title)),
       W.progressBar(p.done, p.total, "Progress in " + title),
       h("div", { class: "wl-card-foot" }, W.chip(ex.text, ex.kind), action),
-      e.source === "comp" ? h("p", { class: "wl-hint" }, "Enrolled by the Institute") : null);
+      e.source === "comp" ? h("p", { class: "wl-hint" }, "Enrolled by the Institute") : e.source === "free" ? h("p", { class: "wl-hint" }, "Free course") : null);
   }
 
   function certSection(certs) {

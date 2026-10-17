@@ -83,13 +83,22 @@
     return isFinite(t) ? t : null;
   }
 
+  /* Free means billing's live price is 0 (the intro level, or an operator's override to 0).
+     Never inferred from the level here: the static "Free intro" label is only the no-JS fallback. */
+  function isFree(c) { return !!c && c.price === 0; }
+
   function renderCourse(el, c) {
     var mode = el.getAttribute("data-mode") || "card";
     if (!c) return; // unknown to billing: keep the no-JS fallback text
     if (c.status !== "on_sale") {
       el.innerHTML = mode === "big"
-        ? '<span class="fallback">Not yet open for enrolment</span>'
-        : '<span class="fallback">Join the waitlist</span>';
+        ? '<span class="fallback">' + (isFree(c) ? "Free when it opens" : "Not yet open for enrolment") + '</span>'
+        : '<span class="fallback">' + (isFree(c) ? "Free · join the waitlist" : "Join the waitlist") + '</span>';
+      return;
+    }
+    if (isFree(c)) {
+      el.innerHTML = '<span class="now free">Free</span>';
+      el.removeAttribute("aria-label");
       return;
     }
     var ended = saleEnds(c.sale) !== null && saleEnds(c.sale) <= Date.now();
@@ -107,7 +116,9 @@
   function renderProgram(el, p, currency) {
     if (!p) return;
     var mode = el.getAttribute("data-mode") || "card";
-    if (p.status === "on_sale" && typeof p.price === "number") {
+    if (p.status === "on_sale" && p.price === 0) {
+      el.innerHTML = '<span class="now free">Free</span>';
+    } else if (p.status === "on_sale" && typeof p.price === "number") {
       var save = typeof p.separately === "number" && p.separately > p.price ? p.separately - p.price : 0;
       el.innerHTML = '<span class="now">' + esc(p.priceFormatted) + '</span>' +
         (save ? '<s><span class="sr">Separately </span>' + esc(p.separatelyFormatted) + '</s>' : "") +
@@ -127,6 +138,16 @@
     });
     $$('[data-show-when][data-for="' + id + '"]').forEach(function (n) { n.hidden = n.getAttribute("data-show-when") !== status; });
     $$('.card[data-course="' + id + '"]').forEach(function (n) { n.setAttribute("data-status", status); });
+  }
+
+  /* After applyStatus: for an on-sale course whose live price is 0, swap Buy/Add to cart for
+     "Enroll free"; for any other price, make sure the free block is gone. */
+  function applyFree(c) {
+    var free = isFree(c);
+    $$('.card[data-course="' + c.id + '"]').forEach(function (n) { n.setAttribute("data-free", free ? "1" : "0"); });
+    var open = c.status === "on_sale";
+    $$('[data-free-for="' + c.id + '"]').forEach(function (n) { n.hidden = !(open && free); });
+    if (open && free) $$('[data-show-when="on_sale"][data-for="' + c.id + '"]').forEach(function (n) { n.hidden = true; });
   }
 
   /* countdowns: one timer for the page */
@@ -167,7 +188,8 @@
     var byLevel = {};
     data.courses.forEach(function (c) {
       var lv = levels[c.id]; if (!lv) return;
-      (byLevel[lv] = byLevel[lv] || {})[c.priceFormatted] = ((byLevel[lv] || {})[c.priceFormatted] || 0) + 1;
+      var label = isFree(c) ? "Free" : c.priceFormatted;
+      (byLevel[lv] = byLevel[lv] || {})[label] = ((byLevel[lv] || {})[label] || 0) + 1;
     });
     $$("[data-level-price]").forEach(function (el) {
       var counts = byLevel[el.getAttribute("data-level-price")]; if (!counts) return;
@@ -177,7 +199,7 @@
     });
   }
 
-  var priceEls = $$("[data-price-for]"), saleBoxes = $$("[data-sale-for]"), statusEls = $$("[data-show-when],[data-status-pill]");
+  var priceEls = $$("[data-price-for]"), saleBoxes = $$("[data-sale-for]"), statusEls = $$("[data-show-when],[data-status-pill],[data-free-for]");
   if (priceEls.length || saleBoxes.length || statusEls.length || $("#course-levels")) {
     loadCatalog().then(function (data) {
       var cur = data.currency, cm = {}, pm = {};
@@ -188,7 +210,7 @@
         if (el.getAttribute("data-kind") === "program") renderProgram(el, pm[id], cur);
         else renderCourse(el, cm[id]);
       });
-      Object.keys(cm).forEach(function (id) { applyStatus(id, cm[id].status); });
+      Object.keys(cm).forEach(function (id) { applyStatus(id, cm[id].status); applyFree(cm[id]); });
       Object.keys(pm).forEach(function (id) {
         $$('[data-show-when][data-for="' + id + '"]').forEach(function (n) { n.hidden = n.getAttribute("data-show-when") !== pm[id].status; });
         $$('[data-program-pill="' + id + '"]').forEach(function (n) {
@@ -221,9 +243,9 @@
     var miniEl = $("#result-mini");
     if (miniEl) miniEl.addEventListener("click", function () { var t = $(".results-bar"); if (t) { t.scrollIntoView({ block: "start" }); countEl.setAttribute("tabindex", "-1"); countEl.focus({ preventScroll: true }); } });
     var qEl = $("#f-q"), trackEl = $("#f-track"), vendorEl = $("#f-vendor"), sortEl = $("#f-sort");
-    var levelChips = $$("[data-level-chip]"), statusChips = $$("[data-status-chip]");
+    var levelChips = $$("[data-level-chip]"), statusChips = $$("[data-status-chip]"), freeChip = $("[data-free-chip]");
     var order = cards.slice();
-    var LEVEL_ORDER = { basic: 1, intermediate: 2, expert: 3, executive: 4 };
+    var LEVEL_ORDER = { intro: 0, basic: 1, intermediate: 2, expert: 3, executive: 4 };
 
     var BRANDS = [["Amazon Web Services", /^(amazon|aws)\b/i], ["Alibaba (Qwen)", /^(alibaba|qwen)\b/i], ["Mistral AI", /^mistral\b/i],
       ["NVIDIA", /^nvidia\b/i], ["Hugging Face", /^hugging face\b/i], ["Google", /^(google|gemini|gemma)\b/i], ["Microsoft", /^(microsoft|azure|windows ml)\b/i],
@@ -253,7 +275,8 @@
     function state() {
       var lv = levelChips.filter(function (b) { return b.getAttribute("aria-pressed") === "true"; }).map(function (b) { return b.getAttribute("data-level-chip"); });
       var st = statusChips.filter(function (b) { return b.getAttribute("aria-pressed") === "true"; }).map(function (b) { return b.getAttribute("data-status-chip"); })[0] || "";
-      return { q: (qEl.value || "").trim(), track: trackEl.value, level: lv, vendor: vendorEl ? vendorEl.value : "", status: st, sort: sortEl ? sortEl.value : "" };
+      return { q: (qEl.value || "").trim(), track: trackEl.value, level: lv, vendor: vendorEl ? vendorEl.value : "", status: st, sort: sortEl ? sortEl.value : "",
+        free: !!freeChip && freeChip.getAttribute("aria-pressed") === "true" };
     }
     function setState(s) {
       qEl.value = s.q || "";
@@ -262,16 +285,18 @@
       if (sortEl) sortEl.value = $$("option", sortEl).some(function (o) { return o.value === s.sort; }) ? s.sort : "";
       levelChips.forEach(function (b) { b.setAttribute("aria-pressed", s.level.indexOf(b.getAttribute("data-level-chip")) >= 0 ? "true" : "false"); });
       statusChips.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-status-chip") === (s.status || "") ? "true" : "false"); });
+      if (freeChip) freeChip.setAttribute("aria-pressed", s.free ? "true" : "false");
     }
     function fromURL() {
       var u = new URLSearchParams(location.search);
       return { q: u.get("q") || "", track: u.get("track") || "", vendor: u.get("vendor") || "", status: u.get("status") || "", sort: u.get("sort") || "",
-        level: (u.get("level") || "").split(",").filter(function (x) { return LEVEL_ORDER[x]; }) };
+        free: u.get("free") === "1",
+        level: (u.get("level") || "").split(",").filter(function (x) { return LEVEL_ORDER.hasOwnProperty(x); }) };
     }
     function toURL(s) {
       var u = new URLSearchParams();
       if (s.q) u.set("q", s.q); if (s.track) u.set("track", s.track); if (s.level.length) u.set("level", s.level.join(","));
-      if (s.vendor) u.set("vendor", s.vendor); if (s.status) u.set("status", s.status); if (s.sort) u.set("sort", s.sort);
+      if (s.vendor) u.set("vendor", s.vendor); if (s.status) u.set("status", s.status); if (s.free) u.set("free", "1"); if (s.sort) u.set("sort", s.sort);
       var qs = u.toString().replace(/%2C/g, ",");
       var url = location.pathname + (qs ? "?" + qs : "") + location.hash;
       if (url !== location.pathname + location.search + location.hash) history.replaceState(null, "", url);
@@ -282,6 +307,7 @@
         var ok = (!s.track || c.getAttribute("data-track") === s.track) &&
           (!s.level.length || s.level.indexOf(c.getAttribute("data-level")) >= 0) &&
           (!s.status || c.getAttribute("data-status") === s.status) &&
+          (!s.free || c.getAttribute("data-free") === "1") &&
           (!s.vendor || c._vendors[s.vendor]);
         if (ok && terms.length) {
           var t = c.getAttribute("data-text") || "";
@@ -298,7 +324,7 @@
       countEl.innerHTML = "<b>" + n + "</b> of " + cards.length + " courses";
       if (miniEl) miniEl.innerHTML = n === 0 ? "No matches" : "Show <b>" + n + "</b> course" + (n === 1 ? "" : "s");
       emptyEl.hidden = n !== 0;
-      var active = s.q || s.track || s.level.length || s.vendor || s.status;
+      var active = s.q || s.track || s.level.length || s.vendor || s.status || s.free;
       clearBtn.hidden = !active;
       if (push !== false) toURL(s);
     }
@@ -307,7 +333,8 @@
     [trackEl, vendorEl, sortEl].forEach(function (e) { if (e) e.addEventListener("change", function () { apply(); }); });
     levelChips.forEach(function (b) { b.addEventListener("click", function () { b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"); apply(); }); });
     statusChips.forEach(function (b) { b.addEventListener("click", function () { statusChips.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); apply(); }); });
-    function reset() { setState({ q: "", track: "", level: [], vendor: "", status: "", sort: sortEl ? sortEl.value : "" }); apply(); qEl.focus(); }
+    if (freeChip) freeChip.addEventListener("click", function () { freeChip.setAttribute("aria-pressed", freeChip.getAttribute("aria-pressed") === "true" ? "false" : "true"); apply(); });
+    function reset() { setState({ q: "", track: "", level: [], vendor: "", status: "", free: false, sort: sortEl ? sortEl.value : "" }); apply(); qEl.focus(); }
     clearBtn.addEventListener("click", reset);
     var clear2 = $("#clear-filters-2"); if (clear2) clear2.addEventListener("click", reset);
     $("#filter-form").addEventListener("submit", function (e) { e.preventDefault(); apply(); });
@@ -383,6 +410,56 @@
     });
     var initial = new URLSearchParams(location.search).get("id");
     if (initial) { input.value = norm(initial); check(norm(initial), false); }
+  })();
+
+  /* ---------------- free enrollment ----------------
+     Signed out: sign in / sign up, then come back here with ?enroll=free, which finishes the job.
+     Signed in: POST {api}/api/courses/<id>/enroll-free (billing decides it is free), then open
+     the course. The Worker refuses a priced course with 402, so a stale page cannot enrol free. */
+  function token() { try { return localStorage.getItem("wia_token"); } catch (e) { return null; } }
+  function signInFor(id) { return "/learn/?next=" + encodeURIComponent("/courses/" + id + "/?enroll=free"); }
+  function enrollFree(id, btn) {
+    var msg = $('[data-enroll-msg="' + id + '"]');
+    function say(text) { if (msg) { msg.textContent = text; msg.hidden = false; } }
+    var t = token();
+    if (!t) { location.assign(signInFor(id)); return; }
+    if (!W.api || !window.fetch) { say("Enrollment is unavailable right now. Please try again shortly."); return; }
+    var label = btn ? btn.innerHTML : "";
+    if (btn) { btn.setAttribute("aria-disabled", "true"); btn.classList.add("busy"); btn.textContent = "Enrolling…"; }
+    function restore() { if (btn) { btn.removeAttribute("aria-disabled"); btn.classList.remove("busy"); btn.innerHTML = label; } }
+    fetch(W.api + "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {
+      method: "POST", headers: { Authorization: "Bearer " + t, "Content-Type": "application/json", Accept: "application/json" }, body: "{}"
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) { return { status: r.status, ok: r.ok, d: d || {} }; });
+    }).then(function (x) {
+      if (x.ok && x.d.enrolled) { location.assign("/learn/course/?c=" + encodeURIComponent(id)); return; }
+      if (x.status === 401) { try { localStorage.removeItem("wia_token"); } catch (e) {} location.assign(signInFor(id)); return; }
+      restore();
+      if (x.status === 402) {
+        /* Not free for this learner after all (the price changed): offer the normal purchase. */
+        say("This course is no longer free. You can buy it below.");
+        $$('[data-free-for="' + id + '"] .acts').forEach(function (n) { n.hidden = true; });
+        $$('[data-show-when="on_sale"][data-for="' + id + '"]').forEach(function (n) { n.hidden = false; });
+        return;
+      }
+      say(x.d.error ? String(x.d.error).charAt(0).toUpperCase() + String(x.d.error).slice(1) + "." : "Enrollment did not go through. Please try again.");
+    }, function () { restore(); say("We could not reach the Institute. Check your connection and try again."); });
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("[data-enroll-free]") : null;
+    if (!a) return;
+    e.preventDefault();
+    if (a.getAttribute("aria-disabled") === "true") return;
+    enrollFree(a.getAttribute("data-enroll-free"), a);
+  });
+  (function () {
+    var u; try { u = new URLSearchParams(location.search); } catch (e) { return; }
+    if (u.get("enroll") !== "free") return;
+    var btn = $("[data-enroll-free]");
+    u.delete("enroll");
+    var qs = u.toString();
+    try { history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash); } catch (e) {}
+    if (btn && token()) enrollFree(btn.getAttribute("data-enroll-free"), btn);
   })();
 
   /* ---------------- header: reflect a signed-in learner (token from the learner app) ---------------- */

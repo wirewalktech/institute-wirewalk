@@ -356,6 +356,12 @@ input::placeholder,textarea::placeholder{color:var(--tx3)}
 .buy li{display:flex;gap:10px;align-items:flex-start}
 .buy li svg{flex:none;width:16px;height:16px;margin-top:4px;color:var(--ac)}
 .buy .wl-note{font-size:14.5px;color:var(--tx2);margin:10px 0 0}
+.buy .free-note{font-size:14px;color:var(--tx2);margin:-4px 0 16px}
+.buy .free-err{font-size:14px;color:var(--sale);background:var(--salebg);border-radius:var(--r);padding:10px 12px;margin:0 0 16px}
+.btn.busy{opacity:.7;pointer-events:none}
+.price .free{color:var(--ok)}
+.buy .p-big .free{color:var(--ok)}
+.free-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:14px 0 0;color:var(--tx2);font-size:15.5px}
 @media (max-width:980px){.c-grid{grid-template-columns:1fr}.buy{position:static;max-width:560px}}
 
 .c-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(28px,5vw,72px);padding-top:clamp(44px,6vw,80px);padding-bottom:clamp(44px,6vw,80px)}

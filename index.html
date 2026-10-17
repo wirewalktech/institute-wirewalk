@@ -6,6 +6,7 @@ description: "Professional AI courses from foundations to executive level across
 {%- assign live = all | where: "status", "on_sale" -%}
 {%- assign flagships = all | where: "flagship", true | where: "status", "on_sale" -%}
 {%- assign levels = "basic,intermediate,expert,executive" | split: "," -%}
+{%- assign intros = all | where: "level", "intro" -%}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -40,6 +41,26 @@ description: "Professional AI courses from foundations to executive level across
     </div>
   </div>
 </section>
+
+{%- if intros.size > 0 %}
+<section class="section start-free" aria-labelledby="free-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Start free</p>
+        <h2 id="free-h">New to AI? Begin with a free one-hour course.</h2>
+        <p>Each intro course takes about an hour and ends in a short exam and a verifiable certificate, like every course here. Then go deeper with the paid courses it points to.</p>
+      </div>
+      <a class="link-arrow" href="/courses/?free=1">All free courses <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cards">
+      {%- for c in intros limit: 6 %}
+      {% include course-card.html course=c %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
 
 <section class="section alt" aria-labelledby="levels-h">
   <div class="wrap">

@@ -4,7 +4,8 @@ description: "Every Wirewalk Institute of AI course, filterable by track, level,
 ---
 {%- assign all = site.data.catalog.courses -%}
 {%- assign live = all | where: "status", "on_sale" -%}
-{%- assign levels = "basic,intermediate,expert,executive" | split: "," -%}
+{%- assign levels = "intro,basic,intermediate,expert,executive" | split: "," -%}
+{%- assign free_n = all | where: "listPrice", 0 | size -%}
 <div class="wrap">
   <header class="page-head" style="padding-bottom:28px">
     <p class="eyebrow">Course catalog</p>
@@ -37,6 +38,12 @@ description: "Every Wirewalk Institute of AI course, filterable by track, level,
           <button type="button" class="chip" data-status-chip="" aria-pressed="true">All</button>
           <button type="button" class="chip" data-status-chip="on_sale" aria-pressed="false">Available now</button>
           <button type="button" class="chip" data-status-chip="waitlist" aria-pressed="false">Waitlist</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="flabel" id="pr-l">Price</span>
+        <div class="chips" role="group" aria-labelledby="pr-l">
+          <button type="button" class="chip" data-free-chip aria-pressed="false">Free</button>
         </div>
       </div>
       <button type="button" class="btn ghost sm filters-toggle" aria-expanded="false" aria-controls="more-filters">More filters</button>

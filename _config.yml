@@ -21,7 +21,7 @@ api_base: https://wirewalk-institute.wirewalk-upload.workers.dev
 # MUST be set before launch, paired with TURNSTILE_SECRET on the learning Worker: with it
 # empty the widget never renders and the Worker rejects every sign-up/reset in production.
 # Creating the widget (hostname institute.wirewalk.com) is a coordinator/Cloudflare step.
-turnstile_sitekey: ""
+turnstile_sitekey: "0x4AAAAAAFZaAmywY6WsOToE"   # widget "Wirewalk Institute" (institute.wirewalk.com, localhost)
 
 # Portal endpoint shared by every Wirewalk site's enquiry form.
 enquiry_endpoint: https://wirewalk-portal.wirewalk-upload.workers.dev/api/enquiry

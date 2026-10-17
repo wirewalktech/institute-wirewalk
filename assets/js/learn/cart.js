@@ -95,7 +95,8 @@
       var price = h("div", { class: "wl-line-price" });
       if (line) {
         if (line.discount > 0) price.appendChild(h("s", { class: "wl-muted", "aria-label": "was " + W.money(line.base) }, W.money(line.base)));
-        price.appendChild(h("span", { class: "wl-strong" }, W.money(line.price)));
+        /* Free = billing priced the line at 0 before any discount (intro course or a 0 override). */
+        price.appendChild(h("span", { class: "wl-strong" + (line.base === 0 ? " wl-tone-ok" : "") }, line.base === 0 ? "Free" : W.money(line.price)));
       } else if (coveredBy) {
         price.appendChild(h("span", { class: "wl-muted" }, "Included"));
       } else if (state.loading) {
@@ -175,7 +176,7 @@
     var rows = h("dl", { class: "wl-totals" + (state.loading ? " is-updating" : "") },
       h("div", null, h("dt", null, "Subtotal"), h("dd", null, f.subtotal || W.money(q.subtotal))),
       q.discount > 0 ? h("div", { class: "wl-tone-ok" }, h("dt", null, "Discounts"), h("dd", null, "−" + (f.discount || W.money(q.discount)))) : null,
-      h("div", { class: "wl-total" }, h("dt", null, "Total"), h("dd", null, f.total || W.money(q.total), h("span", { class: "wl-cur" }, " " + String(q.currency || "usd").toUpperCase()))));
+      h("div", { class: "wl-total" }, h("dt", null, "Total"), allFree(q) ? h("dd", { class: "wl-tone-ok" }, "Free") : h("dd", null, f.total || W.money(q.total), h("span", { class: "wl-cur" }, " " + String(q.currency || "usd").toUpperCase()))));
     s.appendChild(rows);
     if (state.loading) s.appendChild(h("p", { class: "wl-hint" }, "Updating…"));
     var personal = API.signedIn();
@@ -184,14 +185,38 @@
       : "Sign in to see any discount available to you or your organization."));
   }
 
+  /** Billing priced the whole cart at 0 with no discount involved: free courses only. Stripe
+   *  cannot take $0, so these are enrolled directly (the Worker re-checks the price). */
+  function allFree(q) { return !!q && !q.error && q.subtotal === 0 && q.total === 0 && Array.isArray(q.grants) && q.grants.length > 0; }
+
+  function renderFreeEnroll(c, cart) {
+    var q = state.quote, ids = q.grants.slice();
+    var b = h("button", { type: "button", class: "wl-btn wl-btn-block" }, ids.length === 1 ? "Enroll free" : "Enroll free in " + W.plural(ids.length, "course"));
+    var err = h("div", { role: "alert", class: "wl-form-error", hidden: true });
+    b.addEventListener("click", function () {
+      err.hidden = true;
+      var run = ids.reduce(function (p, id) {
+        return p.then(function () { return API.request("POST", "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {}); });
+      }, Promise.resolve());
+      W.busy(b, run, "Enrolling…").then(function () {
+        cart.forEach(function (i) { W.cart.remove(i.type, i.id); });
+        window.location.assign(ids.length === 1 ? W.courseUrl(ids[0]) : "/learn/");
+      }, function (e) { err.textContent = e.message; err.hidden = false; requote(); });
+    });
+    c.appendChild(b);
+    c.appendChild(err);
+    c.appendChild(h("p", { class: "wl-small wl-center wl-muted" }, "No payment needed. Your enrollment starts straight away."));
+  }
+
   function renderCheckout() {
     var c = els.checkout;
     var hadFocus = c.contains(document.activeElement) && document.activeElement.tagName === "BUTTON";
     W.clear(c);
     var cart = W.cart.get();
     if (!cart.length) return;
+    var free = allFree(state.quote) && !state.quoteError && !state.loading;
     if (!API.signedIn()) {
-      c.appendChild(W.btn("Sign in to check out", { href: W.signInUrl("/learn/cart/"), class: "wl-btn-block" }));
+      c.appendChild(W.btn(free ? "Sign in to enroll free" : "Sign in to check out", { href: W.signInUrl("/learn/cart/"), class: "wl-btn-block" }));
       c.appendChild(h("p", { class: "wl-small wl-center" }, "New here? ", h("a", { href: "/learn/?mode=signup&next=" + encodeURIComponent("/learn/cart/") }, "Create an account")));
       return;
     }
@@ -200,6 +225,7 @@
       c.appendChild(h("p", { class: "wl-hint wl-tone-info" }, "Personal and organization discounts need a verified email. ",
         h("a", { href: "/learn/account/" }, "Verify your email"), " before checking out if you expect one."));
     }
+    if (free) { renderFreeEnroll(c, cart); return; }
     var ok = state.quote && !state.quoteError && !state.loading;
     var b = h("button", { type: "button", class: "wl-btn wl-btn-block", disabled: !ok }, ok ? "Pay " + ((state.quote.formatted && state.quote.formatted.total) || W.money(state.quote.total)) + " securely" : "Check out");
     var err = h("div", { role: "alert", class: "wl-form-error", hidden: true });

@@ -13,7 +13,7 @@ layout: default
     <div class="cta-row" style="margin-top:22px">
       <span class="pill">{{ tc.size }} courses</span>
       {%- if live.size > 0 %}<span class="pill ok">{{ live.size }} available now</span>{% endif %}
-      {%- assign levels = "basic,intermediate,expert,executive" | split: "," %}
+      {%- assign levels = "intro,basic,intermediate,expert,executive" | split: "," %}
       {%- for l in levels %}{% assign n = tc | where: "level", l | size %}{% if n > 0 %}<span class="pill lvl">{{ n }} {{ site.data.catalog.levels[l].label | escape }}</span>{% endif %}{% endfor %}
       <a class="link-arrow" style="margin-left:6px" href="/courses/?track={{ t.id }}">Filter in the catalog <span aria-hidden="true">→</span></a>
     </div>
