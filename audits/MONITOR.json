@@ -3,39 +3,46 @@
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
-      "scope": "Holding-page source, Jekyll configuration, protocol and audit records reviewed. Exact-SHA Pages build is built; ordinary HTTPS returns 200 and page retains noindex. Responsive visual verification pending.",
+      "scope": "General site cursor remains at earlier holding-page review; catalog/learner app now on main and requires remaining full source/route/accessibility review. Scoped live checks and reset-source review through 2b53045.",
       "branches_examined": {
         "site-v1": {
           "sha": "c6d7b3d81f71f527a9884d8c878b7fb9ff86d53f",
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         }
+      },
+      "last_examined_sha": "2b5304520bcce14365d4143ac5ecc31a5abe6967",
+      "scoped_checkpoints": {
+        "reset_js_source_and_live_fixture": "2b53045",
+        "homepage_1440_390_noindex_and_exact_pages_sha": "2b53045"
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
       "scope": "Whole-repository cursor deliberately remains at baseline: new course content still requires detailed factual/editorial review. Scoped checkpoints track completed source/metric/fix review without claiming full content approval.",
       "outstanding": [
-        "WIA-010 refund/reconciliation race: fix and verify local interleaving reproduction",
-        "WIA-011 admin reset-link / site-v1 fragment handoff mismatch",
-        "Remaining admin/API/console semantic review and full site-v1 review",
-        "Independent billing/webhook/refund code review in orders repository branch institute",
-        "Detailed lesson, syllabus and exam semantic/evidence review since baseline",
-        "WIA-006 editorial/evidence release gate and WIA-007 prelaunch pilots/rubrics",
-        "Free-intro enrollment integration once implemented",
-        "Browser differential sanitizer tests and responsive/accessibility review"
+        "WIA-011 remains absent from site main/live: commit and verify reset-link fix",
+        "WIA-012 bld-230 multilingual normalization/deduplication defect",
+        "End-to-end refund integration/admin route/charge.refunded webhook; independent orders implementation review",
+        "Remaining admin/console and catalog/learner site source/route/accessibility review",
+        "Detailed lesson, syllabus and exam evidence/semantic review since baseline, including new 22-course batch and introductions",
+        "WIA-006 editorial/evidence release gate and WIA-007 human pilots/rubrics",
+        "Browser differential sanitizer testing"
       ],
-      "last_examined_sha": "fdfc5bcfbd903087c6772508c1ec2dc165c318f2",
+      "last_examined_sha": "37942d4",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
-        "exam_bank_length_metrics": "d816759",
+        "exam_bank_length_metrics": "37942d4",
         "WIA_002_003_004_005_008_fix_followup": "d816759",
-        "protocol_and_board_responses": "fdfc5bc",
+        "protocol_and_board_responses": "37942d4",
         "WIA_009_original_vector_verified_fixed": "fdfc5bc",
-        "runtime_learner_source_and_80_committed_tests": "fdfc5bc"
+        "runtime_learner_source_and_80_committed_tests": "fdfc5bc",
+        "new_runtime_refund_free_enroll_deltas_and_94_tests": "37942d4",
+        "structural_inventory": "37942d4",
+        "WIA_010_original_race_verified_fixed": "e2d5361"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-17T16:11:40Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1611.md"
+  "last_check_started_utc": "2026-10-17T17:15:10Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1715.md"
 }
