@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{%- assign p = site.data.catalog.programs | where: "id", page.program_id | first -%}
+{%- assign exam_q = 0 -%}{%- assign lessons = 0 -%}
+{%- for cid in p.courses -%}{%- assign pc = site.data.catalog.courses | where: "id", cid | first -%}{%- assign exam_q = exam_q | plus: pc.exam.questions -%}{%- assign lessons = lessons | plus: pc.lessonCount -%}{%- endfor -%}
+<div class="c-hero">
+  <div class="wrap c-grid">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/programs/">Certification programs</a></nav>
+      <div class="c-tags">
+        <span class="pill flag">Certification program</span>
+        <span class="pill {% if p.status == 'on_sale' %}ok{% else %}wait{% endif %}" data-program-pill="{{ p.id }}">{% if p.status == 'on_sale' %}Available{% else %}Opening as its courses open{% endif %}</span>
+      </div>
+      <h1>{{ p.title | escape }}</h1>
+      <p class="lead">{{ p.summary | escape }} Complete and pass all {{ p.courses | size }} courses below and the program certificate is issued automatically.</p>
+      <dl class="c-facts">
+        <div><dt>Courses</dt><dd>{{ p.courses | size }}</dd></div>
+        <div><dt>Study time</dt><dd>{{ p.hours }} hours</dd></div>
+        <div><dt>Lessons</dt><dd>{{ lessons }}</dd></div>
+        <div><dt>Exam questions</dt><dd>{{ exam_q }} in {{ p.courses | size }} exams</dd></div>
+      </dl>
+    </div>
+    <aside class="buy" aria-label="Enrolment">
+      <p class="eyebrow" style="margin-bottom:6px">Program bundle</p>
+      <div class="p-big price" data-price-for="{{ p.id }}" data-kind="program" data-mode="big"><span class="fallback">{% if p.status == 'on_sale' %}See price at checkout{% else %}Opens when all its courses do{% endif %}</span></div>
+      <p class="small" data-save-for="{{ p.id }}" hidden style="color:var(--ok);font-weight:600;margin:0"></p>
+      <div data-show-when="on_sale" data-for="{{ p.id }}"{% unless p.status == 'on_sale' %} hidden{% endunless %}>
+        <div class="acts">
+          <a class="btn block" href="/learn/cart/?add=program:{{ p.id }}&amp;buy=1">Buy the program <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn ghost block" href="/learn/cart/?add=program:{{ p.id }}">Add to cart</a>
+        </div>
+      </div>
+      <div data-show-when="waitlist" data-for="{{ p.id }}"{% if p.status == 'on_sale' %} hidden{% endif %}>
+        <p class="wl-note" style="margin:0 0 12px">The bundle goes on sale once every course in it is open. Courses that are already available can be bought on their own now.</p>
+        {% include waitlist-form.html id=p.id kind="program" title=p.title %}
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>All {{ p.courses | size }} courses, each with its own exam and certificate</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Program certificate issued automatically after the last pass</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bundle price below the courses bought separately</li>
+      </ul>
+      <p class="small faint" style="margin:16px 0 0">Enrolling a group? <a href="/teams/?interest={{ p.id }}">Team seats and invoices</a></p>
+    </aside>
+  </div>
+</div>
+
+<div class="wrap" style="padding:clamp(44px,6vw,80px) var(--pad)">
+  <div class="sec-head"><div><h2>The courses, in order</h2><p>Take them in this order: each builds on the one before. Every course has its own exam; you can start with any course that is already available.</p></div></div>
+  <div class="bundle-path">
+    {%- for cid in p.courses %}
+    {%- assign c = site.data.catalog.courses | where: "id", cid | first %}
+    {%- assign ct = site.data.catalog.tracks | where: "id", c.track | first %}
+    <article class="card" data-course="{{ c.id }}" data-status="{{ c.status }}">
+      <div class="bp-main">
+        <h3><a href="/courses/{{ c.id }}/">{{ c.title | escape }}</a></h3>
+        <p>{{ c.levelLabel | escape }} · {{ ct.title | escape }} · {{ c.hours }} h · {{ c.lessonCount }} lessons</p>
+      </div>
+      <div class="bp-side">
+        <span class="pill {% if c.status == 'on_sale' %}ok{% else %}wait{% endif %}" data-status-pill="{{ c.id }}">{% if c.status == 'on_sale' %}Available{% else %}Waitlist{% endif %}</span>
+        <span class="price" data-price-for="{{ c.id }}" data-kind="course">{% if c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Join the waitlist</span>{% endif %}</span>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+  <p class="small faint" style="margin-top:24px">Already hold certificates for some of these courses? The program certificate is issued as soon as you hold all {{ p.courses | size }}, however you enrolled. Signed in and already own some of these courses? The program price in your cart covers only the courses you do not have yet. The final price is the one checkout shows.</p>
+</div>

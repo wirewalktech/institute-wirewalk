@@ -1,0 +1,20 @@
+{%- comment -%} A rendered SAMPLE certificate. Illustrative only: the name, ID and score are placeholders,
+and the "Sample" stamp makes that unmistakable. {%- endcomment -%}
+<figure class="cert {{ include.class }}" role="img" aria-label="Sample certificate of completion and assessment for the course {{ include.course | default: 'AI Foundations for Everyone' | escape }}, issued to a placeholder name">
+  <span class="cert-sample" aria-hidden="true">Sample certificate</span>
+  <div class="cert-top">
+    <span class="cert-org"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Wirewalk Institute of AI</span>
+    <span class="cert-id">Certificate ID<br>WIA-XXXX-XXXX-XXXX</span>
+  </div>
+  <div class="cert-mid">
+    <p class="cert-kicker">Certificate of completion and assessment</p>
+    <p class="cert-name">Alex Example</p>
+    <p class="cert-what">completed every lesson and passed the timed, automatically scored exam for</p>
+    <p class="cert-course">{{ include.course | default: "AI Foundations for Everyone" | escape }}</p>
+  </div>
+  <div class="cert-foot">
+    <span><b>Issued</b>17 October 2026</span>
+    <span class="cert-seal" aria-hidden="true">Score<br>86%</span>
+    <span class="cert-v"><b>Verify</b>institute.wirewalk.com/verify</span>
+  </div>
+</figure>

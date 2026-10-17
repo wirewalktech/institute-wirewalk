@@ -1,0 +1,9 @@
+{%- comment -%}
+  Learner app (/learn/**): compact catalog map for course/program titles and sale status,
+  read by assets/js/learn/common.js (WL.catalog). Every "<" is written as the JSON escape \u003c so a title
+  can never close the script element.
+{%- endcomment -%}
+{%- capture wl_cat -%}
+{"courses":{ {%- for c in site.data.catalog.courses -%}{{ c.id | jsonify }}:{"t":{{ c.title | jsonify }},"l":{{ c.level | jsonify }},"k":{{ c.track | jsonify }},"s":{{ c.status | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%} },"programs":{ {%- for p in site.data.catalog.programs -%}{{ p.id | jsonify }}:{"t":{{ p.title | jsonify }},"s":{{ p.status | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%} },"tracks":{ {%- for t in site.data.catalog.tracks -%}{{ t.id | jsonify }}:{{ t.title | jsonify }}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%} },"levels":{ {%- for l in site.data.catalog.levels -%}{{ l[0] | jsonify }}:{{ l[1].label | jsonify }}{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%} }}
+{%- endcapture -%}
+<script type="application/json" id="wia-catalog">{{ wl_cat | strip | replace: "<", "\u003c" }}</script>

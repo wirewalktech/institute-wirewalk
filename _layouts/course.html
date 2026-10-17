@@ -1,0 +1,171 @@
+---
+layout: default
+---
+{%- assign c = site.data.catalog.courses | where: "id", page.course_id | first -%}
+{%- assign t = site.data.catalog.tracks | where: "id", c.track | first -%}
+{%- assign lv = site.data.catalog.levels[c.level] -%}
+{%- capture nl2 %}
+
+{% endcapture -%}
+<script type="application/ld+json">
+{%- capture ld_ -%}{"@context":"https://schema.org","@type":"Course","name":{{ c.title | jsonify }},"description":{{ c.summary | jsonify }},"courseCode":{{ c.id | jsonify }},"educationalLevel":{{ c.levelLabel | jsonify }},"timeRequired":"PT{{ c.hours }}H","url":"{{ site.url }}/courses/{{ c.id }}/","provider":{"@type":"Organization","name":"Wirewalk Institute of AI","url":"{{ site.url }}/"}}{%- endcapture -%}
+{{ ld_ | replace: "<", "\u003c" }}
+</script>
+<div class="c-hero">
+  <div class="wrap c-grid">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/courses/">Courses</a><span aria-hidden="true">/</span><a href="/tracks/{{ t.id }}/">{{ t.title | escape }}</a></nav>
+      <div class="c-tags">
+        <span class="code">{{ c.id }}</span>
+        <span class="pill lvl">{{ c.levelLabel | escape }}</span>
+        <span class="pill {% if c.status == 'on_sale' %}ok{% else %}wait{% endif %}" data-status-pill="{{ c.id }}">{% if c.status == 'on_sale' %}Available{% else %}Waitlist{% endif %}</span>
+        {%- if c.flagship %}<span class="pill flag">Flagship</span>{% endif %}
+      </div>
+      <h1>{{ c.title | escape }}</h1>
+      <p class="lead">{{ c.subtitle | escape }}</p>
+      <dl class="c-facts">
+        <div><dt>Level</dt><dd>{{ c.levelLabel | escape }}</dd></div>
+        <div><dt>Study time</dt><dd>{{ c.hours }} hours</dd></div>
+        <div><dt>Lessons</dt><dd>{{ c.lessonCount }} in {{ c.modules | size }} modules</dd></div>
+        <div><dt>Exam</dt><dd>{{ c.exam.questions }} questions</dd></div>
+      </dl>
+    </div>
+
+    <aside class="buy" aria-label="Enrolment">
+      <p class="eyebrow" style="margin-bottom:6px">Course fee</p>
+      <div class="sale-line" data-sale-for="{{ c.id }}" hidden></div>
+      <div class="p-big price" data-price-for="{{ c.id }}" data-kind="course" data-mode="big">{% if c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Not yet open for enrolment</span>{% endif %}</div>
+      <div data-show-when="on_sale" data-for="{{ c.id }}"{% unless c.status == 'on_sale' %} hidden{% endunless %}>
+        <div class="acts">
+          <a class="btn block" href="/learn/cart/?add=course:{{ c.id }}&amp;buy=1">Buy now <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn ghost block" href="/learn/cart/?add=course:{{ c.id }}">Add to cart</a>
+        </div>
+      </div>
+      <div data-show-when="waitlist" data-for="{{ c.id }}"{% if c.status == 'on_sale' %} hidden{% endif %}>
+        <p class="wl-note" style="margin:0 0 12px">The syllabus is final; lessons and the exam are in production and review. Leave your email and we will tell you when it opens.</p>
+        {% include waitlist-form.html id=c.id kind="course" title=c.title %}
+      </div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>{{ c.lessonCount }} written lessons, self-paced</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Timed exam: {{ c.exam.questions }} questions, {{ c.exam.minutes }} minutes, pass mark {{ c.exam.passPct }}%</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Up to {{ c.exam.attempts }} attempts, 24 hours apart after a fail</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Verifiable certificate of completion and assessment</li>
+      </ul>
+      <p class="small faint" style="margin:16px 0 0">Buying for a team? <a href="/teams/?interest={{ c.id }}">Seats and invoices</a></p>
+    </aside>
+  </div>
+</div>
+
+<div class="wrap c-body">
+  <div>
+    <section aria-labelledby="about-h">
+      <h2 id="about-h">About this course</h2>
+      <div class="prose">
+        {%- assign paras = c.description | split: nl2 -%}
+        {%- for para in paras %}
+        <p>{{ para | strip | escape }}</p>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section aria-labelledby="out-h">
+      <h2 id="out-h">What you will be able to do</h2>
+      <ul class="outcomes">
+        {%- for o in c.outcomes %}
+        <li>{{ o | escape }}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="syl-h">
+      <div class="sec-head" style="margin-bottom:16px;align-items:center">
+        <div><h2 id="syl-h" style="margin:0">Syllabus</h2><p class="small">{{ c.modules | size }} modules · {{ c.lessonCount }} lessons · about {{ c.hours }} hours</p></div>
+        <button class="clear" type="button" data-expand-all="modules" hidden>Expand all</button>
+      </div>
+      <div class="modules" id="modules">
+        {%- for m in c.modules %}
+        <details{% if forloop.first %} open{% endif %}>
+          <summary>
+            <span class="mod-n" aria-hidden="true">{{ forloop.index }}</span>
+            <span class="mod-t"><h3><span class="sr">Module {{ forloop.index }}: </span>{{ m.title | escape }}</h3>{% if m.summary %}<span class="mod-sum">{{ m.summary | escape }}</span>{% endif %}</span>
+            <span class="mod-c">{{ m.lessons | size }} lesson{% if m.lessons.size != 1 %}s{% endif %}</span>
+          </summary>
+          <ol>
+            {%- for l in m.lessons %}
+            <li>{{ l | escape }}</li>
+            {%- endfor %}
+          </ol>
+        </details>
+        {%- endfor %}
+      </div>
+    </section>
+
+    <section aria-labelledby="exam-h">
+      <h2 id="exam-h">Exam and certificate</h2>
+      <div class="prose">
+        <p>The exam unlocks once you have completed every lesson. It draws {{ c.exam.questions }} questions from a larger bank, spread across the modules, with the answer options shuffled for each attempt. You have {{ c.exam.minutes }} minutes and need {{ c.exam.passPct }}% to pass. After a failed attempt you can try again after 24 hours, up to {{ c.exam.attempts }} attempts in total. Feedback is given per module, never as the answer key.</p>
+        <p>Passing earns a certificate of completion and assessment from the Wirewalk Institute of AI with a unique ID that anyone can check at <a href="/verify/">institute.wirewalk.com/verify</a>. It is not an accredited qualification or a vendor certification. <a href="/certification/">How certification works</a>.</p>
+      </div>
+    </section>
+
+    {%- if c.vendors.size > 0 %}
+    <p class="disclaimer">The Wirewalk Institute of AI is independent. This course teaches publicly documented products and is not affiliated with or endorsed by {% for v in c.vendors %}{% if forloop.last and forloop.length > 1 %}or {% endif %}{{ v | escape }}{% unless forloop.last %}{% if forloop.length > 2 %}, {% else %} {% endif %}{% endunless %}{% endfor %}. Product and company names are trademarks of their respective owners.</p>
+    {%- endif %}
+  </div>
+
+  <aside class="c-aside">
+    <div class="box">
+      <h3>Who it is for</h3>
+      <ul class="ticks">
+        {%- for a in c.audience %}
+        <li>{{ a | escape }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Before you start</h3>
+      <ul class="ticks">
+        {%- for p in c.prerequisites %}
+          {%- assign w = p | split: " " | first -%}
+          {%- assign pc = site.data.catalog.courses | where: "id", w | first -%}
+          {%- if pc %}
+          {%- assign rest = p | remove_first: w | strip %}
+        <li><a href="/courses/{{ pc.id }}/">{{ pc.title | escape }}</a> <span class="faint mono small">{{ pc.id }}</span>{% if rest != "" %} <span class="faint">— {{ rest | escape }}</span>{% endif %}</li>
+          {%- else %}
+        <li>{{ p | escape }}</li>
+          {%- endif %}
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- if c.vendors.size > 0 %}
+    <div class="box">
+      <h3>Products and tools covered</h3>
+      <div class="vendors">{% for v in c.vendors %}<span>{{ v | escape }}</span>{% endfor %}</div>
+    </div>
+    {%- endif %}
+    <div class="box">
+      <h3>Track</h3>
+      <p style="margin:0 0 6px"><a href="/tracks/{{ t.id }}/"><strong>{{ t.title | escape }}</strong></a></p>
+      <p class="small muted" style="margin:0">{{ t.summary | escape }}</p>
+      {%- if c.reviewed %}<p class="small faint" style="margin:12px 0 0">Content reviewed {{ c.reviewed | append: "-01" | date: "%B %Y" }}</p>{% endif %}
+    </div>
+  </aside>
+</div>
+
+{%- assign related = site.data.catalog.courses | where: "track", c.track %}
+{%- if related.size > 1 %}
+<section class="section alt tight" aria-labelledby="rel-h">
+  <div class="wrap">
+    <div class="sec-head"><div><h2 id="rel-h">More in {{ t.title | escape }}</h2></div><a class="link-arrow" href="/tracks/{{ t.id }}/">All {{ related.size }} courses in this track <span aria-hidden="true">→</span></a></div>
+    <div class="cards">
+      {%- assign shown = 0 -%}
+      {%- for r in related -%}
+        {%- if r.id != c.id and shown < 3 -%}
+          {%- assign shown = shown | plus: 1 -%}
+          {% include course-card.html course=r hide_track=true %}
+        {%- endif -%}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if page.url == "/" -%}
+{%- assign doc_title = site.title | append: " — Professional AI training, assessed and certified" -%}
+{%- elsif page.title -%}
+{%- assign doc_title = page.title | append: " · " | append: site.title -%}
+{%- else -%}
+{%- assign doc_title = site.title -%}
+{%- endif -%}
+{%- assign doc_desc = page.description | default: site.description | strip_html | normalize_whitespace | truncate: 200 -%}
+<title>{{ doc_title | escape }}</title>
+<meta name="description" content="{{ doc_desc | escape }}">
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.url }}">
+{%- comment -%} Pre-launch: noindex on every page, and robots.txt disallows all. The coordinator flips both at launch. {%- endcomment %}
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ doc_desc | escape }}">
+<meta property="og:url" content="{{ page.url | replace: 'index.html', '' | prepend: site.url }}">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+{%- comment -%}
+  Content-Security-Policy. GitHub Pages cannot send response headers, so it is a meta tag.
+  No inline script is allowed anywhere: the boot logic lives in /assets/js/boot.js, and the
+  JSON blocks (application/json, ld+json) are data, not script. Turnstile needs its script and
+  frame origin. form-action covers the portal enquiry endpoint and the thank-you page it
+  redirects to when the Institute host is not yet on its allow-list (www.wirewalk.com).
+  localhost entries in connect-src only matter for local testing (see boot.js).
+{%- endcomment -%}
+{%- assign enq_origin = site.enquiry_endpoint | split: "/" | slice: 0, 3 | join: "/" %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' {{ site.api_base }} http://localhost:* http://127.0.0.1:*; frame-src https://challenges.cloudflare.com; form-action 'self' {{ enq_origin }} https://www.wirewalk.com; base-uri 'none'; object-src 'none'">
+<meta name="wia-api" content="{{ site.api_base }}">
+<meta name="wia-site" content="{{ site.url }}">
+<script src="/assets/js/boot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+{%- for c in page.extra_css %}
+<link rel="stylesheet" href="/assets/css/{{ c }}.css">
+{%- endfor %}
+<script src="/assets/js/site.js" defer></script>
+{%- for j in page.extra_js %}
+<script src="/assets/js/{{ j }}.js" defer></script>
+{%- endfor %}
+</head>
+<body class="{{ page.body_class }}">
+<a class="skip" href="#main">Skip to content</a>
+{% include header.html %}
+<main id="main" tabindex="-1">
+{{ content }}
+</main>
+{% include footer.html %}
+</body>
+</html>

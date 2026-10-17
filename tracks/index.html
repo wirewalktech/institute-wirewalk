@@ -1,0 +1,29 @@
+---
+title: Tracks
+description: "Eighteen subject tracks covering the whole AI stack, from foundations and everyday use to GPU infrastructure, security, governance and executive leadership."
+---
+{%- assign all = site.data.catalog.courses -%}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Tracks</p>
+    <h1>Eighteen tracks, one map of the field</h1>
+    <p class="lead">Each track groups the courses on one subject from Basic to Expert or Executive. Pick a track for a role, or move across tracks as your work changes.</p>
+  </header>
+</div>
+<div class="wrap" style="padding-bottom:clamp(56px,8vw,110px)">
+  <div class="tmap">
+    {%- for t in site.data.catalog.tracks %}
+    {%- assign tc = all | where: "track", t.id %}
+    {%- assign nb = tc | where: "level", "basic" | size %}{% assign ni = tc | where: "level", "intermediate" | size %}{% assign nx = tc | where: "level", "expert" | size %}{% assign ne = tc | where: "level", "executive" | size %}
+    {%- assign nl = tc | where: "status", "on_sale" | size %}
+    <a class="tile" href="/tracks/{{ t.id }}/">
+      <span class="tile-top"><span class="code">{{ t.prefix | escape }}</span><span class="cnt">{{ tc.size }} courses</span></span>
+      <h2 class="tile-h">{{ t.title | escape }}</h2>
+      <p>{{ t.summary | escape }}</p>
+      <span class="spread" role="img" aria-label="{{ nb }} basic, {{ ni }} intermediate, {{ nx }} expert, {{ ne }} executive">{% if nb > 0 %}<i class="b" style="flex:{{ nb }}"></i>{% endif %}{% if ni > 0 %}<i class="i" style="flex:{{ ni }}"></i>{% endif %}{% if nx > 0 %}<i class="x" style="flex:{{ nx }}"></i>{% endif %}{% if ne > 0 %}<i class="e" style="flex:{{ ne }}"></i>{% endif %}</span>
+      {%- if nl > 0 %}<span class="live">{{ nl }} available now</span>{% endif %}
+    </a>
+    {%- endfor %}
+  </div>
+  <div class="legend" aria-hidden="true"><span><i class="b"></i>Basic</span><span><i class="i"></i>Intermediate</span><span><i class="x"></i>Expert</span><span><i class="e"></i>Executive</span></div>
+</div>
