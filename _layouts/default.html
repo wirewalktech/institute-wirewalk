@@ -33,9 +33,14 @@
   localhost entries in connect-src only matter for local testing (see boot.js).
 {%- endcomment -%}
 {%- assign enq_origin = site.enquiry_endpoint | split: "/" | slice: 0, 3 | join: "/" %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' {{ site.api_base }} http://localhost:* http://127.0.0.1:*; frame-src https://challenges.cloudflare.com; form-action 'self' {{ enq_origin }} https://www.wirewalk.com; base-uri 'none'; object-src 'none'">
+{%- assign ev_origin = site.events_endpoint | split: "/" | slice: 0, 3 | join: "/" %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' {{ site.api_base }} {{ ev_origin }} http://localhost:* http://127.0.0.1:*; frame-src https://challenges.cloudflare.com; form-action 'self' {{ enq_origin }} https://www.wirewalk.com; base-uri 'none'; object-src 'none'">
 <meta name="wia-api" content="{{ site.api_base }}">
 <meta name="wia-site" content="{{ site.url }}">
+<meta name="wia-events" content="{{ site.events_endpoint }}">
+{%- if page.campaign %}
+<meta name="wia-campaign" content="{{ page.campaign_page }}">
+{%- endif %}
 <script src="/assets/js/boot.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +50,11 @@
 <link rel="stylesheet" href="/assets/css/{{ c }}.css">
 {%- endfor %}
 <script src="/assets/js/site.js" defer></script>
+{%- comment -%} Campaign attribution + aggregate counter: on /go/ pages (campaign: true) only.
+  Elsewhere boot.js loads the same file only when the URL carries utm_* or rdt_cid. {%- endcomment %}
+{%- if page.campaign %}
+<script src="/assets/js/campaign.js" defer></script>
+{%- endif %}
 {%- for j in page.extra_js %}
 <script src="/assets/js/{{ j }}.js" defer></script>
 {%- endfor %}

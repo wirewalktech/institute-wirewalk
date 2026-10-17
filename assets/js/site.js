@@ -459,7 +459,11 @@
     u.delete("enroll");
     var qs = u.toString();
     try { history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash); } catch (e) {}
-    if (btn && token()) enrollFree(btn.getAttribute("data-enroll-free"), btn);
+    if (!btn) return;
+    /* Signed out: go straight to sign-up / sign-in instead of making the visitor press the
+       button a second time; /learn/ brings them back here with ?enroll=free to finish. */
+    if (token()) enrollFree(btn.getAttribute("data-enroll-free"), btn);
+    else location.replace(signInFor(btn.getAttribute("data-enroll-free")));
   })();
 
   /* ---------------- header: reflect a signed-in learner (token from the learner app) ---------------- */

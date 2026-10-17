@@ -1,0 +1,205 @@
+{%- comment -%}
+  Reddit campaign landing page (/go/*). Everything about a course comes from _data/catalog.json
+  (titles, lessons, exam facts, prerequisites and their status); prices come live from the Worker
+  through [data-price-for] (site.js). Page front matter supplies only the copy:
+    campaign_page  event name suffix for the landing view, e.g. go-dev  (inst.go-dev)
+    cta_key        short page key used in CTA event names, e.g. dev  (inst.cta-free-dev)
+    eyebrow, headline, lead, free (ids), free_note (html, optional), paid (ids), program (id, optional),
+    paid_title, paid_lead, terms_cost_b/terms_cost (optional override of the "$0" terms item),
+    credibility (html, optional), faq (list of {q, a} html, optional)
+  "Start free" links go straight to account creation (/learn/?mode=signup&next=<course>?enroll=free),
+  which returns to the course and enrols. campaign.js points them at the course instead when the
+  visitor is already signed in ([data-start]).
+  CTA event names (all must match /^[a-z][a-z0-9]{1,14}\.[a-z0-9_-]{1,24}$/ with the "inst." prefix;
+  campaign.js appends -v<n> when the visit's utm_content ends in v<n>):
+    cta-free-<key>            hero "Start free"
+    cta-free-<key>-<course>   a free course card's "Start free"   (course id without the dash)
+    cta-free-<key>-end        bottom-of-page "Start free"
+    cta-paid-<key>-<course>   a paid course's syllabus link
+    cta-prog-<key>            the program link
+{%- endcomment -%}
+{%- assign all = site.data.catalog.courses -%}
+{%- assign f0 = all | where: "id", page.free[0] | first -%}
+<section class="go-hero">
+  <div class="wrap go-wrap">
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1>{{ page.headline }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+    <div class="cta-row">
+      <a class="btn" href="/learn/?mode=signup&amp;next=%2Fcourses%2F{{ f0.id }}%2F%3Fenroll%3Dfree" data-start="{{ f0.id }}" data-cta="cta-free-{{ page.cta_key }}">{{ page.hero_cta | default: "Start the free course" }} <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn ghost" href="#free">{% if page.free.size > 1 %}See all {{ page.free.size }} free courses{% else %}What's in it{% endif %}</a>
+    </div>
+    <ul class="go-terms" aria-label="What the free course includes">
+      <li><b>{{ page.terms_cost_b | default: "$0" }}</b><span>{{ page.terms_cost | default: "no card, no subscription" }}</span></li>
+      <li><b>~{{ f0.hours }} hour</b><span>{{ f0.lessonCount }} short written lessons</span></li>
+      <li><b>{{ f0.exam.questions }} questions</b><span>{{ f0.exam.minutes }} minutes, {{ f0.exam.passPct }}% to pass, {{ f0.exam.attempts }} attempts</span></li>
+      <li><b>Certificate</b><span>of completion (not a vendor cert)</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tight" id="free" aria-labelledby="free-h">
+  <div class="wrap go-wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Free</p>
+        <h2 id="free-h">{% if page.free.size > 1 %}The free courses{% else %}The free course{% endif %}</h2>
+        <p>Every lesson title is below, so you know what you are signing up for. You need an account so your progress and your name on the certificate are saved; that is all we ask for.</p>
+      </div>
+    </div>
+    <div class="go-free-grid">
+      {%- for fid in page.free %}
+      {%- assign c = all | where: "id", fid | first %}
+      {%- if c %}
+      <article class="go-free" data-course="{{ c.id }}">
+        <div class="card-top">
+          <span class="code">{{ c.id }}</span>
+          <span class="price" data-price-for="{{ c.id }}" data-kind="course" data-status="{{ c.status }}"><span class="fallback">{{ c.levelLabel | escape }}</span></span>
+        </div>
+        <h3><a href="/courses/{{ c.id }}/">{{ c.title | escape }}</a></h3>
+        <p class="go-sub">{{ c.summary | escape }}</p>
+        <details class="go-mods">
+          <summary>{{ c.lessonCount }} lessons in {{ c.modules | size }} modules</summary>
+          <ol>
+            {%- for m in c.modules %}
+            <li><b>{{ m.title | escape }}</b>
+              <ul>{% for l in m.lessons %}<li>{{ l | escape }}</li>{% endfor %}</ul></li>
+            {%- endfor %}
+          </ol>
+        </details>
+        <p class="go-exam small">Exam: {{ c.exam.questions }} multiple-choice questions, {{ c.exam.minutes }} minutes, {{ c.exam.passPct }}% to pass. Up to {{ c.exam.attempts }} attempts, 24 hours apart after a fail.</p>
+        {%- if c.prerequisites.size > 0 %}
+        <div class="go-need small"><b>You'll need:</b>
+          <ul>{% for p in c.prerequisites %}<li>{{ p | escape }}</li>{% endfor %}</ul></div>
+        {%- endif %}
+        <a class="btn block" href="/learn/?mode=signup&amp;next=%2Fcourses%2F{{ c.id }}%2F%3Fenroll%3Dfree" data-start="{{ c.id }}" data-cta="cta-free-{{ page.cta_key }}-{{ c.id | remove: '-' }}">Start free <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- if page.free_note %}
+    <p class="note go-note">{{ page.free_note }}</p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section tight alt" aria-labelledby="how-h">
+  <div class="wrap go-wrap go-how">
+    <div>
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-h">Read, sit the exam, get a certificate</h2>
+      <ol class="go-steps">
+        <li><b>Create an account.</b> Name, email, password. The name is what goes on the certificate.</li>
+        <li><b>Read the lessons.</b> Written, self-paced, about an hour. Progress saves as you go.</li>
+        <li><b>Take the exam.</b> It unlocks when every lesson is done: {{ f0.exam.questions }} multiple-choice questions, timed, scored the moment you submit. You see per-module results, not the answer key.</li>
+        <li><b>Share the certificate.</b> A Wirewalk certificate of completion with a unique ID; anyone can check it at <a href="/verify/">/verify</a>, and you can add it to LinkedIn.</li>
+      </ol>
+    </div>
+    <div class="go-cert" aria-hidden="true">{% include cert-sample.html class="cert-mini" course=f0.title %}</div>
+  </div>
+</section>
+
+{%- if page.paid and page.paid.size > 0 %}
+{%- assign has_wait = false %}
+<section class="section tight" aria-labelledby="paid-h">
+  <div class="wrap go-wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">If you want to go further</p>
+        <h2 id="paid-h">{{ page.paid_title }}</h2>
+        <p>{{ page.paid_lead }}</p>
+      </div>
+    </div>
+    <ul class="go-paid">
+      {%- for pid in page.paid %}
+      {%- assign c = all | where: "id", pid | first %}
+      {%- if c %}
+      <li>
+        <div class="go-paid-main">
+          <div class="card-top"><span class="code">{{ c.id }}</span><span class="pill lvl">{{ c.levelLabel | escape }}</span></div>
+          <h3><a href="/courses/{{ c.id }}/" data-cta="cta-paid-{{ page.cta_key }}-{{ c.id | remove: '-' }}">{{ c.title | escape }}</a></h3>
+          <p class="small muted">{{ c.hours }} hours · {{ c.lessonCount }} lessons · {{ c.exam.questions }}-question exam</p>
+          <div class="go-req small"><b>Prerequisites:</b>
+            {%- if c.prerequisites.size > 0 %}
+            <ul>
+              {%- for p in c.prerequisites %}
+              {%- assign pc = all | where: "id", p | first %}
+              {%- if pc %}
+              {%- if pc.status == "on_sale" %}
+              {%- assign deeper = false %}
+              {%- for q in pc.prerequisites %}{% assign qc = all | where: "id", q | first %}{% if qc and qc.status != "on_sale" %}{% assign deeper = true %}{% endif %}{% endfor %}
+              {%- if deeper %}{% assign has_wait = true %}{% endif %}
+              <li><a href="/courses/{{ pc.id }}/">{{ pc.id }} {{ pc.title | escape }}</a> <span class="go-tag ok">{% if pc.level == "intro" %}free{% else %}available{% endif %}</span>{% if deeper %} <span class="go-tag wait">its own prerequisites include a course not open yet</span>{% endif %}</li>
+              {%- else %}
+              {%- assign has_wait = true %}
+              <li><a href="/courses/{{ pc.id }}/">{{ pc.id }} {{ pc.title | escape }}</a> <span class="go-tag wait">not open yet (waitlist)</span></li>
+              {%- endif %}
+              {%- else %}
+              <li>{{ p | escape }}</li>
+              {%- endif %}
+              {%- endfor %}
+            </ul>
+            {%- else %} none listed.{% endif %}
+          </div>
+        </div>
+        <div class="go-paid-price price" data-price-for="{{ c.id }}" data-kind="course" data-status="{{ c.status }}">{% if c.status == 'on_sale' %}<span class="fallback">Price loads from our catalog; shown before you pay</span>{% else %}<span class="fallback">Join the waitlist</span>{% endif %}</div>
+      </li>
+      {%- endif %}
+      {%- endfor %}
+      {%- if page.program %}
+      {%- assign p = site.data.catalog.programs | where: "id", page.program | first %}
+      {%- if p %}
+      <li class="go-prog">
+        <div class="go-paid-main">
+          <div class="card-top"><span class="code">Program</span><span class="pill lvl">{{ p.courses | size }} courses</span></div>
+          <h3><a href="/programs/{{ p.id }}/" data-cta="cta-prog-{{ page.cta_key }}">{{ p.title | escape }}</a></h3>
+          <p class="small go-prog-note">A Wirewalk program certificate, not a vendor certification.</p>
+          <p class="small muted">{{ p.courses | join: ", " }} as one bundle. <span data-save-for="{{ p.id }}" hidden></span></p>
+        </div>
+        <div class="go-paid-price price" data-price-for="{{ p.id }}" data-kind="program" data-mode="card"><span class="fallback">Price loads from our catalog; shown before you pay</span></div>
+      </li>
+      {%- endif %}
+      {%- endif %}
+    </ul>
+    {%- if has_wait %}
+    <p class="small go-after"><b>"Not open yet"</b> means that prerequisite course is still on the waitlist. Read the course page before you buy and check you already have the background it assumes.</p>
+    {%- endif %}
+    <p class="small faint go-after">Prices are per course, paid once; no subscription. The free course is complete on its own; you do not need to buy anything.</p>
+  </div>
+</section>
+{%- endif %}
+
+{%- if page.credibility %}
+<section class="section tight alt" aria-labelledby="who-h">
+  <div class="wrap go-wrap go-narrow">
+    <p class="eyebrow">Who wrote this</p>
+    <h2 id="who-h">{{ page.credibility_title | default: "Who is behind it" }}</h2>
+    <p>{{ page.credibility }}</p>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section tight" aria-labelledby="faq-h">
+  <div class="wrap go-wrap go-narrow">
+    <h2 id="faq-h">Fair questions</h2>
+    <div class="faq">
+      <details open><summary>Is it really free?</summary><div class="a"><p>Yes. The intro courses cost $0, including the exam and the certificate. You create an account (name, email, password) and we do not ask for a card. {{ page.free_extra }}</p><p>What's the catch: we hope some people take a paid course afterwards. If you don't, that's fine; the free course is complete on its own.</p></div></details>
+      <details><summary>Who made this?</summary><div class="a"><p>The Wirewalk Institute of AI, the training arm of Wirewalk, built by the team behind Wirewalk's AI and HPC infrastructure practice. It is independent: not a reseller, partner or official training provider for OpenAI, Anthropic, Google, Microsoft, NVIDIA or any other vendor, and no vendor sponsors or reviews the courses. <a href="/about/">About the Institute</a>.</p></div></details>
+      <details><summary>Is the certificate official?</summary><div class="a"><p>Be clear about what it is: a Wirewalk Institute of AI certificate of completion and assessment. It shows you finished the course and passed its {{ f0.exam.questions }}-question, automatically scored exam. It is not a vendor certification, not accredited, and not academic credit, and we make no claim that employers recognise it. Its ID lets anyone confirm we issued it, at <a href="/verify/">institute.wirewalk.com/verify</a>. <a href="/certification/#limits">What it does and doesn't show</a>.</p></div></details>
+      <details><summary>What if I fail the exam?</summary><div class="a"><p>You see your score per module so you know what to re-read, and you can try again after 24 hours, up to {{ f0.exam.attempts }} attempts. Questions and options are reshuffled on every attempt.</p></div></details>
+      {%- for f in page.faq %}
+      <details><summary>{{ f.q }}</summary><div class="a"><p>{{ f.a }}</p></div></details>
+      {%- endfor %}
+    </div>
+    <div class="cta-row go-end">
+      <a class="btn" href="/learn/?mode=signup&amp;next=%2Fcourses%2F{{ f0.id }}%2F%3Fenroll%3Dfree" data-start="{{ f0.id }}" data-cta="cta-free-{{ page.cta_key }}-end">{{ page.hero_cta | default: "Start the free course" }} <span class="arr" aria-hidden="true">→</span></a>
+      <a class="link-arrow" href="/courses/?free=1">All free courses <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<aside class="go-data" aria-label="What this page records">
+  <div class="wrap go-wrap go-narrow small faint">
+    <p><b>What this site keeps.</b> If you came from an ad, the campaign tags in the link (utm_source, utm_medium, utm_campaign, utm_content, utm_term and, if present, Reddit's click ID) are saved in your browser for up to 30 days and sent with your sign-up if you create an account, so we can see which ads lead to sign-ups; the browser copy is deleted once you sign up. Page views and button clicks here are counted as anonymous daily totals: no cookies, no IP address or user ID in those counts. There is no Reddit pixel or other ad tracker on this site. An account stores your name, email and learning records. <a href="/privacy/">Privacy policy</a>.</p>
+  </div>
+</aside>

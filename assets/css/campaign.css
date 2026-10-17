@@ -1,0 +1,80 @@
+/* Wirewalk Institute of AI: /go/ campaign landing pages. Small additions on top of site.css,
+   mobile-first (most ad traffic is on phones). Tokens only; no literal colours. */
+.go-wrap{max-width:1080px}
+.go-narrow{max-width:780px}
+
+.go-hero{position:relative;padding:28px 0 32px;overflow:hidden;border-bottom:1px solid var(--ln)}
+.go-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 90% -20%,var(--acbg),transparent 70%);pointer-events:none}
+.go-hero .wrap{position:relative}
+.go-hero .eyebrow{margin-bottom:10px}
+.go-hero h1{font-size:clamp(31px,6.2vw,56px);line-height:1.08;max-width:22ch;margin-bottom:.4em}
+.go-hero .lead{font-size:clamp(17px,1.6vw,20px);margin-bottom:22px}
+.go-hero .cta-row .btn:first-child{flex:1 1 100%}
+.go-terms{list-style:none;padding:18px 0 0;margin:24px 0 0;border-top:1px solid var(--ln);display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.go-terms li{display:flex;flex-direction:column}
+.go-terms b{font:600 22px/1.1 var(--disp);color:var(--tx)}
+.go-terms span{font-size:13.5px;color:var(--tx2);margin-top:3px;line-height:1.35}
+
+.go-free-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.go-free{display:flex;flex-direction:column;background:var(--srf);border:1px solid var(--ln);border-radius:var(--r2);padding:20px 18px 18px}
+.go-free .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.go-free h3{font-size:21px;margin:0 0 8px}
+.go-free h3 a{color:var(--tx);text-decoration:none}
+.go-free h3 a:hover{color:var(--ac)}
+.go-sub{font-size:15px;line-height:1.5;color:var(--tx2);margin:0 0 12px}
+.go-mods{border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);margin:0 0 12px}
+.go-mods summary{cursor:pointer;padding:11px 0;font-weight:600;font-size:15px;color:var(--ac);min-height:44px;display:flex;align-items:center}
+.go-mods ol{margin:0 0 12px;padding-left:1.2em;font-size:14.5px;color:var(--tx2)}
+.go-mods ol > li{margin:0 0 8px}
+.go-mods ol b{color:var(--tx);font-weight:600}
+.go-mods ul{margin:4px 0 0;padding-left:1.1em}
+.go-exam{color:var(--tx2);margin:0 0 12px}
+.go-need{background:var(--alt);border:1px solid var(--ln);border-radius:var(--r);padding:10px 12px;margin:0 0 14px;color:var(--tx2)}
+.go-need ul{margin:4px 0 0;padding-left:1.1em}
+.go-free .btn{margin-top:auto}
+.go-note{margin:18px 0 0}
+
+.go-how{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+.go-steps{margin:0;padding-left:1.3em;display:grid;gap:12px;color:var(--tx2)}
+.go-steps b{color:var(--tx)}
+.go-cert{display:none}
+
+.go-paid{list-style:none;margin:0;padding:0;border-top:1px solid var(--ln)}
+.go-paid > li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 16px;padding:16px 0;border-bottom:1px solid var(--ln)}
+.go-paid-main{flex:1 1 280px;min-width:0}
+.go-paid .card-top{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.go-paid .card-top .code{margin-right:0}
+.go-paid h3{font-size:19px;margin:0 0 4px}
+.go-paid h3 a{color:var(--tx);text-decoration:none}
+.go-paid h3 a:hover{color:var(--ac);text-decoration:underline}
+.go-paid p{margin:0}
+.go-paid-price{font-size:18px;white-space:nowrap}
+.go-paid-price .fallback{white-space:normal;display:block;max-width:20ch;font-size:13.5px;line-height:1.35;color:var(--tx2)}
+.go-req{margin:8px 0 0;color:var(--tx2)}
+.go-req b{color:var(--tx);font-weight:600}
+.go-req ul{margin:4px 0 0;padding-left:1.1em}
+.go-req li{margin:2px 0}
+.go-tag{display:inline-block;font-size:12.5px;line-height:1.3;padding:1px 7px;border-radius:999px;border:1px solid var(--ln);white-space:normal}
+.go-tag.ok{color:var(--ok);background:var(--okbg);border-color:transparent}
+.go-tag.wait{color:var(--wait);background:var(--waitbg);border-color:transparent}
+.go-prog-note{margin:0 0 4px!important;color:var(--tx2)}
+.go-prog{background:var(--acbg);border-radius:var(--r);padding:16px 14px!important;margin-top:12px;border-bottom:0!important}
+.go-after{margin:16px 0 0}
+
+.go-end{margin-top:28px}
+.go-data{border-top:1px solid var(--ln);padding:22px 0 30px;background:var(--alt)}
+.go-data p{margin:0;max-width:72ch}
+
+@media (min-width:700px){
+  .go-hero{padding:56px 0 48px}
+  .go-hero .cta-row .btn:first-child{flex:0 0 auto}
+  .go-terms{grid-template-columns:repeat(4,auto);justify-content:start;gap:clamp(20px,3.4vw,44px)}
+  .go-terms b{font-size:28px}
+  .go-free-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .go-free{padding:24px 22px 20px}
+}
+@media (min-width:1000px){
+  .go-how{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px}
+  .go-cert{display:block}
+  .go-cert .cert-mini{transform:rotate(-1deg)}
+}

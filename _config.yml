@@ -26,6 +26,11 @@ turnstile_sitekey: "0x4AAAAAAFZaAmywY6WsOToE"   # widget "Wirewalk Institute" (i
 # Portal endpoint shared by every Wirewalk site's enquiry form.
 enquiry_endpoint: https://wirewalk-portal.wirewalk-upload.workers.dev/api/enquiry
 
+# The estate's aggregate click counter (wirewalk-orders Worker). Stores only (day, name, count):
+# no IP, no cookie, no user id. Used by assets/js/campaign.js for /go/ landing views and CTA
+# clicks; names must match /^[a-z][a-z0-9]{1,14}\.[a-z0-9_-]{1,24}$/ ("inst.go-dev").
+events_endpoint: https://wirewalk-orders.wirewalk-upload.workers.dev/event
+
 timezone: America/New_York
 markdown: kramdown
 kramdown:

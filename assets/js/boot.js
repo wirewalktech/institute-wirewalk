@@ -29,4 +29,13 @@
     }
   } catch (e) {}
   window.WIA = { api: api.replace(/\/+$/, ""), site: site };
+  /* A visitor arriving from a tagged link (utm_* or Reddit's rdt_cid) on a page that is not a
+     /go/ campaign page: load campaign.js so the first touch is still recorded. Untagged visits,
+     including every learner-app page, never load it. */
+  try {
+    if (/[?&](utm_(source|medium|campaign|content)|rdt_cid)=/.test(location.search) && !meta("wia-campaign")) {
+      var cs = document.createElement("script"); cs.src = "/assets/js/campaign.js";  /* inserted scripts run async; campaign.js needs only head metas */
+      document.head.appendChild(cs);
+    }
+  } catch (e) {}
 })();

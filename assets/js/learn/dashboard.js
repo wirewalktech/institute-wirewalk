@@ -4,6 +4,25 @@
   var API = window.WIAApi, W = window.WL, h = W.h;
 
   function F(form, n) { return form.querySelector("[name=\"" + n + "\"]"); }
+
+  /* Campaign attribution saved by /assets/js/campaign.js (localStorage "wia_attrib", 30 days).
+     Sent with sign-up as an optional, whitelisted object; null when there is none. An expired or
+     unreadable record is deleted here, and the record is deleted once an account is created, so a
+     second person signing up in the same browser does not inherit the first person's campaign. */
+  var ATTR_KEY = "wia_attrib", ATTR_KEYS = ["source", "medium", "campaign", "content", "term", "rdt_cid", "landing"];
+  function dropAttribution() { try { localStorage.removeItem(ATTR_KEY); } catch (e) { /* storage blocked */ } }
+  function storedAttribution() {
+    var raw;
+    try { raw = localStorage.getItem(ATTR_KEY); } catch (e) { return null; }
+    if (!raw) return null;
+    try {
+      var r = JSON.parse(raw), t = r && r.last;
+      if (!t || typeof t.at !== "number" || Date.now() - t.at > 30 * 24 * 3600 * 1000) { dropAttribution(); return null; }
+      var out = {}, any = false;
+      ATTR_KEYS.forEach(function (k) { if (typeof t[k] === "string" && t[k]) { out[k] = t[k].slice(0, 100); any = true; } });
+      return any ? out : null;
+    } catch (e) { dropAttribution(); return null; }
+  }
   function nextTarget() { return W.safeNext(W.param("next")); }
 
   function afterAuth(res) {
@@ -123,8 +142,10 @@
       W.formError(form, "");
       var body = { email: email, password: pw, name: name, turnstile: token };
       if (org) body.organization = org;
+      var attribution = storedAttribution();
+      if (attribution) body.attribution = attribution;
       W.busy(form.querySelector("[type=submit]"), API.signup(body), "Creating account…")
-        .then(afterAuth, function (err) {
+        .then(function (res) { dropAttribution(); afterAuth(res); }, function (err) {
           ts.reset();
           W.formError(form, err.status === 409 ? "An account with this email already exists. Sign in instead, or reset your password." : err.message);
         });
@@ -246,8 +267,20 @@
 
   /* ------------------------------------------------------------ boot */
   function boot() {
-    if (API.signedIn()) loadDashboard();
-    else authView(W.param("mode") === "signup" ? "signup" : "signin", W.param("next") ? "Sign in to continue." : null);
+    var mode = W.param("mode"), next = W.param("next") || "";
+    var toFreeCourse = /[?&]enroll=free/.test(next);
+    if (API.signedIn()) {
+      /* Already signed in and on the way to a free course (a /go/ "Start free" link): go and enrol. */
+      var n = nextTarget();
+      if (toFreeCourse && n && n.indexOf("/courses/") === 0) { window.location.replace(n); return; }
+      loadDashboard();
+    } else {
+      /* A visitor on the way to a free course, from a /go/ page (mode=signup) or any campaign link,
+         is almost always new: open on "Create account" (the Sign in tab is one click away). */
+      var fromCampaign = toFreeCourse && (mode === "signup" || (!mode && storedAttribution()));
+      if (fromCampaign) authView("signup", "Create a free account to start the course. Already have one? Use Sign in.");
+      else authView(mode === "signup" ? "signup" : "signin", next ? "Sign in to continue." : null);
+    }
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();
