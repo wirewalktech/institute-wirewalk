@@ -3,14 +3,14 @@
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
-      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval.",
+      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval. New 13-course industry catalog publication observed; associated content review outstanding.",
       "branches_examined": {
         "site-v1": {
           "sha": "c6d7b3d81f71f527a9884d8c878b7fb9ff86d53f",
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         }
       },
-      "last_examined_sha": "57f7b6b",
+      "last_examined_sha": "54f8fb7",
       "scoped_checkpoints": {
         "reset_js_source_and_live_fixture": "79b358f",
         "homepage_1440_390_noindex_and_exact_pages_sha": "79b358f",
@@ -32,9 +32,10 @@
         "Full factual/example/exam review of new fnd-102, fnd-105 and mod-201; structural/selected-claim triage only so far",
         "Full bulk US-localization factual/code review; full new AI-instructor design/scenario/exercise review and future implementation checks",
         "WIA-013 shared global AI monthly spend gate/kill-switch missing; verify fix before provider use",
-        "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review"
+        "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review",
+        "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval"
       ],
-      "last_examined_sha": "db4099f",
+      "last_examined_sha": "b1b087edea70c6f322148f73690804040b9e389a",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -49,11 +50,12 @@
         "WIA_011_live_UI_handoff_verified_fixed": "site:a35e268/79b358f",
         "fnd102_fnd105_mod201_structural_and_selected_lesson_triage": "9350a68",
         "US_validator_and_selected_instructor_design_triage": "b59e476",
-        "admin_suite_triage_304_pass_1_skip_and_AI_budget_review": "db4099f"
+        "admin_suite_triage_304_pass_1_skip_and_AI_budget_review": "db4099f",
+        "industry_wave_structure_71_and_two_primary_source_claims_only": "b1b087e"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-17T21:12:11Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-2112.md"
+  "last_check_started_utc": "2026-10-17T23:11:42Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-2311.md"
 }
