@@ -24,3 +24,8 @@ exclude:
   - Gemfile.lock
   - vendor
   - tools
+
+  - AI.MD
+  - AGENTS.md
+  - CLAUDE.md
+  - audits

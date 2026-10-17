@@ -1,0 +1,20 @@
+{
+  "review_date": "2026-10-17",
+  "repositories": {
+    "wirewalktech/institute-wirewalk": {
+      "reviewed_sha": "fd9463813111a0dadd24285119df55b57db5745a",
+      "scope": "Holding-page source and Jekyll configuration; Pages build SHA verified. Custom domain DNS unresolved from audit environment; no browser visual verification."
+    },
+    "wirewalktech/wirewalk-institute-worker": {
+      "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
+      "scope": "Initial triage: full structural validation and bank-length metrics; source review of validator and schema; selected foundation, Claude, RAG and board lessons. Not full factual/editorial approval.",
+      "outstanding": [
+        "Remaining lesson-by-lesson factual review",
+        "All exam questions mapped to lesson evidence and reviewed for ambiguity",
+        "Runtime/security review when implementation is committed",
+        "Custom-domain and responsive visual verification"
+      ]
+    }
+  },
+  "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md"
+}
