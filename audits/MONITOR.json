@@ -2,19 +2,30 @@
   "review_date": "2026-10-17",
   "repositories": {
     "wirewalktech/institute-wirewalk": {
-      "reviewed_sha": "fd9463813111a0dadd24285119df55b57db5745a",
-      "scope": "Holding-page source and Jekyll configuration; Pages build SHA verified. Custom domain DNS unresolved from audit environment; no browser visual verification."
+      "reviewed_sha": "39ca6b97fe64382d54d67a332b270a72ec6d634e",
+      "scope": "Holding-page source, Jekyll configuration, protocol and audit records reviewed. Exact-SHA Pages build is built; ordinary HTTPS returns 200 and page retains noindex. Responsive visual verification pending."
     },
     "wirewalktech/wirewalk-institute-worker": {
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
-      "scope": "Initial triage: full structural validation and bank-length metrics; source review of validator and schema; selected foundation, Claude, RAG and board lessons. Not full factual/editorial approval.",
+      "scope": "Whole-repository cursor deliberately remains at baseline: new course content still requires detailed factual/editorial review. Scoped checkpoints track completed source/metric/fix review without claiming full content approval.",
       "outstanding": [
-        "Remaining lesson-by-lesson factual review",
-        "All exam questions mapped to lesson evidence and reviewed for ambiguity",
-        "Runtime/security review when implementation is committed",
-        "Custom-domain and responsive visual verification"
-      ]
+        "Detailed review of new and existing lessons and syllabuses since baseline",
+        "Independent semantic review of rewritten exam items, mapping and distractor validity",
+        "New Markdown renderer finding WIA-009 pending coordinator fix and verification",
+        "WIA-006 source evidence/editorial release process; WIA-007 prelaunch rubrics and timing pilots",
+        "Runtime/security and permutation grading review once src/test are committed",
+        "Responsive visual verification"
+      ],
+      "last_examined_sha": "d816759",
+      "scoped_checkpoints": {
+        "validator_build_and_commit_helper_source": "d816759",
+        "exam_bank_length_metrics": "d816759",
+        "WIA_002_003_004_005_008_fix_followup": "d816759",
+        "protocol_and_board_responses": "d816759"
+      }
     }
   },
-  "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md"
+  "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
+  "last_check_started_utc": "2026-10-17T15:13:40Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-1513.md"
 }
