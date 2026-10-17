@@ -2,6 +2,8 @@
 title: Privacy
 description: "What personal data the Wirewalk Institute of AI collects, why, who processes it, and how to reach us about it."
 ---
+{%- comment -%} [marketing] Text about the cookie banner and Reddit Pixel appears only when _config.yml sets reddit_pixel_id; without it the site loads no pixel and says so. {%- endcomment -%}
+{%- assign rdt_on = site.reddit_pixel_id | default: "" | strip -%}
 <div class="wrap-n">
   <header class="page-head">
     <p class="eyebrow">Legal</p>
@@ -18,7 +20,7 @@ description: "What personal data the Wirewalk Institute of AI collects, why, who
       <li><strong>Purchases:</strong> what you bought, the amount and its status. Card payments are processed by Stripe; we never receive your card number.</li>
       <li><strong>Enquiries and waitlist sign-ups:</strong> what you send through the teams form or a waitlist form — name, email, organisation, team size, the course you asked about and your message. Each submission is stored with the IP address and browser user-agent it came from, which we use to spot and block abuse.</li>
       <li><strong>Security records:</strong> IP addresses and timestamps used to limit repeated sign-in and sign-up attempts, and the IP address and user-agent recorded with each enquiry as described above.</li>
-      <li><strong>Campaign source:</strong> if you arrive through a tagged link (for example one of our ads on Reddit), the link's campaign tags (<code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>), Reddit's click ID (<code>rdt_cid</code>, if the link carries one) and the page you landed on are saved with your account when you sign up, so we can tell which campaigns lead to sign-ups. We do not send them to Reddit or anyone else.</li>
+      <li><strong>Campaign source:</strong> if you arrive through a tagged link (for example one of our ads on Reddit), the link's campaign tags (<code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>, <code>utm_content</code>, <code>utm_term</code>), Reddit's click ID (<code>rdt_cid</code>, if the link carries one) and the page you landed on are saved with your account when you sign up, so we can tell which campaigns lead to sign-ups. Our servers do not send them to Reddit or anyone else.{% if rdt_on != "" %} If you accept advertising cookies, the Reddit Pixel itself reads Reddit's click ID from the link (see <a href="#cookies">Advertising cookies</a>).{% endif %}</li>
       <li><strong>Page and button counts:</strong> on our campaign pages we count page views and clicks on the main buttons as anonymous daily totals (a page or button name and a number per day). No IP address, cookie or user ID is stored with those counts.</li>
     </ul>
 
@@ -26,7 +28,7 @@ description: "What personal data the Wirewalk Institute of AI collects, why, who
     <p>A certificate's verification page is public by design. It shows the name on the certificate, the course or program, the issue date, the exam score and whether it is valid. It does not show your email address or any other account details.</p>
 
     <h2>What we use it for</h2>
-    <p>To run your account and courses, grade exams, issue and verify certificates, process purchases, answer enquiries, send the emails the service needs (such as sign-in codes and certificates), and protect the service from abuse. We do not sell personal data, and this site uses no third-party advertising or analytics trackers: no ad pixels, no analytics scripts.</p>
+    <p>To run your account and courses, grade exams, issue and verify certificates, process purchases, answer enquiries, send the emails the service needs (such as sign-in codes and certificates), and protect the service from abuse. We do not sell personal data.{% if rdt_on != "" %} The only third-party advertising tool on this site is the Reddit Pixel, and it runs only if you accept it (see <a href="#cookies">Advertising cookies</a>). There are no analytics scripts.{% else %} This site uses no third-party advertising or analytics trackers: no ad pixels, no analytics scripts.{% endif %}</p>
 
     <h2>Who processes it for us</h2>
     <ul>
@@ -34,11 +36,29 @@ description: "What personal data the Wirewalk Institute of AI collects, why, who
       <li><strong>Stripe</strong> processes payments.</li>
       <li><strong>GitHub Pages</strong> hosts this public website.</li>
       <li><strong>Google Fonts</strong> serves the typeface used for headings, so your browser requests it from Google.</li>
+{%- if rdt_on != "" %}
+      <li><strong>Reddit</strong> receives the advertising measurement data described under <a href="#cookies">Advertising cookies</a>, only if you accept advertising cookies. Reddit's own privacy policy applies to what it receives.</li>
+{%- endif %}
       <li><strong>Resend</strong>, our email delivery provider, sends account and certificate emails and delivers enquiry and waitlist notifications to our sales inbox (the enquiry itself is first stored on Cloudflare).</li>
     </ul>
 
     <h2>In your browser</h2>
-    <p>We store a sign-in token in your browser's local storage while you are signed in, your light or dark theme choice, a short-lived copy of the price list, and, only if you arrived through a tagged campaign link, those campaign tags for up to 30 days so they can go with your sign-up (the browser copy is deleted when you create an account, or when it expires). There are no tracking cookies.</p>
+    <p>We store a sign-in token in your browser's local storage while you are signed in, your light or dark theme choice, a short-lived copy of the price list, and, only if you arrived through a tagged campaign link, those campaign tags for up to 30 days so they can go with your sign-up (the browser copy is deleted when you create an account, or when it expires). {% if rdt_on != "" %}We also store your cookie choice (accept or reject) in local storage, and, if you accept, a short list of purchase and sign-up references already reported to Reddit so none is reported twice. Our own site sets no tracking cookies; the Reddit Pixel sets cookies only after you accept, as described next.{% else %}There are no tracking cookies.{% endif %}</p>
+{%- if rdt_on != "" %}
+
+    <h2 id="cookies">Advertising cookies (Reddit Pixel)</h2>
+    <p>We advertise on Reddit and would like to measure which ads lead to visits, sign-ups and purchases. For that we use the Reddit Pixel, a script from Reddit. On your first visit a banner asks you to <strong>Accept</strong> or <strong>Reject</strong> it; both choices are equally easy, and nothing from Reddit loads until you press Accept. If you reject, or ignore the banner, the pixel never loads.</p>
+    <p>If you accept, your browser loads the script from <code>www.redditstatic.com</code> and sends events to Reddit (<code>alb.reddit.com</code>). Reddit receives what any request to it carries (your IP address, browser details and the address of the page), and the script sets Reddit cookies on this site (named <code>_rdt_…</code>), including Reddit's click ID if you arrived from a Reddit ad. We report these events:</p>
+    <ul>
+      <li><strong>PageVisit</strong> for each page you view;</li>
+      <li><strong>SignUp</strong> when you create an account, with our internal account reference;</li>
+      <li><strong>Lead</strong> when you enrol in a free course;</li>
+      <li><strong>Purchase</strong> when a paid order is confirmed, with our order reference, the amount, the currency and the number of courses.</li>
+    </ul>
+    <p>We do not give the pixel your name, email address or any other account details. When you sign up after accepting, we also record on your account that you accepted, and update that record if you later change your choice while signed in. Our servers do not send any of your data to Reddit.</p>
+    <p>You can change your choice at any time: use <strong>Cookie settings</strong> in the footer of any page, or the button below. Rejecting after you had accepted deletes the Reddit cookies on this site and reloads the page without the pixel.</p>
+    <p><button type="button" class="btn sm ghost" data-cookie-settings hidden>Cookie settings</button></p>
+{%- endif %}
 
     <h2>How long we keep it</h2>
     <p>Learning records and certificates are kept while your account exists so certificates stay verifiable. Purchase records are kept as long as accounting law requires. Ask us to close your account and we will delete or anonymise what we are not required to keep; a certificate you have shared can be withdrawn from public verification on request.</p>

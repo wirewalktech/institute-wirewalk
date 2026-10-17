@@ -40,7 +40,8 @@ layout: default
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Program certificate issued automatically after the last pass</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bundle price below the courses bought separately</li>
       </ul>
-      <p class="small faint" style="margin:16px 0 0">Enrolling a group? <a href="/teams/?interest={{ p.id }}">Team seats and invoices</a></p>
+      {% include team-buy.html kind="program" id=p.id status=p.status %}
+      <p class="small faint" style="margin:12px 0 0">Need a quote or purchase order first? <a href="/teams/?interest={{ p.id }}">Team enquiries</a></p>
     </aside>
   </div>
 </div>

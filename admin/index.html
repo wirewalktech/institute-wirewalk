@@ -1,0 +1,21 @@
+---
+title: Admin console
+description: "Redirects to the Wirewalk Institute admin console."
+redirect_to: https://wirewalk-institute.wirewalk-upload.workers.dev/admin
+permalink: /admin/
+sitemap: false
+---
+{%- comment -%}
+  [marketing] Short URL for operators: institute.wirewalk.com/admin/ -> the learning Worker's console.
+  The default layout emits the meta refresh and robots noindex,nofollow from `redirect_to`.
+  Do not use `layout: null` here (GOTCHAS G-01): the page would silently not be generated.
+{%- endcomment %}
+<div class="wrap-n">
+  <header class="page-head">
+    <p class="eyebrow">Staff</p>
+    <h1>Admin console</h1>
+  </header>
+  <div class="doc prose">
+    <p>Taking you to the admin console. If nothing happens, <a href="{{ page.redirect_to }}" rel="nofollow">open the admin console</a>.</p>
+  </div>
+</div>

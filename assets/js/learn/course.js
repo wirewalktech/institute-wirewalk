@@ -100,7 +100,9 @@
 
     var sum = W.examSummary(exam, prog);
     var body = [], actions = [];
-    if (cert || exam.passed) {
+    if (exam.recertification) body.push(h("p", null, "Your certificate expired on " + W.fmtDateUTC(exam.recertification.expiredAt) +   // [freshness]
+      ". Pass the exam again to renew it: you have one attempt for this, and the certificate keeps its ID."));
+    if ((cert && !cert.expired) || exam.passed) {   // [freshness] an expired certificate does not close the exam
       body.push(h("p", null, "You passed this exam. Your certificate of completion and assessment is ready."));
       if (cert) actions.push(W.btn("View certificate", { href: W.certUrl(cert.id) }));
     } else if (exam.openAttempt) {

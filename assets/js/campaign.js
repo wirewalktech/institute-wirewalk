@@ -31,7 +31,15 @@
   (function capture() {
     if (!q) return;
     var touch = {}, any = false;
-    Object.keys(PARAMS).forEach(function (p) { var v = q.get(p); if (v && clip(v)) { touch[PARAMS[p]] = clip(v); any = true; } });
+    /* [review-fixes] rdt_cid (Reddit's click id) is an advertising identifier: kept only when
+       the visitor has accepted advertising cookies (consent.js "wia_consent"). utm_* tags are
+       campaign names, not identifiers, and are kept either way. */
+    var adsOk = false;
+    try { var c = JSON.parse(localStorage.getItem("wia_consent") || "null"); adsOk = !!(c && c.ads === "accepted"); } catch (e) { adsOk = false; }
+    Object.keys(PARAMS).forEach(function (p) {
+      if (p === "rdt_cid" && !adsOk) return;
+      var v = q.get(p); if (v && clip(v)) { touch[PARAMS[p]] = clip(v); any = true; }
+    });
     if (!any) {
       /* Untagged visit: just drop a record that has expired or cannot be read. */
       try {

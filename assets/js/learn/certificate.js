@@ -42,6 +42,15 @@
     var verifyUrl = safeLink(c.verifyUrl, [siteHost()]) || (SITE + "/verify/?id=" + encodeURIComponent(certId));
     var linkedin = safeLink(c.linkedinUrl, ["www.linkedin.com", "linkedin.com"]);
     var issuedTxt = W.fmtDateUTC(c.issuedAt);
+    if (!c.revoked && c.expired) {   // [freshness] expired: say when, and how to renew
+      W.mount(h("div", { class: "wl-narrow" }, W.notice("error", "This certificate has expired",
+        "Certificate " + certId + (c.title ? " for “" + c.title + "”" : "") + " was valid until " + W.fmtDateUTC(c.validUntil) + ". " +
+        (c.kind === "program" ? "It is renewed when every course certificate in the program is current again."
+          : "The holder can renew it by passing the course exam again; the certificate keeps the same ID."),
+        [W.btn("Verification page", { href: verifyUrl }),
+         c.kind !== "program" && c.refId ? W.btn("Go to the course", { href: W.courseUrl(c.refId), class: "wl-btn-ghost" }) : null].filter(Boolean), { h1: true })));
+      return;
+    }
     if (c.revoked || c.valid === false) {
       W.mount(h("div", { class: "wl-narrow" }, W.notice("error", c.revoked ? "This certificate has been revoked" : "This certificate is not valid",
         "Certificate " + certId + (c.title ? " for “" + c.title + "”" : "") + " is not currently valid. If you believe this is a mistake, contact sales@wirewalk.com.",
@@ -63,6 +72,7 @@
         h("h1", { class: "wl-cert-title" }, c.title || ""),
         h("dl", { class: "wl-cert-facts" },
           h("div", null, h("dt", null, "Issued"), h("dd", null, issuedTxt)),
+          c.validUntil ? h("div", null, h("dt", null, "Valid until"), h("dd", null, W.fmtDateUTC(c.validUntil))) : null,   // [freshness]
           h("div", null, h("dt", null, "Certificate ID"), h("dd", { class: "wl-mono" }, c.id || id)),
           c.refId ? h("div", null, h("dt", null, program ? "Program" : "Course"), h("dd", { class: "wl-mono" }, String(c.refId).toUpperCase())) : null)),
         h("footer", { class: "wl-cert-foot" },
@@ -80,7 +90,7 @@
     W.mount(h("div", { class: "wl-cert-page" },
       h("div", { class: "wl-cert-intro wl-noprint" },
         h("p", { class: "wl-eyebrow" }, "Verified certificate"),
-        h("p", { class: "wl-hint" }, "Issued " + issuedTxt + " to " + (c.name || "the holder") + ". This page and the verification link always show the certificate’s current status.")),
+        h("p", { class: "wl-hint" }, "Issued " + issuedTxt + " to " + (c.name || "the holder") + (c.validUntil ? ", valid until " + W.fmtDateUTC(c.validUntil) : "") + ". This page and the verification link always show the certificate’s current status.")),
       h("div", { class: "wl-cert-scroll" }, sheet),
       /* On a phone the sheet is a scaled preview; these facts stay readable (hidden in print and on wide screens). */
       h("section", { class: "wl-cert-mfacts wl-noprint", "aria-label": "Certificate details" },
@@ -88,6 +98,8 @@
           h("div", null, h("dt", null, "Holder"), h("dd", null, c.name || "")),
           h("div", null, h("dt", null, program ? "Program" : "Course"), h("dd", null, c.title || "", c.refId ? h("span", { class: "wl-mono wl-muted" }, " · " + String(c.refId).toUpperCase()) : null)),
           h("div", null, h("dt", null, "Issued"), h("dd", null, issuedTxt)),
+          c.renewedAt ? h("div", null, h("dt", null, "Renewed"), h("dd", null, W.fmtDateUTC(c.renewedAt))) : null,      // [freshness]
+          c.validUntil ? h("div", null, h("dt", null, "Valid until"), h("dd", null, W.fmtDateUTC(c.validUntil))) : null,  // [freshness]
           !program && c.scorePct != null ? h("div", null, h("dt", null, "Score"), h("dd", null, c.scorePct + "%")) : null,
           h("div", null, h("dt", null, "Certificate ID"), h("dd", { class: "wl-mono" }, certId)),
           h("div", null, h("dt", null, "Verify at"), h("dd", { class: "wl-mono wl-break" }, h("a", { href: verifyUrl }, verifyUrl))))),

@@ -139,7 +139,7 @@
     exam = exam || {};
     if (exam.passed) return { kind: "ok", text: "Exam passed" + (exam.bestScore != null ? " · " + exam.bestScore + "%" : "") };
     if (exam.openAttempt) return { kind: "warn", text: "Exam in progress" };
-    if (exam.eligible) return { kind: "ac", text: "Exam unlocked" };
+    if (exam.eligible) return { kind: "ac", text: exam.recertification ? "Certificate expired · renew it" : "Exam unlocked" };   // [freshness]
     switch (exam.reason) {
       case "complete_lessons":
         var left = progress ? Math.max(0, (progress.total || 0) - (progress.done || 0)) : null;

@@ -4,7 +4,9 @@ title: Lesson
 description: Read a lesson of your Wirewalk Institute of AI course.
 permalink: /learn/lesson/
 extra_css: [learn]
-extra_js: [api, learn/common, learn/lesson]
+# [tutor] learn/tutor adds the AI "Ask about this lesson" panel (loads after learn/lesson).
+# [support] errata adds the "Report an error" form behind the link lesson.js renders.
+extra_js: [api, learn/common, learn/lesson, learn/tutor, errata]
 noindex: true
 sitemap: false
 ---

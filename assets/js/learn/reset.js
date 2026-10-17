@@ -2,7 +2,7 @@
  *
  * Two ways in (WIA-011):
  *  - by email: "Email me a code" sends a 6-digit code that expires in 15 minutes;
- *  - by a support reset link: /learn/reset/?email=<email>#code=<6 digits>, made by an
+ *  - by a support reset link: /learn/reset/#email=<email>&code=<6 digits>, made by an
  *    operator in the admin console when email cannot be delivered. That code lasts
  *    24 hours. The page reads it from the fragment (never sent to any server), removes
  *    the fragment from the address bar and history at once, and opens the
@@ -19,14 +19,24 @@
   /* Capture the support-link code as soon as this script runs, then clear it from the
    * URL so it is not left in history, bookmarks or a copied address. A fragment that
    * mentions a code but is not exactly six digits is cleared too and reported as bad. */
+  /* [review-fixes] The link now carries the address in the fragment too
+   * (#email=<email>&code=<6 digits>), so neither reaches a server, a Referer or an
+   * analytics pixel; older links (?email=...#code=...) still work. Both are removed
+   * from the address bar here. */
+  var linkEmail = "";
   var linkCode = (function () {
     var hash = "";
     try { hash = window.location.hash || ""; } catch (e) { return null; }
-    if (!/(^#|&)code=/.test(hash)) return null;
-    try { history.replaceState(history.state, "", window.location.pathname + window.location.search); }
+    var hp; try { hp = new URLSearchParams(hash.replace(/^#/, "")); } catch (e) { hp = null; }
+    var qEmail = W.param("email");
+    if (hp && hp.get("email")) linkEmail = hp.get("email");
+    else if (qEmail) linkEmail = qEmail;
+    if (!/(^#|&)(code|email)=/.test(hash) && !qEmail) return null;
+    try { history.replaceState(history.state, "", window.location.pathname); }
     catch (e) { try { window.location.hash = ""; } catch (e2) {} }
-    var m = /^#code=(\d{6})$/.exec(hash);
-    return m ? m[1] : "bad";
+    if (!hp || !hp.has("code")) return hp && hp.get("email") ? "bad" : null;
+    var c = hp.get("code") || "";
+    return /^\d{6}$/.test(c) ? c : "bad";
   })();
 
   function shell(step, content) {
@@ -105,7 +115,7 @@
   }
 
   function boot() {
-    var email = (W.param("email") || "").trim();
+    var email = (linkEmail || "").trim();
     if (linkCode && linkCode !== "bad") confirmStep(email, "link", linkCode);
     else requestStep(email, linkCode === "bad");
   }

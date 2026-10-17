@@ -1,0 +1,28 @@
+/* "Report an error" form and dialog (assets/js/errata.js). Site tokens only (site.css :root). */
+.er-dlg{border:1px solid var(--ln);border-radius:var(--r2);padding:0;background:var(--srf);color:var(--tx);width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 32px);box-shadow:var(--shadow)}
+.er-dlg::backdrop{background:rgba(20,20,18,.5)}
+.er-dlg .er-form,.er-dlg .er-done{padding:4px 22px 22px}
+.er-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px 6px}
+.er-head h2{margin:0;font-size:20px}
+.er-x{border:0;background:transparent;color:var(--tx2);font-size:26px;line-height:1;cursor:pointer;padding:4px 8px;border-radius:8px}
+.er-x:hover{background:var(--alt);color:var(--tx)}
+.er-form{display:block}
+.er-field{margin:0 0 14px}
+.er-field label{display:block;font-weight:600;font-size:14.5px;margin:0 0 6px}
+.er-field input,.er-field textarea{width:100%;font:15px/1.5 var(--sans);color:var(--tx);background:var(--bg);border:1.5px solid var(--ln2);border-radius:var(--r);padding:9px 12px}
+.er-field textarea{resize:vertical;min-height:120px}
+.er-field input:focus,.er-field textarea:focus{outline:2px solid var(--ac);outline-offset:1px;border-color:var(--ac)}
+.er-opt{font-weight:400;color:var(--tx3)}
+.er-hint{font-size:13.5px;color:var(--tx3);margin:6px 0 0}
+.er-hint span{float:right}
+.er-where{margin:0 0 14px;color:var(--tx2)}
+.er-where code{font-family:var(--mono);font-size:.92em}
+.er-ts{margin:0 0 14px;min-height:0}
+.er-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.er-status{min-height:1.4em;margin:10px 0 0;font-size:14.5px}
+.er-status.bad{color:var(--sale)}
+.er-done{padding:14px 0}
+.er-done strong{color:var(--ok)}
+.er-link{display:inline-flex;align-items:center;gap:6px}
+#errata-mount{background:var(--srf);border:1px solid var(--ln);border-radius:var(--r2);padding:22px}
+@media (max-width:560px){.er-hint span{float:none;display:block;margin-top:4px}}

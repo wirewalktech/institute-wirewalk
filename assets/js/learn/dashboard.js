@@ -115,6 +115,10 @@
       W.field({ label: "Organization", name: "organization", autocomplete: "organization", optional: true, maxlength: "160" }),
       W.field({ label: "Password", type: "password", name: "password", autocomplete: "new-password", required: true, minlength: "10", maxlength: "200", passwordToggle: true, hint: pwHint }),
       h("div", { class: "wl-pwmeter", "aria-hidden": "true" }, h("span")),
+      /* Marketing consent: unticked by default, optional, and never required to sign up. */
+      h("div", { class: "wl-ack" },
+        h("input", { type: "checkbox", id: "f-marketing", name: "marketingOptIn" }),
+        h("label", { for: "f-marketing" }, "Email me about new courses and offers. Optional; you can unsubscribe at any time.")),
       ts.el,
       ts.unavailable ? W.notice("warn", "Sign-up is temporarily unavailable",
         "New accounts cannot be created right now. Please try again later, or contact sales@wirewalk.com and we will set up your account.") : null,
@@ -142,10 +146,16 @@
       W.formError(form, "");
       var body = { email: email, password: pw, name: name, turnstile: token };
       if (org) body.organization = org;
+      if (F(form, "marketingOptIn").checked) body.marketingOptIn = true;
+      if (window.WIAConsent && window.WIAConsent.state() === "accepted") body.adsConsent = true;   // [marketing] cookie-banner choice, stored on the account
       var attribution = storedAttribution();
       if (attribution) body.attribution = attribution;
       W.busy(form.querySelector("[type=submit]"), API.signup(body), "Creating account…")
-        .then(function (res) { dropAttribution(); afterAuth(res); }, function (err) {
+        .then(function (res) {
+          dropAttribution();
+          if (window.WIAConsent && res.learner) window.WIAConsent.track("SignUp", { conversionId: res.learner.id });   // [marketing] Reddit Pixel, only after Accept; id only, no PII
+          afterAuth(res);
+        }, function (err) {
           ts.reset();
           W.formError(form, err.status === 409 ? "An account with this email already exists. Sign in instead, or reset your password." : err.message);
         });
@@ -209,8 +219,8 @@
     var ex = W.examSummary(e.exam, p);
     var started = p.done > 0;
     var action;
-    if (e.certificate) action = W.btn("View certificate", { href: W.certUrl(e.certificate.id), class: "wl-btn-ghost wl-btn-sm" });
-    else if (e.exam && (e.exam.eligible || e.exam.openAttempt)) action = W.btn(e.exam.openAttempt ? "Resume exam" : "Take the exam", { href: W.examUrl(e.courseId), class: "wl-btn-sm" });
+    if (e.certificate && !e.certificate.expired) action = W.btn("View certificate", { href: W.certUrl(e.certificate.id), class: "wl-btn-ghost wl-btn-sm" });   // [freshness] expired: offer renewal
+    else if (e.exam && (e.exam.eligible || e.exam.openAttempt)) action = W.btn(e.exam.openAttempt ? "Resume exam" : e.exam.recertification ? "Renew certificate" : "Take the exam", { href: W.examUrl(e.courseId), class: "wl-btn-sm" });
     else action = W.btn(started ? "Continue" : "Start course", { href: W.courseUrl(e.courseId), class: "wl-btn-sm" });
     var title = e.title || W.courseTitle(e.courseId);
     return h("li", { class: "wl-card wl-course-card" + (e.exam && e.exam.passed ? " is-passed" : "") },
@@ -235,7 +245,9 @@
         h("div", { class: "wl-grow" },
           h("a", { href: W.certUrl(c.id), class: "wl-strong-link" }, c.title),
           h("div", { class: "wl-hint" }, (c.kind === "program" ? "Program certificate" : "Course certificate") + " · " + W.fmtDateUTC(c.issuedAt) +
-            (c.scorePct != null ? " · " + c.scorePct + "%" : "") + " · ", h("span", { class: "wl-mono" }, c.id))));
+            (c.scorePct != null ? " · " + c.scorePct + "%" : "") +
+            (c.validUntil ? " · " + (c.expired ? "Expired " : "Valid until ") + W.fmtDateUTC(c.validUntil) : "") + " · ",   // [freshness]
+            h("span", { class: "wl-mono" }, c.id))));
     })));
     return s;
   }

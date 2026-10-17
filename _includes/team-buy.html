@@ -1,0 +1,17 @@
+{%- comment -%}
+  [seats] "Buy for your team" on course and program pages.
+  include params: kind ("course" | "program"), id, status (the build-time status), list (course list price;
+  0 = a free course, which has nothing to buy seats of).
+  A plain GET form to /learn/team/, so it works without JavaScript; that page asks the
+  learning Worker (billing) for the live per-seat price and starts checkout. No price here.
+  Shown only while the item is on sale (site.js toggles data-show-when from the live catalog).
+{%- endcomment -%}
+<form class="team-buy" action="/learn/team/" method="get" data-show-when="on_sale" data-for="{{ include.id }}"{% unless include.status == 'on_sale' and include.list != 0 %} hidden{% endunless %} style="margin:18px 0 0">
+  <input type="hidden" name="buy" value="{{ include.kind }}:{{ include.id }}">
+  <label for="tb-qty-{{ include.id }}" class="small" style="display:block;font-weight:600;margin:0 0 6px">Buy for your team</label>
+  <div style="display:flex;gap:8px;align-items:stretch">
+    <input id="tb-qty-{{ include.id }}" type="number" name="qty" min="5" max="1000" step="1" value="5" inputmode="numeric" aria-describedby="tb-help-{{ include.id }}" style="width:6.5em;min-width:0">
+    <button class="btn ghost" type="submit" style="flex:1 1 auto">Buy seats <span class="arr" aria-hidden="true">→</span></button>
+  </div>
+  <p class="small faint" id="tb-help-{{ include.id }}" style="margin:6px 0 0">5 to 1,000 seats with volume pricing; pay by card, or by invoice from 25 seats. You give the seats to people after buying. <a href="/teams/">How team seats work</a></p>
+</form>

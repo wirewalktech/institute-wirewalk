@@ -34,6 +34,10 @@
       W.ss("wia_last_purchase", null);
     }
     W.cart.set(cart);
+    /* [marketing] Reddit Pixel Purchase, only after Accept: our purchase id (also the dedup key), the paid total
+       (integer cents from the Worker, converted to the pixel's decimal value here), USD as everywhere in the
+       learner app (W.money), and the course count. Sent at most once per purchase per browser. No PII. */
+    if (window.WIAConsent && typeof p.total === "number") window.WIAConsent.track("Purchase", { conversionId: p.id, value: p.total / 100, currency: "USD", itemCount: Math.max(1, ids.length) });
     try { sessionStorage.removeItem("wia_code"); } catch (e) { /* ignore */ }
 
     W.mount(h("div", { class: "wl-narrow" },

@@ -200,6 +200,7 @@
       }, Promise.resolve());
       W.busy(b, run, "Enrolling…").then(function () {
         cart.forEach(function (i) { W.cart.remove(i.type, i.id); });
+        if (window.WIAConsent) window.WIAConsent.track("Lead", {});   // [marketing] Reddit Pixel, only after Accept; no PII
         window.location.assign(ids.length === 1 ? W.courseUrl(ids[0]) : "/learn/");
       }, function (e) { err.textContent = e.message; err.hidden = false; requote(); });
     });

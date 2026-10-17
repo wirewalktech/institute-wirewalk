@@ -91,7 +91,7 @@
     var exam = info.exam || {}, prog = info.progress || {};
     W.setTitle("Exam · " + title());
     if (exam.openAttempt) return resumeScreen(exam.openAttempt);
-    if (exam.passed || info.certificate) {
+    if (exam.passed || (info.certificate && !info.certificate.expired)) {   // [freshness] expired: recertification
       return W.mount(h("div", { class: "wl-narrow" }, head(),
         W.notice("ok", "You have passed this exam", exam.bestScore != null ? "Best score: " + exam.bestScore + "%." : null,
           [info.certificate ? W.btn("View certificate", { href: W.certUrl(info.certificate.id) }) : null, back()].filter(Boolean))));

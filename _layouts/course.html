@@ -55,6 +55,11 @@ layout: default
       <div data-show-when="waitlist" data-for="{{ c.id }}"{% if c.status == 'on_sale' %} hidden{% endif %}>
         <p class="wl-note" style="margin:0 0 12px">The syllabus is final; lessons and the exam are in production and review. Leave your email and we will tell you when it opens.</p>
         {% include waitlist-form.html id=c.id kind="course" title=c.title %}
+        {%- comment -%} [waitlist] "Notify me when it opens" (learning Worker POST /api/waitlist).
+          assets/js/waitlist.js fills this in and hides the enquiry form above; without JS the
+          enquiry form stays as it was. {%- endcomment %}
+        <div class="wl-form" data-wl-notify="{{ c.id }}" data-title="{{ c.title | escape }}" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+        <script src="/assets/js/waitlist.js" defer></script>
       </div>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>{{ c.lessonCount }} written lessons, self-paced</li>
@@ -62,7 +67,8 @@ layout: default
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Up to {{ c.exam.attempts }} attempts, 24 hours apart after a fail</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Verifiable certificate of completion and assessment</li>
       </ul>
-      <p class="small faint" style="margin:16px 0 0">Buying for a team? <a href="/teams/?interest={{ c.id }}">Seats and invoices</a></p>
+      {% include team-buy.html kind="course" id=c.id status=c.status list=c.listPrice %}
+      <p class="small faint" style="margin:12px 0 0">Need a quote or purchase order first? <a href="/teams/?interest={{ c.id }}">Team enquiries</a></p>
     </aside>
   </div>
 </div>
@@ -169,6 +175,14 @@ layout: default
       <p class="small muted" style="margin:0">{{ t.summary | escape }}</p>
       {%- if c.reviewed %}<p class="small faint" style="margin:12px 0 0">Content reviewed {{ c.reviewed | append: "-01" | date: "%B %Y" }}</p>{% endif %}
     </div>
+    {%- comment -%} [support] Errata: assets/js/errata.js opens a small report form (POST /api/errata)
+      from this link; without JS the link goes to /errata/, which has the same form and the process. {%- endcomment %}
+    <div class="box">
+      <h3>Spotted a mistake?</h3>
+      <p class="small muted" style="margin:0"><a href="/errata/?c={{ c.id }}" data-errata-course="{{ c.id }}" data-errata-title="{{ c.title | escape }}">Report an error</a> in this course&rsquo;s syllabus, lessons or exam. <a href="/errata/">How reports are handled</a>.</p>
+      <div id="errata-turnstile-config" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+    </div>
+    <script src="/assets/js/errata.js" defer></script>
   </aside>
 </div>
 

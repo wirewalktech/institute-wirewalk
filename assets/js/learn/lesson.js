@@ -61,7 +61,11 @@
         : h("a", { class: "wl-pager-next", href: W.courseUrl(cid) }, h("span", { class: "wl-pager-k" }, "Finish →"), h("span", { class: "wl-pager-t" }, "Back to course and exam")));
 
     var main = h("div", { class: "wl-reader-main" }, head, article, completeBox, pager,
-      h("p", { class: "wl-hint wl-center wl-kbd-hint" }, "Tip: press ", h("kbd", null, "←"), " and ", h("kbd", null, "→"), " to move between lessons."));
+      h("p", { class: "wl-hint wl-center wl-kbd-hint" }, "Tip: press ", h("kbd", null, "←"), " and ", h("kbd", null, "→"), " to move between lessons."),
+      /* [support] Errata: /assets/js/errata.js opens a small report form from this link; without it, /errata/. */
+      h("p", { class: "wl-hint wl-center" }, "Spotted a mistake? ",
+        h("a", { href: "/errata/?c=" + encodeURIComponent(cid) + "&l=" + encodeURIComponent(d.idx), "data-errata-course": cid,
+          "data-errata-lesson": String(d.idx), "data-errata-title": d.title }, "Report an error"), " in this lesson."));
 
     var toc = buildToc(d.idx);
     var topbar = h("div", { class: "wl-readbar", "aria-hidden": "true" }, h("span", { id: "wl-readbar" }));

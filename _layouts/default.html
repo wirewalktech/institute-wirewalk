@@ -16,6 +16,12 @@
 <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.url }}">
 {%- comment -%} Pre-launch: noindex on every page, and robots.txt disallows all. The coordinator flips both at launch. {%- endcomment %}
 <meta name="robots" content="noindex">
+{%- comment -%} [marketing] A page with `redirect_to` (e.g. /admin/) is a pure redirect: refresh to that URL and
+  stay out of search indexes even after the site-wide noindex above is removed at launch. {%- endcomment %}
+{%- if page.redirect_to %}
+<meta http-equiv="refresh" content="0; url={{ page.redirect_to | escape }}">
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
 <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="{{ site.title | escape }}">
@@ -34,7 +40,13 @@
 {%- endcomment -%}
 {%- assign enq_origin = site.enquiry_endpoint | split: "/" | slice: 0, 3 | join: "/" %}
 {%- assign ev_origin = site.events_endpoint | split: "/" | slice: 0, 3 | join: "/" %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' {{ site.api_base }} {{ ev_origin }} http://localhost:* http://127.0.0.1:*; frame-src https://challenges.cloudflare.com; form-action 'self' {{ enq_origin }} https://www.wirewalk.com; base-uri 'none'; object-src 'none'">
+{%- comment -%} [marketing] Reddit Pixel hosts, added only when _config.yml sets reddit_pixel_id:
+  the script (www.redditstatic.com/ads/pixel.js) and the two hosts that script contacts (events to
+  alb.reddit.com, its config from pixel-config.reddit.com; its rp.gif image fallback is already
+  covered by img-src https:). Empty pixel id: the policy is exactly as before. {%- endcomment -%}
+{%- assign rdt_id = site.reddit_pixel_id | default: "" | strip -%}
+{%- if rdt_id != "" and page.no_pixel != true -%}{%- assign rdt_script = " https://www.redditstatic.com" -%}{%- assign rdt_connect = " https://alb.reddit.com https://pixel-config.reddit.com" -%}{%- else -%}{%- assign rdt_script = "" -%}{%- assign rdt_connect = "" -%}{%- endif %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com{{ rdt_script }}; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' {{ site.api_base }} {{ ev_origin }}{{ rdt_connect }} http://localhost:* http://127.0.0.1:*; frame-src https://challenges.cloudflare.com; form-action 'self' {{ enq_origin }} https://www.wirewalk.com; base-uri 'none'; object-src 'none'">
 <meta name="wia-api" content="{{ site.api_base }}">
 <meta name="wia-site" content="{{ site.url }}">
 <meta name="wia-events" content="{{ site.events_endpoint }}">
@@ -50,6 +62,14 @@
 <link rel="stylesheet" href="/assets/css/{{ c }}.css">
 {%- endfor %}
 <script src="/assets/js/site.js" defer></script>
+{%- comment -%} [marketing] Cookie banner + Reddit Pixel (loaded only after Accept): only when a pixel id is configured. {%- endcomment %}
+{%- comment -%} [review-fixes] Pages whose URL can carry an account token or address (unsubscribe, reset,
+  team join, waitlist confirm/leave) set no_pixel: true, so the pixel never reports their URL. {%- endcomment %}
+{%- if rdt_id != "" and page.no_pixel != true %}
+<meta name="wia-rdt" content="{{ rdt_id | escape }}">
+<link rel="stylesheet" href="/assets/css/consent.css">
+<script src="/assets/js/consent.js" defer></script>
+{%- endif %}
 {%- comment -%} Campaign attribution + aggregate counter: on /go/ pages (campaign: true) only.
   Elsewhere boot.js loads the same file only when the URL carries utm_* or rdt_cid. {%- endcomment %}
 {%- if page.campaign %}

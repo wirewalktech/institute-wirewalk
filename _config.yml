@@ -31,6 +31,14 @@ enquiry_endpoint: https://wirewalk-portal.wirewalk-upload.workers.dev/api/enquir
 # clicks; names must match /^[a-z][a-z0-9]{1,14}\.[a-z0-9_-]{1,24}$/ ("inst.go-dev").
 events_endpoint: https://wirewalk-orders.wirewalk-upload.workers.dev/event
 
+# [marketing] Reddit Pixel ID from Reddit Ads Manager > Events Manager (looks like "a2_xxxxxxxx"; public by design).
+# Empty = no cookie banner, no pixel, no Reddit hosts in the Content-Security-Policy, and /privacy/
+# says there are no ad pixels. Set = the banner appears and the pixel loads only after "Accept"
+# (assets/js/consent.js). Before setting it, turn OFF "automatic advanced matching" for the pixel in
+# Events Manager: pixel.js fetches that setting from Reddit and, when on, may collect email addresses
+# from the page, which our privacy text does not allow.
+reddit_pixel_id: ""
+
 timezone: America/New_York
 markdown: kramdown
 kramdown:

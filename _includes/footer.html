@@ -34,6 +34,11 @@
           <li><a href="mailto:sales@wirewalk.com">sales@wirewalk.com</a></li>
           <li><a href="/terms/">Terms</a></li>
           <li><a href="/privacy/">Privacy</a></li>
+          {%- comment -%} [marketing] Reopens the cookie banner (assets/js/consent.js); only when a Reddit Pixel id is configured. Without JS it opens the privacy section. {%- endcomment -%}
+          {%- assign rdt_id_ft = site.reddit_pixel_id | default: "" | strip -%}
+          {%- if rdt_id_ft != "" %}
+          <li><a href="/privacy/#cookies" data-cookie-settings>Cookie settings</a></li>
+          {%- endif %}
         </ul>
       </div>
     </div>
