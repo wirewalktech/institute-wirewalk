@@ -1,0 +1,26 @@
+title: Wirewalk Institute of AI
+description: >-
+  Professional AI training with automated exams and certificates: AI models and
+  vendors, building AI applications, model development, training at scale, AI
+  infrastructure and hardware, AI security, governance and executive programs.
+author: Wirewalk Institute of AI
+email: sales@wirewalk.com
+
+# Served at the ROOT of institute.wirewalk.com (see the CNAME file).
+# baseurl MUST stay empty: a non-empty baseurl makes every Liquid-generated
+# link render as /institute-wirewalk/... and 404 on the live custom domain.
+# See wirewalk-web-ops DECISIONS.md D-001.
+url: https://institute.wirewalk.com
+baseurl: ""
+
+timezone: America/New_York
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
