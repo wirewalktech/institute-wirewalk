@@ -34,9 +34,10 @@
         "WIA-013 shared global AI monthly spend gate/kill-switch missing; verify fix before provider use",
         "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review",
         "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval",
-        "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain"
+        "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain",
+        "V2 standard/labs are planned controls: independently verify review artifacts, publication gating, labs validation/runtime/completion and certificate criteria; WIA-006/007 remain open"
       ],
-      "last_examined_sha": "e907e2c",
+      "last_examined_sha": "ae8aafb19436b85f7e2674e3d980230181d699bc",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -53,11 +54,12 @@
         "US_validator_and_selected_instructor_design_triage": "b59e476",
         "admin_suite_triage_304_pass_1_skip_and_AI_budget_review": "db4099f",
         "industry_wave_structure_71_and_two_primary_source_claims_only": "b1b087e",
-        "WIA_013_partial_fix_budget_failopen_and_389_pass_1_skip": "e907e2c"
+        "WIA_013_partial_fix_budget_failopen_and_389_pass_1_skip": "e907e2c",
+        "v2_standard_labs_design_and_publication_hold_read_only": "ae8aafb"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T00:14:12Z",
+  "last_check_started_utc": "2026-10-18T04:16:43Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-0014.md"
 }
