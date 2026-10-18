@@ -262,8 +262,10 @@
       var msg = h("p", { class: "wl-hint", role: "status" });
       var go = W.btn("Enroll free", { class: "wl-btn-sm" });
       go.addEventListener("click", function () {
-        W.busy(go, API.request("POST", "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {}), "Enrolling…").then(function () {
+        W.busy(go, API.request("POST", "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {}), "Enrolling…").then(function (r) {
           if (window.WIAConsent) window.WIAConsent.track("Lead", {});   // [marketing] Reddit Pixel, only after Accept; no PII
+          /* [lx] W1-13: a first free enrollment gets the one-time orientation strip in lesson.js, as site.js and cart.js do */
+          if (r && !r.already) { try { localStorage.setItem("wia_orient", id); } catch (e) { /* storage blocked: no strip */ } }
           window.location.assign(W.lessonUrl(id, 0));
         }, function (e) {
           msg.textContent = e.status === 402 ? "This course is no longer free. See the course page for its price." : e.message;
