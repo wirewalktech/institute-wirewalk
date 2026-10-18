@@ -1,6 +1,7 @@
 /* /learn/exam/?c=<course> : rules screen, timed exam, submission and module-level results.
- * Answers live in memory and in sessionStorage (per attempt) so a reload resumes them.
- * Correct answers are never shown: the Worker never sends them. */
+ * Answers live in memory and in sessionStorage (per attempt), and are autosaved to the Worker,
+ * so a reload or another device resumes them. Correct answers are never shown: the Worker
+ * never sends them. */
 (function () {
   "use strict";
   var API = window.WIAApi, W = window.WL, h = W.h;
@@ -50,7 +51,7 @@
     return (document.hidden && hiddenSince && Date.now() - hiddenSince > HIDDEN_THROTTLE_MS) ? HIDDEN_LEAD_MS : AUTO_LEAD_MS;
   }
   document.addEventListener("visibilitychange", function () {
-    if (document.hidden) { hiddenSince = Date.now(); return; }
+    if (document.hidden) { hiddenSince = Date.now(); flushSave(); return; }
     hiddenSince = null;
     if (ex && !submitted) updateTimer();
   });
@@ -60,7 +61,60 @@
   }
 
   function storeKey() { return "wia_exam_" + ex.attemptId; }
-  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur }); }
+  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur, dirty: sv.dirty }); }
+
+  /* ---- autosave ----
+   * Each change is written to sessionStorage at once (works offline) and sent to the Worker
+   * (PUT /api/attempts/:id/answers) SAVE_DELAY_MS later, or straight away with keepalive when
+   * the page is hidden or closed. If time runs out while the learner is away, the Worker grades
+   * what was saved; a resume, on any device, gets the saved answers back. `dirty` (also kept in
+   * sessionStorage) marks changes the Worker has not confirmed: on a resume in the same tab they
+   * win over the Worker's copy. A 409 means the attempt is closed or out of time: saving stops. */
+  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000;
+  var sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false };
+  function savedPicks() {
+    var a = {};
+    ex.questions.forEach(function (q) { if (st.answers[q.n] && st.answers[q.n].length) a[String(q.n)] = st.answers[q.n].slice(); });
+    return a;
+  }
+  function changed() { sv.dirty = true; sv.changes++; persist(); scheduleSave(SAVE_DELAY_MS); }
+  function scheduleSave(ms) {
+    if (sv.stopped) return;
+    clearTimeout(sv.timer);
+    sv.timer = setTimeout(function () { saveNow(false); }, ms);
+    if (!sv.failed) showSaved("Saving…");
+  }
+  function saveNow(keepalive) {
+    clearTimeout(sv.timer); sv.timer = null;
+    if (!ex || submitting || submitted || sv.stopped || !sv.dirty) return;
+    if (sv.inflight && !keepalive) return scheduleSave(SAVE_DELAY_MS);   // one at a time; the next one carries the latest picks
+    var aid = ex.attemptId, upTo = sv.changes;
+    sv.inflight = true;
+    API.saveAnswers(aid, savedPicks(), keepalive ? { keepalive: true } : undefined).then(function () {
+      sv.inflight = false;
+      if (!ex || ex.attemptId !== aid) return;
+      sv.failed = false;
+      if (upTo === sv.changes) { sv.dirty = false; persist(); showSaved("All answers saved"); }
+    }, function (e) {
+      sv.inflight = false;
+      if (!ex || ex.attemptId !== aid || submitted) return;
+      if (e.status === 409) { sv.stopped = true; showSaved("Not saved: this attempt is closed", true); return; }
+      if (e.status === 401) return;
+      if (!sv.failed) W.say("Your answers could not be saved to your account. They are kept in this browser, and saving will retry.");
+      sv.failed = true;
+      showSaved("Not saved yet: kept in this browser", true);
+      scheduleSave(SAVE_RETRY_MS);
+    });
+  }
+  function showSaved(text, bad) {
+    if (!els.saved) return;
+    els.saved.textContent = text;
+    els.saved.classList.toggle("is-bad", !!bad);
+  }
+  /* visibilitychange and pagehide both fire when a page closes: send each change once. */
+  function flushSave() { if (ex && sv.dirty && !submitted && sv.flushed !== sv.changes) { sv.flushed = sv.changes; saveNow(true); } }
+  window.addEventListener("pagehide", flushSave);
+  window.addEventListener("online", function () { if (ex && sv.dirty && !submitted) saveNow(false); });
   function prefMode() { try { return localStorage.getItem(MODE_KEY) === "all" ? "all" : "one"; } catch (e) { return "one"; } }
   function savePrefMode(m) { try { localStorage.setItem(MODE_KEY, m); } catch (e) { /* ignore */ } }
 
@@ -140,7 +194,7 @@
         h("ul", { class: "wl-ticks" },
           h("li", null, "The timer starts when you press Start and keeps running if you close the page. Come back to this page to resume before time runs out."),
           h("li", null, "Some questions have one correct answer; others say “select all that apply”. A multi-select question counts only if you choose exactly the right set."),
-          h("li", null, "Your answers are kept in this browser tab until you submit. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero."),
+          h("li", null, "Your answers are saved to your account as you choose them, so they are restored if you reload or continue on another device. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero; if you are away, the answers saved by then are graded."),
           h("li", null, "Results show your score and how you did in each module. Correct answers are never shown."),
           h("li", null, "If you do not pass, the next attempt opens 24 hours later."),
           h("li", null, "Work on your own. The certificate states that you completed the course and passed its assessment."))),
@@ -158,7 +212,7 @@
       W.busy(b, startExam(false), "Resuming…").then(function (r) { begin(r, prefMode()); }, function (e) { W.toast(e.message, "bad"); load(); });
     });
     W.mount(h("div", { class: "wl-narrow" }, head(),
-      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". Answers you chose in this browser tab are restored.", [b])));
+      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". The answers you have chosen are restored on any device.", [b])));
   }
 
   /* ------------------------------------------------------------ the exam */
@@ -166,10 +220,20 @@
     ex = r;
     offset = r._off || 0;
     var saved = W.ss(storeKey()) || {};
-    st = { answers: saved.answers || {}, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
+    var server = r.answers && typeof r.answers === "object" ? r.answers : {};
+    /* This tab's unsaved changes win; otherwise the Worker's copy (possibly from another device).
+       A tab with no dirty flag predates autosave: its answers win when the Worker has none. */
+    var local = saved.answers && (saved.dirty || !Object.keys(server).length) ? saved.answers : null;
+    st = { answers: local || server, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
+    clearTimeout(sv.timer);
+    sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false };
     submitting = false; submitted = false; warned = {};
     window.addEventListener("beforeunload", beforeUnload);
     renderExam();
+    var restored = answeredCount();
+    if (local && restored) changed();
+    else showSaved(restored ? "All answers saved" : "Answers save automatically");
+    if (restored) W.say(W.plural(restored, "answer") + " restored.");
     clearInterval(tick);
     tick = setInterval(updateTimer, 1000);
     updateTimer();
@@ -193,6 +257,8 @@
     els.timerBox = h("div", { class: "wl-timer", role: "timer", "aria-label": "Time remaining" }, h("span", { class: "wl-timer-k" }, "Time left"), els.timer);
     els.sr = h("div", { class: "wl-sr", "aria-live": "assertive" });
     els.count = h("span", { class: "wl-exam-count" });
+    els.saved = h("span", { class: "wl-exam-saved" + (sv.failed || sv.stopped ? " is-bad" : "") },
+      els.saved ? els.saved.textContent : "");
     var toggle = h("button", { type: "button", class: "wl-btn wl-btn-ghost wl-btn-sm" }, st.mode === "one" ? "All questions" : "One at a time");
     toggle.addEventListener("click", function () { st.mode = st.mode === "one" ? "all" : "one"; savePrefMode(st.mode); renderExam(); });
     var submit = W.btn("Submit…", { class: "wl-btn-sm" });
@@ -200,7 +266,7 @@
 
     var bar = h("div", { class: "wl-exam-bar" },
       h("div", { class: "wl-exam-bar-in" },
-        h("div", { class: "wl-grow wl-exam-bar-t" }, h("h1", { class: "wl-exam-h1" }, title()), els.count),
+        h("div", { class: "wl-grow wl-exam-bar-t" }, h("h1", { class: "wl-exam-h1" }, title()), els.count, els.saved),
         els.timerBox, toggle, submit));
 
     els.nav = h("nav", { class: "wl-qmap", "aria-label": "Question map" });
@@ -209,8 +275,11 @@
       h("div", { class: "wl-exam-grid" + (st.mode === "all" ? " is-all" : "") },
         h("aside", { class: "wl-exam-side" }, h("h2", { class: "wl-h4" }, "Questions"), els.nav,
           h("p", { class: "wl-hint wl-qlegend" }, h("span", { class: "wl-qdot is-ans" }), " answered ", h("span", { class: "wl-qdot is-flag" }), " flagged")),
-        els.body)));
+        els.body)), { focus: false });
     renderBody();
+    /* Focus starts on the current question (question 1 on a fresh start), not the page body. */
+    var card = document.getElementById("q-" + ex.questions[st.cur].n), leg = card && card.querySelector("legend");
+    if (leg) leg.focus({ preventScroll: true });
     updateTimer();
   }
 
@@ -266,7 +335,7 @@
           cur.sort(function (a, b) { return a - b; });
         } else cur = [oi];
         if (cur.length) st.answers[q.n] = cur; else delete st.answers[q.n];
-        persist(); renderMap();
+        changed(); renderMap();
       });
       return h("label", { for: id, class: "wl-option" }, input,
         h("span", { class: "wl-option-k", "aria-hidden": "true" }, String.fromCharCode(65 + oi)),
@@ -355,6 +424,7 @@
   function doSubmit(auto) {
     if (submitting || submitted) return;
     submitting = true;
+    clearTimeout(sv.timer);
     var answers = {};
     ex.questions.forEach(function (q) { answers[String(q.n)] = (st.answers[q.n] || []).slice(); });
     W.loading(auto ? "Time is up — submitting your answers…" : "Submitting your answers…");
@@ -401,7 +471,7 @@
     backBtn.addEventListener("click", function () { renderExam(); clearInterval(tick); tick = setInterval(updateTimer, 1000); });
     var clientErr = e.status >= 400 && e.status < 500 && e.status !== 408 && e.status !== 429;
     W.mount(h("div", { class: "wl-narrow" }, W.notice("error", "Your answers were not submitted yet", e.message +
-      " Your answers are still saved in this tab. Keep this page open and try again.",
+      " Your answers are still kept in this browser. Keep this page open and try again.",
       clientErr ? [retry, W.btn("Back to course", { href: W.courseUrl(cid), class: "wl-btn-ghost" })] : [retry, backBtn], { h1: true })));
   }
 
@@ -416,7 +486,7 @@
         h("h1", { class: "wl-display", tabindex: "-1", id: "res-h" }, r.passed ? "Congratulations — you passed." : "You scored " + r.scorePct + "%."),
         h("p", { class: "wl-lead" }, "Your score is " + r.scorePct + "%. The pass mark is " + r.passPct + "%.")));
     var notes = [];
-    if (late) notes.push(W.notice("warn", "Submitted after the deadline", r.message ? capital(r.message) + "." : "This attempt arrived after the time limit, so it was graded as unanswered."));
+    if (late) notes.push(W.notice("warn", "Submitted after the deadline", r.message ? capital(r.message) + "." : "This attempt arrived after the time limit, so the answers saved before it were graded."));
     else if (auto) notes.push(W.notice("info", "Time ran out", "Your answers were submitted automatically when the timer reached zero."));
 
     var breakdown = h("section", { class: "wl-section", "aria-labelledby": "h-mods" },
