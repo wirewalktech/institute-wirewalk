@@ -35,10 +35,9 @@
         "Browser differential sanitizer testing",
         "Full factual/example/exam review of new fnd-102, fnd-105 and mod-201; structural/selected-claim triage only so far",
         "Full bulk US-localization factual/code review; full new AI-instructor design/scenario/exercise review and future implementation checks",
-        "WIA-013 P1 shared budget gate partially implemented; missing-schema fail-open and successful-provider/failed-usage settlement gaps independently reproduced at0d8daa7. Durable liability/TTL and worst-case bound remain open.",
         "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review",
         "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval",
-        "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain",
+        "New Ellery/bundles/site implementation and migrations: full independent review remains outstanding; WIA-013 reported source faults separately verified on fixing branch.",
         "V2 standard/labs are planned controls: independently verify review artifacts, publication gating, labs validation/runtime/completion and certificate criteria; WIA-006/007 remain open",
         "Full Decision Labs validator, browser/accessibility, migrations and AI-debrief/race/deployment verification; selected source triage only",
         "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review.",
@@ -46,9 +45,10 @@
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval.",
-        "WIA-013 branch e9233f9 partial fix: independently reproduced Ellery missing-usage JSON\u21920 and clean early SSE EOF\u2192partial cost with holds removed. Complete usage/floor propagation and cost-bound justification still required. Main remains unchanged implementation."
+        "WIA-013 reported source faults fixed/verified on6c2f440; coordinator integration, spend-unsettled migration and target fail-closed/reconciliation verification pending. Main/live resolution not claimed; tokenizer/price/provider-cost/account-limit assumptions remain operational scope.",
+        "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved."
       ],
-      "last_examined_sha": "d154623",
+      "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -80,13 +80,13 @@
           "scope": "WIA-014 ordering and WIA-015 entitlement fixes verified in migrated isolated branch; 476 pass/0 fail/1 skip. Target migration/schema verification remains pre-deploy gate. Course/lab/retrieval/admin/build/manual-screen-reader scope still outstanding; no blanket release approval."
         },
         "wia-013-spend-failclosed": {
-          "sha": "e9233f981e5c654aa0344d64585a52d79631f40f",
-          "scope": "Original missing-table/failed-settlement faults verified fixed in isolated branch; 436 pass/0 fail/1 skip. WIA-013 remains P1/open: missing JSON usage and graceful early SSE EOF release unknown liability; input/schema cost bound unverified. No deployment approval; spend-unsettled migration required."
+          "sha": "6c2f440c718be7a10a86e38af282cab4f13643bf",
+          "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         }
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T17:59:24Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1759.md"
+  "last_check_started_utc": "2026-10-18T18:44:24Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1844.md"
 }
