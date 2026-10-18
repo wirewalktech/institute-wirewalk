@@ -33,12 +33,33 @@
     el.appendChild(typeof c === "object" ? c : document.createTextNode(String(c)));
   }
   function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
-  function mount(el) {
+  /** Replace the view. #learn-app is deliberately not a live region (a whole view read out as
+   * one announcement is noise); instead focus moves to the new view's h1, so a screen reader
+   * starts there. opts.focus: an element to focus instead, or false to leave focus alone.
+   * Focus the learner placed outside the app (or in a dialog) is never taken away. */
+  function mount(el, opts) {
     var app = document.getElementById("learn-app");
     clear(app);
     append(app, el);
     app.setAttribute("aria-busy", "false");
+    var want = opts && opts.focus;
+    if (want !== false) focusView(app, want);
     return app;
+  }
+  function focusView(app, target) {
+    var a = document.activeElement;
+    if (!target && a && a !== document.body && a !== document.documentElement && document.contains(a)) return;
+    var t = target || app.querySelector("h1");
+    if (!t) return;
+    if (!t.hasAttribute("tabindex") && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) t.setAttribute("tabindex", "-1");
+    try { t.focus({ preventScroll: true }); } catch (e) { t.focus(); }
+  }
+  /** One hidden status element for short confirmations ("3 saved answers restored."). */
+  function say(msg) {
+    var box = document.getElementById("wl-say");
+    if (!box) { box = h("div", { id: "wl-say", class: "wl-sr", role: "status", "aria-atomic": "true" }); document.body.appendChild(box); }
+    box.textContent = "";
+    setTimeout(function () { box.textContent = String(msg || "").slice(0, 300); }, 50);
   }
   function $(sel, root) { return (root || document).querySelector(sel); }
 
@@ -263,6 +284,25 @@
     if (msg) box.focus();
   }
 
+  /* ---------- connection ----------
+   * A banner while the browser reports itself offline; requests would fail (or time out, see
+   * api.js) until it is back. */
+  var offlineBar = null;
+  function connection() {
+    if (navigator.onLine === false) {
+      if (offlineBar) return;
+      offlineBar = h("div", { class: "wl-offline", role: "status" }, h("strong", null, "You are offline."),
+        " Pages and saves will not reach the Institute until your connection is back.");
+      document.body.appendChild(offlineBar);
+    } else if (offlineBar) {
+      offlineBar.remove(); offlineBar = null;
+      toast("You are back online.", "ok");
+    }
+  }
+  window.addEventListener("offline", connection);
+  window.addEventListener("online", connection);
+  if (document.body) connection(); else document.addEventListener("DOMContentLoaded", connection);
+
   /* ---------- toasts ---------- */
   function toast(msg, kind) {
     var region = document.getElementById("wl-toasts");
@@ -443,7 +483,7 @@
     money: money, fmtDate: fmtDate, fmtDateUTC: fmtDateUTC, courseStatus: courseStatus, isLocalHost: isLocalHost, fmtDateTime: fmtDateTime, toDate: toDate, plural: plural, pct: pct,
     progressBar: progressBar, chip: chip, examSummary: examSummary, reasonDetail: reasonDetail,
     spinner: spinner, loading: loading, notice: notice, errorView: errorView, btn: btn, busy: busy,
-    field: field, formError: formError, toast: toast,
+    field: field, formError: formError, toast: toast, say: say,
     cart: { get: cartGet, set: cartSet, add: cartAdd, remove: cartRemove, badge: updateCartBadge },
     requireAuth: requireAuth, setTitle: setTitle, copyText: copyText, ss: ss, turnstile: turnstile, verifyPanel: verifyPanel
   };
