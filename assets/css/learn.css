@@ -370,6 +370,24 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-prose tr:last-child td { border-bottom: 0; }
 .wl-prose tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--wl-alt) 45%, transparent); }
 
+/* [lx] Retrieval checks: answers behind "Show answer" (tools/retrieval.mjs), optional answer box, self-rating */
+.wl-prose ol.wl-checks > li + li { margin-top: 1.1em; }
+.wl-check-yours { margin-top: .5em; }
+.wl .wl-check-input { width: 100%; min-height: 3.2em; padding: 8px 12px; border: 1px solid var(--wl-line2); border-radius: var(--wl-r-sm); background: var(--wl-surface); color: var(--wl-tx); font: 400 15px/1.5 var(--wl-sans); resize: vertical; }
+.wl-check-item { margin-top: .5em; border: 1px solid var(--wl-line); border-radius: var(--wl-r-sm); background: var(--wl-surface); }
+.wl-check-item > summary { cursor: pointer; padding: 8px 12px; min-height: 44px; display: flex; align-items: center; font: 600 15px/1.3 var(--wl-sans); color: var(--wl-ac); }
+.wl-check-item[open] > summary { border-bottom: 1px solid var(--wl-line); }
+.wl .wl-check-item > p { margin: 0; padding: 10px 12px; }
+.wl .wl-check-rate { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; padding: 0 12px 10px; }
+.wl-check-rate-b { min-height: 36px; padding: 4px 12px; border: 1px solid var(--wl-line2); border-radius: 999px; background: transparent; color: var(--wl-tx2); font: 600 13.5px/1 var(--wl-sans); cursor: pointer; }
+.wl-check-rate-b[aria-pressed="true"] { background: var(--wl-acbg); border-color: var(--wl-ac); color: var(--wl-ac); }
+/* [lx] One-time orientation strip after a first free enrollment (lesson.js) */
+.wl-orient { margin: 0 0 24px; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--wl-line); background: var(--wl-acbg); }
+.wl-orient-steps { display: flex; flex-wrap: wrap; gap: 6px 4px; margin: 8px 0; padding: 0; list-style: none; }
+.wl-orient-steps li { font-weight: 600; color: var(--wl-tx); }
+.wl-orient-steps li + li::before { content: "→"; margin: 0 6px 0 2px; color: var(--wl-tx3); }
+.wl-orient .wl-hint { margin-bottom: 10px; }
+
 .wl-complete { margin-top: 44px; }
 .wl-complete-ask, .wl-complete-done { border: 1px solid var(--wl-line); border-radius: 14px; padding: 20px 22px; background: var(--wl-surface); }
 .wl-complete-ask .wl-actions { margin-top: 14px; }

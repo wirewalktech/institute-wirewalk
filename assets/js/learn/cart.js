@@ -221,12 +221,16 @@
     var err = h("div", { role: "alert", class: "wl-form-error", hidden: true });
     b.addEventListener("click", function () {
       err.hidden = true;
+      var first = false;
       var run = ids.reduce(function (p, id) {
-        return p.then(function () { return API.request("POST", "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {}); });
+        return p.then(function () { return API.request("POST", "/api/courses/" + encodeURIComponent(id) + "/enroll-free", {}); })
+          .then(function (r) { if (r && !r.already) first = true; });
       }, Promise.resolve());
       W.busy(b, run, "Enrolling…").then(function () {
         cart.forEach(function (i) { W.cart.remove(i.type, i.id); });
         if (window.WIAConsent) window.WIAConsent.track("Lead", {});   // [marketing] Reddit Pixel, only after Accept; no PII
+        /* [lx] One new free course: straight to lesson 1 with a one-time orientation strip (lesson.js). */
+        if (ids.length === 1 && first) { try { localStorage.setItem("wia_orient", ids[0]); } catch (e) { /* storage blocked */ } window.location.assign(W.lessonUrl(ids[0], 0)); return; }
         window.location.assign(ids.length === 1 ? W.courseUrl(ids[0]) : "/learn/");
       }, function (e) { err.textContent = e.message; err.hidden = false; requote(); });
     });

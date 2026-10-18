@@ -439,7 +439,9 @@
   /* ---------------- free enrollment ----------------
      Signed out: sign in / sign up, then come back here with ?enroll=free, which finishes the job.
      Signed in: POST {api}/api/courses/<id>/enroll-free (billing decides it is free), then open
-     the course. The Worker refuses a priced course with 402, so a stale page cannot enroll free. */
+     lesson 1 with a one-time orientation strip (localStorage "wia_orient", read by lesson.js), or
+     the course page if the learner was already enrolled. The Worker refuses a priced course with
+     402, so a stale page cannot enroll free. */
   function token() { try { return localStorage.getItem("wia_token"); } catch (e) { return null; } }
   function signInFor(id) { return "/learn/?next=" + encodeURIComponent("/courses/" + id + "/?enroll=free"); }
   function enrollFree(id, btn) {
@@ -458,7 +460,9 @@
     }).then(function (x) {
       if (x.ok && x.d.enrolled) {
         if (window.WIAConsent) window.WIAConsent.track("Lead", {});   // [marketing] Reddit Pixel, only after Accept; no PII
-        location.assign("/learn/course/?c=" + encodeURIComponent(id)); return;
+        if (x.d.already) { location.assign("/learn/course/?c=" + encodeURIComponent(id)); return; }
+        try { localStorage.setItem("wia_orient", id); } catch (e) { /* storage blocked: no strip */ }
+        location.assign("/learn/lesson/?c=" + encodeURIComponent(id) + "&l=0"); return;
       }
       if (x.status === 401) { try { localStorage.removeItem("wia_token"); } catch (e) {} location.assign(signInFor(id)); return; }
       restore();

@@ -59,6 +59,7 @@
     var all = Array.prototype.slice.call(art.querySelectorAll(BLOCKS));
     all.forEach(function (el) {
       if (el.closest(".ell-card, .wl-code-bar")) return;
+      if (el.closest("details.wl-check-item:not([open])")) return;   // [lx] a retrieval answer is read only once revealed
       if (el.tagName !== "PRE" && el.closest("pre")) return;
       /* leaf blocks only (a list item that holds paragraphs is read through its paragraphs) */
       if (el.tagName !== "TR" && el.tagName !== "PRE" && el.querySelector(BLOCKS)) {
@@ -78,7 +79,7 @@
   }
   function directText(el) {
     var t = "";
-    Array.prototype.forEach.call(el.childNodes, function (n) { if (n.nodeType === 3) t += n.nodeValue; else if (n.nodeType === 1 && !n.matches(BLOCKS) && !n.querySelector(BLOCKS)) t += n.textContent; });
+    Array.prototype.forEach.call(el.childNodes, function (n) { if (n.nodeType === 3) t += n.nodeValue; else if (n.nodeType === 1 && !n.matches(BLOCKS) && !n.querySelector(BLOCKS) && !n.matches(".wl-check-yours")) t += n.textContent; });
     return t.replace(/\s+/g, " ").trim();
   }
   function row(tr) {
