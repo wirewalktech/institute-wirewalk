@@ -28,7 +28,6 @@
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
       "scope": "Whole-repository cursor deliberately remains at baseline: new course content still requires detailed factual/editorial review. Scoped checkpoints track completed source/metric/fix review without claiming full content approval.",
       "outstanding": [
-        "WIA-012 bld-230 multilingual normalization/deduplication defect",
         "End-to-end refund integration/admin route/charge.refunded webhook; independent orders implementation review",
         "Remaining admin/console and catalog/learner site source/route/accessibility review",
         "Detailed lesson, syllabus and exam evidence/semantic review since baseline, including new 22-course batch and introductions",
@@ -36,7 +35,7 @@
         "Browser differential sanitizer testing",
         "Full factual/example/exam review of new fnd-102, fnd-105 and mod-201; structural/selected-claim triage only so far",
         "Full bulk US-localization factual/code review; full new AI-instructor design/scenario/exercise review and future implementation checks",
-        "WIA-013 shared global AI monthly spend gate/kill-switch missing; verify fix before provider use",
+        "WIA-013 P1 shared budget gate partially implemented; missing-schema fail-open and successful-provider/failed-usage settlement gaps independently reproduced at0d8daa7. Durable liability/TTL and worst-case bound remain open.",
         "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review",
         "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval",
         "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain",
@@ -48,7 +47,7 @@
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval."
       ],
-      "last_examined_sha": "d222936",
+      "last_examined_sha": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -70,7 +69,9 @@
         "labs_selected_source_and_419_pass_1_skip": "e0b6003",
         "v2_pilots_structural_and_selected_ROI_source_arithmetic_only": "db3c751",
         "fin210_v2_structure_and_exhaustive_lab_traversal_only": "149c301",
-        "six_v2_intros_structure_and_selected_dev001_limit_claim_only": "3a229fa"
+        "six_v2_intros_structure_and_selected_dev001_limit_claim_only": "3a229fa",
+        "WIA_012_exact_lesson_execution_CJK_Arabic_and_strict_validation": "6745b76",
+        "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -81,6 +82,6 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T16:14:24Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1614.md"
+  "last_check_started_utc": "2026-10-18T16:44:24Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1644.md"
 }
