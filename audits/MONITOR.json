@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-10-17",
+  "review_date": "2026-10-18",
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
@@ -10,7 +10,7 @@
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         }
       },
-      "last_examined_sha": "54f8fb7",
+      "last_examined_sha": "f9c4e7f",
       "scoped_checkpoints": {
         "reset_js_source_and_live_fixture": "79b358f",
         "homepage_1440_390_noindex_and_exact_pages_sha": "79b358f",
@@ -33,9 +33,10 @@
         "Full bulk US-localization factual/code review; full new AI-instructor design/scenario/exercise review and future implementation checks",
         "WIA-013 shared global AI monthly spend gate/kill-switch missing; verify fix before provider use",
         "Full new modular admin/MFA/refund/email/teams/AI-query implementation and all 13 migrations review",
-        "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval"
+        "Independent lesson/example/exam review of 13 industry wave courses (10 intros, fin-210, edu-220, mfg-270); dossier and structural triage is not editorial approval",
+        "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain"
       ],
-      "last_examined_sha": "b1b087edea70c6f322148f73690804040b9e389a",
+      "last_examined_sha": "e907e2c",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -51,11 +52,12 @@
         "fnd102_fnd105_mod201_structural_and_selected_lesson_triage": "9350a68",
         "US_validator_and_selected_instructor_design_triage": "b59e476",
         "admin_suite_triage_304_pass_1_skip_and_AI_budget_review": "db4099f",
-        "industry_wave_structure_71_and_two_primary_source_claims_only": "b1b087e"
+        "industry_wave_structure_71_and_two_primary_source_claims_only": "b1b087e",
+        "WIA_013_partial_fix_budget_failopen_and_389_pass_1_skip": "e907e2c"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-17T23:11:42Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-followup-2311.md"
+  "last_check_started_utc": "2026-10-18T00:14:12Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-0014.md"
 }
