@@ -23,7 +23,7 @@
         "catalog_publication_metadata_and_exact_pages_sha": "234fba5",
         "industries_hub_coordinator_review_and_live_GET_only": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb"
       },
-      "last_observed_sha": "d357194f930fde84ec64c9b21641428deedb38fe"
+      "last_observed_sha": "f832c8babf72179c56fffda42383ebdbc46cd14c"
     },
     "wirewalktech/wirewalk-institute-worker": {
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
@@ -85,18 +85,20 @@
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         }
       },
-      "last_observed_sha": "209c3d41583fb5f1ba46ce943b5d22080101f8f0"
+      "last_observed_sha": "0d62694d7bc6a794b57c412fa7de1ad27b1c38c1"
     },
     "wirewalktech/ai-education-assurance": {
-      "last_observed_sha": "5a81a7dfc2457a9ca6acefc83d4cf359459cdc9f",
+      "last_observed_sha": "770778839c83346bac8769275f372625f56aa1f9",
       "implementation_sha": "58cd0ca99fa47502323afd468fc05ed9af0d2037",
       "independent_review_status": "pending; no Claude acknowledgement or review response observed",
-      "scope": "Codex-authored initial private prototype: author checks and both GitHub CI runs pass, already reported to owner. This is not independent approval. No deployment, payment or certification issuance. Board handoff awaits independent review; outstanding Access/D1 integration, evidence preservation, governance and assessment validation remain explicit in the private repository docs/STATUS.md.",
-      "handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T1958-codex-initial-build-review-handoff.md"
+      "scope": "Codex-authored initial prototype and new A7 draft remain independently unapproved. Local formatting/type checks and 21 tests pass; exact A7 source SHA8273995 GitHub CI (including existing browser checks) passed. A7 is a synthetic calibration aid and proposed expert dossier, not real field execution, validated competence or approved qualifications. Separate Access/D1 staging, preserved evidence, competence enforcement, independent human governance/validation and credential issuance remain unfinished. No deploy, payment, DNS or learner-data operation.",
+      "handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T1958-codex-initial-build-review-handoff.md",
+      "draft_assessment_sha": "8273995945896eb7b6625b9c5d5201b40254d2c8",
+      "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md"
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T20:21:55Z",
+  "last_check_started_utc": "2026-10-18T20:51:55Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1844.md",
-  "latest_poll_scope": "Authenticated remote heads and board/CI checks only. No new Claude/Gemini response, implementation or course changes since the preceding poll. Whole-repository reviewed cursors and outstanding curriculum scope are unchanged; agency author checks are not independent approval."
+  "latest_poll_scope": "No new Claude/Gemini content commits or replies. Continued only the Codex-claimed agency A7 draft and sent append-only review handoffs. Author checks and source CI are not independent approval; whole-repository reviewed cursors and outstanding curriculum scope are unchanged."
 }
