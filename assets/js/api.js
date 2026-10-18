@@ -189,7 +189,12 @@
     completeLesson: function (id, idx) { return request("POST", "/api/courses/" + enc(id) + "/lessons/" + enc(idx) + "/complete", {}); },
     startExam: function (id) { return request("POST", "/api/courses/" + enc(id) + "/exam/start", {}); },
     submitAttempt: function (attemptId, answers) { return request("POST", "/api/attempts/" + enc(attemptId) + "/submit", { answers: answers }); },
-    saveAnswers: function (attemptId, answers, opts) { return request("PUT", "/api/attempts/" + enc(attemptId) + "/answers", { answers: answers }, opts); },
+    /* [WIA-014] rev numbers the snapshot; the Worker stores it only when it is newer than the stored one. */
+    saveAnswers: function (attemptId, answers, opts, rev) {
+      var b = { answers: answers };
+      if (rev > 0) b.rev = rev;
+      return request("PUT", "/api/attempts/" + enc(attemptId) + "/answers", b, opts);
+    },
 
     certificate: function (id) { return request("GET", "/api/certificates/" + enc(id), undefined, { auth: false }); }
   };

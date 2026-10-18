@@ -62,7 +62,7 @@
   }
 
   function storeKey() { return "wia_exam_" + ex.attemptId; }
-  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur, dirty: sv.dirty }); }
+  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur, dirty: sv.dirty, rev: sv.rev }); }
 
   /* ---- autosave ----
    * Each change is written to sessionStorage at once (works offline) and sent to the Worker
@@ -79,9 +79,24 @@
    * and some browsers (older Safari and Firefox) drop a preflighted keepalive request on
    * pagehide. Accepted: visibilitychange -> hidden fires first and flushes the same change while
    * the page is still alive, the 2 s debounce bounds what is at stake to the last few seconds,
-   * and sessionStorage keeps those picks for a resume in the same tab. */
-  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000, SAVE_RATE_BACKOFF_MS = 60000;
-  var sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0 };
+   * and sessionStorage keeps those picks for a resume in the same tab.
+   *
+   * [WIA-014] Ordering. Every PUT is a whole snapshot, and the keepalive flush on hide can overlap
+   * a debounced save that is still in flight, so responses (and, without a guard, writes) can
+   * arrive out of order. Each snapshot carries `rev`, numbered above the `rev` the exam start or
+   * resume returned; the Worker stores it only when it is newer than what it holds (older or equal:
+   * 409 reason "stale"). Here: "All answers saved" shows only when the Worker accepted the newest
+   * snapshot this tab sent and nothing changed since; a stale reply for an older snapshot is
+   * ignored; a stale reply for the newest one (another tab or device saved a higher rev) renumbers
+   * above it and saves this tab's picks again; and a success for an older snapshot that the Worker
+   * did not confirm by rev (a Worker without the ordering guard) may have overwritten a newer
+   * one, so the newest picks are saved again. */
+  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000, SAVE_RATE_BACKOFF_MS = 60000, MAX_REBASE = 3;
+  function freshSv(rev) {
+    return { dirty: false, timer: null, inflight: 0, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0,
+             rev: rev || 0, ackRev: 0, rebases: 0 };
+  }
+  var sv = freshSv(0);
   function savedPicks() {
     var a = {};
     ex.questions.forEach(function (q) { if (st.answers[q.n] && st.answers[q.n].length) a[String(q.n)] = st.answers[q.n].slice(); });
@@ -99,16 +114,38 @@
     clearTimeout(sv.timer); sv.timer = null;
     if (!ex || submitting || submitted || sv.stopped || !sv.dirty) return;
     if (sv.inflight && !keepalive) return scheduleSave(SAVE_DELAY_MS);   // one at a time; the next one carries the latest picks
-    var aid = ex.attemptId, upTo = sv.changes;
-    sv.inflight = true;
-    API.saveAnswers(aid, savedPicks(), keepalive ? { keepalive: true } : undefined).then(function () {
-      sv.inflight = false;
+    var aid = ex.attemptId, upTo = sv.changes, rev = ++sv.rev, mine = sv;
+    sv.inflight++;
+    persist();
+    API.saveAnswers(aid, savedPicks(), keepalive ? { keepalive: true } : undefined, rev).then(function (r) {
+      if (mine !== sv) return;   // a newer begin() replaced this attempt's save state
+      sv.inflight--;
       if (!ex || ex.attemptId !== aid) return;
-      sv.failed = false; sv.backoffUntil = 0;
-      if (upTo === sv.changes) { sv.dirty = false; persist(); showSaved("All answers saved"); }
+      sv.failed = false; sv.backoffUntil = 0; sv.rebases = 0;
+      var confirmed = !!(r && r.rev === rev);
+      if (rev < sv.ackRev) {
+        /* A late answer for an older snapshot. Confirmed by rev: the Worker stored it before the
+           newer one, nothing was lost. Unconfirmed: it may have replaced the newer picks. */
+        if (!confirmed) { sv.dirty = true; sv.changes++; persist(); saveNow(document.hidden); }
+        return;
+      }
+      sv.ackRev = rev;
+      if (rev === sv.rev && upTo === sv.changes) { sv.dirty = false; persist(); showSaved("All answers saved"); }
     }, function (e) {
-      sv.inflight = false;
+      if (mine !== sv) return;
+      sv.inflight--;
       if (!ex || ex.attemptId !== aid || submitted) return;
+      if (e.status === 409 && e.data && e.data.reason === "stale") {
+        if (rev < sv.rev) {   // a newer snapshot from this tab has been sent; it carries these picks and more
+          if (!sv.inflight && sv.dirty && !sv.timer) scheduleSave(SAVE_DELAY_MS);
+          return;
+        }
+        /* Another tab or device stored a higher rev: number above it and save this tab's picks. */
+        var srv = Number(e.data.rev) || 0;
+        if (srv > sv.rev) sv.rev = srv;
+        if (sv.rebases++ < MAX_REBASE) saveNow(document.hidden); else scheduleSave(SAVE_RETRY_MS);
+        return;
+      }
       if (e.status === 409) { sv.stopped = true; showSaved("Not saved: this attempt is closed", true); return; }
       if (e.status === 403) {
         sv.stopped = true;
@@ -250,7 +287,8 @@
     var local = saved.answers && (saved.dirty || !Object.keys(server).length) ? saved.answers : null;
     st = { answers: local || server, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
     clearTimeout(sv.timer);
-    sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0 };
+    /* [WIA-014] Number the next save above both the Worker's stored rev and any rev this tab already sent. */
+    sv = freshSv(Math.max(Number(r.rev) || 0, Number(saved.rev) || 0));
     submitting = false; submitted = false; warned = {};
     window.addEventListener("beforeunload", beforeUnload);
     renderExam();

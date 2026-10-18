@@ -247,12 +247,15 @@ test("W1-13: /go/ Start free -> Create account -> lesson 1 of fnd-001 in at most
 
 /* ------------------------------------------------------------------ W1-3 / W1-10 / W1-11: exam */
 const QS = [1, 2, 3, 4].map(n => ({ n, type: "single", stem: "Question " + n + " about the board pack?", options: ["Alpha", "Bravo", "Charlie", "Delta"] }));
-async function openExam(width, putReply) {
+async function openExam(width, putReply, { extra, startRev } = {}) {
   const { ctx, page } = await H.newPage(width);
   const puts = [];
   await stubApi(page, (m, p, b) => {
+    const x = extra && extra(m, p, b);
+    if (x !== undefined) return x;
     if (p === "/api/courses/ven-120") return outline({ done: [0, 1, 2], labFinished: true, exam: EXAM_OPEN });
-    if (p.endsWith("/exam/start")) return { attemptId: "at_1", deadline: new Date(Date.now() + 40 * 60000).toISOString(), minutes: 40, questions: QS, answers: {} };
+    if (p.endsWith("/exam/start")) return { attemptId: "at_1", deadline: new Date(Date.now() + 40 * 60000).toISOString(), minutes: 40, questions: QS, answers: {},
+      ...(startRev !== undefined ? { rev: startRev } : {}) };
     if (p === "/api/attempts/at_1/answers" && m === "PUT") { puts.push(b.answers); return putReply(puts.length, b); }
   });
   await page.goto(H.origin + "/learn/exam/?c=ven-120");
@@ -339,6 +342,96 @@ test("W1-14/W1-7: Dismiss on the verify banner moves focus to a heading, not to 
   await until(() => page.evaluate(() => !document.querySelector(".wl-verify-banner")));
   const active = await page.evaluate(() => document.activeElement.tagName);
   assert.match(active, /^H[1-3]$/, "focus after Dismiss: " + active);
+  await ctx.close();
+});
+
+/* WIA-014: the keepalive flush on hide overlaps a debounced save that is still in flight (Codex's
+   audits/repro/wia-014-autosave.cjs). Against a Worker that enforces rev ordering, and against one
+   that writes every snapshot it receives, the durable answers must end on the newest pick and
+   "All answers saved" must only show for it. */
+test("WIA-014: a delayed older autosave never leaves older answers stored behind 'All answers saved'", async () => {
+  for (const mode of ["ordered", "unordered"]) {
+    let release, stored = {}, storedRev = 0;
+    const gate = new Promise(r => { release = r; }), writes = [], revs = [];
+    const { ctx, page, puts } = await openExam(1280, async (n, b) => {
+      revs.push(b.rev);
+      if (n === 1) await gate;   // hold the first ordinary save before its write
+      if (mode === "ordered") {
+        if (!(b.rev > storedRev)) return { __status: 409, error: "a newer save of these answers is already stored", reason: "stale", rev: storedRev };
+        storedRev = b.rev;
+      }
+      stored = JSON.parse(JSON.stringify(b.answers)); writes.push(n);
+      return { saved: Object.keys(stored).length, savedAt: new Date().toISOString(), ...(mode === "ordered" ? { rev: b.rev } : {}) };
+    });
+    await page.click("label[for=q1-o1]");
+    await until(() => puts.length >= 1, 4000);
+    assert.equal(puts.length, 1, mode);
+    await page.click("label[for=q1-o2]");
+    await page.evaluate(() => { Object.defineProperty(document, "hidden", { configurable: true, get: () => true }); document.dispatchEvent(new Event("visibilitychange")); });
+    await until(() => puts.length >= 2, 2000);
+    assert.equal(puts.length, 2, mode + ": the hidden-page flush is sent while the first save is still in flight");
+    await until(() => writes.length >= 1, 2000);
+    assert.deepEqual(stored, { "1": [2] }, mode + ": the keepalive save landed first");
+    release();
+    const want = mode === "ordered" ? 2 : 3;   // unordered: the late older write is detected and the newest picks are saved again
+    await until(async () => puts.length >= want && /All answers saved/.test(await text(page, ".wl-exam-saved")), 4000);
+    await page.waitForTimeout(400);
+    const label = await text(page, ".wl-exam-saved");
+    const out = { mode, writes, revs, label, visibleChoice: await page.locator(".wl-q input:checked").getAttribute("value"), stored };
+    assert.deepEqual(stored, { "1": [2] }, "durable answers end on the newest pick: " + JSON.stringify(out));
+    assert.equal(label, "All answers saved", JSON.stringify(out));
+    assert.equal(out.visibleChoice, "2");
+    assert.equal(puts.length, want, JSON.stringify(out));
+    for (let i = 1; i < revs.length; i++) assert.ok(revs[i] > revs[i - 1], "revs strictly increase: " + JSON.stringify(revs));
+    await ctx.close();
+  }
+});
+
+test("WIA-014: resume numbers saves above the stored rev; a higher rev saved elsewhere is overtaken, not mistaken for a closed attempt", async () => {
+  let stored = null, storedRev = 7;
+  const revs = [];
+  const { ctx, page, puts } = await openExam(1280, (n, b) => {
+    revs.push(b.rev);
+    if (n === 1) { storedRev = 41; return { __status: 409, error: "a newer save of these answers is already stored", reason: "stale", rev: 41 }; }
+    if (!(b.rev > storedRev)) return { __status: 409, error: "stale", reason: "stale", rev: storedRev };
+    storedRev = b.rev; stored = b.answers;
+    return { saved: 1, savedAt: new Date().toISOString(), rev: b.rev };
+  }, { startRev: 7 });
+  await page.click("label[for=q1-o3]");
+  await until(async () => puts.length >= 2 && /All answers saved/.test(await text(page, ".wl-exam-saved")), 5000);
+  assert.deepEqual(revs, [8, 42], "first save above the resumed rev 7; then above the other device's 41");
+  assert.deepEqual(stored, { "1": [3] });
+  assert.equal(await text(page, ".wl-exam-saved"), "All answers saved");
+  await ctx.close();
+});
+
+/* WIA-015: "Next in your path" after a pass. A suggestion an active All-Access Pass covers is opened,
+   never sold; only access "purchase" offers Add to cart. */
+test("WIA-015: next-path suggestions covered by the learner's pass show Open course, not Add to cart", async () => {
+  const ends = new Date(Date.now() + 30 * 86400000).toISOString();
+  const { ctx, page } = await openExam(1280, () => ({ saved: 1, savedAt: new Date().toISOString(), rev: 1 }), {
+    extra: (m, p) => {
+      if (p === "/api/attempts/at_1/submit" && m === "POST")
+        return { scorePct: 100, passed: true, passPct: 70, moduleScores: [{ module: 1, title: "Getting Started", correct: 4, total: 4 }], certificate: null, attemptsLeft: 0, nextAttemptAt: null };
+      if (p === "/api/courses/ven-120/next") return { courseId: "ven-120", passed: true, waitlist: null, courses: [
+        { id: "fnd-101", title: "AI Foundations", level: "basic", track: "foundations", reason: "starter", access: "pass", accessEndsAt: ends },
+        { id: "ven-130", title: "Copilot at Work", level: "basic", track: "vendors", reason: "track", access: "purchase", accessEndsAt: null }] };
+    },
+  });
+  await page.click("label[for=q1-o1]");
+  await page.click("button:has-text('Submit…')");
+  await page.click("button:has-text('Submit my answers')");
+  await page.waitForSelector(".wl-next-cards li", { timeout: 8000 });
+  const cards = await page.$$eval(".wl-next-cards li", els => els.map(li => ({
+    code: li.querySelector(".wl-code").textContent,
+    links: [...li.querySelectorAll("a")].map(a => [a.textContent.trim(), a.getAttribute("href")]),
+    text: li.textContent.replace(/\s+/g, " ") })));
+  const pass = cards.find(c => c.code === "fnd-101"), buy = cards.find(c => c.code === "ven-130");
+  assert.ok(pass && buy, JSON.stringify(cards));
+  assert.ok(pass.links.some(([t, h]) => t === "Open course" && h === "/learn/course/?c=fnd-101"), JSON.stringify(pass));
+  assert.ok(!pass.links.some(([t, h]) => /cart/i.test(t) || /\/learn\/cart\//.test(h)), "no Add to cart for a pass-covered course: " + JSON.stringify(pass));
+  assert.match(pass.text, /Included in your All-Access Pass until /);
+  assert.ok(buy.links.some(([t, h]) => t === "Add to cart" && h === "/learn/cart/?add=course:ven-130"), JSON.stringify(buy));
   await ctx.close();
 });
 

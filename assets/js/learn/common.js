@@ -545,7 +545,10 @@
   /* [onboard] "Next in your path" after a pass: GET /api/courses/<id>/next (at most 3 open courses,
      or a waitlist for a track with nothing open yet). Prices come from GET /api/catalog through
      [data-price-for] (site.js), never from this route. One dismiss per course, kept in this browser.
-     opts.onlyIfPassed: render nothing unless the signed-in learner holds this course's certificate. */
+     opts.onlyIfPassed: render nothing unless the signed-in learner holds this course's certificate.
+     [WIA-015] A suggestion the learner can already open (c.access "pass": covered by an active
+     All-Access Pass; "owned": enrolled) shows "Open course" and the coverage, never a price or
+     Add to cart. Only c.access "purchase" (or a Worker that does not send access) is offered for sale. */
   var NEXT_DISMISS = "wia_next_dismissed";
   function nextDismissed(id) { try { return !!(JSON.parse(localStorage.getItem(NEXT_DISMISS) || "{}") || {})[id]; } catch (e) { return false; } }
   function dismissNext(id) {
@@ -563,13 +566,20 @@
       dismiss.addEventListener("click", function () { dismissNext(courseId); removeKeepFocus(box); });
       box.appendChild(h("div", { class: "wl-section-head" }, h("h2", { id: "h-next-" + courseId, class: "wl-h3" }, "Next in your path"), dismiss));
       if (list.length) box.appendChild(h("ul", { class: "wl-cards wl-next-cards", role: "list" }, list.map(function (c) {
+        var open = c.access === "pass" || c.access === "owned";
+        var name = c.title || courseTitle(c.id);
         return h("li", { class: "wl-card wl-course-card" },
           h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, c.id), c.level ? h("span", null, levelLabel(c.level)) : null),
-          h("h3", { class: "wl-card-title" }, h("a", { href: publicCourseUrl(c.id) }, c.title || courseTitle(c.id))),
+          h("h3", { class: "wl-card-title" }, h("a", { href: open ? courseUrl(c.id) : publicCourseUrl(c.id) }, name)),
           h("p", { class: "wl-hint" }, c.reason === "prerequisite" ? "Builds on this course" : c.reason === "track" ? "Same track: " + trackLabel(c.track) : "A good next step"),
-          h("div", { class: "wl-card-foot" },
-            h("span", { class: "price", "data-price-for": c.id, "data-kind": "course" }, h("span", { class: "fallback" }, "See the course page")),
-            btn("Add to cart", { href: "/learn/cart/?add=course:" + encodeURIComponent(c.id), class: "wl-btn-sm" })));
+          open
+            ? h("div", { class: "wl-card-foot" },
+                h("span", { class: "wl-next-access" }, c.access === "owned" ? "In your courses"
+                  : "Included in your All-Access Pass" + (c.accessEndsAt ? " until " + fmtDate(c.accessEndsAt) : "")),
+                btn("Open course", { href: courseUrl(c.id), class: "wl-btn-sm", "aria-label": "Open course: " + name }))
+            : h("div", { class: "wl-card-foot" },
+                h("span", { class: "price", "data-price-for": c.id, "data-kind": "course" }, h("span", { class: "fallback" }, "See the course page")),
+                btn("Add to cart", { href: "/learn/cart/?add=course:" + encodeURIComponent(c.id), class: "wl-btn-sm" })));
       })));
       if (d.waitlist) box.appendChild(waitlistRow(d.waitlist));
       box.hidden = false;
