@@ -71,6 +71,9 @@
     var topbar = h("div", { class: "wl-readbar", "aria-hidden": "true" }, h("span", { id: "wl-readbar" }));
     var courseBar = h("div", { class: "wl-reader-progress" }, W.progressBar(prog.done, prog.total, "Course progress"));
 
+    var orient = orientation(prog);   // [lx] once, after a first free enrollment
+    if (orient) main.insertBefore(orient, article);
+
     W.mount(h("div", { class: "wl-reader" }, topbar,
       h("div", { class: "wl-reader-grid" },
         h("aside", { class: "wl-toc", "aria-label": "Course contents" }, courseBar, toc), main)));
@@ -93,6 +96,23 @@
       h("h2", { id: "lab-callout-h", class: "wl-h4" }, "Put module " + d.module + " into practice"),
       h("p", null, "Step into a realistic business situation, make the calls and see the consequences play out. Finishing the lab is required for the exam."),
       h("ul", { class: "wl-labs", role: "list" }, m.labs.map(function (l) { return window.WLLabs.row(cid, l); })));
+  }
+
+  /** [lx] One-time orientation strip. site.js and cart.js set localStorage "wia_orient" to the
+   *  course id after a first free enrollment and send the learner straight here; it is shown once. */
+  function orientation(prog) {
+    var pending = null;
+    try { pending = localStorage.getItem("wia_orient"); if (pending === cid) localStorage.removeItem("wia_orient"); } catch (e) { return null; }
+    if (pending !== cid) return null;
+    var op = (outline && outline.progress) || prog, labs = op.labs && op.labs.total;
+    var steps = [W.plural(op.total || prog.total || 0, "lesson")]
+      .concat(labs ? [W.plural(labs, "Decision Lab")] : [], ["exam", "certificate"]);
+    var strip = h("section", { class: "wl-orient", "aria-labelledby": "wl-orient-h" },
+      h("h2", { id: "wl-orient-h", class: "wl-h4" }, "You are enrolled. Here is how " + courseTitle() + " works"),
+      h("ol", { class: "wl-orient-steps", role: "list" }, steps.map(function (t) { return h("li", null, t); })),
+      h("p", { class: "wl-hint" }, (labs ? "Complete every lesson and Decision Lab" : "Complete every lesson") + " to unlock the exam. Questions as you read? Ask Ellery, the AI instructor, any time."),
+      W.btn("Got it", { class: "wl-btn-sm wl-btn-ghost", onclick: function () { strip.remove(); var t = document.getElementById("lesson-title"); if (t) t.focus(); } }));
+    return strip;
   }
 
   function renderComplete(box, completed, prog, justNow, unlocked) {
@@ -191,6 +211,36 @@
       var base = hd.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "section";
       var s = base, n = 2; while (used[s] || document.getElementById(s)) s = base + "-" + n++;
       used[s] = 1; hd.id = s;
+    });
+    checks(root);
+  }
+
+  /** [lx] Retrieval checks (the build puts each answer in details.wl-check-item, tools/retrieval.mjs):
+   *  an optional "Your answer" box before the reveal and a Got it / Partly / Missed self-rating
+   *  inside it. Both stay in this browser (localStorage "wia_rc_<course>_<lesson>"). */
+  function checks(root) {
+    var items = root.querySelectorAll("details.wl-check-item");
+    if (!items.length) return;
+    var key = "wia_rc_" + cid + "_" + idx, saved = {};
+    try { saved = JSON.parse(localStorage.getItem(key) || "{}") || {}; } catch (e) { saved = {}; }
+    function save() { try { localStorage.setItem(key, JSON.stringify(saved)); } catch (e) { /* storage blocked */ } }
+    Array.prototype.forEach.call(items, function (det, n) {
+      var s = saved[n] = saved[n] || {}, id = "wl-rc-" + n;
+      var box = h("textarea", { id: id, class: "wl-check-input", rows: "2", maxlength: "2000", placeholder: "Your answer (optional)" });
+      box.value = s.a || "";
+      box.addEventListener("input", function () { s.a = box.value; save(); });
+      det.parentNode.insertBefore(h("div", { class: "wl-check-yours" },
+        h("label", { for: id, class: "wl-sr" }, "Your answer to question " + (n + 1) + " (optional, kept in this browser)"), box), det);
+      var btns = ["Got it", "Partly", "Missed"].map(function (t) {
+        var b = h("button", { type: "button", class: "wl-check-rate-b", "aria-pressed": s.r === t ? "true" : "false" }, t);
+        b.addEventListener("click", function () {
+          s.r = s.r === t ? null : t; save();
+          btns.forEach(function (x) { x.setAttribute("aria-pressed", x.textContent === s.r ? "true" : "false"); });
+        });
+        return b;
+      });
+      det.appendChild(h("div", { class: "wl-check-rate", role: "group", "aria-label": "How did you do on question " + (n + 1) + "?" },
+        h("span", { class: "wl-hint", "aria-hidden": "true" }, "How did you do?"), btns));
     });
   }
 
