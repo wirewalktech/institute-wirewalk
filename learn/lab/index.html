@@ -1,0 +1,30 @@
+---
+layout: default
+title: Decision Lab
+description: Practice strategic decisions in an interactive business scenario, then compare your path with the expert's.
+permalink: /learn/lab/
+extra_css: [learn, labs]
+# [labs] Decision Lab player (assets/js/learn/labs/): ?course=<id>&lab=<id>. The learning Worker plays
+#   the lab server-side; "Discuss my choices with Ellery" calls /api/ai/labdebrief.
+extra_js: [api, learn/common, learn/labs/links, learn/labs/ui, learn/labs/player]
+noindex: true
+sitemap: false
+---
+<div class="wl" data-page="lab">
+  <nav class="wl-subnav" aria-label="Learner app">
+    <div class="wl-subnav-in">
+      <a href="/learn/">Dashboard</a>
+      <a href="/courses/">Catalog</a>
+      <a href="/learn/cart/">Cart <span class="wl-count" data-cart-count hidden></span></a>
+      <a href="/learn/account/" data-when-signed-in hidden>Account</a>
+    </div>
+  </nav>
+  <div id="learn-app" class="wl-app" aria-busy="true">
+    <noscript>
+      <div class="wl-notice wl-notice-error"><strong class="wl-notice-title">JavaScript is required</strong>
+        <div class="wl-notice-body">Decision Labs need JavaScript. Please enable it and reload the page.</div></div>
+    </noscript>
+    <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
+  </div>
+</div>
+{% include learn-catalog.html %}

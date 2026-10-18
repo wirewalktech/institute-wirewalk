@@ -302,6 +302,7 @@
         e.level ? h("span", null, W.levelLabel(e.level)) : null),
       h("h3", { class: "wl-card-title" }, h("a", { href: W.courseUrl(e.courseId) }, title)),
       W.progressBar(p.done, p.total, "Progress in " + title),
+      window.WLLabs && p.labs ? h("p", { class: "wl-lab-progress" }, window.WLLabs.progressText(p)) : null,   // [labs]
       h("div", { class: "wl-card-foot" }, W.chip(ex.text, ex.kind), action),
       e.source === "comp" ? h("p", { class: "wl-hint" }, "Enrolled by the Institute") : e.source === "free" ? h("p", { class: "wl-hint" }, "Free course") : null);
   }

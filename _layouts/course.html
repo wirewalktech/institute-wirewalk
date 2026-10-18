@@ -116,6 +116,14 @@ layout: default
             <li>{{ l | escape }}</li>
             {%- endfor %}
           </ol>
+          {%- comment -%} [labs] Decision Labs: public fields only (title, summary, minutes, kind). {%- endcomment -%}
+          {%- if m.labs and m.labs.size > 0 %}
+          <ul class="mod-labs">
+            {%- for lab in m.labs %}
+            <li><span class="mod-lab-k">{% if lab.kind == "capstone" %}Capstone simulation{% else %}Decision Lab{% endif %} · {{ lab.minutes }} min</span><span class="mod-lab-t">{{ lab.title | escape }}</span>{% if lab.summary %}<span class="mod-lab-s">{{ lab.summary | escape }}</span>{% endif %}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
         </details>
         {%- endfor %}
       </div>
@@ -124,7 +132,8 @@ layout: default
     <section aria-labelledby="exam-h">
       <h2 id="exam-h">Exam and certificate</h2>
       <div class="prose">
-        <p>The exam unlocks once you have completed every lesson. It draws {{ c.exam.questions }} questions from a larger bank, spread across the modules, with the answer options shuffled for each attempt. You have {{ c.exam.minutes }} minutes and need {{ c.exam.passPct }}% to pass. After a failed attempt you can try again after 24 hours, up to {{ c.exam.attempts }} attempts in total. Feedback is given per module, never as the answer key.</p>
+        {%- assign lab_mods = c.modules | where_exp: "m", "m.labs" -%}
+        <p>The exam unlocks once you have completed every lesson{% if lab_mods.size > 0 %} and played each Decision Lab to an ending{% endif %}. It draws {{ c.exam.questions }} questions from a larger bank, spread across the modules, with the answer options shuffled for each attempt. You have {{ c.exam.minutes }} minutes and need {{ c.exam.passPct }}% to pass. After a failed attempt you can try again after 24 hours, up to {{ c.exam.attempts }} attempts in total. Feedback is given per module, never as the answer key.</p>
         <p>Passing earns a certificate of completion and assessment from the Wirewalk Institute of AI with a unique ID that anyone can check at <a href="/verify/">institute.wirewalk.com/verify</a>. It is not an accredited qualification or a vendor certification. <a href="/certification/">How certification works</a>.</p>
       </div>
     </section>

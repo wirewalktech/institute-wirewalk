@@ -60,7 +60,7 @@
         h("span", { class: "wl-pager-k" }, "Next →"), h("span", { class: "wl-pager-t" }, d.next.title))
         : h("a", { class: "wl-pager-next", href: W.courseUrl(cid) }, h("span", { class: "wl-pager-k" }, "Finish →"), h("span", { class: "wl-pager-t" }, "Back to course and exam")));
 
-    var main = h("div", { class: "wl-reader-main" }, head, article, completeBox, pager,
+    var main = h("div", { class: "wl-reader-main" }, head, article, completeBox, labCallout(d), pager,
       h("p", { class: "wl-hint wl-center wl-kbd-hint" }, "Tip: press ", h("kbd", null, "←"), " and ", h("kbd", null, "→"), " to move between lessons."),
       /* [support] Errata: /assets/js/errata.js opens a small report form from this link; without it, /errata/. */
       h("p", { class: "wl-hint wl-center" }, "Spotted a mistake? ",
@@ -82,6 +82,19 @@
     try { document.dispatchEvent(new CustomEvent("wl:lesson", { detail: window.WLLesson })); } catch (e) { /* old browser */ }
   }
 
+  /** [labs] After the last lesson of a module: its Decision Lab(s), "put this module into practice". */
+  function labCallout(d) {
+    if (!window.WLLabs || !outline || !outline.modules) return null;
+    var m = outline.modules.filter(function (x) { return x.module === d.module; })[0];
+    if (!m || !m.labs || !m.labs.length) return null;
+    var lastIdx = m.lessons.length ? m.lessons[m.lessons.length - 1].idx : null;
+    if (String(lastIdx) !== String(d.idx)) return null;
+    return h("section", { class: "wl-lab-callout", "aria-labelledby": "lab-callout-h" },
+      h("h2", { id: "lab-callout-h", class: "wl-h4" }, "Put module " + d.module + " into practice"),
+      h("p", null, "Step into a realistic business situation, make the calls and see the consequences play out. Finishing the lab is required for the exam."),
+      h("ul", { class: "wl-labs", role: "list" }, m.labs.map(function (l) { return window.WLLabs.row(cid, l); })));
+  }
+
   function renderComplete(box, completed, prog, justNow, unlocked) {
     W.clear(box);
     var d = data;
@@ -94,6 +107,8 @@
         d.next ? W.btn("Next lesson", { href: W.lessonUrl(cid, d.next.idx), class: "wl-btn-sm" }) : null));
       if (unlocked) box.appendChild(W.notice("ok", "The exam is unlocked", "You have completed every lesson in this course.",
         [W.btn("Go to the exam", { href: W.examUrl(cid) })]));
+      else if (!d.next && prog.total && prog.done >= prog.total && prog.labs && prog.labs.done < prog.labs.total)   // [labs]
+        box.appendChild(W.notice("info", "Lessons complete", "Finish the course's Decision Labs to unlock the exam (" + window.WLLabs.progressText(prog) + ").", [W.btn("Course and labs", { href: W.courseUrl(cid) })]));
       else if (!d.next && prog.total && prog.done >= prog.total) box.appendChild(W.notice("ok", "Course complete", "You can take the exam from the course page.", [W.btn("Course and exam", { href: W.courseUrl(cid) })]));
       return;
     }
@@ -128,7 +143,10 @@
             h("a", { href: W.lessonUrl(cid, l.idx), "aria-current": cur ? "page" : null },
               h("span", { class: "wl-check", "aria-hidden": "true" }), h("span", null, l.title),
               h("span", { class: "wl-sr" }, l.completed ? " (completed)" : "")));
-        })));
+        })),
+        /* [labs] Decision Labs after the module's lessons */
+        window.WLLabs && m.labs && m.labs.length ? h("ul", { class: "wl-labs", role: "list", "aria-label": "Decision Labs in module " + m.module },
+          m.labs.map(function (l) { return window.WLLabs.row(cid, l, { compact: true }); })) : null);
     }));
     var det = h("details", { class: "wl-toc-details" }, h("summary", null, "Course contents"), list);
     var mq = window.matchMedia ? window.matchMedia("(min-width: 1080px)") : null;

@@ -144,6 +144,9 @@
       case "complete_lessons":
         var left = progress ? Math.max(0, (progress.total || 0) - (progress.done || 0)) : null;
         return { kind: "", text: left ? "Exam unlocks after " + plural(left, "more lesson") : "Complete all lessons to unlock the exam" };
+      case "complete_labs":   // [labs]
+        var labsLeft = progress && progress.labs ? Math.max(0, progress.labs.total - progress.labs.done) : 0;
+        return { kind: "", text: labsLeft ? "Exam unlocks after " + plural(labsLeft, "more Decision Lab") : "Finish every Decision Lab to unlock the exam" };
       case "cooldown":
         return { kind: "warn", text: "Next attempt " + (exam.nextAttemptAt ? fmtDateTime(exam.nextAttemptAt) : "after a 24-hour wait") };
       case "no_attempts_left":
@@ -161,6 +164,9 @@
       case "complete_lessons":
         var left = progress ? Math.max(0, (progress.total || 0) - (progress.done || 0)) : 0;
         return "The exam unlocks once every lesson is marked complete" + (left ? " — " + plural(left, "lesson") + " to go." : ".");
+      case "complete_labs":   // [labs]
+        var labsLeft = progress && progress.labs ? Math.max(0, progress.labs.total - progress.labs.done) : 0;
+        return "The exam unlocks once you have played every Decision Lab in this course to an ending (any ending counts)" + (labsLeft ? " — " + plural(labsLeft, "lab") + " to go." : ".");
       case "cooldown":
         return "After an attempt that does not pass there is a 24-hour wait before the next one." +
           (exam.nextAttemptAt ? " Your next attempt opens " + fmtDateTime(exam.nextAttemptAt) + "." : "");
@@ -313,7 +319,7 @@
     var path = window.location.pathname;
     Array.prototype.forEach.call(document.querySelectorAll(".wl-subnav a"), function (a) {
       var target = a.getAttribute("href");
-      if (target === path || (target === "/learn/" && /^\/learn\/(course|lesson|exam)\//.test(path))) a.setAttribute("aria-current", "page");
+      if (target === path || (target === "/learn/" && /^\/learn\/(course|lesson|exam|lab)\//.test(path))) a.setAttribute("aria-current", "page");
     });
     var signed = API.signedIn();
     Array.prototype.forEach.call(document.querySelectorAll("[data-when-signed-in]"), function (x) { x.hidden = !signed; });

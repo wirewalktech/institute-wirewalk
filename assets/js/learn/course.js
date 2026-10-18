@@ -64,6 +64,7 @@
         c.hours ? h("span", null, c.hours + " hours") : null),
       h("h1", { class: "wl-display" }, c.title || W.courseTitle(id)),
       W.progressBar(prog.done, prog.total, "Course progress"),
+      window.WLLabs && prog.labs ? h("p", { class: "wl-lab-progress" }, window.WLLabs.progressText(prog)) : null,   // [labs]
       h("div", { class: "wl-actions" }, cta));
 
     var outline = h("section", { class: "wl-outline", "aria-labelledby": "h-outline" },
@@ -83,7 +84,10 @@
                 h("span", { class: "wl-grow" }, l.title),
                 h("span", { class: "wl-sr" }, l.completed ? " (completed)" : " (not completed)"),
                 isNext ? h("span", { class: "wl-chip wl-chip-ac", id: "next-tag" }, "Up next") : null));
-          })));
+          })),
+          /* [labs] the module's Decision Labs, after its lessons */
+          window.WLLabs && m.labs && m.labs.length ? h("ul", { class: "wl-labs", role: "list", "aria-label": "Decision Labs in module " + m.module },
+            m.labs.map(function (l) { return window.WLLabs.row(id, l); })) : null);
       })));
 
     W.mount(h("div", { class: "wl-course" }, head,

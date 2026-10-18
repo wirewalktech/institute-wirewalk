@@ -398,6 +398,13 @@ input::placeholder,textarea::placeholder{color:var(--tx3)}
 .modules ol{margin:0;padding:0 20px 18px 78px;display:grid;gap:8px;counter-reset:l}
 .modules ol li{list-style:none;counter-increment:l;position:relative;font-size:15.5px;color:var(--tx2)}
 .modules ol li::before{content:counter(l);position:absolute;left:-30px;top:1px;font:500 12px/20px var(--mono);color:var(--tx3);width:20px;text-align:right}
+/* [labs] Decision Labs in the public syllabus (public fields only) */
+.mod-labs{list-style:none;margin:0;padding:0 20px 18px 78px;display:grid;gap:8px}
+.mod-labs li{display:grid;gap:2px;padding:10px 12px;border:1px dashed var(--ln2);border-radius:var(--r);background:var(--acbg)}
+.mod-lab-k{font-size:11.5px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;color:var(--ac)}
+.mod-lab-t{font-weight:600;color:var(--tx)}
+.mod-lab-s{font-size:14px;color:var(--tx2)}
+@media (max-width:560px){.mod-labs{padding:0 16px 16px}}
 @media (max-width:560px){.modules summary{grid-template-columns:36px 1fr;padding:16px}.mod-c{grid-column:2}.modules ol{padding:0 16px 16px 66px}}
 .mod-tools{display:flex;justify-content:flex-end;margin:-6px 0 10px}
 
