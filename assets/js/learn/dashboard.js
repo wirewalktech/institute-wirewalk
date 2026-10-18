@@ -194,6 +194,7 @@
     if (cart.length) blocks.push(W.notice("info", "You have " + W.plural(cart.length, "item") + " in your cart", null,
       [W.btn("Review and check out", { href: "/learn/cart/", class: "wl-btn-sm" })]));
 
+    blocks.push(assignedSection());   // [org-agreements] training assigned by a team; stays hidden when there is none
     if (me.pass) blocks.push(passPanel(me.pass, me.passCourses || [], me.enrollments || []));   // [bundles] All-Access Pass status
 
     // Courses: in progress first, then not started, then passed.
@@ -214,6 +215,81 @@
 
     blocks.push(h("div", { class: "wl-two" }, certSection(certs), purchaseSection(purchases)));
     W.mount(h("div", { class: "wl-dash" }, blocks));
+  }
+
+  /* [org-agreements] "Assigned by your team": training campaigns that include this learner
+     (GET /api/campaigns/mine). The section stays hidden while it loads, when there is nothing
+     assigned, and while the Worker does not serve the route yet (404/503). For a course the
+     learner already had before it was assigned, the team sees progress only after consent
+     (POST /api/campaigns/mine/:assigneeId/share). */
+  function dueDate(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(v || ""));
+    return m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])) : W.toDate(v);
+  }
+  function assignedSection() {
+    var s = h("section", { class: "wl-section", "aria-labelledby": "h-assigned", hidden: true },
+      h("div", { class: "wl-section-head" }, h("h2", { id: "h-assigned" }, "Assigned by your team")));
+    var list = h("ul", { class: "wl-cards", role: "list" });
+    s.appendChild(list);
+    API.request("GET", "/api/campaigns/mine", undefined, { quiet401: true }).then(function (d) {
+      var rows = Array.isArray(d) ? d : (d && (d.assignments || d.campaigns)) || [];
+      rows = rows.filter(function (a) { return a && a.status !== "removed"; });
+      if (!rows.length) return;
+      rows.forEach(function (a) { list.appendChild(assignedCard(a)); });
+      s.hidden = false;
+    }, function () { /* not deployed yet, or unavailable: the dashboard is complete without it */ });
+    return s;
+  }
+  function assignedCard(a) {
+    var courses = Array.isArray(a.courses) ? a.courses : [];
+    var due = dueDate(a.dueOn);
+    /* Overdue from the Worker's exact due time (end of the due day, US Eastern), not this browser's date. */
+    var dueAt = a.dueAt ? Date.parse(a.dueAt) : NaN;
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var late = isFinite(dueAt) ? Date.now() > dueAt : !!due && due < today;
+    var overdue = late && !a.completedAt && a.status !== "completed";
+    var state = a.completedAt || a.status === "completed" ? W.chip("Completed", "ok")
+      : a.status === "pending_join" ? W.chip("Join the team to start", "warn")
+      : a.status === "awaiting_seat" ? W.chip("Waiting for a seat", "warn")
+      : overdue ? W.chip("Overdue", "bad") : W.chip("Assigned", "ac");
+    var card = h("li", { class: "wl-card" },
+      h("div", { class: "wl-card-meta" }, h("span", null, a.orgName || "Your team"), due ? h("span", null, "Due " + W.fmtDate(due)) : null),
+      h("h3", { class: "wl-card-title" }, a.campaignName || "Training"),
+      courses.length ? h("ul", { class: "wl-list", role: "list" }, courses.map(function (c) {
+        var id = c && (c.id || c.courseId);
+        return h("li", { class: "wl-list-row" }, h("span", { class: "wl-code" }, id), " ",
+          a.status === "assigned" ? h("a", { href: W.courseUrl(id) }, c.title || W.courseTitle(id)) : h("span", null, c.title || W.courseTitle(id)));
+      })) : null,
+      h("div", { class: "wl-card-foot" }, state,
+        a.status === "pending_join" ? W.btn("Your teams", { href: "/learn/team/", class: "wl-btn-sm" }) : null));
+    if (a.status === "awaiting_seat") card.appendChild(h("p", { class: "wl-hint" }, "Your team is arranging a seat; the courses open here as soon as it does."));
+    card.appendChild(h("p", { class: "wl-hint" }, "Your team's managers see your progress, exam results and certificates in these courses only."));
+    var own = Array.isArray(a.shareNeeded) ? a.shareNeeded : [];
+    if (own.length && a.assigneeId) card.appendChild(shareBox(a, own));
+    return card;
+  }
+  function shareBox(a, own) {
+    var shared = !!a.shared;
+    var box = h("div", { class: "wl-section" });
+    var text = h("p", { class: "wl-hint" });
+    var b = W.btn("", { class: "wl-btn-sm" + (shared ? " wl-btn-ghost" : "") });
+    function paint() {
+      text.textContent = "You already had " + own.map(function (id) { return W.courseTitle(id); }).join(", ") + " before your team assigned " + (own.length === 1 ? "it" : "them") + ". " +
+        (shared ? "You share your progress in " + (own.length === 1 ? "it" : "them") + " with your team." : "Your team does not see your progress in " + (own.length === 1 ? "it" : "them") + " unless you choose to share it.");
+      b.textContent = shared ? "Stop sharing" : "Share my progress with my team";
+      b.className = "wl-btn wl-btn-sm" + (shared ? " wl-btn-ghost" : "");
+    }
+    b.addEventListener("click", function () {
+      var next = !shared;
+      W.busy(b, API.request("POST", "/api/campaigns/mine/" + encodeURIComponent(a.assigneeId) + "/share", { share: next })).then(function () {
+        shared = next; paint();
+        W.toast(next ? "Your team can now see your progress in these courses." : "Your team no longer sees your progress in these courses.", "ok");
+      }, function (e) { paint(); W.toast(e.message, "bad"); });
+    });
+    paint();
+    box.appendChild(text);
+    box.appendChild(h("div", { class: "wl-actions" }, b));
+    return box;
   }
 
   /* [bundles] All-Access Pass: status, expiry, and the courses started on the pass. */
