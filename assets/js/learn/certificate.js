@@ -47,6 +47,8 @@
   }
   function badgeError(err) {
     if (err && err.status === 410) return "This certificate is no longer valid, so no badge can be issued for it.";
+    if (err && err.status === 403 && err.data && err.data.reason === "verify_email") return "Verify your email address first: the badge identifies you by it.";
+    if (err && err.status === 429) return "Too many badge downloads in the last hour. Please try again later.";
     if (err && err.status === 503) return "Badge downloads are not available right now. Please try again later.";
     return (err && err.message) || "The download failed. Please try again.";
   }
@@ -55,6 +57,9 @@
     API.request("GET", "/api/me", undefined, { quiet401: true }).then(function (me) {
       var mine = ((me && me.certificates) || []).filter(function (x) { return x && x.id === certId && x.openBadge; })[0];
       if (!mine) return;
+      /* The badge carries a hashed form of the account email as a claim that the holder controls
+         it, so the Worker signs one only for a verified address (403 verify_email otherwise). */
+      var verified = !(me.learner && me.learner.emailVerified === false);
       function dl(format, label) {
         return W.btn(label, { class: "wl-btn-ghost", onclick: function (e) {
           W.busy(e.currentTarget, API.ob3Credential(certId, format), "Preparing…").then(function (blob) {
@@ -64,10 +69,15 @@
         } });
       }
       var panel = h("section", { id: "wl-badge-panel", class: "wl-badge-panel wl-noprint", hidden: true, "aria-label": "Open Badge downloads" },
-        h("div", { class: "wl-badge-row" }, dl("json", "Download Open Badge (.json)"), dl("svg", "Download badge image (.svg)")),
+        verified
+          ? h("div", { class: "wl-badge-row" }, dl("json", "Download Open Badge (.json)"), dl("svg", "Download badge image (.svg)"))
+          : h("div", null,
+              h("p", { class: "wl-hint" }, "Verify your email address to download the badge. The badge identifies you by a hashed form of your account email, so we sign one only for an address you have confirmed."),
+              W.verifyPanel(me.learner, function () { window.location.reload(); }, true)),
         h("h2", { class: "wl-badge-h" }, "How to add it to a wallet"),
-        h("p", { class: "wl-hint" }, "Import the .json or the .svg file into any Open Badges 3.0 wallet or backpack. Both carry the same signed credential: your name, the course or program, the dates and your score. Your email address is included only as a salted hash, which lets someone who already knows the address confirm it."),
-        h("p", { class: "wl-hint" }, "The badge keeps the limits of the certificate: it is a certificate of completion and assessment, not an accreditation. If you change the email address on your account, or the certificate is renewed, download the badge again. ",
+        h("p", { class: "wl-hint" }, "Import the .json or the .svg file into any Open Badges 3.0 wallet or backpack. Both carry the same signed credential: your name, the course or program, the dates and your score. Your email address is included only as a salted hash: it does not show the address, but anyone who knows or guesses the address can check it against the badge. To check it, enter the address in lowercase."),
+        h("p", { class: "wl-hint" }, "The file also contains a link that lets anyone who has the file download the current version of the badge while the certificate is valid. If the name on your certificate is corrected, that link stops working; download the badge again and delete the old file. Download it again after a renewal too."),
+        h("p", { class: "wl-hint" }, "The badge keeps the limits of the certificate: it is a certificate of completion and assessment, not an accreditation. ",
           h("a", { href: "/certification/#open-badges" }, "About Open Badges")));
       var toggle = W.btn("Add to wallet / Download badge", { class: "wl-btn-ghost", "aria-expanded": "false", "aria-controls": "wl-badge-panel",
         onclick: function (e) {

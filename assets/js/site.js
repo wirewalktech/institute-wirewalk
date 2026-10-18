@@ -415,11 +415,17 @@
           /* [ob3] Only when the Worker says the certificate is also issued as an Open Badge. The
              achievement link is used only if it is our own static definition. */
           var ach = typeof c.achievementUrl === "string" && /^https:\/\/institute\.wirewalk\.com\/ob3\/achievements\/[a-z0-9-]{1,40}\.json$/.test(c.achievementUrl) ? c.achievementUrl : null;
-          var badge = c.openBadge === true
-            ? '<p class="small muted" style="margin-top:14px">This certificate is also issued as an Open Badges 3.0 credential (' +
-              (ach ? '<a href="' + esc(ach) + '">achievement definition</a>, ' : "") + '<a href="/ob3/issuer.json">issuer profile</a>; ' +
-              '<a href="/certification/#open-badges">what that means</a>). Received a badge file? Check that its certificate ID matches this page.</p>'
-            : "";
+          /* The Worker sends openBadge only once a badge was downloaded for this certificate. On a
+             revoked or expired certificate the note says what that means for the badge file. */
+          var badgeLinks = (ach ? '<a href="' + esc(ach) + '">achievement definition</a>, ' : "") + '<a href="/ob3/issuer.json">issuer profile</a>; ' +
+            '<a href="/certification/#open-badges">what that means</a>';
+          var badge = c.openBadge !== true ? ""
+            : c.revoked || c.expired
+              ? '<p class="small muted" style="margin-top:14px">An Open Badges 3.0 file was issued for this certificate. Any copy of it also checks as ' +
+                (c.revoked ? "revoked" : "expired") + " (" + badgeLinks + ").</p>"
+            : !c.valid ? ""
+              : '<p class="small muted" style="margin-top:14px">This certificate has also been issued as an Open Badges 3.0 credential (' + badgeLinks +
+                '). Received a badge file? Check that its certificate ID matches this page. To check its hashed email, enter the address in lowercase.</p>';
           if (c.valid && !c.revoked) {
             show("good", '<h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--ok)"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Valid certificate</h2><p class="muted">Issued by the Wirewalk Institute of AI. It attests that the holder completed the course and passed its automated exam; see <a href="/certification/#limits">what a certificate attests</a>.</p><dl>' + rows + "</dl>" + badge, true);
           } else if (c.revoked) {
