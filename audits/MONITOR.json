@@ -45,9 +45,10 @@
         "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Gemini courses await first content commit; feedback protocol acknowledged.",
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
-        "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval."
+        "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval.",
+        "WIA-013 branch e9233f9 partial fix: independently reproduced Ellery missing-usage JSON\u21920 and clean early SSE EOF\u2192partial cost with holds removed. Complete usage/floor propagation and cost-bound justification still required. Main remains unchanged implementation."
       ],
-      "last_examined_sha": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
+      "last_examined_sha": "d154623",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -77,11 +78,15 @@
         "lx-wave1": {
           "sha": "d8c2a2c2e53b83f1f1c654270b4ff5071f1235f6",
           "scope": "WIA-014 ordering and WIA-015 entitlement fixes verified in migrated isolated branch; 476 pass/0 fail/1 skip. Target migration/schema verification remains pre-deploy gate. Course/lab/retrieval/admin/build/manual-screen-reader scope still outstanding; no blanket release approval."
+        },
+        "wia-013-spend-failclosed": {
+          "sha": "e9233f981e5c654aa0344d64585a52d79631f40f",
+          "scope": "Original missing-table/failed-settlement faults verified fixed in isolated branch; 436 pass/0 fail/1 skip. WIA-013 remains P1/open: missing JSON usage and graceful early SSE EOF release unknown liability; input/schema cost bound unverified. No deployment approval; spend-unsettled migration required."
         }
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T16:44:24Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1644.md"
+  "last_check_started_utc": "2026-10-18T17:59:24Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1759.md"
 }
