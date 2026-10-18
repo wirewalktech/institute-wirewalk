@@ -37,7 +37,10 @@
   }
 
   /* ------------------------------------------------------------ sign in / sign up */
-  function authView(mode, message) {
+  /** opts.intentLine: `message` is an intent context line (contextLine), which already says why;
+   *  the "Your cart is waiting" notice would repeat it, so it is left out. */
+  function authView(mode, message, opts) {
+    opts = opts || {};
     W.setTitle(mode === "signup" ? "Create your account" : "Sign in");
     var signinTab = h("button", { type: "button", role: "tab", id: "tab-signin", "aria-controls": "panel-auth", class: "wl-tab" }, "Sign in");
     var signupTab = h("button", { type: "button", role: "tab", id: "tab-signup", "aria-controls": "panel-auth", class: "wl-tab" }, "Create account");
@@ -70,7 +73,7 @@
       }
     });
 
-    var hasCart = W.cart.get().length > 0;
+    var hasCart = W.cart.get().length > 0 && !opts.intentLine;
     var aside = h("aside", { class: "wl-auth-aside", "aria-label": "About your account" },
       h("p", { class: "wl-eyebrow" }, "Wirewalk Institute of AI"),
       h("h1", { class: "wl-display" }, "Your learning, in one place."),
@@ -254,6 +257,11 @@
     Object.keys(cs).forEach(function (id) { if (ids.length < 3 && ids.indexOf(id) < 0 && cs[id].l === "intro" && cs[id].s === "on_sale") ids.push(id); });
     return ids.slice(0, 3);
   }
+  /* The card claims Decision Labs only when the published catalog lists them for the course. */
+  function starterHint(id) {
+    var c = W.catalog().courses[id], n = c && c.lb > 0 ? c.lb : 0;
+    return n ? "About an hour, with " + W.plural(n, "Decision Lab") : "About an hour";
+  }
   function startersSection() {
     var s = h("section", { class: "wl-section", "aria-labelledby": "h-start" },
       h("div", { class: "wl-section-head" }, h("h2", { id: "h-start" }, "Start free"),
@@ -274,7 +282,7 @@
       return h("li", { class: "wl-card wl-course-card" },
         h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, id), h("span", null, W.levelLabel("intro"))),
         h("h3", { class: "wl-card-title" }, h("a", { href: W.publicCourseUrl(id) }, W.courseTitle(id))),
-        h("p", { class: "wl-hint" }, id === "fnd-001" ? "About an hour, with Decision Labs" : "About an hour"),
+        h("p", { class: "wl-hint" }, starterHint(id)),
         h("div", { class: "wl-card-foot" }, W.chip("Free", "ok"), go), msg);
     })));
     return s;
@@ -423,6 +431,7 @@
     var cart = W.cart.get();
     var what = courseId ? "“" + W.courseTitle(courseId) + "”" : null;
     if (intent === "buy") {
+      if (!what && !cart.length) return signup ? "Create an account to continue. Already have one? Use Sign in." : "Sign in to continue.";   // nothing to buy yet: no "buy your cart"
       if (!what && cart.length === 1) what = "“" + (cart[0].type === "program" ? W.programTitle(cart[0].id) : cart[0].type === "course" ? W.courseTitle(cart[0].id) : cart[0].type === "pass" ? "All-Access Pass" : W.trackLabel(cart[0].id) + " track") + "”";
       return signup ? "Create an account to buy " + (what || "your cart") + ". It takes a minute, then you go straight on to payment. Already have an account? Use Sign in."
         : "Sign in to buy " + (what || "your cart") + ". New here? Use Create account.";
@@ -464,7 +473,7 @@
          always a new visitor, so open on "Create account" (Sign in is one click away), with a context line.
          A /go/ page (mode=signup) or a campaign link to a free course always opens on Create account. */
       var signupFirst = mode === "signup" || (mode !== "signin" && (!W.hasAccount() || (intent === "free" && !!storedAttribution())));
-      authView(signupFirst ? "signup" : "signin", contextLine(intent, cid, signupFirst));
+      authView(signupFirst ? "signup" : "signin", contextLine(intent, cid, signupFirst), { intentLine: true });
     } else {
       authView(mode === "signup" ? "signup" : "signin", justVerified ? "Your email is confirmed. Sign in to continue." : next ? "Sign in to continue." : null);
     }

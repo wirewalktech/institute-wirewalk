@@ -14,8 +14,9 @@
   var tick = null, submitting = false, submitted = false, warned = {};
 
   /* ---- clock ----
-   * The Worker grades a submission that arrives later than deadline + 60 s as unanswered, so
-   * the countdown must follow the SERVER's clock, not the learner's. A fresh start response
+   * The Worker ignores the answer sheet of a submission that arrives later than deadline + 60 s
+   * and grades only the answers autosaved by then, so the countdown must follow the SERVER's
+   * clock, not the learner's. A fresh start response
    * carries deadline = serverNow + minutes, which gives the offset between the two clocks; it
    * is kept per attempt (localStorage) so a resume in another tab or after a reload uses it.
    * If the Worker ever sends serverTime/now, that wins. Auto-submit fires a few seconds before
@@ -69,9 +70,18 @@
    * the page is hidden or closed. If time runs out while the learner is away, the Worker grades
    * what was saved; a resume, on any device, gets the saved answers back. `dirty` (also kept in
    * sessionStorage) marks changes the Worker has not confirmed: on a resume in the same tab they
-   * win over the Worker's copy. A 409 means the attempt is closed or out of time: saving stops. */
-  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000;
-  var sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false };
+   * win over the Worker's copy. A 409 means the attempt is closed or out of time, and a 403 that
+   * access to the course has ended: saving stops and says why. A 429 (the Worker's per-learner
+   * autosave limit) backs off for SAVE_RATE_BACKOFF_MS and keeps going.
+   *
+   * The close-of-page save uses fetch keepalive, not sendBeacon: sendBeacon cannot send the
+   * Authorization header. Because the API is on another origin, that PUT needs a CORS preflight,
+   * and some browsers (older Safari and Firefox) drop a preflighted keepalive request on
+   * pagehide. Accepted: visibilitychange -> hidden fires first and flushes the same change while
+   * the page is still alive, the 2 s debounce bounds what is at stake to the last few seconds,
+   * and sessionStorage keeps those picks for a resume in the same tab. */
+  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000, SAVE_RATE_BACKOFF_MS = 60000;
+  var sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0 };
   function savedPicks() {
     var a = {};
     ex.questions.forEach(function (q) { if (st.answers[q.n] && st.answers[q.n].length) a[String(q.n)] = st.answers[q.n].slice(); });
@@ -81,6 +91,7 @@
   function scheduleSave(ms) {
     if (sv.stopped) return;
     clearTimeout(sv.timer);
+    if (sv.backoffUntil) ms = Math.max(ms, sv.backoffUntil - Date.now());   // a 429 back-off is not cut short by new picks
     sv.timer = setTimeout(function () { saveNow(false); }, ms);
     if (!sv.failed) showSaved("Saving…");
   }
@@ -93,13 +104,26 @@
     API.saveAnswers(aid, savedPicks(), keepalive ? { keepalive: true } : undefined).then(function () {
       sv.inflight = false;
       if (!ex || ex.attemptId !== aid) return;
-      sv.failed = false;
+      sv.failed = false; sv.backoffUntil = 0;
       if (upTo === sv.changes) { sv.dirty = false; persist(); showSaved("All answers saved"); }
     }, function (e) {
       sv.inflight = false;
       if (!ex || ex.attemptId !== aid || submitted) return;
       if (e.status === 409) { sv.stopped = true; showSaved("Not saved: this attempt is closed", true); return; }
+      if (e.status === 403) {
+        sv.stopped = true;
+        showSaved("Not saved: you no longer have access to this course", true);
+        W.say("Your answers can no longer be saved: you no longer have access to this course.");
+        return;
+      }
       if (e.status === 401) return;
+      if (e.status === 429) {
+        sv.failed = true;
+        sv.backoffUntil = Date.now() + SAVE_RATE_BACKOFF_MS;
+        showSaved("Not saved yet: kept in this browser", true);
+        scheduleSave(SAVE_RATE_BACKOFF_MS);
+        return;
+      }
       if (!sv.failed) W.say("Your answers could not be saved to your account. They are kept in this browser, and saving will retry.");
       sv.failed = true;
       showSaved("Not saved yet: kept in this browser", true);
@@ -194,7 +218,7 @@
         h("ul", { class: "wl-ticks" },
           h("li", null, "The timer starts when you press Start and keeps running if you close the page. Come back to this page to resume before time runs out."),
           h("li", null, "Some questions have one correct answer; others say “select all that apply”. A multi-select question counts only if you choose exactly the right set."),
-          h("li", null, "Your answers are saved to your account as you choose them, so they are restored if you reload or continue on another device. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero; if you are away, the answers saved by then are graded."),
+          h("li", null, "Your answers are saved to your account a moment after you choose them, and saved answers are restored if you reload or continue on another device; a change not saved yet (for example while offline) is kept only in this browser tab. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero; if you are away, the answers saved by then are graded."),
           h("li", null, "Results show your score and how you did in each module. Correct answers are never shown."),
           h("li", null, "If you do not pass, the next attempt opens 24 hours later."),
           h("li", null, "Work on your own. The certificate states that you completed the course and passed its assessment."))),
@@ -212,7 +236,7 @@
       W.busy(b, startExam(false), "Resuming…").then(function (r) { begin(r, prefMode()); }, function (e) { W.toast(e.message, "bad"); load(); });
     });
     W.mount(h("div", { class: "wl-narrow" }, head(),
-      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". The answers you have chosen are restored on any device.", [b])));
+      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". Answers saved to your account are restored on any device; changes not yet saved are kept in the browser tab you made them in.", [b])));
   }
 
   /* ------------------------------------------------------------ the exam */
@@ -226,7 +250,7 @@
     var local = saved.answers && (saved.dirty || !Object.keys(server).length) ? saved.answers : null;
     st = { answers: local || server, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
     clearTimeout(sv.timer);
-    sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false };
+    sv = { dirty: false, timer: null, inflight: false, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0 };
     submitting = false; submitted = false; warned = {};
     window.addEventListener("beforeunload", beforeUnload);
     renderExam();

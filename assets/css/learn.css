@@ -520,6 +520,16 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-toast-warn { border-left: 4px solid var(--wl-warn); }
 .wl-toast.wl-out { opacity: 0; transform: translateY(8px); }
 .wl-offline { position: fixed; z-index: 210; top: 0; left: 0; right: 0; padding: 8px 16px; background: var(--wl-tx); color: var(--wl-bg); border-bottom: 3px solid var(--wl-warn); font: 500 14px/1.4 var(--wl-sans); text-align: center; }
+/* [lx] While the offline banner shows, everything pinned to the top moves below it (common.js sets
+   --wl-offline-h to the banner's height), so it never covers the exam timer or save status. */
+html.wl-has-offline { scroll-padding-top: calc(88px + var(--wl-offline-h, 0px)); }
+html.wl-has-offline body { padding-top: var(--wl-offline-h, 0px); }
+html.wl-has-offline .hd, html.wl-has-offline .wl-exam-bar { top: var(--wl-offline-h, 0px); }
+@media (min-width: 960px) {
+  html.wl-has-offline .wl-exam-panel { top: calc(96px + var(--wl-offline-h, 0px)); }
+  html.wl-has-offline .wl-exam-side { top: calc(92px + var(--wl-offline-h, 0px)); }
+}
+@media (min-width: 1080px) { html.wl-has-offline .wl-toc { top: calc(90px + var(--wl-offline-h, 0px)); } }
 @keyframes wl-in { from { opacity: 0; transform: translateY(10px); } }
 
 @media (prefers-reduced-motion: reduce) {

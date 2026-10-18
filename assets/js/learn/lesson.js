@@ -150,17 +150,20 @@
     var mark = W.btn("Mark as complete", { class: "wl-btn-ghost" });
     /* [lx] On a module's last lesson with an unfinished lab, the primary path is the lab; the next lesson is secondary. */
     var markLab = lab ? W.btn("Complete and start the Decision Lab →") : null;
-    var markNext = d.next ? W.btn(lab ? "Skip to next lesson" : "Complete and continue →", lab ? { class: "wl-btn-ghost" } : undefined) : null;
+    /* The secondary action marks this lesson complete too, so its label says so: it skips the lab, not the lesson. */
+    var markNext = d.next ? W.btn(lab ? "Complete and skip the lab" : "Complete and continue →", lab ? { class: "wl-btn-ghost" } : undefined) : null;
+    if (lab) mark.className = "wl-btn wl-btn-sm wl-btn-ghost";   // kept as a quieter third action: record the lesson and stay on the page
     function run(goNext, b) {
       return W.busy(b, API.completeLesson(cid, d.idx), "Saving…").then(function (r) {
         data.completed = true;
         var p = r.progress || prog;
+        var unlockedNow = !!r.examUnlocked && !r.examPassed;   // a learner who has passed is not told the exam "unlocked"
         updateToc(d.idx);
         if (goNext === "lab") { window.location.assign(window.WLLabs.url(cid, lab.id)); return; }
-        if (goNext && d.next && !r.examUnlocked) { window.location.assign(W.lessonUrl(cid, d.next.idx)); return; }
-        renderComplete(box, true, p, true, r.examUnlocked);
+        if (goNext && d.next && !unlockedNow) { window.location.assign(W.lessonUrl(cid, d.next.idx)); return; }
+        renderComplete(box, true, p, true, unlockedNow);
         Array.prototype.forEach.call(document.querySelectorAll(".wl-reader-progress"), function (n) { W.clear(n).appendChild(W.progressBar(p.done, p.total, "Course progress")); });
-        W.toast(r.examUnlocked ? "Lesson complete. The exam is unlocked." : "Lesson complete.", "ok");
+        W.toast(unlockedNow ? "Lesson complete. The exam is unlocked." : "Lesson complete.", "ok");
         var focus = box.querySelector("a, button"); if (focus) focus.focus();
       }, function (e) { W.toast(e.message, "bad"); });
     }
@@ -170,7 +173,7 @@
     box.appendChild(h("div", { class: "wl-complete-ask" },
       h("p", null, "Finished reading? Mark this lesson complete to record your progress. " +
         (hasLabs() ? "Lessons and Decision Labs must be complete before the exam unlocks." : "Every lesson must be complete before the exam unlocks.")),
-      h("div", { class: "wl-actions" }, markLab, markNext, lab && markNext ? null : mark)));
+      h("div", { class: "wl-actions" }, markLab, markNext, mark)));
   }
 
   function buildToc(current) {

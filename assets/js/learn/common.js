@@ -54,6 +54,20 @@
     if (!t.hasAttribute("tabindex") && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) t.setAttribute("tabindex", "-1");
     try { t.focus({ preventScroll: true }); } catch (e) { t.focus(); }
   }
+  /** Remove a dismissible panel without dropping keyboard focus to <body> (WCAG 2.4.3): focus moves
+   *  to the heading of the next visible section after it, or else to the page's h1. */
+  function removeKeepFocus(box) {
+    var target = null;
+    for (var n = box.nextElementSibling; n && !target; n = n.nextElementSibling) {
+      if (n.hidden) continue;
+      target = /^H[1-3]$/.test(n.tagName) ? n : n.querySelector("h1, h2, h3");
+    }
+    box.remove();
+    target = target || document.querySelector("#learn-app h1") || document.querySelector("main h1, h1");
+    if (!target) return;
+    if (!target.hasAttribute("tabindex") && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(target.tagName)) target.setAttribute("tabindex", "-1");
+    try { target.focus({ preventScroll: false }); } catch (e) { target.focus(); }
+  }
   /** One hidden status element for short confirmations ("3 saved answers restored."). */
   function say(msg) {
     var box = document.getElementById("wl-say");
@@ -299,19 +313,44 @@
    * A banner while the browser reports itself offline; requests would fail (or time out, see
    * api.js) until it is back. */
   var offlineBar = null;
+  /* The banner is fixed to the top of the viewport, so while it shows, html gets .wl-has-offline
+     and --wl-offline-h (its height): the page, the sticky site header and the sticky exam bar move
+     down by that much and nothing (the timer, the save status, a focused control) is hidden under
+     it. The announcement goes through one role=status region created at page load, whose text is
+     only changed, so screen readers announce it reliably; the banner itself is not a live region. */
+  var connLive = null;
+  function connRegion() {
+    if (!connLive) {
+      connLive = h("div", { id: "wl-conn-live", class: "wl-sr", role: "status" });
+      document.body.appendChild(connLive);
+    }
+    return connLive;
+  }
+  function offlineOffset() {
+    var root = document.documentElement;
+    if (!offlineBar) { root.classList.remove("wl-has-offline"); root.style.removeProperty("--wl-offline-h"); return; }
+    root.style.setProperty("--wl-offline-h", offlineBar.offsetHeight + "px");
+    root.classList.add("wl-has-offline");
+  }
   function connection() {
+    var live = connRegion();
     if (navigator.onLine === false) {
       if (offlineBar) return;
-      offlineBar = h("div", { class: "wl-offline", role: "status" }, h("strong", null, "You are offline."),
+      offlineBar = h("div", { class: "wl-offline" }, h("strong", null, "You are offline."),
         " Pages and saves will not reach the Institute until your connection is back.");
-      document.body.appendChild(offlineBar);
+      document.body.insertBefore(offlineBar, document.body.firstChild);
+      offlineOffset();
+      live.textContent = "You are offline. Pages and saves will not reach the Institute until your connection is back.";
     } else if (offlineBar) {
       offlineBar.remove(); offlineBar = null;
+      offlineOffset();
+      live.textContent = "";
       toast("You are back online.", "ok");
     }
   }
   window.addEventListener("offline", connection);
   window.addEventListener("online", connection);
+  window.addEventListener("resize", function () { if (offlineBar) offlineOffset(); });
   if (document.body) connection(); else document.addEventListener("DOMContentLoaded", connection);
 
   /* ---------- toasts ---------- */
@@ -498,7 +537,7 @@
     });
     dismiss.addEventListener("click", function () {
       try { localStorage.setItem(VERIFY_DISMISS, String(Date.now())); } catch (e) { /* storage blocked */ }
-      box.remove();
+      removeKeepFocus(box);
     });
     return box;
   }
@@ -521,7 +560,7 @@
       var list = d.courses || [];
       if (!list.length && !d.waitlist) return;
       var dismiss = btn("Dismiss", { class: "wl-btn-sm wl-btn-ghost", "aria-label": "Dismiss next course suggestions" });
-      dismiss.addEventListener("click", function () { dismissNext(courseId); box.remove(); });
+      dismiss.addEventListener("click", function () { dismissNext(courseId); removeKeepFocus(box); });
       box.appendChild(h("div", { class: "wl-section-head" }, h("h2", { id: "h-next-" + courseId, class: "wl-h3" }, "Next in your path"), dismiss));
       if (list.length) box.appendChild(h("ul", { class: "wl-cards wl-next-cards", role: "list" }, list.map(function (c) {
         return h("li", { class: "wl-card wl-course-card" },

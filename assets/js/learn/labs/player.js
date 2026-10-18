@@ -185,11 +185,14 @@
   function wide() { try { return window.matchMedia("(min-width: 961px)").matches; } catch (e) { return true; } }
   function drawTimeline() { W.clear(S.tl).appendChild(U.timeline(S.meta.metrics, S.play.timeline)); }
   function setCounter(text) { if (S.counter) S.counter.textContent = text; }
-  /** [lx] "Decision 2 of 5" from the decisions on the shortest and longest path ("of 4–5" while both are possible). */
+  /** [lx] "Decision 2 of 5" from the decisions on the shortest and longest path. While paths of
+      different lengths are still possible the range stays: "of 7–10", then "of 8–10" past the shortest
+      path (this path has at least n), never a bare maximum the path may not reach. */
   function counterText(n) {
     var lo = S.meta.decisionsMin, hi = S.meta.decisionsMax;
     if (!hi) return "Decision " + n;
-    return "Decision " + n + " of " + (lo === hi || n > lo ? Math.max(hi, n) : lo + "–" + hi);
+    if (lo === hi || n >= hi) return "Decision " + n + " of " + Math.max(hi, n);
+    return "Decision " + n + " of " + Math.max(lo || n, n) + "–" + hi;
   }
 
   /** A decision node: narrative, documents, choice cards. */
@@ -230,7 +233,7 @@
     var prev = S.play.metrics;
     req("POST", "/play/" + enc(S.play.playId) + "/step", { nodeId: node.id, choiceId: c.id }).then(function (r) {
       S.play.timeline = r.timeline; S.play.metrics = r.metrics;
-      if (r.finished) S.finish = { progress: r.progress || null, examUnlocked: !!r.examUnlocked, firstFinish: !!r.firstFinish };   // [lx]
+      if (r.finished) S.finish = { progress: r.progress || null, examUnlocked: !!r.examUnlocked, examPassed: !!r.examPassed, firstFinish: !!r.firstFinish };   // [lx]
       consequence(r, prev);
     }, function (e) {
       cards.removeAttribute("aria-busy");
@@ -443,9 +446,10 @@
       chatBox);
     W.clear(S.main).appendChild(page);
     focusEl(head);
-    announce("Lab finished. " + (L.RATING[res.ending.rating] || "") + ": " + res.ending.title + "." + (next && next.exam && S.finish && S.finish.firstFinish ? " The exam is unlocked." : ""));
+    /* The unlock is said once: the toast (itself a polite live region) carries it, not announce(). */
+    announce("Lab finished. " + (L.RATING[res.ending.rating] || "") + ": " + res.ending.title + ".");
     if (next && next.exam && S.finish && S.finish.firstFinish) W.toast("Lab complete. The exam is unlocked.", "ok");
-    S.finish = S.finish ? { progress: S.finish.progress, examUnlocked: S.finish.examUnlocked, firstFinish: false } : null;   // announce once
+    S.finish = S.finish ? { progress: S.finish.progress, examUnlocked: S.finish.examUnlocked, examPassed: S.finish.examPassed, firstFinish: false } : null;   // announce once
   }
 
   /** [lx] Where to go after this lab: the exam once it unlocks, another unfinished lab in this module, the next
@@ -453,7 +457,7 @@
   function nextAction() {
     var f = S.finish;
     if (!f) return null;
-    if (f.examUnlocked) return { label: "Take the exam", href: W.examUrl(cid), exam: true };
+    if (f.examUnlocked && !f.examPassed) return { label: "Take the exam", href: W.examUrl(cid), exam: true };   // passed: route onward
     var mods = (S.outline && S.outline.modules) || [], mod = S.meta.module;
     var here = mods.filter(function (x) { return x.module === mod; })[0];
     var lab = here && (here.labs || []).filter(function (l) { return l.id !== lid && l.status !== "finished"; })[0];
@@ -475,7 +479,7 @@
     return h("div", { class: "lab-end-progress" },
       h("span", { class: "wl-okmark wl-okmark-sm", "aria-hidden": "true" }),
       h("p", { class: "lab-end-progress-t" }, bits.join(" · ")),
-      f.examUnlocked ? W.chip("Exam unlocked", "ok") : h("span", { class: "wl-hint" }, "The exam unlocks when every lesson and Decision Lab is complete."));
+      f.examPassed ? W.chip("Exam passed", "ok") : f.examUnlocked ? W.chip("Exam unlocked", "ok") : h("span", { class: "wl-hint" }, "The exam unlocks when every lesson and Decision Lab is complete."));
   }
 
   /** "Endings discovered: 2 of 4": a chip per ending reached, an unlabeled slot per ending not yet found. */

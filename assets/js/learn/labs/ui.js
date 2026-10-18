@@ -64,10 +64,12 @@
     return m.label + (d > 0 ? " up " : " down ") + spokenAmount(m, Math.abs(d)) + " to " + (now < 0 ? "minus " : "") + spokenAmount(m, Math.abs(now)) + (better ? ", better" : ", worse");
   }
   /** [lx] The timeline's metric name: `short`, else the label's first word (acronyms keep their case: "CFO", not "cfo"). */
+  /* One casing rule for a timeline row: labels keep the case they were written in. Authored `short`
+     values are sentence case ("Board", "Run cost", "IT load"), so the fallback (the label's first
+     word) is not lowercased either; lowercasing it mixed "risk" with "Board" in one row. */
   function shortLabel(m) {
     if (m.short) return m.short;
-    var w = String(m.label || "").split(" ")[0];
-    return /^[A-Z][a-z]+$/.test(w) ? w.toLowerCase() : w;
+    return String(m.label || "").split(" ")[0];
   }
   function isBetter(m, d) { return m.good === "low" ? d < 0 : d > 0; }
   function tone(m, d) { return !d ? "" : isBetter(m, d) ? "up-good" : "up-bad"; }
