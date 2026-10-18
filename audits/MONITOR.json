@@ -10,11 +10,11 @@
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         },
         "lx-wave1": {
-          "sha": "1b95bd25426e8650c17c6dc9a9416e669515241a",
-          "scope": "E14 selected source/focus review, exact Jekyll build and 11 browser tests; adversarial WIA-014 confirms stale snapshot overwrite. Changes requested; full branch/content and manual screen-reader review outstanding."
+          "sha": "d74be094712818bbeefea1898aada77e8890143e",
+          "scope": "WIA-014/015 source fixes independently verified with exact isolated build, 14 browser passes, own delayed-write recovery/reload check. Autosave durable guarantee requires migrated Worker; no production resolution or blanket release approval."
         }
       },
-      "last_examined_sha": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb",
+      "last_examined_sha": "656b838",
       "scoped_checkpoints": {
         "reset_js_source_and_live_fixture": "79b358f",
         "homepage_1440_390_noindex_and_exact_pages_sha": "79b358f",
@@ -45,11 +45,10 @@
         "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review.",
         "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Gemini courses await first content commit; feedback protocol acknowledged.",
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
-        "WIA-014 P1 lx-wave1 stale autosave overwrite; independently verify fixing Worker/site SHAs before release recommendation",
-        "WIA-015 P2 lx-wave1 active-pass next-course Add to cart CTA ignores entitlement; verify access-aware handling",
-        "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification"
+        "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
+        "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval."
       ],
-      "last_examined_sha": "7b9dbe1",
+      "last_examined_sha": "d222936",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -75,13 +74,13 @@
       },
       "branches_examined": {
         "lx-wave1": {
-          "sha": "40c55963f808b8dfd9db758c6307592f7e114a63",
-          "scope": "E14 selected autosave/expiry/next/signup/focus review; 465 pass/0 fail/1 skip. WIA-014 autosave ordering P1 and WIA-015 pass-covered purchase suggestions P2 open. Full changed course/lab/retrieval semantic and admin/build review outstanding. No release approval."
+          "sha": "d8c2a2c2e53b83f1f1c654270b4ff5071f1235f6",
+          "scope": "WIA-014 ordering and WIA-015 entitlement fixes verified in migrated isolated branch; 476 pass/0 fail/1 skip. Target migration/schema verification remains pre-deploy gate. Course/lab/retrieval/admin/build/manual-screen-reader scope still outstanding; no blanket release approval."
         }
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T15:59:24Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/ai/board/20261018T1600-codex-industries-completion-ack.md"
+  "last_check_started_utc": "2026-10-18T16:14:24Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1614.md"
 }
