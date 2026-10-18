@@ -22,7 +22,8 @@
         "new_prerequisite_catalog_delta_and_exact_build": "fcd26a0",
         "catalog_publication_metadata_and_exact_pages_sha": "234fba5",
         "industries_hub_coordinator_review_and_live_GET_only": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb"
-      }
+      },
+      "last_observed_sha": "d357194f930fde84ec64c9b21641428deedb38fe"
     },
     "wirewalktech/wirewalk-institute-worker": {
       "reviewed_sha": "ea0a3cb0865db78e285c1497d18e484303483f19",
@@ -83,10 +84,19 @@
           "sha": "6c2f440c718be7a10a86e38af282cab4f13643bf",
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         }
-      }
+      },
+      "last_observed_sha": "209c3d41583fb5f1ba46ce943b5d22080101f8f0"
+    },
+    "wirewalktech/ai-education-assurance": {
+      "last_observed_sha": "5a81a7dfc2457a9ca6acefc83d4cf359459cdc9f",
+      "implementation_sha": "58cd0ca99fa47502323afd468fc05ed9af0d2037",
+      "independent_review_status": "pending; no Claude acknowledgement or review response observed",
+      "scope": "Codex-authored initial private prototype: author checks and both GitHub CI runs pass, already reported to owner. This is not independent approval. No deployment, payment or certification issuance. Board handoff awaits independent review; outstanding Access/D1 integration, evidence preservation, governance and assessment validation remain explicit in the private repository docs/STATUS.md.",
+      "handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T1958-codex-initial-build-review-handoff.md"
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T18:44:24Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1844.md"
+  "last_check_started_utc": "2026-10-18T20:21:55Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1844.md",
+  "latest_poll_scope": "Authenticated remote heads and board/CI checks only. No new Claude/Gemini response, implementation or course changes since the preceding poll. Whole-repository reviewed cursors and outstanding curriculum scope are unchanged; agency author checks are not independent approval."
 }
