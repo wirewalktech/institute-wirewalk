@@ -76,6 +76,10 @@
         h("aside", { class: "wl-toc", "aria-label": "Course contents" }, courseBar, toc), main)));
     if (window.location.hash) { var target = document.getElementById(window.location.hash.slice(1)); if (target) target.scrollIntoView(); }
     onScroll();
+    /* [ellery] The lesson's identity for the AI instructor panel and Listen (assets/js/learn/ellery/). */
+    window.WLLesson = { courseId: cid, courseTitle: courseTitle(), idx: d.idx, module: d.module, lesson: d.lesson,
+      ref: "m" + d.module + "-l" + d.lesson, title: d.title, free: (outline && outline.course && outline.course.level) === "intro" };
+    try { document.dispatchEvent(new CustomEvent("wl:lesson", { detail: window.WLLesson })); } catch (e) { /* old browser */ }
   }
 
   function renderComplete(box, completed, prog, justNow, unlocked) {

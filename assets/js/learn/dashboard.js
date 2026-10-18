@@ -194,6 +194,8 @@
     if (cart.length) blocks.push(W.notice("info", "You have " + W.plural(cart.length, "item") + " in your cart", null,
       [W.btn("Review and check out", { href: "/learn/cart/", class: "wl-btn-sm" })]));
 
+    if (me.pass) blocks.push(passPanel(me.pass, me.passCourses || [], me.enrollments || []));   // [bundles] All-Access Pass status
+
     // Courses: in progress first, then not started, then passed.
     function rank(e) { if (e.exam && e.exam.passed) return 2; return (e.progress && e.progress.done) ? 0 : 1; }
     enr.sort(function (a, b) { return rank(a) - rank(b) || String(b.grantedAt || "").localeCompare(String(a.grantedAt || "")); });
@@ -212,6 +214,77 @@
 
     blocks.push(h("div", { class: "wl-two" }, certSection(certs), purchaseSection(purchases)));
     W.mount(h("div", { class: "wl-dash" }, blocks));
+  }
+
+  /* [bundles] All-Access Pass: status, expiry, and the courses started on the pass. */
+  /* [bundles-fix] the product id comes from the learner's pass, not a fixed id */
+  function passCart(pass) { return "/learn/cart/?add=pass:" + encodeURIComponent((pass && pass.productId) || "all-access-12m") + "&buy=1"; }
+  /* [bundles-fix] every paid on-sale course the pass opens and the learner does not own, from the live catalog */
+  function openableList(started, enrolled) {
+    var skip = {};
+    started.forEach(function (c) { skip[c.courseId] = true; });
+    enrolled.forEach(function (e) { skip[e.courseId] = true; });
+    var wrap = h("details", { class: "wl-section", id: "pass-courses" }, h("summary", null, "Every course your pass opens"));
+    var list = h("ul", { class: "wl-list", role: "list" });
+    wrap.appendChild(list);
+    var loaded = false;
+    wrap.addEventListener("toggle", function () {
+      if (!wrap.open || loaded) return;
+      loaded = true;
+      list.appendChild(h("li", { class: "wl-list-row wl-muted" }, "Loading…"));
+      API.catalog().then(function (d) {
+        W.clear(list);
+        ((d && d.courses) || []).filter(function (c) { return c.status === "on_sale" && c.price > 0 && !skip[c.id]; })
+          .forEach(function (c) {
+            list.appendChild(h("li", { class: "wl-list-row" },
+              h("div", { class: "wl-grow" }, h("span", { class: "wl-code" }, c.id), " ", h("span", { class: "wl-strong" }, W.courseTitle(c.id))),
+              W.btn("Start", { href: W.courseUrl(c.id), class: "wl-btn-sm" })));
+          });
+        if (!list.firstChild) list.appendChild(h("li", { class: "wl-list-row wl-muted" }, "You have started or own every course on sale."));
+      }, function () { W.clear(list); loaded = false; list.appendChild(h("li", { class: "wl-list-row" }, h("a", { href: "/courses/" }, "Open the catalog"))); });
+    });
+    return wrap;
+  }
+  function passPanel(pass, started, enrolled) {
+    var box = h("section", { class: "wl-section", "aria-labelledby": "h-pass" });
+    var PASS_CART = passCart(pass);
+    if (pass.active) {
+      var browse = W.btn("Browse courses", { href: "#pass-courses", class: "wl-btn-sm" });
+      browse.addEventListener("click", function (ev) {
+        var d = document.getElementById("pass-courses");
+        if (!d) return;
+        ev.preventDefault(); d.open = true; d.scrollIntoView({ block: "start" });
+      });
+      box.appendChild(W.notice("ok", "All-Access Pass: active until " + W.fmtDate(pass.endsAt),
+        "Every course on sale is open to you, including courses launched before your pass ends. Certificates you earn stay valid after it ends.",
+        [browse, W.btn("Extend the pass", { href: PASS_CART, class: "wl-btn-sm wl-btn-ghost" })]));
+      box.appendChild(openableList(started, enrolled));
+    } else if (pass.endedAt) {
+      box.appendChild(W.notice("warn", "Pass ended on " + W.fmtDate(pass.endedAt) + ", renew",
+        "Lessons and exams of courses you did not buy separately are locked. Your certificates stay valid, and your progress is kept if you renew.",
+        [W.btn("Renew the All-Access Pass", { href: PASS_CART, class: "wl-btn-sm" })]));
+    } else {
+      box.appendChild(W.notice("info", "All-Access Pass starts on " + W.fmtDate(pass.startsAt), null, []));
+    }
+    if (started.length) {
+      box.appendChild(h("h2", { id: "h-pass" }, pass.active ? "Courses on your pass" : "Courses from your pass"));
+      box.appendChild(h("ul", { class: "wl-cards", role: "list" }, started.map(function (c) {
+        var p = c.progress || { done: 0, total: 0 };
+        var title = c.title || W.courseTitle(c.courseId);
+        return h("li", { class: "wl-card wl-course-card" },
+          h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, c.courseId), c.level ? h("span", null, W.levelLabel(c.level)) : null),
+          h("h3", { class: "wl-card-title" }, c.locked ? title : h("a", { href: W.courseUrl(c.courseId) }, title)),
+          W.progressBar(p.done, p.total, "Progress in " + title),
+          h("div", { class: "wl-card-foot" }, c.locked
+            ? W.chip("Locked", "warn")
+            : W.btn(p.done ? "Continue" : "Start course", { href: W.courseUrl(c.courseId), class: "wl-btn-sm" })),
+          h("p", { class: "wl-hint" }, c.locked ? "Renew the pass or buy this course to continue." : "Included in your All-Access Pass"));
+      })));
+    } else {
+      box.setAttribute("aria-label", "All-Access Pass");
+      box.removeAttribute("aria-labelledby");
+    }
+    return box;
   }
 
   function courseCard(e) {
@@ -264,6 +337,8 @@
       var st = stale(p) ? ["Not completed", ""] : (labels[p.status] || [p.status, ""]);
       var items = (p.items || []).map(function (i) {
         if (typeof i === "string") { var parts = i.split(":"); return parts[0] === "program" ? W.programTitle(parts[1]) : W.courseTitle(parts[1] || parts[0]); }
+        if (i.type === "track") return W.trackLabel(i.id) + " track";   // [bundles]
+        if (i.type === "pass") return "All-Access Pass";
         return i.title || (i.type === "program" ? W.programTitle(i.id) : W.courseTitle(i.id));
       });
       return h("li", { class: "wl-list-row" },
@@ -282,7 +357,7 @@
     var mode = W.param("mode"), next = W.param("next") || "";
     var toFreeCourse = /[?&]enroll=free/.test(next);
     if (API.signedIn()) {
-      /* Already signed in and on the way to a free course (a /go/ "Start free" link): go and enrol. */
+      /* Already signed in and on the way to a free course (a /go/ "Start free" link): go and enroll. */
       var n = nextTarget();
       if (toFreeCourse && n && n.indexOf("/courses/") === 0) { window.location.replace(n); return; }
       loadDashboard();

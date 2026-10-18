@@ -9,7 +9,7 @@
     paid_title, paid_lead, terms_cost_b/terms_cost (optional override of the "$0" terms item),
     credibility (html, optional), faq (list of {q, a} html, optional)
   "Start free" links go straight to account creation (/learn/?mode=signup&next=<course>?enroll=free),
-  which returns to the course and enrols. campaign.js points them at the course instead when the
+  which returns to the course and enrolls. campaign.js points them at the course instead when the
   visitor is already signed in ([data-start]).
   CTA event names (all must match /^[a-z][a-z0-9]{1,14}\.[a-z0-9_-]{1,24}$/ with the "inst." prefix;
   campaign.js appends -v<n> when the visit's utm_content ends in v<n>):
@@ -200,7 +200,7 @@
     <div class="faq">
       <details open><summary>Is it really free?</summary><div class="a"><p>Yes. The intro courses cost $0, including the exam and the certificate. You create an account (name, email, password) and we do not ask for a card. {{ page.free_extra }}</p><p>What's the catch: we hope some people take a paid course afterwards. If you don't, that's fine; the free course is complete on its own.</p></div></details>
       <details><summary>Who made this?</summary><div class="a"><p>The Wirewalk Institute of AI, the training arm of Wirewalk, built by the team behind Wirewalk's AI and HPC infrastructure practice. It is independent: not a reseller, partner or official training provider for OpenAI, Anthropic, Google, Microsoft, NVIDIA or any other vendor, and no vendor sponsors or reviews the courses. <a href="/about/">About the Institute</a>.</p></div></details>
-      <details><summary>Is the certificate official?</summary><div class="a"><p>Be clear about what it is: a Wirewalk Institute of AI certificate of completion and assessment. It shows you finished the course and passed its {{ f0.exam.questions }}-question, automatically scored exam. It is not a vendor certification, not accredited, and not academic credit, and we make no claim that employers recognise it. Its ID lets anyone confirm we issued it, at <a href="/verify/">institute.wirewalk.com/verify</a>. <a href="/certification/#limits">What it does and doesn't show</a>.</p></div></details>
+      <details><summary>Is the certificate official?</summary><div class="a"><p>Be clear about what it is: a Wirewalk Institute of AI certificate of completion and assessment. It shows you finished the course and passed its {{ f0.exam.questions }}-question, automatically scored exam. It is not a vendor certification, not accredited, and not academic credit, and we make no claim that employers recognize it. Its ID lets anyone confirm we issued it, at <a href="/verify/">institute.wirewalk.com/verify</a>. <a href="/certification/#limits">What it does and doesn't show</a>.</p></div></details>
       <details><summary>What if I fail the exam?</summary><div class="a"><p>You see your score per module so you know what to re-read, and you can try again after 24 hours, up to {{ f0.exam.attempts }} attempts. Questions and options are reshuffled on every attempt.</p></div></details>
       {%- for f in page.faq %}
       <details><summary>{{ f.q }}</summary><div class="a"><p>{{ f.a }}</p></div></details>
@@ -213,8 +213,10 @@
   </div>
 </section>
 
+{% include ellery-finder.html heading="Not sure which course fits? Ask Ellery" %}
+
 <aside class="go-data" aria-label="What this page records">
   <div class="wrap go-wrap go-narrow small faint">
-    <p><b>What this site keeps.</b> If you came from an ad, the campaign tags in the link (utm_source, utm_medium, utm_campaign, utm_content, utm_term and, if present, Reddit's click ID) are saved in your browser for up to 30 days and sent with your sign-up if you create an account, so we can see which ads lead to sign-ups; the browser copy is deleted once you sign up. Page views and button clicks here are counted as anonymous daily totals: no cookies, no IP address or user ID in those counts. There is no Reddit pixel or other ad tracker on this site. An account stores your name, email and learning records. <a href="/privacy/">Privacy policy</a>.</p>
+    <p><b>What this site keeps.</b> If you came from an ad, the campaign tags in the link (utm_source, utm_medium, utm_campaign, utm_content, utm_term and, if present, Reddit's click ID) are saved in your browser for up to 30 days and sent with your sign-up if you create an account, so we can see which ads lead to sign-ups; the browser copy is deleted once you sign up. Page views and button clicks here are counted as anonymous daily totals: no cookies, no IP address or user ID in those counts. There is no Reddit pixel or other ad tracker on this site. If you use the course finder, your messages are sent to Anthropic's API to write the answer and are not stored by us. An account stores your name, email and learning records. <a href="/privacy/">Privacy policy</a>.</p>
   </div>
 </aside>

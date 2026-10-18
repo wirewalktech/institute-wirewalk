@@ -20,6 +20,22 @@ layout: default
   </header>
 </div>
 
+{%- comment -%} [bundles] "Buy the whole track": live price from the API (assets/js/bundles.js).
+  Hidden until billing answers with a bundle price; no price is ever written here. {%- endcomment %}
+<section class="section tight" style="padding-top:0" data-track-bundle="{{ t.id }}" aria-labelledby="tb-h" hidden>
+  <div class="wrap">
+    <div class="feature">
+      <p class="eyebrow" style="margin:0 0 6px">Track bundle</p>
+      <h2 id="tb-h" style="margin:0 0 8px">Buy the whole track</h2>
+      <p class="p-big price" style="margin:0 0 6px"><span class="now" data-tb-price></span> <s data-tb-list></s> <span class="save">Save <span data-tb-save></span></span></p>
+      <p class="muted" style="margin:0 0 14px"><span data-tb-count></span> on sale today, with every lesson, exam and certificate. If you are signed in, courses you already own are left out and the price at checkout drops to match.</p>
+      <p class="small" style="margin:0 0 16px"><strong>Only the courses on sale in this track today are included.</strong> Courses added to the track later are not part of the bundle; buy them separately, or get the <a href="/pricing/#all-access">All-Access Pass</a>, which includes new courses while it lasts.</p>
+      <div class="cta-row"><a class="btn" data-tb-buy href="/learn/cart/">Buy the whole track <span class="arr" aria-hidden="true">→</span></a><a class="link-arrow" href="/pricing/#bundles">How bundles work <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+<script src="/assets/js/bundles.js" defer></script>
+
 <div class="wrap" style="padding-bottom:clamp(56px,8vw,100px)">
   {%- for l in levels %}
   {%- assign lc = tc | where: "level", l %}

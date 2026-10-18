@@ -1,0 +1,19 @@
+{%- comment -%}
+  [ellery] Course finder: "Not sure where to start? Ask Ellery". assets/js/learn/ellery/public.js fills
+  [data-ellery-finder] (the layout loads it when the page sets ellery_public: true or campaign: true).
+  Recommendations are course ids; cards take titles from the catalog embed below and prices from
+  GET /api/catalog through [data-price-for], never from model text. Anonymous visitors get a
+  Turnstile check after a few questions (site key below).
+  Params: heading (optional), suggestions (optional, "a|b|c").
+{%- endcomment -%}
+<section class="section ell-section" aria-label="Course finder">
+  <div class="wrap">
+    <div class="ell-finder" data-ellery-finder{% if include.heading %} data-heading="{{ include.heading | escape }}"{% endif %}{% if include.suggestions %} data-suggestions="{{ include.suggestions | escape }}"{% endif %}>
+      <noscript><p>Not sure where to start? <a href="/courses/">Browse the catalog</a> or <a href="/tracks/">see the tracks</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+{%- unless include.no_config %}
+<div id="wl-turnstile-config" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+{% include learn-catalog.html %}
+{%- endunless %}

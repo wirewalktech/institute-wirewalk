@@ -271,7 +271,7 @@
   }
 
   /* The invoice request was recorded by billing (status invoice_requested). Send it to
-     the sales inbox through the portal's enquiry endpoint, the same channel as /teams/. */
+     the sales inbox through the portal's inquiry endpoint, the same channel as /teams/. */
   function sendEnquiry(orgId, d) {
     var back = SITE + "/learn/team/?org=" + enc(orgId) + "&invoice=" + enc(d.purchaseId);
     if (!ENQUIRY) {

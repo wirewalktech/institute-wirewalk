@@ -21,6 +21,27 @@
 
   function shortRef(s) { return s.length > 24 ? s.slice(0, 12) + "…" + s.slice(-8) : s; }
 
+  /* [bundles] A pass purchase: name the pass and its end date (from /api/me), and link to the courses. */
+  function paidPass(p) {
+    W.setTitle("Your All-Access Pass");
+    var when = h("p", { class: "wl-lead" }, "Thank you. A receipt is on its way from Stripe" +
+      (typeof p.total === "number" ? " for " + W.money(p.total) : "") + ".");
+    W.mount(h("div", { class: "wl-narrow" },
+      h("div", { class: "wl-center-block" },
+        h("div", { class: "wl-okmark", "aria-hidden": "true" }),
+        h("p", { class: "wl-eyebrow" }, "Payment confirmed"),
+        h("h1", { class: "wl-display", tabindex: "-1", id: "thanks-h" }, "Your All-Access Pass is ready."), when),
+      h("div", { class: "wl-actions wl-center" }, W.btn("Browse courses", { href: "/learn/#pass-courses" }),
+        W.btn("Go to my dashboard", { href: "/learn/", class: "wl-btn-ghost" }))));
+    var hd = document.getElementById("thanks-h"); if (hd) hd.focus();
+    API.me().then(function (me) {
+      var ps = me && me.pass;
+      if (!ps) return;
+      when.appendChild(document.createTextNode(ps.active ? " Every course on sale is open to you until " + W.fmtDate(ps.endsAt) + "."
+        : ps.startsAt ? " Your pass starts on " + W.fmtDate(ps.startsAt) + ", when your current one ends, and runs until " + W.fmtDate(ps.endsAt) + "." : ""));
+    }, function () { /* the dashboard shows the dates */ });
+  }
+
   function paid(p) {
     W.setTitle("You are enrolled");
     var ids = p.courses || [];
@@ -39,6 +60,7 @@
        learner app (W.money), and the course count. Sent at most once per purchase per browser. No PII. */
     if (window.WIAConsent && typeof p.total === "number") window.WIAConsent.track("Purchase", { conversionId: p.id, value: p.total / 100, currency: "USD", itemCount: Math.max(1, ids.length) });
     try { sessionStorage.removeItem("wia_code"); } catch (e) { /* ignore */ }
+    if (p.pass) { W.cart.set(W.cart.get().filter(function (i) { return i.type !== "pass"; })); return paidPass(p); }   // [bundles]
 
     W.mount(h("div", { class: "wl-narrow" },
       h("div", { class: "wl-center-block" },

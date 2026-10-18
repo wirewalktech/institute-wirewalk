@@ -12,7 +12,7 @@
       (day, name, count). No identifiers, no cookies; fire-and-forget via sendBeacon. When the visit's
       utm_content ends in v<n> (e.g. "dev-v2"), "-v<n>" is appended so ad variants can be told apart.
    3. "Start free" links ([data-start="<course>"]) go to account creation by default; for a visitor who
-      is already signed in they are pointed at the course, which enrols in one step.
+      is already signed in they are pointed at the course, which enrolls in one step.
    Every storage access is wrapped: private windows and blocked storage must not break the page. */
 (function () {
   "use strict";

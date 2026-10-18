@@ -1,7 +1,7 @@
 /*
  * Wirewalk Institute of AI — learner app (/learn/**).
  * Loaded after site.css via `extra_css: [learn]`. Every rule uses the --wl-* tokens below;
- * no literal colours appear outside the token blocks. Light and dark are both defined, and
+ * no literal colors appear outside the token blocks. Light and dark are both defined, and
  * follow the OS setting unless the site sets <html data-theme="light|dark">.
  */
 /* Tokens alias the site's tokens (site.css defines them for light and dark); the literal
@@ -68,7 +68,7 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl ul, .wl ol { margin: 0; padding: 0; }
 .wl a { color: var(--wl-ac); text-decoration: none; }
 .wl a:hover { text-decoration: underline; text-underline-offset: 3px; }
-/* Links inside running text are underlined, not told apart by colour alone (WCAG 1.4.1).
+/* Links inside running text are underlined, not told apart by color alone (WCAG 1.4.1).
    Nav, button and card-title links keep no underline. */
 .wl p a:not(.wl-btn), .wl .wl-hint a:not(.wl-btn), .wl .wl-small a:not(.wl-btn), .wl .wl-notice-body a:not(.wl-btn),
 .wl .wl-prose a, .wl .wl-cert-mfacts dd a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }

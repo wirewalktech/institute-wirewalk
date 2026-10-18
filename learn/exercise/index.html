@@ -1,0 +1,29 @@
+---
+layout: default
+title: Graded exercise
+description: Submit work for an exercise and get per-criterion feedback from Ellery, the AI instructor. Practice only.
+permalink: /learn/exercise/
+extra_css: [learn, ellery]
+# [ellery] Graded exercise (assets/js/learn/ellery/exercise.js). Practice only, not part of certification.
+extra_js: [api, learn/common, learn/ellery/core, learn/ellery/exercise]
+noindex: true
+sitemap: false
+---
+<div class="wl" data-page="exercise">
+  <nav class="wl-subnav" aria-label="Learner app">
+    <div class="wl-subnav-in">
+      <a href="/learn/">Dashboard</a>
+      <a href="/courses/">Catalog</a>
+      <a href="/learn/cart/">Cart <span class="wl-count" data-cart-count hidden></span></a>
+      <a href="/learn/account/" data-when-signed-in hidden>Account</a>
+    </div>
+  </nav>
+  <div id="learn-app" class="wl-app" aria-live="polite" aria-busy="true">
+    <noscript>
+      <div class="wl-notice wl-notice-error"><strong class="wl-notice-title">JavaScript is required</strong>
+        <div class="wl-notice-body">Graded exercises need JavaScript. Please enable it and reload the page.</div></div>
+    </noscript>
+    <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
+  </div>
+</div>
+{% include learn-catalog.html %}

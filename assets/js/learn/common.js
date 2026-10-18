@@ -104,7 +104,7 @@
   function toDate(v) { if (!v) return null; var d = new Date(v); return isNaN(d.getTime()) ? null : d; }
   function fmtDate(v) {
     var d = toDate(v); if (!d) return "";
-    try { return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }); } catch (e) { return d.toDateString(); }
+    try { return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }); } catch (e) { return d.toDateString(); }
   }
   /** Certificate dates: always the UTC calendar day, so the holder, the printed copy and a
    * verifier in any time zone all see the same issue date. */
@@ -116,7 +116,7 @@
   }
   function fmtDateTime(v) {
     var d = toDate(v); if (!d) return "";
-    try { return d.toLocaleString(undefined, { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); } catch (e) { return d.toString(); }
+    try { return d.toLocaleString("en-US", { year: "numeric", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); } catch (e) { return d.toString(); }
   }
   function plural(n, one, many) { return n + " " + (n === 1 ? one : (many || one + "s")); }
   function pct(done, total) { return total > 0 ? Math.round((100 * done) / total) : 0; }
@@ -270,11 +270,12 @@
   }
 
   /* ---------- cart (localStorage "wia_cart") ---------- */
+  /* [bundles] item types: course, program, track (whole-track bundle), pass (All-Access) */
   var CART = "wia_cart";
   function cartGet() {
     try {
       var v = JSON.parse(localStorage.getItem(CART) || "[]");
-      return Array.isArray(v) ? v.filter(function (i) { return i && (i.type === "course" || i.type === "program") && typeof i.id === "string" && /^[a-z0-9-]{2,60}$/.test(i.id); }).slice(0, 12) : [];
+      return Array.isArray(v) ? v.filter(function (i) { return i && (i.type === "course" || i.type === "program" || i.type === "track" || i.type === "pass") && typeof i.id === "string" && /^[a-z0-9-]{2,60}$/.test(i.id); }).slice(0, 12) : [];
     } catch (e) { return []; }
   }
   function cartSet(items) { try { localStorage.setItem(CART, JSON.stringify(items)); } catch (e) { /* blocked */ } updateCartBadge(); }

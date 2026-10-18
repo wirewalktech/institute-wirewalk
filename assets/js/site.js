@@ -92,7 +92,7 @@
     if (!c) return; // unknown to billing: keep the no-JS fallback text
     if (c.status !== "on_sale") {
       el.innerHTML = mode === "big"
-        ? '<span class="fallback">' + (isFree(c) ? "Free when it opens" : "Not yet open for enrolment") + '</span>'
+        ? '<span class="fallback">' + (isFree(c) ? "Free when it opens" : "Not yet open for enrollment") + '</span>'
         : '<span class="fallback">' + (isFree(c) ? "Free · join the waitlist" : "Join the waitlist") + '</span>';
       return;
     }
@@ -176,7 +176,7 @@
     box.hidden = false;
     var t = $(".countdown", box);
     if (t) {
-      t.title = "Sale ends " + new Date(end).toLocaleString();
+      t.title = "Sale ends " + new Date(end).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" });
       countdowns.push({ el: t, end: end });
     }
   }
@@ -234,6 +234,25 @@
       document.documentElement.setAttribute("data-prices", "unavailable");
     });
   }
+
+  /* [ellery] Prices for nodes added after load (the course finder's recommendation cards):
+     the same GET /api/catalog data and renderers as above, never a price from model text. */
+  window.WIAPrices = {
+    fill: function (root) {
+      var els = $$("[data-price-for]", root);
+      if (!els.length) return Promise.resolve();
+      return loadCatalog().then(function (data) {
+        var cm = {}, pm = {};
+        data.courses.forEach(function (c) { cm[c.id] = c; });
+        (data.programs || []).forEach(function (p) { pm[p.id] = p; });
+        els.forEach(function (el) {
+          var id = el.getAttribute("data-price-for");
+          if (el.getAttribute("data-kind") === "program") renderProgram(el, pm[id], data.currency);
+          else renderCourse(el, cm[id]);
+        });
+      }).catch(function () { /* keep the fallback text */ });
+    }
+  };
 
   /* ---------------- course catalog filters ---------------- */
   var cat = $("[data-catalog]");
@@ -363,7 +382,7 @@
       out.className = "result " + cls; out.innerHTML = html; out.hidden = false;
       if (final && wantFocus) { wantFocus = false; out.focus(); }
     }
-    function fmtDate(iso) { var d = new Date(iso); return isNaN(d) ? esc(iso) : d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }); }
+    function fmtDate(iso) { var d = new Date(iso); return isNaN(d) ? esc(iso) : d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }); }
     function check(id, focus) {
       wantFocus = !!focus;
       if (!RE.test(id)) { show("bad", "<h2>That is not a certificate ID</h2><p class=\"muted\">IDs look like <code>WIA-7K2M-Q9PX-4HTD</code>: the letters WIA and three groups of four letters or digits. You will find it at the top right of the certificate.</p>", true); return; }
@@ -420,7 +439,7 @@
   /* ---------------- free enrollment ----------------
      Signed out: sign in / sign up, then come back here with ?enroll=free, which finishes the job.
      Signed in: POST {api}/api/courses/<id>/enroll-free (billing decides it is free), then open
-     the course. The Worker refuses a priced course with 402, so a stale page cannot enrol free. */
+     the course. The Worker refuses a priced course with 402, so a stale page cannot enroll free. */
   function token() { try { return localStorage.getItem("wia_token"); } catch (e) { return null; } }
   function signInFor(id) { return "/learn/?next=" + encodeURIComponent("/courses/" + id + "/?enroll=free"); }
   function enrollFree(id, btn) {

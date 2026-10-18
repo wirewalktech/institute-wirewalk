@@ -21,7 +21,7 @@ layout: default
         <div><dt>Exam questions</dt><dd>{{ exam_q }} in {{ p.courses | size }} exams</dd></div>
       </dl>
     </div>
-    <aside class="buy" aria-label="Enrolment">
+    <aside class="buy" aria-label="Enrollment">
       <p class="eyebrow" style="margin-bottom:6px">Program bundle</p>
       <div class="p-big price" data-price-for="{{ p.id }}" data-kind="program" data-mode="big"><span class="fallback">{% if p.status == 'on_sale' %}See price at checkout{% else %}Opens when all its courses do{% endif %}</span></div>
       <p class="small" data-save-for="{{ p.id }}" hidden style="color:var(--ok);font-weight:600;margin:0"></p>

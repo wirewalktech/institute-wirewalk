@@ -1,6 +1,7 @@
 ---
 title: Pricing
-description: "How Wirewalk Institute of AI courses and certification programs are priced: one price per course by level, program bundles, sales, discount codes, and invoices for teams."
+description: "How Wirewalk Institute of AI courses and certification programs are priced: one price per course by level, build-your-own and track bundles, the All-Access Pass, program bundles, sales, discount codes, and invoices for teams."
+extra_js: [bundles]
 ---
 {%- assign all = site.data.catalog.courses -%}
 {%- assign levels = "basic,intermediate,expert,executive" | split: "," -%}
@@ -37,9 +38,42 @@ description: "How Wirewalk Institute of AI courses and certification programs ar
   <p class="small faint" style="margin-top:12px">"Typical" is the price most courses at that level carry today. Each course page shows its own price, and any sale on it, before you buy.</p>
 </div>
 
+{%- comment -%} [bundles] Three bundle offers. Every figure is filled in from the live catalog by
+  assets/js/bundles.js; without it the text stays general and no price is shown. {%- endcomment %}
+<section class="section" id="bundles" aria-labelledby="bundles-h">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Bundles</p><h2 id="bundles-h">Three ways to buy more for less</h2></div></div>
+    <div class="grid3">
+      <div class="feature">
+        <h3>Build your own bundle</h3>
+        <p>Put several paid courses in your cart and each one costs less. <span data-bundle-tiers hidden></span></p>
+        <p class="small muted">Free courses, courses you already own, programs, track bundles and the pass do not count toward it. Your cart tells you how many more courses reach the next step.</p>
+        <p><a class="link-arrow" href="/courses/">Choose courses <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="feature">
+        <h3>Buy a whole track</h3>
+        <p>Every paid course on sale in a track, at a bundle price shown on each track page. If you are signed in, courses you already own are left out.</p>
+        <p class="small muted">A track bundle includes the courses on sale on the day you buy it. Courses added to the track later are not included.</p>
+        <p><a class="link-arrow" href="/tracks/">See the tracks <span aria-hidden="true">→</span></a></p>
+      </div>
+      <div class="feature" id="all-access">
+        <h3>All-Access Pass</h3>
+        <div data-pass-box hidden>
+          <p class="p-big price" style="margin:0 0 6px"><span class="now" data-pass-price></span> <s data-pass-list hidden></s></p>
+          <p>Every course on sale for <span data-pass-days></span> days, including courses we launch while your pass lasts. One payment; it does not renew by itself.</p>
+          <p><a class="btn" data-pass-buy href="/learn/cart/">Get the pass <span class="arr" aria-hidden="true">→</span></a></p>
+        </div>
+        <p data-pass-fallback>Every course on sale for the length of the pass, including courses we launch while your pass lasts. One payment; it does not renew by itself. The price is shown at checkout.</p>
+        <p class="small muted">Certificates you earn stay valid after the pass ends; lessons and exams of courses you did not buy separately lock until you renew. Buying again while a pass is active adds <span data-pass-length>a full pass</span> after it ends. The pass is for one person; for teams, <a href="/teams/#enquiry">contact sales</a>.</p>
+      </div>
+    </div>
+    <p class="small faint" style="margin-top:14px">Offers never stack. On each item you get the single best offer you qualify for, whether that is a bundle saving, a sale, a code or a personal offer, and no item is ever more than 70% off. Sales and codes apply to the pass only when they say so.</p>
+  </div>
+</section>
+
 <section class="section alt">
   <div class="wrap">
-    <div class="sec-head"><div><p class="eyebrow">Ways to save</p><h2>Bundles, sales and codes</h2></div></div>
+    <div class="sec-head"><div><p class="eyebrow">Ways to save</p><h2>Programs, sales and codes</h2></div></div>
     <div class="grid3">
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
@@ -54,7 +88,7 @@ description: "How Wirewalk Institute of AI courses and certification programs ar
       <div class="feature">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
         <h3>Codes and personal offers</h3>
-        <p>Enter a discount code in your cart. If an offer applies to you or your organisation, it appears in the cart once you are signed in. The single best offer is applied to each item — a program's bundle saving counts as an offer — and offers never stack.</p>
+        <p>Enter a discount code in your cart. If an offer applies to you or your organization, it appears in the cart once you are signed in. The single best offer is applied to each item (a program, track or build-your-own bundle saving counts as an offer), and offers never stack.</p>
       </div>
     </div>
   </div>
@@ -64,8 +98,8 @@ description: "How Wirewalk Institute of AI courses and certification programs ar
   <div class="wrap split">
     <div>
       <h2>Paying</h2>
-      <p class="muted">Checkout is handled by Stripe; we never see your card details. Your enrolment starts as soon as Stripe confirms the payment.</p>
-      <p class="muted">Organisations that need a quote, an invoice or a purchase order can <a href="/teams/">arrange that with us</a> instead of paying by card.</p>
+      <p class="muted">Checkout is handled by Stripe; we never see your card details. Your enrollment starts as soon as Stripe confirms the payment.</p>
+      <p class="muted">Organizations that need a quote, an invoice or a purchase order can <a href="/teams/">arrange that with us</a> instead of paying by card.</p>
     </div>
     <div>
       <h2>What every course includes</h2>

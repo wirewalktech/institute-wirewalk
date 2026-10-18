@@ -31,10 +31,10 @@ layout: default
       </dl>
     </div>
 
-    <aside class="buy" aria-label="Enrolment">
+    <aside class="buy" aria-label="Enrollment">
       <p class="eyebrow" style="margin-bottom:6px">Course fee</p>
       <div class="sale-line" data-sale-for="{{ c.id }}" hidden></div>
-      <div class="p-big price" data-price-for="{{ c.id }}" data-kind="course" data-mode="big">{% if c.listPrice == 0 %}<span class="fallback">{{ c.levelLabel | escape }}</span>{% elsif c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Not yet open for enrolment</span>{% endif %}</div>
+      <div class="p-big price" data-price-for="{{ c.id }}" data-kind="course" data-mode="big">{% if c.listPrice == 0 %}<span class="fallback">{{ c.levelLabel | escape }}</span>{% elsif c.status == 'on_sale' %}<span class="fallback">See price at checkout</span>{% else %}<span class="fallback">Not yet open for enrollment</span>{% endif %}</div>
       {%- comment -%} Free course (live price 0). The static build keys this on the level's list price
         (D-003 allows the "Free intro" level label as a no-JS fallback); site.js then shows
         exactly one of this block and the Buy block from the live API price. {%- endcomment %}
@@ -51,7 +51,11 @@ layout: default
           <a class="btn block" href="/learn/cart/?add=course:{{ c.id }}&amp;buy=1">Buy now <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn ghost block" href="/learn/cart/?add=course:{{ c.id }}">Add to cart</a>
         </div>
+        {%- comment -%} [bundles] filled from the live catalog by assets/js/bundles.js; hidden without it {%- endcomment %}
+        <p class="small" data-bundle-hint="{{ c.id }}" style="margin:10px 0 0" hidden></p>
       </div>
+      <p class="small" data-all-access-for="{{ c.id }}" style="margin:10px 0 0" hidden><span class="pill ok">Included in All-Access</span> <a href="/pricing/#all-access">One pass, every course</a></p>
+      <script src="/assets/js/bundles.js" defer></script>
       <div data-show-when="waitlist" data-for="{{ c.id }}"{% if c.status == 'on_sale' %} hidden{% endif %}>
         <p class="wl-note" style="margin:0 0 12px">The syllabus is final; lessons and the exam are in production and review. Leave your email and we will tell you when it opens.</p>
         {% include waitlist-form.html id=c.id kind="course" title=c.title %}

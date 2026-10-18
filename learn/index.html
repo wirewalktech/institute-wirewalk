@@ -3,8 +3,9 @@ layout: default
 title: My learning
 description: Sign in to the Wirewalk Institute of AI to follow your courses, take exams and download your certificates.
 permalink: /learn/
-extra_css: [learn]
-extra_js: [api, learn/common, learn/dashboard]
+extra_css: [learn, ellery]
+# [ellery] Help desk chat (collapsed) below the dashboard.
+extra_js: [api, learn/common, learn/dashboard, learn/ellery/core, learn/ellery/public]
 noindex: true
 sitemap: false
 ---
@@ -25,5 +26,8 @@ sitemap: false
     <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
   </div>
   <div id="wl-turnstile-config" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+  <div class="wl-section ell-dash-help" data-when-signed-in hidden>
+    {% include ellery-help.html compact="1" no_config=true %}
+  </div>
 </div>
 {% include learn-catalog.html %}

@@ -18,7 +18,7 @@
     var adds = sp.getAll("add"), added = 0;
     adds.forEach(function (raw) {
       String(raw).split(/[,|\s]+/).forEach(function (tok) {
-        var m = /^(course|program):([a-z0-9-]+)$/.exec(tok.trim().toLowerCase());
+        var m = /^(course|program|track|pass):([a-z0-9-]+)$/.exec(tok.trim().toLowerCase());   // [bundles] track, pass
         if (m && ID_RE.test(m[2])) { W.cart.add(m[1], m[2]); added++; }
       });
     });
@@ -36,7 +36,18 @@
     return { added: added, canceled: canceled === "1", buy: buy && added > 0 };
   }
 
-  function itemTitle(i) { return i.type === "program" ? W.programTitle(i.id) : W.courseTitle(i.id); }
+  function itemTitle(i) {
+    if (i.type === "track") return W.trackLabel(i.id) + " track";   // [bundles]
+    if (i.type === "pass") return "All-Access Pass";
+    return i.type === "program" ? W.programTitle(i.id) : W.courseTitle(i.id);
+  }
+  /* [bundles] */
+  var KIND_LABEL = { program: "Program", track: "Track bundle", pass: "Pass" };
+  function itemHref(i) {
+    if (i.type === "track") return "/tracks/" + i.id + "/";
+    if (i.type === "pass") return "/pricing/#all-access";
+    return (i.type === "program" ? "/programs/" : "/courses/") + i.id + "/";
+  }
 
   function build(flags) {
     W.setTitle("Your cart");
@@ -90,7 +101,7 @@
     var list = h("ul", { class: "wl-cart-list", role: "list" });
     cart.forEach(function (i) {
       var line = lines.filter(function (l) { return l.type === i.type && l.id === i.id; })[0];
-      var coveredBy = !line && q ? lines.filter(function (l) { return l.type === "program" && (l.grants || []).indexOf(i.id) >= 0; })[0] : null;
+      var coveredBy = !line && q ? lines.filter(function (l) { return (l.type === "program" || l.type === "track") && (l.grants || []).indexOf(i.id) >= 0; })[0] : null;   // [bundles] track
       var title = (line && line.title) || itemTitle(i);
       var price = h("div", { class: "wl-line-price" });
       if (line) {
@@ -114,9 +125,12 @@
       });
       list.appendChild(h("li", { class: "wl-cart-line" },
         h("div", { class: "wl-grow" },
-          h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, i.type === "program" ? "Program" : i.id),
-            line && line.type === "program" && line.grants ? h("span", null, W.plural(line.grants.length, "course")) : null),
-          h("a", { class: "wl-strong-link", href: (i.type === "program" ? "/programs/" : "/courses/") + i.id + "/" }, title),
+          h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, KIND_LABEL[i.type] || i.id),
+            line && (line.type === "program" || line.type === "track") && line.grants ? h("span", null, W.plural(line.grants.length, "course")) : null,
+            line && line.type === "pass" && line.durationDays ? h("span", null, line.durationDays + " days") : null),
+          h("a", { class: "wl-strong-link", href: itemHref(i) }, title),
+          line && line.type === "track" ? h("p", { class: "wl-hint" }, "The courses on sale in this track today that you do not already own. Courses added to the track later are not included.") : null,
+          line && line.type === "pass" ? h("p", { class: "wl-hint" }, "Every course on sale for " + line.durationDays + " days, including new ones; if you already have a pass, it starts when that one ends.") : null,
           line && line.discountLabel ? h("p", { class: "wl-disc" }, h("span", { "aria-hidden": "true" }, "✓ "), line.discountLabel, " · −" + W.money(line.discount)) : null,
           coveredBy ? h("p", { class: "wl-hint" }, "Already included in " + coveredBy.title + ".") : null,
           h("div", null, rm)),
@@ -154,7 +168,7 @@
       case "applied": return ["Code “" + c.code + "” applied.", "ok"];
       case "better_offer_applied": return ["Code “" + c.code + "” is valid, but a better offer you already qualify for is applied instead. Discounts do not stack; you always get the best one.", "info"];
       case "not_applicable": return ["Code “" + c.code + "” does not apply to the items in your cart" + (API.signedIn() ? "" : ", or needs you to sign in") + ".", "warn"];
-      default: return ["We do not recognise the code “" + c.code + "”.", "warn"];
+      default: return ["We do not recognize the code “" + c.code + "”.", "warn"];
     }
   }
 
@@ -172,6 +186,13 @@
       return;
     }
     if (!q) return;
+    /* [bundles-fix] an active pass already opens every course on sale: warn before paying twice */
+    var pass = state.me && state.me.pass;
+    var paidCourses = W.cart.get().filter(function (i) { return i.type === "course" || i.type === "track" || i.type === "program"; });
+    if (pass && pass.active && paidCourses.length)
+      s.appendChild(W.notice("warn", "Your All-Access Pass already includes these courses",
+        "Every course on sale is open to you until " + W.fmtDate(pass.endsAt) + ". Buy a course only if you want to keep it after the pass ends.",
+        [W.btn("Go to my dashboard", { href: "/learn/", class: "wl-btn-sm wl-btn-ghost" })]));
     var f = q.formatted || {};
     var rows = h("dl", { class: "wl-totals" + (state.loading ? " is-updating" : "") },
       h("div", null, h("dt", null, "Subtotal"), h("dd", null, f.subtotal || W.money(q.subtotal))),
@@ -179,6 +200,11 @@
       h("div", { class: "wl-total" }, h("dt", null, "Total"), allFree(q) ? h("dd", { class: "wl-tone-ok" }, "Free") : h("dd", null, f.total || W.money(q.total), h("span", { class: "wl-cur" }, " " + String(q.currency || "usd").toUpperCase()))));
     s.appendChild(rows);
     if (state.loading) s.appendChild(h("p", { class: "wl-hint" }, "Updating…"));
+    /* [bundles] next build-your-own tier, from billing's quote (never computed here) */
+    var bn = q.bundle;
+    if (bn && bn.next && bn.courses > 0 && bn.next.more > 0)
+      s.appendChild(h("p", { class: "wl-hint wl-tone-info", "data-bundle-next": "" },
+        "Add " + W.plural(bn.next.more, "more course") + " to save " + (bn.next.bps / 100) + "% on each course" + (bn.current ? " instead of " + (bn.current.bps / 100) + "%" : "") + "."));
     var personal = API.signedIn();
     s.appendChild(h("p", { class: "wl-hint" }, personal
       ? "Your personal price: it includes any discount available to your account."
@@ -287,7 +313,7 @@
     }
     build(flags);
     if (API.signedIn()) {
-      API.request("GET", "/api/me", undefined, { quiet401: true }).then(function (me) { state.me = me; renderCheckout(); },
+      API.request("GET", "/api/me", undefined, { quiet401: true }).then(function (me) { state.me = me; renderSummary(); renderCheckout(); },   // [bundles-fix] renderSummary: pass warning
         function (e) { if (e.status === 401) { renderCheckout(); renderSummary(); requote(); } });
     }
   }

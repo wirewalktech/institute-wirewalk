@@ -1,5 +1,6 @@
 ---
 layout: default
+ellery_public: true
 description: "Professional AI courses from foundations to executive level across 18 tracks. Every course ends in a timed, automatically scored exam and a verifiable certificate of completion and assessment."
 ---
 {%- assign all = site.data.catalog.courses -%}
@@ -21,7 +22,7 @@ description: "Professional AI courses from foundations to executive level across
         <div><b>{{ all.size }}</b><span>courses in the catalog</span></div>
         <div><b>{{ site.data.catalog.tracks.size }}</b><span>subject tracks</span></div>
         <div><b>4</b><span>levels, Basic to Executive</span></div>
-        <div><b>{{ live.size }}</b><span>open for enrolment now</span></div>
+        <div><b>{{ live.size }}</b><span>open for enrollment now</span></div>
       </div>
     </div>
     <div class="hero-vis" aria-hidden="true">
@@ -41,6 +42,9 @@ description: "Professional AI courses from foundations to executive level across
     </div>
   </div>
 </section>
+
+{% include ellery-finder.html heading="Not sure where to start? Ask Ellery" %}
+
 
 {%- if intros.size > 0 %}
 <section class="section start-free" aria-labelledby="free-h">
@@ -68,7 +72,7 @@ description: "Professional AI courses from foundations to executive level across
       <div>
         <p class="eyebrow">Four levels</p>
         <h2 id="levels-h">Start where you are. Go as deep as the job needs.</h2>
-        <p>Every course sits at one level. Prerequisites are named on each course page, so you can see the path before you enrol.</p>
+        <p>Every course sits at one level. Prerequisites are named on each course page, so you can see the path before you enroll.</p>
       </div>
     </div>
     <div class="ladder">
@@ -120,7 +124,7 @@ description: "Professional AI courses from foundations to executive level across
     <div class="sec-head">
       <div>
         <p class="eyebrow">Flagship courses</p>
-        <h2 id="flag-h">Open for enrolment now</h2>
+        <h2 id="flag-h">Open for enrollment now</h2>
         <p>Complete courses with every lesson written and the exam bank reviewed. More open each month; the rest of the catalog takes waitlist sign-ups.</p>
       </div>
       <a class="link-arrow" href="/courses/?status=on_sale">All available courses <span aria-hidden="true">→</span></a>
@@ -178,7 +182,7 @@ description: "Professional AI courses from foundations to executive level across
       <p class="eyebrow">The certificate</p>
       <h2 id="cert-h">Honest about what it proves</h2>
       <p class="muted">A Wirewalk certificate states that the named person completed every lesson of a course and passed its timed exam, with the score and the date. Employers can confirm it in seconds at <a href="/verify/">institute.wirewalk.com/verify</a>.</p>
-      <p class="muted">It is a certificate of completion and assessment from an independent institute. It is not an accredited qualification, a licence, or a certification from any AI vendor — and we say so on every course page.</p>
+      <p class="muted">It is a certificate of completion and assessment from an independent institute. It is not an accredited qualification, a license, or a certification from any AI vendor — and we say so on every course page.</p>
       <div class="cta-row" style="margin-top:22px">
         <a class="btn ghost" href="/certification/">What a certificate attests</a>
         <a class="link-arrow" href="/verify/">Verify a certificate <span aria-hidden="true">→</span></a>
@@ -199,7 +203,7 @@ description: "Professional AI courses from foundations to executive level across
       </div>
     </div>
     <ul>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Invoices and purchase orders</b>For organisations that cannot pay by card.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Invoices and purchase orders</b>For organizations that cannot pay by card.</span></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>A path per role</b>Practitioners, engineers, infrastructure, security, governance and executives.</span></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><b>Verifiable results</b>Every certificate checks out against our public register.</span></li>
     </ul>

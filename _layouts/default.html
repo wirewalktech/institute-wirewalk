@@ -83,6 +83,14 @@
 {%- for j in page.extra_js %}
 <script src="/assets/js/{{ j }}.js" defer></script>
 {%- endfor %}
+{%- comment -%} [ellery] Public AI surfaces (course finder, help desk): pages with ellery_public: true and the
+  /go/ campaign pages. Never on /learn/exam/. {%- endcomment %}
+{%- if page.ellery_public or page.campaign %}
+<link rel="stylesheet" href="/assets/css/ellery.css">
+<script src="/assets/js/api.js" defer></script>
+<script src="/assets/js/learn/ellery/core.js" defer></script>
+<script src="/assets/js/learn/ellery/public.js" defer></script>
+{%- endif %}
 </head>
 <body class="{{ page.body_class }}">
 <a class="skip" href="#main">Skip to content</a>

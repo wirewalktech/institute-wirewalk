@@ -6,7 +6,7 @@
    It is an external file rather than an inline script so the Content-Security-Policy in
    _layouts/default.html can forbid inline script entirely.
 
-   ?api=<url> overrides the Worker URL for local testing ONLY: it is honoured only when this
+   ?api=<url> overrides the Worker URL for local testing ONLY: it is honored only when this
    page itself is served from localhost / 127.0.0.1 and the override is a localhost origin, so
    a crafted link to the live site can never point a visitor's requests (or token) elsewhere. */
 (function () {

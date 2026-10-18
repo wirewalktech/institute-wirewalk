@@ -3,10 +3,11 @@ layout: default
 title: Lesson
 description: Read a lesson of your Wirewalk Institute of AI course.
 permalink: /learn/lesson/
-extra_css: [learn]
-# [tutor] learn/tutor adds the AI "Ask about this lesson" panel (loads after learn/lesson).
+extra_css: [learn, ellery]
+# [ellery] learn/ellery/* add Ellery, the AI instructor: the Ask / Practice / Sandbox panel and
+#   "Listen" read-aloud (they load after learn/lesson, which announces the lesson with wl:lesson).
 # [support] errata adds the "Report an error" form behind the link lesson.js renders.
-extra_js: [api, learn/common, learn/lesson, learn/tutor, errata]
+extra_js: [api, learn/common, learn/lesson, learn/ellery/core, learn/ellery/practice, learn/ellery/panel, learn/ellery/listen, errata]
 noindex: true
 sitemap: false
 ---

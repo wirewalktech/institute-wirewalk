@@ -1,7 +1,7 @@
 /* Wirewalk Institute of AI — site stylesheet.
    Family palette (warm cream ground, ink text, system sans body) with the
    Institute's own accent: scholar blue. Serif display: Source Serif 4.
-   Rules: tokens only, never literal colours in rules (brand.md rule 2);
+   Rules: tokens only, never literal colors in rules (brand.md rule 2);
    every token is defined in BOTH the light and the dark blocks (rule 3). */
 
 :root{

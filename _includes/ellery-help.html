@@ -1,0 +1,11 @@
+{%- comment -%}
+  [ellery] Help desk chat ("Ask the help desk") with "Report an error / contact support" handoff.
+  assets/js/learn/ellery/public.js fills [data-ellery-help]. Answers come from the help pages only;
+  while the AI is paused the Worker answers from the FAQ by keyword. Params: compact ("1" = collapsed).
+{%- endcomment -%}
+<div class="ell-help-mount" data-ellery-help{% if include.compact %} data-compact="1"{% endif %}{% if include.heading %} data-heading="{{ include.heading | escape }}"{% endif %}>
+  <noscript><p>Questions? Email <a href="mailto:sales@wirewalk.com">sales@wirewalk.com</a>.</p></noscript>
+</div>
+{%- unless include.no_config %}
+<div id="wl-turnstile-config" data-sitekey="{{ site.turnstile_sitekey }}" hidden></div>
+{%- endunless %}

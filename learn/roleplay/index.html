@@ -1,0 +1,29 @@
+---
+layout: default
+title: Practice conversation
+description: Practice a realistic workplace conversation with Ellery, the AI instructor, then get a debrief. Practice only.
+permalink: /learn/roleplay/
+extra_css: [learn, ellery]
+# [ellery] Role-play with debrief (assets/js/learn/ellery/roleplay.js). Practice only, not part of certification.
+extra_js: [api, learn/common, learn/ellery/core, learn/ellery/roleplay]
+noindex: true
+sitemap: false
+---
+<div class="wl" data-page="roleplay">
+  <nav class="wl-subnav" aria-label="Learner app">
+    <div class="wl-subnav-in">
+      <a href="/learn/">Dashboard</a>
+      <a href="/courses/">Catalog</a>
+      <a href="/learn/cart/">Cart <span class="wl-count" data-cart-count hidden></span></a>
+      <a href="/learn/account/" data-when-signed-in hidden>Account</a>
+    </div>
+  </nav>
+  <div id="learn-app" class="wl-app" aria-live="polite" aria-busy="true">
+    <noscript>
+      <div class="wl-notice wl-notice-error"><strong class="wl-notice-title">JavaScript is required</strong>
+        <div class="wl-notice-body">Practice conversations need JavaScript. Please enable it and reload the page.</div></div>
+    </noscript>
+    <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
+  </div>
+</div>
+{% include learn-catalog.html %}

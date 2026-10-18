@@ -2,7 +2,7 @@
  * Wirewalk Institute of AI: client for the learning Worker (PLATFORM-SPEC.md section 1).
  *
  * - Base URL comes from window.WIA.api (set by _layouts/default.html from site.api_base).
- *   A ?api= override (sessionStorage "wia_api") is honoured for local testing, but ONLY when
+ *   A ?api= override (sessionStorage "wia_api") is honored for local testing, but ONLY when
  *   the page itself is served from localhost / 127.0.0.1 AND the override points at localhost /
  *   127.0.0.1. On the production site any override (including one the layout already applied to
  *   window.WIA.api) is ignored, so a crafted link cannot send a learner's bearer token to a

@@ -5,8 +5,8 @@
       signed in  -> one button, POST /api/waitlist {courseId} with the learner's token;
       anonymous  -> email + Turnstile, POST /api/waitlist {courseId, email, turnstile}; we then
                     email a confirmation link (double opt-in).
-      The block replaces the older enquiry form only once it is ready; if the API is not
-      configured or unreachable, the enquiry form stays, exactly as before.
+      The block replaces the older inquiry form only once it is ready; if the API is not
+      configured or unreachable, the inquiry form stays, exactly as before.
    2. /waitlist/confirm/?t=  [data-wl-confirm]: confirm on an explicit click (POST /api/waitlist/confirm).
    3. /waitlist/leave/?t=    [data-wl-leave]:   leave on an explicit click (POST /api/waitlist/leave).
    Opening a link never changes anything by itself, so mail scanners cannot confirm or remove.
@@ -56,7 +56,7 @@
     var status = el("p", { class: "wl-note", role: "status", "aria-live": "polite" });
     function ready() { if (legacy) legacy.hidden = true; box.hidden = false; }
     function fallBack(msg) {
-      /* Our API is not available: put the enquiry form back and say why. */
+      /* Our API is not available: put the inquiry form back and say why. */
       if (legacy) legacy.hidden = false;
       if (msg) { status.textContent = msg; if (!status.parentNode) box.appendChild(status); box.hidden = false; }
       else box.hidden = true;
@@ -94,7 +94,7 @@
           btn.disabled = false;
           if (e.status === 401) { status.textContent = "Your session has ended. Sign in again, or use the form below."; fallBack(null); return; }
           if (e.status === 409) { status.textContent = "This course is open now. Reload the page to enroll."; return; }
-          if (e.status === 503) { fallBack("Verify your email address first (see your dashboard), then try again, or use the enquiry form."); return; }
+          if (e.status === 503) { fallBack("Verify your email address first (see your dashboard), then try again, or use the inquiry form."); return; }
           status.textContent = e.message || "That did not work. Please try again.";
         });
       });
@@ -102,7 +102,7 @@
 
     function anonymous() {
       var key = (box.getAttribute("data-sitekey") || "").trim();
-      if (!key && !isLocal()) return fallBack(null);          // Turnstile not configured: keep the enquiry form
+      if (!key && !isLocal()) return fallBack(null);          // Turnstile not configured: keep the inquiry form
       var id = "wl-n-email-" + courseId;
       var form = el("form", { novalidate: "", "aria-label": "Get an email when " + title + " opens" });
       form.appendChild(el("label", { for: id }, "Your email"));
