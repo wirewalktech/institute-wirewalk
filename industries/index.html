@@ -13,17 +13,19 @@ description: "Find AI training for ten industry sectors. Start with a free intro
   <div class="tmap" style="padding-bottom:64px">
     {% for sector in sectors %}
     {% assign track = site.data.catalog.tracks | where: "id", sector | first %}
+    {% if track %}
     {% assign courses = site.data.catalog.courses | where: "track", sector %}
     {% assign intros = courses | where: "level", "intro" %}
-    <section class="tile" aria-labelledby="sector-{{ sector }}">
+    <section class="tile industry-tile" aria-labelledby="sector-{{ sector }}">
       <p class="eyebrow">{{ track.prefix | escape }}</p>
       <h2 class="tile-h" id="sector-{{ sector }}">{{ track.title | escape }}</h2>
       <p>{{ track.summary | escape }}</p>
       {% for course in intros %}
-      <p><a href="/courses/{{ course.id }}/">Start here: {{ course.title | escape }}</a> <span class="code">Free introduction{% unless course.status == "on_sale" %} · Waitlist{% endunless %}</span></p>
+      <div class="industry-start"><a href="/courses/{{ course.id }}/">Start here: {{ course.title | escape }}</a> <span class="code">Free introduction{% unless course.status == "on_sale" %} · Waitlist{% endunless %}</span></div>
       {% endfor %}
-      <a href="/tracks/{{ sector }}/">Explore this sector’s courses <span aria-hidden="true">→</span></a>
+      <a href="/tracks/{{ sector }}/">Explore this sector’s courses</a>
     </section>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

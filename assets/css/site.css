@@ -602,3 +602,8 @@ td .price{white-space:nowrap}
   .tbl-stack .t-lbl{display:inline}
 }
 
+
+/* Industry cards contain separate links, so the card itself stays still. */
+.industry-tile:hover{transform:none;box-shadow:none;border-color:var(--ln)}
+.industry-start{font-size:14.5px;line-height:1.6}
+.industry-start .code{display:inline-block;margin-top:6px;line-height:1.3;white-space:normal}
