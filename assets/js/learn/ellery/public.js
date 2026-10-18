@@ -207,5 +207,6 @@
     Array.prototype.forEach.call(document.querySelectorAll("[data-ellery-finder]"), finder);
     Array.prototype.forEach.call(document.querySelectorAll("[data-ellery-help]"), helpdesk);
   }
+  window.ElleryPublic = { finder: finder };   // [onboard] the dashboard's first-run view adds a finder after load
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
