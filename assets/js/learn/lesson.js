@@ -68,6 +68,9 @@
         h("a", { href: "/errata/?c=" + encodeURIComponent(cid) + "&l=" + encodeURIComponent(d.idx), "data-errata-course": cid,
           "data-errata-lesson": String(d.idx), "data-errata-title": d.title }, "Report an error"), " in this lesson."));
 
+    var verify = W.verifyBanner(d.learner);   // [onboard] dismissible "confirm your email" reminder
+    if (verify) main.insertBefore(verify, article);
+
     var toc = buildToc(d.idx);
     var topbar = h("div", { class: "wl-readbar", "aria-hidden": "true" }, h("span", { id: "wl-readbar" }));
     var courseBar = h("div", { class: "wl-reader-progress" }, W.progressBar(prog.done, prog.total, "Course progress"));

@@ -80,9 +80,20 @@
     } catch (e) { return null; }
   }
   function here() { return window.location.pathname + window.location.search; }
-  function signInUrl(next) {
-    return "/learn/?next=" + encodeURIComponent(next || here());
+  /** [onboard] opts.intent "buy" | "free" | "team" and opts.course (an id): the sign-in page then
+   * opens on "Create account" for a browser that has never signed in, with a line saying why. */
+  function signInUrl(next, opts) {
+    opts = opts || {};
+    var u = "/learn/?next=" + encodeURIComponent(next || here());
+    if (opts.intent && /^(buy|free|team)$/.test(opts.intent)) u += "&intent=" + opts.intent;
+    if (opts.course && /^[a-z0-9-]{2,60}$/.test(opts.course)) u += "&c=" + encodeURIComponent(opts.course);
+    return u;
   }
+  /* [onboard] "This browser has signed in before" (localStorage "wia_has_account"), so a returning
+     learner is not shown "Create account" first. A per-browser convenience only. */
+  var HAS_ACCOUNT = "wia_has_account";
+  function hasAccount() { try { return localStorage.getItem(HAS_ACCOUNT) === "1"; } catch (e) { return false; } }
+  function markHasAccount() { try { localStorage.setItem(HAS_ACCOUNT, "1"); } catch (e) { /* storage blocked */ } }
   function courseUrl(id) { return "/learn/course/?c=" + encodeURIComponent(id); }
   function lessonUrl(id, idx) { return "/learn/lesson/?c=" + encodeURIComponent(id) + "&l=" + encodeURIComponent(idx); }
   function examUrl(id) { return "/learn/exam/?c=" + encodeURIComponent(id); }
@@ -468,6 +479,79 @@
       h("div", { class: "wl-actions" }, sendBtn), confirmForm, status);
   }
 
+  /* [onboard] Dismissible "verify your email" banner for the course and lesson pages.
+     learner = {email, emailVerified} from the page's API payload. A dismissal lasts 3 days in this browser. */
+  var VERIFY_DISMISS = "wia_verify_dismissed";
+  function verifyBanner(learner, onVerified) {
+    if (!learner || learner.emailVerified || !learner.email) return null;
+    try { var t = Number(localStorage.getItem(VERIFY_DISMISS)); if (t && Date.now() - t < 3 * 24 * 3600 * 1000) return null; } catch (e) { /* storage blocked */ }
+    var box = h("div", { class: "wl-verify-banner" });
+    var open = btn("Verify now", { class: "wl-btn-sm" });
+    var dismiss = btn("Dismiss", { class: "wl-btn-sm wl-btn-ghost", "aria-label": "Dismiss the email verification reminder" });
+    var row = notice("info", "Confirm your email address",
+      "We sent a link and a code to " + learner.email + " when you signed up. Confirm it so we can send your certificate.", [open, dismiss]);
+    box.appendChild(row);
+    open.addEventListener("click", function () {
+      var panel = verifyPanel(learner, function (L) { box.remove(); if (onVerified) onVerified(L); }, true);
+      box.replaceChild(panel, row);
+      var b = panel.querySelector("button"); if (b) b.focus();
+    });
+    dismiss.addEventListener("click", function () {
+      try { localStorage.setItem(VERIFY_DISMISS, String(Date.now())); } catch (e) { /* storage blocked */ }
+      box.remove();
+    });
+    return box;
+  }
+
+  /* [onboard] "Next in your path" after a pass: GET /api/courses/<id>/next (at most 3 open courses,
+     or a waitlist for a track with nothing open yet). Prices come from GET /api/catalog through
+     [data-price-for] (site.js), never from this route. One dismiss per course, kept in this browser.
+     opts.onlyIfPassed: render nothing unless the signed-in learner holds this course's certificate. */
+  var NEXT_DISMISS = "wia_next_dismissed";
+  function nextDismissed(id) { try { return !!(JSON.parse(localStorage.getItem(NEXT_DISMISS) || "{}") || {})[id]; } catch (e) { return false; } }
+  function dismissNext(id) {
+    try { var m = JSON.parse(localStorage.getItem(NEXT_DISMISS) || "{}") || {}; m[id] = 1; localStorage.setItem(NEXT_DISMISS, JSON.stringify(m)); } catch (e) { /* storage blocked */ }
+  }
+  function nextPanel(courseId, opts) {
+    opts = opts || {};
+    var box = h("section", { class: "wl-section wl-next", "aria-labelledby": "h-next-" + courseId, hidden: true });
+    if (!API.signedIn() || nextDismissed(courseId)) return box;
+    API.request("GET", "/api/courses/" + encodeURIComponent(courseId) + "/next", undefined, { quiet401: true }).then(function (d) {
+      if (opts.onlyIfPassed && !d.passed) return;
+      var list = d.courses || [];
+      if (!list.length && !d.waitlist) return;
+      var dismiss = btn("Dismiss", { class: "wl-btn-sm wl-btn-ghost", "aria-label": "Dismiss next course suggestions" });
+      dismiss.addEventListener("click", function () { dismissNext(courseId); box.remove(); });
+      box.appendChild(h("div", { class: "wl-section-head" }, h("h2", { id: "h-next-" + courseId, class: "wl-h3" }, "Next in your path"), dismiss));
+      if (list.length) box.appendChild(h("ul", { class: "wl-cards wl-next-cards", role: "list" }, list.map(function (c) {
+        return h("li", { class: "wl-card wl-course-card" },
+          h("div", { class: "wl-card-meta" }, h("span", { class: "wl-code" }, c.id), c.level ? h("span", null, levelLabel(c.level)) : null),
+          h("h3", { class: "wl-card-title" }, h("a", { href: publicCourseUrl(c.id) }, c.title || courseTitle(c.id))),
+          h("p", { class: "wl-hint" }, c.reason === "prerequisite" ? "Builds on this course" : c.reason === "track" ? "Same track: " + trackLabel(c.track) : "A good next step"),
+          h("div", { class: "wl-card-foot" },
+            h("span", { class: "price", "data-price-for": c.id, "data-kind": "course" }, h("span", { class: "fallback" }, "See the course page")),
+            btn("Add to cart", { href: "/learn/cart/?add=course:" + encodeURIComponent(c.id), class: "wl-btn-sm" })));
+      })));
+      if (d.waitlist) box.appendChild(waitlistRow(d.waitlist));
+      box.hidden = false;
+      if (window.WIAPrices) window.WIAPrices.fill(box);
+    }, function () { /* optional panel: stay hidden */ });
+    return box;
+  }
+  function waitlistRow(w) {
+    var status = h("p", { class: "wl-hint", role: "status" });
+    var b = btn("Notify me when " + (trackLabel(w.track) || "this track") + " opens", { class: "wl-btn-sm wl-btn-ghost" });
+    b.addEventListener("click", function () {
+      busy(b, API.request("POST", "/api/waitlist", { courseId: w.courseId }), "Adding you…").then(function (r) {
+        b.disabled = true;
+        status.textContent = r && r.status === "check_email"
+          ? "Check your inbox: press the link we sent to confirm, and we will email you once, when " + w.title + " opens."
+          : "Done. We will email you once, when " + w.title + " opens.";
+      }, function (e) { status.textContent = e.message; });
+    });
+    return h("div", { class: "wl-next-wait" }, h("p", null, "More " + (trackLabel(w.track) || "") + " courses are on the way, starting with ", h("strong", null, w.title), "."), b, status);
+  }
+
   function ss(key, val) {
     try {
       if (val === undefined) return JSON.parse(sessionStorage.getItem(key) || "null");
@@ -477,7 +561,7 @@
 
   window.WL = {
     h: h, append: append, clear: clear, mount: mount, $: $,
-    param: param, safeNext: safeNext, here: here, signInUrl: signInUrl,
+    param: param, safeNext: safeNext, here: here, signInUrl: signInUrl, hasAccount: hasAccount, markHasAccount: markHasAccount,
     courseUrl: courseUrl, lessonUrl: lessonUrl, examUrl: examUrl, certUrl: certUrl, publicCourseUrl: publicCourseUrl,
     catalog: catalog, courseTitle: courseTitle, programTitle: programTitle, levelLabel: levelLabel, trackLabel: trackLabel,
     money: money, fmtDate: fmtDate, fmtDateUTC: fmtDateUTC, courseStatus: courseStatus, isLocalHost: isLocalHost, fmtDateTime: fmtDateTime, toDate: toDate, plural: plural, pct: pct,
@@ -485,6 +569,7 @@
     spinner: spinner, loading: loading, notice: notice, errorView: errorView, btn: btn, busy: busy,
     field: field, formError: formError, toast: toast, say: say,
     cart: { get: cartGet, set: cartSet, add: cartAdd, remove: cartRemove, badge: updateCartBadge },
-    requireAuth: requireAuth, setTitle: setTitle, copyText: copyText, ss: ss, turnstile: turnstile, verifyPanel: verifyPanel
+    requireAuth: requireAuth, setTitle: setTitle, copyText: copyText, ss: ss, turnstile: turnstile, verifyPanel: verifyPanel,
+    verifyBanner: verifyBanner, nextPanel: nextPanel   // [onboard]
   };
 })();

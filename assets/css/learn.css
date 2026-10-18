@@ -550,3 +550,13 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-break { white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .wl-cert-mfacts { display: block; } }
 .wl-checkout-changed { margin-top: 12px; }
+/* [onboard] first-run dashboard, "Next in your path", verify reminder */
+.wl-howto { list-style: none; counter-reset: wl-how; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+.wl-howto li { counter-increment: wl-how; border: 1px solid var(--wl-line); border-radius: var(--wl-r); padding: 14px 16px; display: grid; gap: 4px; }
+.wl-howto li::before { content: counter(wl-how); font-weight: 700; color: var(--wl-ac); }
+.wl-howto span { color: var(--wl-tx2); font-size: .94em; }
+.wl-next { margin-top: 28px; }
+.wl-next .wl-card-foot .price { margin-right: auto; }
+.wl-next-wait { margin-top: 16px; display: grid; gap: 8px; justify-items: start; }
+.wl-verify-banner { margin: 12px 0 18px; }
+.wl-verify-banner .wl-verify { margin: 0; }

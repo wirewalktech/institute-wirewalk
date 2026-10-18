@@ -510,7 +510,8 @@
       notes.push(W.notice(r.attemptsLeft > 0 ? "info" : "error", r.attemptsLeft > 0 ? "Review and try again" : "No attempts left", msg));
       next.push(W.btn("Review the lessons", { href: W.courseUrl(cid) }));
     }
-    W.mount(h("div", { class: "wl-narrow" }, hero, notes, breakdown, h("div", { class: "wl-actions" }, next)));
+    W.mount(h("div", { class: "wl-narrow" }, hero, notes, breakdown, h("div", { class: "wl-actions" }, next),
+      r.passed ? W.nextPanel(cid) : null));   // [onboard] "Next in your path"
     var hd = document.getElementById("res-h"); if (hd) hd.focus();
   }
 

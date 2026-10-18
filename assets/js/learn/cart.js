@@ -33,7 +33,7 @@
       var q = sp.toString();
       history.replaceState(null, "", window.location.pathname + (q ? "?" + q : ""));
     }
-    return { added: added, canceled: canceled === "1", buy: buy && added > 0 };
+    return { added: added, canceled: canceled === "1", buy: buy && (added > 0 || W.cart.get().length > 0) };   // [onboard] buy=1 survives sign-up
   }
 
   function itemTitle(i) {
@@ -247,7 +247,7 @@
     if (!cart.length) return;
     var free = allFree(state.quote) && !state.quoteError && !state.loading;
     if (!API.signedIn()) {
-      c.appendChild(W.btn(free ? "Sign in to enroll free" : "Sign in to check out", { href: W.signInUrl("/learn/cart/"), class: "wl-btn-block" }));
+      c.appendChild(W.btn(free ? "Sign in to enroll free" : "Sign in to check out", { href: W.signInUrl("/learn/cart/", { intent: free ? "free" : "buy" }), class: "wl-btn-block" }));   // [onboard]
       c.appendChild(h("p", { class: "wl-small wl-center" }, "New here? ", h("a", { href: "/learn/?mode=signup&next=" + encodeURIComponent("/learn/cart/") }, "Create an account")));
       return;
     }
@@ -312,7 +312,8 @@
   function boot() {
     var flags = absorbParams() || {};
     if (flags.buy) {
-      if (!API.signedIn()) { window.location.replace(W.signInUrl("/learn/cart/")); return; }
+      /* [onboard] keep the buy intent through sign-in, and open on Create account for a new browser */
+      if (!API.signedIn()) { var one = W.cart.get(); window.location.replace(W.signInUrl("/learn/cart/?buy=1", { intent: "buy", course: one.length === 1 && one[0].type === "course" ? one[0].id : null })); return; }
       state.buy = true;
     }
     build(flags);

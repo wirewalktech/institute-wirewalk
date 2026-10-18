@@ -104,7 +104,9 @@
           h("div", null, h("dt", null, "Certificate ID"), h("dd", { class: "wl-mono" }, certId)),
           h("div", null, h("dt", null, "Verify at"), h("dd", { class: "wl-mono wl-break" }, h("a", { href: verifyUrl }, verifyUrl))))),
       actions,
-      h("p", { class: "wl-hint wl-center wl-noprint" }, "Tip: print in landscape with margins set to none or minimum for the best result.")));
+      h("p", { class: "wl-hint wl-center wl-noprint" }, "Tip: print in landscape with margins set to none or minimum for the best result."),
+      /* [onboard] for the signed-in holder of a course certificate only (the route says whether they passed) */
+      !program && c.refId && API.signedIn() ? h("div", { class: "wl-noprint" }, W.nextPanel(String(c.refId).toLowerCase(), { onlyIfPassed: true })) : null));
     if (issued) document.documentElement.setAttribute("data-cert-year", String(issued.getUTCFullYear()));
   }
 
