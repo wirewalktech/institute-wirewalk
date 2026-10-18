@@ -12,6 +12,10 @@
         "lx-wave1": {
           "sha": "d74be094712818bbeefea1898aada77e8890143e",
           "scope": "WIA-014/015 source fixes independently verified with exact isolated build, 14 browser passes, own delayed-write recovery/reload check. Autosave durable guarantee requires migrated Worker; no production resolution or blanket release approval."
+        },
+        "feature/iso-review-policy": {
+          "sha": "3d56fa44e7b4d5e71c5ac7b0a771b5453f0cb50b",
+          "scope": "Read33-line standards draft and verified selected official ISO/NIST/OWASP/NICE edition/scope summaries and source certificate anchor. No confirmed scope-statement defect. No clause-level/course alignment approval. Exact branch build/browser/accessibility/live and status-enforcement/mapping evidence remain outstanding."
         }
       },
       "last_examined_sha": "656b838",
@@ -25,10 +29,6 @@
       },
       "last_observed_sha": "d95fd6ab23cdc5c37e69c48b64ec9748503b9a2d",
       "branches_observed": {
-        "feature/iso-review-policy": {
-          "sha": "3d56fa44e7b4d5e71c5ac7b0a771b5453f0cb50b",
-          "scope": "New branch discovered during fetch. Read 33-line standards/index.html draft; full official-edition/claim review and exact branch build/browser/live checks outstanding. No publication or approval claimed."
-        },
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
           "scope": "Metadata observed; no branch-specific delta against previous main."
@@ -101,7 +101,7 @@
           "scope": "Selected prior recovery-draft scope retained; newer merge contains coordination/planning records and no content/src/tools/test delta versus7296893. WIA-016 remains open; no new author confirmation, fixing course SHA or broader content approval."
         }
       },
-      "last_observed_sha": "06fccea41983057032af97c814a721847698545b",
+      "last_observed_sha": "8b59f6d1f9d5c0864844af4ca5ca19448433c1a2",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -126,11 +126,11 @@
       "draft_assessment_sha": "8273995945896eb7b6625b9c5d5201b40254d2c8",
       "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md",
       "outstanding_pricing_review": "Coordinator planning-only change622b684 reviewed; AEA-001 P3 band consistency follow-up sent privately. No public pricing, billing configuration or scheme approval.",
-      "latest_ci_status": "0572877 board-only commit: in_progress at poll; preceding6038661 successful"
+      "latest_ci_status": "0572877c8583e2f5476d1f53effe80103fcbb15c: completed success"
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T23:21:55Z",
+  "last_check_started_utc": "2026-10-18T23:36:55Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Authenticated default-head/board/CI and branch inventory checks. Planning-only change622b684 reviewed with official fee anchors and independent Decimal arithmetic; minor draft fee-band follow-up sent to coordinator in private agency/Worker boards (AEA-001 P3). No changed course/runtime source in newer recovery merge. WIA-016 and independent agency implementation review remain pending. All whole-repository reviewed cursors and outstanding factual/editorial scope preserved; no billing/deployment/data operations."
+  "latest_poll_scope": "Authenticated heads/branch/CI checks unchanged apart from own audit posts; agency CI0572877 succeeded. Selected source/edition triage of Institute standards draft3d56fa4 communicated privately with optional editorial recommendations and explicit unreviewed build/browser/conformity scope. No confirmed new defect or independent agency review response. WIA-016, AEA-001 and prior findings remain open. Whole-repository review cursors preserved."
 }
