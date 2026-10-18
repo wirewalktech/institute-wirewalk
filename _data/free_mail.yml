@@ -1,0 +1,70 @@
+# Personal (free) email providers. The enterprise inquiry form (/teams/enterprise/,
+# assets/js/enterprise-form.js) asks for a work address instead of one of these; organization
+# pricing agreements are verified by an organization's DNS-verified email domain, which a
+# personal provider's domain can never be.
+#
+# Keep this list identical to FREE_MAIL in wirewalk-institute-worker src/features/freemail.js
+# (the portal's list in wirewalk-portal-worker src/attribution.js plus the additions in
+# ai/plans/org-agreements-2026-10.md section 3.1). A Worker test compares the two when this
+# repository is checked out next to it.
+#
+# A domain matches an entry when it equals it or ends with "." + entry (mx.gmail.com counts).
+# Lowercase, one domain per line, no duplicates.
+- gmail.com
+- googlemail.com
+- yahoo.com
+- yahoo.co.uk
+- ymail.com
+- hotmail.com
+- hotmail.co.uk
+- outlook.com
+- live.com
+- msn.com
+- aol.com
+- icloud.com
+- me.com
+- mac.com
+- proton.me
+- protonmail.com
+- pm.me
+- gmx.com
+- gmx.net
+- mail.com
+- zoho.com
+- yandex.com
+- yandex.ru
+- fastmail.com
+- hey.com
+- tutanota.com
+- qq.com
+- 163.com
+- comcast.net
+- verizon.net
+- att.net
+- sbcglobal.net
+- optonline.net
+- cox.net
+- earthlink.net
+- rocketmail.com
+- outlook.co.uk
+- live.co.uk
+- hotmail.fr
+- yahoo.fr
+- yahoo.de
+- web.de
+- gmx.de
+- orange.fr
+- t-online.de
+- mail.ru
+- naver.com
+- proton.ch
+- protonmail.ch
+- tuta.io
+- duck.com
+- mailbox.org
+- posteo.de
+- aim.com
+- bellsouth.net
+- charter.net
+- frontier.com
+- windstream.net
