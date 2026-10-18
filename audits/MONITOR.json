@@ -10,7 +10,7 @@
           "scope": "Selected API/boot/reset/layout/config sources; public catalog key-field scan only. Full branch review outstanding."
         }
       },
-      "last_examined_sha": "174761f",
+      "last_examined_sha": "344f98d",
       "scoped_checkpoints": {
         "reset_js_source_and_live_fixture": "79b358f",
         "homepage_1440_390_noindex_and_exact_pages_sha": "79b358f",
@@ -37,9 +37,11 @@
         "New Ellery/bundles/site implementation and migrations: full review outstanding; WIA-013 missing-schema and failed-settlement accounting gaps remain",
         "V2 standard/labs are planned controls: independently verify review artifacts, publication gating, labs validation/runtime/completion and certificate criteria; WIA-006/007 remain open",
         "Full Decision Labs validator, browser/accessibility, migrations and AI-debrief/race/deployment verification; selected source triage only",
-        "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review."
+        "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review.",
+        "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Gemini courses await first content commit; feedback protocol acknowledged.",
+        "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding."
       ],
-      "last_examined_sha": "db3c751",
+      "last_examined_sha": "3a229fa",
       "scoped_checkpoints": {
         "validator_build_and_commit_helper_source": "fdfc5bc",
         "exam_bank_length_metrics": "37942d4",
@@ -59,11 +61,13 @@
         "WIA_013_partial_fix_budget_failopen_and_389_pass_1_skip": "e907e2c",
         "v2_standard_labs_design_and_publication_hold_read_only": "ae8aafb",
         "labs_selected_source_and_419_pass_1_skip": "e0b6003",
-        "v2_pilots_structural_and_selected_ROI_source_arithmetic_only": "db3c751"
+        "v2_pilots_structural_and_selected_ROI_source_arithmetic_only": "db3c751",
+        "fin210_v2_structure_and_exhaustive_lab_traversal_only": "149c301",
+        "six_v2_intros_structure_and_selected_dev001_limit_claim_only": "3a229fa"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T12:26:44Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1226.md"
+  "last_check_started_utc": "2026-10-18T14:29:24Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-1429.md"
 }
