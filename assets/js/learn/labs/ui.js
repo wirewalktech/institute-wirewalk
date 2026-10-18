@@ -11,9 +11,18 @@
   function prefersReduced() { try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { return reduced; } }
 
   /* ---------- numbers ---------- */
-  var UNIT = { usd: "", percent: "%", points: " pts", weeks: " wk", days: " days", hours: " hrs", months: " mo", count: "", people: "", score: "" };
+  /* [lx] usd_k / usd_m are values in thousands / millions of dollars; "rate" is a count per `per`
+     (year, month, week), which may qualify any unit: "$1.3M/yr", "6/mo", "4 hrs/wk". */
+  var UNIT = { usd: "", percent: "%", points: " pts", weeks: " wk", days: " days", hours: " hrs", months: " mo", count: "", people: "", score: "", rate: "" };
   var UNIT_LONG = { usd: "dollars", percent: "percent", points: "points", weeks: "weeks", days: "days", hours: "hours", months: "months" };
-  function group(n) { try { return Math.abs(n).toLocaleString("en-US", { maximumFractionDigits: 1 }); } catch (e) { return String(Math.abs(n)); } }
+  var PER = { year: "/yr", month: "/mo", week: "/wk" };
+  /* [lx] A nonzero amount never prints as "0": it falls back to two significant digits ("0.04"). */
+  function group(n, frac) {
+    var a = Math.abs(n), s;
+    try { s = a.toLocaleString("en-US", { maximumFractionDigits: frac == null ? 1 : frac }); } catch (e) { s = String(a); }
+    if (a && !/[1-9]/.test(s)) { try { s = a.toLocaleString("en-US", { maximumSignificantDigits: 2 }); } catch (e) { s = String(a); } }
+    return s;
+  }
   function compactUsd(n) {
     var a = Math.abs(n), s;
     if (a >= 1e9) s = (a / 1e9).toFixed(a >= 1e10 ? 0 : 1).replace(/\.0$/, "") + "B";
@@ -22,23 +31,43 @@
     else s = group(a);
     return s;
   }
-  /** Display value: "$200K", "85 pts", "12%". */
+  /** [lx] A value already in K or M: two decimals under 10, one under 100 ("$1.27M", "$12.5M", "$180K"); 1,000+ moves up a scale; zero is "$0". */
+  function scaled(a, scale) {
+    var next = { K: "M", M: "B" };
+    if (!a) return "0";
+    if (a >= 1000 && next[scale]) return scaled(a / 1000, next[scale]);
+    return group(a, a < 10 ? 2 : a < 100 ? 1 : 0) + scale;
+  }
+  /** Display value: "$200K", "85 pts", "12%", "$1.3M/yr". */
   function fmt(m, v, opts) {
     v = Number(v) || 0;
-    var neg = v < 0 ? "−" : "";
-    if (m.unit === "usd") return neg + "$" + (opts && opts.full ? group(v) : compactUsd(v));
+    var neg = v < 0 ? "−" : "", per = PER[m.per] || "";
+    if (m.unit === "usd") return neg + "$" + (opts && opts.full ? group(v) : compactUsd(v)) + per;
+    if (m.unit === "usd_k") return neg + "$" + scaled(Math.abs(v), "K") + per;
+    if (m.unit === "usd_m") return neg + "$" + scaled(Math.abs(v), "M") + per;
     var u = UNIT.hasOwnProperty(m.unit) ? UNIT[m.unit] : " " + m.unit;
-    return neg + group(v) + u;
+    return neg + group(v) + u + per;
   }
   /** Signed delta: "+$40K", "−5 pts". */
   function fmtDelta(m, d) { return (d > 0 ? "+" : d < 0 ? "−" : "±") + fmt(m, Math.abs(d)).replace(/^−/, ""); }
+  /** Spoken amount: "$1.27 million per year", "10 points". */
+  function spokenAmount(m, v) {
+    var per = m.per ? " per " + m.per : "";
+    if (m.unit === "usd") return "$" + group(v) + per;
+    if (m.unit === "usd_k" || m.unit === "usd_m") return fmt(m, Math.abs(v)).replace(/\/(yr|mo|wk)$/, "").replace(/K$/, " thousand").replace(/M$/, " million").replace(/B$/, " billion") + per;
+    var unit = UNIT_LONG[m.unit] || (m.unit === "rate" || UNIT[m.unit] === "" ? "" : m.unit || "");
+    return group(v) + (unit ? " " + unit : "") + per;
+  }
   /** For screen readers: "Billing team trust up 10 points to 60 points, better". */
   function spokenDelta(m, d, now) {
     var better = isBetter(m, d);
-    var unit = UNIT_LONG[m.unit] || m.unit || "";
-    var amount = m.unit === "usd" ? "$" + group(Math.abs(d)) : group(Math.abs(d)) + " " + unit;
-    var to = m.unit === "usd" ? "$" + group(now) : group(now) + " " + unit;
-    return m.label + (d > 0 ? " up " : " down ") + amount + " to " + to + (better ? ", better" : ", worse");
+    return m.label + (d > 0 ? " up " : " down ") + spokenAmount(m, Math.abs(d)) + " to " + (now < 0 ? "minus " : "") + spokenAmount(m, Math.abs(now)) + (better ? ", better" : ", worse");
+  }
+  /** [lx] The timeline's metric name: `short`, else the label's first word (acronyms keep their case: "CFO", not "cfo"). */
+  function shortLabel(m) {
+    if (m.short) return m.short;
+    var w = String(m.label || "").split(" ")[0];
+    return /^[A-Z][a-z]+$/.test(w) ? w.toLowerCase() : w;
   }
   function isBetter(m, d) { return m.good === "low" ? d < 0 : d > 0; }
   function tone(m, d) { return !d ? "" : isBetter(m, d) ? "up-good" : "up-bad"; }
@@ -190,12 +219,18 @@
     var list = h("ol", { class: "lab-tl", role: "list" });
     var n = 0;
     (items || []).forEach(function (t) {
-      if (t.t === "ending") return;
+      var ds = metrics.filter(function (m) { return t.deltas && t.deltas[m.id]; }).map(function (m) {
+        return h("span", { class: "lab-tl-d is-" + tone(m, t.deltas[m.id]) }, fmtDelta(m, t.deltas[m.id]) + " " + shortLabel(m));
+      });
+      /* [lx] The ending's own effects get a row ("Six months later"), so the timeline adds up to the final table. */
+      if (t.t === "ending") {
+        if (ds.length) list.appendChild(h("li", { class: "lab-tl-i is-event is-reckoning" },
+          h("span", { class: "lab-tl-dot", "aria-hidden": "true" }, "…"),
+          h("div", { class: "lab-tl-b" }, h("p", { class: "lab-tl-t" }, "Six months later"), h("p", { class: "lab-tl-ds" }, ds))));
+        return;
+      }
       var isEvent = t.t === "event";
       if (!isEvent) n++;
-      var ds = metrics.filter(function (m) { return t.deltas && t.deltas[m.id]; }).map(function (m) {
-        return h("span", { class: "lab-tl-d is-" + tone(m, t.deltas[m.id]) }, fmtDelta(m, t.deltas[m.id]) + " " + m.label.split(" ")[0].toLowerCase());
-      });
       list.appendChild(h("li", { class: "lab-tl-i" + (isEvent ? " is-event" : "") },
         h("span", { class: "lab-tl-dot", "aria-hidden": "true" }, isEvent ? "!" : String(n)),
         h("div", { class: "lab-tl-b" },
@@ -217,7 +252,7 @@
   var QUALITY = { strong: "Strong choice", reasonable: "Reasonable choice", weak: "Weak choice" };
   function qualityChip(q) { return h("span", { class: "lab-q lab-q-" + (q || "none") }, QUALITY[q] || "Choice"); }
 
-  window.WLLabUI = { fmt: fmt, fmtDelta: fmtDelta, spokenDelta: spokenDelta, isBetter: isBetter, tone: tone, fill: fill, dashboard: dashboard,
+  window.WLLabUI = { fmt: fmt, fmtDelta: fmtDelta, spokenDelta: spokenDelta, shortLabel: shortLabel, isBetter: isBetter, tone: tone, fill: fill, dashboard: dashboard,
     deltaChips: deltaChips, materials: materials, html: html, timeline: timeline, ratingBadge: ratingBadge, qualityChip: qualityChip,
     EVENT_LABEL: EVENT_LABEL, prefersReduced: prefersReduced };
 })();

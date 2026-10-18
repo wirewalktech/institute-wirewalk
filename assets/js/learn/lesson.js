@@ -60,7 +60,8 @@
         h("span", { class: "wl-pager-k" }, "Next →"), h("span", { class: "wl-pager-t" }, d.next.title))
         : h("a", { class: "wl-pager-next", href: W.courseUrl(cid) }, h("span", { class: "wl-pager-k" }, "Finish →"), h("span", { class: "wl-pager-t" }, "Back to course and exam")));
 
-    var main = h("div", { class: "wl-reader-main" }, head, article, completeBox, labCallout(d), pager,
+    /* [lx] The module's lab sits before the completion box, so the primary button and the lab are read together. */
+    var main = h("div", { class: "wl-reader-main" }, head, article, labCallout(d), completeBox, pager,
       h("p", { class: "wl-hint wl-center wl-kbd-hint" }, "Tip: press ", h("kbd", null, "←"), " and ", h("kbd", null, "→"), " to move between lessons."),
       /* [support] Errata: /assets/js/errata.js opens a small report form from this link; without it, /errata/. */
       h("p", { class: "wl-hint wl-center" }, "Spotted a mistake? ",
@@ -84,6 +85,15 @@
       ref: "m" + d.module + "-l" + d.lesson, title: d.title, free: (outline && outline.course && outline.course.level) === "intro" };
     try { document.dispatchEvent(new CustomEvent("wl:lesson", { detail: window.WLLesson })); } catch (e) { /* old browser */ }
   }
+
+  /** [lx] The first unfinished Decision Lab of this lesson's module, when this is the module's last lesson; else null. */
+  function pendingLab(d) {
+    if (!window.WLLabs || !outline || !outline.modules) return null;
+    var m = outline.modules.filter(function (x) { return x.module === d.module; })[0];
+    if (!m || !m.labs || !m.labs.length || !m.lessons.length || String(m.lessons[m.lessons.length - 1].idx) !== String(d.idx)) return null;
+    return m.labs.filter(function (l) { return l.status !== "finished"; })[0] || null;
+  }
+  function hasLabs() { return !!(outline && outline.modules && outline.modules.some(function (m) { return m.labs && m.labs.length; })); }
 
   /** [labs] After the last lesson of a module: its Decision Lab(s), "put this module into practice". */
   function labCallout(d) {
@@ -118,14 +128,16 @@
   function renderComplete(box, completed, prog, justNow, unlocked) {
     W.clear(box);
     var d = data;
+    var lab = pendingLab(d);   // [lx] lesson -> lab -> next module: the lab comes first
     if (completed) {
       box.appendChild(h("div", { class: "wl-complete-done" },
         h("span", { class: "wl-okmark wl-okmark-sm", "aria-hidden": "true" }),
         h("div", { class: "wl-grow" },
           h("strong", null, justNow ? "Lesson marked complete." : "You have completed this lesson."),
           h("div", { class: "wl-hint" }, prog.done + " of " + prog.total + " lessons complete")),
-        d.next ? W.btn("Next lesson", { href: W.lessonUrl(cid, d.next.idx), class: "wl-btn-sm" }) : null));
-      if (unlocked) box.appendChild(W.notice("ok", "The exam is unlocked", "You have completed every lesson in this course.",
+        lab ? W.btn("Start the Decision Lab", { href: window.WLLabs.url(cid, lab.id), class: "wl-btn-sm" }) : null,   // [lx]
+        d.next ? W.btn(lab ? "Skip to next lesson" : "Next lesson", { href: W.lessonUrl(cid, d.next.idx), class: "wl-btn-sm" + (lab ? " wl-btn-ghost" : "") }) : null));
+      if (unlocked) box.appendChild(W.notice("ok", "The exam is unlocked", hasLabs() ? "You have completed every lesson and Decision Lab in this course." : "You have completed every lesson in this course.",
         [W.btn("Go to the exam", { href: W.examUrl(cid) })]));
       else if (!d.next && prog.total && prog.done >= prog.total && prog.labs && prog.labs.done < prog.labs.total)   // [labs]
         box.appendChild(W.notice("info", "Lessons complete", "Finish the course's Decision Labs to unlock the exam (" + window.WLLabs.progressText(prog) + ").", [W.btn("Course and labs", { href: W.courseUrl(cid) })]));
@@ -133,12 +145,15 @@
       return;
     }
     var mark = W.btn("Mark as complete", { class: "wl-btn-ghost" });
-    var markNext = d.next ? W.btn("Complete and continue →") : null;
+    /* [lx] On a module's last lesson with an unfinished lab, the primary path is the lab; the next lesson is secondary. */
+    var markLab = lab ? W.btn("Complete and start the Decision Lab →") : null;
+    var markNext = d.next ? W.btn(lab ? "Skip to next lesson" : "Complete and continue →", lab ? { class: "wl-btn-ghost" } : undefined) : null;
     function run(goNext, b) {
       return W.busy(b, API.completeLesson(cid, d.idx), "Saving…").then(function (r) {
         data.completed = true;
         var p = r.progress || prog;
         updateToc(d.idx);
+        if (goNext === "lab") { window.location.assign(window.WLLabs.url(cid, lab.id)); return; }
         if (goNext && d.next && !r.examUnlocked) { window.location.assign(W.lessonUrl(cid, d.next.idx)); return; }
         renderComplete(box, true, p, true, r.examUnlocked);
         Array.prototype.forEach.call(document.querySelectorAll(".wl-reader-progress"), function (n) { W.clear(n).appendChild(W.progressBar(p.done, p.total, "Course progress")); });
@@ -148,9 +163,11 @@
     }
     mark.addEventListener("click", function () { run(false, mark); });
     if (markNext) markNext.addEventListener("click", function () { run(true, markNext); });
+    if (markLab) markLab.addEventListener("click", function () { run("lab", markLab); });
     box.appendChild(h("div", { class: "wl-complete-ask" },
-      h("p", null, "Finished reading? Mark this lesson complete to record your progress. Every lesson must be complete before the exam unlocks."),
-      h("div", { class: "wl-actions" }, markNext, mark)));
+      h("p", null, "Finished reading? Mark this lesson complete to record your progress. " +
+        (hasLabs() ? "Lessons and Decision Labs must be complete before the exam unlocks." : "Every lesson must be complete before the exam unlocks.")),
+      h("div", { class: "wl-actions" }, markLab, markNext, lab && markNext ? null : mark)));
   }
 
   function buildToc(current) {
