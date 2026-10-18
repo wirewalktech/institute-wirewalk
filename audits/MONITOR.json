@@ -74,7 +74,8 @@
         "fin210_v2_structure_and_exhaustive_lab_traversal_only": "149c301",
         "six_v2_intros_structure_and_selected_dev001_limit_claim_only": "3a229fa",
         "WIA_012_exact_lesson_execution_CJK_Arabic_and_strict_validation": "6745b76",
-        "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d"
+        "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
+        "agency_plan_pricing_delta_only": "622b6846eba9974668e53356eb1b96458dfc688f"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -86,11 +87,11 @@
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         },
         "wip/autosave": {
-          "sha": "729689351803709ce94b1c4683e6c351c9cf85c7",
-          "scope": "Unfinished recovery snapshot, not main/release approval. Selected first-lesson checks for two Gemini-claimed course paths: inventory, one toy-parser sample execution and one primary-source documentation-grounding check. WIA-016 P2 recorded; authorship/inherited-v1 versus v2 status unconfirmed. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding."
+          "sha": "b05c3a680f0b62fd72e98d06fd40839525cdbcbe",
+          "scope": "Selected prior recovery-draft scope retained; newer merge contains coordination/planning records and no content/src/tools/test delta versus7296893. WIA-016 remains open; no new author confirmation, fixing course SHA or broader content approval."
         }
       },
-      "last_observed_sha": "52028cbc17fdc99b13b599b78feeeca19405a0fc",
+      "last_observed_sha": "06fccea",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -107,17 +108,18 @@
       }
     },
     "wirewalktech/ai-education-assurance": {
-      "last_observed_sha": "603866167684e8ead65653bd773a660290549037",
+      "last_observed_sha": "0572877",
       "implementation_sha": "58cd0ca99fa47502323afd468fc05ed9af0d2037",
       "independent_review_status": "pending; no Claude acknowledgement or review response observed",
       "scope": "Codex-authored initial prototype and new A7 draft remain independently unapproved. Local formatting/type checks and 21 tests pass; exact A7 source SHA8273995 GitHub CI (including existing browser checks) passed. A7 is a synthetic calibration aid and proposed expert dossier, not real field execution, validated competence or approved qualifications. Separate Access/D1 staging, preserved evidence, competence enforcement, independent human governance/validation and credential issuance remain unfinished. No deploy, payment, DNS or learner-data operation.",
       "handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T1958-codex-initial-build-review-handoff.md",
       "draft_assessment_sha": "8273995945896eb7b6625b9c5d5201b40254d2c8",
-      "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md"
+      "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md",
+      "outstanding_pricing_review": "Coordinator planning-only change622b684 reviewed; AEA-001 P3 band consistency follow-up sent privately. No public pricing, billing configuration or scheme approval."
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T21:51:55Z",
+  "last_check_started_utc": "2026-10-18T23:21:55Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Authenticated default-head/board/CI and branch inventory checks. No new Claude/Gemini release handoff or agency independent review. Selected older recovery-draft review produced WIA-016 P2; active unfinished work is not classified as a main/live regression. Whole-repository review cursors and all remaining factual/editorial scope are preserved. Institute, agency and unidentified Vision remain separate projects."
+  "latest_poll_scope": "Authenticated default-head/board/CI and branch inventory checks. Planning-only change622b684 reviewed with official fee anchors and independent Decimal arithmetic; minor draft fee-band follow-up sent to coordinator in private agency/Worker boards (AEA-001 P3). No changed course/runtime source in newer recovery merge. WIA-016 and independent agency implementation review remain pending. All whole-repository reviewed cursors and outstanding factual/editorial scope preserved; no billing/deployment/data operations."
 }
