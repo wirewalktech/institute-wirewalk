@@ -1,0 +1,29 @@
+---
+title: AI courses by industry
+description: "Find AI training for ten industry sectors. Start with a free introduction, then explore courses for practitioners, builders and leaders."
+---
+{% assign sectors = "health-life-sciences,financial-services,public-sector-defense,education-research,manufacturing-industrial,energy-resources,transport-logistics,built-environment,consumer-media,professional-services" | split: "," %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Industries</p>
+    <h1>Start with the work you do</h1>
+    <p class="lead">Explore AI through the decisions, tools and responsibilities in your industry. Each sector starts with a free introduction and offers a path toward more specialized study.</p>
+    <p>Course pages distinguish available courses from the waitlist. Check the syllabus and prerequisites before choosing your next step.</p>
+  </header>
+  <div class="tmap" style="padding-bottom:64px">
+    {% for sector in sectors %}
+    {% assign track = site.data.catalog.tracks | where: "id", sector | first %}
+    {% assign courses = site.data.catalog.courses | where: "track", sector %}
+    {% assign intros = courses | where: "level", "intro" %}
+    <section class="tile" aria-labelledby="sector-{{ sector }}">
+      <p class="eyebrow">{{ track.prefix | escape }}</p>
+      <h2 class="tile-h" id="sector-{{ sector }}">{{ track.title | escape }}</h2>
+      <p>{{ track.summary | escape }}</p>
+      {% for course in intros %}
+      <p><a href="/courses/{{ course.id }}/">Start here: {{ course.title | escape }}</a> <span class="code">Free introduction{% unless course.status == "on_sale" %} · Waitlist{% endunless %}</span></p>
+      {% endfor %}
+      <a href="/tracks/{{ sector }}/">Explore this sector’s courses <span aria-hidden="true">→</span></a>
+    </section>
+    {% endfor %}
+  </div>
+</div>
