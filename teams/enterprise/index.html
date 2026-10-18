@@ -1,0 +1,228 @@
+---
+title: Training for your organization
+description: "Organization pricing agreements, invoice and purchase-order payment, and training campaigns with due dates, reminders and progress reports, from the Wirewalk Institute of AI. Tell us what your organization needs."
+extra_js: [enterprise-form]
+countries: ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Congo (Democratic Republic)", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "São Tomé and Príncipe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Türkiye", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"]
+us_states: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming", "American Samoa", "Guam", "Northern Mariana Islands", "Puerto Rico", "U.S. Virgin Islands", "Armed Forces (AA, AE, AP)"]
+---
+{%- comment -%}
+  Enterprise / organization pricing inquiry (wirewalk-institute-worker ai/plans/org-agreements-2026-10.md
+  section 9). Posts natively to the portal endpoint like /teams/ (site.enquiry_endpoint) with
+  request=enterprise and its own _subject, so the inbox can tell it apart. The portal keeps only the
+  LAST value of a repeated field name, so every checkbox has its own name. Protection is the _honey
+  honeypot, as on /teams/: the portal does not verify Turnstile yet (plan Q15). The form works without
+  JavaScript; assets/js/enterprise-form.js only fills fields from the link, shows the state field for
+  the United States and asks for a work address instead of a personal one.
+{%- endcomment %}
+<style>
+  .ent-form fieldset{border:0;margin:0;padding:0;min-width:0}
+  .ent-form legend{display:block;font-size:14.5px;font-weight:600;margin:0 0 8px;padding:0}
+  .ent-form legend .h{font-weight:400;color:var(--tx3)}
+  .ent-form .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:8px 16px}
+  .ent-form .opts.one{grid-template-columns:1fr}
+  .ent-form label.opt{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.4;margin:0;cursor:pointer;color:var(--tx)}
+  .ent-form label.opt input{width:18px;height:18px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--ac)}
+  .ent-form input[type=date]{width:100%;font:16px/1.4 var(--sans);color:var(--tx);background:var(--srf);border:1px solid var(--ln2);border-radius:10px;padding:11px 13px;min-height:46px;color-scheme:light dark}
+  .ent-form input[type=date]:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 1px var(--ac),0 0 0 4px var(--acln)}
+  .ent-form .field-help.warn{color:var(--sale);font-weight:600}
+  .ent-form [hidden]{display:none!important}
+</style>
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Teams and enterprise</p>
+    <h1>Training for your organization</h1>
+    <p class="lead">For organizations training many people: pricing agreed with your organization, payment by invoice or purchase order on agreed terms, and training campaigns that assign courses with due dates and report progress. Tell us what you need and we will reply with what we can offer.</p>
+    <p><a class="btn" href="#enquiry">Tell us about your organization <span class="arr" aria-hidden="true">→</span></a> <a class="btn ghost" href="/teams/">How team seats work</a></p>
+  </header>
+</div>
+
+<section class="section tight" style="padding-top:0">
+  <div class="wrap grid3">
+    <div class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+      <h3>Organization pricing agreements</h3>
+      <p>Pricing is agreed with each organization; there is no public discount table. An agreement can cover the team seats your managers buy, the courses your employees buy for themselves, or both, for the courses, tracks or programs you agree, until an end date. Employee pricing applies to people in your team or signed in with a verified address at an email domain your organization has proved it controls by DNS. Personal email providers never qualify.</p>
+    </div>
+    <div class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div>
+      <h3>Invoice and purchase order</h3>
+      <p>Without an agreement, team seats can be invoiced from 25 seats. An agreement can allow invoices for smaller orders, with payment terms agreed with you and your purchase order number on the invoice. Seats appear in your team once the invoice is paid.</p>
+    </div>
+    <div class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M9 15l2 2 4-4"/></svg></div>
+      <h3>Training campaigns</h3>
+      <p>Your team managers assign a program or a set of courses to a list of people, with a start date and a due date. Seats come from your team's seats; if there are not enough, a manager can ask for an invoice for the rest, and nothing is charged without that request. People get email reminders before the due date, and managers see a progress report for the assigned courses only.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">How it works</h2>
+    <ol class="ticks">
+      <li><strong>Tell us about your organization.</strong> The form below asks for the number of learners, their roles, the topics, your timeline and how you pay. It asks for a conversation or a quote; it does not place an order.</li>
+      <li><strong>We reply.</strong> We suggest courses or programs for the roles you describe and, where it fits, propose an agreement: which purchases it covers, the pricing, the end date and the payment terms. A written quote can follow.</li>
+      <li><strong>Your team is set up.</strong> You create your team on <a href="/learn/team/">your team page</a> and verify your company domain with a DNS TXT record. We record the agreement for that team; an organization has one agreement in force at a time.</li>
+      <li><strong>Prices apply at checkout.</strong> The agreement is one more offer at checkout. As for any order, the single best offer applies to each item and offers never add up: if a volume tier or a sale is better than the agreement, that price applies.</li>
+      <li><strong>Assign training and follow it.</strong> Managers create training campaigns, and people get their seats, their invitation if they are not in the team yet, and reminders. The progress report shows lessons, exam results and certificates for the assigned courses. For a course someone already had before it was assigned, their progress is shown only if they choose to share it.</li>
+    </ol>
+    <p class="small muted">Organization pricing and training campaigns are being switched on. When we reply, we tell you which parts are available for your team today.</p>
+    <h3 style="margin-top:24px">What we do not provide</h3>
+    <p class="muted">Courses are taken here, on institute.wirewalk.com. We do not provide SCORM or xAPI packages, integration with your LMS, or single sign-on (SAML/SSO); each person signs in with their own account. If one of these is a requirement, tell us in the form below so we can say honestly whether we can help.</p>
+  </div>
+</section>
+
+<section class="section alt" id="enquiry" aria-labelledby="enq-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="enq-h">Tell us about your organization</h2>
+      <p class="muted">The more we know, the more useful our first reply. Everything except the fields marked as required is optional.</p>
+      <ul class="ticks">
+        <li>Use your work email address. We verify organizations by their email domain, so we cannot set up organization pricing for a personal address.</li>
+        <li>Approximate numbers are fine.</li>
+        <li>If your organization needs supplier onboarding, tax forms, a security questionnaire, contract review or accessibility documentation, tick it below. We reply with what we can provide; ticking a box does not mean we already have it.</li>
+      </ul>
+      <p class="muted" style="margin-top:20px"><a href="mailto:sales@wirewalk.com?subject=Wirewalk%20Institute%20organization%20training">sales@wirewalk.com</a></p>
+      <p class="small faint">Please keep confidential business information, personal data about staff, and credentials out of this form.</p>
+      <p class="small faint">A smaller team that wants to buy seats now does not need an agreement: <a href="/teams/">buy team seats</a> by card, or by invoice from 25 seats.</p>
+    </div>
+    <form class="form-panel ent-form" id="enterprise-form" action="{{ site.enquiry_endpoint }}" method="POST">
+      <input type="hidden" name="_subject" value="Wirewalk Institute of AI — enterprise / organization pricing inquiry">
+      <input type="hidden" name="_next" value="{{ site.url }}/teams/enterprise/thanks/">
+      <input type="hidden" name="page" value="/teams/enterprise/">
+      <input type="hidden" name="practice" value="institute">
+      <input type="hidden" name="request" value="enterprise">
+      <input type="hidden" name="utm_source" value="direct">
+      <input type="hidden" name="utm_medium" value="none">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <div class="honeypot" aria-hidden="true"><label>Leave blank<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <p class="small faint req-note" style="margin:0">Fields marked <span class="req">*</span> are required.</p>
+      <div class="f2">
+        <div><label for="e-name">Name <span class="req" aria-hidden="true">*</span></label><input type="text" id="e-name" name="name" required autocomplete="name" maxlength="160"></div>
+        <div><label for="e-email">Work email <span class="req" aria-hidden="true">*</span></label><input type="email" id="e-email" name="email" required autocomplete="email" maxlength="254" aria-describedby="e-email-help"><p class="field-help" id="e-email-help" aria-live="polite">Your address at your organization&rsquo;s domain.</p></div>
+      </div>
+      <div class="f2">
+        <div><label for="e-org">Organization <span class="req" aria-hidden="true">*</span></label><input type="text" id="e-org" name="organization" required autocomplete="organization" maxlength="200"></div>
+        <div><label for="e-role">Your role <span class="req" aria-hidden="true">*</span></label><input type="text" id="e-role" name="job_role" required autocomplete="organization-title" maxlength="160" placeholder="Head of learning"></div>
+      </div>
+      <div class="f2">
+        <div>
+          <label for="e-country">Country <span class="req" aria-hidden="true">*</span></label>
+          <select id="e-country" name="country" required autocomplete="country-name">
+            <option value="">Choose a country</option>
+            <option value="United States">United States</option>
+            <optgroup label="All countries">
+              {%- for c in page.countries %}
+              <option value="{{ c | escape }}">{{ c | escape }}</option>
+              {%- endfor %}
+              <option value="Other">Other (say in your message)</option>
+            </optgroup>
+          </select>
+        </div>
+        <div id="e-state-wrap">
+          <label for="e-state">State <span class="h">(United States only)</span> <span class="req" aria-hidden="true" data-state-req hidden>*</span></label>
+          <select id="e-state" name="state" autocomplete="address-level1">
+            <option value="">Choose a state</option>
+            {%- for s in page.us_states %}
+            <option value="{{ s | escape }}">{{ s | escape }}</option>
+            {%- endfor %}
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="e-seats">Approximate number of learners <span class="req" aria-hidden="true">*</span></label>
+        <input type="number" id="e-seats" name="seats" required min="1" max="100000" step="1" inputmode="numeric">
+      </div>
+      <fieldset>
+        <legend>Who needs training <span class="h">(optional; tick all that apply)</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="aud_executives" value="yes"> Executives and senior leaders</label>
+          <label class="opt"><input type="checkbox" name="aud_managers" value="yes"> Managers and team leads</label>
+          <label class="opt"><input type="checkbox" name="aud_practitioners" value="yes"> Practitioners using AI in their daily work</label>
+          <label class="opt"><input type="checkbox" name="aud_developers" value="yes"> Software developers</label>
+          <label class="opt"><input type="checkbox" name="aud_ml_engineers" value="yes"> ML and data engineers</label>
+          <label class="opt"><input type="checkbox" name="aud_infrastructure" value="yes"> Infrastructure, platform and HPC engineers</label>
+          <label class="opt"><input type="checkbox" name="aud_security_governance" value="yes"> Security, risk and governance teams</label>
+          <label class="opt"><input type="checkbox" name="aud_other" value="yes"> Other (say in your message)</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Topics <span class="h">(optional; tick all that apply)</span></legend>
+        <div class="opts">
+          {%- for t in site.data.catalog.tracks %}
+          <label class="opt"><input type="checkbox" name="topic_{{ t.id }}" value="yes"> {{ t.title | escape }}</label>
+          {%- endfor %}
+          <label class="opt"><input type="checkbox" name="topic_unsure" value="yes"> Not sure yet</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="e-program">Certification program of interest <span class="h">(optional)</span></label>
+        <select id="e-program" name="programs_interest">
+          <option value="unsure">Not sure</option>
+          <optgroup label="Open for enrollment">
+            {%- for p in site.data.catalog.programs %}{%- if p.status == "on_sale" %}
+            <option value="{{ p.id }}">{{ p.title | escape }}</option>
+            {%- endif %}{%- endfor %}
+          </optgroup>
+          <optgroup label="Coming later (waitlist)">
+            {%- for p in site.data.catalog.programs %}{%- if p.status != "on_sale" %}
+            <option value="{{ p.id }}">{{ p.title | escape }}</option>
+            {%- endif %}{%- endfor %}
+          </optgroup>
+        </select>
+      </div>
+      <div class="f2">
+        <div>
+          <label for="e-timeline">When do you want to start? <span class="req" aria-hidden="true">*</span></label>
+          <select id="e-timeline" name="timeline" required>
+            <option value="">Choose one</option>
+            <option value="within_month">Within a month</option>
+            <option value="1_3_months">In 1 to 3 months</option>
+            <option value="3_6_months">In 3 to 6 months</option>
+            <option value="later">Later than that</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div><label for="e-rollout">Target rollout date <span class="h">(optional)</span></label><input type="date" id="e-rollout" name="rollout_date"></div>
+      </div>
+      <fieldset>
+        <legend>How would your organization pay? <span class="req" aria-hidden="true">*</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="payment" value="card" required> Card</label>
+          <label class="opt"><input type="radio" name="payment" value="invoice"> Invoice</label>
+          <label class="opt"><input type="radio" name="payment" value="purchase_order"> Purchase order</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Procurement needs <span class="h">(optional)</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="proc_vendor_onboarding" value="yes"> Supplier or vendor onboarding</label>
+          <label class="opt"><input type="checkbox" name="proc_w9" value="yes"> W-9 tax form</label>
+          <label class="opt"><input type="checkbox" name="proc_security_questionnaire" value="yes"> Security questionnaire</label>
+          <label class="opt"><input type="checkbox" name="proc_msa_dpa" value="yes"> Master agreement (MSA) or data processing agreement (DPA)</label>
+          <label class="opt"><input type="checkbox" name="proc_vpat" value="yes"> Accessibility documentation (VPAT)</label>
+        </div>
+      </fieldset>
+      <fieldset aria-describedby="e-lms-help">
+        <legend>SCORM/xAPI, LMS integration or single sign-on <span class="h">(optional)</span></legend>
+        <div class="opts one">
+          <label class="opt"><input type="radio" name="lms_sso" value="needed"> We need SCORM/xAPI, LMS integration or SSO</label>
+          <label class="opt"><input type="radio" name="lms_sso" value="not_needed"> We do not</label>
+          <label class="opt"><input type="radio" name="lms_sso" value="unsure"> Not sure</label>
+        </div>
+        <p class="field-help" id="e-lms-help">We do not offer these today: courses are taken on this site and each person signs in with their own account. Telling us helps us answer honestly.</p>
+      </fieldset>
+      <div>
+        <label for="e-message">What do you want to achieve? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="e-message" name="message" required maxlength="4000" aria-describedby="e-msg-help" placeholder="For example: 400 staff in operations and finance need AI foundations before an assistant rollout next quarter; IT security staff need the security program; we pay by purchase order."></textarea>
+        <p class="field-help" id="e-msg-help">Who needs training, on what, by when, and anything about pricing or payment we should know.</p>
+      </div>
+      <button class="btn" type="submit">Send inquiry <span class="arr" aria-hidden="true">→</span></button>
+      <p class="small faint" style="margin:0">This asks for a conversation, quote or agreement; it does not place an order. We record the inquiry and use your details only to reply. <a href="/privacy/">Privacy</a>.</p>
+      <p class="small faint" style="margin:0">Please keep confidential business information, personal data about staff, and credentials out of this form.</p>
+    </form>
+  </div>
+</section>
+{%- comment -%} Personal email providers (_data/free_mail.yml), read by assets/js/enterprise-form.js. Data, not script. {%- endcomment %}
+<script type="application/json" id="free-mail-domains">{{ site.data.free_mail | jsonify | replace: "<", "<" }}</script>
