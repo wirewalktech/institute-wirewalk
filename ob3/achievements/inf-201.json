@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/inf-201.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "GPU Infrastructure for AI",
+  "description": "The operator's view of data-center GPUs: what the current NVIDIA and AMD systems are, how they are packaged and connected, how the driver, CUDA/ROCm and container stack fit together, how to monitor and triage failing GPUs, how to share and size GPU memory, and what power, cooling and sourcing decisions follow.",
+  "humanCode": "INF-201",
+  "fieldOfStudy": "AI Infrastructure and HPC",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "gpu",
+    "nvidia",
+    "amd",
+    "cuda",
+    "rocm",
+    "hgx",
+    "nvlink",
+    "dcgm",
+    "nvidia-smi",
+    "mig",
+    "xid",
+    "ecc",
+    "containers",
+    "gpu memory sizing",
+    "power",
+    "cooling",
+    "infrastructure"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/inf-201.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: GPU Infrastructure for AI"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/inf-201/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain why AI training and inference run on GPUs and identify whether a workload is compute-bound or memory-bandwidth-bound",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-1",
+      "targetCode": "inf-201.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare current NVIDIA and AMD data-center GPUs and choose between PCIe, HGX/OAM baseboard and rack-scale NVLink systems for a stated workload",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-2",
+      "targetCode": "inf-201.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan driver, CUDA, Fabric Manager and container toolkit versions that are mutually compatible, and run GPU containers with Docker, Podman or Kubernetes",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-3",
+      "targetCode": "inf-201.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Monitor GPUs with nvidia-smi, amd-smi and DCGM, and run the right diagnostic level for a given situation",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-4",
+      "targetCode": "inf-201.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage ECC, row-remapping, XID and thermal events and decide between reset, drain and RMA",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-5",
+      "targetCode": "inf-201.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between MIG, time-slicing and MPS for sharing a GPU among users or services",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-6",
+      "targetCode": "inf-201.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Estimate GPU memory for inference (weights plus KV cache) and for full and parameter-efficient fine-tuning",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-7",
+      "targetCode": "inf-201.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate node and rack power and compare the total cost of on-premises and cloud GPU capacity",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/#outcome-8",
+      "targetCode": "inf-201.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/inf-201.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

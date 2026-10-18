@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/dev-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Your First AI API Call: A One-Hour Hands-On Start",
+  "description": "A free, one-hour, hands-on start: what an AI API call actually is, how to get and protect an API key, how to make the same request with curl and with an official Python SDK, and how to read the reply, the token usage and the errors you will meet first. The exercises run on your own provider account, which bills them at well under a dollar in total.",
+  "humanCode": "DEV-001",
+  "fieldOfStudy": "AI in Software Development",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "api",
+    "llm",
+    "first api call",
+    "curl",
+    "python",
+    "anthropic",
+    "openai",
+    "api keys",
+    "tokens"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/dev-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Your First AI API Call: A One-Hour Hands-On Start"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/dev-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain what happens in an AI API call: the endpoint, the authentication header, the JSON request body and the JSON response",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-1",
+      "targetCode": "dev-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create an API key, store it in an environment variable, and apply the basic rules that keep it out of code, chats and repositories",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-2",
+      "targetCode": "dev-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Make a working text-generation request to a hosted model with curl and with an official Python SDK",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-3",
+      "targetCode": "dev-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Read a response's text, stop reason, token usage and request id, and diagnose the common first errors (401, 400, 429)",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-4",
+      "targetCode": "dev-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Hold a multi-turn conversation by resending history, and estimate the cost of a call from its token usage and the published price",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-5",
+      "targetCode": "dev-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/dev-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

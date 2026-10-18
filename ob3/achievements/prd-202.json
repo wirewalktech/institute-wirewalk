@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/prd-202.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Designing AI User Experiences",
+  "description": "A practical course on AI interaction design. You apply Microsoft's Guidelines for Human-AI Interaction and Google's People + AI Guidebook to real patterns: onboarding and expectation setting, chat versus embedded AI, streaming and latency, citations and uncertainty, error recovery, agent approvals, transparency labels and accessibility.",
+  "humanCode": "PRD-202",
+  "fieldOfStudy": "AI Product and Design",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai ux",
+    "interaction design",
+    "hax",
+    "people + ai guidebook",
+    "agent ux",
+    "trust",
+    "accessibility",
+    "c2pa",
+    "eu ai act"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/prd-202.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Designing AI User Experiences"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prd-202/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply the Microsoft HAX guidelines and Google People + AI Guidebook to critique an AI feature design",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-1",
+      "targetCode": "prd-202.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between chat, inline, command and background-agent surfaces for a given task",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-2",
+      "targetCode": "prd-202.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design onboarding and empty states that set accurate expectations of capability and limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-3",
+      "targetCode": "prd-202.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design output presentation with streaming, citations and calibrated uncertainty cues",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-4",
+      "targetCode": "prd-202.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design error, refusal and correction flows that keep users productive",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-5",
+      "targetCode": "prd-202.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design approval, undo and activity-log patterns for agents acting on a user's behalf",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-6",
+      "targetCode": "prd-202.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Meet AI disclosure, content-labeling and WCAG 2.2 accessibility requirements in an AI interface",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-7",
+      "targetCode": "prd-202.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan usability tests for features whose output varies from run to run",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-202/#outcome-8",
+      "targetCode": "prd-202.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/prd-202.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

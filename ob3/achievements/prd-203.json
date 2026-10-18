@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/prd-203.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Measuring AI Features: Metrics, Evals and Experiments",
+  "description": "How to measure AI features end to end. You build a metric tree from business outcome to model quality, instrument implicit and explicit feedback, link offline eval scores to online behavior, and design A/B tests for non-deterministic features with guardrail metrics, variance reduction and sequential testing.",
+  "humanCode": "PRD-203",
+  "fieldOfStudy": "AI Product and Design",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "product metrics",
+    "a/b testing",
+    "experimentation",
+    "evals",
+    "cuped",
+    "sequential testing",
+    "analytics",
+    "ai features"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/prd-203.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Measuring AI Features: Metrics, Evals and Experiments"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prd-203/",
+    "narrative": "To earn this certificate a learner must: complete all 20 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a metric tree that links an AI feature's business outcome to task success, quality and cost metrics",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-1",
+      "targetCode": "prd-203.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose and instrument implicit and explicit feedback signals and explain the bias in each",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-2",
+      "targetCode": "prd-203.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Translate offline eval results into ship criteria and test whether they predict online outcomes",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-3",
+      "targetCode": "prd-203.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an A/B test for a non-deterministic AI feature with an appropriate unit, duration and guardrails",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-4",
+      "targetCode": "prd-203.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply power analysis, CUPED variance reduction and sequential testing correctly",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-5",
+      "targetCode": "prd-203.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Diagnose misleading results caused by novelty effects, interference, sample ratio mismatch and metric gaming",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-6",
+      "targetCode": "prd-203.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Present an experiment readout that leads to a clear ship, iterate or stop decision",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-203/#outcome-7",
+      "targetCode": "prd-203.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/prd-203.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

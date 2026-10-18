@@ -1,0 +1,126 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cmc-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Consumer, Media and Communications: The One-Hour Briefing",
+  "description": "A free one-hour briefing built on twelve real jobs across retail, consumer brands, fashion, hospitality, telecom, media and gaming, not an overview of \"AI in consumer business\". Each lesson follows a named role through one task, such as a service lead launching a returns bot, a merchandiser whose product feed now also feeds AI shopping agents, a reviews analyst publishing an AI summary or a hotel revenue manager approving an RMS rate, and shows where AI helps, where it must not decide, and the rule that governs that task.",
+  "humanCode": "CMC-001",
+  "fieldOfStudy": "AI in Consumer, Media and Communications",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "retail",
+    "e-commerce",
+    "consumer goods",
+    "fashion",
+    "beauty",
+    "hospitality",
+    "travel",
+    "telecommunications",
+    "media",
+    "publishing",
+    "gaming",
+    "sports",
+    "customer service",
+    "ai disclosure",
+    "ftc",
+    "fake reviews",
+    "algorithmic pricing",
+    "eu ai act article 50",
+    "voice cloning",
+    "coppa"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cmc-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Consumer, Media and Communications: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/cmc-001/",
+    "narrative": "To earn this certificate a learner must: complete all 9 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Review a customer-facing AI agent's replies in retail, hospitality or telecom and identify wrong promises, missing AI disclosure, missed escalations and data the bot must never handle (card numbers, CPNI before authentication)",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-1",
+      "targetCode": "cmc-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check an AI-generated product listing, review summary or ad concept against its source data and classify each defect under the governing FTC rule (Section 5 substantiation, 16 CFR Part 465, 16 CFR Part 255)",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-2",
+      "targetCode": "cmc-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide, for a named content task such as a news summary, a cloned-voice dub, an on-model image or a virtual influencer post, whether disclosure, written consent or human editorial review is required and which rule requires it",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-3",
+      "targetCode": "cmc-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a personalized price test or a revenue-management recommendation for New York's algorithmic-pricing disclosure, shared-competitor-data antitrust risk under California AB 325, and fee-inclusive price display",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-4",
+      "targetCode": "cmc-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a success measure for an AI deployment in your role that pairs an efficiency metric with an accuracy or harm guardrail",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-5",
+      "targetCode": "cmc-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose the Wirewalk course that covers your role and industry in depth",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-001/#outcome-6",
+      "targetCode": "cmc-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/cmc-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

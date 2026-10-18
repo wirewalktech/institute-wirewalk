@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/sec-101.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Using AI Safely: Data Handling for Every Employee",
+  "description": "A plain-language course on handling data safely with AI tools: what happens to what you type or upload, how to classify before you paste, how connected apps and agents change the picture, and how to report a mistake quickly.",
+  "humanCode": "SEC-101",
+  "fieldOfStudy": "AI Security: Securing AI Systems",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai safety",
+    "data handling",
+    "data classification",
+    "shadow ai",
+    "privacy",
+    "prompt injection",
+    "security awareness",
+    "acceptable use"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/sec-101.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Using AI Safely: Data Handling for Every Employee"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/sec-101/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 5 modules; and pass the final exam: 20 questions, 30 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain what can happen to prompts, uploads and conversation history in consumer, business and enterprise AI services",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-1",
+      "targetCode": "sec-101.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify information against an organization's data classes before sharing it with an AI tool",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-2",
+      "targetCode": "sec-101.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Redact or substitute sensitive details so a task can still be completed safely",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-3",
+      "targetCode": "sec-101.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify the extra risk introduced by connected apps, file access and AI agents acting on your behalf",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-4",
+      "targetCode": "sec-101.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recognize hidden instructions in emails, documents and web pages that try to manipulate an AI assistant",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-5",
+      "targetCode": "sec-101.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Verify AI output before sharing it or acting on it",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-6",
+      "targetCode": "sec-101.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Report and help contain a suspected AI-related data exposure promptly",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-101/#outcome-7",
+      "targetCode": "sec-101.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/sec-101.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-practitioner-energy.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Energy, Utilities and Natural Resources",
+  "description": "Applies AI to grids, assets and resources, including the energy needs of AI itself.",
+  "humanCode": "CERT-AI-PRACTITIONER-ENERGY",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-practitioner-energy.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Energy, Utilities and Natural Resources"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-energy/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Utility and Energy Professionals (ENR-110); Building and Deploying AI in Power and Utilities (ENR-210); Powering AI: Data Center Energy for Utilities and Developers (ENR-215); Securing AI Infrastructure: GPU Clusters, Model Serving and MLOps Pipelines (SEC-350). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Utility and Energy Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-110/",
+      "targetCode": "enr-110",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Power and Utilities",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-210/",
+      "targetCode": "enr-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Powering AI: Data Center Energy for Utilities and Developers",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/",
+      "targetCode": "enr-215",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Securing AI Infrastructure: GPU Clusters, Model Serving and MLOps Pipelines",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-350/",
+      "targetCode": "sec-350",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-practitioner-finance.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Financial Services",
+  "description": "Uses and deploys AI in regulated financial institutions under model risk, fair lending and conduct rules.",
+  "humanCode": "CERT-AI-PRACTITIONER-FINANCE",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-practitioner-finance.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Financial Services"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-finance/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Banking Professionals (FIN-110); Building and Deploying AI in Banking and Lending (FIN-210); Building and Deploying AI in Insurance (FIN-230); Model Risk Management for AI (GOV-330). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Banking Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/",
+      "targetCode": "fin-110",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Banking and Lending",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-210/",
+      "targetCode": "fin-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Insurance",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/",
+      "targetCode": "fin-230",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Model Risk Management for AI",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-330/",
+      "targetCode": "gov-330",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

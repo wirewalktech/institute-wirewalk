@@ -1,0 +1,105 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/ven-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Your First Hour with ChatGPT, Claude and Gemini",
+  "description": "A friendly, hands-on hour with the three best-known AI chat assistants. Set up a free account with sensible privacy settings, write a first prompt that actually works, follow up, use files and web search, check the answers, and pick the assistant that suits you.",
+  "humanCode": "VEN-001",
+  "fieldOfStudy": "AI Models and Vendors",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "chatgpt",
+    "claude",
+    "gemini",
+    "openai",
+    "anthropic",
+    "google",
+    "beginner",
+    "prompting",
+    "privacy"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/ven-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Your First Hour with ChatGPT, Claude and Gemini"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/ven-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain in plain terms what an AI chat assistant does well, where it goes wrong, and how ChatGPT, Claude and Gemini differ",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-1",
+      "targetCode": "ven-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set up a free account and find the setting that controls whether your chats may be used to train the vendor's models",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-2",
+      "targetCode": "ven-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a first prompt using goal, context and format, and improve the result with focused follow-ups",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-3",
+      "targetCode": "ven-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use file uploads and web search appropriately, and decide what information should never be pasted into a personal account",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-4",
+      "targetCode": "ven-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check an answer for hallucinations and outdated facts before relying on it, and choose which assistant to use for a given task",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-5",
+      "targetCode": "ven-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/ven-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

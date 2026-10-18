@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-practitioner-manufacturing.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Manufacturing and Industrial Operations",
+  "description": "Applies AI to maintenance, quality, vision and robotics on real plants.",
+  "humanCode": "CERT-AI-PRACTITIONER-MANUFACTURING",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-practitioner-manufacturing.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Manufacturing and Industrial Operations"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-manufacturing/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Manufacturing and Plant Professionals (MFG-110); Building and Deploying AI in Industrial Operations (MFG-210); Building and Deploying Machine Vision and Robotics in Industrial Operations (MFG-215); Securing AI Infrastructure: GPU Clusters, Model Serving and MLOps Pipelines (SEC-350). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Manufacturing and Plant Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/",
+      "targetCode": "mfg-110",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Industrial Operations",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/",
+      "targetCode": "mfg-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying Machine Vision and Robotics in Industrial Operations",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-215/",
+      "targetCode": "mfg-215",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Securing AI Infrastructure: GPU Clusters, Model Serving and MLOps Pipelines",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-350/",
+      "targetCode": "sec-350",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

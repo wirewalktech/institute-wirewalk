@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/prm-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Prompting Basics in One Hour",
+  "description": "A free one-hour introduction to writing prompts that work. Learn what a chat assistant actually does with your words, the four ingredients of a clear prompt, how to use examples and follow-ups, and how to check answers and protect sensitive data before you rely on the output.",
+  "humanCode": "PRM-001",
+  "fieldOfStudy": "Prompt and Context Engineering",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "prompting",
+    "prompt basics",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "few-shot",
+    "hallucinations",
+    "ai privacy",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/prm-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Prompting Basics in One Hour"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prm-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain in plain terms how a chat assistant produces an answer, and why it only works from what is in its context (your conversation, anything you add or connect) plus what it learned in training",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-1",
+      "targetCode": "prm-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Rewrite a vague request into a clear prompt that states the task, context, format and constraints",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-2",
+      "targetCode": "prm-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use examples, a short role and step-by-step instructions to steer tone, structure and accuracy",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-3",
+      "targetCode": "prm-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Improve a weak answer through targeted follow-up prompts, and recognize when to start a fresh conversation",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-4",
+      "targetCode": "prm-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check an AI answer for confident mistakes and decide what to verify before relying on it",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-5",
+      "targetCode": "prm-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply simple rules for keeping confidential and personal information out of AI tools that are not approved for it",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-6",
+      "targetCode": "prm-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/prm-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

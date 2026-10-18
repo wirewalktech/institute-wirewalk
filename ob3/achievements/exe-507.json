@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/exe-507.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Regulatory and Compliance Exposure: An Executive Briefing",
+  "description": "An executive briefing on AI regulatory exposure: supply-chain roles, building an exposure map from your AI inventory, the EU AI Act after the 2026 Digital Omnibus, GPAI obligations, US federal, state and sector rules, other major jurisdictions, standards, liability, and how to prioritize and report a compliance program.",
+  "humanCode": "EXE-507",
+  "fieldOfStudy": "Executive Leadership",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "executive",
+    "ai regulation",
+    "compliance",
+    "eu ai act",
+    "digital omnibus",
+    "gpai",
+    "us state ai laws",
+    "nyc local law 144",
+    "iso 42001",
+    "nist ai rmf",
+    "product liability"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/exe-507.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Regulatory and Compliance Exposure: An Executive Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/exe-507/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 5 modules; and pass the final exam: 15 questions, 30 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Determine the organization's role (provider, deployer, importer or distributor) for each AI system it builds, buys or sells",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-1",
+      "targetCode": "exe-507.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a regulatory exposure map from an AI inventory and identify jurisdictional triggers",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-2",
+      "targetCode": "exe-507.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Summarize EU AI Act obligations by risk tier and the compliance dates as adjusted by the 2026 Digital Omnibus",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-3",
+      "targetCode": "exe-507.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify which US federal, state and sector requirements apply to a given AI use",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-4",
+      "targetCode": "exe-507.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare the main international regulatory models and explain how standards such as ISO/IEC 42001 and the NIST AI RMF reduce duplicated effort",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-5",
+      "targetCode": "exe-507.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prioritize a compliance program by exposure, penalty and deadline, with named owners",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-6",
+      "targetCode": "exe-507.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Report AI regulatory exposure and horizon-scanning results to the executive team",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-507/#outcome-7",
+      "targetCode": "exe-507.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/exe-507.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

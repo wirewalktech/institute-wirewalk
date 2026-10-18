@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/gov-201.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Governance and Risk Management: NIST AI RMF and ISO/IEC 42001",
+  "description": "A practitioner's course in building AI governance that works: inventory, intake, risk tiering, impact assessment, lifecycle controls and leadership reporting, anchored to NIST AI RMF 1.0, its Generative AI Profile and ISO/IEC 42001. Ends with a 90-day program build plan and ready-to-adapt templates.",
+  "humanCode": "GOV-201",
+  "fieldOfStudy": "Governance, Risk and Compliance",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai governance",
+    "risk management",
+    "nist ai rmf",
+    "iso/iec 42001",
+    "iso/iec 23894",
+    "iso/iec 42005",
+    "eu ai act",
+    "impact assessment",
+    "compliance",
+    "audit",
+    "third-party risk"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/gov-201.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Governance and Risk Management: NIST AI RMF and ISO/IEC 42001"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/gov-201/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain how AI risk differs from traditional IT risk and why existing controls leave gaps",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-1",
+      "targetCode": "gov-201.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a governance structure with an AI committee, accountable owners and a RACI that assigns every key decision",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-2",
+      "targetCode": "gov-201.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an AI inventory, intake form and risk-tiering scheme that route use cases to proportionate review",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-3",
+      "targetCode": "gov-201.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply the NIST AI RMF functions, Playbook and Generative AI Profile to a real use case",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-4",
+      "targetCode": "gov-201.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Interpret ISO/IEC 42001 clauses and Annex A controls and draft a Statement of Applicability",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-5",
+      "targetCode": "gov-201.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Crosswalk NIST AI RMF, ISO/IEC 42001, ISO/IEC 23894, ISO/IEC 42005 and the EU AI Act to reuse evidence across frameworks",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-6",
+      "targetCode": "gov-201.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run an AI impact assessment and define lifecycle and third-party controls with clear gates",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-7",
+      "targetCode": "gov-201.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce leadership metrics and a 90-day plan to stand up an AI governance program",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-201/#outcome-8",
+      "targetCode": "gov-201.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/gov-201.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

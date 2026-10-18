@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cyb-302.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "The Agentic SOC: Autonomous Investigation and Response with Guardrails",
+  "description": "Design and operate AI agents that investigate and respond in a SOC: autonomy levels, agent architecture and tool design over MCP, investigation planning and evidence handling, bounded response actions with approvals and rollback, evaluation harnesses and red-teaming of the agents themselves, and the operating model changes an agentic SOC requires.",
+  "humanCode": "CYB-302",
+  "fieldOfStudy": "Security by AI: AI for Cyber Defense",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "agentic soc",
+    "ai agents",
+    "autonomous response",
+    "guardrails",
+    "mcp",
+    "soar",
+    "prompt injection",
+    "evaluation",
+    "red teaming",
+    "security copilot",
+    "charlotte ai",
+    "purple ai",
+    "google secops"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cyb-302.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: The Agentic SOC: Autonomous Investigation and Response with Guardrails"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/cyb-302/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify SOC tasks by safe autonomy level and justify the level using impact, reversibility and evidence quality",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-1",
+      "targetCode": "cyb-302.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an investigation agent architecture with planning, least-privilege tools, case memory and audit logging",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-2",
+      "targetCode": "cyb-302.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Expose security tools to agents through MCP or equivalent interfaces with scoped credentials and read/write separation",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-3",
+      "targetCode": "cyb-302.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Implement response guardrails: allowlists, blast-radius limits, impact-sized approvals, dry runs and rollback",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-4",
+      "targetCode": "cyb-302.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Defend agents against prompt injection and data poisoning delivered through alerts, logs and evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-5",
+      "targetCode": "cyb-302.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an evaluation harness from replayed incidents and measure verdict accuracy, completeness and cost",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-6",
+      "targetCode": "cyb-302.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Red-team a SOC agent and define incident response for agent failures",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-7",
+      "targetCode": "cyb-302.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design the staffing, escalation and accountability model for an agentic SOC",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/#outcome-8",
+      "targetCode": "cyb-302.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/cyb-302.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-infrastructure.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Infrastructure Engineer",
+  "description": "Designs and operates GPU clusters for training and inference.",
+  "humanCode": "CERT-AI-INFRASTRUCTURE",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-infrastructure.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Infrastructure Engineer"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-infrastructure/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: GPU Infrastructure for AI (INF-201); HPC Cluster Design for AI: Compute, Fabric and Storage (INF-310); Distributed Training at Scale: DDP, FSDP, DeepSpeed and Megatron (TRN-310); LLM Inference and Serving: vLLM, SGLang, TensorRT-LLM and Triton (SRV-310). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "GPU Infrastructure for AI",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-201/",
+      "targetCode": "inf-201",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "HPC Cluster Design for AI: Compute, Fabric and Storage",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/",
+      "targetCode": "inf-310",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distributed Training at Scale: DDP, FSDP, DeepSpeed and Megatron",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/",
+      "targetCode": "trn-310",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "LLM Inference and Serving: vLLM, SGLang, TensorRT-LLM and Triton",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/",
+      "targetCode": "srv-310",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

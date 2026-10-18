@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/fnd-105.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Python for AI Work",
+  "description": "A beginner's path from installing Python to a working script that reads a CSV, cleans it with pandas, sends text to an AI model through an official SDK, and saves the results. Uses current tooling as of October 2026: Python 3.14 or newer, uv for environments, Jupyter and VS Code.",
+  "humanCode": "FND-105",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "python",
+    "uv",
+    "jupyter",
+    "vs code",
+    "pandas",
+    "csv",
+    "json",
+    "api",
+    "openai sdk",
+    "anthropic sdk",
+    "google gen ai sdk",
+    "automation",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/fnd-105.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Python for AI Work"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-105/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 5 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set up an isolated Python project with uv and run code in both Jupyter and VS Code",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-1",
+      "targetCode": "fnd-105.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write short Python programs using variables, lists, dictionaries, loops, conditionals and functions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-2",
+      "targetCode": "fnd-105.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Read a Python traceback and locate and fix common beginner errors",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-3",
+      "targetCode": "fnd-105.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Load, clean, filter and summarize tabular data with pandas, and read and write CSV and JSON files",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-4",
+      "targetCode": "fnd-105.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Store API keys in environment variables and make a first model call with an official vendor SDK",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-5",
+      "targetCode": "fnd-105.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Process a batch of records through an AI model with basic error handling, retries and cost awareness",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-6",
+      "targetCode": "fnd-105.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use an AI coding assistant to draft and explain code while checking its output",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-105/#outcome-7",
+      "targetCode": "fnd-105.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/fnd-105.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

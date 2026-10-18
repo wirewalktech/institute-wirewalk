@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-security.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Security Professional",
+  "description": "Secures AI applications, agents, models and infrastructure.",
+  "humanCode": "CERT-AI-SECURITY",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-security.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Security Professional"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-security/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI Security Fundamentals: The OWASP Top 10 for LLMs (SEC-201); Prompt Injection and Agent Security (SEC-210); AI Red Teaming (SEC-310); Adversarial Machine Learning: Evasion, Poisoning and Model Extraction (SEC-340). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI Security Fundamentals: The OWASP Top 10 for LLMs",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-201/",
+      "targetCode": "sec-201",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prompt Injection and Agent Security",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-210/",
+      "targetCode": "sec-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI Red Teaming",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/",
+      "targetCode": "sec-310",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Adversarial Machine Learning: Evasion, Poisoning and Model Extraction",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/",
+      "targetCode": "sec-340",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

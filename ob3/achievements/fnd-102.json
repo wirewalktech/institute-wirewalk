@@ -1,0 +1,126 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/fnd-102.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "How Large Language Models Work, Without the Math",
+  "description": "A guided tour of the machinery inside a large language model, told in plain-language analogies, tables and small runnable examples rather than equations: tokenizers, embeddings, attention, pretraining, instruction tuning, reasoning models, context windows and sampling. You leave able to explain why models behave the way they do.",
+  "humanCode": "FND-102",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "large language models",
+    "llm",
+    "tokens",
+    "embeddings",
+    "attention",
+    "transformer",
+    "rlhf",
+    "reasoning models",
+    "context window",
+    "rag",
+    "tool calling",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/fnd-102.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: How Large Language Models Work, Without the Math"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-102/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Trace how a sentence is split into tokens and explain why token counts drive cost, limits and some odd mistakes such as miscounting letters",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-1",
+      "targetCode": "fnd-102.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe embeddings and attention in plain language and use them to explain how a model relates words across a passage",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-2",
+      "targetCode": "fnd-102.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish pretraining, supervised instruction tuning and preference training, and explain what each contributes to an assistant's behavior",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-3",
+      "targetCode": "fnd-102.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain what reasoning models do differently at answer time and when the extra cost and latency are worth it",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-4",
+      "targetCode": "fnd-102.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain how temperature and sampling produce varied answers, and when to expect consistency",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-5",
+      "targetCode": "fnd-102.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe context windows, tool use and retrieval, and predict where a model will struggle with long or unfamiliar material",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-6",
+      "targetCode": "fnd-102.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Map common surprising behaviors, such as hallucination, sycophancy and knowledge cutoffs, to the mechanism that causes them",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-102/#outcome-7",
+      "targetCode": "fnd-102.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/fnd-102.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

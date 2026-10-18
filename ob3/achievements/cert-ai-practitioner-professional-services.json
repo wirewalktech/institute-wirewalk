@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/cert-ai-practitioner-professional-services.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Professional Services",
+  "description": "Uses and deploys AI in legal, accounting and HR work under professional duties.",
+  "humanCode": "CERT-AI-PRACTITIONER-PROFESSIONAL-SERVICES",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/cert-ai-practitioner-professional-services.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Professional Services"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-professional-services/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Legal Professionals (WRK-111); Building and Deploying AI in Legal Practice (PRO-210); Building and Deploying AI in Audit and Assurance (PRO-220); Building and Deploying AI in HR and Recruiting (PRO-230). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Legal Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-111/",
+      "targetCode": "wrk-111",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Legal Practice",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/",
+      "targetCode": "pro-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Audit and Assurance",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-220/",
+      "targetCode": "pro-220",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in HR and Recruiting",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-230/",
+      "targetCode": "pro-230",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

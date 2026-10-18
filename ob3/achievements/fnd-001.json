@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/fnd-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "What Is AI? A One-Hour Introduction",
+  "description": "A free, plain-English hour on artificial intelligence: what the words mean, how a chat assistant writes one piece at a time, what it does well, how it fails, and how to ask it for help without putting your work or your data at risk.",
+  "humanCode": "FND-001",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "ai literacy",
+    "generative ai",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "hallucination",
+    "prompting",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/fnd-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: What Is AI? A One-Hour Introduction"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the difference between AI, machine learning and generative AI using everyday examples",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-1",
+      "targetCode": "fnd-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe in plain language how a chat assistant produces an answer by predicting text token by token",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-2",
+      "targetCode": "fnd-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recognize hallucinations, knowledge cutoffs and bias, and predict when each is likely to appear",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-3",
+      "targetCode": "fnd-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a clear request using context, task, format and constraints, and improve it by follow-up",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-4",
+      "targetCode": "fnd-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply simple rules for what information to share with an AI tool and how to check its output before relying on it",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-5",
+      "targetCode": "fnd-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/fnd-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

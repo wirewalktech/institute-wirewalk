@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/trn-310.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Distributed Training at Scale: DDP, FSDP, DeepSpeed and Megatron",
+  "description": "A practitioner's course on how large-model training is actually distributed: data parallelism and sharding (DDP, ZeRO, FSDP2), tensor, pipeline, context and expert parallelism, how to combine them, and how to launch, checkpoint, measure and debug the result on a real cluster.",
+  "humanCode": "TRN-310",
+  "fieldOfStudy": "Training at Scale",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "distributed-training",
+    "ddp",
+    "fsdp",
+    "zero",
+    "deepspeed",
+    "megatron",
+    "nccl",
+    "tensor-parallelism",
+    "pipeline-parallelism",
+    "context-parallelism",
+    "mixture-of-experts",
+    "slurm",
+    "infiniband",
+    "mfu",
+    "checkpointing"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/trn-310.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Distributed Training at Scale: DDP, FSDP, DeepSpeed and Megatron"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/trn-310/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate per-GPU memory for weights, gradients, optimizer state and activations under DDP, ZeRO 1/2/3 and FSDP2",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-1",
+      "targetCode": "trn-310.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Estimate the communication cost of all-reduce, all-gather and reduce-scatter and relate it to NVLink and InfiniBand bandwidth",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-2",
+      "targetCode": "trn-310.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Configure DDP, DeepSpeed ZeRO and PyTorch FSDP2 correctly, including mixed precision, offload and gradient accumulation",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-3",
+      "targetCode": "trn-310.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain tensor, sequence, pipeline, context and expert parallelism and compute pipeline bubble overhead for a given schedule",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-4",
+      "targetCode": "trn-310.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose and justify a combined parallel layout for a large model on a given cluster",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-5",
+      "targetCode": "trn-310.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Launch multi-node jobs with torchrun and Slurm, tune NCCL for the fabric, and write resumable sharded checkpoints",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-6",
+      "targetCode": "trn-310.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Measure MFU and scaling efficiency and diagnose hangs, NCCL timeouts and stragglers",
+      "targetUrl": "https://institute.wirewalk.com/courses/trn-310/#outcome-7",
+      "targetCode": "trn-310.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/trn-310.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

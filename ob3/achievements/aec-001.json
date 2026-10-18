@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/aec-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in the Built Environment and Real Estate: The One-Hour Briefing",
+  "description": "A free hour built around real jobs in design, construction, real estate and building operations: checking an egress requirement with a code copilot, drafting an RFI and first-checking a submittal, reconciling an AI takeoff, scoring photo hazard tags, writing MLS remarks and disclosing a virtually staged photo, auditing a leasing chatbot, and finding a stuck damper in HVAC trends. Each shows where AI helps, where a licensed or accountable person must decide, and the rule that applies.",
+  "humanCode": "AEC-001",
+  "fieldOfStudy": "AI in the Built Environment and Real Estate",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "architecture",
+    "construction",
+    "real estate",
+    "property management",
+    "facilities",
+    "smart buildings",
+    "fair housing",
+    "fcra",
+    "osha",
+    "building codes",
+    "rfi",
+    "submittals",
+    "hvac",
+    "algorithmic pricing",
+    "avm"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/aec-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in the Built Environment and Real Estate: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/aec-001/",
+    "narrative": "To earn this certificate a learner must: complete all 8 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check an AI code-research answer against the adopted code and local amendments of a jurisdiction, and explain why a sealed document still requires the architect's responsible control",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-1",
+      "targetCode": "aec-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Score an AI submittal comparison and an AI quantity takeoff against an answer key, and name the decisions (accepting deviations, notices, bid scope) that stay with a person",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-2",
+      "targetCode": "aec-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Find and fix steering language, invented features and undisclosed digitally altered photos in a synthetic listing, citing FHA section 3604(c) and California AB 723",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-3",
+      "targetCode": "aec-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a paired-tester consistency audit for an AI leasing agent and state the FCRA steps a manager must take before acting on a screening report",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-4",
+      "targetCode": "aec-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute precision and recall for AI hazard tags or fault alerts on synthetic data, and write a use policy that keeps competent-person inspections and life-safety decisions human",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-5",
+      "targetCode": "aec-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify the data a rent-pricing or valuation tool may use as allowed, risky or do-not-use, and pick the next Wirewalk course for your role",
+      "targetUrl": "https://institute.wirewalk.com/courses/aec-001/#outcome-6",
+      "targetCode": "aec-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/aec-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

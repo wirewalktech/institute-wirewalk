@@ -412,12 +412,20 @@
             (c.validUntil ? "<dt>" + (c.expired ? "Expired" : "Valid until") + "</dt><dd>" + fmtDate(c.validUntil) + "</dd>" : "") +
             (c.scorePct != null ? "<dt>Exam score</dt><dd>" + esc(c.scorePct) + "%</dd>" : "") +
             "<dt>Certificate ID</dt><dd><code>" + esc(c.id) + "</code></dd>";
+          /* [ob3] Only when the Worker says the certificate is also issued as an Open Badge. The
+             achievement link is used only if it is our own static definition. */
+          var ach = typeof c.achievementUrl === "string" && /^https:\/\/institute\.wirewalk\.com\/ob3\/achievements\/[a-z0-9-]{1,40}\.json$/.test(c.achievementUrl) ? c.achievementUrl : null;
+          var badge = c.openBadge === true
+            ? '<p class="small muted" style="margin-top:14px">This certificate is also issued as an Open Badges 3.0 credential (' +
+              (ach ? '<a href="' + esc(ach) + '">achievement definition</a>, ' : "") + '<a href="/ob3/issuer.json">issuer profile</a>; ' +
+              '<a href="/certification/#open-badges">what that means</a>). Received a badge file? Check that its certificate ID matches this page.</p>'
+            : "";
           if (c.valid && !c.revoked) {
-            show("good", '<h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--ok)"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Valid certificate</h2><p class="muted">Issued by the Wirewalk Institute of AI. It attests that the holder completed the course and passed its automated exam; see <a href="/certification/#limits">what a certificate attests</a>.</p><dl>' + rows + "</dl>", true);
+            show("good", '<h2><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--ok)"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Valid certificate</h2><p class="muted">Issued by the Wirewalk Institute of AI. It attests that the holder completed the course and passed its automated exam; see <a href="/certification/#limits">what a certificate attests</a>.</p><dl>' + rows + "</dl>" + badge, true);
           } else if (c.revoked) {
-            show("bad", "<h2>This certificate has been revoked</h2><p class=\"muted\">It was issued by the Wirewalk Institute of AI but has been revoked and is no longer valid. Do not rely on it.</p><dl>" + rows + "</dl>", true);
+            show("bad", "<h2>This certificate has been revoked</h2><p class=\"muted\">It was issued by the Wirewalk Institute of AI but has been revoked and is no longer valid. Do not rely on it.</p><dl>" + rows + "</dl>" + badge, true);
           } else if (c.expired) {   /* [freshness] */
-            show("bad", "<h2>This certificate has expired</h2><p class=\"muted\">It was issued by the Wirewalk Institute of AI and was valid until " + fmtDate(c.validUntil) + ". It is not currently valid. The holder can renew it by passing the assessment again; a renewed certificate keeps this ID.</p><dl>" + rows + "</dl>", true);
+            show("bad", "<h2>This certificate has expired</h2><p class=\"muted\">It was issued by the Wirewalk Institute of AI and was valid until " + fmtDate(c.validUntil) + ". It is not currently valid. The holder can renew it by passing the assessment again; a renewed certificate keeps this ID.</p><dl>" + rows + "</dl>" + badge, true);
           } else {
             show("bad", "<h2>This certificate is not currently valid</h2><p class=\"muted\">It was issued by the Wirewalk Institute of AI, but the verification service does not confirm it as valid at the moment. Do not rely on it; email <a href=\"mailto:sales@wirewalk.com?subject=Certificate%20verification%20" + encodeURIComponent(id) + "\">sales@wirewalk.com</a> with the ID if you need to know more.</p><dl>" + rows + "</dl>", true);
           }

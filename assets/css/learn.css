@@ -529,3 +529,9 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-break { white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .wl-cert-mfacts { display: block; } }
 .wl-checkout-changed { margin-top: 12px; }
+
+/* [ob3] Open Badge downloads on the certificate page (holder only) */
+.wl-badge-panel { max-width: 640px; margin: 14px auto 0; padding: 16px 18px; border: 1px solid var(--wl-line); border-radius: 12px; background: var(--wl-surface); }
+.wl-badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.wl .wl-badge-h { font: 650 15px/1.3 var(--wl-sans); margin: 14px 0 4px; }
+.wl-badge-panel .wl-hint { margin: 6px 0 0; }

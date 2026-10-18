@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/edu-220.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Higher Education and Research Computing",
+  "description": "A job-by-job course for the people who build and run AI at a university: the IAM lead scoring ChatGPT Edu, Gemini for Education, Claude for Education and Microsoft 365 Copilot terms; the HPC engineer writing Slurm GPU partitions; the RSE running a campus LLM gateway; the data steward, IRB analyst and export-control officer; and the sponsored-programs office and research-computing director. Every module is a real task with a hands-on exercise on synthetic data.",
+  "humanCode": "EDU-220",
+  "fieldOfStudy": "AI in Education and Research",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "higher education",
+    "research computing",
+    "hpc",
+    "slurm",
+    "gpu partitions",
+    "mig",
+    "open ondemand",
+    "vllm",
+    "llm gateway",
+    "ferpa",
+    "glba",
+    "lti 1.3",
+    "nist 800-171",
+    "dbgap",
+    "irb",
+    "export controls",
+    "nih",
+    "nsf",
+    "access allocations",
+    "nairr",
+    "2 cfr 200.468"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/edu-220.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Higher Education and Research Computing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/edu-220/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Score campus AI assistant contract terms against a FERPA direct-control (34 CFR 99.31(a)(1)(i)(B)), GLBA 16 CFR 314.4(f) and data-classification checklist, and specify the contract, retention and connector changes required before launch",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-1",
+      "targetCode": "edu-220.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Remove unneeded LTI 1.3 scopes from an AI tutor registration and write instructor guidance for a flagged submission that does not rely on a detector score alone",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-2",
+      "targetCode": "edu-220.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a GPU partition layout (whole GPU, MIG, shard) from Slurm accounting data and write Slurm 26.05 gres.conf, partition, QOS and TRESBillingWeights settings that keep regulated work off unisolated shards",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-3",
+      "targetCode": "edu-220.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Configure an OpenAI-compatible campus LLM gateway over vLLM with SSO, per-team budgets, data-class routing and a log retention limit, and find the policy violations planted in its request log",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-4",
+      "targetCode": "edu-220.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Scope an 800-171 enclave boundary on a shared cluster, classify AI workflows on controlled-access genomic data as allowed, needing NIH approval or prohibited under NOT-OD-24-157 and NOT-OD-25-081, and write a closeout checklist that removes model parameters",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-5",
+      "targetCode": "edu-220.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify an IRB-ready on-premises transcription and AI-assisted coding workflow for identifiable interviews, including consent language naming each processor and a word-error-rate and hallucination check",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-6",
+      "targetCode": "edu-220.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify proposed AI uses by PIs, students and reviewers under NIH NOT-OD-25-132, NIH NOT-OD-23-149 and the NSF merit-review notice, and resolve deemed-export questions for cluster and model access with a Slurm-enforced technology control plan, routing DFARS 252.204-7012/CUI work to the 800-171 environment",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-7",
+      "targetCode": "edu-220.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute a GPU-hour request with contingency for an ACCESS, NAIRR or DOE allocation, and a break-even GPU service rate that is identical for federal and non-federal users under 2 CFR 200.468",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-220/#outcome-8",
+      "targetCode": "edu-220.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/edu-220.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

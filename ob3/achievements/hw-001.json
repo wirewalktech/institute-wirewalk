@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/hw-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Inside an AI Data Center: GPUs, Networks and Storage in One Hour",
+  "description": "A plain-English, one-hour walk through an AI data center: what a model asks of hardware, what is inside a GPU server, how GPUs talk over NVLink, InfiniBand and Ethernet, where the data lives, and why AI racks need so much power and cooling.",
+  "humanCode": "HW-001",
+  "fieldOfStudy": "AI Hardware",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "ai hardware",
+    "data center",
+    "gpu",
+    "hbm",
+    "nvlink",
+    "infiniband",
+    "ethernet",
+    "storage",
+    "liquid cooling",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/hw-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Inside an AI Data Center: GPUs, Networks and Storage in One Hour"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hw-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain why AI performance depends on memory bandwidth and data movement as well as compute",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-001/#outcome-1",
+      "targetCode": "hw-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe the main parts of a GPU server, including HBM, NVLink and the network cards",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-001/#outcome-2",
+      "targetCode": "hw-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish scale-up links such as NVLink from scale-out networks such as InfiniBand and Ethernet",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-001/#outcome-3",
+      "targetCode": "hw-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Name the storage tiers in an AI data center and what each one is used for",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-001/#outcome-4",
+      "targetCode": "hw-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain why AI racks need far more power and cooling than ordinary server racks, and what PUE measures",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-001/#outcome-5",
+      "targetCode": "hw-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/hw-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

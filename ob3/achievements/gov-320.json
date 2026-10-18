@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/gov-320.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Audit and Assurance",
+  "description": "A practitioner course in auditing AI: choosing criteria, building the AI audit universe, scoping risk-based engagements, testing governance and lifecycle controls, reperforming evaluations and inspecting LLM logs and guardrails, writing findings and reporting to the audit committee, and understanding regulated audits such as NYC bias audits and EU AI Act conformity assessment.",
+  "humanCode": "GOV-320",
+  "fieldOfStudy": "Governance, Risk and Compliance",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai audit",
+    "assurance",
+    "internal audit",
+    "iia",
+    "isae 3000",
+    "soc 2",
+    "bias audit",
+    "conformity assessment",
+    "nist ai rmf",
+    "iso/iec 42001",
+    "audit committee"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/gov-320.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Audit and Assurance"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/gov-320/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules; and pass the final exam: 25 questions, 50 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select appropriate audit criteria and engagement type for an AI audit or assurance request",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-1",
+      "targetCode": "gov-320.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an AI audit universe and a risk-based audit plan from an AI inventory",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-2",
+      "targetCode": "gov-320.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write audit programs for predictive, generative and agentic AI systems",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-3",
+      "targetCode": "gov-320.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Test AI governance, lifecycle and third-party controls and evaluate evidence sufficiency",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-4",
+      "targetCode": "gov-320.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reperform model evaluations and inspect LLM logs, guardrails and red-team results",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-5",
+      "targetCode": "gov-320.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write AI audit findings using condition, criteria, cause, effect and recommendation and report them to an audit committee",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-6",
+      "targetCode": "gov-320.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the scope and limits of statutory bias audits and EU AI Act conformity assessment",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-320/#outcome-7",
+      "targetCode": "gov-320.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/gov-320.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

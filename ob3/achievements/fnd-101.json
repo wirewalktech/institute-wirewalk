@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/fnd-101.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Foundations for Everyone",
+  "description": "A plain-language grounding in artificial intelligence: what AI, machine learning and generative AI actually are, how chat assistants produce text, why they sometimes get things confidently wrong, and how to use them safely for real work.",
+  "humanCode": "FND-101",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai literacy",
+    "generative ai",
+    "large language models",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "hallucination",
+    "ai safety",
+    "prompting",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/fnd-101.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Foundations for Everyone"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-101/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the difference between AI, machine learning, deep learning and generative AI using everyday examples",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-1",
+      "targetCode": "fnd-101.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe in plain language how a large language model produces text from tokens and next-token prediction, and how training differs from inference",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-2",
+      "targetCode": "fnd-101.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify the common failure modes of AI assistants, including hallucination, knowledge cutoffs and bias, and predict when each is likely",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-3",
+      "targetCode": "fnd-101.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare the major AI vendors and the difference between closed and open-weight models at an overview level",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-4",
+      "targetCode": "fnd-101.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a data-classification rule to decide what information is safe to share with a given AI tool",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-5",
+      "targetCode": "fnd-101.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Verify AI-generated output using a proportionate checking routine before relying on it",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-6",
+      "targetCode": "fnd-101.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write clear, structured requests and run at least three practical everyday workflows with an AI assistant",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-101/#outcome-7",
+      "targetCode": "fnd-101.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/fnd-101.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/hw-101.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Hardware Fundamentals: GPUs, CPUs, Memory, Networking and Storage",
+  "description": "A plain-language tour of the hardware that runs AI: why AI is limited by compute, memory bandwidth and data movement; what GPUs, HBM and precision formats are; how servers, networks, storage, power and cooling fit together; and how to size a simple inference or training system and weigh cloud against buying.",
+  "humanCode": "HW-101",
+  "fieldOfStudy": "AI Hardware",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai hardware",
+    "gpu",
+    "hbm",
+    "accelerators",
+    "infiniband",
+    "ethernet",
+    "nvme",
+    "parallel filesystem",
+    "liquid cooling",
+    "data center",
+    "capacity planning",
+    "procurement",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/hw-101.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Hardware Fundamentals: GPUs, CPUs, Memory, Networking and Storage"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hw-101/",
+    "narrative": "To earn this certificate a learner must: complete all 20 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain why AI workloads are limited by compute, memory bandwidth and data movement, and identify which limit dominates for training and for inference",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-1",
+      "targetCode": "hw-101.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish CPUs, GPUs and other AI accelerators, and describe the role of tensor units, HBM and precision formats in a GPU",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-2",
+      "targetCode": "hw-101.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare PCIe, SXM and OAM form factors, 8-GPU servers and rack-scale systems, and state their power and cooling implications",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-3",
+      "targetCode": "hw-101.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe how Ethernet, InfiniBand, NICs and switches connect GPUs, and why bandwidth and latency matter for multi-GPU work",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-4",
+      "targetCode": "hw-101.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the roles of local NVMe, parallel filesystems and object storage in feeding GPUs and saving checkpoints",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-5",
+      "targetCode": "hw-101.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Read an accelerator or server spec sheet and spot the figures that are peak, sparse or otherwise not comparable",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-6",
+      "targetCode": "hw-101.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Size the GPU memory and approximate throughput for a simple inference server and a small training system using back-of-envelope arithmetic",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-7",
+      "targetCode": "hw-101.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Structure a cloud-versus-buy comparison using utilization, total cost and operational factors",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-101/#outcome-8",
+      "targetCode": "hw-101.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/hw-101.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

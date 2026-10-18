@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/mfg-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Manufacturing and Industrial Operations: The One-Hour Briefing",
+  "description": "A free hour built around real plant jobs: a maintenance planner turning overnight vibration alerts into work orders, a technician diagnosing a drive fault with a manual-citing copilot without touching lockout/tagout, a quality engineer setting the threshold on an AI terminal-lock vision check, an OT engineer deciding read-only versus write-back for a vendor's cloud link, a machine-safety engineer classifying ML person detection, and a pharma QA specialist drafting a deviation summary under human review.",
+  "humanCode": "MFG-001",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "manufacturing",
+    "industrial operations",
+    "predictive maintenance",
+    "cmms",
+    "machine vision",
+    "quality",
+    "ot security",
+    "iec 62443",
+    "lockout tagout",
+    "machinery regulation",
+    "gmp",
+    "deviation",
+    "industrial copilot",
+    "alarm management",
+    "food safety",
+    "semiconductors",
+    "ndt"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/mfg-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Manufacturing and Industrial Operations: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-001/",
+    "narrative": "To earn this certificate a learner must: complete all 8 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage a synthetic set of condition-monitoring alerts into work-order, watch and close decisions, using only a supplied failure-code list and recording the evidence a planner must check for each safety-critical asset",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-1",
+      "targetCode": "mfg-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check a troubleshooting copilot's answer against a manual excerpt, flag every unsupported claim, and identify which steps must come only from the site's approved lockout/tagout and electrical safe-work procedures",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-2",
+      "targetCode": "mfg-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute escape rate, false-reject rate and production re-inspection load for an AI vision check at several thresholds, and justify what the check can and cannot be credited with in the control plan",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-3",
+      "targetCode": "mfg-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide read-only versus write-back for a vendor's AI data connection, sketching the zones and conduits and listing the questions to put to the vendor",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-4",
+      "targetCode": "mfg-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify proposed AI uses as safety-function or not, and GMP-critical or not, and name the human decision and governing rule for each",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-5",
+      "targetCode": "mfg-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Match your role and branch to the next Wirewalk course that goes deeper",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-001/#outcome-6",
+      "targetCode": "mfg-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/mfg-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

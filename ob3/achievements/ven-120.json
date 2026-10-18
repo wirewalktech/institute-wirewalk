@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/ven-120.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Claude for Professionals",
+  "description": "Learn Claude by solving one firm's real problem: getting through renewal season with too few analysts and without putting client data in the wrong place. Each module compares the approaches professionals actually choose between, shows a realistic failure and its fix, and ends with a Decision Lab where you make the call under pressure.",
+  "humanCode": "VEN-120",
+  "fieldOfStudy": "AI Models and Vendors",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "claude",
+    "anthropic",
+    "prompting",
+    "projects",
+    "skills",
+    "artifacts",
+    "mcp",
+    "connectors",
+    "claude-code",
+    "data-privacy",
+    "hipaa",
+    "ai-adoption",
+    "decision-labs"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/ven-120.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Claude for Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/ven-120/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a Claude plan, seat mix, data-handling rule, model tier and mode for each workflow, weighing data class, contract terms, budget and tools you already license, and record it in a setup decision record",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-1",
+      "targetCode": "ven-120.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write structured briefs with context, audience, delimited materials, examples, an output specification and claim rules, and show each passes a checklist on at least three inputs",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-2",
+      "targetCode": "ven-120.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Verify facts and figures from long documents, web research and client-ready deliverables with quote-first extraction, not-found reporting, citation checks and a pre-send check",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-3",
+      "targetCode": "ven-120.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Configure a Project, a skill and memory settings for a recurring multi-client workflow so no client's data reaches another client's output, with limited edit rights and a maintenance routine",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-4",
+      "targetCode": "ven-120.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze business data with Claude's code execution by profiling, defining, computing and reconciling to a known figure, diagnose definitional errors, and stress-test the recommendation's assumptions",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-5",
+      "targetCode": "ven-120.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select the least powerful surface or connector for a task and identify its prompt-injection, permission and data-exposure risks, with a mitigation and owner for each",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-6",
+      "targetCode": "ven-120.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft an admin baseline and a pilot scorecard that separates measured results from projections and sets license costs against what they return, and decide which workflows stay in the apps, become scripts or are briefed for the API",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-120/#outcome-7",
+      "targetCode": "ven-120.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/ven-120.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

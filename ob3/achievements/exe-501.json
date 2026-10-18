@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/exe-501.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Executives: Strategy, Value and Risk",
+  "description": "Work through one company's AI year as its executive sponsor. Test vendor claims on your own data, rank a portfolio by defended value, make the sourcing and GPU calls, rescue a stalled rollout, govern risk and law, and prove ROI to a skeptical CFO, then play seven Decision Labs and build the board pack.",
+  "humanCode": "EXE-501",
+  "fieldOfStudy": "Executive Leadership",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "executive",
+    "strategy",
+    "ai value",
+    "roi",
+    "build vs buy",
+    "operating model",
+    "ai risk",
+    "eu ai act",
+    "board",
+    "generative ai",
+    "agentic ai",
+    "case study",
+    "decision labs"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/exe-501.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Executives: Strategy, Value and Risk"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/exe-501/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 15 questions, 30 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an AI proposal or vendor demo by classifying it, setting the error tolerance the task can bear from the cost of a wrong output, and specifying a pass/fail test on your own data",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-1",
+      "targetCode": "exe-501.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prioritize AI use cases into a fundable portfolio using value ranges tied to the P&L line they reach, cost and payback, data readiness and risk, and defend the ranking to a skeptical CFO",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-2",
+      "targetCode": "exe-501.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide and defend sourcing choices (build, buy or partner; enterprise assistant and model vendor; API versus rented or owned GPUs) using total cost, break-even, team capacity, lock-in and contract terms",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-3",
+      "targetCode": "exe-501.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an operating model and adoption plan that moves AI from licensed seats to redesigned work, including a headcount position reconciled with attrition and savings targets",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-4",
+      "targetCode": "exe-501.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Govern an AI portfolio with stage gates and pre-committed kill criteria, and judge value claims against a baseline, a control group and total cost of ownership",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-5",
+      "targetCode": "exe-501.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assess an AI system's exposure across accuracy, security, IP, privacy, US federal and state law and the EU AI Act, and select proportionate controls, including limits the model cannot override",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-6",
+      "targetCode": "exe-501.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a board-ready AI strategy: the decisions the board must make, a 100-day plan with owners, budget and measures, and a risk briefing directors can oversee",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-501/#outcome-7",
+      "targetCode": "exe-501.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/exe-501.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

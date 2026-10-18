@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/srv-310.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "LLM Inference and Serving: vLLM, SGLang, TensorRT-LLM and Triton",
+  "description": "The engineering of LLM inference from first principles to production: why decode is memory-bound, how to size the KV cache, how continuous batching, PagedAttention, prefix caching, quantization and speculative decoding change the economics, and how to run vLLM, SGLang, TensorRT-LLM and Dynamo at scale. Ends with load testing, Kubernetes autoscaling and a defensible cost per million tokens.",
+  "humanCode": "SRV-310",
+  "fieldOfStudy": "Inference, Serving and MLOps",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "inference",
+    "llm serving",
+    "vllm",
+    "sglang",
+    "tensorrt-llm",
+    "triton",
+    "dynamo",
+    "llama.cpp",
+    "kv cache",
+    "pagedattention",
+    "speculative decoding",
+    "quantization",
+    "kubernetes",
+    "autoscaling",
+    "capacity planning",
+    "gpu"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/srv-310.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: LLM Inference and Serving: vLLM, SGLang, TensorRT-LLM and Triton"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/srv-310/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate KV cache memory per token and per request for a given model and use it to predict the maximum concurrent batch a GPU configuration can hold",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-1",
+      "targetCode": "srv-310.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain how continuous batching, PagedAttention, prefix caching and chunked prefill change latency and throughput, and choose scheduler settings for a stated workload",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-2",
+      "targetCode": "srv-310.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a quantization scheme (FP8, INT8, INT4 AWQ/GPTQ, FP4) and a speculative decoding method for a serving goal, and verify the quality and speed impact",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-3",
+      "targetCode": "srv-310.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between tensor, pipeline, expert and data parallelism and decide when disaggregated prefill/decode is worth its complexity",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-4",
+      "targetCode": "srv-310.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Deploy and tune an OpenAI-compatible endpoint with vLLM, SGLang, TensorRT-LLM or llama.cpp, and place Triton and Dynamo correctly in the architecture",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-5",
+      "targetCode": "srv-310.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design and run a load test that reports TTFT, ITL, throughput and goodput against an explicit SLO",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-6",
+      "targetCode": "srv-310.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a capacity plan and a Kubernetes autoscaling policy driven by queue depth and KV cache pressure",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-7",
+      "targetCode": "srv-310.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute cost per million tokens for a self-hosted deployment and compare it fairly with API pricing",
+      "targetUrl": "https://institute.wirewalk.com/courses/srv-310/#outcome-8",
+      "targetCode": "srv-310.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/srv-310.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

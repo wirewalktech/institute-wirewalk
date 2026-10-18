@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/hw-203.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Networking Hardware for AI: NICs, DPUs, Switches and Optics",
+  "description": "The physical layer of AI networking: SerDes and lane rates, NICs and SuperNICs, DPUs, InfiniBand and Ethernet switch silicon, rail-optimized topologies, and the transceivers, cables and co-packaged optics that connect them. Covers ConnectX-8 and ConnectX-9, BlueField-3 and BlueField-4, Quantum-X800, Spectrum-X, Tomahawk 6, Pollara and Thor Ultra, and Ultra Ethernet, reviewed against vendor sources as of October 2026.",
+  "humanCode": "HW-203",
+  "fieldOfStudy": "AI Hardware",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "networking",
+    "nic",
+    "supernic",
+    "dpu",
+    "connectx",
+    "bluefield",
+    "infiniband",
+    "ethernet",
+    "roce",
+    "ultra ethernet",
+    "spectrum-x",
+    "tomahawk",
+    "osfp",
+    "optics",
+    "co-packaged optics",
+    "fat tree",
+    "rail-optimized",
+    "rdma",
+    "intermediate"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/hw-203.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Networking Hardware for AI: NICs, DPUs, Switches and Optics"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hw-203/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules; and pass the final exam: 20 questions, 45 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish scale-up, scale-out and front-end networks and explain which hardware belongs in each",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-1",
+      "targetCode": "hw-203.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain SerDes lane rates, PAM4 signaling, FEC and their effect on port speeds, reach and latency",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-2",
+      "targetCode": "hw-203.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare NICs, SuperNICs and DPUs, including ConnectX-8 and ConnectX-9, BlueField-3 and BlueField-4, Pollara and Thor Ultra, and place them correctly in a GPU server's PCIe topology",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-3",
+      "targetCode": "hw-203.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare InfiniBand and Ethernet switch platforms for AI, including Quantum-X800, Spectrum-X and Tomahawk-based systems, and describe what Ultra Ethernet changes",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-4",
+      "targetCode": "hw-203.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select transceivers, cables and breakouts for a given reach, port speed and power budget, and explain the trade-offs of linear-drive and co-packaged optics",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-5",
+      "targetCode": "hw-203.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate switch radix, tier count, oversubscription and optic count for a rail-optimized GPU cluster",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-6",
+      "targetCode": "hw-203.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Bring up and validate links and fabrics using port counters, optic diagnostics and RDMA bandwidth tests",
+      "targetUrl": "https://institute.wirewalk.com/courses/hw-203/#outcome-7",
+      "targetCode": "hw-203.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/hw-203.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

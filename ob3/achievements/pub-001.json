@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/pub-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Government, Defense and Public Safety: The One-Hour Briefing",
+  "description": "A free one-hour briefing built on twelve real public-sector jobs, not an overview: summarizing public comments in an approved assistant, extracting SNAP verification documents, flagging PII for FOIA, reviewing an AI-drafted police report, escalating from a 911 virtual agent, handling a facial-recognition lead, checking an AI bench memo, drafting on GenAI.mil, acting on a predictive-maintenance alert, and drafting a grant. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
+  "humanCode": "PUB-001",
+  "fieldOfStudy": "AI in Government, Defense and Public Safety",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "government",
+    "public sector",
+    "defense",
+    "law enforcement",
+    "public safety",
+    "911",
+    "courts",
+    "nonprofits",
+    "foia",
+    "snap",
+    "facial recognition",
+    "omb m-25-21",
+    "cjis",
+    "cui",
+    "responsible ai"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/pub-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Government, Defense and Public Safety: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pub-001/",
+    "narrative": "To earn this certificate a learner must: complete all 9 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit an AI draft (a police narrative, a comment summary, an extraction table, a bench memo or a grant need statement) against its source and identify invented or overstated facts, misattributed statements, fabricated citations and omissions before signing, filing or submitting it",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-1",
+      "targetCode": "pub-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide, for a named government, public-safety or defense task, which step AI may support and which decision a qualified human must make, and explain why using OMB M-25-21's high-impact test, the SNAP merit-personnel rule or the DoD AI Ethical Principles",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-2",
+      "targetCode": "pub-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply the specific disclosure, records and confidentiality rules to a proposed AI use: Utah Code 53-25-602 and California Penal Code 13663 disclosure, NARA AC 11.2026 records criteria, CUI markings, FOIA exemptions (b)(6) and (b)(7)(C), and VAWA confidentiality",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-3",
+      "targetCode": "pub-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Treat a facial-recognition candidate list as an investigative lead only, and list the independent steps required before a lineup or arrest under Maryland law, using the Detroit Williams settlement as a reference point",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-4",
+      "targetCode": "pub-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a simple local measure of whether an AI tool is working for a task, such as escalation recall on seeded emergency calls, PII-flag recall on a test set or confirmed-finding rate for maintenance alerts",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-5",
+      "targetCode": "pub-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose the Wirewalk course that covers your role in depth",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-001/#outcome-6",
+      "targetCode": "pub-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/pub-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

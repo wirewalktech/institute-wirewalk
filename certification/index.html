@@ -70,6 +70,16 @@ description: "How Wirewalk Institute of AI exams are run and scored, what a cert
   </div>
 </section>
 
+<section class="section" id="open-badges" aria-labelledby="ob-h">
+  <div class="wrap-n">
+    <p class="eyebrow">Open Badges</p>
+    <h2 id="ob-h">Your certificate as an Open Badge</h2>
+    <p class="muted">Open Badges 3.0 is a published, open standard (from the standards body 1EdTech) for digital credentials that software can check. When you are signed in, your certificate page lets you download your certificate as a badge file: a <code>.json</code> file, or an <code>.svg</code> badge image with the same data inside. You can import either into a wallet or backpack that supports Open Badges 3.0. The file is digitally signed by the Wirewalk Institute of AI, so anyone who checks it can confirm that we issued it, that it has not been altered, and whether it has since been revoked.</p>
+    <p class="muted">A badge is a file format, not a seal of approval. It says exactly what the certificate says and keeps every limit listed above: it is not an accreditation, academic credit, continuing education units (CEUs) or a license, and issuing it in this format does not mean that 1EdTech, a vendor or anyone else endorses the course.</p>
+    <p class="muted">The file contains the name on the certificate, the course or program and what it took to earn it, the issue, renewal and expiry dates, and the exam score. Your email address is included only as a salted hash, which lets someone who already knows the address confirm it and reveals nothing more. The file never contains the address itself or any other account details. The verification page stays the live record: if a certificate is revoked, the badge stops checking as valid too.</p>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="sample-h">
   <div class="wrap split r" style="align-items:center">
     {%- assign sc = site.data.catalog.courses | where: "id", "gov-210" | first %}

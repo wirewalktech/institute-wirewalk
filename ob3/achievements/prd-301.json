@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/prd-301.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Pricing and Unit Economics of AI Products",
+  "description": "An expert course on the economics of AI products. You build a cost-to-serve model from tokens, caching, retrieval, tools and infrastructure, compare seat, usage, credit, hybrid and outcome-based pricing using public examples, design packaging and limits that protect margin, and implement metering and billing with tools such as Stripe Billing, Metronome and Orb.",
+  "humanCode": "PRD-301",
+  "fieldOfStudy": "AI Product and Design",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "pricing",
+    "unit economics",
+    "gross margin",
+    "usage-based billing",
+    "outcome-based pricing",
+    "credits",
+    "metering",
+    "finops"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/prd-301.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Pricing and Unit Economics of AI Products"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prd-301/",
+    "narrative": "To earn this certificate a learner must: complete all 22 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a cost-to-serve model for an AI feature covering tokens, caching, retrieval, tool calls, infrastructure and human review",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-1",
+      "targetCode": "prd-301.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Quantify how usage distribution and power users drive gross margin and price risk",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-2",
+      "targetCode": "prd-301.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate the break-even between API consumption and self-hosted or provisioned inference",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-3",
+      "targetCode": "prd-301.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare seat, usage, credit, hybrid and outcome-based pricing and choose one for a given product and buyer",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-4",
+      "targetCode": "prd-301.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design packaging, fair-use limits, overage and enterprise commitments that protect margin",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-5",
+      "targetCode": "prd-301.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify metering, rating and invoicing requirements and evaluate billing platforms against them",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-6",
+      "targetCode": "prd-301.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan a price change or model migration and communicate it without eroding customer trust",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-301/#outcome-7",
+      "targetCode": "prd-301.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/prd-301.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

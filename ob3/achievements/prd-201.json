@@ -1,0 +1,122 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/ob3/achievements/prd-201.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Product Management: From Use Case to Launch",
+  "description": "The product manager's playbook for AI features. You learn to screen use cases for AI fit, run discovery with real model output, write a spec that defines quality with an eval set, choose between APIs, open-weight models and fine-tuning, and plan a staged launch with risk, compliance and support ready on day one.",
+  "humanCode": "PRD-201",
+  "fieldOfStudy": "AI Product and Design",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai product management",
+    "prd",
+    "use cases",
+    "discovery",
+    "launch",
+    "build vs buy",
+    "evals",
+    "product strategy"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/ob3/img/prd-201.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Product Management: From Use Case to Launch"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/ob3/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prd-201/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Screen candidate use cases for AI fit using error cost, verifiability, frequency and data availability",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-1",
+      "targetCode": "prd-201.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run discovery with prompt prototypes and Wizard-of-Oz tests before committing engineering effort",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-2",
+      "targetCode": "prd-201.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write an AI product requirements document with an eval set as acceptance criteria and explicit fallback behavior",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-3",
+      "targetCode": "prd-201.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between hosted APIs, cloud model platforms, open-weight models and fine-tuning using a documented trade-off",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-4",
+      "targetCode": "prd-201.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan a staged launch with feature flags, risk and privacy review, and applicable AI transparency obligations",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-5",
+      "targetCode": "prd-201.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set up post-launch feedback, model-change monitoring and an iteration cadence for an AI feature",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-6",
+      "targetCode": "prd-201.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Communicate AI feature capabilities and limits honestly to executives, sales and customers",
+      "targetUrl": "https://institute.wirewalk.com/courses/prd-201/#outcome-7",
+      "targetCode": "prd-201.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/ob3/achievements/prd-201.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
