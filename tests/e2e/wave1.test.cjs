@@ -183,7 +183,10 @@ test("W1-5: first-run dashboard (Welcome, starters, finder) vs returning (Welcom
     const cards = await page.$$eval("section[aria-labelledby=h-start] li", els => els.map(e => ({ code: e.querySelector(".wl-code").textContent, hint: e.querySelector(".wl-hint").textContent })));
     assert.equal(cards.length, 3);
     assert.equal(cards[0].code, "fnd-001");
-    for (const c of cards) assert.doesNotMatch(c.hint, /Decision Lab/, `${c.code}: the catalog lists no labs for it, so the card promises none`);
+    // A card claims Decision Labs exactly when, and as many as, the published catalog lists for the course.
+    const lb = await page.evaluate(ids => ids.map(id => { const c = window.WL.catalog().courses[id]; return c && c.lb > 0 ? c.lb : 0; }), cards.map(c => c.code));
+    cards.forEach((c, k) => assert.equal(c.hint, lb[k] ? `About an hour, with ${lb[k]} Decision Lab${lb[k] === 1 ? "" : "s"}` : "About an hour", `${c.code}: catalog lists ${lb[k]} labs`));
+    assert.ok(lb[0] > 0, "fnd-001 ships its Decision Labs, so its starter card names them");
     await Promise.all([page.waitForURL(/\/learn\/lesson\/\?c=fnd-001&l=0$/), page.click("section[aria-labelledby=h-start] li:first-child button")]);
     await page.waitForSelector("#lesson-title");
     assert.ok(await page.$(".wl-orient"), "W1-13: the first free enrollment shows the one-time orientation strip");

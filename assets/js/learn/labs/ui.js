@@ -12,9 +12,10 @@
 
   /* ---------- numbers ---------- */
   /* [lx] usd_k / usd_m are values in thousands / millions of dollars; "rate" is a count per `per`
-     (year, month, week), which may qualify any unit: "$1.3M/yr", "6/mo", "4 hrs/wk". */
-  var UNIT = { usd: "", percent: "%", points: " pts", weeks: " wk", days: " days", hours: " hrs", months: " mo", count: "", people: "", score: "", rate: "" };
-  var UNIT_LONG = { usd: "dollars", percent: "percent", points: "points", weeks: "weeks", days: "days", hours: "hours", months: "months" };
+     (year, month, week), which may qualify any unit: "$1.3M/yr", "6/mo", "4 hrs/wk". A unit not listed here is a
+     plain count noun the validator allows ("calls", "messages") and prints after the number: "21 calls". */
+  var UNIT = { usd: "", percent: "%", points: " pts", weeks: " wk", days: " days", hours: " hrs", minutes: " min", months: " mo", count: "", people: "", score: "", rate: "" };
+  var UNIT_LONG = { usd: "dollars", percent: "percent", points: "points", weeks: "weeks", days: "days", hours: "hours", minutes: "minutes", months: "months" };
   var PER = { year: "/yr", month: "/mo", week: "/wk" };
   /* [lx] A nonzero amount never prints as "0": it falls back to two significant digits ("0.04"). */
   function group(n, frac) {
