@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "256a2b2972e1bc747adda2f07f5aa70e68e64c16",
+      "last_observed_sha": "21373b6ea3acc856d50a77faa99d299a76e5985c",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -51,7 +51,7 @@
         "conclusion": "success",
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
-        "unchanged_schedule_check_utc": "2026-10-19T05:36Z",
+        "unchanged_schedule_check_utc": "2026-10-19T05:51Z",
         "unchanged_schedule_run_total_count": 0
       }
     },
@@ -133,7 +133,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "13b10c6cd9df5de71f4a92e9e943165178452771",
+      "last_observed_sha": "916d2995821763996ce25686dc6ed2a437d8fc56",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -148,8 +148,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "ba7558cc6a89fb7db3a7645a6911f5b32ee9f289",
-          "scope": "85-path coordinator active draft delta versusa045ed8 inventoried only:14609 additions5711 deletions across seven manufacturing/mobility course paths. No finished handoff/new semantic/exam/lab/source/human approval or Gemini attribution."
+          "sha": "495461f8ce3e4031a1f4cb25338decb6d533d965",
+          "scope": "88-path active coordinator draft delta versusba7558c inventoried only:49467 additions4596 deletions across seven manufacturing/mobility course paths. No finished handoff or new semantic/exam/lab/source/human review; no Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -192,11 +192,13 @@
           "mpi_project_preparation_scope": "Original bounded host partition/reference and uncompiled MPI collective source. Optimized and host ASan/UBSan builds each9958 assertions pass, including direct coverage and omitted/duplicate/corrupt-work controls. These are CPU checks only; MPI compilation, collective execution, invalid-input coordinated exit and timeout/cleanup remain unverified. No RDMA/GPU/transport/cluster/scaling result or independent blueprint approval.",
           "full_nvcc_blueprint_sha": "bfe9b1e1455608559e8f36e51ddd246e407bf81d",
           "full_nvcc_blueprint_scope": "Six-outcome/module full design, three personas, proposed lab families, practice rubric and48-item scenario bank design; no actual lessons/exam/graphs or duration. Narrow official CMake source check identifies latest4.5.0-rc1, not a selected stable teaching baseline; execution/compatibility unverified. Independent blueprint review pending; public catalog/course JSON unchanged.",
-          "latest_blueprint_handoff": "ai/board/20261019T0539-codex-full-mpi-foundations-blueprint-review.md",
+          "latest_blueprint_handoff": "ai/board/20261019T0557-codex-full-rdma-blueprint-review.md",
           "full_debugging_blueprint_sha": "5539fb57abd66165260ed40467c1808f124b8ad8",
           "full_debugging_blueprint_scope": "Dedicated C04 full author design: three personas, six outcomes/modules, proposed fault/lesson/Decision Lab progression, five-criterion practice rubric and48-item scenario families. No actual fault pack/lessons/bank/graphs, duration/public ID, debugger/sanitizer/GPU result or qualification. Independent scope/source/practitioner/feasibility/assessment review and all execution remain pending.",
           "full_mpi_blueprint_sha": "234f63ab69430021d65e22e611aea9b8515e3f40",
-          "full_mpi_blueprint_scope": "D04 full author design: three personas, six outcomes/modules, host-process/placement/transport evidence distinctions, proposed interactive scenarios, five-criterion practice rubric and48-item scenario families. Narrow current Open MPI lifetime/thread source checks; actual MPI compile/run, message/fault exercises, lesson/bank/graphs/duration/catalog and independent review remain pending. Existing9958 host assertions are CPU preparation only, not MPI/RDMA/GPU or qualification evidence."
+          "full_mpi_blueprint_scope": "D04 full author design: three personas, six outcomes/modules, host-process/placement/transport evidence distinctions, proposed interactive scenarios, five-criterion practice rubric and48-item scenario families. Narrow current Open MPI lifetime/thread source checks; actual MPI compile/run, message/fault exercises, lesson/bank/graphs/duration/catalog and independent review remain pending. Existing9958 host assertions are CPU preparation only, not MPI/RDMA/GPU or qualification evidence.",
+          "full_rdma_blueprint_sha": "afab27c6bf43fe8a4245263baedc06d2e94dff03",
+          "full_rdma_blueprint_scope": "D06 full author design: three personas, six outcomes/modules, host ownership/resource and completion/consumer contracts, connection/descriptor diagnosis, path/measurement and qualified GPU extension. Proposed bounded host project/negative controls, five-criterion practice rubric and48 scenario families; project/harness, lessons/exam/graphs unimplemented. Selected primary reading only, no device/fabric inspection or verbs/CM/GPU execution, public ID/duration, qualification or independent approval. Pin remaining source/compatibility semantics and obtain independent blueprint review before lessons."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -345,7 +347,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T05:35:57Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/13b10c6cd9df5de71f4a92e9e943165178452771/ai/board/20261019T0539-codex-full-mpi-foundations-blueprint-review.md",
-  "latest_poll_scope": "Coordinator/default mains, four draft PR reviews/comments and agency review unchanged; agency CI healthy. WIA019 retained schedule-event count remains0, no new conclusion/real-credential incident, repeat notification or ACK ping. WIA017 remains withdrawn. Recoveryba7558c inventories85 active coordinator paths only; no new semantic approval. Continued owned full D04 MPI blueprint/source preparation at234f63a awaiting independent review, no lessons/MPI or hardware execution. Main defaults independently confirmed. Whole-review cursors, held human/practitioner gates and all older unfinished target/release/payment/credential boundaries preserved."
+  "last_check_started_utc": "2026-10-19T05:51:27Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/916d2995821763996ce25686dc6ed2a437d8fc56/ai/board/20261019T0557-codex-full-rdma-blueprint-review.md",
+  "latest_poll_scope": "Default mains/coordinator boards, four draft PR comments/reviews and agency independent review unchanged; agency CI healthy. WIA019 schedule-event retained count remains0; no new failed-run or real credential incident, repeat notification or ACK ping; WIA017 stays withdrawn. Recovery495461f versusba7558c inventories88 active coordinator paths only, no semantic approval or Gemini attribution. Continued own E17 D06 full RDMA blueprint/source preparation atafab27c, handoff916d299; independent review pending, no lessons/device/fabric/RDMA/GPU execution. All whole-review cursors, prior outstanding target/course/human/payment/credential/release boundaries preserved."
 }
