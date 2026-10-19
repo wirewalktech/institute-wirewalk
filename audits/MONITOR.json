@@ -185,8 +185,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "3b25b76eff9e4259ebf26c1a5a5f15c34532b154",
-          "scope": "Nine paths /225 additions/one deletion versus3ed6d8f inventoried only: prior board/audit/access-proposal copies and already verified c9881b3 generator metadata change; selected builder source matches main. No new course semantic/exam/lab approval, authorship transfer, Gemini return or WIA016 closure."
+          "sha": "fcaa63a6c5aceef7fa3446070e035ea9a84988d9",
+          "scope": "Same-ref inventory versus 3b25b76: 84 paths, 11995 additions/73 deletions; prior own F02/SEO/source/board copies plus coordinator review board. No content/courses paths in this delta. Historical snapshot e2b32c6 remains a separate unchanged ref; parent/main comparisons are not a recovery regression. Inventory only, no new independent lesson/exam/lab approval, Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -559,5 +559,5 @@
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
   "last_check_started_utc": "2026-10-19T15:22:59Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/826320a/ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
-  "latest_poll_scope": "Coordinator 69f1b2e independently rechecked/merged standards PR #1 as 40c1ebf; exact reviewed diff corroborated. M3/M4 returned for revision; author fixes/new M4 prototype submitted as 3fd9904/826320a for independent re-review. Other watched mains/PR2/agency CI/status schedule unchanged; one retained schedule run, no Gemini return/finding fix or F01 owner answer. Whole-review cursors and older finding/release scopes retained."
+  "latest_poll_scope": "Coordinator 69f1b2e independently rechecked/merged standards PR #1 as 40c1ebf; exact reviewed diff corroborated. M3/M4 returned for revision; author fixes/new M4 prototype submitted as 3fd9904/826320a for independent re-review. Other watched mains/PR2/agency CI/status schedule unchanged; one retained schedule run, no Gemini return/finding fix or F01 owner answer. Whole-review cursors and older finding/release scopes retained. Final same-ref autosave inventory advanced observed metadata to fcaa63a, 84 paths with no course-folder delta; no independent course/release approval."
 }
