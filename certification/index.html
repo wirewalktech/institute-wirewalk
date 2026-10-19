@@ -29,8 +29,8 @@ description: "How Wirewalk Institute of AI exams are run and scored, what a cert
       <ul class="ticks">
         <li><strong>Question count and time limit</strong> are set per course and listed on its page: typically 20 questions in 40–45 minutes at Basic and Intermediate, 25 in 50–60 at Expert, and 15 in 30 at Executive.</li>
         <li><strong>Questions with several correct answers</strong> score only when you select exactly the right set — no part marks.</li>
-        <li><strong>The deadline is firm.</strong> A short grace period covers network delay; a paper submitted later than that is scored as unanswered.</li>
-        <li><strong>Interrupted?</strong> Opening the exam again resumes your open attempt with the same clock rather than starting a new one.</li>
+        <li><strong>The deadline is firm.</strong> A short grace period covers network delay. An answer sheet that arrives after the grace period is not used: the answers saved to your account by the deadline are graded instead.</li>
+        <li><strong>Interrupted?</strong> Your answers are saved to your account a moment after you choose them. Opening the exam again, on any device, resumes your open attempt with the same clock and the saved answers restored, rather than starting a new one; a change that had not been saved yet (for example while you were offline) is kept only in the browser tab you made it in. If time runs out while you are away, the answers saved by then are graded.</li>
         <li><strong>Feedback</strong> after each attempt shows your score per module, so you know what to revise. We never release the answer key.</li>
       </ul>
     </div>
@@ -67,6 +67,18 @@ description: "How Wirewalk Institute of AI exams are run and scored, what a cert
       </div>
     </div>
     <p class="small muted" style="margin-top:20px;max-width:75ch">We may revoke a certificate issued in error or obtained by misconduct. A revoked certificate shows as revoked on its verification page.</p>
+  </div>
+</section>
+
+<section class="section" id="open-badges" aria-labelledby="ob-h">
+  <div class="wrap-n">
+    <p class="eyebrow">Open Badges</p>
+    <h2 id="ob-h">Your certificate as an Open Badge</h2>
+    <p class="muted">Open Badges 3.0 is a published, open standard (from the standards body 1EdTech) for digital credentials that software can check. When you are signed in, your certificate page lets you download your certificate as a badge file: a <code>.json</code> file, or an <code>.svg</code> badge image with the same data inside. You can import either into a wallet or backpack that supports Open Badges 3.0. The file is digitally signed by the Wirewalk Institute of AI, so anyone who checks it can confirm that we issued it, that it has not been altered, and whether it has since been revoked.</p>
+    <p class="muted">A badge is a file format, not a seal of approval. It says exactly what the certificate says and keeps every limit listed above: it is not an accreditation, academic credit, continuing education units (CEUs) or a license, and issuing it in this format does not mean that 1EdTech, a vendor or anyone else endorses the course.</p>
+    <p class="muted">The file contains the name on the certificate, the course or program and what it took to earn it, the issue, renewal and expiry dates, the exam score, a position in our public revocation list, and your email address as a salted hash. The hash does not show the address, but the salt is in the file too, so anyone who knows or guesses the address can check it against the badge. When you check a badge's email hash, enter the address in lowercase: we hash the lowercase form. The file never contains the address itself or any other account details. We issue badges only for accounts whose email address has been verified.</p>
+    <p class="muted">A badge file is a copy of the certificate on the day it was downloaded, and it does not update itself. After a renewal, or if the name on a certificate is corrected, the holder downloads the badge again; the newest copy has the latest "valid from" date. An expired badge shows its expiry date to anyone who checks it.</p>
+    <p class="muted">The verification page stays the live record. If a certificate is revoked, the verification page shows it at once. Badge checks read our public revocation list at <code>https://institute.wirewalk.com/badges/status/1.json</code>, which a scheduled job on GitHub updates. A badge usually starts checking as revoked within 30 minutes. GitHub's scheduler can delay this, sometimes by hours, and we are alerted if the list falls behind. A wallet that checked a badge earlier may show its earlier result until it checks again.</p>
   </div>
 </section>
 

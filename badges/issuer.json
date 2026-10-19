@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
+    "https://w3id.org/security/multikey/v1",
+    "https://www.w3.org/ns/cid/v1"
+  ],
+  "id": "https://institute.wirewalk.com/badges/issuer.json",
+  "type": [
+    "Profile"
+  ],
+  "name": "Wirewalk Institute of AI",
+  "url": "https://institute.wirewalk.com",
+  "description": "Professional AI training with automated exams and certificates of completion and assessment.",
+  "email": "sales@wirewalk.com",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/issuer.svg",
+    "type": "Image"
+  },
+  "verificationMethod": [
+    {
+      "id": "https://institute.wirewalk.com/badges/keys/key-1.json",
+      "type": "Multikey",
+      "controller": "https://institute.wirewalk.com/badges/issuer.json",
+      "publicKeyMultibase": "z6Mkgv1Hrjdj7CKRGKvTgo7aW6YPGanPWZohkp5dvyGQmrDW"
+    }
+  ],
+  "assertionMethod": [
+    "https://institute.wirewalk.com/badges/keys/key-1.json"
+  ]
+}

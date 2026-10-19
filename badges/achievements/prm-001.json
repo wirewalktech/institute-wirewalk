@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/prm-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Prompting Basics in One Hour",
+  "description": "A free one-hour course built around one realistic case: a resident services coordinator clearing a 412-message backlog with her company's approved AI tool, who nearly mails 63 letters with a legal deadline the assistant got wrong. You learn to write a four-part brief, steer drafts with examples, check what matters and keep restricted data out of the chat box.",
+  "humanCode": "PRM-001",
+  "fieldOfStudy": "Prompt and Context Engineering",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "prompting",
+    "prompt basics",
+    "copilot chat",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "few-shot",
+    "hallucinations",
+    "fact checking",
+    "ai privacy",
+    "decision labs",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/prm-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Prompting Basics in One Hour"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prm-001/",
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules, play each of the course's 3 Decision Labs to an ending (the lab score does not count); and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify the details an assistant supplied on its own in a disappointing answer, pick out the harmful one, and name the missing context and where it lives",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-1",
+      "targetCode": "prm-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a four-part brief for a routine task that supplies its own source and a [CHECK] rule for gaps",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-2",
+      "targetCode": "prm-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose the steering technique (examples, role, steps, questions-first or a saved reply) that fixes a named symptom",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-3",
+      "targetCode": "prm-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose the follow-up that fixes a named flaw, decide when a fresh conversation is safer, and turn a working conversation into a reusable prompt",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-4",
+      "targetCode": "prm-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select the claims in AI-assisted work that need checking, judge which primary source settles each and who confirms it, and record the check",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-5",
+      "targetCode": "prm-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide which tool and data an AI policy allows for a task, keep restricted details out with placeholders, and choose the response a data mistake requires",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-001/#outcome-6",
+      "targetCode": "prm-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/prm-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

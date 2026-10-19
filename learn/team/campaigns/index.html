@@ -1,0 +1,33 @@
+---
+no_pixel: true
+layout: default
+title: Training campaigns
+description: Assign courses or a program to people in your team with a due date, follow their progress, and send reminders.
+permalink: /learn/team/campaigns/
+extra_css: [learn]
+extra_js: [api, learn/common, learn/campaigns]
+noindex: true
+sitemap: false
+---
+<div class="wl" data-page="campaigns">
+  <nav class="wl-subnav" aria-label="Learner app">
+    <div class="wl-subnav-in">
+      <a href="/learn/">Dashboard</a>
+      <a href="/courses/">Catalog</a>
+      <a href="/learn/cart/">Cart <span class="wl-count" data-cart-count hidden></span></a>
+      <a href="/learn/team/" data-when-signed-in hidden>Team</a>
+      <a href="/learn/account/" data-when-signed-in hidden>Account</a>
+    </div>
+  </nav>
+  <div id="learn-app" class="wl-app" aria-live="polite" aria-busy="true">
+    <noscript>
+      <div class="wl-notice wl-notice-error"><strong class="wl-notice-title">JavaScript is required</strong>
+        <div class="wl-notice-body">Training campaigns need JavaScript. Please enable it and reload the page, or email <a href="mailto:sales@wirewalk.com">sales@wirewalk.com</a>.</div></div>
+    </noscript>
+    <div class="wl-loading" role="status"><span class="wl-spin" aria-hidden="true"></span><span>Loading…</span></div>
+  </div>
+  {%- comment -%} An invoice request for a campaign's seat shortfall is sent as an ordinary inquiry to the
+    portal endpoint every Wirewalk site's forms use (same channel as /teams/ and the team page). {%- endcomment %}
+  <div id="wl-team-config" data-enquiry="{{ site.enquiry_endpoint }}" data-site="{{ site.url }}" hidden></div>
+</div>
+{% include learn-catalog.html %}

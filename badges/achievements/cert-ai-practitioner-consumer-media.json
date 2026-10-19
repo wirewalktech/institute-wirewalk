@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cert-ai-practitioner-consumer-media.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Consumer, Media and Communications",
+  "description": "Applies AI in consumer-facing businesses with disclosure, pricing and rights controls.",
+  "humanCode": "CERT-AI-PRACTITIONER-CONSUMER-MEDIA",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cert-ai-practitioner-consumer-media.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Consumer, Media and Communications"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-consumer-media/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Retail and E-commerce Professionals (CMC-110); Building and Deploying AI in Retail and E-commerce (CMC-210); Building and Deploying AI in Media and Entertainment (CMC-250); Copyright, IP and Licensing in Generative AI (GOV-260). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Retail and E-commerce Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-110/",
+      "targetCode": "cmc-110",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Retail and E-commerce",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-210/",
+      "targetCode": "cmc-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Media and Entertainment",
+      "targetUrl": "https://institute.wirewalk.com/courses/cmc-250/",
+      "targetCode": "cmc-250",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Copyright, IP and Licensing in Generative AI",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-260/",
+      "targetCode": "gov-260",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

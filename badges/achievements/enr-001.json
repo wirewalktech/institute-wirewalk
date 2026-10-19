@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/enr-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Energy, Utilities and Natural Resources: The One-Hour Briefing",
+  "description": "A free hour built around eight real jobs in power, oil and gas, water, agriculture and sustainability: drafting an outage summary without leaking BCSI, checking an AI load forecast, triaging AI vegetation flags, screening data-center load requests, acting on a satellite methane alert, ranking lead-line verifications, checking targeted spray against the label, and mapping Scope 3 spend. Each shows where AI helps, where it must not decide, and the rule that applies.",
+  "humanCode": "ENR-001",
+  "fieldOfStudy": "AI in Energy, Utilities and Natural Resources",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "energy",
+    "utilities",
+    "power grid",
+    "nerc cip",
+    "bcsi",
+    "load forecasting",
+    "vegetation management",
+    "data centers",
+    "large load interconnection",
+    "methane",
+    "water",
+    "lead service lines",
+    "agriculture",
+    "scope 3",
+    "eu ai act"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/enr-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Energy, Utilities and Natural Resources: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/enr-001/",
+    "narrative": "To earn this certificate a learner must: complete all 8 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Label synthetic utility text as OK, redact first, or never for an approved AI assistant, applying the scope and context tests of the NERC CIP BCSI rules and the FERC Standards of Conduct no-conduit rule",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-1",
+      "targetCode": "enr-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Score an AI day-ahead load forecast against a baseline available at the forecast deadline, and separate weather-forecast error from model error in the worst hours",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-2",
+      "targetCode": "enr-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Separate imminent vegetation threats from weekly triage under FAC-003-5, set a triage rule for AI-flagged spans, and measure its precision and recall against synthetic field truth",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-3",
+      "targetCode": "enr-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Extract, de-duplicate and probability-weight synthetic data-center load requests, flag missing ride-through and model data, and turn the queue into a 2030 peak estimate with ramp and coincidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-4",
+      "targetCode": "enr-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide which synthetic methane alerts start the 5-day investigation and what must be reported to EPA within 15 days, and which lead service line and spray decisions need state, label or FAA authority",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-5",
+      "targetCode": "enr-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Rewrite an AI-drafted sustainability sentence that overclaims, correct Scope 1/3 boundary errors, and choose the next Wirewalk course for your role",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-001/#outcome-6",
+      "targetCode": "enr-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/enr-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

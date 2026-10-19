@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/exe-503.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "The AI Business Case: Investment and ROI",
+  "description": "How to turn an AI idea into an investment case that survives scrutiny: value driver trees, honest baselines, full cost of ownership for seat, token and capacity pricing, risk-adjusted scenarios, pilots that produce evidence, and benefits realization after go-live.",
+  "humanCode": "EXE-503",
+  "fieldOfStudy": "Executive Leadership",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "executive",
+    "business case",
+    "roi",
+    "tco",
+    "npv",
+    "value realization",
+    "ai investment",
+    "pilots",
+    "unit economics",
+    "generative ai"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/exe-503.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: The AI Business Case: Investment and ROI"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/exe-503/",
+    "narrative": "To earn this certificate a learner must: complete all 14 lessons in 5 modules; and pass the final exam: 15 questions, 30 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a value driver tree that links an AI use case to a measurable financial or risk outcome",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-1",
+      "targetCode": "exe-503.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Establish a baseline for the current process before an AI solution is funded",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-2",
+      "targetCode": "exe-503.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Estimate the total cost of ownership of an AI solution across seat, usage-based and committed-capacity pricing, including hidden run costs",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-3",
+      "targetCode": "exe-503.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish released time from realized cash benefit and model scenarios, sensitivities and breakeven adoption",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-4",
+      "targetCode": "exe-503.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a pilot with a control group that produces decision-grade evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-5",
+      "targetCode": "exe-503.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a funding model and present an AI case that withstands CFO and investment committee challenge",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-6",
+      "targetCode": "exe-503.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run a benefits realization review that leads to a scale, fix or stop decision",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-503/#outcome-7",
+      "targetCode": "exe-503.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/exe-503.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

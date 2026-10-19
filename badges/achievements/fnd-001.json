@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fnd-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "What Is AI? A One-Hour Introduction",
+  "description": "A free, plain-English introduction taught through one realistic company getting ready for its busiest season. Sort the kinds of AI, see why a chat assistant can sound right and be wrong, decide which tasks it fits and how to measure them, catch its three predictable failures, ask well, and decide what never goes into an AI tool.",
+  "humanCode": "FND-001",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai literacy",
+    "ai safety",
+    "beginner",
+    "case study",
+    "chatgpt",
+    "claude",
+    "copilot",
+    "data privacy",
+    "decision labs",
+    "gemini",
+    "generative ai",
+    "hallucination",
+    "intro",
+    "prompting"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fnd-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: What Is AI? A One-Hour Introduction"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-001/",
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules, play each of the course's 3 Decision Labs to an ending (the lab score does not count); and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify a workplace tool or vendor claim as hand-written rules, predictive machine learning or generative AI, and state what it produces, what data it needs and how it typically fails",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-1",
+      "targetCode": "fnd-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain, using next-token prediction, why a chat assistant can answer the same question differently and state false things fluently, and predict which requests are at risk",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-2",
+      "targetCode": "fnd-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a three-part fit test to a work task to decide whether an assistant fits and which parts stay human, and name the one measure, with its baseline and denominator, that would show it helped",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-3",
+      "targetCode": "fnd-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Diagnose a flawed AI output as a hallucination, an out-of-date answer or a biased pattern, choose the check that catches it, and say who must review it before it is used",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-4",
+      "targetCode": "fnd-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Improve a weak request by adding context, task, format and constraints, and choose the revision (source material plus an instruction for what to do when the source is silent) that most reduces invented facts",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-5",
+      "targetCode": "fnd-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide what information may go into which AI account using a four-level data rule, and reduce what is shared before using any tool",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-001/#outcome-6",
+      "targetCode": "fnd-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fnd-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

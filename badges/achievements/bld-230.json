@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/bld-230.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Evaluating LLM Applications",
+  "description": "A practical course on application-level LLM evaluation: turning product requirements into test cases, choosing between code checks, human review and LLM-as-judge, calibrating judges against people, running evals in CI with tools such as Promptfoo and Inspect, and closing the loop with production traces and online experiments.",
+  "humanCode": "BLD-230",
+  "fieldOfStudy": "Building AI Applications",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "evaluation",
+    "evals",
+    "llm-as-judge",
+    "error analysis",
+    "promptfoo",
+    "inspect ai",
+    "regression testing",
+    "ci",
+    "a/b testing",
+    "llm applications"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/bld-230.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Evaluating LLM Applications"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/bld-230/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run an error analysis on real model outputs and turn the observed failures into named, testable categories",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-1",
+      "targetCode": "bld-230.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an evaluation dataset that covers typical traffic, known failures and adversarial cases, with a documented sampling rationale",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-2",
+      "targetCode": "bld-230.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between code assertions, reference metrics, human review and LLM-as-judge for each quality criterion",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-3",
+      "targetCode": "bld-230.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a rubric-based LLM judge and measure its agreement with human labels using precision, recall and Cohen's kappa",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-4",
+      "targetCode": "bld-230.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Quantify run-to-run variance and decide whether a score change is real using repeated trials and confidence intervals",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-5",
+      "targetCode": "bld-230.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Integrate an eval suite into CI so prompt, model and retrieval changes are gated on regression thresholds",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-6",
+      "targetCode": "bld-230.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Connect offline eval results to production traces, user feedback and online experiments",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-230/#outcome-7",
+      "targetCode": "bld-230.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/bld-230.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

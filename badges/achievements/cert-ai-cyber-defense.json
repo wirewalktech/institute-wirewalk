@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cert-ai-cyber-defense.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Cyber Defense Specialist",
+  "description": "Applies AI to security operations, detection and response.",
+  "humanCode": "CERT-AI-CYBER-DEFENSE",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cert-ai-cyber-defense.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Cyber Defense Specialist"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-cyber-defense/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Security Operations: Triage, Detection and Response (CYB-201); AI for Vulnerability Management and Secure Code Review (CYB-204); AI-Assisted Digital Forensics and Incident Investigation (CYB-207); The Agentic SOC: Autonomous Investigation and Response with Guardrails (CYB-302). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Security Operations: Triage, Detection and Response",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-201/",
+      "targetCode": "cyb-201",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Vulnerability Management and Secure Code Review",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/",
+      "targetCode": "cyb-204",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI-Assisted Digital Forensics and Incident Investigation",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-207/",
+      "targetCode": "cyb-207",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "The Agentic SOC: Autonomous Investigation and Response with Guardrails",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-302/",
+      "targetCode": "cyb-302",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

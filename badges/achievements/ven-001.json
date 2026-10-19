@@ -1,0 +1,116 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/ven-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Your First Hour with ChatGPT, Claude and Gemini",
+  "description": "A hands-on hour with ChatGPT, Claude and Gemini, told through one small business racing a deadline. Set up an account with a privacy setting you chose, decide what never goes into a personal account, write prompts that produce usable drafts, use files and web search, catch confident mistakes before they go out, and pick the assistant that fits how you work.",
+  "humanCode": "VEN-001",
+  "fieldOfStudy": "AI Models and Vendors",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "openai",
+    "anthropic",
+    "google",
+    "beginner",
+    "prompting",
+    "privacy",
+    "decision-labs"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/ven-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Your First Hour with ChatGPT, Claude and Gemini"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/ven-001/",
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules, play each of the course's 3 Decision Labs to an ending (the lab score does not count); and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide whether an everyday task suits an AI chat assistant and predict the failure most likely to affect it: missing context, invented details, outdated facts or a misread file",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-1",
+      "targetCode": "ven-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set up a free ChatGPT, Claude or Gemini account with the model-training control set on purpose, and sort information into what is fine in a personal account, what belongs only in an employer's approved tool and what goes nowhere, keeping customer, patient, client and employee data out of personal accounts",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-2",
+      "targetCode": "ven-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a prompt that states goal, context and format and forbids invented details, then improve the result with specific follow-ups until it is usable",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-3",
+      "targetCode": "ven-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use file uploads and web search where they fit, asking for the supporting quote from a file and opening the sources behind any fact that changes over time",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-4",
+      "targetCode": "ven-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify the checkable claims in an AI draft and verify them against primary sources, with effort matched to the stakes, before the draft is sent",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-5",
+      "targetCode": "ven-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose an assistant and plan for a person and task using a scored side-by-side test and the tiebreakers that matter: whose terms cover the data, the tool already licensed and budget, and say what a paid plan would and would not change",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-001/#outcome-6",
+      "targetCode": "ven-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/ven-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

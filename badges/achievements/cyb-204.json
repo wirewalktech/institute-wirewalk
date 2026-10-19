@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cyb-204.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Vulnerability Management and Secure Code Review",
+  "description": "Use AI across the vulnerability lifecycle: risk-based prioritization with CVSS, EPSS, CISA KEV and asset context; LLM triage of SAST, SCA and container scanner findings; AI-assisted secure code review; automated fix suggestions with verification; and the current state of AI-driven vulnerability discovery and fuzzing.",
+  "humanCode": "CYB-204",
+  "fieldOfStudy": "Security by AI: AI for Cyber Defense",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "vulnerability management",
+    "epss",
+    "cisa kev",
+    "ssvc",
+    "cvss",
+    "sast",
+    "sca",
+    "secure code review",
+    "appsec",
+    "devsecops",
+    "autofix",
+    "fuzzing",
+    "cwe"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cyb-204.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Vulnerability Management and Secure Code Review"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/cyb-204/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules; and pass the final exam: 20 questions, 45 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a risk-based prioritization model that combines CVSS, EPSS, CISA KEV, SSVC and asset context",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-1",
+      "targetCode": "cyb-204.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use an LLM to normalize vendor advisories and write owner-ready remediation guidance with cited sources",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-2",
+      "targetCode": "cyb-204.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage SAST, SCA and container findings with LLM assistance and measure false-positive reduction honestly",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-3",
+      "targetCode": "cyb-204.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Perform AI-assisted secure code review against common CWE classes and verify each reported issue",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-4",
+      "targetCode": "cyb-204.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Generate and validate AI-suggested fixes with tests, re-scans and human review gates in CI/CD",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-5",
+      "targetCode": "cyb-204.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the state and limits of AI-driven vulnerability discovery and fuzzing as of October 2026",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-6",
+      "targetCode": "cyb-204.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design metrics for an AI-assisted vulnerability program: time to remediate, backlog age and fix acceptance rate",
+      "targetUrl": "https://institute.wirewalk.com/courses/cyb-204/#outcome-7",
+      "targetCode": "cyb-204.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/cyb-204.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

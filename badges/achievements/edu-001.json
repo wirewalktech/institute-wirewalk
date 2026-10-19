@@ -1,0 +1,118 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/edu-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Education and Research: The One-Hour Briefing",
+  "description": "A free hour built around seven real jobs in schools, campuses, labs and training teams: leveling a reading passage, drafting rubric feedback, handling an AI-detector flag, screening abstracts, writing and reviewing an NIH application, vetting a classroom AI tool, and turning an SOP into a microlearning module. Each shows where AI helps, where it must not decide, and the rule that applies.",
+  "humanCode": "EDU-001",
+  "fieldOfStudy": "AI in Education and Research",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "education",
+    "k-12",
+    "higher education",
+    "research",
+    "instructional design",
+    "ferpa",
+    "coppa",
+    "academic integrity",
+    "systematic review",
+    "nih",
+    "student privacy",
+    "eu ai act"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/edu-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Education and Research: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/edu-001/",
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce three leveled versions of a synthetic reading passage and check them for changed facts, lost rigor and identifying details before classroom use",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-1",
+      "targetCode": "edu-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Separate the parts of a feedback, integrity or screening task an AI tool may draft from the decisions a teacher, integrity officer or reviewer must make, citing the governing policy",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-2",
+      "targetCode": "edu-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute recall and precision for an AI-assisted abstract screen against a gold set and write a PRISMA 2020-style disclosure of the tool used",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-3",
+      "targetCode": "edu-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify proposed AI uses in an NIH application and in NIH peer review as allowed, allowed with verification and a record of use, or prohibited under NOT-OD-25-132, NOT-OD-23-149 and NOT-OD-24-157",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-4",
+      "targetCode": "edu-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Find the privacy and child-safety problems in a fictional vendor's terms using a FERPA direct-control, COPPA, state student-privacy and chatbot-safety checklist",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-5",
+      "targetCode": "edu-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Trace every AI-drafted training quiz item to a line of the source SOP and choose the next Wirewalk course for your role",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-001/#outcome-6",
+      "targetCode": "edu-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/edu-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

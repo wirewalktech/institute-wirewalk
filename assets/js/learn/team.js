@@ -7,6 +7,7 @@
  *   /learn/team/#join=<token>         accept an emailed invitation (older links: ?join=)
  *   /learn/team/?buy=course:<id>&qty=N    buy seats (from "Buy for your team" on course and program pages)
  *   /learn/team/?org=<id>&session=cs_  back from Stripe: waits for the payment, then shows the seats
+ *   (training campaigns live on /learn/team/campaigns/, assets/js/learn/campaigns.js)
  *
  * Every price comes from the Worker (which asks billing); nothing here computes one.
  * Everything from the API is rendered as text (WL.h), never as HTML.
@@ -34,7 +35,11 @@
   }
   function forgetJoin() { try { sessionStorage.removeItem("wia_join"); } catch (e) { /* ignore */ } }
   var API = window.WIAApi, W = window.WL, h = W.h;
-  var MIN = 5, MAX = 1000, INVOICE_MIN = 25;
+  /* [org-agreements] The invoice minimum comes from billing's seat quote (invoiceMinSeats,
+     invoiceAvailable), because an organization's agreement can lower it. DEFAULT_INVOICE_MIN is
+     only what is shown before the first quote arrives, or when billing does not send it yet. */
+  var MIN = 5, MAX = 1000, DEFAULT_INVOICE_MIN = 25;
+  var PO_RE = /^[A-Za-z0-9][A-Za-z0-9 ._\/-]{0,59}$/;
   var cfgEl = document.getElementById("wl-team-config");
   var ENQUIRY = cfgEl ? cfgEl.getAttribute("data-enquiry") : "";
   var SITE = cfgEl ? (cfgEl.getAttribute("data-site") || "").replace(/\/+$/, "") : "";
@@ -63,6 +68,7 @@
   /* ------------------------------------------------------------------ boot */
   function load() {
     var join = takeJoin();
+    if (join && !API.signedIn()) { window.location.replace(W.signInUrl("/learn/team/", { intent: "team" })); return; }   // [onboard] invitation context
     if (!W.requireAuth()) return;
     var buy = W.param("buy"), org = W.param("org");
     if (join) return joinByToken(join);
@@ -193,27 +199,84 @@
     var payCard = h("input", { type: "radio", name: "pay", value: "card", checked: true, id: "b-card" });
     var payInv = h("input", { type: "radio", name: "pay", value: "invoice", id: "b-inv" });
     var invNote = h("p", { class: "wl-hint" });
+    /* [org-agreements] Purchase order number, shown for invoice payment; required when the
+       organization's agreement asks for one and has no blanket PO on file. */
+    var po = h("input", { id: "b-po", type: "text", maxlength: "60", autocomplete: "off", spellcheck: "false", "aria-describedby": "b-po-hint" });
+    var poHint = h("p", { class: "wl-hint", id: "b-po-hint" }, "Printed on the invoice. Letters, digits, spaces and . _ / - only.");
+    var poLabel = h("label", { for: "b-po" }, "Purchase order number", h("span", { class: "wl-opt" }, " (optional)"));
+    var poWrap = h("div", { class: "wl-field", hidden: true }, poLabel, po, poHint);
+    var agreementBox = h("div", { "aria-live": "polite" });
     var priceBox = h("div", { class: "wl-totals", "aria-live": "polite" });
     var err = h("div", { role: "alert", class: "wl-form-error", hidden: true });
     var go = h("button", { type: "button", class: "wl-btn wl-btn-block", disabled: true }, "Check out");
     var quote = null, seq = 0, timer = null;
+    var invMin = DEFAULT_INVOICE_MIN, agreement = null, orgTerms = {};
 
     function n() { var v = Number(qty.value); return Number.isInteger(v) ? v : NaN; }
+    /* The org's agreement for buyers (GET /api/org/:id/agreement, managers only): used for the
+       blanket-PO flag. Not deployed yet (404/503) or no agreement: null, and the page works as before. */
+    function loadTerms(orgId) {
+      if (Object.prototype.hasOwnProperty.call(orgTerms, orgId)) return Promise.resolve(orgTerms[orgId]);
+      return req("GET", "/api/org/" + enc(orgId) + "/agreement", undefined, { quiet401: true }).then(function (r) {
+        orgTerms[orgId] = (r && r.agreement) || null;
+        return orgTerms[orgId];
+      }, function () { orgTerms[orgId] = null; return null; });
+    }
+    function poRequired() {
+      var t = orgTerms[orgSel.value];
+      return !!(agreement && agreement.poRequired && !(t && t.hasBlanketPo));
+    }
+    function setInvoice(available) {
+      payInv.disabled = !available;
+      if (!available && payInv.checked) payCard.checked = true;
+      var terms = agreement && agreement.invoiceAllowed && agreement.paymentTermsDays ? " Payment terms: net " + agreement.paymentTermsDays + " days." : "";
+      invNote.textContent = available ? "Pay by invoice: we record the order, our team sends the invoice, and the seats appear once it is paid." + terms
+                                      : "Invoice payment is available from " + invMin + " seats.";
+    }
+    function syncPay() {
+      var invoice = payInv.checked && !payInv.disabled;
+      poWrap.hidden = !invoice;
+      var req0 = poRequired();
+      W.clear(poLabel).appendChild(document.createTextNode("Purchase order number"));
+      poLabel.appendChild(req0 ? h("span", { class: "wl-opt" }, " (required by your organization's agreement)") : h("span", { class: "wl-opt" }, " (optional)"));
+      po.required = invoice && req0;
+      var t = orgTerms[orgSel.value];
+      poHint.textContent = (t && t.hasBlanketPo ? "Leave empty to use the purchase order on file for your agreement. " : "") + "Printed on the invoice. Letters, digits, spaces and . _ / - only.";
+      if (quote) {
+        var f = quote.formatted || {};
+        go.textContent = invoice ? "Request an invoice for " + (f.total || W.money(quote.total)) : "Pay " + (f.total || W.money(quote.total)) + " securely";
+      }
+    }
+    function showAgreement() {
+      W.clear(agreementBox);
+      if (!agreement || !agreement.label) return;
+      var bits = [];
+      if (agreement.invoiceAllowed) bits.push("invoice from " + W.plural(agreement.invoiceMinSeats || invMin, "seat") + (agreement.paymentTermsDays ? ", net " + agreement.paymentTermsDays + " days" : ""));
+      if (agreement.poRequired) bits.push(orgTerms[orgSel.value] && orgTerms[orgSel.value].hasBlanketPo ? "purchase order on file" : "purchase order number required");
+      agreementBox.appendChild(W.notice("info", "Your organization's agreement: " + agreement.label,
+        (bits.length ? bits.join("; ") + ". " : "") + "It is one offer among the others: the single best price below applies."));
+    }
     function refresh() {
       clearTimeout(timer);
       timer = setTimeout(function () {
-        var q = n(), my = ++seq;
+        var q = n(), my = ++seq, orgId = orgSel.value;
         quote = null; go.disabled = true;
-        var inv = q >= INVOICE_MIN;
-        payInv.disabled = !inv;
-        if (!inv && payInv.checked) { payCard.checked = true; }
-        invNote.textContent = inv ? "Pay by invoice: we record the order, our team sends the invoice, and the seats appear once it is paid."
-                                  : "Invoice payment is available from " + INVOICE_MIN + " seats.";
+        /* Until billing answers, the last known minimum decides; the quote then says exactly. */
+        setInvoice(q >= invMin);
+        syncPay();
         if (!(q >= MIN && q <= MAX)) { W.clear(priceBox).appendChild(h("p", { class: "wl-hint" }, "Choose " + MIN + " to " + MAX + " seats.")); return; }
         W.clear(priceBox).appendChild(W.spinner("Pricing…"));
-        req("POST", "/api/seats/quote", { id: item.id, of: item.kind, quantity: q, code: code.value.trim() || undefined }, { auth: "optional" }).then(function (d) {
+        Promise.all([
+          req("POST", "/api/seats/quote", { id: item.id, of: item.kind, quantity: q, orgId: orgId, code: code.value.trim() || undefined }, { auth: "optional" }),
+          loadTerms(orgId)
+        ]).then(function (res) {
+          var d = res[0];
           if (my !== seq) return;
           quote = d;
+          agreement = d.agreement && typeof d.agreement === "object" ? d.agreement : null;
+          if (Number.isInteger(d.invoiceMinSeats) && d.invoiceMinSeats > 0) invMin = d.invoiceMinSeats;
+          setInvoice(typeof d.invoiceAvailable === "boolean" ? d.invoiceAvailable : q >= invMin);
+          showAgreement();
           var l = (d.lines || [])[0] || {};
           var f = d.formatted || {};
           W.clear(priceBox).appendChild(h("dl", { class: "wl-facts" },
@@ -224,9 +287,9 @@
             h("div", null, h("dt", null, h("strong", null, "Total")), h("dd", null, h("strong", null, f.total || W.money(d.total))))));
           if (d.code && d.code.status && d.code.status !== "applied")
             priceBox.appendChild(h("p", { class: "wl-hint" }, d.code.status === "better_offer_applied" ? "Your code works, but a better offer is already applied." : "That code does not apply to this order."));
-          priceBox.appendChild(h("p", { class: "wl-hint" }, "Team pricing, program bundles and discount codes do not add up: the single best one applies, as for any order."));
+          priceBox.appendChild(h("p", { class: "wl-hint" }, "Team pricing, program bundles, your organization's agreement and discount codes do not add up: the single best one applies, as for any order."));
           go.disabled = false;
-          go.textContent = payInv.checked ? "Request an invoice for " + (f.total || W.money(d.total)) : "Pay " + (f.total || W.money(d.total)) + " securely";
+          syncPay();
         }, function (e) {
           if (my !== seq) return;
           W.clear(priceBox).appendChild(h("p", { class: "wl-tone-warn" }, e.message));
@@ -235,13 +298,18 @@
     }
     [qty, code].forEach(function (x) { x.addEventListener("input", refresh); });
     [payCard, payInv].forEach(function (x) { x.addEventListener("change", refresh); });
+    orgSel.addEventListener("change", function () { agreement = null; invMin = DEFAULT_INVOICE_MIN; W.clear(agreementBox); refresh(); });
 
     go.addEventListener("click", function () {
       if (!quote) return;
       err.hidden = true;
       var orgId = orgSel.value, invoice = payInv.checked && !payInv.disabled;
+      var poNumber = invoice ? po.value.trim() : "";
+      if (invoice && poNumber && !PO_RE.test(poNumber)) { err.textContent = "Use letters, digits, spaces and . _ / - in the purchase order number (60 characters at most)."; err.hidden = false; po.focus(); return; }
+      if (invoice && !poNumber && poRequired()) { err.textContent = "Your organization's agreement needs a purchase order number for an invoice."; err.hidden = false; po.focus(); return; }
       var p = req("POST", "/api/org/" + enc(orgId) + "/seats/checkout",
-        { id: item.id, of: item.kind, quantity: n(), code: code.value.trim() || undefined, payment: invoice ? "invoice" : "card", cancelPath: "/learn/team/" });
+        { id: item.id, of: item.kind, quantity: n(), code: code.value.trim() || undefined, payment: invoice ? "invoice" : "card",
+          poNumber: poNumber || undefined, cancelPath: "/learn/team/" });
       W.busy(go, p, invoice ? "Recording the request…" : "Starting checkout…").then(function (d) {
         if (d.invoice) return sendEnquiry(orgId, d);
         var u;
@@ -249,7 +317,10 @@
         if (!u || u.protocol !== "https:") { err.textContent = "Checkout could not be started. Please try again."; err.hidden = false; return; }
         go.disabled = true; go.textContent = "Redirecting to Stripe…";
         window.location.assign(u.href);
-      }, function (e) { err.textContent = e.message; err.hidden = false; });
+      }, function (e) {
+        err.textContent = e.message; err.hidden = false;
+        if (e.data && e.data.field === "poNumber") { poWrap.hidden = false; po.focus(); }
+      });
     });
 
     var orgField = managed.length > 1
@@ -261,11 +332,14 @@
       h("div", { class: "wl-field" }, h("label", { for: "b-qty" }, "Number of seats"), qty,
         h("p", { class: "wl-hint" }, MIN + " to " + MAX + ". Volume pricing applies automatically; the price below is the one checkout charges.")),
       h("div", { class: "wl-field" }, h("label", { for: "b-code" }, "Discount code", h("span", { class: "wl-opt" }, " (optional)")), code),
-      h("fieldset", { class: "wl-field" }, h("legend", null, "Payment"),
-        h("label", { class: "wl-check" }, payCard, " Card, now (Stripe)"),
-        h("label", { class: "wl-check" }, payInv, " Invoice / purchase order"), invNote),
-      priceBox, err, go,
-      h("p", { class: "wl-hint" }, "Need something else, such as a written quote first? ", h("a", { href: "/teams/#enquiry" }, "Ask us"), ".")));
+      /* [org-agreements] .wl-choice options (the lesson-tick class .wl-check drew the labels as 20px circles). */
+      h("fieldset", { class: "wl-choice" }, h("legend", null, "Payment"),
+        h("label", { class: "wl-choice-opt", for: "b-card" }, payCard, h("span", null, "Card, now (Stripe)")),
+        h("label", { class: "wl-choice-opt", for: "b-inv" }, payInv, h("span", null, "Invoice / purchase order"))),
+      invNote,
+      poWrap, agreementBox, priceBox, err, go,
+      h("p", { class: "wl-hint" }, "Need something else, such as a written quote first? ", h("a", { href: "/teams/#enquiry" }, "Ask us"),
+        ", or ask about ", h("a", { href: "/teams/enterprise/" }, "pricing for your organization"), ".")));
     W.mount(h("div", { class: "wl-narrow" }, parts));
     refresh();
   }
@@ -339,6 +413,7 @@
     parts.push(membersSection(org, d, owner, reload));
     parts.push(inviteSection(org, owner, reload));
     if (owner) parts.push(domainsSection(org, reload));
+    parts.push(campaignsSection(org));
     parts.push(progressSection(org));
     parts.push(purchasesSection(d));
     W.mount(h("div", null, parts));
@@ -500,6 +575,14 @@
       W.busy(add, req("POST", "/api/org/" + enc(org.id) + "/domains", { domain: input.value.trim() })).then(reload, function (e) { W.toast(e.message, "bad"); });
     });
     s.appendChild(h("div", { class: "wl-form-row" }, h("label", { class: "wl-sr", for: "d-new" }, "Domain"), input, add));
+    return s;
+  }
+
+  /* [org-agreements] Training campaigns are managed on their own page. */
+  function campaignsSection(org) {
+    var s = section("Training campaigns", "o-camp");
+    s.appendChild(h("p", { class: "wl-hint" }, "Assign a program or courses to a list of people with a due date. Seats come from this team; people get reminders, and you get a progress report for the assigned courses."));
+    s.appendChild(h("div", { class: "wl-actions" }, W.btn("Training campaigns", { href: "/learn/team/campaigns/?org=" + enc(org.id), class: "wl-btn-sm" })));
     return s;
   }
 

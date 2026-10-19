@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/sec-310.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Red Teaming",
+  "description": "An expert course on authorized AI red teaming: scoping and rules of engagement, threat-informed planning with MITRE ATLAS, attacking LLM applications, RAG and agents, automating multi-turn attacks at scale, measuring results with statistical care, and running a continuous program.",
+  "humanCode": "SEC-310",
+  "fieldOfStudy": "AI Security: Securing AI Systems",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ai red teaming",
+    "red team",
+    "jailbreak",
+    "prompt injection",
+    "mitre atlas",
+    "pyrit",
+    "garak",
+    "promptfoo",
+    "adversarial testing",
+    "rules of engagement"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/sec-310.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Red Teaming"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/sec-310/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Scope an AI red team engagement with written authorization, rules of engagement and safe handling of production data",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-1",
+      "targetCode": "sec-310.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a threat-informed test plan from MITRE ATLAS and the OWASP LLM and agentic lists",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-2",
+      "targetCode": "sec-310.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Execute jailbreak, indirect injection, retrieval manipulation and agent abuse test cases end to end",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-3",
+      "targetCode": "sec-310.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Automate multi-turn attacks with PyRIT, garak or promptfoo and score results reliably",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-4",
+      "targetCode": "sec-310.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Report attack success rates with sampling and confidence that reflect non-deterministic behavior",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-5",
+      "targetCode": "sec-310.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write findings with reproduction steps, severity and root cause that lead to architectural fixes",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-6",
+      "targetCode": "sec-310.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a continuous AI red teaming program integrated with the release process",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-310/#outcome-7",
+      "targetCode": "sec-310.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/sec-310.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

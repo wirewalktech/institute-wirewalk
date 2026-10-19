@@ -1,6 +1,7 @@
 /* /learn/exam/?c=<course> : rules screen, timed exam, submission and module-level results.
- * Answers live in memory and in sessionStorage (per attempt) so a reload resumes them.
- * Correct answers are never shown: the Worker never sends them. */
+ * Answers live in memory and in sessionStorage (per attempt), and are autosaved to the Worker,
+ * so a reload or another device resumes them. Correct answers are never shown: the Worker
+ * never sends them. */
 (function () {
   "use strict";
   var API = window.WIAApi, W = window.WL, h = W.h;
@@ -13,8 +14,9 @@
   var tick = null, submitting = false, submitted = false, warned = {};
 
   /* ---- clock ----
-   * The Worker grades a submission that arrives later than deadline + 60 s as unanswered, so
-   * the countdown must follow the SERVER's clock, not the learner's. A fresh start response
+   * The Worker ignores the answer sheet of a submission that arrives later than deadline + 60 s
+   * and grades only the answers autosaved by then, so the countdown must follow the SERVER's
+   * clock, not the learner's. A fresh start response
    * carries deadline = serverNow + minutes, which gives the offset between the two clocks; it
    * is kept per attempt (localStorage) so a resume in another tab or after a reload uses it.
    * If the Worker ever sends serverTime/now, that wins. Auto-submit fires a few seconds before
@@ -50,7 +52,7 @@
     return (document.hidden && hiddenSince && Date.now() - hiddenSince > HIDDEN_THROTTLE_MS) ? HIDDEN_LEAD_MS : AUTO_LEAD_MS;
   }
   document.addEventListener("visibilitychange", function () {
-    if (document.hidden) { hiddenSince = Date.now(); return; }
+    if (document.hidden) { hiddenSince = Date.now(); flushSave(); return; }
     hiddenSince = null;
     if (ex && !submitted) updateTimer();
   });
@@ -60,7 +62,120 @@
   }
 
   function storeKey() { return "wia_exam_" + ex.attemptId; }
-  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur }); }
+  function persist() { W.ss(storeKey(), { answers: st.answers, flags: st.flags, cur: st.cur, dirty: sv.dirty, rev: sv.rev }); }
+
+  /* ---- autosave ----
+   * Each change is written to sessionStorage at once (works offline) and sent to the Worker
+   * (PUT /api/attempts/:id/answers) SAVE_DELAY_MS later, or straight away with keepalive when
+   * the page is hidden or closed. If time runs out while the learner is away, the Worker grades
+   * what was saved; a resume, on any device, gets the saved answers back. `dirty` (also kept in
+   * sessionStorage) marks changes the Worker has not confirmed: on a resume in the same tab they
+   * win over the Worker's copy. A 409 means the attempt is closed or out of time, and a 403 that
+   * access to the course has ended: saving stops and says why. A 429 (the Worker's per-learner
+   * autosave limit) backs off for SAVE_RATE_BACKOFF_MS and keeps going.
+   *
+   * The close-of-page save uses fetch keepalive, not sendBeacon: sendBeacon cannot send the
+   * Authorization header. Because the API is on another origin, that PUT needs a CORS preflight,
+   * and some browsers (older Safari and Firefox) drop a preflighted keepalive request on
+   * pagehide. Accepted: visibilitychange -> hidden fires first and flushes the same change while
+   * the page is still alive, the 2 s debounce bounds what is at stake to the last few seconds,
+   * and sessionStorage keeps those picks for a resume in the same tab.
+   *
+   * [WIA-014] Ordering. Every PUT is a whole snapshot, and the keepalive flush on hide can overlap
+   * a debounced save that is still in flight, so responses (and, without a guard, writes) can
+   * arrive out of order. Each snapshot carries `rev`, numbered above the `rev` the exam start or
+   * resume returned; the Worker stores it only when it is newer than what it holds (older or equal:
+   * 409 reason "stale"). Here: "All answers saved" shows only when the Worker accepted the newest
+   * snapshot this tab sent and nothing changed since; a stale reply for an older snapshot is
+   * ignored; a stale reply for the newest one (another tab or device saved a higher rev) renumbers
+   * above it and saves this tab's picks again; and a success for an older snapshot that the Worker
+   * did not confirm by rev (a Worker without the ordering guard) may have overwritten a newer
+   * one, so the newest picks are saved again. */
+  var SAVE_DELAY_MS = 2000, SAVE_RETRY_MS = 10000, SAVE_RATE_BACKOFF_MS = 60000, MAX_REBASE = 3;
+  function freshSv(rev) {
+    return { dirty: false, timer: null, inflight: 0, changes: 0, flushed: -1, stopped: false, failed: false, backoffUntil: 0,
+             rev: rev || 0, ackRev: 0, rebases: 0 };
+  }
+  var sv = freshSv(0);
+  function savedPicks() {
+    var a = {};
+    ex.questions.forEach(function (q) { if (st.answers[q.n] && st.answers[q.n].length) a[String(q.n)] = st.answers[q.n].slice(); });
+    return a;
+  }
+  function changed() { sv.dirty = true; sv.changes++; persist(); scheduleSave(SAVE_DELAY_MS); }
+  function scheduleSave(ms) {
+    if (sv.stopped) return;
+    clearTimeout(sv.timer);
+    if (sv.backoffUntil) ms = Math.max(ms, sv.backoffUntil - Date.now());   // a 429 back-off is not cut short by new picks
+    sv.timer = setTimeout(function () { saveNow(false); }, ms);
+    if (!sv.failed) showSaved("Saving…");
+  }
+  function saveNow(keepalive) {
+    clearTimeout(sv.timer); sv.timer = null;
+    if (!ex || submitting || submitted || sv.stopped || !sv.dirty) return;
+    if (sv.inflight && !keepalive) return scheduleSave(SAVE_DELAY_MS);   // one at a time; the next one carries the latest picks
+    var aid = ex.attemptId, upTo = sv.changes, rev = ++sv.rev, mine = sv;
+    sv.inflight++;
+    persist();
+    API.saveAnswers(aid, savedPicks(), keepalive ? { keepalive: true } : undefined, rev).then(function (r) {
+      if (mine !== sv) return;   // a newer begin() replaced this attempt's save state
+      sv.inflight--;
+      if (!ex || ex.attemptId !== aid) return;
+      sv.failed = false; sv.backoffUntil = 0; sv.rebases = 0;
+      var confirmed = !!(r && r.rev === rev);
+      if (rev < sv.ackRev) {
+        /* A late answer for an older snapshot. Confirmed by rev: the Worker stored it before the
+           newer one, nothing was lost. Unconfirmed: it may have replaced the newer picks. */
+        if (!confirmed) { sv.dirty = true; sv.changes++; persist(); saveNow(document.hidden); }
+        return;
+      }
+      sv.ackRev = rev;
+      if (rev === sv.rev && upTo === sv.changes) { sv.dirty = false; persist(); showSaved("All answers saved"); }
+    }, function (e) {
+      if (mine !== sv) return;
+      sv.inflight--;
+      if (!ex || ex.attemptId !== aid || submitted) return;
+      if (e.status === 409 && e.data && e.data.reason === "stale") {
+        if (rev < sv.rev) {   // a newer snapshot from this tab has been sent; it carries these picks and more
+          if (!sv.inflight && sv.dirty && !sv.timer) scheduleSave(SAVE_DELAY_MS);
+          return;
+        }
+        /* Another tab or device stored a higher rev: number above it and save this tab's picks. */
+        var srv = Number(e.data.rev) || 0;
+        if (srv > sv.rev) sv.rev = srv;
+        if (sv.rebases++ < MAX_REBASE) saveNow(document.hidden); else scheduleSave(SAVE_RETRY_MS);
+        return;
+      }
+      if (e.status === 409) { sv.stopped = true; showSaved("Not saved: this attempt is closed", true); return; }
+      if (e.status === 403) {
+        sv.stopped = true;
+        showSaved("Not saved: you no longer have access to this course", true);
+        W.say("Your answers can no longer be saved: you no longer have access to this course.");
+        return;
+      }
+      if (e.status === 401) return;
+      if (e.status === 429) {
+        sv.failed = true;
+        sv.backoffUntil = Date.now() + SAVE_RATE_BACKOFF_MS;
+        showSaved("Not saved yet: kept in this browser", true);
+        scheduleSave(SAVE_RATE_BACKOFF_MS);
+        return;
+      }
+      if (!sv.failed) W.say("Your answers could not be saved to your account. They are kept in this browser, and saving will retry.");
+      sv.failed = true;
+      showSaved("Not saved yet: kept in this browser", true);
+      scheduleSave(SAVE_RETRY_MS);
+    });
+  }
+  function showSaved(text, bad) {
+    if (!els.saved) return;
+    els.saved.textContent = text;
+    els.saved.classList.toggle("is-bad", !!bad);
+  }
+  /* visibilitychange and pagehide both fire when a page closes: send each change once. */
+  function flushSave() { if (ex && sv.dirty && !submitted && sv.flushed !== sv.changes) { sv.flushed = sv.changes; saveNow(true); } }
+  window.addEventListener("pagehide", flushSave);
+  window.addEventListener("online", function () { if (ex && sv.dirty && !submitted) saveNow(false); });
   function prefMode() { try { return localStorage.getItem(MODE_KEY) === "all" ? "all" : "one"; } catch (e) { return "one"; } }
   function savePrefMode(m) { try { localStorage.setItem(MODE_KEY, m); } catch (e) { /* ignore */ } }
 
@@ -140,7 +255,7 @@
         h("ul", { class: "wl-ticks" },
           h("li", null, "The timer starts when you press Start and keeps running if you close the page. Come back to this page to resume before time runs out."),
           h("li", null, "Some questions have one correct answer; others say “select all that apply”. A multi-select question counts only if you choose exactly the right set."),
-          h("li", null, "Your answers are kept in this browser tab until you submit. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero."),
+          h("li", null, "Your answers are saved to your account a moment after you choose them, and saved answers are restored if you reload or continue on another device; a change not saved yet (for example while offline) is kept only in this browser tab. When time runs out, the answers you have chosen are submitted automatically a few seconds before the clock reaches zero; if you are away, the answers saved by then are graded."),
           h("li", null, "Results show your score and how you did in each module. Correct answers are never shown."),
           h("li", null, "If you do not pass, the next attempt opens 24 hours later."),
           h("li", null, "Work on your own. The certificate states that you completed the course and passed its assessment."))),
@@ -158,7 +273,7 @@
       W.busy(b, startExam(false), "Resuming…").then(function (r) { begin(r, prefMode()); }, function (e) { W.toast(e.message, "bad"); load(); });
     });
     W.mount(h("div", { class: "wl-narrow" }, head(),
-      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". Answers you chose in this browser tab are restored.", [b])));
+      W.notice("warn", "Your exam is in progress", "The timer is still running. It ends " + W.fmtDateTime(open.deadline) + ". Answers saved to your account are restored on any device; changes not yet saved are kept in the browser tab you made them in.", [b])));
   }
 
   /* ------------------------------------------------------------ the exam */
@@ -166,10 +281,21 @@
     ex = r;
     offset = r._off || 0;
     var saved = W.ss(storeKey()) || {};
-    st = { answers: saved.answers || {}, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
+    var server = r.answers && typeof r.answers === "object" ? r.answers : {};
+    /* This tab's unsaved changes win; otherwise the Worker's copy (possibly from another device).
+       A tab with no dirty flag predates autosave: its answers win when the Worker has none. */
+    var local = saved.answers && (saved.dirty || !Object.keys(server).length) ? saved.answers : null;
+    st = { answers: local || server, flags: saved.flags || {}, cur: Math.min(saved.cur || 0, r.questions.length - 1), mode: mode };
+    clearTimeout(sv.timer);
+    /* [WIA-014] Number the next save above both the Worker's stored rev and any rev this tab already sent. */
+    sv = freshSv(Math.max(Number(r.rev) || 0, Number(saved.rev) || 0));
     submitting = false; submitted = false; warned = {};
     window.addEventListener("beforeunload", beforeUnload);
     renderExam();
+    var restored = answeredCount();
+    if (local && restored) changed();
+    else showSaved(restored ? "All answers saved" : "Answers save automatically");
+    if (restored) W.say(W.plural(restored, "answer") + " restored.");
     clearInterval(tick);
     tick = setInterval(updateTimer, 1000);
     updateTimer();
@@ -193,6 +319,8 @@
     els.timerBox = h("div", { class: "wl-timer", role: "timer", "aria-label": "Time remaining" }, h("span", { class: "wl-timer-k" }, "Time left"), els.timer);
     els.sr = h("div", { class: "wl-sr", "aria-live": "assertive" });
     els.count = h("span", { class: "wl-exam-count" });
+    els.saved = h("span", { class: "wl-exam-saved" + (sv.failed || sv.stopped ? " is-bad" : "") },
+      els.saved ? els.saved.textContent : "");
     var toggle = h("button", { type: "button", class: "wl-btn wl-btn-ghost wl-btn-sm" }, st.mode === "one" ? "All questions" : "One at a time");
     toggle.addEventListener("click", function () { st.mode = st.mode === "one" ? "all" : "one"; savePrefMode(st.mode); renderExam(); });
     var submit = W.btn("Submit…", { class: "wl-btn-sm" });
@@ -200,7 +328,7 @@
 
     var bar = h("div", { class: "wl-exam-bar" },
       h("div", { class: "wl-exam-bar-in" },
-        h("div", { class: "wl-grow wl-exam-bar-t" }, h("h1", { class: "wl-exam-h1" }, title()), els.count),
+        h("div", { class: "wl-grow wl-exam-bar-t" }, h("h1", { class: "wl-exam-h1" }, title()), els.count, els.saved),
         els.timerBox, toggle, submit));
 
     els.nav = h("nav", { class: "wl-qmap", "aria-label": "Question map" });
@@ -209,8 +337,11 @@
       h("div", { class: "wl-exam-grid" + (st.mode === "all" ? " is-all" : "") },
         h("aside", { class: "wl-exam-side" }, h("h2", { class: "wl-h4" }, "Questions"), els.nav,
           h("p", { class: "wl-hint wl-qlegend" }, h("span", { class: "wl-qdot is-ans" }), " answered ", h("span", { class: "wl-qdot is-flag" }), " flagged")),
-        els.body)));
+        els.body)), { focus: false });
     renderBody();
+    /* Focus starts on the current question (question 1 on a fresh start), not the page body. */
+    var card = document.getElementById("q-" + ex.questions[st.cur].n), leg = card && card.querySelector("legend");
+    if (leg) leg.focus({ preventScroll: true });
     updateTimer();
   }
 
@@ -266,7 +397,7 @@
           cur.sort(function (a, b) { return a - b; });
         } else cur = [oi];
         if (cur.length) st.answers[q.n] = cur; else delete st.answers[q.n];
-        persist(); renderMap();
+        changed(); renderMap();
       });
       return h("label", { for: id, class: "wl-option" }, input,
         h("span", { class: "wl-option-k", "aria-hidden": "true" }, String.fromCharCode(65 + oi)),
@@ -355,6 +486,7 @@
   function doSubmit(auto) {
     if (submitting || submitted) return;
     submitting = true;
+    clearTimeout(sv.timer);
     var answers = {};
     ex.questions.forEach(function (q) { answers[String(q.n)] = (st.answers[q.n] || []).slice(); });
     W.loading(auto ? "Time is up — submitting your answers…" : "Submitting your answers…");
@@ -401,7 +533,7 @@
     backBtn.addEventListener("click", function () { renderExam(); clearInterval(tick); tick = setInterval(updateTimer, 1000); });
     var clientErr = e.status >= 400 && e.status < 500 && e.status !== 408 && e.status !== 429;
     W.mount(h("div", { class: "wl-narrow" }, W.notice("error", "Your answers were not submitted yet", e.message +
-      " Your answers are still saved in this tab. Keep this page open and try again.",
+      " Your answers are still kept in this browser. Keep this page open and try again.",
       clientErr ? [retry, W.btn("Back to course", { href: W.courseUrl(cid), class: "wl-btn-ghost" })] : [retry, backBtn], { h1: true })));
   }
 
@@ -416,7 +548,7 @@
         h("h1", { class: "wl-display", tabindex: "-1", id: "res-h" }, r.passed ? "Congratulations — you passed." : "You scored " + r.scorePct + "%."),
         h("p", { class: "wl-lead" }, "Your score is " + r.scorePct + "%. The pass mark is " + r.passPct + "%.")));
     var notes = [];
-    if (late) notes.push(W.notice("warn", "Submitted after the deadline", r.message ? capital(r.message) + "." : "This attempt arrived after the time limit, so it was graded as unanswered."));
+    if (late) notes.push(W.notice("warn", "Submitted after the deadline", r.message ? capital(r.message) + "." : "This attempt arrived after the time limit, so the answers saved before it were graded."));
     else if (auto) notes.push(W.notice("info", "Time ran out", "Your answers were submitted automatically when the timer reached zero."));
 
     var breakdown = h("section", { class: "wl-section", "aria-labelledby": "h-mods" },
@@ -440,7 +572,8 @@
       notes.push(W.notice(r.attemptsLeft > 0 ? "info" : "error", r.attemptsLeft > 0 ? "Review and try again" : "No attempts left", msg));
       next.push(W.btn("Review the lessons", { href: W.courseUrl(cid) }));
     }
-    W.mount(h("div", { class: "wl-narrow" }, hero, notes, breakdown, h("div", { class: "wl-actions" }, next)));
+    W.mount(h("div", { class: "wl-narrow" }, hero, notes, breakdown, h("div", { class: "wl-actions" }, next),
+      r.passed ? W.nextPanel(cid) : null));   // [onboard] "Next in your path"
     var hd = document.getElementById("res-h"); if (hd) hd.focus();
   }
 

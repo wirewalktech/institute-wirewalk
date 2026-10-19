@@ -1,0 +1,502 @@
+{
+ "note": "Generated from the Worker's labs-engine over test/fixtures/labs/m2-claims-pilot.json (module set to 1, course ven-120). Regenerate with the script named in tests/e2e/README.md when the response shapes change.",
+ "get": {
+  "course": {
+   "id": "ven-120",
+   "title": "Claude for Professionals",
+   "level": "basic"
+  },
+  "access": "enrolled",
+  "lab": {
+   "id": "m2-claims-pilot",
+   "course": "ven-120",
+   "module": 1,
+   "kind": "module",
+   "title": "The Denials Pilot",
+   "summary": "Launch an AI denials-triage pilot with a skeptical billing team, a hard deadline and an auditor who is paying attention.",
+   "role": "<p>You are the <strong>VP of Revenue Cycle</strong> at Harbor Point Regional Health (a composite organization: three hospitals in Ohio, 4,200 staff, Epic). You have <strong>$400,000</strong> and <strong>twelve weeks</strong>. The CFO wants denials down 20% by Q3; your billing team has seen two automation projects fail.</p>\n",
+   "stakes": "<p>Recover cash without losing the billing team&#39;s trust or drawing a compliance finding. Every choice moves the dashboard.</p>\n",
+   "minutes": 12,
+   "metrics": [
+    {
+     "id": "cash",
+     "label": "Cash recovered",
+     "short": null,
+     "unit": "usd",
+     "per": null,
+     "start": 0,
+     "good": "high",
+     "min": null,
+     "max": null
+    },
+    {
+     "id": "trust",
+     "label": "Billing team trust",
+     "short": null,
+     "unit": "points",
+     "per": null,
+     "start": 50,
+     "good": "high",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "id": "risk",
+     "label": "Compliance risk",
+     "short": null,
+     "unit": "points",
+     "per": null,
+     "start": 20,
+     "good": "low",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "id": "weeks",
+     "label": "Weeks to stable results",
+     "short": null,
+     "unit": "weeks",
+     "per": null,
+     "start": 0,
+     "good": "low",
+     "min": 0,
+     "max": 16
+    }
+   ],
+   "decisions": 4,
+   "decisionsMin": 2,
+   "decisionsMax": 4,
+   "endings": 4,
+   "lessons": [],
+   "contentHash": "h"
+  },
+  "start": {
+   "id": "n1",
+   "type": "decision",
+   "title": "Monday, 8:10 a.m.: how do you start?",
+   "body": "<p>The vendor demo went well. The model flagged 71% of last quarter&#39;s preventable denials in a back test. Your billing manager, Dana Ortiz, is less impressed: &quot;The last tool rewrote our appeal letters and we spent a month cleaning up.&quot;</p>\n<p>The CFO&#39;s email is already in your inbox.</p>\n",
+   "materials": [
+    {
+     "title": "Email from the CFO",
+     "kind": "email",
+     "from": "Marcus Bell, CFO",
+     "to": "You",
+     "date": "Monday 7:42 a.m.",
+     "subject": "Denials: Q3 target",
+     "body": "<p>I need a visible number by the board meeting in week 10. The vendor says we can switch on auto-submission for every denial code on day one. Is there a reason not to?</p>\n"
+    },
+    {
+     "title": "Back test summary (last quarter)",
+     "kind": "table",
+     "from": null,
+     "to": null,
+     "date": null,
+     "subject": null,
+     "body": "<table>\n<thead>\n<tr>\n<th>Denial group</th>\n<th align=\"right\">Claims</th>\n<th align=\"right\">Flagged by model</th>\n<th align=\"right\">Preventable</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>CO-197 (no authorization)</td>\n<td align=\"right\">1,240</td>\n<td align=\"right\">902</td>\n<td align=\"right\">1,010</td>\n</tr>\n<tr>\n<td>CO-16 (missing information)</td>\n<td align=\"right\">2,115</td>\n<td align=\"right\">1,480</td>\n<td align=\"right\">1,690</td>\n</tr>\n<tr>\n<td>CO-50 (medical necessity)</td>\n<td align=\"right\">860</td>\n<td align=\"right\">410</td>\n<td align=\"right\">520</td>\n</tr>\n<tr>\n<td>All other codes</td>\n<td align=\"right\">3,310</td>\n<td align=\"right\">1,120</td>\n<td align=\"right\">1,900</td>\n</tr>\n</tbody></table>\n"
+    }
+   ],
+   "choices": [
+    {
+     "id": "a",
+     "label": "Start with the top 3 denial codes and a two-week shadow run beside the billers"
+    },
+    {
+     "id": "b",
+     "label": "Switch on auto-submission for every code, as the vendor suggests"
+    },
+    {
+     "id": "c",
+     "label": "Buy the vendor's fully managed service and let them run the pilot"
+    }
+   ]
+  },
+  "activePlay": null,
+  "history": []
+ },
+ "play": {
+  "playId": "lp_1",
+  "startedAt": "2026-10-18T00:00:00.000Z",
+  "finishedAt": null,
+  "finished": false,
+  "metrics": {
+   "cash": 0,
+   "trust": 50,
+   "risk": 20,
+   "weeks": 0
+  },
+  "timeline": [],
+  "node": {
+   "id": "n1",
+   "type": "decision",
+   "title": "Monday, 8:10 a.m.: how do you start?",
+   "body": "<p>The vendor demo went well. The model flagged 71% of last quarter&#39;s preventable denials in a back test. Your billing manager, Dana Ortiz, is less impressed: &quot;The last tool rewrote our appeal letters and we spent a month cleaning up.&quot;</p>\n<p>The CFO&#39;s email is already in your inbox.</p>\n",
+   "materials": [
+    {
+     "title": "Email from the CFO",
+     "kind": "email",
+     "from": "Marcus Bell, CFO",
+     "to": "You",
+     "date": "Monday 7:42 a.m.",
+     "subject": "Denials: Q3 target",
+     "body": "<p>I need a visible number by the board meeting in week 10. The vendor says we can switch on auto-submission for every denial code on day one. Is there a reason not to?</p>\n"
+    },
+    {
+     "title": "Back test summary (last quarter)",
+     "kind": "table",
+     "from": null,
+     "to": null,
+     "date": null,
+     "subject": null,
+     "body": "<table>\n<thead>\n<tr>\n<th>Denial group</th>\n<th align=\"right\">Claims</th>\n<th align=\"right\">Flagged by model</th>\n<th align=\"right\">Preventable</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>CO-197 (no authorization)</td>\n<td align=\"right\">1,240</td>\n<td align=\"right\">902</td>\n<td align=\"right\">1,010</td>\n</tr>\n<tr>\n<td>CO-16 (missing information)</td>\n<td align=\"right\">2,115</td>\n<td align=\"right\">1,480</td>\n<td align=\"right\">1,690</td>\n</tr>\n<tr>\n<td>CO-50 (medical necessity)</td>\n<td align=\"right\">860</td>\n<td align=\"right\">410</td>\n<td align=\"right\">520</td>\n</tr>\n<tr>\n<td>All other codes</td>\n<td align=\"right\">3,310</td>\n<td align=\"right\">1,120</td>\n<td align=\"right\">1,900</td>\n</tr>\n</tbody></table>\n"
+    }
+   ],
+   "choices": [
+    {
+     "id": "a",
+     "label": "Start with the top 3 denial codes and a two-week shadow run beside the billers"
+    },
+    {
+     "id": "b",
+     "label": "Switch on auto-submission for every code, as the vendor suggests"
+    },
+    {
+     "id": "c",
+     "label": "Buy the vendor's fully managed service and let them run the pilot"
+    }
+   ]
+  },
+  "resumed": false
+ },
+ "steps": [
+  {
+   "nodeId": "n1",
+   "choiceId": "b",
+   "response": {
+    "playId": "lp_1",
+    "choice": {
+     "id": "b",
+     "label": "Switch on auto-submission for every code, as the vendor suggests"
+    },
+    "outcome": "<p>Corrected claims start flowing on day two. Cash comes in fast, and so do complaints: the billers find appeal letters they never saw going out under their names.</p>\n",
+    "deltas": {
+     "cash": 180000,
+     "trust": -20,
+     "risk": 25,
+     "weeks": 1
+    },
+    "metrics": {
+     "cash": 180000,
+     "trust": 30,
+     "risk": 70,
+     "weeks": 1
+    },
+    "events": [
+     {
+      "id": "n2",
+      "type": "event",
+      "title": "Week 3: a letter from the Medicare contractor",
+      "body": "<p>A records request arrives from your Medicare Administrative Contractor. It asks how corrected claims for CO-197 denials were prepared, who reviewed them, and for documentation on a sample of 40 claims <strong>within 30 days</strong>.</p>\n",
+      "kind": "alert",
+      "deltas": {
+       "risk": 25
+      }
+     }
+    ],
+    "node": {
+     "id": "n3",
+     "type": "decision",
+     "title": "Week 3, Thursday: how do you answer?",
+     "body": "<p>Legal wants a plan by tomorrow. The vendor offers to &quot;handle the response&quot;. Dana asks whether her team will be blamed.</p>\n",
+     "materials": [],
+     "choices": [
+      {
+       "id": "a",
+       "label": "Pull the system's audit log and answer within five days with the sampled claims"
+      },
+      {
+       "id": "b",
+       "label": "Pause the tool entirely until legal has reviewed everything"
+      },
+      {
+       "id": "c",
+       "label": "Let the vendor answer and tell the team to keep going"
+      }
+     ]
+    },
+    "finished": false,
+    "timeline": [
+     {
+      "t": "choice",
+      "node": "n1",
+      "title": "Monday, 8:10 a.m.: how do you start?",
+      "deltas": {
+       "cash": 180000,
+       "trust": -20,
+       "risk": 25,
+       "weeks": 1
+      },
+      "choice": "b",
+      "label": "Switch on auto-submission for every code, as the vendor suggests"
+     },
+     {
+      "t": "event",
+      "node": "n2",
+      "title": "Week 3: a letter from the Medicare contractor",
+      "deltas": {
+       "risk": 25
+      }
+     }
+    ]
+   }
+  },
+  {
+   "nodeId": "n3",
+   "choiceId": "c",
+   "response": {
+    "playId": "lp_1",
+    "choice": {
+     "id": "c",
+     "label": "Let the vendor answer and tell the team to keep going"
+    },
+    "outcome": "<p>The vendor&#39;s response describes a review step your hospital never performed. The contractor expands the request to every claim the tool touched.</p>\n",
+    "deltas": {
+     "trust": -15,
+     "risk": 30
+    },
+    "metrics": {
+     "cash": -30000,
+     "trust": 15,
+     "risk": 100,
+     "weeks": 16
+    },
+    "events": [],
+    "node": null,
+    "finished": true,
+    "timeline": [
+     {
+      "t": "choice",
+      "node": "n1",
+      "title": "Monday, 8:10 a.m.: how do you start?",
+      "deltas": {
+       "cash": 180000,
+       "trust": -20,
+       "risk": 25,
+       "weeks": 1
+      },
+      "choice": "b",
+      "label": "Switch on auto-submission for every code, as the vendor suggests"
+     },
+     {
+      "t": "event",
+      "node": "n2",
+      "title": "Week 3: a letter from the Medicare contractor",
+      "deltas": {
+       "risk": 25
+      }
+     },
+     {
+      "t": "choice",
+      "node": "n3",
+      "title": "Week 3, Thursday: how do you answer?",
+      "deltas": {
+       "trust": -15,
+       "risk": 30
+      },
+      "choice": "c",
+      "label": "Let the vendor answer and tell the team to keep going"
+     },
+     {
+      "t": "ending",
+      "node": "e3",
+      "title": "Fast, then frozen",
+      "deltas": {
+       "cash": -210000,
+       "weeks": 15
+      },
+      "rating": "poor"
+     }
+    ],
+    "result": {
+     "ending": {
+      "id": "e3",
+      "title": "Fast, then frozen",
+      "rating": "poor",
+      "body": "<p>The contractor&#39;s expanded review takes five months. The tool is switched off, $210,000 in payments are recouped, and the CFO asks for a full post-mortem.</p>\n",
+      "debrief": "<p>Speed without an evidence trail, then a response written by someone else, turned a routine records request into an audit. Accountability for claims stays with the hospital whatever the tool does.</p>\n"
+     },
+     "reckoning": {
+      "deltas": {
+       "cash": -210000,
+       "weeks": 15
+      }
+     },
+     "metrics": [
+      {
+       "id": "cash",
+       "label": "Cash recovered",
+       "short": null,
+       "unit": "usd",
+       "per": null,
+       "good": "high",
+       "start": 0,
+       "final": -30000,
+       "expert": 200000
+      },
+      {
+       "id": "trust",
+       "label": "Billing team trust",
+       "short": null,
+       "unit": "points",
+       "per": null,
+       "good": "high",
+       "start": 50,
+       "final": 15,
+       "expert": 85
+      },
+      {
+       "id": "risk",
+       "label": "Compliance risk",
+       "short": null,
+       "unit": "points",
+       "per": null,
+       "good": "low",
+       "start": 20,
+       "final": 100,
+       "expert": 5
+      },
+      {
+       "id": "weeks",
+       "label": "Weeks to stable results",
+       "short": null,
+       "unit": "weeks",
+       "per": null,
+       "good": "low",
+       "start": 0,
+       "final": 16,
+       "expert": 6
+      }
+     ],
+     "path": [
+      {
+       "node": "n1",
+       "nodeTitle": "Monday, 8:10 a.m.: how do you start?",
+       "choice": "b",
+       "label": "Switch on auto-submission for every code, as the vendor suggests",
+       "quality": "weak",
+       "rationale": "<p>Fast, visible cash, but no human review, no baseline and no evidence trail. Automating submission before you know the error rate moves the risk to the payer and the auditor.</p>\n",
+       "outcome": "<p>Corrected claims start flowing on day two. Cash comes in fast, and so do complaints: the billers find appeal letters they never saw going out under their names.</p>\n",
+       "deltas": {
+        "cash": 180000,
+        "trust": -20,
+        "risk": 25,
+        "weeks": 1
+       },
+       "expertChoice": "a",
+       "matchesExpert": false
+      },
+      {
+       "node": "n3",
+       "nodeTitle": "Week 3, Thursday: how do you answer?",
+       "choice": "c",
+       "label": "Let the vendor answer and tell the team to keep going",
+       "quality": "weak",
+       "rationale": "<p>You are accountable for your claims, not the vendor. Letting a third party describe your controls, without checking, turned an inquiry into an audit.</p>\n",
+       "outcome": "<p>The vendor&#39;s response describes a review step your hospital never performed. The contractor expands the request to every claim the tool touched.</p>\n",
+       "deltas": {
+        "trust": -15,
+        "risk": 30
+       },
+       "expertChoice": "d",
+       "matchesExpert": false
+      }
+     ],
+     "expertPath": [
+      {
+       "node": "n1",
+       "nodeTitle": "Monday, 8:10 a.m.: how do you start?",
+       "choice": "a",
+       "label": "Start with the top 3 denial codes and a two-week shadow run beside the billers",
+       "quality": "strong",
+       "rationale": "<p>A shadow run builds evidence and trust at the same time, and it produces the audit trail you will need later. It costs two weeks, which the twelve-week window can absorb.</p>\n",
+       "outcome": "<p>Dana&#39;s team works their queue as usual while the model scores the same claims. By Friday of week two you have a side-by-side: the model agrees with the billers on 88% of claims and catches 140 they missed.</p>\n",
+       "learnerChoice": "b"
+      },
+      {
+       "node": "n3",
+       "nodeTitle": "Week 3, Thursday: how do you answer?",
+       "choice": "d",
+       "label": "Send the shadow-run comparison as evidence of human review",
+       "quality": "strong",
+       "rationale": "<p>The shadow run you chose in week one was the evidence. Building the audit trail before you need it is the cheapest compliance control there is.</p>\n",
+       "outcome": "<p>Your two-week side-by-side shows every corrected claim was reviewed by a biller. The contractor closes the request in eleven days.</p>\n",
+       "learnerChoice": "c"
+      },
+      {
+       "node": "n4",
+       "nodeTitle": "Week 6: the CFO wants to scale",
+       "choice": "a",
+       "label": "Scale to 10 codes, with weekly human review of a 5% sample",
+       "quality": "strong",
+       "rationale": "<p>Scaling in steps with a standing human sample keeps the speed and keeps the evidence. It is the pattern that survives the next audit.</p>\n",
+       "outcome": "<p>Seven more codes go live over two weeks. The weekly sample catches a drift in CO-50 decisions in week 8, which the team fixes before it reaches a payer.</p>\n",
+       "learnerChoice": null
+      },
+      {
+       "node": "n6",
+       "nodeTitle": "Week 9: what do you tell the team?",
+       "choice": "a",
+       "label": "Make the billers the reviewers of record and fund two backfill roles from the recovered cash",
+       "quality": "strong",
+       "rationale": "<p>Naming the humans who stay in the loop, and paying for them, is how you keep the oversight that made the pilot work.</p>\n",
+       "outcome": "<p>The team hears that review is now their job title, not a side task. Two offers go out within the month.</p>\n",
+       "learnerChoice": null
+      }
+     ],
+     "expertEnding": {
+      "id": "e1",
+      "title": "Faster cash, trusted team",
+      "rating": "best"
+     },
+     "comparison": {
+      "matched": 0,
+      "expertSteps": 4,
+      "yourSteps": 2,
+      "sameEnding": false,
+      "firstDivergence": {
+       "node": "n1",
+       "nodeTitle": "Monday, 8:10 a.m.: how do you start?"
+      }
+     },
+     "events": [
+      {
+       "node": "n2",
+       "title": "Week 3: a letter from the Medicare contractor",
+       "deltas": {
+        "risk": 25
+       }
+      }
+     ],
+     "principles": [
+      "<p>Build the evidence trail before you need it: a shadow run is a trust exercise and a compliance control at once.</p>\n",
+      "<p>Accountability for AI-assisted decisions stays with the organization; never let a vendor describe controls you have not verified.</p>\n",
+      "<p>Scale in measured steps with a standing human sample, and treat the reviewers as part of the system, not a cost to remove.</p>\n"
+     ],
+     "realWorld": [
+      {
+       "text": "<p>NIST&#39;s AI Risk Management Framework (AI RMF 1.0, January 2023) organizes AI risk work into four functions, Govern, Map, Measure and Manage, and treats human oversight and documentation as part of managing risk.</p>\n",
+       "source": "National Institute of Standards and Technology, AI Risk Management Framework",
+       "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+       "accessed": "2026-10-18"
+      }
+     ]
+    },
+    "reckoning": {
+     "deltas": {
+      "cash": -210000,
+      "weeks": 15
+     }
+    }
+   }
+  }
+ ]
+}

@@ -67,6 +67,9 @@
       window.WLLabs && prog.labs ? h("p", { class: "wl-lab-progress" }, window.WLLabs.progressText(prog)) : null,   // [labs]
       h("div", { class: "wl-actions" }, cta));
 
+    var verify = W.verifyBanner(d.learner);   // [onboard] dismissible "confirm your email" reminder
+    if (verify) head.appendChild(verify);
+
     var outline = h("section", { class: "wl-outline", "aria-labelledby": "h-outline" },
       h("h2", { id: "h-outline", class: "wl-h3" }, "Course outline"),
       h("ol", { class: "wl-modules", role: "list" }, mods.map(function (m) {
