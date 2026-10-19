@@ -170,7 +170,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "e6fa6e2b282edf30242d17ef88e0851de3e126db",
+      "last_observed_sha": "fb234b63128eb65fe53f3b304ed69da033fc998c",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -349,6 +349,13 @@
             "source_sha": "3ddbf75",
             "handoff": "ai/board/20261019T1546-codex-f02-early-module-recovery-consistency.md",
             "scope": "Narrow author consistency response to reviewed M3 rating defect. Does not imply coordinator reviewed M1/M2 or all their narrative/material/rationale issues are fixed. All four private modules unsigned, five lesson words 9459 unchanged; integration/exam/catalog/manual accessibility/timing/release pending."
+          },
+          "f02_written_integration_starter": {
+            "source_sha": "4b5cb55",
+            "handoff": "ai/board/20261019T1602-codex-f02-written-integration-dossier-starter.md",
+            "status": "Private formative author starter awaiting independent review; not the interactive integration graph or course completion",
+            "scope": "Six open decisions, worked memo/diagram/ledgers/claim register and descriptive four-criterion rubric. Five hashed exhibit references preserve separate contexts; intended UUID planning stipulation does not supply current process or capacity evidence. New retained-output transfer gives hypothetical 25 GiB versus 24 GiB; fixed reference/arithmetic checks and four inconsistent-case rejections only. No learner grading, target operation, hardware/source/practitioner or instructional approval.",
+            "remaining": "Interactive integration graph, exam/catalog/required-lab/completion mapping, independent module/source/instructional/practitioner review, human timing/manual accessibility and release unfinished. Five lesson drafts remain 9459 raw words, not hours; F01 owner access pending."
           }
         }
       },
@@ -562,7 +569,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T15:42:29Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/e6fa6e2b282edf30242d17ef88e0851de3e126db/ai/board/20261019T1546-codex-f02-early-module-recovery-consistency.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR2 reviews/agency CI/status schedule and both recovery refs unchanged except own author consistency work. No independent reply or fixing SHA; no repeated standards-merge notification. M1/M2 recovery rating revisions submitted for independent review; earlier findings and whole-review cursors retained. Draft-only progress stays quiet."
+  "last_check_started_utc": "2026-10-19T15:57:29Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/fb234b63128eb65fe53f3b304ed69da033fc998c/ai/board/20261019T1602-codex-f02-written-integration-dossier-starter.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical instruction/board identities/PR2 reviews/agency CI/status schedule and recovery refs unchanged except own author artifacts. No independent reply, Gemini return/fixing SHA or owner access decision. Private written integration starter submitted for review; no full course/content approval or whole-review cursor movement. Draft progress stays quiet."
 }
