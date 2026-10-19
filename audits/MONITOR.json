@@ -108,7 +108,7 @@
           "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "ad14c3222a8486909fc47b20f3a136c430e1187f",
+      "last_observed_sha": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -123,8 +123,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "a07522e1381c16faf65f08bc0a75699c61f4d0d5",
-          "scope": "72-path delta versus7d4a3d2 inventoried only (18020 additions,384 deletions); active coordinator recovery snapshot, no full lesson/exam/lab/primary-source approval. WIA016 and earlier semantic scopes remain open; no new Gemini ownership attribution."
+          "sha": "13dc7a3",
+          "scope": "21-path active recovery delta versus a07522e inventoried only (5550 additions,1604 deletions), including coordinator hls155/hls175 labs/exam and wrk216 lessons/wrk217 blueprint. No completed review handoff, course factual/editorial/exam/lab approval, WIA016 resolution or Gemini authorship attribution."
         }
       },
       "codex_authored_drafts": {
@@ -183,6 +183,11 @@
           "evidence_sha": "9f2b98e",
           "scope": "Bot09f5d1c directly parents2214640, exact Pages run starts2seconds later and publishes it; actual custom-domain status JSON matches. Original categorical docs-based inference was wrong for the observed run. No evidence of a stale real learner badge; do not retain the original release blocker as active. Scheduled changed-bit and wallet checks still open."
         }
+      },
+      "vendor_review_research": {
+        "board": "20261019T0313-codex-vendor-review-routes-no-endorsement.md",
+        "sha": "5881dce",
+        "scope": "Owner feasibility question researched against NVIDIA ALP/CIP, CNCF Endorsed Content pilot and current QM CPE primary pages. Scoped named-expert review proposed, not a submitted application or corporate endorsement. No affiliate/logo/credit/certification/mapping status assigned; Institute course review separate from agency recognition."
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -197,8 +202,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "8ad11f4",
-      "scope": "Read latest coordination; own Studio terms draft PR2 handed off with author338 viewport/633internal-link and22 confirmation passes. Coupled catalog/site publication and client-cancelled full-prepay remainder policy clarification remain pending. WIA017 withdrawn/corrected on both boards after runtime bot-Pages counter-evidence; initial public status proof checked, scheduled latency/wallet scope open. Claims preserved.",
+      "last_observed_sha": "f87b69d6c5d01c7a422a1b9b9d616faf36c24110",
+      "scope": "Read latest coordination; own Studio terms draft PR2 handed off with author338 viewport/633internal-link and22 confirmation passes. Coupled catalog/site publication and client-cancelled full-prepay remainder policy clarification remain pending. WIA017 withdrawn/corrected on both boards after runtime bot-Pages counter-evidence; initial public status proof checked, scheduled latency/wallet scope open. Claims preserved. Routine unchanged poll: new own confirmation follow-ups PR3/evidence handoff atf87b69d awaits independent review; no new coordinator reply, release or material regression observed.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -207,7 +212,7 @@
       "pages_build_sha": "1595703151433546902f9d745c8a3f35c8daaaef",
       "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
       "outstanding": [
-        "Non-blocking coordinator follow-ups (string-true regression, failure/unpaid wording and SKU drift check); no blanket site approval.",
+        "Non-blocking coordinator follow-ups1\u20134 proposed in draft PR3 at489180a; independent coordinator review/publication pending. Forensics loose-paid follow-up already resolved in its separately reviewed PR1. No blanket site approval.",
         "Owner-approved terms at5cb7c7e need implementation:25% whole-dollar retainer catalog through reviewed PR, consistent cancellation/delivery/revision/response/rights wording and isolated Stripe test-mode proof. List prices/other practices unchanged by this request.",
         "Capability/rights/insurance supporting documents, actual enquiry delivery, complete factual/accessibility/source review and real isolated payment/webhook/order evidence remain unfinished.",
         "Terms draft PR2 f8bb67f awaits independent review; coordinate publication with reviewed/deployed retainer PR1 and separate catalog delivery/rights copy alignment. Client cancellation of fully prepaid remainder needs explicit approved policy; no invented refund/forfeiture rule."
@@ -240,6 +245,12 @@
         "head_sha": "f8bb67fb764c3490b7e409e34eb09d2a0ecd7dca",
         "status": "open review-only draft; coordinator independent review and coupled catalog/site release pending",
         "scope": "Canonical complete owner-approved terms and links, corrected family turnaround/one-business-day replies; author build,338 light/dark viewport cases,633 internal links and22 confirmation fixtures pass. Images/forms/payment logic unchanged; no self-approval or live publication. Full-prepay client-cancellation remainder policy not invented; clarification pending."
+      },
+      "confirmation_followups_proposal": {
+        "pr": "https://github.com/wirewalktech/studio-wirewalk/pull/3",
+        "head_sha": "489180ac96df17c23c065aac8e82f428e338a5d4",
+        "status": "open review-only draft; no independent review/merge/release",
+        "scope": "Coordinator non-blocking follow-ups1\u20134: stringtrue paid fixture, lookup wording, existing sessionStatus/paymentStatus-based unconfirmed checkout copy and read-only catalog identifier drift checker. Author build/26cases/13overflow widths pass, public payable identifiers15/15, three negative drift fixtures rejected. No real Stripe/order action. If accepting PR2 and PR3, coordinator rechecks combined source/build."
       }
     },
     "wirewalktech/forensics-wirewalk": {
@@ -270,7 +281,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T02:55:26Z",
+  "last_check_started_utc": "2026-10-19T03:10:27Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/ai/board/20261019T0259-codex-wia017-withdrawn-live-counterevidence.md",
-  "latest_poll_scope": "Coordinator reports OB3 enabled. Codex independently verified initial bot09f5d1c exact Pages publication, matching custom-domain status, issuer/key authorization and public signature/tamper rejection; WIA017 earlier categorical publication inference withdrawn on runtime counter-evidence. Scheduled changed-bit/latency and real learner badge/wallet/full conformance scope remain open. Studio terms draft PR2 f8bb67f handed to coordinator with338viewport/633link/22confirmation author checks; retainer PR1 2fed469 still open, coupled release and full-prepay cancellation remainder policy need review. No new blueprint/standards/agency review; CI unchanged. Full course/content/runtime/target E2E review scopes retained; no whole reviewed cursor advancement or Codex release/data/real credential action."
+  "latest_poll_scope": "Default-branch coordinator source and all three existing draft review states unchanged; no new Claude/Gemini response or agency review. Active recovery13dc7a3 inventoried21paths only, no new content approval. Completed useful own-claimed author work: Studio confirmation follow-ups draft PR3 at489180a,26cases/15identifier/3negative controls; independent review and combined PR2 integration pending. Vendor review feasibility research relayed privately to coordinator with no outreach/affiliation/status change. All earlier unresolved scopes/cursors and WIA017 withdrawal retained; no deployment/merge/real charge/learner or credential action."
 }
