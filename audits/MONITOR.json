@@ -14,8 +14,8 @@
           "scope": "WIA-014/015 source fixes independently verified with exact isolated build, 14 browser passes, own delayed-write recovery/reload check. Autosave durable guarantee requires migrated Worker; no production resolution or blanket release approval."
         },
         "feature/iso-review-policy": {
-          "sha": "3d56fa44e7b4d5e71c5ac7b0a771b5453f0cb50b",
-          "scope": "Read33-line standards draft and verified selected official ISO/NIST/OWASP/NICE edition/scope summaries and source certificate anchor. No confirmed scope-statement defect. No clause-level/course alignment approval. Exact branch build/browser/accessibility/live and status-enforcement/mapping evidence remain outstanding."
+          "sha": "099cb27d714f9d3d42c6300b618a0d4277a864f2",
+          "scope": "Delegated author revision with approved public mapping summaries/wording and stated limits; existing branch authorship preserved by ordinary main merge. Local Jekyll build, 26 width/theme standards-main checks, 35 link occurrences and selected primary-source receipts retained. Shared header fails at 320 pixels on existing main/live baseline; WIA-023 open. Draft PR 2 awaits independent review/publication; no whole-site/course/practical approval."
         }
       },
       "last_examined_sha": "656b838",
@@ -30,7 +30,8 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
-        "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
+        "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
+        "standards_draft_author_checks_and_live_responsive_WIA023": "099cb27d714f9d3d42c6300b618a0d4277a864f2"
       },
       "last_observed_sha": "e21a7c28fac3afe584accd2d22db0443333d52a9",
       "branches_observed": {
@@ -90,6 +91,16 @@
           "site_sha": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
           "evidence_sha": "21f253a22fd9629482b304df2fa7b82e85d44b5e",
           "scope": "Description component independently verified fixed:120 changed course summaries truthfully match catalog facts, generated data and live render;123 selected URLs all200/title/description/canonical/noindex, zero repeated descriptions. One expected200-character truncation follows existing layout. Title overlap still reproduced/deferred; WIA022 partially open, no full SEO/index/performance approval. robotsDisallow/ and sitemap404 retained."
+        }
+      },
+      "findings": {
+        "WIA-023": {
+          "severity": "P3",
+          "status": "open; coordinator acknowledgement/fixing SHA pending",
+          "observed_site_sha": "e4e6b88504c96bb08b09c13d14f31914f207ca54",
+          "evidence_sha": "0fd45fa",
+          "record": "audits/2026-10-19-standards-page-review.md",
+          "scope": "Inherited shared header exceeds a 320-pixel viewport; certification status URL forces live document width 503 pixels. No change to shared implementation by Codex. Runtime-only header-gap/wrapping proposal demonstrates fit at 320/360, not a fixing SHA or deployed resolution. Acceptance requires coordinator-reviewed source/deployed custom-domain fit/access and independent verification. No credential/payment incident or WIA-017 revival."
         }
       }
     },
@@ -159,7 +170,8 @@
         "coordinator_F02_integration_batch_review_only": {
           "sha": "d5739575899ac5fbec0bb331d9fd83bfc273acff",
           "scope": "Independent coordinator accepts revised m3-l1/m4-l1, scoped recovery semantics and M3 lab except shared validator correction. Requested module/integration/written revisions are author-proposed at8113449; no whole course/practitioner/human or release approval."
-        }
+        },
+        "coordinator_F02_module_lab_and_formative_review_only": "89157c3a87c0319b9949913f65c981717bfd384d"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -183,7 +195,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "2464796860db25ebf75f965c83503af6261d913f",
+      "last_observed_sha": "952f8c0",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -198,8 +210,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "fcaa63a6c5aceef7fa3446070e035ea9a84988d9",
-          "scope": "Same-ref inventory versus 3b25b76: 84 paths, 11995 additions/73 deletions; prior own F02/SEO/source/board copies plus coordinator review board. No content/courses paths in this delta. Historical snapshot e2b32c6 remains a separate unchanged ref; parent/main comparisons are not a recovery regression. Inventory only, no new independent lesson/exam/lab approval, Gemini attribution or WIA016 closure."
+          "sha": "2d2c05fec16abdf973dc4005d0b791be9997a874",
+          "scope": "Same-ref inventory versus 8cbc623: 76 paths, 29359 additions/2734 deletions, prior own E17/F02 artifacts and coordinator review copies. No content/courses delta, new Gemini attribution, semantic course approval or WIA-016 closure. Historical snapshot e2b32c6 remains distinct unchanged ref."
         }
       },
       "codex_authored_drafts": {
@@ -357,10 +369,10 @@
             "latest_author_batch_revision": "811344976fdd561787c8295520ef8a47e765da43; A3/A4/hold acceptance changes await independent re-review, same module path counts/expert metrics. M3/m4 lesson acceptance is scoped to unchanged3fd9904 revisions."
           },
           "latest_review_followup": {
-            "review_sha": "d5739575899ac5fbec0bb331d9fd83bfc273acff",
+            "review_sha": "89157c3a87c0319b9949913f65c981717bfd384d",
             "fix_source_sha": "811344976fdd561787c8295520ef8a47e765da43",
             "handoff": "ai/board/20261019T1742-codex-f02-batch-review-response.md",
-            "status": "Coordinator scoped unchanged lesson/recovery acceptance retained. Author8113449 integration/dossier/module response and9a7d77e A5 early-module response await independent re-review; no self-approval.",
+            "status": "Independent coordinator accepts A5 and module-lab A3/A4 revisions, scoped to these artifacts. Integration/dossier 8113449 remains pending. Author candidate/feedback-cell response 952f8c0 awaits independent re-review; no whole-course/practitioner/human/release approval.",
             "a5_fix_source_sha": "9a7d77eb2f494480d9a3b61d7ecf12148c70553f",
             "a5_handoff": "ai/board/20261019T1756-codex-f02-a5-early-module-review-response.md"
           },
@@ -396,22 +408,31 @@
             "handoff_sha": "0833266b5597e938f3cbdc23b32ed018f1616d00",
             "handoff": "ai/board/20261019T1756-codex-f02-a5-early-module-review-response.md",
             "scope": "M1/M2 each add9 synthetic routes while all prior27 route endings/metrics remain equal. New short-term gains have conditional delayed costs; correction/precise holds withdraw unsupported acceptance and retain mixed. Existing validateLab passes all5 with temporary metadata stubs only; warnings retained, not actual catalog validator OK. Three changed prose files pass spacing guard. Accepted lessons unchanged, five lesson drafts9459raw words, not hours.",
-            "review_status": "pending independent re-review; no A5 closure by Codex"
+            "review_status": "Independently accepted by coordinator 89157c3; scoped module-lab acceptance, not course/human/practitioner/release approval."
           },
           "f02_written_feedback_practice": {
             "source_sha": "faa1600d68f19b4245b72fb8ed36feced1691c4e",
             "handoff_sha": "7c502ecde314cc13c193d3fcbaf3d92539beae10",
             "handoff": "ai/board/20261019T1819-codex-f02-written-feedback-practice-review.md",
             "scope": "Four pairs of fictional partial submissions and proposed criterion-level feedback notes. Existing rubric anchors unchanged; no complete-submission grades, automatic narrative scoring, pass total, exam bank, independent calibration trial or competence approval. Four changed prose files pass spacing guard;11 local links resolve;5 lesson hashes unchanged. Same fixed binder arithmetic/reference checks repeat, no new browser/graph/hardware suite or quantity.",
-            "status": "author proposal awaiting independent instructional/practitioner/feedback calibration review;8113449 and9a7d77e fixes still pending re-review"
+            "status": "Coordinator 89157c3 accepts formative direction with explicit excerpt cells requested; author response 952f8c0 awaits independent anchor review/calibration. No complete grades or actual reviewer trial."
           },
           "f02_private_candidate_prototypes": {
             "source_sha": "59f61ddbeb04ebc25d96ab7d24498c437221dc54",
             "handoff_sha": "2464796860db25ebf75f965c83503af6261d913f",
             "handoff": "ai/board/20261019T1849-codex-f02-four-candidate-items-review.md",
-            "status": "Four unreviewed single-choice prototypes for M1/o1 slots S01-S04; private proposed keys/option feedback, zero independently approved items; no course/exam integration.",
+            "status": "Coordinator independently corroborates original fixed-packet arithmetic/keys but requests item-quality revisions; author version 2 response 952f8c0 pending independent semantic/item review. Zero items approved for use; no course/exam integration.",
             "scope": "Fixed fictional packet derivations, structured result/key checks, exact lesson hash/heading bindings, one indexing boundary control and four corrupted-packet rejections. This does not prove semantic single-answer validity, teaching/source/practitioner alignment, distractor quality, timing/accessibility, difficulty/discrimination or sampled-attempt coverage. No learner grading or hardware/browser/platform test. Four changed prose/JSON files pass spacing guard; five lessons unchanged.",
-            "remaining": "32 design slots without prototypes; independent assessment/source/practitioner review, human comprehension/timing/accessibility, draw/grading/attempt/completion policy and full bank/course integration remain unfinished."
+            "remaining": "32 design slots without prototypes; independent assessment/source/practitioner review, human comprehension/timing/accessibility, draw/grading/attempt/completion policy and full bank/course integration remain unfinished.",
+            "latest_author_revision": {
+              "sha": "952f8c0",
+              "handoff": "ai/board/20261019T1957-codex-f02-candidate-and-anchor-revisions.md",
+              "scope": "Four private candidate revisions, explicit partial-excerpt criterion anchors, two README spacing fixes and extended owned prose guard. Fixed structured derivations/hash bindings/control rejections only; no new browser/graph/hardware or learner grading. Lessons and lab scenarios unchanged."
+            }
+          },
+          "f02_topology_optional_source_followup": {
+            "sha": "8d362b9c02aac1f2cb683df54d5e10af0fb2d9ce",
+            "scope": "Selected official NVIDIA-SMI retrieval and proposed normalized teaching-table caption; accepted lesson/exhibit bytes unchanged. Exact installed help/version/output layout and locality derivation/practitioner evidence remain pending; no device query or universal locality implication adopted."
           }
         }
       },
@@ -635,7 +656,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T18:46:29Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/2464796860db25ebf75f965c83503af6261d913f/ai/board/20261019T1849-codex-f02-four-candidate-items-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical/boards/reviews/agencyCI/status schedule unchanged at18:46 before own new artifacts. Four private F02/M1 candidate prototypes59f61dd submitted2464796 for independent review; no item, course or release approval. Earlier8113449/9a7d77e/faa1600 reviews and F01 owner access answer remain pending; status schedule2 retained runs. Whole-review cursors and all earlier findings/unreviewed scope/payment/access/agency/credential gates preserved. Author-only progress stays quiet."
+  "last_check_started_utc": "2026-10-19T19:31:30Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/952f8c0/ai/board/20261019T1957-codex-f02-candidate-and-anchor-revisions.md",
+  "latest_poll_scope": "Authenticated coordinator review 89157c3 independently accepts A5 and scoped module-lab A3/A4 fixes; candidate quality revisions and formative criterion-cell follow-up requested. Author response 952f8c0 awaits independent re-review. Delegated site PR 2 now 099cb27, draft, no independent reviews; selected source/build/browser checks retained privately. New inherited live mobile overflow WIA-023 sent to coordinator at 0fd45fa. Full course/practitioner/human/release scopes remain pending. Other watched heads and agency CI unchanged; two retained status schedule runs. Recovery 2d2c05f inventory only; no new course-folder semantics or Gemini return. Whole-review cursors and all earlier access/payment/credential/agency gates preserved."
 }
