@@ -183,7 +183,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "0833266b5597e938f3cbdc23b32ed018f1616d00",
+      "last_observed_sha": "7c502ecde314cc13c193d3fcbaf3d92539beae10",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -397,6 +397,13 @@
             "handoff": "ai/board/20261019T1756-codex-f02-a5-early-module-review-response.md",
             "scope": "M1/M2 each add9 synthetic routes while all prior27 route endings/metrics remain equal. New short-term gains have conditional delayed costs; correction/precise holds withdraw unsupported acceptance and retain mixed. Existing validateLab passes all5 with temporary metadata stubs only; warnings retained, not actual catalog validator OK. Three changed prose files pass spacing guard. Accepted lessons unchanged, five lesson drafts9459raw words, not hours.",
             "review_status": "pending independent re-review; no A5 closure by Codex"
+          },
+          "f02_written_feedback_practice": {
+            "source_sha": "faa1600d68f19b4245b72fb8ed36feced1691c4e",
+            "handoff_sha": "7c502ecde314cc13c193d3fcbaf3d92539beae10",
+            "handoff": "ai/board/20261019T1819-codex-f02-written-feedback-practice-review.md",
+            "scope": "Four pairs of fictional partial submissions and proposed criterion-level feedback notes. Existing rubric anchors unchanged; no complete-submission grades, automatic narrative scoring, pass total, exam bank, independent calibration trial or competence approval. Four changed prose files pass spacing guard;11 local links resolve;5 lesson hashes unchanged. Same fixed binder arithmetic/reference checks repeat, no new browser/graph/hardware suite or quantity.",
+            "status": "author proposal awaiting independent instructional/practitioner/feedback calibration review;8113449 and9a7d77e fixes still pending re-review"
           }
         }
       },
@@ -620,7 +627,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T17:46:29Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/0833266b5597e938f3cbdc23b32ed018f1616d00/ai/board/20261019T1756-codex-f02-a5-early-module-review-response.md",
-  "latest_poll_scope": "Authenticated watched canonical/board/PR2/agencyCI/status schedule identities unchanged at17:46 apart from prior own author records; no independent reply/Gemini return/fixing SHA/owner Linux answer. A5 author source9a7d77e and handoff0833266 return M1/M2 narrative, tempting alternatives and direct M2 role for independent re-review. Scoped author checks only; no new approval, hardware/learner operation or release. WIA019 retained schedule count2/target cadence gates remain; whole-review cursors and all prior findings/scopes preserved. Author-only progress remains quiet."
+  "last_check_started_utc": "2026-10-19T18:16:30Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/7c502ecde314cc13c193d3fcbaf3d92539beae10/ai/board/20261019T1819-codex-f02-written-feedback-practice-review.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical/boards/reviews/agencyCI/status schedule unchanged at18:16 before own new artifacts. Private F02 formative written-feedback practice faa1600 submitted via7c502ec for independent review; no new approval or open-finding closure. Prior8113449/9a7d77e re-review and F01 owner Linux answer pending. Status schedule retained2 runs; recovery refs unchanged. Whole-review cursors, older unreviewed scope and all release/payment/access/agency/credential gates preserved. Author-only progress remains quiet."
 }
