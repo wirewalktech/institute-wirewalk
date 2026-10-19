@@ -3,7 +3,7 @@
 // badges/status/1.json, the permanent URL signed into every badge's credentialStatus
 // (wirewalk-institute-worker ai/plans/open-badges-3.md section 14).
 //
-// Run by .github/workflows/badges-status.yml about every 10 minutes. No dependencies; Node 18+.
+// Run by .github/workflows/badges-status.yml on a 10-minute schedule (GitHub can delay it). No dependencies; Node 18+.
 //
 //   node .github/scripts/badges-status.mjs [--source <https URL | local file>] [--out <path>]
 //

@@ -1,10 +1,15 @@
 # Mirror the Open Badges revocation list to https://institute.wirewalk.com/badges/status/1.json,
 # the permanent statusListCredential URL signed into every badge (wirewalk-institute-worker
 # ai/plans/open-badges-3.md section 14). The learning Worker signs the list
-# ({api_base}/api/ob3/status/1, api_base from _config.yml); this job fetches it about every
-# 10 minutes, validates it (.github/scripts/badges-status.mjs) and commits it only when the
-# revocation bits or the signing key changed. A revocation therefore reaches badge verifiers in
-# about 10 minutes, later when GitHub delays scheduled runs (it does under load).
+# ({api_base}/api/ob3/status/1, api_base from _config.yml); this job fetches it on a 10-minute
+# schedule, validates it (.github/scripts/badges-status.mjs) and commits it only when the
+# revocation bits or the signing key changed. The schedule is not a bound: GitHub delays and drops
+# scheduled runs under load (after go-live it ran none for about five hours, WIA-019). Public
+# wording: usually within 30 minutes. The Worker's ob3.status-freshness task checks the published
+# copy every 15 minutes and emails ADMIN_NOTIFY_EMAILS when it is behind; the response is
+# "Run workflow" on this workflow (Actions tab), which needs no input.
+# Minutes 4,14,...,54: off the top of the hour, GitHub's busiest (most delayed) time. GitHub
+# ignores intervals under 5 minutes, so shortening it would not help.
 #
 # Uses only the default GITHUB_TOKEN (contents: write); no other secrets. Scheduled runs happen on
 # the default branch only, and GitHub disables a schedule after 60 days without repository activity.
@@ -12,7 +17,7 @@ name: Badges status list
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "4,14,24,34,44,54 * * * *"
   workflow_dispatch:
 
 permissions:
