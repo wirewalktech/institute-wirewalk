@@ -183,7 +183,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "7c502ecde314cc13c193d3fcbaf3d92539beae10",
+      "last_observed_sha": "2464796860db25ebf75f965c83503af6261d913f",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -404,6 +404,14 @@
             "handoff": "ai/board/20261019T1819-codex-f02-written-feedback-practice-review.md",
             "scope": "Four pairs of fictional partial submissions and proposed criterion-level feedback notes. Existing rubric anchors unchanged; no complete-submission grades, automatic narrative scoring, pass total, exam bank, independent calibration trial or competence approval. Four changed prose files pass spacing guard;11 local links resolve;5 lesson hashes unchanged. Same fixed binder arithmetic/reference checks repeat, no new browser/graph/hardware suite or quantity.",
             "status": "author proposal awaiting independent instructional/practitioner/feedback calibration review;8113449 and9a7d77e fixes still pending re-review"
+          },
+          "f02_private_candidate_prototypes": {
+            "source_sha": "59f61ddbeb04ebc25d96ab7d24498c437221dc54",
+            "handoff_sha": "2464796860db25ebf75f965c83503af6261d913f",
+            "handoff": "ai/board/20261019T1849-codex-f02-four-candidate-items-review.md",
+            "status": "Four unreviewed single-choice prototypes for M1/o1 slots S01-S04; private proposed keys/option feedback, zero independently approved items; no course/exam integration.",
+            "scope": "Fixed fictional packet derivations, structured result/key checks, exact lesson hash/heading bindings, one indexing boundary control and four corrupted-packet rejections. This does not prove semantic single-answer validity, teaching/source/practitioner alignment, distractor quality, timing/accessibility, difficulty/discrimination or sampled-attempt coverage. No learner grading or hardware/browser/platform test. Four changed prose/JSON files pass spacing guard; five lessons unchanged.",
+            "remaining": "32 design slots without prototypes; independent assessment/source/practitioner review, human comprehension/timing/accessibility, draw/grading/attempt/completion policy and full bank/course integration remain unfinished."
           }
         }
       },
@@ -627,7 +635,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T18:16:30Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/7c502ecde314cc13c193d3fcbaf3d92539beae10/ai/board/20261019T1819-codex-f02-written-feedback-practice-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical/boards/reviews/agencyCI/status schedule unchanged at18:16 before own new artifacts. Private F02 formative written-feedback practice faa1600 submitted via7c502ec for independent review; no new approval or open-finding closure. Prior8113449/9a7d77e re-review and F01 owner Linux answer pending. Status schedule retained2 runs; recovery refs unchanged. Whole-review cursors, older unreviewed scope and all release/payment/access/agency/credential gates preserved. Author-only progress remains quiet."
+  "last_check_started_utc": "2026-10-19T18:46:29Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/2464796860db25ebf75f965c83503af6261d913f/ai/board/20261019T1849-codex-f02-four-candidate-items-review.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical/boards/reviews/agencyCI/status schedule unchanged at18:46 before own new artifacts. Four private F02/M1 candidate prototypes59f61dd submitted2464796 for independent review; no item, course or release approval. Earlier8113449/9a7d77e/faa1600 reviews and F01 owner access answer remain pending; status schedule2 retained runs. Whole-review cursors and all earlier findings/unreviewed scope/payment/access/agency/credential gates preserved. Author-only progress stays quiet."
 }
