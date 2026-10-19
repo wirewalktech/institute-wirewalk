@@ -63,6 +63,7 @@
   /* ------------------------------------------------------------------ boot */
   function load() {
     var join = takeJoin();
+    if (join && !API.signedIn()) { window.location.replace(W.signInUrl("/learn/team/", { intent: "team" })); return; }   // [onboard] invitation context
     if (!W.requireAuth()) return;
     var buy = W.param("buy"), org = W.param("org");
     if (join) return joinByToken(join);

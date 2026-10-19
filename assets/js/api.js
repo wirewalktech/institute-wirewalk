@@ -12,6 +12,10 @@
  * - Errors are thrown as WIAApi.ApiError with the Worker's {error} message.
  * - A 401 on an authenticated call clears the token and dispatches "wia:unauthorized",
  *   which the learner pages answer with the sign-in view.
+ * - Every request has a time limit (15 s for GET, 30 s otherwise, 90 s under /api/ai/ where a
+ *   model reply can take longer; opts.timeout overrides, 0 = none). A request that hangs is
+ *   aborted and fails like an unreachable server, as ApiError status 0, so the pages' error
+ *   views and "Try again" buttons appear instead of an endless spinner.
  */
 (function () {
   "use strict";
@@ -19,6 +23,7 @@
   var TOKEN_KEY = "wia_token";
   var API_KEY = "wia_api";
   var PROD = "https://wirewalk-institute.wirewalk-upload.workers.dev";
+  var GET_TIMEOUT_MS = 15000, WRITE_TIMEOUT_MS = 30000, AI_TIMEOUT_MS = 90000;
 
   function safeGet(store, key) { try { return window[store].getItem(key); } catch (e) { return null; } }
   function safeSet(store, key, val) { try { window[store].setItem(key, val); return true; } catch (e) { return false; } }
@@ -75,8 +80,9 @@
   ApiError.prototype.constructor = ApiError;
 
   /**
-   * request("POST", "/api/quote", body, {auth: "optional"|true|false, quiet401: bool})
+   * request("POST", "/api/quote", body, {auth: "optional"|true|false, quiet401: bool, timeout: ms, keepalive: bool})
    * auth true (default): token required; without one we fail fast with a 401.
+   * keepalive: the request may outlive the page (used to save exam answers on pagehide).
    */
   function request(method, path, body, opts) {
     opts = opts || {};
@@ -94,8 +100,25 @@
       headers["Content-Type"] = "application/json";
       init.body = JSON.stringify(body);
     }
+    if (opts.keepalive) init.keepalive = true;
+    var limit = opts.timeout !== undefined ? opts.timeout
+      : method === "GET" ? GET_TIMEOUT_MS : /^\/api\/ai\//.test(path) ? AI_TIMEOUT_MS : WRITE_TIMEOUT_MS;
+    var ctl = limit > 0 && typeof AbortController === "function" ? new AbortController() : null;
+    var timedOut = false, timer = null;
+    if (ctl) {
+      init.signal = ctl.signal;
+      timer = setTimeout(function () { timedOut = true; ctl.abort(); }, limit);
+    }
+    function settle() { if (timer) clearTimeout(timer); timer = null; }
+    function unreachable() {
+      settle();
+      throw new ApiError(0, timedOut
+        ? "The Institute server is taking too long to answer. Check your connection and try again."
+        : "We could not reach the Institute server. Check your connection and try again.", timedOut ? { timeout: true } : null);
+    }
     return fetch(base() + path, init).then(function (res) {
       return res.text().then(function (text) {
+        settle();
         var data = null;
         if (text) { try { data = JSON.parse(text); } catch (e) { data = null; } }
         if (res.ok) {
@@ -109,10 +132,8 @@
           if (!opts.quiet401) announce401();
         }
         throw err;
-      });
-    }, function () {
-      throw new ApiError(0, "We could not reach the Institute server. Check your connection and try again.");
-    });
+      }, unreachable);
+    }, unreachable);
   }
 
   function capital(s) { s = String(s); return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -168,6 +189,12 @@
     completeLesson: function (id, idx) { return request("POST", "/api/courses/" + enc(id) + "/lessons/" + enc(idx) + "/complete", {}); },
     startExam: function (id) { return request("POST", "/api/courses/" + enc(id) + "/exam/start", {}); },
     submitAttempt: function (attemptId, answers) { return request("POST", "/api/attempts/" + enc(attemptId) + "/submit", { answers: answers }); },
+    /* [WIA-014] rev numbers the snapshot; the Worker stores it only when it is newer than the stored one. */
+    saveAnswers: function (attemptId, answers, opts, rev) {
+      var b = { answers: answers };
+      if (rev > 0) b.rev = rev;
+      return request("PUT", "/api/attempts/" + enc(attemptId) + "/answers", b, opts);
+    },
 
     certificate: function (id) { return request("GET", "/api/certificates/" + enc(id), undefined, { auth: false }); }
   };

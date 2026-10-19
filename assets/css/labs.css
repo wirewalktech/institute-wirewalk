@@ -272,6 +272,10 @@
 /* the closing action bar */
 .lab-end-next { padding: clamp(18px, 3vw, 26px); border-radius: 16px; border: 1px solid var(--lab-line); background: linear-gradient(135deg, var(--lab-acbg), transparent 70%), var(--lab-card); }
 .lab .lab-next-h { font-family: var(--wl-serif); font-size: 20px; margin-bottom: 12px; }
+/* [lx] course progress after a finished lab, and the ending's effects in the timeline */
+.lab-end-progress { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--lab-line); background: var(--lab-card); }
+.lab .lab-end-progress-t { margin: 0; font-weight: 650; color: var(--wl-tx); }
+.lab-tl-i.is-reckoning .lab-tl-dot { background: var(--lab-acbg); color: var(--wl-tx); }
 /* inline confirmation (Restart, Start over) */
 .lab-confirm { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px; }
 .lab-hud { flex-wrap: wrap; }
@@ -291,7 +295,8 @@
 
 /* final metrics */
 .lab-final { display: grid; gap: 0; }
-.lab-scene, .lab-cons, .lab-event, .lab-end, .lab-chat { scroll-margin-top: 96px; }
+/* [lx] html already has scroll-padding-top for the sticky header (site.css); this is only the gap below it */
+.lab-scene, .lab-cons, .lab-event, .lab-end, .lab-chat { scroll-margin-top: 16px; }
 .lab-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; color: var(--wl-tx3); margin: -6px 0 10px !important; }
 .lab-legend span { display: inline-block; margin-left: 6px; }
 .lab-legend span:first-child { margin-left: 0; }

@@ -370,6 +370,24 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-prose tr:last-child td { border-bottom: 0; }
 .wl-prose tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--wl-alt) 45%, transparent); }
 
+/* [lx] Retrieval checks: answers behind "Show answer" (tools/retrieval.mjs), optional answer box, self-rating */
+.wl-prose ol.wl-checks > li + li { margin-top: 1.1em; }
+.wl-check-yours { margin-top: .5em; }
+.wl .wl-check-input { width: 100%; min-height: 3.2em; padding: 8px 12px; border: 1px solid var(--wl-line2); border-radius: var(--wl-r-sm); background: var(--wl-surface); color: var(--wl-tx); font: 400 15px/1.5 var(--wl-sans); resize: vertical; }
+.wl-check-item { margin-top: .5em; border: 1px solid var(--wl-line); border-radius: var(--wl-r-sm); background: var(--wl-surface); }
+.wl-check-item > summary { cursor: pointer; padding: 8px 12px; min-height: 44px; display: flex; align-items: center; font: 600 15px/1.3 var(--wl-sans); color: var(--wl-ac); }
+.wl-check-item[open] > summary { border-bottom: 1px solid var(--wl-line); }
+.wl .wl-check-item > p { margin: 0; padding: 10px 12px; }
+.wl .wl-check-rate { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; padding: 0 12px 10px; }
+.wl-check-rate-b { min-height: 36px; padding: 4px 12px; border: 1px solid var(--wl-line2); border-radius: 999px; background: transparent; color: var(--wl-tx2); font: 600 13.5px/1 var(--wl-sans); cursor: pointer; }
+.wl-check-rate-b[aria-pressed="true"] { background: var(--wl-acbg); border-color: var(--wl-ac); color: var(--wl-ac); }
+/* [lx] One-time orientation strip after a first free enrollment (lesson.js) */
+.wl-orient { margin: 0 0 24px; padding: 16px 18px; border-radius: 14px; border: 1px solid var(--wl-line); background: var(--wl-acbg); }
+.wl-orient-steps { display: flex; flex-wrap: wrap; gap: 6px 4px; margin: 8px 0; padding: 0; list-style: none; }
+.wl-orient-steps li { font-weight: 600; color: var(--wl-tx); }
+.wl-orient-steps li + li::before { content: "→"; margin: 0 6px 0 2px; color: var(--wl-tx3); }
+.wl-orient .wl-hint { margin-bottom: 10px; }
+
 .wl-complete { margin-top: 44px; }
 .wl-complete-ask, .wl-complete-done { border: 1px solid var(--wl-line); border-radius: 14px; padding: 20px 22px; background: var(--wl-surface); }
 .wl-complete-ask .wl-actions { margin-top: 14px; }
@@ -404,6 +422,8 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-exam-bar-t { display: grid; line-height: 1.3; }
 .wl-exam-bar-t strong, .wl .wl-exam-h1 { color: var(--wl-tx); font: 600 15px/1.3 var(--wl-sans); letter-spacing: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .wl-exam-count { font-size: 13px; color: var(--wl-tx3); }
+.wl-exam-saved { font-size: 12.5px; color: var(--wl-tx3); }
+.wl-exam-saved.is-bad { color: var(--wl-bad); }
 .wl-timer { display: inline-flex; align-items: baseline; gap: 8px; padding: 6px 12px; border-radius: 10px; background: var(--wl-surface); border: 1px solid var(--wl-line); }
 .wl-timer-k { font-size: 12px; color: var(--wl-tx3); font-weight: 600; }
 .wl-timer-v { font: 700 18px/1.2 var(--wl-mono); color: var(--wl-tx); font-variant-numeric: tabular-nums; }
@@ -499,6 +519,17 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-toast-bad { border-left: 4px solid var(--wl-bad); }
 .wl-toast-warn { border-left: 4px solid var(--wl-warn); }
 .wl-toast.wl-out { opacity: 0; transform: translateY(8px); }
+.wl-offline { position: fixed; z-index: 210; top: 0; left: 0; right: 0; padding: 8px 16px; background: var(--wl-tx); color: var(--wl-bg); border-bottom: 3px solid var(--wl-warn); font: 500 14px/1.4 var(--wl-sans); text-align: center; }
+/* [lx] While the offline banner shows, everything pinned to the top moves below it (common.js sets
+   --wl-offline-h to the banner's height), so it never covers the exam timer or save status. */
+html.wl-has-offline { scroll-padding-top: calc(88px + var(--wl-offline-h, 0px)); }
+html.wl-has-offline body { padding-top: var(--wl-offline-h, 0px); }
+html.wl-has-offline .hd, html.wl-has-offline .wl-exam-bar { top: var(--wl-offline-h, 0px); }
+@media (min-width: 960px) {
+  html.wl-has-offline .wl-exam-panel { top: calc(96px + var(--wl-offline-h, 0px)); }
+  html.wl-has-offline .wl-exam-side { top: calc(92px + var(--wl-offline-h, 0px)); }
+}
+@media (min-width: 1080px) { html.wl-has-offline .wl-toc { top: calc(90px + var(--wl-offline-h, 0px)); } }
 @keyframes wl-in { from { opacity: 0; transform: translateY(10px); } }
 
 @media (prefers-reduced-motion: reduce) {
@@ -507,7 +538,7 @@ body { background: var(--bg, var(--wl-bg)); }
 
 /* ───────────── print ───────────── */
 @media print {
-  .wl-noprint, .wl-subnav, .wl-toasts, .wl-readbar, .wl-copy, .wl-exam-bar { display: none !important; }
+  .wl-noprint, .wl-subnav, .wl-toasts, .wl-offline, .wl-readbar, .wl-copy, .wl-exam-bar { display: none !important; }
   .wl-prose { color: var(--wl-print-tx); }
 }
 @page { margin: 14mm; }
@@ -529,3 +560,13 @@ body { background: var(--bg, var(--wl-bg)); }
 .wl-break { white-space: normal; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .wl-cert-mfacts { display: block; } }
 .wl-checkout-changed { margin-top: 12px; }
+/* [onboard] first-run dashboard, "Next in your path", verify reminder */
+.wl-howto { list-style: none; counter-reset: wl-how; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
+.wl-howto li { counter-increment: wl-how; border: 1px solid var(--wl-line); border-radius: var(--wl-r); padding: 14px 16px; display: grid; gap: 4px; }
+.wl-howto li::before { content: counter(wl-how); font-weight: 700; color: var(--wl-ac); }
+.wl-howto span { color: var(--wl-tx2); font-size: .94em; }
+.wl-next { margin-top: 28px; }
+.wl-next .wl-card-foot .price { margin-right: auto; }
+.wl-next-wait { margin-top: 16px; display: grid; gap: 8px; justify-items: start; }
+.wl-verify-banner { margin: 12px 0 18px; }
+.wl-verify-banner .wl-verify { margin: 0; }
