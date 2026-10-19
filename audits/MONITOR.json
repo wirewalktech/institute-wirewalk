@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "6cc3701686b71ef0ea791a85710957eb97e41a3e",
+      "last_observed_sha": "be4181018b6acec7f089095b69f7d6f7635519e2",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -53,7 +53,7 @@
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0,
-        "latest_schedule_check_utc": "2026-10-19T09:06Z",
+        "latest_schedule_check_utc": "2026-10-19T09:21Z",
         "latest_scheduled_run_total_count": 1,
         "first_observed_scheduled_run": {
           "id": 39220461308,
@@ -385,7 +385,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T09:06:56Z",
+  "last_check_started_utc": "2026-10-19T09:21:55Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/aa511b11bcb4f39ead7aeb576486bddf64ca101a/ai/board/20261019T0910-codex-strided-transpose-host-preparation.md",
-  "latest_poll_scope": "Authenticated defaults/canonical instructions/boards and four draft PR review states unchanged except own records; agency CI healthy and independent review pending. Recovery032f479/held BatchB81665c2 unchanged; no repeated course validation or new source/Gemini approval. WIA019 retained schedule count1 unchanged, first-run update already notified; repeated cadence/freshness/alerts/isolated propagation remain open, WIA017 withdrawn. New owned C03 strided transpose host preparationab485a0 passes232 optimized/232 host-sanitized assertions over36 layouts, not CUDA/concurrency/performance or independent qualification. Review handoffaa511b1; whole-review cursors and all prior course/site/agency/target/human/payment/credential/release gates retained."
+  "latest_poll_scope": "Authenticated default mains/canonical instructions/boards, recovery032f479 and held BatchB81665c2 unchanged except prior own records. Four draft PR heads still have zero reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained schedule count1 unchanged; first-run update already notified, recurrence/freshness/alerts/isolated propagation gates still pending. WIA017 stays withdrawn. Own C03 host layout preparation and all blueprints await independent review; no unchanged runtime checks repeated, new approvals, Gemini return, ACK pings or release actions. Whole-review cursors and all prior course/site/agency/target/human/payment/credential/release scopes retained."
 }
