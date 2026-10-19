@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "c37457efa5b6f1a933d7fd564a7f0b8bfad77b7c",
+      "last_observed_sha": "6e155c5e080047d7401f6f0a208283d8dd682b94",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -69,7 +69,8 @@
           "scope": "First retained automatic unchanged-list check only; not repeated cadence, new Pages/publication, changed-bit propagation or independent cryptographic proof validation by the mirror step."
         },
         "current_cron": "4,14,24,34,44,54 * * * *",
-        "current_scope": "One retained automatic run remains observed; offset schedule/site wording82718cd merged and exact Pages built11:22:33Z. Target monitor migration/deployment/alerts/response and repeated automatic/isolated changed-bit propagation remain unverified. New monitor follow-up WIA020/021 open; WIA017 stays withdrawn."
+        "current_scope": "One retained automatic run remains observed; offset schedule/site wording82718cd merged and exact Pages built11:22:33Z. Target monitor migration/deployment/alerts/response and repeated automatic/isolated changed-bit propagation remain unverified. New monitor follow-up WIA020/021 open; WIA017 stays withdrawn.",
+        "latest_poll_trigger_utc": "2026-10-19T13:37:59Z"
       },
       "seo_readiness": {
         "site_sha": "6c6af2f2e4d6b5c005a5eb40ada3f730dc475f94",
@@ -168,7 +169,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "943560fe166024cfc640af2d3c59e07c6e2ff0da",
+      "last_observed_sha": "b213b7076d739eeec169161dff36467231a5ea2e",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -220,7 +221,7 @@
           "review_status": "Coordinator 9ef3f2a independently approves F02 revision 34c6c95 for supplied-exhibit/lesson authoring, with low corrections while authoring. F01 design direction accepted; actual Linux access/execution gate still blocks lessons. Other E17/F91 blueprints retain independent review requirements. No completed course, publication, qualification or hardware approval.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
+          "latest_preparation_handoff": "ai/board/20261019T1344-codex-f02-topology-join-episode-review.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -285,6 +286,12 @@
             "handoff": "ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
             "status": "First teaching-episode author draft awaiting independent source/instructional/practitioner spot-check; M1/course unfinished",
             "scope": "Private E17 unit-materials/F02:1852-word M1L1, original labeled synthetic full/restricted/guest resource packet, worked/faded/transfer responses and three inline retrieval answers. Original Python check confirms fixed CPU/core/cache/index quantities, six invalid packets rejected, two wrong counts distinguished and205-item transfer; data consistency only, no hardware/execution/competence result. Five selected primary-source byte receipts retained. No public ID/catalog bundle, lab/exam or publication; F01 Linux answer still pending."
+          },
+          "current_f02_m1_authoring": {
+            "source_sha": "8c8a82481420e2965e9eeb545a9e29df4e0d0138",
+            "handoff": "ai/board/20261019T1344-codex-f02-topology-join-episode-review.md",
+            "status": "Two private author lesson drafts; independent first-module spot-check pending, M1 Decision Lab absent",
+            "scope": "M1L1 1852 plus M1L2 1744 raw words =3596, no approved hours/completed-module claim. Second original synthetic view packet teaches OS/logical-ID/context joins, allowed versus observed placement, H1/H2 provenance and faded J1 transfer. Pure Python checks fixed mappings/changed permission, six inconsistent joins rejected and minimum-required mapping accepted; no real utility/affinity/Linux/device/performance result. Four new inline retrieval answers and selected cgroup-v1 conceptual receipt; no cgroup-v2 setup or actual capture. Independent source/practitioner/timing/manual accessibility and later module/lab/exam/catalog/release gates remain open; no F01 access approval inferred."
           }
         }
       },
@@ -495,7 +502,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T13:22:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/943560fe166024cfc640af2d3c59e07c6e2ff0da/ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/claims/draft PRs/agency CI/status schedule unchanged except active recovery copies and own F02 first private author lesson795a6f7/handoff943560f. No new coordinator/Gemini review or resolved blocker; no owner action newly requested. Preserve cursors, older scopes and quiet intent. Author draft is not self-approval or notification trigger; no install/deploy/charge/learner/credential write."
+  "last_check_started_utc": "2026-10-19T13:37:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/b213b7076d739eeec169161dff36467231a5ea2e/ai/board/20261019T1344-codex-f02-topology-join-episode-review.md",
+  "latest_poll_scope": "Watched remote mains/canonical instruction identities/boards/PR states/agency CI/status schedule unchanged apart from own second F02 author episode8c8a824/handoff. No new independent review or Gemini return/resolved blocker. Two drafts remain unapproved; M1 lab and later course work unfinished. Preserve whole-review cursors/older scopes and quiet intent; no new approval request, target install/dispatch/deploy/charge/learner/credential write."
 }
