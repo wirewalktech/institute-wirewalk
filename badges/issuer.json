@@ -16,5 +16,16 @@
   "image": {
     "id": "https://institute.wirewalk.com/badges/img/issuer.svg",
     "type": "Image"
-  }
+  },
+  "verificationMethod": [
+    {
+      "id": "https://institute.wirewalk.com/badges/keys/key-1.json",
+      "type": "Multikey",
+      "controller": "https://institute.wirewalk.com/badges/issuer.json",
+      "publicKeyMultibase": "z6Mkgv1Hrjdj7CKRGKvTgo7aW6YPGanPWZohkp5dvyGQmrDW"
+    }
+  ],
+  "assertionMethod": [
+    "https://institute.wirewalk.com/badges/keys/key-1.json"
+  ]
 }
