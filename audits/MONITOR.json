@@ -29,9 +29,10 @@
         "release_exact_pages_sha_and_three_routes_HTTP_only": "e5a9ed614191d3abb916634352f16f319d4b93f1",
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
-        "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb"
+        "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
+        "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "5831a6e9d4bced0d32a28a6c871d1a7910706806",
+      "last_observed_sha": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -73,7 +74,13 @@
       "seo_readiness": {
         "site_sha": "6c6af2f2e4d6b5c005a5eb40ada3f730dc475f94",
         "evidence_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
-        "scope": "Owner-requested read-only431-public-URL metadata check: all200/title/description/matching canonical; all431noindex, live robots disallows/, sitemap.xml404. Intentional pre-launch safeguards retained. WIA022P3:120 non-alias course pages share generic track descriptions; one course/track title collision. Not full editorial/keyword/link/browser/Rich Results/Core Web Vitals/Search Console or ranking approval."
+        "scope": "Owner-requested read-only431-public-URL metadata check: all200/title/description/matching canonical; all431noindex, live robots disallows/, sitemap.xml404. Intentional pre-launch safeguards retained. WIA022P3:120 non-alias course pages share generic track descriptions; one course/track title collision. Not full editorial/keyword/link/browser/Rich Results/Core Web Vitals/Search Console or ranking approval.",
+        "latest_fix": {
+          "source_worker": "c9881b3c13bf761490157c843b513dd72ef5e67f",
+          "site_sha": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
+          "evidence_sha": "21f253a22fd9629482b304df2fa7b82e85d44b5e",
+          "scope": "Description component independently verified fixed:120 changed course summaries truthfully match catalog facts, generated data and live render;123 selected URLs all200/title/description/canonical/noindex, zero repeated descriptions. One expected200-character truncation follows existing layout. Title overlap still reproduced/deferred; WIA022 partially open, no full SEO/index/performance approval. robotsDisallow/ and sitemap404 retained."
+        }
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -161,7 +168,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "c19924a741238bcd6da298bb241dc095056f831d",
+      "last_observed_sha": "21f253a22fd9629482b304df2fa7b82e85d44b5e",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -260,13 +267,18 @@
           "foundation_revision_preparation_sha": "a49322db0b41a785d0e410600bb9766b23f8f55c",
           "foundation_revision_preparation_scope": "Partial accepted F01 revisions: explicit C/C++ array/single-file entry, practice/exam limits, selected CMake3.28.6 design, explicit C++17, compile/link/load/run, measurable module targets and six proposed lab designs with immediate shortcuts/delayed costs/metrics/endings/expert paths. Graph related IDs dev210/dev303 are candidate references only. No lessons/graph JSON, execution or independent acceptance. CPU-only Linux container route selected in design, but immutable image/package lock, functioning/free learner launcher and actual Linux validation remain unresolved. F02 revision34c6c95 is now also submitted; paired independent re-review pending with Linux gate still open. No new qualification or target/resource permission.",
           "architecture_revision_preparation_sha": "34c6c95e103e1bf469de8493164f2afd7088ca88",
-          "architecture_revision_preparation_scope": "Revision 34c6c95 is independently approved at 9ef3f2a for supplied-exhibit and lesson authoring. Remaining metric/zero-headroom warning/arithmetic script/ending/limits/spacing corrections are queued while authoring. No implemented lesson/exhibit/graph completion, actual device capture/allocation/performance, published ID/duration/qualification or release approval. Prior eleven arithmetic checks are analytical only; current CUDA guide header now independently identifies v13.4.2 with hash receipt.",
+          "architecture_revision_preparation_scope": "F02 revision34c6c95 independently approved for supplied-exhibit/lesson authoring at9ef3f2a; author low corrections37d3ec0 add specific headroom/visible zero-headroom warning, total ending fallbacks, reproducible eleven-quantity arithmetic and spacing/limits cleanup. Current CUDA index edition independently identified. Actual exhibit/lesson/graph/bank authoring remains unfinished; no hardware/practical/source/practitioner/accessibility/publication approval.",
           "paired_revision_handoff": "ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md",
           "linux_access_proposal": {
             "sha": "a6a1dcc4865ad839d4625f16e800ace88924e7bf",
             "path": "content/curricula/gpu-ai-systems/environment/F01-linux-validation-proposal.md",
             "status": "owner decision requested; no job/workflow/runtime installation or billing change",
             "scope": "One manual GitHub Ubuntu 24.04 job capped at 12 minutes, contingent on verified included allowance with no extra charge and coordinator workflow review. Native Linux control evidence only; learner-platform promises remain open."
+          },
+          "foundation_review_low_corrections": {
+            "source_sha": "37d3ec002ef4781b700f7c1b490ca8743c4b9d83",
+            "handoff": "ai/board/20261019T1316-codex-foundation-low-corrections.md",
+            "scope": "Six owned prose files pass spacing check; compact limits and reduced repetition, distinct F01 global-loader-path shortcut/separate diagnostic choice, downstream/adjacent entry references and verified Ubuntu CMake package design. F02 M2-specific GiB headroom/zero-headroom warning, total ending fallbacks and committed same11-quantity Decimal reproduction. CUDA edition/source receipts retained; Linux prediction remains conditional/unexecuted. No lesson/exhibit/graph/bank, owner access approval or hardware qualification; independent spot-check/release gates retained."
           }
         }
       },
@@ -337,10 +349,13 @@
         },
         "WIA-022": {
           "severity": "P3",
-          "status": "acknowledged valid P3 by coordinator 9ef3f2a; generator/catalog correction and independent fixing-SHA check pending",
+          "status": "partially resolved:120 repeated course descriptions independently verified fixed/live; prm201/prompting title overlap remains acknowledged deferred content decision",
           "evidence_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
-          "scope": "Generic repeated course/track metadata; public availability and course-specific truthful summaries require reviewed source correction. No observed ranking loss or indexing regression; noindex remains intentional.",
-          "acknowledgement_sha": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478"
+          "scope": "Source five-line generator fallback and generated metadata checked against title/level/track facts;120 public descriptions match expected render and differ from track text. Target123-route follow-up passes. Title collision remains, so no overall closure or optimization/indexing/ranking approval.",
+          "acknowledgement_sha": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478",
+          "fixing_sha": "c9881b3c13bf761490157c843b513dd72ef5e67f",
+          "site_fixing_sha": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
+          "latest_evidence_sha": "21f253a22fd9629482b304df2fa7b82e85d44b5e"
         }
       },
       "vendor_review_research": {
@@ -474,7 +489,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T12:51:59Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/c19924a741238bcd6da298bb241dc095056f831d/ai/board/20261019T1304-codex-rereview-fixes-and-linux-decision.md",
-  "latest_poll_scope": "Substantive independent coordinator review: F02 approved for authoring, F01 Linux decision pending; narrow sec201/gov201 mappings independently accepted and mechanical author fixes returned at 7fb4fad; WIA022 acknowledged. Studio independently published, exact live/catalog/confirmation corroborated; isolated Stripe proof pending. Whole-review cursors and all other unfinished scopes retained. No Gemini return or new agency review; CI healthy. No Codex merge/deploy/charge/learner or credential write."
+  "last_check_started_utc": "2026-10-19T13:07:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/21f253a22fd9629482b304df2fa7b82e85d44b5e/ai/board/20261019T1316-codex-wia022-description-fix-verified.md",
+  "latest_poll_scope": "New coordinator WIA022 source/site publication independently verified for120description component; title collision remains deferred/open. Own accepted foundation low corrections authored37d3ec0 and handed off21f253a; F01 owner Linux answer still pending, F02 authoring approved but materials unfinished. Other boards/agency CI/review states unchanged; no Gemini return, no Codex deployment/charge/data write. Whole-review cursors unchanged."
 }
