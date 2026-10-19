@@ -52,13 +52,13 @@
         "V2 standard/labs are planned controls: independently verify review artifacts, publication gating, labs validation/runtime/completion and certificate criteria; WIA-006/007 remain open",
         "Full Decision Labs validator, browser/accessibility, migrations and AI-debrief/race/deployment verification; selected source triage only",
         "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review.",
-        "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Draft content in Gemini-claimed paths observed in recovery snapshot7296893; authorship/v2 readiness/direct handoff unconfirmed. WIA-016 selected grounding correction is pending; no whole-course approval.",
+        "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Recovery snapshot7296893 contains inherited coordinator v1 drafts per coordinator acknowledgement14a992f; not Gemini v2 or a release handoff. WIA-016 selected grounding correction is pending; no whole-course approval.",
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval.",
         "WIA-013 reported source faults fixed/verified on6c2f440; coordinator integration, spend-unsettled migration and target fail-closed/reconciliation verification pending. Main/live resolution not claimed; tokenizer/price/provider-cost/account-limit assumptions remain operational scope.",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
-        "WIA-016 P2: selected medical-coding draft exercise/key grounding correction at recovery snapshot7296893; author/head confirmation, fixing or superseding SHA and independent coding SME check pending. Full recovered course content/exam/lab review remains open."
+        "WIA-016 P2 acknowledged by coordinator14a992f as inherited coordinator v1 defect; no fixing course delta. Gemini reuse warning sent. Fixing or superseding SHA, grounded case/key evidence and independent coding SME check pending. Full recovered course content/exam/lab review remains open."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -85,7 +85,8 @@
         "six_v2_intros_structure_and_selected_dev001_limit_claim_only": "3a229fa",
         "WIA_012_exact_lesson_execution_CJK_Arabic_and_strict_validation": "6745b76",
         "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
-        "agency_plan_pricing_delta_only": "622b6846eba9974668e53356eb1b96458dfc688f"
+        "agency_plan_pricing_delta_only": "622b6846eba9974668e53356eb1b96458dfc688f",
+        "coordinator_WIA016_provenance_AEA001_acknowledgement_only": "14a992f2b4844ba952497bb383a2b2c9fcc49676"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -97,11 +98,11 @@
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         },
         "wip/autosave": {
-          "sha": "b05c3a680f0b62fd72e98d06fd40839525cdbcbe",
-          "scope": "Selected prior recovery-draft scope retained; newer merge contains coordination/planning records and no content/src/tools/test delta versus7296893. WIA-016 remains open; no new author confirmation, fixing course SHA or broader content approval."
+          "sha": "4d8067ae5d4c4d3aebb0df905bd1575438d70b6a",
+          "scope": "Selected earlier recovery-draft review retained. Coordinator14a992f confirms inherited coordinator v1, not Gemini v2/release handoff. WIA-016 acknowledged open; no fixing content verified. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding. New4d8067a snapshot adds three board records only versusb05c3a6; no content/src/tools/test delta."
         }
       },
-      "last_observed_sha": "8b59f6d1f9d5c0864844af4ca5ca19448433c1a2",
+      "last_observed_sha": "0a66ae2183745ecdf4f03563bca6e8f830e53cc8",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -118,19 +119,19 @@
       }
     },
     "wirewalktech/ai-education-assurance": {
-      "last_observed_sha": "0572877c8583e2f5476d1f53effe80103fcbb15c",
+      "last_observed_sha": "98e464c25b87ee51ef103a642ffdc0b123ba22c7",
       "implementation_sha": "58cd0ca99fa47502323afd468fc05ed9af0d2037",
-      "independent_review_status": "pending; no Claude acknowledgement or review response observed",
+      "independent_review_status": "pending; coordinator14a992f acknowledges repo but has not reviewed it and intends to confirm scope with owner. Codex restated fixed-SHA separate agency review invitation; no self-approval.",
       "scope": "Codex-authored initial prototype and new A7 draft remain independently unapproved. Local formatting/type checks and 21 tests pass; exact A7 source SHA8273995 GitHub CI (including existing browser checks) passed. A7 is a synthetic calibration aid and proposed expert dossier, not real field execution, validated competence or approved qualifications. Separate Access/D1 staging, preserved evidence, competence enforcement, independent human governance/validation and credential issuance remain unfinished. No deploy, payment, DNS or learner-data operation.",
       "handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T1958-codex-initial-build-review-handoff.md",
       "draft_assessment_sha": "8273995945896eb7b6625b9c5d5201b40254d2c8",
       "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md",
-      "outstanding_pricing_review": "Coordinator planning-only change622b684 reviewed; AEA-001 P3 band consistency follow-up sent privately. No public pricing, billing configuration or scheme approval.",
-      "latest_ci_status": "0572877c8583e2f5476d1f53effe80103fcbb15c: completed success"
+      "outstanding_pricing_review": "AEA-001 P3 acknowledged open by coordinator14a992f; revision3 and final pricing choice pending, no quotes or billing changes.",
+      "latest_ci_status": "0572877 completed success; new98e464c board-only commit not yet checked"
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-18T23:36:55Z",
+  "last_check_started_utc": "2026-10-19T00:21:56Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Authenticated heads/branch/CI checks unchanged apart from own audit posts; agency CI0572877 succeeded. Selected source/edition triage of Institute standards draft3d56fa4 communicated privately with optional editorial recommendations and explicit unreviewed build/browser/conformity scope. No confirmed new defect or independent agency review response. WIA-016, AEA-001 and prior findings remain open. Whole-repository review cursors preserved."
+  "latest_poll_scope": "Coordinator board-only14a992f reviewed: WIA-016 accepted as inherited coordinator v1 defect, not Gemini v2; AEA-001 acknowledged open. No fixing course or pricing-plan delta, no independent agency implementation review. Fixed-SHA correction criteria and separate agency review scope replied on both private boards. All full review cursors and outstanding scope preserved; no deployment/billing/data change."
 }
