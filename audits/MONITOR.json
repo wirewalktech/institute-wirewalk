@@ -31,7 +31,7 @@
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb"
       },
-      "last_observed_sha": "423b99829a9510a88991af4ac80e5a4dbb9a106c",
+      "last_observed_sha": "5831a6e9d4bced0d32a28a6c871d1a7910706806",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -54,7 +54,7 @@
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0,
-        "latest_schedule_check_utc": "2026-10-19T11:51Z",
+        "latest_schedule_check_utc": "2026-10-19T13:04Z",
         "latest_scheduled_run_total_count": 1,
         "first_observed_scheduled_run": {
           "id": 39220461308,
@@ -136,7 +136,8 @@
         "OB3_selected_routes_hooks_status_config_and_30_local_tests_only": "6a44240",
         "hw001_six_lessons_32_stems_options_keys_selected_sources_15_arithmetic_only": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
         "batch_A_queue_update_only": "12d98ab2a37f5907fd37409d664de19282ca8c24",
-        "batch_B_queue_update_only": "80a77e52c6c1b03713ca480c65bafee68882a7ea"
+        "batch_B_queue_update_only": "80a77e52c6c1b03713ca480c65bafee68882a7ea",
+        "independent_foundation_standards_review_and_WIA022_acknowledgement_only": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -160,7 +161,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "9878d9806a87814f8f5f9f7c87fe2ac0270511ca",
+      "last_observed_sha": "c19924a741238bcd6da298bb241dc095056f831d",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -175,8 +176,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "265f131373a4602bf0a594d158dd776753053ad6",
-          "scope": "25 paths versus032f479 inventoried only:1570 additions2 deletions, prior own audit/E17 preparation copies and coordinator review boards. No new course semantic/exam/lab approval, independent authorship transfer, Gemini attribution or WIA016 closure."
+          "sha": "3ed6d8fa13cd1008fe84df61255df3b9c4dba87f",
+          "scope": "38 paths / 18,817 additions / 49 deletions versus 265f131 inventoried only; mostly own artifacts and coordinator monitor source copies. Selected monitor source/config blobs match main. No new course/exam/lab semantic approval, authorship transfer, Gemini attribution or WIA-016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -209,10 +210,10 @@
           "interactive_lab_sha": "73bd487d39b246404dd27f4b70d25e136f83df99",
           "interactive_lab_scope": "Local synthetic MPI/RDMA browser prototype, six decisions/four endings with recovery/replay/debrief. Author226 legal paths,12 browser checks and26 viewport cases pass. Independent teaching/practitioner/accessibility review pending; genuine lesson-link integration blocker remains. No real MPI/RDMA/GPU/shell execution, learner completion, credential issuance or deployment.",
           "latest_handoff": "ai/board/20261019T0404-codex-interactive-mpi-rdma-lab-review.md",
-          "review_status": "F01/F02 independently reviewed revise-first at2660e8f, required author revisions and re-review pending. Other E17/F91 blueprints/projects remain independently unapproved; no lesson authorization or course/publication/qualification approval.",
+          "review_status": "Coordinator 9ef3f2a independently approves F02 revision 34c6c95 for supplied-exhibit/lesson authoring, with low corrections while authoring. F01 design direction accepted; actual Linux access/execution gate still blocks lessons. Other E17/F91 blueprints retain independent review requirements. No completed course, publication, qualification or hardware approval.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/537a907017fdcdb570dff2386c919dd8dfd99055/ai/board/20261019T1141-codex-f01-review-revision-preparation.md",
+          "latest_preparation_handoff": "ai/board/20261019T1304-codex-rereview-fixes-and-linux-decision.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -251,27 +252,33 @@
           "full_architecture_memory_topology_blueprint_sha": "7a425328d1ac0a75a44935eee4b70a472a733187",
           "full_architecture_memory_topology_blueprint_scope": "F02 author analytical design: five outcomes/four modules, source/identity register, conditional live-storage arithmetic and topology/support interpretation. Proposed36 scenario families/five interactive graphs remain unimplemented. Required work uses labeled synthetic exhibits (also not yet implemented); optional actual inventory needs separate authorized/reviewed route. Narrow selected current official model/memory/NVIDIA-SMI documentation reads and invented-case integer arithmetic only. No GPU/NIC/fabric inventory, allocation, actual capacity/transport/performance, Linux prerequisite availability, lessons/bank/graphs, public ID/duration/qualification or independent approval. All blueprint/source/practitioner/human/accessibility/catalog/target/release gates remain pending.",
           "foundation_independent_review": {
-            "source": "2660e8f",
-            "board": "ai/board/20261019T1111-coordinator-e17-f01-f02-blueprint-review.md",
-            "status": "F01 and F02 revise first; no lesson authorization/approval",
-            "scope": "Coordinator identifies fast-option/delayed-consequence and metrics/ending/expertPath design gaps; F01 Linux route, runtime loading/build tooling and entry/assessment boundaries; F02 host CPU/NUMA/topology, course reuse boundary and realistic overhead/resource case. Accepted author revisions/re-review pending; other blueprints remain independently unapproved."
+            "source": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478",
+            "board": "ai/board/20261019T1241-coordinator-rereview-e17-standards-wia022.md",
+            "status": "F02 approved for exhibit/lesson authoring; F01 design direction accepted but lessons blocked on Linux execution",
+            "scope": "Independent review of paired revisions; remaining low metric/ending/spacing/limits/entry/toolchain/source corrections queued. F02 supplied-exhibit outcomes do not depend on F01 practical gate. No runtime or full course/release approval."
           },
           "foundation_revision_preparation_sha": "a49322db0b41a785d0e410600bb9766b23f8f55c",
           "foundation_revision_preparation_scope": "Partial accepted F01 revisions: explicit C/C++ array/single-file entry, practice/exam limits, selected CMake3.28.6 design, explicit C++17, compile/link/load/run, measurable module targets and six proposed lab designs with immediate shortcuts/delayed costs/metrics/endings/expert paths. Graph related IDs dev210/dev303 are candidate references only. No lessons/graph JSON, execution or independent acceptance. CPU-only Linux container route selected in design, but immutable image/package lock, functioning/free learner launcher and actual Linux validation remain unresolved. F02 revision34c6c95 is now also submitted; paired independent re-review pending with Linux gate still open. No new qualification or target/resource permission.",
           "architecture_revision_preparation_sha": "34c6c95e103e1bf469de8493164f2afd7088ca88",
-          "architecture_revision_preparation_scope": "Partial accepted F02 revisions: CPU/cache/NUMA/PCI locality and proposed read-only Linux tools; actual neighbor source boundary (hw202/hw205 outlines only); explicitly scaled4MiB case plus required fictional24GiB larger-workload transfer with overhead/workspace reveal; UUID-order identity trap; synthetic active/idle link-provenance counterexample. Five lab graph designs include shortcuts/delayed conditional costs/four metrics/3module and4integration endings/expert paths; no executable materials/graphs. Eleven Decimal byte checks match;29units/prerequisite edges unchanged, related metadata only expanded. No actual Linux/device capture, runtime/allocation/performance or independent approval. F01 fresh route and CUDA archive/version pin remain open; no lessons/publication/credential/release.",
-          "paired_revision_handoff": "ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md"
+          "architecture_revision_preparation_scope": "Revision 34c6c95 is independently approved at 9ef3f2a for supplied-exhibit and lesson authoring. Remaining metric/zero-headroom warning/arithmetic script/ending/limits/spacing corrections are queued while authoring. No implemented lesson/exhibit/graph completion, actual device capture/allocation/performance, published ID/duration/qualification or release approval. Prior eleven arithmetic checks are analytical only; current CUDA guide header now independently identifies v13.4.2 with hash receipt.",
+          "paired_revision_handoff": "ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md",
+          "linux_access_proposal": {
+            "sha": "a6a1dcc4865ad839d4625f16e800ace88924e7bf",
+            "path": "content/curricula/gpu-ai-systems/environment/F01-linux-validation-proposal.md",
+            "status": "owner decision requested; no job/workflow/runtime installation or billing change",
+            "scope": "One manual GitHub Ubuntu 24.04 job capped at 12 minutes, contingent on verified included allowance with no extra charge and coordinator workflow review. Native Linux control evidence only; learner-platform promises remain open."
+          }
         }
       },
       "current_reclaimed_course_ownership": {
         "sha": "11edb9a",
         "scope": "Coordinator reclaims F53\u2013F65 per board0111 after owner-reported Gemini inactivity. No new course implementation or fixing source in these coordination commits. Codex audits only; no ownership takeover."
       },
-      "standards_assignment_scope": "Coordinator board7e6b135 reports goal of evidence-backed self-declared educational mappings. Codex claimed E16 and opened private review-only draft PR1 at912ef44. Two candidates (current gov001 partial topic/item evidence; pro150 unimplemented blueprint intent) remain Under Review, ineligible, declaration not issued, no public wording or runtime integration. No certification, credit or verified alignment assigned. Evidence/semantic review required before status/wording changes; no self-approval.",
+      "standards_assignment_scope": "E16 self-declared educational mapping preparation remains distinct from third-party certification or credits. Independent coordinator 9ef3f2a approves narrow sec-201 OWASP and gov-201 NIST mapping wording; author fix 7fb4fad records that decision. gov-001/pro-150 stay Under Review/ineligible. Public claims disabled, declarations unissued; no course/practical/conformance or publication approval.",
       "standards_draft_pr": {
         "url": "https://github.com/wirewalktech/wirewalk-institute-worker/pull/1",
-        "head": "e3589e0c3683acacec9864b5854c0e0324217c52",
-        "review_status": "Selected sec201 and gov201 candidate revisions submitted; coordinator re-review pending. All four candidates Under Review/ineligible/no public wording; OB3/page updates unfinished."
+        "head": "7fb4fad5f93dc1f9941a7520d04a9ff389b8a6c5",
+        "review_status": "Accepted mechanical fixes returned for coordinator final check/merge. sec-201/gov-201 Curriculum Mapped/eligible records independent 9ef3f2a decision, with exact narrow wording/gaps; gov-001/pro-150 ineligible. Public claims disabled/declarations unissued; separate page/release pending."
       },
       "latest_release": {
         "reported_worker_source": "12a42e2",
@@ -330,9 +337,10 @@
         },
         "WIA-022": {
           "severity": "P3",
-          "status": "open improvement, coordinator acknowledgement pending",
+          "status": "acknowledged valid P3 by coordinator 9ef3f2a; generator/catalog correction and independent fixing-SHA check pending",
           "evidence_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
-          "scope": "Generic repeated course/track metadata; public availability and course-specific truthful summaries require reviewed source correction. No observed ranking loss or indexing regression; noindex remains intentional."
+          "scope": "Generic repeated course/track metadata; public availability and course-specific truthful summaries require reviewed source correction. No observed ranking loss or indexing regression; noindex remains intentional.",
+          "acknowledgement_sha": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478"
         }
       },
       "vendor_review_research": {
@@ -358,6 +366,12 @@
         "sha": "e3589e0c3683acacec9864b5854c0e0324217c52",
         "handoff": "ai/board/20261019T1240-codex-gov201-nist-candidate-review-limits.md",
         "scope": "Three gov201 Module3 lessons and10 selected items/all options/keys/explanations read against selected official NIST AI100-1/AI600-1 DOI sections. Six topic-candidate rows cover four functions/profiles/GenAI overview; not complete category/subcategory/action/course approval. GOVERN assessment remains thin; q006 is a course RACI choice. q027 recognizes two named risks, not all12 individually assessed. Metadata IDs/section names/hashes/counts match;20of54draw has no risk/function quota. Direct AI100-1 download403, no normative binary hashes. All four candidates Under Review/ineligible, no public wording/declaration. OB3/page work and independent source/practical/course/assessment/release gates remain open."
+      },
+      "standards_independent_review_followup": {
+        "review_sha": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478",
+        "fix_sha": "7fb4fad5f93dc1f9941a7520d04a9ff389b8a6c5",
+        "evidence_sha": "c19924a741238bcd6da298bb241dc095056f831d",
+        "scope": "OB3 live-state gate and spacing fixed; official OWASP/NIST PDF hashes independently match. sec-201 crosswalk m1-l3/q007-q009 plus m6-l3 practice checklist evidence read/added. First real badge wallet check and WIA019/020/021 remain open; this run public documents were HTTP checked only, not new cryptographic proof validation. Historical retrieval failures/Under Review states above are superseded only to this explicit narrow extent."
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -372,20 +386,20 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "f5923e041297bf5ae8d75ed18561c0a781435028",
-      "scope": "Coordinator5192f70 reviews Studio bundle: PR3 independently merged/published; D1-D3 author fixes returned atf5923e0 for re-review. Release order/payment proof and owner policy questions retained. New WIA020/021 source findings relayed; no shared deployment.",
+      "last_observed_sha": "38d0bc6",
+      "scope": "Coordinator a1d19a5 independently merged/published Studio terms and Orders retainers; exact PR/Pages/public catalog/selected live text and same confirmation fixture corroborated at 38d0bc6. Stripe isolated test-mode proof and policy questions remain open.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
     "wirewalktech/studio-wirewalk": {
-      "last_observed_sha": "ddf16747bca37b702622975fed7def71c0ec5846",
-      "pages_build_sha": "ddf16747bca37b702622975fed7def71c0ec5846",
+      "last_observed_sha": "32ffae4bd4f3aa2eb5867d758baecdc60b3e03aa",
+      "pages_build_sha": "32ffae4bd4f3aa2eb5867d758baecdc60b3e03aa",
       "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
       "outstanding": [
-        "PR3 follow-ups1\u20134 independently reviewed and published by coordinator asddf1674; exact Pages/live26-case corroborated. Combined PR2 candidate checks pass, but re-review and publication remain pending; no blanket site/payment approval.",
-        "Owner-approved terms at5cb7c7e need implementation:25% whole-dollar retainer catalog through reviewed PR, consistent cancellation/delivery/revision/response/rights wording and isolated Stripe test-mode proof. List prices/other practices unchanged by this request.",
-        "Capability/rights/insurance supporting documents, actual enquiry delivery, complete factual/accessibility/source review and real isolated payment/webhook/order evidence remain unfinished.",
-        "Terms draft PR2 f8bb67f awaits independent review; coordinate publication with reviewed/deployed retainer PR1 and separate catalog delivery/rights copy alignment. Client cancellation of fully prepaid remainder needs explicit approved policy; no invented refund/forfeiture rule."
+        "Coordinator independently merged/deployed Orders retainers and Studio approved terms; exact Pages, six live route GETs, 15 catalog deposits and existing isolated confirmation fixture corroborated. Stripe test-mode checkout/signature/order proof remains missing; no payment readiness approval.",
+        "Owner policy decisions remain with coordinator: property next-day/rush versus five-business-day default, fully prepaid cancellation remainder and retainer denominator with ACH. No invented policy.",
+        "Supporting FAA/insurance documents, actual enquiry delivery, complete source/editorial/accessibility review and broader operational evidence remain unfinished.",
+        "Optional event-selects timing and deposit/retainer terminology consistency follow-ups are queued."
       ],
       "proposed_fix": {
         "finding": "WW-008",
@@ -399,7 +413,7 @@
       "owner_claim_evidence": {
         "source_commit": "fe25651",
         "source_board": "20261019T0212-coordinator-studio-owner-attestations.md",
-        "scope": "Coordinator relays owner FAA/insurance attestation (documents pending), then actual approved Studio terms at5cb7c7e. Terms are policy approved, not yet implemented/tested; no credential number, insurer/limits or extra terms invented. Do not transfer Studio attestations to other properties."
+        "scope": "Owner-reported FAA/insurance attestations, supporting documents pending. Approved Studio terms implemented/published by coordinator as 32ffae4 with reviewed Orders retainers. No transfer of attestations to other properties or invented credential/coverage/policy."
       },
       "findings": {
         "WW-008": "resolved by coordinator independent review and publication1595703; author live22-case fixture corroborates deployed page"
@@ -407,14 +421,16 @@
       "retainer_proposal": {
         "pr": "https://github.com/wirewalktech/wirewalk-orders-worker/pull/1",
         "head_sha": "d1509d12393cacde292c15d8773040167f561fe8",
-        "status": "reviewer D1 four Studio descriptions fixed; independent re-review/deploy and isolated Stripe proof pending",
-        "scope": "Original15 retainer changes plus four approved delivery/usage blurb corrections only.98pass0fail1optional skip; no list-price/non-Studio change or real checkout. Property rush exception/full-prepaid cancellation remainder/ACH denominator policy confirmations pending."
+        "status": "coordinator independently merged as 13704d0 and reports deployment; public 15-SKU catalog amounts corroborated, Stripe isolated test-mode proof still pending",
+        "scope": "Original15 retainer changes plus four approved delivery/usage blurb corrections only.98pass0fail1optional skip; no list-price/non-Studio change or real checkout. Property rush exception/full-prepaid cancellation remainder/ACH denominator policy confirmations pending.",
+        "merge_sha": "13704d04d06583d435e416dba511378004338061"
       },
       "terms_proposal": {
         "pr": "https://github.com/wirewalktech/studio-wirewalk/pull/2",
         "head_sha": "ccd1faf8a5c94c3209abb3e81569c6746d97c5b7",
-        "status": "D2/D3 reviewer fixes pushed; combined reviewed main integrated into author PR branch, re-review/release pending",
-        "scope": "Exact attested pilot/insurance wording, no document-turnaround claim, family-only illness scope. Combined build/26confirmation/338viewport/633links pass; same matrix rerun, no new unique-case total or independent author approval. Owner policy questions and coupled Orders deploy/Stripe proof remain open."
+        "status": "coordinator independently merged/published as 32ffae4; exact Pages and selected actual-domain text/confirmation fixture corroborated; broader payment/site readiness remains open",
+        "scope": "Exact attested pilot/insurance wording, no document-turnaround claim, family-only illness scope. Combined build/26confirmation/338viewport/633links pass; same matrix rerun, no new unique-case total or independent author approval. Owner policy questions and coupled Orders deploy/Stripe proof remain open.",
+        "merge_sha": "32ffae4bd4f3aa2eb5867d758baecdc60b3e03aa"
       },
       "confirmation_followups_proposal": {
         "pr": "https://github.com/wirewalktech/studio-wirewalk/pull/3",
@@ -422,6 +438,12 @@
         "status": "coordinator independently reviewed/merged/published asddf1674; exact Pages and actual live26-case/13-width isolated fixture corroborated",
         "scope": "Coordinator non-blocking follow-ups1\u20134: stringtrue paid fixture, lookup wording, existing sessionStatus/paymentStatus-based unconfirmed checkout copy and read-only catalog identifier drift checker. Author build/26cases/13overflow widths pass, public payable identifiers15/15, three negative drift fixtures rejected. No real Stripe/order action. If accepting PR2 and PR3, coordinator rechecks combined source/build.",
         "merge_sha": "ddf16747bca37b702622975fed7def71c0ec5846"
+      },
+      "latest_live_corroboration": {
+        "evidence_repository": "wirewalktech/wirewalk-web-ops",
+        "evidence_sha": "38d0bc6",
+        "path": "verification/2026-10-19-studio-live-terms/",
+        "scope": "Authenticated PR merges/exact built Pages; six public routes HTTP 200; 15/15 public catalog retainer calculations; same existing 26 isolated cases and 13 widths pass on actual-domain confirmation HTML. No actual Stripe/order action, no repeated full 338-case matrix, no independent Worker deploy-version or non-Studio byte comparison."
       }
     },
     "wirewalktech/forensics-wirewalk": {
@@ -452,7 +474,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T12:36:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/9878d9806a87814f8f5f9f7c87fe2ac0270511ca/ai/board/20261019T1240-codex-gov201-nist-candidate-review-limits.md",
-  "latest_poll_scope": "Authenticated monitored mains/canonical instructions/boards/claims/PR reviews/agency CI/recovery and single retained scheduled run unchanged except own partial gov201 standards candidatee3589e0/handoff9878d98. No new coordinator/Gemini response. All four candidates Under Review; no public claim or course/framework/practical approval. Whole-review cursors and prior scopes retained; author preparation alone is not a notification trigger."
+  "last_check_started_utc": "2026-10-19T12:51:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/c19924a741238bcd6da298bb241dc095056f831d/ai/board/20261019T1304-codex-rereview-fixes-and-linux-decision.md",
+  "latest_poll_scope": "Substantive independent coordinator review: F02 approved for authoring, F01 Linux decision pending; narrow sec201/gov201 mappings independently accepted and mechanical author fixes returned at 7fb4fad; WIA022 acknowledged. Studio independently published, exact live/catalog/confirmation corroborated; isolated Stripe proof pending. Whole-review cursors and all other unfinished scopes retained. No Gemini return or new agency review; CI healthy. No Codex merge/deploy/charge/learner or credential write."
 }
