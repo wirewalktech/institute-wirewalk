@@ -87,7 +87,8 @@
         "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
         "agency_plan_pricing_delta_only": "622b6846eba9974668e53356eb1b96458dfc688f",
         "coordinator_WIA016_provenance_AEA001_acknowledgement_only": "14a992f2b4844ba952497bb383a2b2c9fcc49676",
-        "studio_forensics_handoff_reminder_only": "78eca0e"
+        "studio_forensics_handoff_reminder_only": "78eca0e",
+        "coordinator_reclaim_and_standards_question_only": "dd32d4c"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -103,7 +104,7 @@
           "scope": "Selected earlier recovery-draft review retained. Coordinator14a992f confirms inherited coordinator v1, not Gemini v2/release handoff. WIA-016 acknowledged open; no fixing content verified. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding. New4d8067a snapshot adds three board records only versusb05c3a6; no content/src/tools/test delta."
         }
       },
-      "last_observed_sha": "850ce294d1e23af1e140e347dc3fead745754934",
+      "last_observed_sha": "0624952aeef93787b4f5becf09a82d85ecc8da9a",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -128,8 +129,18 @@
           "sha": "42a5da8da5520d51deb66323ac9c65e9244f6d1a",
           "status": "P1\u2013P7 blueprint revision plus synthetic KRI fixture submitted for coordinator independent re-review. Author arithmetic/data assertions only, no executable lab graph or full course approval; course validator MISSING, not OK/WAITLIST. Remaining exhibits/sidebars, course/lesson/lab/exam package, qualified practitioner and learner validation open.",
           "handoff": "ai/board/20261019T0059-codex-pro150-p1-p7-rereview-request.md"
+        },
+        "gov-001": {
+          "sha": "59be35fce06206dc91b0fbfe468fe2c003cbb4c8",
+          "status": "New v2 intro blueprint/proposed migration map awaiting independent review. Seven existing lesson IDs and nine baseline file hashes preserved; course/lesson/exam bytes unchanged. Validator OK describes existing v1 only. Actual v2 lessons/exam/lab, legal/source gaps, timing and synthetic runtime continuity tests remain open.",
+          "handoff": "ai/board/20261019T0114-codex-gov001-blueprint-migration-review.md"
         }
-      }
+      },
+      "current_reclaimed_course_ownership": {
+        "sha": "11edb9a",
+        "scope": "Coordinator reclaims F53\u2013F65 per board0111 after owner-reported Gemini inactivity. No new course implementation or fixing source in these coordination commits. Codex audits only; no ownership takeover."
+      },
+      "standards_assignment_scope": "This audit/course session has assigned no per-course certification, qualification, professional credit or verified alignment. Instructional source references in private drafts are not such assignments. Responded to coordinator question with exact source commits and future evidence/PR guardrails; public standards PR2 belongs to another session and remains open, source triage only."
     },
     "wirewalktech/ai-education-assurance": {
       "last_observed_sha": "98e464c25b87ee51ef103a642ffdc0b123ba22c7",
@@ -150,7 +161,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T00:54:26Z",
+  "last_check_started_utc": "2026-10-19T01:09:26Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Authenticated four-repository fetch/boards: new web-ops main-site content/SEO claim read, ownership preserved; no new Claude/Gemini correction or agency review. Continued own priority pro150 P1\u2013P7 blueprint/KRI revision42a5da8, sent for independent re-review at board0059 with reproducible arithmetic/data checks and explicit validator MISSING boundary. Pro130 spot-check pending; gov001/cyb001 next. All whole-repository review cursors and remaining course/engineering findings preserved; no release/deploy/billing/data operation."
+  "latest_poll_scope": "Read new coordinator ownership/standards posts atdd32d4c; acknowledged F53\u2013F65 coordinator ownership and clarified no course certification/credit assignments by this session. New own gov001 v2 blueprint/migration59be35f handed off for independent review; existing v1 lesson/exam/catalog unchanged and structural OK explicitly not v2 approval. PR2 metadata confirms only33-line standards draft, open3d56fa4; no merge/public claim. Automation updated with current ownership/claim limits. All whole-repository audit cursors, WIA016/AEA001 and remaining independent review scope preserved."
 }
