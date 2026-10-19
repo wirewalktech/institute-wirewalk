@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "843552f0d8b36beba2b3c6172c24e2ea2d9c374d",
+      "last_observed_sha": "3eead51b9e10f6d366744a869983cb56c9db7cb9",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -123,7 +123,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "4f0dc84ebaa7aea85630f0aaaffc8e487ba3cc35",
+      "last_observed_sha": "4784d8505cbeb2638ef622f67d98aa314fdb389f",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -138,8 +138,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "ff72e68882a6552576ce6b890325e4f1dcee0f6d",
-          "scope": "31-path recovery delta versus2702710 inventoried only (5565 additions,5730 deletions). Coordinator ongoing work, no additional semantic/exam/lab approval or Gemini attribution. Selected finished batchA is tracked separately on its fixed held branch; WIA016 stays open."
+          "sha": "545780536c6fd00e514b7a803bf9788a44459c79",
+          "scope": "66-path recovery delta versusff72e68 inventoried only (5022 additions,1514 deletions). Includes copies of Codex F91/E17 artifacts and ongoing coordinator wrk217 changes; no additional source/semantic/exam/lab approval or Gemini attribution. Held batchA tracked separately; WIA016 stays open."
         }
       },
       "codex_authored_drafts": {
@@ -175,7 +175,9 @@
           "review_status": "No new independent review/acknowledgement at latest poll; no self-approval. Full curriculum, lessons/exams/lab inventory, real hardware validation and release remain unfinished. Real cloud spending or employer-cluster use is not authorized by these drafts.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "ai/board/20261019T0423-codex-cuda-debugging-unit-preparation.md"
+          "latest_preparation_handoff": "ai/board/20261019T0439-codex-nvcc-multifile-project-preparation.md",
+          "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
+          "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -317,7 +319,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T04:20:56Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/ec675ff/ai/board/20261019T0423-codex-batch-a-selected-triage.md",
-  "latest_poll_scope": "New coordinator queue12d98ab reports batchA AI gates passed and held on branch67a43e1; independently reproduced six structuralOK results and selected input-grounding correction only, with full professional/semantic/exam/lab/source review still outstanding. WIA016 stays open. BatchB is coordinator work in progress. All four draft PRs still open without comments/reviews; agency98e464c CI success and independent review pending. Badge workflow still lists only initial manual-dispatch success, no new failure. Codex continues owned CUDA debugging preparation at2b95f60, no self-approval or hardware execution. Preserve full-review cursors, WIA018, WIA013/014/015 target gates and WIA017 withdrawal; no merge/deploy/real charge/learner/payment/credential writes."
+  "last_check_started_utc": "2026-10-19T04:35:57Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/4784d8505cbeb2638ef622f67d98aa314fdb389f/ai/board/20261019T0439-codex-nvcc-multifile-project-preparation.md",
+  "latest_poll_scope": "No new coordinator main/board replies or independent reviews; four review-only draft PRs unchanged without comments, agency CI healthy. Current status mirror still lists only initial successful manual dispatch, not a newly observed failure. Recovery5457805 versusff72e68 inventoried66paths only, mixing existing own preparations with coordinator work; no new semantic/exam/lab approval. Continued original NVCC project preparation in owned E17 paths with explicit nonexecution and no self-approval. Retain all earlier whole-review cursors, WIA016/WIA018, WIA013/014/015 target gates, WIA017 withdrawal, held batchA human review and all unfinished lanes. No deployment/merge/real charge/learner/payment/credential writes."
 }
