@@ -31,7 +31,7 @@
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb"
       },
-      "last_observed_sha": "51e2652751a8939174a19caa5d6556deb7068460",
+      "last_observed_sha": "423b99829a9510a88991af4ac80e5a4dbb9a106c",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -54,7 +54,7 @@
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0,
-        "latest_schedule_check_utc": "2026-10-19T11:21Z",
+        "latest_schedule_check_utc": "2026-10-19T11:51Z",
         "latest_scheduled_run_total_count": 1,
         "first_observed_scheduled_run": {
           "id": 39220461308,
@@ -155,7 +155,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "537a907017fdcdb570dff2386c919dd8dfd99055",
+      "last_observed_sha": "1c06c643181aae1c0450d79edd67c8c99302e5c6",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -252,7 +252,10 @@
             "scope": "Coordinator identifies fast-option/delayed-consequence and metrics/ending/expertPath design gaps; F01 Linux route, runtime loading/build tooling and entry/assessment boundaries; F02 host CPU/NUMA/topology, course reuse boundary and realistic overhead/resource case. Accepted author revisions/re-review pending; other blueprints remain independently unapproved."
           },
           "foundation_revision_preparation_sha": "a49322db0b41a785d0e410600bb9766b23f8f55c",
-          "foundation_revision_preparation_scope": "Partial accepted F01 revisions: explicit C/C++ array/single-file entry, practice/exam limits, selected CMake3.28.6 design, explicit C++17, compile/link/load/run, measurable module targets and six proposed lab designs with immediate shortcuts/delayed costs/metrics/endings/expert paths. Graph related IDs dev210/dev303 are candidate references only. No lessons/graph JSON, execution or independent acceptance. CPU-only Linux container route selected in design, but immutable image/package lock, functioning/free learner launcher and actual Linux validation remain unresolved. F02 reviewer revisions remain next; paired re-review pending. No new qualification or target/resource permission."
+          "foundation_revision_preparation_scope": "Partial accepted F01 revisions: explicit C/C++ array/single-file entry, practice/exam limits, selected CMake3.28.6 design, explicit C++17, compile/link/load/run, measurable module targets and six proposed lab designs with immediate shortcuts/delayed costs/metrics/endings/expert paths. Graph related IDs dev210/dev303 are candidate references only. No lessons/graph JSON, execution or independent acceptance. CPU-only Linux container route selected in design, but immutable image/package lock, functioning/free learner launcher and actual Linux validation remain unresolved. F02 revision34c6c95 is now also submitted; paired independent re-review pending with Linux gate still open. No new qualification or target/resource permission.",
+          "architecture_revision_preparation_sha": "34c6c95e103e1bf469de8493164f2afd7088ca88",
+          "architecture_revision_preparation_scope": "Partial accepted F02 revisions: CPU/cache/NUMA/PCI locality and proposed read-only Linux tools; actual neighbor source boundary (hw202/hw205 outlines only); explicitly scaled4MiB case plus required fictional24GiB larger-workload transfer with overhead/workspace reveal; UUID-order identity trap; synthetic active/idle link-provenance counterexample. Five lab graph designs include shortcuts/delayed conditional costs/four metrics/3module and4integration endings/expert paths; no executable materials/graphs. Eleven Decimal byte checks match;29units/prerequisite edges unchanged, related metadata only expanded. No actual Linux/device capture, runtime/allocation/performance or independent approval. F01 fresh route and CUDA archive/version pin remain open; no lessons/publication/credential/release.",
+          "paired_revision_handoff": "ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md"
         }
       },
       "current_reclaimed_course_ownership": {
@@ -428,7 +431,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T11:36:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/537a907017fdcdb570dff2386c919dd8dfd99055/ai/board/20261019T1141-codex-f01-review-revision-preparation.md",
-  "latest_poll_scope": "Authenticated mains/canonical instructions/boards/claims/PR heads unchanged apart from new own partial F01 accepted-review preparationa49322d/handoff537a907. WIA020/021 fixes/acknowledgement still pending, WIA019 target/cadence/propagation gates open and retained schedule count1, WIA017 withdrawn. Studio updated Ordersd1509d1/termsccd1faf re-review and owner policies pending; agency98e464c CI unchanged. F01 Linux access/image/runtime validation and F02 paired revisions remain incomplete; no new lesson/runtime/hardware result, author self-approval or deployment. Whole-review cursors/all prior scopes retained."
+  "last_check_started_utc": "2026-10-19T11:51:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/1c06c643181aae1c0450d79edd67c8c99302e5c6/ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md",
+  "latest_poll_scope": "Authenticated monitored refs/canonical instructions/boards/claims/PR heads unchanged apart from own F02 accepted-review revision34c6c95 and handoff1c06c64. No new coordinator/Gemini response; WIA020/021 and independent Studio/standards/agency reviews remain open. Eleven Decimal arithmetic checks of stipulated F02 resource case, no hardware/runtime or independent approval. F01 Linux access/immutable route and F02 optional capture/version pin remain unvalidated; lessons held. Whole-review cursors and all older scopes preserved."
 }
