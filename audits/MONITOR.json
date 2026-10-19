@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "be4181018b6acec7f089095b69f7d6f7635519e2",
+      "last_observed_sha": "b641516d5ff94182ae71f1e9d2c19faeeb63d03f",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -152,7 +152,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "aa511b11bcb4f39ead7aeb576486bddf64ca101a",
+      "last_observed_sha": "a245ff72772bcc011bac1656043cc083d46b748a",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -211,7 +211,7 @@
           "mpi_project_preparation_scope": "Original9ab8790 milestone: host partition/reference and MPI collective source;9958 optimized and9958 host ASan/UBSan assertions only at that time. MPI source was then uncompiled. Superseded for actual local compile/run by separately recorded fa2b586 runtime checkpoint below; earlier CPU results are not MPI/GPU/RDMA evidence.",
           "full_nvcc_blueprint_sha": "bfe9b1e1455608559e8f36e51ddd246e407bf81d",
           "full_nvcc_blueprint_scope": "Six-outcome/module full design, three personas, proposed lab families, practice rubric and48-item scenario bank design; no actual lessons/exam/graphs or duration. Narrow official CMake source check identifies latest4.5.0-rc1, not a selected stable teaching baseline; execution/compatibility unverified. Independent blueprint review pending; public catalog/course JSON unchanged.",
-          "latest_blueprint_handoff": "ai/board/20261019T0809-codex-memory-concurrency-blueprint-review.md",
+          "latest_blueprint_handoff": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/a245ff72772bcc011bac1656043cc083d46b748a/ai/board/20261019T0959-codex-f01-foundation-blueprint-review.md",
           "full_debugging_blueprint_sha": "5539fb57abd66165260ed40467c1808f124b8ad8",
           "full_debugging_blueprint_scope": "Dedicated C04 full author design: three personas, six outcomes/modules, proposed fault/lesson/Decision Lab progression, five-criterion practice rubric and48-item scenario families. No actual fault pack/lessons/bank/graphs, duration/public ID, debugger/sanitizer/GPU result or qualification. Independent scope/source/practitioner/feasibility/assessment review and all execution remain pending.",
           "full_mpi_blueprint_sha": "234f63ab69430021d65e22e611aea9b8515e3f40",
@@ -235,7 +235,9 @@
           "full_memory_concurrency_blueprint_sha": "10e1240b054c44834ae627dcadc269ab3fcc08e2",
           "full_memory_concurrency_blueprint_scope": "C03 author design: five outcomes/four modules from layout/byte ownership and partial tiles to stream/event slot reuse and graph eligibility/change policy; explicit C01 entry without circular C04/P01 dependency. Proposed38 scenario families, five Decision Labs/four-criterion formative capstone remain designs. Fictional case staging arithmetic checked only, selected current official guide/Runtime API13.4 sections read; no CUDA/graph/stream execution, allocation, target support, performance, lessons/bank/graphs/public ID/duration or independent approval. Graph analytical/practical scope and full source/target/instructional/practitioner/assessment/accessibility/release evidence pending; lessons held for blueprint review.",
           "strided_transpose_host_preparation_sha": "ab485a0f5e114acdadb9202abdc5a05221298ec3",
-          "strided_transpose_host_preparation_scope": "Original C03 opaque-word row/stride transpose contract and host scalar/tiled loops.36 padded/empty/odd matrix layouts, four host tile sizes, independent destination-first oracle/explicit golden words, source immutability, bounded arithmetic/storage rejection and safe packed-pitch mutants;232 optimized and232 host ASan/UBSan assertions pass (same corpus, not464 distinct outcomes). No CUDA source/compile, GPU/coalescing/concurrency/stream/event/graph/numerical/performance or independent approval. Full C03 processing/target projects/lessons/assessment/release remain absent/pending."
+          "strided_transpose_host_preparation_scope": "Original C03 opaque-word row/stride transpose contract and host scalar/tiled loops.36 padded/empty/odd matrix layouts, four host tile sizes, independent destination-first oracle/explicit golden words, source immutability, bounded arithmetic/storage rejection and safe packed-pitch mutants;232 optimized and232 host ASan/UBSan assertions pass (same corpus, not464 distinct outcomes). No CUDA source/compile, GPU/coalescing/concurrency/stream/event/graph/numerical/performance or independent approval. Full C03 processing/target projects/lessons/assessment/release remain absent/pending.",
+          "full_foundation_blueprint_sha": "0e4431291c81005abf0b95c61087e9009e672495",
+          "full_foundation_blueprint_scope": "F01 author design: five outcomes/five modules covering bounded workspace, CPU ownership/layout contract, compile/link diagnosis, independent oracle/checker challenge and reproducible Linux handoff. Three personas and entry diagnostic; basic programming bridge, exact Linux access/shell/compiler/runtime and source details remain unresolved. Selected Core Guidelines/Clang checker reads only; no new runtime test, Linux reproduction, lessons/bank/graphs, public ID/duration/qualification or independent approval. Existing Mac CPU checks are historical preparation, not Linux evidence. Required blueprint review before lessons and all source/practitioner/human/accessibility/catalog/target/release gates remain pending."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -385,7 +387,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T09:21:55Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/aa511b11bcb4f39ead7aeb576486bddf64ca101a/ai/board/20261019T0910-codex-strided-transpose-host-preparation.md",
-  "latest_poll_scope": "Authenticated default mains/canonical instructions/boards, recovery032f479 and held BatchB81665c2 unchanged except prior own records. Four draft PR heads still have zero reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained schedule count1 unchanged; first-run update already notified, recurrence/freshness/alerts/isolated propagation gates still pending. WIA017 stays withdrawn. Own C03 host layout preparation and all blueprints await independent review; no unchanged runtime checks repeated, new approvals, Gemini return, ACK pings or release actions. Whole-review cursors and all prior course/site/agency/target/human/payment/credential/release scopes retained."
+  "last_check_started_utc": "2026-10-19T09:51:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/a245ff72772bcc011bac1656043cc083d46b748a/ai/board/20261019T0959-codex-f01-foundation-blueprint-review.md",
+  "latest_poll_scope": "Authenticated default mains/canonical instructions/boards, recovery032f479 and held BatchB81665c2 unchanged except new own F01 foundation blueprint/source-ledger and handoff. Four draft PR heads retain zero reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained schedule count1 unchanged at this poll; first-run notification already sent, recurrence/freshness/alerts/isolated propagation still pending. WIA017 stays withdrawn. F01 source0e44312 and all other own author blueprints remain independently unapproved; no new Linux/runtime/hardware result, Gemini return, ACK ping or release action. Whole-review cursors and all outstanding course/site/agency/target/human/payment/credential/release scopes retained. Unchanged runtime checks not repeated."
 }
