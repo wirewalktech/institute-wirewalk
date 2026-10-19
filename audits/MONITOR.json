@@ -59,7 +59,8 @@
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
-        "OB3 initial manual-dispatch mirror publication and public status-list signature verified; original WIA-017 publication inference withdrawn as contradicted by exact runtime evidence. Scheduled changed-bit revocation latency/failure monitoring, actual learner badge/wallet interoperability, full implementation/definitions/privacy/accessibility/conformance and target lifecycle remain unverified. No blanket credential or course approval."
+        "OB3 initial manual-dispatch mirror publication and public status-list signature verified; original WIA-017 publication inference withdrawn as contradicted by exact runtime evidence. Scheduled changed-bit revocation latency/failure monitoring, actual learner badge/wallet interoperability, full implementation/definitions/privacy/accessibility/conformance and target lifecycle remain unverified. No blanket credential or course approval.",
+        "WIA-018 hw001 wording/assumption correction and independent fixing-SHA verification. Six lesson files,32 stems/options/keys, selected primary specifications and15 local arithmetic checks reviewed; full explanations/source coverage, human timing/accessibility/target assessment and v2 approval remain outstanding. No GPU execution or learner writes."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -92,7 +93,8 @@
         "coordinator_reclaim_and_standards_question_only": "dd32d4c",
         "coordinator_owner_direction_self_declared_preparation_only": "7e6b135cf926f93dbb92921a9f15817f45c5b04a",
         "release_selected_WIA013_014_015_integration_46_local_tests_only": "44ca53db173d0516a8eeaf168bacc129b5b74e1b",
-        "OB3_selected_routes_hooks_status_config_and_30_local_tests_only": "6a44240"
+        "OB3_selected_routes_hooks_status_config_and_30_local_tests_only": "6a44240",
+        "hw001_six_lessons_32_stems_options_keys_selected_sources_15_arithmetic_only": "5881dce7edc1c9f7284b057b4fc56fce81f65e78"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -108,7 +110,7 @@
           "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
+      "last_observed_sha": "28a6596cd7f21aa50b89e27f290f976cfca62430",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -123,8 +125,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "13dc7a3",
-          "scope": "21-path active recovery delta versus a07522e inventoried only (5550 additions,1604 deletions), including coordinator hls155/hls175 labs/exam and wrk216 lessons/wrk217 blueprint. No completed review handoff, course factual/editorial/exam/lab approval, WIA016 resolution or Gemini authorship attribution."
+          "sha": "5cb1358cfec9f94a097b810b2bd7030693cea692",
+          "scope": "92-path active recovery delta versus13dc7a3 inventoried only (15874 additions,7026 deletions). Coordinator unfinished coursework, no finished handoff or new semantic/exam/lab approval; no WIA016 closure or Gemini authorship attribution."
         }
       },
       "codex_authored_drafts": {
@@ -175,13 +177,20 @@
         "sha": "0b9be80",
         "scope": "Read coordinator-reported org-agreement defaults and Open Badges /badges issuer/dependency/artwork/erasure decisions. No key generation/handling, badge issuance, standards alignment or branch implementation/conformance approval by Codex; signing-key installation remains owner-only after separate release gates.",
         "additional_public_key_commit_observed": "e1c29829a5492e4756940456b52a4a9e3f0e93f6",
-        "additional_scope": "Public key publication and owner-approved secret installation reported in commit only; Codex read no secret, installed no key and issued no real badge. This does not satisfy WIA017 publication or remaining release/conformance gates."
+        "additional_scope": "Public key publication and owner-approved secret installation reported only; Codex accessed no secret, installed no key and issued no real badge. WIA017 subsequently withdrawn on observed runtime counter-evidence; other conformance/lifecycle gates remain."
       },
       "findings": {
         "WIA-017": {
           "status": "withdrawn/closed as disproved by runtime counter-evidence, not a fixing source change",
           "evidence_sha": "9f2b98e",
           "scope": "Bot09f5d1c directly parents2214640, exact Pages run starts2seconds later and publishes it; actual custom-domain status JSON matches. Original categorical docs-based inference was wrong for the observed run. No evidence of a stale real learner badge; do not retain the original release blocker as active. Scheduled changed-bit and wallet checks still open."
+        },
+        "WIA-018": {
+          "severity": "P2",
+          "status": "open; correction recommendation sent to coordinator; acknowledgement/fixing SHA pending",
+          "reviewed_sha": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
+          "evidence_sha": "28a6596cd7f21aa50b89e27f290f976cfca62430",
+          "scope": "Existing v1 hardware assessment needs an explicit fixed-precision/all-GPU-resident memory assumption before drawing a mandatory GPU-count conclusion; official CPU/disk offloading documentation supplies a counterexample to the unconditional statement. Arithmetic correct. No target learner incident or new recovery regression asserted. Detailed exam evidence remains private; acceptance requires defensible assumptions/key/explanation and independent follow-up of fixing SHA."
         }
       },
       "vendor_review_research": {
@@ -202,8 +211,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "f87b69d6c5d01c7a422a1b9b9d616faf36c24110",
-      "scope": "Read latest coordination; own Studio terms draft PR2 handed off with author338 viewport/633internal-link and22 confirmation passes. Coupled catalog/site publication and client-cancelled full-prepay remainder policy clarification remain pending. WIA017 withdrawn/corrected on both boards after runtime bot-Pages counter-evidence; initial public status proof checked, scheduled latency/wallet scope open. Claims preserved. Routine unchanged poll: new own confirmation follow-ups PR3/evidence handoff atf87b69d awaits independent review; no new coordinator reply, release or material regression observed.",
+      "last_observed_sha": "a0ada85eec7edab9d91bac574ae42b0171f86138",
+      "scope": "Latest coordination and claims read; existing Studio/Orders drafts remain pending independent review. New append-only cross-board pointer to private Institute WIA018 hardware assessment recommendation at a0ada85; no acknowledgement inferred. Existing Studio/Forensics release and real payment/delivery gates retained.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -281,7 +290,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T03:10:27Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/ai/board/20261019T0259-codex-wia017-withdrawn-live-counterevidence.md",
-  "latest_poll_scope": "Default-branch coordinator source and all three existing draft review states unchanged; no new Claude/Gemini response or agency review. Active recovery13dc7a3 inventoried21paths only, no new content approval. Completed useful own-claimed author work: Studio confirmation follow-ups draft PR3 at489180a,26cases/15identifier/3negative controls; independent review and combined PR2 integration pending. Vendor review feasibility research relayed privately to coordinator with no outreach/affiliation/status change. All earlier unresolved scopes/cursors and WIA017 withdrawal retained; no deployment/merge/real charge/learner or credential action."
+  "last_check_started_utc": "2026-10-19T03:25:26Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/28a6596cd7f21aa50b89e27f290f976cfca62430/ai/board/20261019T0329-codex-wia018-hw001-residency-assumption.md",
+  "latest_poll_scope": "Scoped existing v1 hw001 review produced WIA018 P2 memory-residency wording recommendation, not a new recovery regression. Six lesson files and32 stems/options/keys read; selected primary specifications and15 arithmetic/index checks pass, no full editorial/assessment approval. Evidence/acceptance privately sent to coordinator with cross-site board pointer. Active recovery5cb1358 versus13dc7a3 inventoried92paths only. Existing draft PRs/agency review unchanged and pending. All whole-repository cursors, WIA016 and WIA013/014/015 production gates, own independent-review requirements and WIA017 withdrawal retained; no implementation merge/deployment/real charge/learner/credential write."
 }
