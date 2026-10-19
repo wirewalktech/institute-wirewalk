@@ -69,6 +69,11 @@
         },
         "current_cron": "4,14,24,34,44,54 * * * *",
         "current_scope": "One retained automatic run remains observed; offset schedule/site wording82718cd merged and exact Pages built11:22:33Z. Target monitor migration/deployment/alerts/response and repeated automatic/isolated changed-bit propagation remain unverified. New monitor follow-up WIA020/021 open; WIA017 stays withdrawn."
+      },
+      "seo_readiness": {
+        "site_sha": "6c6af2f2e4d6b5c005a5eb40ada3f730dc475f94",
+        "evidence_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
+        "scope": "Owner-requested read-only431-public-URL metadata check: all200/title/description/matching canonical; all431noindex, live robots disallows/, sitemap.xml404. Intentional pre-launch safeguards retained. WIA022P3:120 non-alias course pages share generic track descriptions; one course/track title collision. Not full editorial/keyword/link/browser/Rich Results/Core Web Vitals/Search Console or ranking approval."
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -155,7 +160,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "1c06c643181aae1c0450d79edd67c8c99302e5c6",
+      "last_observed_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -322,6 +327,12 @@
           "reviewed_sha": "d35a04aaa67607bafc6d116f2baafb4cb115a883",
           "evidence_sha": "f097df7f94ad749a3c653746878f0061a1d49222",
           "scope": "Direct/manual checks bypass scheduler exclusion: overlapping synthetic checks send two alerts per recipient and duplicate incident rows. Shared atomic alert reservation/exclusion across entry paths plus concurrency/retry regression required; no real duplicate mail asserted."
+        },
+        "WIA-022": {
+          "severity": "P3",
+          "status": "open improvement, coordinator acknowledgement pending",
+          "evidence_sha": "bf910270f02f923e8a01cd4111af75223d43e9eb",
+          "scope": "Generic repeated course/track metadata; public availability and course-specific truthful summaries require reviewed source correction. No observed ranking loss or indexing regression; noindex remains intentional."
         }
       },
       "vendor_review_research": {
@@ -432,6 +443,6 @@
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
   "last_check_started_utc": "2026-10-19T11:51:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/1c06c643181aae1c0450d79edd67c8c99302e5c6/ai/board/20261019T1201-codex-f02-review-revision-and-paired-gates.md",
-  "latest_poll_scope": "Authenticated monitored refs/canonical instructions/boards/claims/PR heads unchanged apart from own F02 accepted-review revision34c6c95 and handoff1c06c64. No new coordinator/Gemini response; WIA020/021 and independent Studio/standards/agency reviews remain open. Eleven Decimal arithmetic checks of stipulated F02 resource case, no hardware/runtime or independent approval. F01 Linux access/immutable route and F02 optional capture/version pin remain unvalidated; lessons held. Whole-review cursors and all older scopes preserved."
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/bf910270f02f923e8a01cd4111af75223d43e9eb/ai/board/20261019T1205-codex-seo-readiness-owner-status.md",
+  "latest_poll_scope": "Owner-requested SEO/status follow-up:431 actual-domain public URLs checked; WIA022 metadata improvement recorded privately. Intentional pre-launch noindex/robots retained; sitemap.xml404. No indexing/release change, ranking or whole-site/course approval. Existing review/release scopes and whole-review cursors retained."
 }
