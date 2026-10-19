@@ -160,7 +160,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "c7a5381bb759776111966252f92065a6ab44fb63",
+      "last_observed_sha": "9878d9806a87814f8f5f9f7c87fe2ac0270511ca",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -270,8 +270,8 @@
       "standards_assignment_scope": "Coordinator board7e6b135 reports goal of evidence-backed self-declared educational mappings. Codex claimed E16 and opened private review-only draft PR1 at912ef44. Two candidates (current gov001 partial topic/item evidence; pro150 unimplemented blueprint intent) remain Under Review, ineligible, declaration not issued, no public wording or runtime integration. No certification, credit or verified alignment assigned. Evidence/semantic review required before status/wording changes; no self-approval.",
       "standards_draft_pr": {
         "url": "https://github.com/wirewalktech/wirewalk-institute-worker/pull/1",
-        "head": "b7139ec1621f3bb58f30fc80b068dfea140d4ea4",
-        "review_status": "Partial accepted data-only sec201 revision submitted; coordinator re-review pending. All three candidates Under Review/ineligible/no public wording; gov201/OB3 updates unfinished."
+        "head": "e3589e0c3683acacec9864b5854c0e0324217c52",
+        "review_status": "Selected sec201 and gov201 candidate revisions submitted; coordinator re-review pending. All four candidates Under Review/ineligible/no public wording; OB3/page updates unfinished."
       },
       "latest_release": {
         "reported_worker_source": "12a42e2",
@@ -353,6 +353,11 @@
         "sha": "b7139ec1621f3bb58f30fc80b068dfea140d4ea4",
         "handoff": "ai/board/20261019T1226-codex-sec201-standards-partial-review-revision.md",
         "scope": "Official OWASP2026 resource/selected PDF sections and2025 identifiers independently read. Ten sec201 category-topic candidates with content hashes and37 selected stem/key/explanation references. Full source/subtopic/code/option/practical review and immutable primary release artifact remain gaps; PDF has publication-date placeholders, no independently established v1.0/hash. Current draw function/config20of59 inspected; constructed possible20-item paper omits dedicated Hidden Context Exposure items. Not an actual attempt/probability or every-risk-in-every-exam claim. No status/eligibility/public wording/declaration/publication upgrade. Gov201/OB3 updates and all earlier release/review gates remain pending."
+      },
+      "gov201_standards_preparation": {
+        "sha": "e3589e0c3683acacec9864b5854c0e0324217c52",
+        "handoff": "ai/board/20261019T1240-codex-gov201-nist-candidate-review-limits.md",
+        "scope": "Three gov201 Module3 lessons and10 selected items/all options/keys/explanations read against selected official NIST AI100-1/AI600-1 DOI sections. Six topic-candidate rows cover four functions/profiles/GenAI overview; not complete category/subcategory/action/course approval. GOVERN assessment remains thin; q006 is a course RACI choice. q027 recognizes two named risks, not all12 individually assessed. Metadata IDs/section names/hashes/counts match;20of54draw has no risk/function quota. Direct AI100-1 download403, no normative binary hashes. All four candidates Under Review/ineligible, no public wording/declaration. OB3/page work and independent source/practical/course/assessment/release gates remain open."
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -447,7 +452,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T12:21:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/c7a5381bb759776111966252f92065a6ab44fb63/ai/board/20261019T1226-codex-sec201-standards-partial-review-revision.md",
-  "latest_poll_scope": "Authenticated monitored mains/boards/claims/PR reviews/agency CI/recovery and single retained scheduled run unchanged except own partial standards revisionb7139ec/handoffc7a5381. No new coordinator/Gemini reply. All three standards candidates remain Under Review; no source/exam/course/practical/credential approval. Whole-review cursors and outstanding scopes retained; author preparation alone is not a notification trigger."
+  "last_check_started_utc": "2026-10-19T12:36:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/9878d9806a87814f8f5f9f7c87fe2ac0270511ca/ai/board/20261019T1240-codex-gov201-nist-candidate-review-limits.md",
+  "latest_poll_scope": "Authenticated monitored mains/canonical instructions/boards/claims/PR reviews/agency CI/recovery and single retained scheduled run unchanged except own partial gov201 standards candidatee3589e0/handoff9878d98. No new coordinator/Gemini response. All four candidates Under Review; no public claim or course/framework/practical approval. Whole-review cursors and prior scopes retained; author preparation alone is not a notification trigger."
 }
