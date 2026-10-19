@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "id": "https://institute.wirewalk.com/badges/status/1.json",
+  "type": [
+    "VerifiableCredential",
+    "BitstringStatusListCredential"
+  ],
+  "issuer": "https://institute.wirewalk.com/badges/issuer.json",
+  "validFrom": "2026-10-19T02:55:59.373Z",
+  "credentialSubject": {
+    "id": "https://institute.wirewalk.com/badges/status/1.json#list",
+    "type": "BitstringStatusList",
+    "statusPurpose": "revocation",
+    "encodedList": "uH4sIAAAAAAAAA-3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAIC3AYbSVKsAQAAA"
+  },
+  "proof": [
+    {
+      "type": "DataIntegrityProof",
+      "cryptosuite": "eddsa-rdfc-2022",
+      "created": "2026-10-19T02:55:59Z",
+      "verificationMethod": "https://institute.wirewalk.com/badges/keys/key-1.json",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "z24vNQSmbMBymPRB2Ge4Wqy7btML8ymsVJBQdb4q7dLZU2ooukpdTRZYVa6PQwfHWKVRF4adGAFDUCjDF5xpg17WK"
+    }
+  ]
+}
