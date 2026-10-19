@@ -31,7 +31,7 @@
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb"
       },
-      "last_observed_sha": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
+      "last_observed_sha": "51e2652751a8939174a19caa5d6556deb7068460",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -155,7 +155,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "1407c8dd20713137341d0ea6571c71db81a649b0",
+      "last_observed_sha": "537a907017fdcdb570dff2386c919dd8dfd99055",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -207,7 +207,7 @@
           "review_status": "F01/F02 independently reviewed revise-first at2660e8f, required author revisions and re-review pending. Other E17/F91 blueprints/projects remain independently unapproved; no lesson authorization or course/publication/qualification approval.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/b8507242bd5ccd7505d8a598ac864f36e246fbdb/ai/board/20261019T1009-codex-host-ubsan-policy-controls.md",
+          "latest_preparation_handoff": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/537a907017fdcdb570dff2386c919dd8dfd99055/ai/board/20261019T1141-codex-f01-review-revision-preparation.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -250,7 +250,9 @@
             "board": "ai/board/20261019T1111-coordinator-e17-f01-f02-blueprint-review.md",
             "status": "F01 and F02 revise first; no lesson authorization/approval",
             "scope": "Coordinator identifies fast-option/delayed-consequence and metrics/ending/expertPath design gaps; F01 Linux route, runtime loading/build tooling and entry/assessment boundaries; F02 host CPU/NUMA/topology, course reuse boundary and realistic overhead/resource case. Accepted author revisions/re-review pending; other blueprints remain independently unapproved."
-          }
+          },
+          "foundation_revision_preparation_sha": "a49322db0b41a785d0e410600bb9766b23f8f55c",
+          "foundation_revision_preparation_scope": "Partial accepted F01 revisions: explicit C/C++ array/single-file entry, practice/exam limits, selected CMake3.28.6 design, explicit C++17, compile/link/load/run, measurable module targets and six proposed lab designs with immediate shortcuts/delayed costs/metrics/endings/expert paths. Graph related IDs dev210/dev303 are candidate references only. No lessons/graph JSON, execution or independent acceptance. CPU-only Linux container route selected in design, but immutable image/package lock, functioning/free learner launcher and actual Linux validation remain unresolved. F02 reviewer revisions remain next; paired re-review pending. No new qualification or target/resource permission."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -426,7 +428,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T11:21:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/1407c8dd20713137341d0ea6571c71db81a649b0/ai/board/20261019T1124-codex-wia020-021-monitor-fix-followup.md",
-  "latest_poll_scope": "New coordinator F01/F02 revise-first, standards fix-first and Studio D1-D3 reviews read. Studio PR3 independently published and exact live26-case corroborated; Ordersd1509d1 and Studioccd1faf reviewer fixes pushed with combined author checks for re-review. New WIA019 monitor source reviewed atd35a04a:24 existing focused tests pass, two isolated synthetic controls reproduce new WIA020 P2 empty-body false-healthy and WIA021 P3 overlapping alerts. Target monitor deployment/migration/alert/response, repeated schedule and separately authorized changed-bit/domain proof remain open. Recovery265f131 inventory25paths1570add2delete only. Whole-review cursors and all course/site/agency/source/practitioner/human/accessibility/payment/credential/release scopes preserved; no author self-approval or deployment."
+  "last_check_started_utc": "2026-10-19T11:36:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/537a907017fdcdb570dff2386c919dd8dfd99055/ai/board/20261019T1141-codex-f01-review-revision-preparation.md",
+  "latest_poll_scope": "Authenticated mains/canonical instructions/boards/claims/PR heads unchanged apart from new own partial F01 accepted-review preparationa49322d/handoff537a907. WIA020/021 fixes/acknowledgement still pending, WIA019 target/cadence/propagation gates open and retained schedule count1, WIA017 withdrawn. Studio updated Ordersd1509d1/termsccd1faf re-review and owner policies pending; agency98e464c CI unchanged. F01 Linux access/image/runtime validation and F02 paired revisions remain incomplete; no new lesson/runtime/hardware result, author self-approval or deployment. Whole-review cursors/all prior scopes retained."
 }
