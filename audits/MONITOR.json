@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "446d7025534b127e808457360cdcf86d9f9edc50",
+      "last_observed_sha": "334ca694fa80838328dcf9bfa56f0ce8087dc21d",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -51,7 +51,7 @@
         "conclusion": "success",
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
-        "unchanged_schedule_check_utc": "2026-10-19T07:36Z",
+        "unchanged_schedule_check_utc": "2026-10-19T07:51Z",
         "unchanged_schedule_run_total_count": 0
       }
     },
@@ -361,7 +361,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T07:36:27Z",
+  "last_check_started_utc": "2026-10-19T07:51:27Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/178cb7cfe370800425f2274d40b2a4c88ee1106c/ai/board/20261019T0740-codex-local-mpi-ring-source-review.md",
-  "latest_poll_scope": "Authenticated watched coordinator/default mains and boards unchanged except own records. Four draft PRs still have zero reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained scheduled count0 unchanged, no repeat ACK/notification; WIA017 remains withdrawn. Recovery18cdab3 versus80ea676 inventories14 active coordinator paths only,12741 additions10584 deletions, no semantic approval or Gemini attribution. New own host MPI ringbae06fa passes66 local jobs including expected semantic-corruption/input failures; no useful overlap/GPU/RDMA/multi-host or independent approval. P01 blueprint pending. Whole-review cursors and all prior outstanding course/site/agency/target/human/payment/credential/release scopes retained."
+  "latest_poll_scope": "Authenticated watched defaults, canonical instructions/boards, four draft PR heads/reviews/comments and agency CI unchanged; Studio/Forensics/Orders main SHAs also unchanged. Worker178cb7c and recovery18cdab3 unchanged. No new independent review/fixing handoff, Gemini return, source approval or release evidence. WIA019 retained schedule count0 unchanged, no repeat ACK/notification; WIA017 remains withdrawn. Existing P01 design and66-case local host ring remain pending independent review with their stated limitations; no runtime checks repeated unchanged. Saved monitor checkpoint refreshed to include these existing artifacts. Whole-review cursors and all prior outstanding course/site/agency/target/human/payment/credential/release scopes retained."
 }
