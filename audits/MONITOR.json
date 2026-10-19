@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-10-18",
+  "review_date": "2026-10-19",
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
@@ -27,7 +27,7 @@
         "catalog_publication_metadata_and_exact_pages_sha": "234fba5",
         "industries_hub_coordinator_review_and_live_GET_only": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb"
       },
-      "last_observed_sha": "d95fd6ab23cdc5c37e69c48b64ec9748503b9a2d",
+      "last_observed_sha": "108aa07efafd6c0892ac5899bfd0d3e64d07f01c",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -101,11 +101,11 @@
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         },
         "wip/autosave": {
-          "sha": "9603c4f4226f085837fc778bfdb139eb86027cb9",
-          "scope": "Latest recovery delta read at file-inventory scope only: own new blueprint/coordination records; no hls155/hls255/src/tools/test change versus83d0645. WIA016 remains open; inherited v1 not Gemini v2. Actual new course content is not independently approved."
+          "sha": "8645b26189f8cec4bc075db536b66228e0047e6e",
+          "scope": "Recovery delta8645b26 versus9603c4f inspected at file-inventory, hls155 blueprint grounding/introduction and selected course.json metadata scope only: six new coordinator blueprint drafts and five course.json rewrites. Active unfinished work; full blueprint/source/exam/lab/factual review outstanding. Existing hls155 lesson unchanged, so WIA016 remains open. No Gemini authorship or v2 approval inferred."
         }
       },
-      "last_observed_sha": "c2f96e2b2430e48bf129d7ae36f99d643de301e2",
+      "last_observed_sha": "6ac3ca559abd3f6ba0d7297d0552f927b31a52f8",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -165,14 +165,32 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "14089e49cb51119b05b77fccde642809c9af91bb",
-      "scope": "Owner-requested latest-message check found missed Studio/Forensics handoff and reminder. Read protocol/property notes, claimed both site lanes in AGENTS.md and posted acknowledgement. No site implementation, payment lifecycle, mail delivery, Turnstile hostname or broad factual approval. Queue: pro130/pro150 revisions, gov001/cyb001, then sites. Shared services retain coordinator ownership.",
+      "last_observed_sha": "67e821f0c35a9556de9cc7eafaa7b30a507aa706",
+      "scope": "Read Active claims, protocol and recent board; own Studio/Forensics initial inventory and new WW008 P2 fixture finding posted at67e821f. Separate main-site session ownership preserved. Claims, payment and delivery readiness remain incomplete.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
+    },
+    "wirewalktech/studio-wirewalk": {
+      "last_observed_sha": "891dc42322d77b0f7c47b8156b209d3592e49a27",
+      "pages_build_sha": "891dc42322d77b0f7c47b8156b209d3592e49a27",
+      "pages_build_updated_at": "2026-09-17T17:26:55Z",
+      "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
+      "outstanding": [
+        "WW008 Studio confirmation practice guard open; isolated fixture only, not a live paid order or payment alteration."
+      ]
+    },
+    "wirewalktech/forensics-wirewalk": {
+      "last_observed_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
+      "pages_build_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
+      "pages_build_updated_at": "2026-10-17T20:10:13Z",
+      "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
+      "outstanding": [
+        "Real-browser Turnstile hostname behavior, actual operating capability/credentials/licensing/storage evidence and complete primary-source review remain unverified."
+      ]
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T01:24:26Z",
+  "last_check_started_utc": "2026-10-19T01:39:26Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Read updated coordinator self-declared-mapping direction7e6b135, acknowledged evidence/ownership/claim boundaries. Opened review-only private standards candidate PR1 at912ef44; two Under Review entries, no eligible/public claim or integration; no PR feedback yet. Submitted cyb001 blueprint/migration7838df8 for independent review with existing v1 source intact. All four own blueprints now await reviews; next site read-only preparation. Full repository audit cursors and outstanding WIA016/AEA001/agency review remain unchanged; no deployment, charge or data operation."
+  "latest_poll_scope": "No new independent reviews of four own course blueprints, standards draft PR1 or agency. PR comments/reviews empty; agency CI successful. Coordinator autosave8645b26 inventoried only with substantial review outstanding; WIA016 not closed. Completed initial own-claimed Studio/Forensics inventory, found WW008 P2 Studio unrelated/missing-service confirmation in isolated response fixtures, sent coordinator new append-only boards and ranked proposals. No site code/payment/delivery completion, no deployment/charge/data change. Whole reviewed cursors unchanged."
 }
