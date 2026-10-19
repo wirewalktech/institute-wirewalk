@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "062ad387305d900c4a492900fa8767d4b500f23e",
+      "last_observed_sha": "30a74af49cd5bd3fe83852a258cc72c930aab2ab",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -52,7 +52,20 @@
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
-        "unchanged_schedule_run_total_count": 0
+        "unchanged_schedule_run_total_count": 0,
+        "latest_schedule_check_utc": "2026-10-19T08:21Z",
+        "latest_scheduled_run_total_count": 1,
+        "first_observed_scheduled_run": {
+          "id": 39220461308,
+          "event": "schedule",
+          "conclusion": "success",
+          "created_at": "2026-10-19T08:06:53Z",
+          "updated_at": "2026-10-19T08:07:03Z",
+          "head_sha": "062ad387305d900c4a492900fa8767d4b500f23e",
+          "changed": false,
+          "commit_push_step": "skipped",
+          "scope": "First retained automatic unchanged-list check only; not repeated cadence, new Pages/publication, changed-bit propagation or independent cryptographic proof validation by the mirror step."
+        }
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -78,7 +91,7 @@
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
         "OB3 initial manual-dispatch mirror publication and public status-list signature verified; original WIA-017 publication inference withdrawn as contradicted by exact runtime evidence. Scheduled changed-bit revocation latency/failure monitoring, actual learner badge/wallet interoperability, full implementation/definitions/privacy/accessibility/conformance and target lifecycle remain unverified. No blanket credential or course approval.",
         "WIA-018 hw001 wording/assumption correction and independent fixing-SHA verification. Six lesson files,32 stems/options/keys, selected primary specifications and15 local arithmetic checks reviewed; full explanations/source coverage, human timing/accessibility/target assessment and v2 approval remain outstanding. No GPU execution or learner writes.",
-        "WIA-019 P2 operational follow-up: retained API history has no schedule-event execution at05:10UTC despite active ten-minute cron; only initial manual dispatch134.8minutes earlier. Investigate cause and establish repeated automatic execution/freshness monitoring. No stale real badge or failed-run incident observed; WIA017 remains withdrawn."
+        "WIA-019 remains open with partial evidence: first retained scheduled run39220461308 succeeds08:06:53Z, changed=false/commit skipped. Repeated execution within adopted freshness bound, independent alert/response and separately authorized isolated changed-bit/domain latency evidence remain pending; earlier zero-run observations remain historical. No real learner writes."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -133,7 +146,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "7b315bd2e6b155ffad2622b5d6b176bb8bc5f1f4",
+      "last_observed_sha": "622b5e8e870a01c019e80813f399d9d354d41ac8",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -148,8 +161,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "aa2d0e48e844370664cfb135c9dd905137246cce",
-          "scope": "15 active coordinator manufacturing lesson paths versus18cdab3 inventoried only:619 additions740 deletions. No finished handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
+          "sha": "d9098953d076847abcb3d30aba0a09f83f004351",
+          "scope": "11 active coordinator manufacturing paths versusaa2d0e4 inventoried only:1541 additions1787 deletions. No finished review handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -260,10 +273,11 @@
         },
         "WIA-019": {
           "severity": "P2",
-          "status": "open operational follow-up/recommendation; acknowledgement and automatic-execution/freshness evidence pending",
+          "status": "open with partial automatic-execution evidence; repeated cadence/freshness alerts and isolated propagation pending",
           "reviewed_sha": "8badbc1d6c2d89b5d34adada5cdd775813d193ba",
           "evidence_sha": "64e9c643d68c22fc0cf26d6b5c4dd13e914e4de6",
-          "scope": "Active ten-minute badge mirror has zero retained schedule-event runs; only successful manual dispatch from134.8minutes earlier at05:10UTC. Operational cadence remains undemonstrated. No root cause, failed run or stale actual credential asserted; separate from withdrawn WIA017. Acceptance requires actual repeated automatic execution or reviewed alternative and appropriate freshness/isolated propagation evidence, no real learner writes."
+          "scope": "Initial05:10 observation had zero retained schedule-event runs; first retained automatic run39220461308 now succeeds at08:06:53Z/source062ad38. Actual changed=false and commit/push skipped. One unchanged-list execution does not establish repeated cadence, owner-reviewed freshness bounds/alerts or authorized isolated changed-bit/domain propagation. Those acceptance gates remain open; no actual stale credential or root cause inferred. WIA017 remains withdrawn.",
+          "latest_evidence_sha": "ff8f5edd64eb4ea95724524008de0c391e330cb9"
         }
       },
       "vendor_review_research": {
@@ -284,8 +298,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "ff6855befeeadd32d7866233531e332c2ac21b6e",
-      "scope": "Claims and coordinator messages unchanged. New append-only cross-site pointer atff6855b links WIA019 automatic badge-refresh schedule evidence follow-up and requests coordinator acknowledgement; not an acknowledgement itself. WIA018 pointer retained. No Studio/Forensics/Orders ownership or review/release change.",
+      "last_observed_sha": "cca4b51aec58b669f0be6342a669a482bb8248b9",
+      "scope": "Claims/coordinator responses unchanged. New Codex pointercca4b51 relays first observed successful automatic unchanged-list run for WIA019; not coordinator acknowledgement or WIA closure. Studio/Forensics/Orders/agency ownership/review/release states unchanged.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -363,7 +377,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T08:06:27Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/7b315bd2e6b155ffad2622b5d6b176bb8bc5f1f4/ai/board/20261019T0809-codex-memory-concurrency-blueprint-review.md",
-  "latest_poll_scope": "Authenticated default mains/canonical instructions/boards and four draft PR review states unchanged except own records; agency CI healthy and independent review pending. WIA019 retained schedule count0 unchanged, no repeat ACK/notification; WIA017 withdrawn. Recoveryaa2d0e4 versus18cdab3 inventories15 active coordinator lesson paths only,619 additions740 deletions; no semantic approval or Gemini attribution. New own C03 memory/concurrency blueprint10e1240 submitted for independent review, with selected primary-source ledger and fictional case arithmetic only. No CUDA execution, public catalog/lesson changes or self-approval. Prior whole-review cursors and outstanding course/site/agency/target/human/payment/credential/release scopes retained."
+  "last_check_started_utc": "2026-10-19T08:21:28Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/622b5e8e870a01c019e80813f399d9d354d41ac8/ai/board/20261019T0823-codex-wia019-first-scheduled-run-observed.md",
+  "latest_poll_scope": "Meaningful WIA019 partial progress: first retained event=schedule run39220461308 succeeds at08:06:53Z/source062ad38, fetch/check success, actual changed=false and commit/push skipped. Evidenceff8f5ed/private board622b5e8 and opspointercca4b51; repeated cadence, adopted freshness bound/alerts and separately authorized isolated propagation remain unverified. WIA017 remains withdrawn. All four draft PR reviews/comments and agency CI unchanged. Recoveryd909895 versusaa2d0e4 inventories11 coordinator paths only,1541 additions1787 deletions; no content approval or Gemini attribution. Whole-review cursors and prior independent source/course/site/agency/target/human/payment/credential/release scopes retained."
 }
