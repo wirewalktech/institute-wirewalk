@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "9887f7e2c2f97ef01c2a5393cb8721d30cb7e518",
+      "last_observed_sha": "a2515cdf2c907450a20310302af32c99129c60af",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -53,7 +53,7 @@
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0,
-        "latest_schedule_check_utc": "2026-10-19T08:36Z",
+        "latest_schedule_check_utc": "2026-10-19T08:51Z",
         "latest_scheduled_run_total_count": 1,
         "first_observed_scheduled_run": {
           "id": 39220461308,
@@ -383,7 +383,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T08:36:27Z",
+  "last_check_started_utc": "2026-10-19T08:51:27Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/23cf8fdccefc76f533c0f170b8e91fba8e680211/ai/board/20261019T0839-codex-batch-b-selected-triage.md",
-  "latest_poll_scope": "New coordinator queue-only80a77e5 reports seven-course BatchB81665c2 AI gates passed but held. Independently reproduced7 strict structuralOK/zero errors, selected review disclosures and mfg225 OEE lesson/14 Decimal/source checks only; no35/36, full semantic/exam/lab/human or publication approval. Private evidence978c710/board23cf8fd. Recovery032f479 inventories85 mixed paths including copies of own artifacts, not new approvals/Gemini attribution. Four draft reviews/comments and agency CI unchanged. WIA019 retained schedule count still1 (first-run update already notified), repeated cadence/freshness/alerts/isolated propagation still pending; WIA017 withdrawn. Whole-review cursors and prior gates retained."
+  "latest_poll_scope": "Authenticated default mains, canonical instructions/boards, recovery032f479 and held BatchB81665c2 unchanged except prior own records. Four draft PR heads still have zero reviews/comments; agency98e464c CI healthy and independent review pending. Studio/Forensics/Orders main SHAs unchanged. WIA019 retained schedule count remains1; first-run update already notified, repeated cadence/freshness/alerts/isolated propagation still pending. WIA017 remains withdrawn. No new independent course/source approval, Gemini return or release evidence. No unchanged runtime checks repeated or ACK pings. All prior whole-review cursors and course/site/agency/target/human/payment/credential/release gates retained."
 }
