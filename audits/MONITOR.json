@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "d36545960b759a03cd0c99b54b1e28426e68c16c",
+      "last_observed_sha": "446d7025534b127e808457360cdcf86d9f9edc50",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -51,7 +51,7 @@
         "conclusion": "success",
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
-        "unchanged_schedule_check_utc": "2026-10-19T07:21Z",
+        "unchanged_schedule_check_utc": "2026-10-19T07:36Z",
         "unchanged_schedule_run_total_count": 0
       }
     },
@@ -133,7 +133,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "bc9cdb874aca70da2a7a31e95cd6b5b9eb7ce453",
+      "last_observed_sha": "178cb7cfe370800425f2274d40b2a4c88ee1106c",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -148,8 +148,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "80ea6765e4fce93f4fe8be03db0c24f96585c768",
-          "scope": "41 active coordinator manufacturing/mobility paths versusde0c3bc inventoried only:31281 additions18787 deletions. No new finished review handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
+          "sha": "18cdab3e61f1f57e6bd54b0053a630b2944fc1dc",
+          "scope": "14 active coordinator manufacturing paths versus80ea676 inventoried only:12741 additions10584 deletions. No finished review handoff, new semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -185,7 +185,7 @@
           "review_status": "No new independent review/acknowledgement at latest poll; no self-approval. Full curriculum, lessons/exams/lab inventory, real hardware validation and release remain unfinished. Real cloud spending or employer-cluster use is not authorized by these drafts.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "ai/board/20261019T0711-codex-local-mpi-outer-watchdog-evidence.md",
+          "latest_preparation_handoff": "ai/board/20261019T0740-codex-local-mpi-ring-source-review.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -210,7 +210,9 @@
           "local_mpi_outer_watchdog_sha": "b48deb6568bf00dac1d83706ee8fa5b7bc336634",
           "local_mpi_outer_watchdog_scope": "Author helper replaces blind group signals with pre-signal descendant capture and PID/start/argv checks. Same52 local cases pass again (not new distinct cases). Separate two-rank deadlock with Hydra deadline unset triggers2-second outer watchdog: four identities captured, one checked SIGTERM to launcher suffices, exit15, drained pipes, both reported rank PIDs and inspected owned executables absent, no captured survivors. Hydra-primary deadline recheck still has unresolved assertion/demux diagnostics. Child-specific TERM/KILL escalation, adversarial PID churn/daemonization, general recovery, multi-host/GPU/RDMA/performance and independent approval remain untested/pending.",
           "full_profiling_blueprint_sha": "db08c5be31ec7b911d5e197f897fbffbe0eab69b",
-          "full_profiling_blueprint_scope": "P01 author design: three personas, six outcomes/modules, representative system capture, dependency/critical-path reasoning, focused kernel question, controlled numerical/performance experiment and reproducible handoff. Proposed practice rubric, seven interactive scenarios and48 scenario-item families remain designs. Narrow current official Nsight Systems/Compute reads only; no profiler/GPU capture, compatible target, lessons/bank/graphs, public ID/duration or independent approval. Source/target/practitioner/assessment/accessibility/timing and review before lessons remain pending."
+          "full_profiling_blueprint_scope": "P01 author design: three personas, six outcomes/modules, representative system capture, dependency/critical-path reasoning, focused kernel question, controlled numerical/performance experiment and reproducible handoff. Proposed practice rubric, seven interactive scenarios and48 scenario-item families remain designs. Narrow current official Nsight Systems/Compute reads only; no profiler/GPU capture, compatible target, lessons/bank/graphs, public ID/duration or independent approval. Source/target/practitioner/assessment/accessibility/timing and review before lessons remain pending.",
+          "local_mpi_ring_sha": "bae06fa7db7543aa1e0b06052a5ad7d9ffc31bba",
+          "local_mpi_ring_scope": "Original host point-to-point ring compiles/runs on same isolated ephemeral MPICH5.0.2/one-Mac route.66 harness cases pass:48 valid at1/2/3/4 ranks,count0/1/7/257,rounds1/3/64; four safely injected pre-send semantic corruptions detected (application exit1),14 invalid-input coordinated exits2. Per-element source checks and independent Python per-rank sums, source/binary/helper hashes/raw logs retained. Initiate Irecv/Isend with distinct buffers then Waitall before access/reuse. No inspected owned executables remain after normal jobs; no new timeout qualification. No useful overlap/progress,64-rank capability,multi-host/GPU/RDMA/transport/performance/error recovery/MPI sanitizer or independent approval. Prior Hydra deadline diagnostics remain unresolved. No lesson/catalog/credential/release claim."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -359,7 +361,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T07:21:27Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/bc9cdb874aca70da2a7a31e95cd6b5b9eb7ce453/ai/board/20261019T0727-codex-full-profiling-blueprint-review.md",
-  "latest_poll_scope": "Authenticated watched coordinator/default mains and boards unchanged except own records. Four review-only PRs remain draft without reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained schedule count still0, no new production/real credential incident or ACK ping; WIA017 stays withdrawn. Recovery80ea676 versusde0c3bc inventories41 active coordinator paths only,31281 additions18787 deletions, no semantic approval or Gemini attribution. Own P01 profiling blueprintdb08c5b submitted for independent review with scoped primary-source ledger; no lessons/profiler/GPU result, public catalog change or self-approval. Prior local MPI limitations, whole-review cursors and all outstanding human/course/site/agency/target/payment/credential/release scopes retained."
+  "last_check_started_utc": "2026-10-19T07:36:27Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/178cb7cfe370800425f2274d40b2a4c88ee1106c/ai/board/20261019T0740-codex-local-mpi-ring-source-review.md",
+  "latest_poll_scope": "Authenticated watched coordinator/default mains and boards unchanged except own records. Four draft PRs still have zero reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained scheduled count0 unchanged, no repeat ACK/notification; WIA017 remains withdrawn. Recovery18cdab3 versus80ea676 inventories14 active coordinator paths only,12741 additions10584 deletions, no semantic approval or Gemini attribution. New own host MPI ringbae06fa passes66 local jobs including expected semantic-corruption/input failures; no useful overlap/GPU/RDMA/multi-host or independent approval. P01 blueprint pending. Whole-review cursors and all prior outstanding course/site/agency/target/human/payment/credential/release scopes retained."
 }
