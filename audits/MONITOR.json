@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "18872fc8cd9fd29dd9060de020eee581032162ff",
+      "last_observed_sha": "9d94cb2a5fff7592c9683678eb5ad8a854ba86ff",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -51,7 +51,7 @@
         "conclusion": "success",
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
-        "unchanged_schedule_check_utc": "2026-10-19T06:51Z",
+        "unchanged_schedule_check_utc": "2026-10-19T07:06Z",
         "unchanged_schedule_run_total_count": 0
       }
     },
@@ -133,7 +133,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "8590454fdcdd641c3f19d87f70c8fa254c93c450",
+      "last_observed_sha": "50e63476e21b39784c09a33dc6a475c8dfdfe212",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -148,8 +148,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "293b6e19a78083eb7eb39238566e3cebf1ea0317",
-          "scope": "73 active coordinator manufacturing/mobility paths versus866e836 inventoried only:11253 additions11396 deletions. No new finished handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
+          "sha": "de0c3bc95f9cb97d2bc581d1bf877c85fe7193c6",
+          "scope": "50 active coordinator manufacturing/mobility paths versus293b6e1 inventoried only:8040 additions4760 deletions. No new finished handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -185,7 +185,7 @@
           "review_status": "No new independent review/acknowledgement at latest poll; no self-approval. Full curriculum, lessons/exams/lab inventory, real hardware validation and release remain unfinished. Real cloud spending or employer-cluster use is not authorized by these drafts.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "ai/board/20261019T0657-codex-local-mpi-deadline-evidence-and-diagnostics.md",
+          "latest_preparation_handoff": "ai/board/20261019T0711-codex-local-mpi-outer-watchdog-evidence.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -206,7 +206,9 @@
           "local_mpi_execution_sha": "fa2b586308bb2d829e20581124e4311bd1c96b8e",
           "local_mpi_execution_scope": "First actual MPI compilation and52 local-process jobs on one Mac using isolated ephemeral MPICH5.0.2 ch3:sock prefix:31 positive cases (irregular/empty/cap and1/2/3/4/8 ranks) match independent Python direct sums;21 invalid-input jobs return2 with usage. All52 finish within20-second deadlines with normal process groups gone. Exact raw jobs, source/binary hashes, compiler/linkage/download/build flags/warnings retained privately. No shared Homebrew/profile changes, GPU/RDMA/NCCL/multi-host/cloud/performance/all-feature MPI5 or independent approval. Initial52-job checkpoint did not exercise deliberate-hang/deadline behavior; later narrow Hydra-deadline evidence is recorded separately below. Lessons, remaining projects, independent blueprint/source/practitioner and release gates remain pending.",
           "local_mpi_deadline_sha": "c47f1569ed4b097a5763261fbc2f50b0a0c75274",
-          "local_mpi_deadline_scope": "Same52 local jobs pass again after adding Hydra15-second deadline before outer20-second watchdog, not104 distinct cases. Separate two-rank deliberate receive deadlock reaches Hydra2-second timeout, returns255, both reported rank PIDs and exact inspected owned probe/proxy executables absent; no defensive cleanup needed. Raw proxy assertion/demux diagnostics retained and unresolved: narrow abnormal-termination/no-residual criterion only, not graceful/error-free shutdown or recovery. Hydra can create child sessions; launcher-group disappearance alone does not prove descendant cleanup. Outer Python watchdog/killpg escalation remains unvalidated. Independent source/practitioner and learner-facing fault-exercise review pending; no GPU/RDMA/multi-host/performance or release approval."
+          "local_mpi_deadline_scope": "Same52 local jobs pass again after adding Hydra15-second deadline before outer20-second watchdog, not104 distinct cases. Separate two-rank deliberate receive deadlock reaches Hydra2-second timeout, returns255, both reported rank PIDs and exact inspected owned probe/proxy executables absent; no defensive cleanup needed. Raw proxy assertion/demux diagnostics retained and unresolved: narrow abnormal-termination/no-residual criterion only, not graceful/error-free shutdown or recovery. Hydra can create child sessions; launcher-group disappearance alone does not prove descendant cleanup. At this checkpoint the outer watchdog was untested; newer b48deb6 separately exercises its captured-identity/root-TERM route, while child/KILL escalation remains untested. Independent source/practitioner and learner-facing fault-exercise review pending; no GPU/RDMA/multi-host/performance or release approval.",
+          "local_mpi_outer_watchdog_sha": "b48deb6568bf00dac1d83706ee8fa5b7bc336634",
+          "local_mpi_outer_watchdog_scope": "Author helper replaces blind group signals with pre-signal descendant capture and PID/start/argv checks. Same52 local cases pass again (not new distinct cases). Separate two-rank deadlock with Hydra deadline unset triggers2-second outer watchdog: four identities captured, one checked SIGTERM to launcher suffices, exit15, drained pipes, both reported rank PIDs and inspected owned executables absent, no captured survivors. Hydra-primary deadline recheck still has unresolved assertion/demux diagnostics. Child-specific TERM/KILL escalation, adversarial PID churn/daemonization, general recovery, multi-host/GPU/RDMA/performance and independent approval remain untested/pending."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -355,7 +357,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T06:51:27Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/8590454fdcdd641c3f19d87f70c8fa254c93c450/ai/board/20261019T0657-codex-local-mpi-deadline-evidence-and-diagnostics.md",
-  "latest_poll_scope": "Coordinator/default mains/boards unchanged except own records. Four review-only PRs still draft with no reviews/comments; agency98e464c CI healthy, independent review pending. WIA019 retained schedule-event count0 unchanged, no new production/real credential incident/ACK ping; WIA017 stays withdrawn. Recovery293b6e1 versus866e836 inventories73 active coordinator paths only, no semantic approval/Gemini attribution. Own c47f156 adds local MPI primary-deadline/fault preparation; same52 jobs pass and one deliberate deadlock terminates with observed no residuals, but proxy diagnostics and outer watchdog remain unresolved. No broader recovery/hardware/course approval. All whole-review cursors and prior outstanding target/human/course/site/payment/credential/release gates retained."
+  "last_check_started_utc": "2026-10-19T07:06:27Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/50e63476e21b39784c09a33dc6a475c8dfdfe212/ai/board/20261019T0711-codex-local-mpi-outer-watchdog-evidence.md",
+  "latest_poll_scope": "Authenticated defaults all main; coordinator/default mains and boards unchanged except own records. Four review-only PRs remain draft without reviews/comments; agency98e464c CI healthy and independent review pending. WIA019 retained schedule count still0, no new production/real credential incident/ACK ping; WIA017 stays withdrawn. Recoveryde0c3bc versus293b6e1 inventories50 active coordinator paths only, no semantic approval or Gemini attribution. Own b48deb6 narrows outer-watchdog cleanup to an exercised captured-identity/root-TERM route; same52 regressions pass, no observed probe leftovers, but primary Hydra diagnostics and child/KILL/general recovery remain open. No broader course/hardware approval or prior-gate closure; whole-review cursors and outstanding target/human/course/site/payment/credential/release scopes retained."
 }
