@@ -9,7 +9,7 @@
   ],
   "achievementType": "CertificateOfCompletion",
   "name": "AI for Leaders: The One-Hour Briefing",
-  "description": "A plain-English hour on what AI is, where it helps and where it fails, the risks leaders actually own, and what to do in your first 90 days. Free, practical, and short enough for one sitting.",
+  "description": "Follow one company's AI decisions through a winter: three vendor pitches, a test on its own calls, a first pilot that worked, a chatbot that made promises nobody approved, and the plan it took to the board. Free, practical, and built around decisions you make yourself.",
   "humanCode": "EXE-001",
   "fieldOfStudy": "Executive Leadership",
   "inLanguage": "en-US",
@@ -19,7 +19,9 @@
     "executive",
     "ai strategy",
     "generative ai",
+    "agentic ai",
     "ai risk",
+    "decision labs",
     "introduction"
   ],
   "image": {
@@ -37,14 +39,14 @@
   },
   "criteria": {
     "id": "https://institute.wirewalk.com/courses/exe-001/",
-    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules, play the course's Decision Lab to an ending (the lab score does not count); and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
   },
   "alignment": [
     {
       "type": [
         "Alignment"
       ],
-      "targetName": "Explain the difference between predictive and generative AI using an example from your own organization",
+      "targetName": "Classify an AI proposal as predictive, generative or agentic and name the questions that kind of system raises before it is funded",
       "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-1",
       "targetCode": "exe-001.O1",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -53,7 +55,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Recognize tasks where today's AI tools are reliable and tasks where their output needs checking or should not be used",
+      "targetName": "Decide whether AI output for a task should be trusted, checked or avoided, and specify a small test on your organization's own material that would show which",
       "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-2",
       "targetCode": "exe-001.O2",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -62,7 +64,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Select a sensible first AI use case using value, data, error-cost and ownership criteria",
+      "targetName": "Select a first AI use case using value, data, cost of error and ownership, and set baseline measures that count the time spent checking AI output",
       "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-3",
       "targetCode": "exe-001.O3",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -71,7 +73,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Name the main risks leaders retain when using AI, including accuracy, data leakage, prompt injection and regulatory exposure",
+      "targetName": "Identify the accuracy, data, security and legal risks a leader keeps in a described AI use and select proportionate controls",
       "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-4",
       "targetCode": "exe-001.O4",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -80,9 +82,18 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Apply six screening questions to an AI funding proposal and draft a 90-day starting plan",
+      "targetName": "Screen an AI funding proposal or vendor contract with six questions and reach a conditional verdict with specific, checkable conditions",
       "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-5",
       "targetCode": "exe-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Complete and correct a 90-day starting plan and one-page board summary covering policy, an approved tool, a register of uses, people and one measured pilot with stop criteria",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-6",
+      "targetCode": "exe-001.O6",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
     }
   ],

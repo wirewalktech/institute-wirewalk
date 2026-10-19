@@ -9,7 +9,7 @@
   ],
   "achievementType": "CertificateOfCompletion",
   "name": "Your First AI API Call: A One-Hour Hands-On Start",
-  "description": "A free, one-hour, hands-on start: what an AI API call actually is, how to get and protect an API key, how to make the same request with curl and with an official Python SDK, and how to read the reply, the token usage and the errors you will meet first. The exercises run on your own provider account, which bills them at well under a dollar in total.",
+  "description": "A free, one-hour, hands-on start built on one realistic job: sorting a property manager's 1,150 monthly maintenance requests. You get an API key the safe way, make real calls with curl and an official Python SDK, run them over forty work orders, read stop reasons, usage and errors, estimate the monthly cost, and decide whether the script is ready. Exercises run on your own provider account for well under a dollar.",
   "humanCode": "DEV-001",
   "fieldOfStudy": "AI in Software Development",
   "inLanguage": "en-US",
@@ -24,7 +24,9 @@
     "anthropic",
     "openai",
     "api keys",
-    "tokens"
+    "tokens",
+    "cost estimate",
+    "classification"
   ],
   "image": {
     "id": "https://institute.wirewalk.com/badges/img/dev-001.svg",
@@ -41,14 +43,14 @@
   },
   "criteria": {
     "id": "https://institute.wirewalk.com/courses/dev-001/",
-    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules, play each of the course's 3 Decision Labs to an ending (the lab score does not count); and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
   },
   "alignment": [
     {
       "type": [
         "Alignment"
       ],
-      "targetName": "Explain what happens in an AI API call: the endpoint, the authentication header, the JSON request body and the JSON response",
+      "targetName": "Set up an API key for work that is company-owned, issued to one person, capped by a spend limit and kept in an environment variable, and respond to a leaked key in the right order",
       "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-1",
       "targetCode": "dev-001.O1",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -57,7 +59,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Create an API key, store it in an environment variable, and apply the basic rules that keep it out of code, chats and repositories",
+      "targetName": "Make and read a working request to Anthropic's Messages API or OpenAI's Responses API with curl and an official Python SDK, adapted to a business task with a standing instruction and a fixed output format",
       "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-2",
       "targetCode": "dev-001.O2",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -66,7 +68,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Make a working text-generation request to a hosted model with curl and with an official Python SDK",
+      "targetName": "Check every response before using it and diagnose common errors (bad request, authentication, not found, rate limit versus spend cap or quota, server overload), deciding whether to fix, wait or retry",
       "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-3",
       "targetCode": "dev-001.O3",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -75,7 +77,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Read a response's text, stop reason, token usage and request id, and diagnose the common first errors (401, 400, 429)",
+      "targetName": "Estimate the monthly cost of a workload from measured token usage and published prices on two model tiers, and explain why a conversation's cost grows with every turn",
       "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-4",
       "targetCode": "dev-001.O4",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -84,7 +86,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Hold a multi-turn conversation by resending history, and estimate the cost of a call from its token usage and the published price",
+      "targetName": "Judge whether a first AI script is ready for work by measuring it against human-labeled examples that include the rare, costly cases, sending only the data the task needs, and keeping a human decision and a safety rule where an error can hurt someone",
       "targetUrl": "https://institute.wirewalk.com/courses/dev-001/#outcome-5",
       "targetCode": "dev-001.O5",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
