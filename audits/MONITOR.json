@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "55af208162216b2c2890ae36a818e5a356b64f38",
+      "last_observed_sha": "34f47c559910942e1b699496866d282a42d5e4de",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -169,7 +169,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "66e63d6a223e27777f3fd916ccfe88126964c546",
+      "last_observed_sha": "136f3308b622523885309f39944987429a69e803",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -302,9 +302,15 @@
           "current_f02_m2_authoring": {
             "source_sha": "8ad9f8d9a31eb62e77ee0e7806e1076a764a2cfc",
             "handoff": "ai/board/20261019T1412-codex-f02-live-storage-episode-review.md",
-            "status": "First M2 lesson and synthetic packet/checks; independent source/instructional/practitioner review pending",
+            "status": "First M2 lesson plus private synthetic Decision Lab prototype; independent source/instructional/practitioner module review pending",
             "scope": "1784 raw words with scaled application-only boundary, required larger capacity transfer, changed workspace, visible zero-headroom warning, competing bounded alternatives and separate host subtotal. Selected primary units/memory-field sections retrieved with receipts. Synthetic byte/contract checks include six invalid packet rejections and two wrong-claim distinctions; no actual allocator/lifetime schedule/device query, hardware, course or module approval.",
-            "remaining": "Further M2 practice/lab, later modules/integration/exam/catalog; manual accessibility/timing and independent review/release. F01 owner access still unanswered; no install/dispatch/cloud spend/target or credential write."
+            "remaining": "Independent M1/M2 module review, later modules/integration/exam/catalog and manual accessibility/timing/release. F01 owner access remains unanswered; no install/dispatch/cloud spend/target/credential write.",
+            "lab_prototype": {
+              "source_sha": "57dfd463f84b0939aecd257d1f8e519edb0f410c",
+              "handoff": "ai/board/20261019T1428-codex-f02-m2-capacity-lab-review.md",
+              "scope": "Original three-decision supplied-budget scenario, one workspace reveal and three endings. Conditional GiB headroom and explicit incomplete/zero/negative budget boundaries, recovery/hold routes; shared engine read-only. Author exhaustive 27 paths (9 per ending), 12 grouped browser checks, 26 initial viewport/theme cases plus one narrow ending case; observed main-page errors/externals zero, two screenshots inspected. This scenario evidence is not additional unique platform/hardware tests or independent teaching/source/practitioner approval.",
+              "remaining": "Independent module/source/practitioner/manual accessibility/timing review and catalog/required-lab completion integration remain absent. No real allocator, lifetime schedule, capacity, throughput or release result."
+            }
           }
         }
       },
@@ -515,7 +521,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T14:07:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/66e63d6a223e27777f3fd916ccfe88126964c546/ai/board/20261019T1412-codex-f02-live-storage-episode-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/review heads/comments/reviews, agency CI and retained status schedule remain unchanged except own private F02 author records. One retained scheduled run; no coordinator/Gemini reply, fixing SHA or owner Linux answer. Substantive M2 author evidence recorded without moving whole-review cursors, closing findings or self-approving course/source/practical/release scope. Draft progress alone remains quiet."
+  "last_check_started_utc": "2026-10-19T14:22:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/136f3308b622523885309f39944987429a69e803/ai/board/20261019T1428-codex-f02-m2-capacity-lab-review.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI, status schedule and both distinct recovery refs remain unchanged except own private F02 M2 lab source/handoff. One retained status schedule run; no coordinator/Gemini review, fixing SHA or owner access answer. Substantive author evidence recorded only; no whole-review cursor advancement, finding closure, completed-module/source/hardware/release approval. Draft progress remains quiet."
 }
