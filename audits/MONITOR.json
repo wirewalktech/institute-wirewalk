@@ -145,7 +145,8 @@
         "hw001_six_lessons_32_stems_options_keys_selected_sources_15_arithmetic_only": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
         "batch_A_queue_update_only": "12d98ab2a37f5907fd37409d664de19282ca8c24",
         "batch_B_queue_update_only": "80a77e52c6c1b03713ca480c65bafee68882a7ea",
-        "independent_foundation_standards_review_and_WIA022_acknowledgement_only": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478"
+        "independent_foundation_standards_review_and_WIA022_acknowledgement_only": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478",
+        "coordinator_standards_final_review_merge_and_F02_revise_requests_only": "69f1b2e/40c1ebf"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -169,7 +170,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "d3fd8568783fd3223bb8babe2341fb8f9c6a14e7",
+      "last_observed_sha": "826320a",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -313,24 +314,36 @@
             }
           },
           "current_f02_m3_authoring": {
-            "source_sha": "19dcf2ef152153d3ff8f9a47b668febe7d149aba",
-            "handoff": "ai/board/20261019T1442-codex-f02-device-identity-episode-review.md",
-            "status": "First M3 private lesson plus synthetic ordinal/context lab; independent source/instructional/practitioner module review pending",
-            "scope": "1731 raw words, reversed full-device identity sequence and scoped ordinal/UUID/PCI joins, missing-update hold, faded single-device and changed-order transfer, four retrieval answers. Author data checks reject seven inconsistent identity/context cases and accept the minimum requested mapping. Selected official enumeration/identifier sections retrieved with receipts; no actual driver/device/environment/process query, general vendor parser, MIG/prefix contract, installed runtime or hardware/teaching approval.",
-            "remaining": "M1\u2013M3 drafts/labs unsigned; M4/integration/exam/catalog, independent practitioner/manual accessibility/timing/release. F01 owner access remains unanswered; no target/platform/payment/credential write.",
+            "source_sha": "3fd9904",
+            "handoff": "ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+            "status": "Coordinator 69f1b2e requested revision; author response pending independent re-review",
+            "scope": "1819 raw-word private lesson now shows explicit synthetic CUDA visibility/order configuration, inventory query schema, raw/normalized PCI component comparison and one limits box; authoring status removed from learner closing. Same seven invalid-packet controls and minimum mapping checks; no actual device/runtime operation.",
+            "remaining": "Independent re-review/source/instructional/practitioner/manual accessibility/timing and course/catalog/required-lab integration pending. M1\u2013M4 unsigned; integration dossier/exam unfinished. F01 owner Linux answer pending; no inferred approval.",
             "lab_prototype": {
-              "source_sha": "787ea8d2b978b154897baaee75ab00d5dde6d90b",
-              "handoff": "ai/board/20261019T1458-codex-f02-m3-ordinal-lab-review.md",
-              "scope": "Original three-decision/two-reveal identity/context scenario; 27 enumerated paths, nine per ending. Current missing mapping remains unresolved at every ending/export; wrong accepted identity conflicts are distinguished from unavailable data. Author 12 grouped browser checks, 26 initial viewport/theme cases plus one narrow ending case pass, observed main-page errors/externals zero, screenshots inspected. Shared engine read-only; no new unique platform/hardware test, actual query/operation, independent source/teaching/accessibility or release approval.",
-              "remaining": "Independent module/source/practitioner/manual accessibility/timing review and catalog/required-lab completion integration absent. M4, integration dossier/exam and actual practical route remain unfinished."
+              "source_sha": "3fd9904",
+              "handoff": "ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+              "scope": "Version 2 neutral d2, tempting ordinal-keyed row patch with conditional P2 rework, synthetic manifest materials, distinct section/outcome rationales and recovery-aware ratings. 27 paths: best 2 / mixed 16 / poor 9; expert 19 forecast hours / 84 confidence; accepted-shortcut recovery mixed 33 / 62. Same scoped 12 grouped browser / 26 initial viewport-theme plus one ending case pass, errors/externals zero; P2 unknown retained. Author evidence only, no new unique-platform tests or independent approval.",
+              "remaining": "Independent re-review/source/instructional/practitioner/manual accessibility/timing and course/catalog/required-lab integration pending. M1\u2013M4 unsigned; integration dossier/exam unfinished. F01 owner Linux answer pending; no inferred approval."
             }
           },
           "current_f02_m4_authoring": {
-            "source_sha": "7c869a5d03066211c9e9c34049a4ca6f4830c875",
-            "handoff": "ai/board/20261019T1513-codex-f02-topology-evidence-episode-review.md",
-            "status": "First M4 private topology-evidence episode and synthetic packet; independent source/instructional/practitioner review pending",
-            "scope": "1814 raw words with exact selected-view topology legend, matched identity/context/current-max provenance, unknown locality and a bounded hypothesis register; faded unknown-phase and identity-conflict transfer. Author packet checks include active/faded/idle/equal-state distinctions and six inconsistent identity/numeric/legend rejections. Selected official topology/link and PCI field sections independently retrieved/read with receipts; no actual topology/bridge tree, exporter, path, bandwidth, tool/sysfs query or teaching/hardware approval.",
-            "remaining": "M4 practice/lab, integration dossier/exam/catalog and independent module/source/practitioner/manual accessibility/timing/release. Earlier drafts/labs unsigned; F01 owner access unanswered."
+            "source_sha": "3fd9904",
+            "handoff": "ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+            "status": "Coordinator 69f1b2e requested revision; revised lesson/packet and new private lab pending independent review",
+            "scope": "2260 raw-word lesson: PIX-connected NIC reports node 3; separate SYS-connected NIC carries unknown numeric locality. Synthetic matrix/exact legend, back-at-desk observation request, generation/width distinction and primary-derived 31.5/3.9 decimal GB/s encoding-adjusted ceilings; not measured bandwidth. Same six invalid packet controls, active/faded/idle/equal-state and ceiling arithmetic only. Physical plausibility/practitioner calibration needs independent re-review.",
+            "remaining": "Independent re-review/source/instructional/practitioner/manual accessibility/timing and course/catalog/required-lab integration pending. M1\u2013M4 unsigned; integration dossier/exam unfinished. F01 owner Linux answer pending; no inferred approval.",
+            "lab_prototype": {
+              "source_sha": "3fd9904",
+              "handoff": "ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+              "scope": "Private three-decision/two-reveal causal-evidence prototype; T2 phase/separate NIC numeric locality/application observations remain unknown at every ending/export. 27 paths: best 2 / mixed 16 / poor 9; expert 21 forecast hours / 81 confidence, recovery mixed 35 / 57. Same scoped 12 grouped browser / 26 initial viewport-theme plus one ending case pass; errors/externals zero, screenshots inspected. Final reports supersede initial local prototype runs, not new unique suites. Shared engine read-only; previews stopped. No hardware/teaching/accessibility/release approval.",
+              "remaining": "Independent re-review/source/instructional/practitioner/manual accessibility/timing and course/catalog/required-lab integration pending. M1\u2013M4 unsigned; integration dossier/exam unfinished. F01 owner Linux answer pending; no inferred approval."
+            }
+          },
+          "latest_review_followup": {
+            "review_sha": "69f1b2ed7e686441106328a005768c7465efb47d",
+            "fix_source_sha": "3fd9904",
+            "handoff": "ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+            "status": "Author response only, no self-approval. Five private lessons total 9459 raw words and four prototypes do not establish hours, module/course readiness or competence."
           }
         }
       },
@@ -342,7 +355,8 @@
       "standards_draft_pr": {
         "url": "https://github.com/wirewalktech/wirewalk-institute-worker/pull/1",
         "head": "7fb4fad5f93dc1f9941a7520d04a9ff389b8a6c5",
-        "review_status": "Accepted mechanical fixes returned for coordinator final check/merge. sec-201/gov-201 Curriculum Mapped/eligible records independent 9ef3f2a decision, with exact narrow wording/gaps; gov-001/pro-150 ineligible. Public claims disabled/declarations unissued; separate page/release pending."
+        "review_status": "Coordinator independently rechecked and merged PR #1. Authenticated state and exact reviewed standards diff corroborated. Narrow mapping eligibility only; public claims disabled/declarations unissued, separate page/release pending.",
+        "merge_sha": "40c1ebf5261051f2d8465b8c1b6f79f06057f014"
       },
       "latest_release": {
         "reported_worker_source": "12a42e2",
@@ -438,7 +452,9 @@
         "review_sha": "9ef3f2a0104a3d40b56d129583a8a64cf2e5e478",
         "fix_sha": "7fb4fad5f93dc1f9941a7520d04a9ff389b8a6c5",
         "evidence_sha": "c19924a741238bcd6da298bb241dc095056f831d",
-        "scope": "OB3 live-state gate and spacing fixed; official OWASP/NIST PDF hashes independently match. sec-201 crosswalk m1-l3/q007-q009 plus m6-l3 practice checklist evidence read/added. First real badge wallet check and WIA019/020/021 remain open; this run public documents were HTTP checked only, not new cryptographic proof validation. Historical retrieval failures/Under Review states above are superseded only to this explicit narrow extent."
+        "scope": "OB3 live-state gate and spacing fixed; official OWASP/NIST PDF hashes independently match. sec-201 crosswalk m1-l3/q007-q009 plus m6-l3 practice checklist evidence read/added. First real badge wallet check and WIA019/020/021 remain open; this run public documents were HTTP checked only, not new cryptographic proof validation. Historical retrieval failures/Under Review states above are superseded only to this explicit narrow extent.",
+        "final_review_sha": "69f1b2ed7e686441106328a005768c7465efb47d",
+        "merge_corroboration": "Merged standards diff byte-identical to reviewed 7fb4fad. No Codex merge/self-approval or practical/course/public certification/credit claim."
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -541,7 +557,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T15:07:59Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/d3fd8568783fd3223bb8babe2341fb8f9c6a14e7/ai/board/20261019T1513-codex-f02-topology-evidence-episode-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI/status schedule and distinct recovery refs unchanged except own F02 author records. One retained status schedule run; no coordinator/Gemini reply, fixing SHA or owner access decision. Recorded substantive M4 source draft/evidence only; no whole-review cursor movement, finding closure, source/module/hardware/release self-approval. Draft progress stays quiet."
+  "last_check_started_utc": "2026-10-19T15:22:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/826320a/ai/board/20261019T1538-codex-f02-identity-topology-review-fixes.md",
+  "latest_poll_scope": "Coordinator 69f1b2e independently rechecked/merged standards PR #1 as 40c1ebf; exact reviewed diff corroborated. M3/M4 returned for revision; author fixes/new M4 prototype submitted as 3fd9904/826320a for independent re-review. Other watched mains/PR2/agency CI/status schedule unchanged; one retained schedule run, no Gemini return/finding fix or F01 owner answer. Whole-review cursors and older finding/release scopes retained."
 }
