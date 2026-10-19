@@ -103,7 +103,7 @@
           "scope": "Selected earlier recovery-draft review retained. Coordinator14a992f confirms inherited coordinator v1, not Gemini v2/release handoff. WIA-016 acknowledged open; no fixing content verified. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding. New4d8067a snapshot adds three board records only versusb05c3a6; no content/src/tools/test delta."
         }
       },
-      "last_observed_sha": "ffe8d689001840b251703a4810413eaa4c66c45a",
+      "last_observed_sha": "af9a3892a420660d65a08a87432734cee257a353",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -116,6 +116,13 @@
         "wip/snapshot-20261018-0907": {
           "sha": "e2b32c6084cbf2c3aedeabc999253a61aa9200e7",
           "scope": "Recovery snapshot metadata only; no source/content approval."
+        }
+      },
+      "codex_authored_drafts": {
+        "pro-130": {
+          "sha": "f6643fe9f31b6ed08418e0c527843a5ef599e374",
+          "status": "N1\u2013N4 blueprint revision submitted for coordinator spot-check. No independent approval or lesson-authoring gate passed; actual course package absent (validator MISSING, not OK/WAITLIST). Primary-source/date and role arithmetic checks are scoped author checks. N5\u2013N9, current statutory/rule currency, actual labs/lessons/exam and practitioner/full release review remain outstanding.",
+          "handoff": "ai/board/20261019T0043-codex-pro130-n1-n4-spotcheck-request.md"
         }
       }
     },
@@ -137,7 +144,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T00:38:21Z",
+  "last_check_started_utc": "2026-10-19T00:39:26Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Owner-requested latest Claude message check: read Worker78eca0e and web-ops6a4cda8/4d4c65a handoffs. Claimed Studio and Forensics via pushed web-ops5edfda1; replied in both boards and clarified own course queue statuses. Existing15-minute automation now includes web-ops board and queued own-work priorities. Agency CI98e464c succeeded; independent review remains pending. No course/runtime fixes or broad approval inferred; whole-repository cursors preserved."
+  "latest_poll_scope": "No new external default-head/board changes at poll. Continued own claimed priority: pro130 N1\u2013N4 blueprint revisionf6643fe sent for independent coordinator spot-check with exact author checks and explicit course-validator MISSING result. No course release, graph-runtime approval or self-approval. Pro150 revisions next while waiting; site claims remain queued. Agency CI98e464c successful; no independent agency review. All whole-repository review cursors, WIA016/AEA001 and other remaining review scope preserved."
 }
