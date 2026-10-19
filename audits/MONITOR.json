@@ -30,12 +30,20 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
+      "last_observed_sha": "843552f0d8b36beba2b3c6172c24e2ea2d9c374d",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
           "scope": "Metadata observed; no branch-specific delta against previous main."
         }
+      },
+      "status_workflow_observation": {
+        "workflow": ".github/workflows/badges-status.yml",
+        "poll_utc": "2026-10-19T04:09Z",
+        "latest_run": 39192258852,
+        "event": "workflow_dispatch",
+        "conclusion": "success",
+        "scope": "Only the previously verified initial manual-dispatch run is listed. Scheduled changed-bit/latency/failure monitoring remains unverified, not a new observed failure. WIA017 remains withdrawn."
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -110,7 +118,7 @@
           "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "28a6596cd7f21aa50b89e27f290f976cfca62430",
+      "last_observed_sha": "5a0dac398e9e0b83c28e808233d943d96909a502",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -125,8 +133,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "5cb1358cfec9f94a097b810b2bd7030693cea692",
-          "scope": "92-path active recovery delta versus13dc7a3 inventoried only (15874 additions,7026 deletions). Coordinator unfinished coursework, no finished handoff or new semantic/exam/lab approval; no WIA016 closure or Gemini authorship attribution."
+          "sha": "27027109356ea57b15c8a4469217264f174736c5",
+          "scope": "108-path recovery delta versus5cb1358 inventoried only (17876 additions,14773 deletions). Coordinator unfinished work; no finished handoff or new factual/editorial/exam/lab approval, no WIA016 closure or Gemini attribution."
         }
       },
       "codex_authored_drafts": {
@@ -149,6 +157,17 @@
           "sha": "7838df809a4f23aed17f5b52aa148a457bfa8b75",
           "status": "V2 intro blueprint/proposed continuity map awaiting independent review;6 IDs and8 baseline source files preserved. Structural validator OK refers to unchanged v1 only. New lessons/exam/graph, source gaps, human timing and synthetic runtime continuity remain open.",
           "handoff": "ai/board/20261019T0130-codex-cyb001-blueprint-continuity-review.md"
+        },
+        "gpu_ai_systems": {
+          "owner_assignment": "Direct owner assignment: Codex leads and authors; Claude is independent reviewer/coordinator. F91 first-wave courses and E17 curriculum architecture remain running.",
+          "first_wave_sha": "45eae0b129fdce2066e60b126772171accb473f7",
+          "first_wave_scope": "Four draft blueprints/source ledgers and original project preparation; all four course packages remain WAITLIST. Optimized and host ASan/UBSan CPU runs each39 checks pass;10 synthetic comparison-contract tests pass. No CUDA compile/GPU/NCCL/cloud execution; blueprint review required before lessons.",
+          "architecture_sha": "b48d1903fc83da554cdb73fc171f88ab8b439af7",
+          "architecture_scope": "29 proposed design units,6 strands,5 cumulative projects, including dedicated NVCC, MPI, advanced GPU-aware MPI and RDMA units. Design labels are not public catalog IDs or ready courses. Author graph checks29 nodes/0 cycles only.",
+          "interactive_lab_sha": "73bd487d39b246404dd27f4b70d25e136f83df99",
+          "interactive_lab_scope": "Local synthetic MPI/RDMA browser prototype, six decisions/four endings with recovery/replay/debrief. Author226 legal paths,12 browser checks and26 viewport cases pass. Independent teaching/practitioner/accessibility review pending; genuine lesson-link integration blocker remains. No real MPI/RDMA/GPU/shell execution, learner completion, credential issuance or deployment.",
+          "latest_handoff": "ai/board/20261019T0404-codex-interactive-mpi-rdma-lab-review.md",
+          "review_status": "No new independent review/acknowledgement at latest poll; no self-approval. Full curriculum, lessons/exams/lab inventory, real hardware validation and release remain unfinished. Real cloud spending or employer-cluster use is not authorized by these drafts."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -290,7 +309,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T03:25:26Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/28a6596cd7f21aa50b89e27f290f976cfca62430/ai/board/20261019T0329-codex-wia018-hw001-residency-assumption.md",
-  "latest_poll_scope": "Scoped existing v1 hw001 review produced WIA018 P2 memory-residency wording recommendation, not a new recovery regression. Six lesson files and32 stems/options/keys read; selected primary specifications and15 arithmetic/index checks pass, no full editorial/assessment approval. Evidence/acceptance privately sent to coordinator with cross-site board pointer. Active recovery5cb1358 versus13dc7a3 inventoried92paths only. Existing draft PRs/agency review unchanged and pending. All whole-repository cursors, WIA016 and WIA013/014/015 production gates, own independent-review requirements and WIA017 withdrawal retained; no implementation merge/deployment/real charge/learner/credential write."
+  "last_check_started_utc": "2026-10-19T04:05:56Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/5a0dac398e9e0b83c28e808233d943d96909a502/ai/board/20261019T0404-codex-interactive-mpi-rdma-lab-review.md",
+  "latest_poll_scope": "Coordinator replies, agency review and four open draft PR reviews/comments remain unchanged. New main-branch work is Codex-authored GPU curriculum/lab preparation, pending independent review; user already notified of that milestone. Recovery2702710 versus5cb1358 inventoried108paths only. Correct workflow badges-status.yml lists only the initial successful manual dispatch; no scheduled changed-bit evidence yet and no new failure. Whole-repository reviewed cursors unchanged. Preserve WIA018/WIA016 and WIA013/014/015 target gates, WIA017 withdrawal, all independent-review/real hardware/release boundaries and older unfinished lanes. No merge/deploy/real charge/learner/payment/credential writes."
 }
