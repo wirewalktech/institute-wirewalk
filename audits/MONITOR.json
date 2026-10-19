@@ -3,7 +3,7 @@
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
-      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval. New 13-course industry catalog publication observed; associated content review outstanding. E11 Codex-authored industries hub independently re-reviewed/merged by coordinator; live GET/link/meta verification recorded separately, not self-approved. Release e5a9ed6 adds a50-file site delta: exact Pages SHA and three new-route HTTP200 checks only this run; full new code/browser/accessibility/editorial review outstanding.",
+      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval. New 13-course industry catalog publication observed; associated content review outstanding. E11 Codex-authored industries hub independently re-reviewed/merged by coordinator; live GET/link/meta verification recorded separately, not self-approved. Release e5a9ed6 adds a50-file site delta: exact Pages SHA and three new-route HTTP200 checks only this run; full new code/browser/accessibility/editorial review outstanding. New OB3 site delta bcbea4c versus 81eca4d: 222 paths; selected mirror/certificate source read only. WIA-017 publication gate found; all generated achievement definitions, full browser/accessibility/content and operational conformance still require review.",
       "branches_examined": {
         "site-v1": {
           "sha": "c6d7b3d81f71f527a9884d8c878b7fb9ff86d53f",
@@ -26,9 +26,10 @@
         "new_prerequisite_catalog_delta_and_exact_build": "fcd26a0",
         "catalog_publication_metadata_and_exact_pages_sha": "234fba5",
         "industries_hub_coordinator_review_and_live_GET_only": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb",
-        "release_exact_pages_sha_and_three_routes_HTTP_only": "e5a9ed614191d3abb916634352f16f319d4b93f1"
+        "release_exact_pages_sha_and_three_routes_HTTP_only": "e5a9ed614191d3abb916634352f16f319d4b93f1",
+        "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c"
       },
-      "last_observed_sha": "e5a9ed614191d3abb916634352f16f319d4b93f1",
+      "last_observed_sha": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -56,10 +57,8 @@
         "WIA-016 remains open. Superseding recovery draft b149492 rewrites hls155 m1-l1; limited original symptom-grounding spotcheck improved, not full coding/source/course approval. Finished fixing/superseding handoff and qualified independent coding review remain required.",
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
-        "WIA-013/014/015 source fixes and selected current-main integration verified (46 local tests); coordinator reports release12a42e2 and migrations. Read-only health/CORS/site availability pass, but deployed authenticated autosave/entitlement and actual accounting/schema/settlement/reconciliation evidence remain pending. No production-resolution claim from mocks/health alone.",
-        "WIA-013/014/015 source fixes and selected current-main integration verified (46 local tests); coordinator reports release12a42e2 and migrations. Read-only health/CORS/site availability pass, but deployed authenticated autosave/entitlement and actual accounting/schema/settlement/reconciliation evidence remain pending. No production-resolution claim from mocks/health alone.",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
-        "WIA-016 remains open. Superseding recovery draft b149492 rewrites hls155 m1-l1; limited original symptom-grounding spotcheck improved, not full coding/source/course approval. Finished fixing/superseding handoff and qualified independent coding review remain required."
+        "WIA-017 P1 before OB3 enablement: GITHUB_TOKEN mirror commits do not trigger current legacy Pages builds. Explicit publication and isolated repeated custom-domain revocation-bit propagation proof required. No observed stale real credential incident. Full OB3 implementation/conformance, target/migration/wallet/privacy/accessibility review remains incomplete; selected 30 local tests pass only."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -91,7 +90,8 @@
         "studio_forensics_handoff_reminder_only": "78eca0e",
         "coordinator_reclaim_and_standards_question_only": "dd32d4c",
         "coordinator_owner_direction_self_declared_preparation_only": "7e6b135cf926f93dbb92921a9f15817f45c5b04a",
-        "release_selected_WIA013_014_015_integration_46_local_tests_only": "44ca53db173d0516a8eeaf168bacc129b5b74e1b"
+        "release_selected_WIA013_014_015_integration_46_local_tests_only": "44ca53db173d0516a8eeaf168bacc129b5b74e1b",
+        "OB3_selected_routes_hooks_status_config_and_30_local_tests_only": "6a44240"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -107,7 +107,7 @@
           "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "0b9be80d594f8c32361688f49fdadf42538f272f",
+      "last_observed_sha": "e1c29829a5492e4756940456b52a4a9e3f0e93f6",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -122,8 +122,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "2bb1d4444fb28e21f96898adcfb69a19887a3f18",
-          "scope": "Recovery delta64 paths versusb149492 inventoried only; active coordinator lessons/exams/labs plus own prior coordination. Prior hls155 m1-l1 selected grounding check atb149492 is retained; full semantic/editorial/factual/assessment review outstanding."
+          "sha": "7d4a3d2f4013a423acef45d07e3f21b55e76df81",
+          "scope": "149-path delta versus 2bb1d44 inventoried only (40364 additions, 3911 deletions), including released runtime and active coordinator course drafts. No full semantic/factual/editorial/lab/exam approval; prior limited hls155 grounding check retained, WIA016 open."
         }
       },
       "codex_authored_drafts": {
@@ -167,7 +167,9 @@
       },
       "latest_owner_decisions": {
         "sha": "0b9be80",
-        "scope": "Read coordinator-reported org-agreement defaults and Open Badges /badges issuer/dependency/artwork/erasure decisions. No key generation/handling, badge issuance, standards alignment or branch implementation/conformance approval by Codex; signing-key installation remains owner-only after separate release gates."
+        "scope": "Read coordinator-reported org-agreement defaults and Open Badges /badges issuer/dependency/artwork/erasure decisions. No key generation/handling, badge issuance, standards alignment or branch implementation/conformance approval by Codex; signing-key installation remains owner-only after separate release gates.",
+        "additional_public_key_commit_observed": "e1c29829a5492e4756940456b52a4a9e3f0e93f6",
+        "additional_scope": "Public key publication and owner-approved secret installation reported in commit only; Codex read no secret, installed no key and issued no real badge. This does not satisfy WIA017 publication or remaining release/conformance gates."
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -182,8 +184,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "49231fa1c13a8469539707745d878c53ebd1f6f2",
-      "scope": "Read explicit WW009 acknowledgement1facb8b, independent WW008 review/mergec5b3b40 and owner-approved Studio terms5cb7c7e. Focused Forensics draft PR/evidence posted at49231fa; Studio source1595703 exact Pages/live22-case corroboration. Independent Forensics review still in progress. Shared portal/source ownership preserved; complete terms/catalog/payment-readiness work unfinished.",
+      "last_observed_sha": "42cbbd9",
+      "scope": "Read independent Forensics review/merge 5c98520; exact Pages f02c52f and live 19-case fixture corroborated. WW009 resolved on independent review plus publication evidence. New Studio retainer draft orders PR1 at 2fed469 under claim 0282292; 98 local tests pass, one optional adjacent-repo test skipped, no real Stripe proof. Full canonical terms work remains unfinished. WIA017 pre-enable publication gate handed to coordinator on both boards; ownership and release boundaries preserved.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -212,20 +214,26 @@
       },
       "findings": {
         "WW-008": "resolved by coordinator independent review and publication1595703; author live22-case fixture corroborates deployed page"
+      },
+      "retainer_proposal": {
+        "pr": "https://github.com/wirewalktech/wirewalk-orders-worker/pull/1",
+        "head_sha": "2fed46947a79f412e4abb6c608828772001cd07b",
+        "status": "open review-only draft; independent coordinator review, merge/deploy and isolated Stripe proof pending",
+        "scope": "15 fixed Studio depositAmount values to 25% rounded whole dollars; prices, 45 non-Studio entries, quote-only entries and other Studio fields unchanged. 98 tests pass, zero fail, one optional adjacent-repo test skipped. No real payment/data action."
       }
     },
     "wirewalktech/forensics-wirewalk": {
-      "last_observed_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
-      "pages_build_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
-      "pages_build_updated_at": "2026-10-17T20:10:13Z",
-      "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
+      "last_observed_sha": "f02c52f379952acd3612ac35df5644c43a30dffd",
+      "pages_build_sha": "f02c52f379952acd3612ac35df5644c43a30dffd",
+      "scope": "Selected WW009 correction and strict confirmation-response changes independently reviewed/merged by coordinator; exact custom-domain Pages SHA and live HTML 19-case/13-width isolated fixture corroboration. No blanket site/legal/capability/payment/delivery approval; broader initial audit outstanding.",
       "outstanding": [
-        "Real-browser Turnstile hostname behavior, actual operating capability/credentials/licensing/storage evidence and complete primary-source review remain unverified."
+        "Real-browser Turnstile hostname behavior, actual operating capability/credentials/licensing/storage evidence and complete primary-source review remain unverified.",
+        "Optional P3 copy follow-ups from coordinator 0237: distinguish federal civil document/ESI/inspection scope from testimony/state/criminal, make commanded recipient/counsel deadline ownership clear; future document revision dates ET. No retroactive rewrite of earlier records."
       ],
       "findings": {
         "WW-009": {
           "severity": "P2",
-          "status": "acknowledged at1facb8b; proposed correction draft PR1 under coordinator independent review; not merged/published",
+          "status": "resolved: coordinator independent review at 5c98520 and merge f02c52f; exact Pages/live correction corroborated",
           "reviewed_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
           "evidence": "wirewalk-web-ops verification/2026-10-18-studio-forensics/forensics-primary-rule-followup.md at2a42a91",
           "scope": "Subpoena objection deadline summary omits earlier-compliance condition; current official Rule45(d)(2)(B) inspected. No actual missed deadline or case-specific advice claimed."
@@ -234,13 +242,15 @@
       "proposed_fix": {
         "pr": "https://github.com/wirewalktech/forensics-wirewalk/pull/1",
         "head_sha": "3def5ee9fe3ce61fa69ab71b49b297bf2671ca55",
-        "status": "draft; independent review in progress",
-        "author_checks": "Jekyll build,19 page stamps,19 isolated confirmation cases and13 overflow widths pass; old live HTML fails4 malformed-response cases. Two source pages/version/hash updated. No shared Worker/catalog change or real payment/session/order."
+        "status": "coordinator independently reviewed/merged/published; live corroborated, broader readiness open",
+        "author_checks": "Jekyll build,19 page stamps,19 isolated confirmation cases and13 overflow widths pass; old live HTML fails4 malformed-response cases. Two source pages/version/hash updated. No shared Worker/catalog change or real payment/session/order.",
+        "merge_sha": "f02c52f379952acd3612ac35df5644c43a30dffd",
+        "independent_review_board": "20261019T0237-coordinator-ww009-forensics-pr1-merged.md"
       }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T02:25:26Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Studio WW008 independently reviewed/merged by coordinator1595703; exact Pages and live22-case check corroborated. WW009 explicitly acknowledged1facb8b; concrete Forensics correction draft PR1 at3def5ee under independent review, not released. Approved Studio terms received, implementation/catalog/test-mode work queued. Institute release reported44ca53d:46 selected local checks and safe public health/CORS/route availability pass, but WIA013/014/015 target end-to-end gates remain pending. Large site/Worker/source/content deltas not fully audited; all whole reviewed cursors retained. Standards PR and four own blueprints/agency still unapproved. No Codex merge/deployment/charge/key generation/learner-data action."
+  "last_check_started_utc": "2026-10-19T02:40:26Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-19-ob3-selected-triage.md",
+  "latest_poll_scope": "Forensics WW009 independently reviewed/merged by coordinator; exact Pages f02c52f and live 19-case fixture corroborated. Studio 25% whole-dollar retainer draft orders PR1 at 2fed469 submitted; remaining terms consistency and test-mode payment proof open. New OB3 source selected triage: 30 local tests pass, but WIA017 pre-enable publication blocker identified (GITHUB_TOKEN commits do not trigger current legacy Pages). Owner public key publication e1c2982 observed, not release/conformance approval. Full site/Worker/content and target E2E scopes remain outstanding, whole reviewed cursors retained. All own blueprints, standards PR and agency remain independently unapproved; no Codex deployment, real charge, credential/key installation or learner-data action."
 }
