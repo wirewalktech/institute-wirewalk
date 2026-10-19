@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/sec-340.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Adversarial Machine Learning: Evasion, Poisoning and Model Extraction",
+  "description": "An expert course on adversarial machine learning organized around the NIST AI 100-2 E2025 taxonomy: evasion attacks from FGSM and PGD to black-box and physical-world attacks, poisoning and backdoors, model extraction from prediction and LLM APIs, and defenses evaluated against adaptive attackers.",
+  "humanCode": "SEC-340",
+  "fieldOfStudy": "AI Security: Securing AI Systems",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "adversarial machine learning",
+    "evasion",
+    "poisoning",
+    "backdoor",
+    "model extraction",
+    "robustness",
+    "nist ai 100-2",
+    "mitre atlas",
+    "adversarial training",
+    "certified robustness"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/sec-340.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Adversarial Machine Learning: Evasion, Poisoning and Model Extraction"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/sec-340/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe an adversarial threat model using NIST AI 100-2 attacker goals, knowledge and capabilities",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-1",
+      "targetCode": "sec-340.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Implement white-box and black-box evasion attacks and adapt them to constrained domains such as fraud and malware",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-2",
+      "targetCode": "sec-340.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain availability poisoning, targeted poisoning and backdoors and estimate their feasibility for a given data pipeline",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-3",
+      "targetCode": "sec-340.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assess model extraction risk for a prediction or LLM API and select proportionate defenses",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-4",
+      "targetCode": "sec-340.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply adversarial training and certified robustness and explain their costs",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-5",
+      "targetCode": "sec-340.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a defense correctly using adaptive attacks and detect gradient masking",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-6",
+      "targetCode": "sec-340.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Integrate robustness testing into a model release process",
+      "targetUrl": "https://institute.wirewalk.com/courses/sec-340/#outcome-7",
+      "targetCode": "sec-340.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/sec-340.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

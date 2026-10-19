@@ -93,7 +93,7 @@ layout: default
       <h2 id="out-h">What you will be able to do</h2>
       <ul class="outcomes">
         {%- for o in c.outcomes %}
-        <li>{{ o | escape }}</li>
+        <li id="outcome-{{ forloop.index }}">{{ o | escape }}</li>
         {%- endfor %}
       </ul>
     </section>

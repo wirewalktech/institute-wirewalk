@@ -148,6 +148,27 @@
     return "Request failed (" + status + ").";
   }
 
+  /**
+   * [ob3] An authenticated download as a Blob (the holder's Open Badge file). A plain link
+   * could not carry the bearer token. Errors are ApiErrors, as from request().
+   */
+  function download(path) {
+    var t = token.get();
+    if (!t) { announce401(); return Promise.reject(new ApiError(401, "Sign in to continue.")); }
+    return fetch(base() + path, { method: "GET", headers: { "Authorization": "Bearer " + t }, mode: "cors", credentials: "omit", cache: "no-store" })
+      .then(function (res) {
+        if (res.ok) return res.blob();
+        return res.text().then(function (text) {
+          var data = null;
+          if (text) { try { data = JSON.parse(text); } catch (e) { data = null; } }
+          if (res.status === 401) { token.clear(); announce401(); }
+          throw new ApiError(res.status, capital((data && typeof data.error === "string" && data.error) || defaultMessage(res.status)), data);
+        });
+      }, function () {
+        throw new ApiError(0, "We could not reach the Institute server. Check your connection and try again.");
+      });
+  }
+
   var announced = false;
   function announce401() {
     if (announced) return;
@@ -196,6 +217,8 @@
       return request("PUT", "/api/attempts/" + enc(attemptId) + "/answers", b, opts);
     },
 
-    certificate: function (id) { return request("GET", "/api/certificates/" + enc(id), undefined, { auth: false }); }
+    certificate: function (id) { return request("GET", "/api/certificates/" + enc(id), undefined, { auth: false }); },
+    /* [ob3] format "json" (default) or "svg"; resolves to a Blob. Holder only. */
+    ob3Credential: function (id, format) { return download("/api/ob3/credentials/" + enc(id) + (format === "svg" ? "?format=svg" : "")); }
   };
 })();

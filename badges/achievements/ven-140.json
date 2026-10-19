@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/ven-140.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Microsoft 365 Copilot in Practice",
+  "description": "A practical course on Microsoft's Copilot inside Microsoft 365: what each license tier can actually see, how Graph grounding and permissions shape every answer, and how to get reliable work out of Outlook, Teams, Word, Excel, PowerPoint, agents, Pages and Notebooks. It closes with the data protection controls and adoption metrics that decide whether a rollout succeeds.",
+  "humanCode": "VEN-140",
+  "fieldOfStudy": "AI Models and Vendors",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "microsoft",
+    "copilot",
+    "microsoft 365",
+    "copilot chat",
+    "agents",
+    "purview",
+    "sharepoint",
+    "prompting",
+    "adoption"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/ven-140.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Microsoft 365 Copilot in Practice"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/ven-140/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 5 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the difference between Copilot Chat, Microsoft 365 Copilot (Basic) and Microsoft 365 Copilot (Premium) in terms of what data each can use",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-1",
+      "targetCode": "ven-140.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Predict what Copilot can and cannot surface for a given user from their permissions, sensitivity labels and site settings",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-2",
+      "targetCode": "ven-140.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use Copilot in Outlook, Teams, Word, Excel and PowerPoint for drafting, summarizing and analysis while checking the output against its sources",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-3",
+      "targetCode": "ven-140.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write Microsoft 365 prompts that state goal, context, expectations and source, and reference specific files, people and meetings",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-4",
+      "targetCode": "ven-140.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between standard Copilot chat, Researcher, Analyst and a custom agent for a task, and build and share a simple agent with Agent Builder",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-5",
+      "targetCode": "ven-140.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Describe how enterprise data protection, sensitivity labels, Purview DLP and Restricted Content Discovery limit Copilot's exposure of sensitive data",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-6",
+      "targetCode": "ven-140.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Interpret Copilot usage reports and the Copilot Dashboard, separating measured activity from estimated value",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-140/#outcome-7",
+      "targetCode": "ven-140.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/ven-140.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

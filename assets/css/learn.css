@@ -570,3 +570,9 @@ html.wl-has-offline .hd, html.wl-has-offline .wl-exam-bar { top: var(--wl-offlin
 .wl-next-wait { margin-top: 16px; display: grid; gap: 8px; justify-items: start; }
 .wl-verify-banner { margin: 12px 0 18px; }
 .wl-verify-banner .wl-verify { margin: 0; }
+
+/* [ob3] Open Badge downloads on the certificate page (holder only) */
+.wl-badge-panel { max-width: 640px; margin: 14px auto 0; padding: 16px 18px; border: 1px solid var(--wl-line); border-radius: 12px; background: var(--wl-surface); }
+.wl-badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.wl .wl-badge-h { font: 650 15px/1.3 var(--wl-sans); margin: 14px 0 4px; }
+.wl-badge-panel .wl-hint { margin: 6px 0 0; }

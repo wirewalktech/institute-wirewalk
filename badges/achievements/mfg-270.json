@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-270.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Pharma Manufacturing under GMP",
+  "description": "A builder's course organized around specific GMP jobs, not \"AI in pharma\" in general: qualifying a deep-learning visual inspection recipe against manual inspection, running change control on that model after a camera or glass-supplier change, building multivariate CPV models and Raman/NIR soft sensors with out-of-model-space diagnostics, pairing process models with in-process testing as FDA's 211.110 draft expects, and assuring LLM summarizers, audit-trail analytics and review-by-exception flags inside validated systems. Every exercise uses synthetic data for fictional products.",
+  "humanCode": "MFG-270",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "pharma manufacturing",
+    "gmp",
+    "cgmp",
+    "21 cfr 211",
+    "part 11",
+    "annex 22",
+    "automated visual inspection",
+    "model validation",
+    "change control",
+    "continued process verification",
+    "pat",
+    "soft sensors",
+    "computer software assurance",
+    "gamp 5",
+    "data integrity",
+    "review by exception"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-270.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Pharma Manufacturing under GMP"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-270/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify a proposed GMP AI use as critical or non-critical by rating model influence and decision consequence with FDA's seven-step credibility framework, and name the 21 CFR 211 and Part 11 sections that already govern it",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-1",
+      "targetCode": "mfg-270.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write the intended-use statement, subgroup list and per-subgroup acceptance criteria for a deep-learning visual inspection recipe, and find the subgroup that fails in a synthetic 600-container test set even though overall accuracy passes",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-2",
+      "targetCode": "mfg-270.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify test-data independence, confidence-threshold and \"undecided\" routing controls for a critical vision model, consistent with Annex 1 section 8.32 and draft Annex 22 sections 6 and 9",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-3",
+      "targetCode": "mfg-270.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a change-control impact assessment for a camera or container-supplier change on a validated model, justify retest versus retrain, and define two drift metrics with alert and action limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-4",
+      "targetCode": "mfg-270.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a PCA batch model with Hotelling T2 and SPE limits on synthetic fed-batch data, find the planted abnormal batches, and draft the CPV signal-response procedure that links to 211.192 investigations",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-5",
+      "targetCode": "mfg-270.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Fit a PLS soft sensor on synthetic spectra, flag out-of-model-space samples from a new excipient lot, and write the control-strategy paragraph that pairs a process model with in-process testing of the material, as the 211.110 draft expects",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-6",
+      "targetCode": "mfg-270.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Score an LLM deviation summarizer for groundedness on a synthetic evaluation set and write the configuration, review and Part 11 audit-trail controls for its use",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-7",
+      "targetCode": "mfg-270.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Risk-assess AI features in a synthetic SaaS release note against supplier-oversight expectations, build audit-trail and review-by-exception flags measured by recall on seeded events, and document what a qualified person still reviews",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-270/#outcome-8",
+      "targetCode": "mfg-270.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-270.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
