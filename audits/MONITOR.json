@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064",
+      "last_observed_sha": "c37457efa5b6f1a933d7fd564a7f0b8bfad77b7c",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -55,7 +55,7 @@
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
         "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0,
-        "latest_schedule_check_utc": "2026-10-19T13:04Z",
+        "latest_schedule_check_utc": "2026-10-19T13:24Z",
         "latest_scheduled_run_total_count": 1,
         "first_observed_scheduled_run": {
           "id": 39220461308,
@@ -168,7 +168,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "21f253a22fd9629482b304df2fa7b82e85d44b5e",
+      "last_observed_sha": "943560fe166024cfc640af2d3c59e07c6e2ff0da",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -183,8 +183,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "3ed6d8fa13cd1008fe84df61255df3b9c4dba87f",
-          "scope": "38 paths / 18,817 additions / 49 deletions versus 265f131 inventoried only; mostly own artifacts and coordinator monitor source copies. Selected monitor source/config blobs match main. No new course/exam/lab semantic approval, authorship transfer, Gemini attribution or WIA-016 closure."
+          "sha": "3b25b76eff9e4259ebf26c1a5a5f15c34532b154",
+          "scope": "Nine paths /225 additions/one deletion versus3ed6d8f inventoried only: prior board/audit/access-proposal copies and already verified c9881b3 generator metadata change; selected builder source matches main. No new course semantic/exam/lab approval, authorship transfer, Gemini return or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -220,7 +220,7 @@
           "review_status": "Coordinator 9ef3f2a independently approves F02 revision 34c6c95 for supplied-exhibit/lesson authoring, with low corrections while authoring. F01 design direction accepted; actual Linux access/execution gate still blocks lessons. Other E17/F91 blueprints retain independent review requirements. No completed course, publication, qualification or hardware approval.",
           "debugging_brief_sha": "2b95f60",
           "debugging_brief_scope": "Dedicated C04 author design brief with six debugging/correctness modules, fault-project proposal and selected official tool-scope/version checks. No implemented fault project or GPU/debugger/sanitizer execution; independent full blueprint review pending.",
-          "latest_preparation_handoff": "ai/board/20261019T1304-codex-rereview-fixes-and-linux-decision.md",
+          "latest_preparation_handoff": "ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
@@ -279,6 +279,12 @@
             "source_sha": "37d3ec002ef4781b700f7c1b490ca8743c4b9d83",
             "handoff": "ai/board/20261019T1316-codex-foundation-low-corrections.md",
             "scope": "Six owned prose files pass spacing check; compact limits and reduced repetition, distinct F01 global-loader-path shortcut/separate diagnostic choice, downstream/adjacent entry references and verified Ubuntu CMake package design. F02 M2-specific GiB headroom/zero-headroom warning, total ending fallbacks and committed same11-quantity Decimal reproduction. CUDA edition/source receipts retained; Linux prediction remains conditional/unexecuted. No lesson/exhibit/graph/bank, owner access approval or hardware qualification; independent spot-check/release gates retained."
+          },
+          "first_f02_lesson_draft": {
+            "sha": "795a6f7d1e0d598b4a8f106feea16473bd8314d6",
+            "handoff": "ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
+            "status": "First teaching-episode author draft awaiting independent source/instructional/practitioner spot-check; M1/course unfinished",
+            "scope": "Private E17 unit-materials/F02:1852-word M1L1, original labeled synthetic full/restricted/guest resource packet, worked/faded/transfer responses and three inline retrieval answers. Original Python check confirms fixed CPU/core/cache/index quantities, six invalid packets rejected, two wrong counts distinguished and205-item transfer; data consistency only, no hardware/execution/competence result. Five selected primary-source byte receipts retained. No public ID/catalog bundle, lab/exam or publication; F01 Linux answer still pending."
           }
         }
       },
@@ -489,7 +495,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T13:07:58Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/21f253a22fd9629482b304df2fa7b82e85d44b5e/ai/board/20261019T1316-codex-wia022-description-fix-verified.md",
-  "latest_poll_scope": "New coordinator WIA022 source/site publication independently verified for120description component; title collision remains deferred/open. Own accepted foundation low corrections authored37d3ec0 and handed off21f253a; F01 owner Linux answer still pending, F02 authoring approved but materials unfinished. Other boards/agency CI/review states unchanged; no Gemini return, no Codex deployment/charge/data write. Whole-review cursors unchanged."
+  "last_check_started_utc": "2026-10-19T13:22:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/943560fe166024cfc640af2d3c59e07c6e2ff0da/ai/board/20261019T1329-codex-f02-first-lesson-resource-map-review.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/claims/draft PRs/agency CI/status schedule unchanged except active recovery copies and own F02 first private author lesson795a6f7/handoff943560f. No new coordinator/Gemini review or resolved blocker; no owner action newly requested. Preserve cursors, older scopes and quiet intent. Author draft is not self-approval or notification trigger; no install/deploy/charge/learner/credential write."
 }
