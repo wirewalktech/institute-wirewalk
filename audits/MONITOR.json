@@ -3,7 +3,7 @@
   "repositories": {
     "wirewalktech/institute-wirewalk": {
       "reviewed_sha": "3368c2d",
-      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval. New 13-course industry catalog publication observed; associated content review outstanding. E11 Codex-authored industries hub independently re-reviewed/merged by coordinator; live GET/link/meta verification recorded separately, not self-approved. Release e5a9ed6 adds a50-file site delta: exact Pages SHA and three new-route HTTP200 checks only this run; full new code/browser/accessibility/editorial review outstanding. New OB3 site delta bcbea4c versus 81eca4d: 222 paths; selected mirror/certificate source read only. WIA-017 publication gate found; all generated achievement definitions, full browser/accessibility/content and operational conformance still require review.",
+      "scope": "Large marketing/tutor/consent/team site delta since 234fba5 observed but not fully reviewed; retain earlier scoped checks, no whole-site approval. New 13-course industry catalog publication observed; associated content review outstanding. E11 Codex-authored industries hub independently re-reviewed/merged by coordinator; live GET/link/meta verification recorded separately, not self-approved. Release e5a9ed6 adds a50-file site delta: exact Pages SHA and three new-route HTTP200 checks only this run; full new code/browser/accessibility/editorial review outstanding. New OB3 site delta bcbea4c versus 81eca4d: 222 paths; selected mirror/certificate source read only. WIA-017 publication gate found; all generated achievement definitions, full browser/accessibility/content and operational conformance still require review. WIA-017 inference withdrawn after direct runtime counter-evidence: bot09f5d1c triggered exact Pages and public JSON matches it. Initial manual-dispatch publication and public status signature verified; scheduled changed-bit/latency, wallet and full OB3/content/accessibility scopes remain unverified.",
       "branches_examined": {
         "site-v1": {
           "sha": "c6d7b3d81f71f527a9884d8c878b7fb9ff86d53f",
@@ -27,9 +27,10 @@
         "catalog_publication_metadata_and_exact_pages_sha": "234fba5",
         "industries_hub_coordinator_review_and_live_GET_only": "e49d4ffa7c61845a94f8bc1de7d178fa241db5bb",
         "release_exact_pages_sha_and_three_routes_HTTP_only": "e5a9ed614191d3abb916634352f16f319d4b93f1",
-        "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c"
+        "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
+        "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
+      "last_observed_sha": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -58,7 +59,7 @@
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
-        "WIA-017 P1 before OB3 enablement: GITHUB_TOKEN mirror commits do not trigger current legacy Pages builds. Explicit publication and isolated repeated custom-domain revocation-bit propagation proof required. No observed stale real credential incident. Full OB3 implementation/conformance, target/migration/wallet/privacy/accessibility review remains incomplete; selected 30 local tests pass only."
+        "OB3 initial manual-dispatch mirror publication and public status-list signature verified; original WIA-017 publication inference withdrawn as contradicted by exact runtime evidence. Scheduled changed-bit revocation latency/failure monitoring, actual learner badge/wallet interoperability, full implementation/definitions/privacy/accessibility/conformance and target lifecycle remain unverified. No blanket credential or course approval."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -107,7 +108,7 @@
           "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "e1c29829a5492e4756940456b52a4a9e3f0e93f6",
+      "last_observed_sha": "ad14c3222a8486909fc47b20f3a136c430e1187f",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -122,8 +123,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "7d4a3d2f4013a423acef45d07e3f21b55e76df81",
-          "scope": "149-path delta versus 2bb1d44 inventoried only (40364 additions, 3911 deletions), including released runtime and active coordinator course drafts. No full semantic/factual/editorial/lab/exam approval; prior limited hls155 grounding check retained, WIA016 open."
+          "sha": "a07522e1381c16faf65f08bc0a75699c61f4d0d5",
+          "scope": "72-path delta versus7d4a3d2 inventoried only (18020 additions,384 deletions); active coordinator recovery snapshot, no full lesson/exam/lab/primary-source approval. WIA016 and earlier semantic scopes remain open; no new Gemini ownership attribution."
         }
       },
       "codex_authored_drafts": {
@@ -163,13 +164,25 @@
         "reported_billing_source": "9c697b6",
         "reported_site_source": "e5a9ed6",
         "report_sha": "44ca53db173d0516a8eeaf168bacc129b5b74e1b",
-        "scope": "Owner-go deployment/migrations reported by coordinator. Codex selected local integration46 pass0fail0skip; public health/CORS/routes and exact site Pages verified only. Authenticated target behavior, spend/schema/settlement/cron/manual accessibility and full agreements/campaigns/source/content review pending. No learner/payment writes or actual AI calls by Codex."
+        "scope": "Owner-go deployment/migrations reported by coordinator. Codex selected local integration46 pass0fail0skip; public health/CORS/routes and exact site Pages verified only. Authenticated target behavior, spend/schema/settlement/cron/manual accessibility and full agreements/campaigns/source/content review pending. No learner/payment writes or actual AI calls by Codex.",
+        "ob3_release": {
+          "report_sha": "ad14c3222a8486909fc47b20f3a136c430e1187f",
+          "reported_worker_version": "212836aa",
+          "scope": "Coordinator reports owner-approved enablement and migrations/key installation. Codex independently corroborated public issuer/key/status and initial manual-dispatch bot Pages publication; Digital Bazaar assertionMethod signature verifies, tampered validFrom rejected,16384-byte zero-bit list. No secret accessed, real learner badge, wallet/revocation write or full conformance approval."
+        }
       },
       "latest_owner_decisions": {
         "sha": "0b9be80",
         "scope": "Read coordinator-reported org-agreement defaults and Open Badges /badges issuer/dependency/artwork/erasure decisions. No key generation/handling, badge issuance, standards alignment or branch implementation/conformance approval by Codex; signing-key installation remains owner-only after separate release gates.",
         "additional_public_key_commit_observed": "e1c29829a5492e4756940456b52a4a9e3f0e93f6",
         "additional_scope": "Public key publication and owner-approved secret installation reported in commit only; Codex read no secret, installed no key and issued no real badge. This does not satisfy WIA017 publication or remaining release/conformance gates."
+      },
+      "findings": {
+        "WIA-017": {
+          "status": "withdrawn/closed as disproved by runtime counter-evidence, not a fixing source change",
+          "evidence_sha": "9f2b98e",
+          "scope": "Bot09f5d1c directly parents2214640, exact Pages run starts2seconds later and publishes it; actual custom-domain status JSON matches. Original categorical docs-based inference was wrong for the observed run. No evidence of a stale real learner badge; do not retain the original release blocker as active. Scheduled changed-bit and wallet checks still open."
+        }
       }
     },
     "wirewalktech/ai-education-assurance": {
@@ -184,8 +197,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "42cbbd9",
-      "scope": "Read independent Forensics review/merge 5c98520; exact Pages f02c52f and live 19-case fixture corroborated. WW009 resolved on independent review plus publication evidence. New Studio retainer draft orders PR1 at 2fed469 under claim 0282292; 98 local tests pass, one optional adjacent-repo test skipped, no real Stripe proof. Full canonical terms work remains unfinished. WIA017 pre-enable publication gate handed to coordinator on both boards; ownership and release boundaries preserved.",
+      "last_observed_sha": "8ad11f4",
+      "scope": "Read latest coordination; own Studio terms draft PR2 handed off with author338 viewport/633internal-link and22 confirmation passes. Coupled catalog/site publication and client-cancelled full-prepay remainder policy clarification remain pending. WIA017 withdrawn/corrected on both boards after runtime bot-Pages counter-evidence; initial public status proof checked, scheduled latency/wallet scope open. Claims preserved.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -196,7 +209,8 @@
       "outstanding": [
         "Non-blocking coordinator follow-ups (string-true regression, failure/unpaid wording and SKU drift check); no blanket site approval.",
         "Owner-approved terms at5cb7c7e need implementation:25% whole-dollar retainer catalog through reviewed PR, consistent cancellation/delivery/revision/response/rights wording and isolated Stripe test-mode proof. List prices/other practices unchanged by this request.",
-        "Capability/rights/insurance supporting documents, actual enquiry delivery, complete factual/accessibility/source review and real isolated payment/webhook/order evidence remain unfinished."
+        "Capability/rights/insurance supporting documents, actual enquiry delivery, complete factual/accessibility/source review and real isolated payment/webhook/order evidence remain unfinished.",
+        "Terms draft PR2 f8bb67f awaits independent review; coordinate publication with reviewed/deployed retainer PR1 and separate catalog delivery/rights copy alignment. Client cancellation of fully prepaid remainder needs explicit approved policy; no invented refund/forfeiture rule."
       ],
       "proposed_fix": {
         "finding": "WW-008",
@@ -220,6 +234,12 @@
         "head_sha": "2fed46947a79f412e4abb6c608828772001cd07b",
         "status": "open review-only draft; independent coordinator review, merge/deploy and isolated Stripe proof pending",
         "scope": "15 fixed Studio depositAmount values to 25% rounded whole dollars; prices, 45 non-Studio entries, quote-only entries and other Studio fields unchanged. 98 tests pass, zero fail, one optional adjacent-repo test skipped. No real payment/data action."
+      },
+      "terms_proposal": {
+        "pr": "https://github.com/wirewalktech/studio-wirewalk/pull/2",
+        "head_sha": "f8bb67fb764c3490b7e409e34eb09d2a0ecd7dca",
+        "status": "open review-only draft; coordinator independent review and coupled catalog/site release pending",
+        "scope": "Canonical complete owner-approved terms and links, corrected family turnaround/one-business-day replies; author build,338 light/dark viewport cases,633 internal links and22 confirmation fixtures pass. Images/forms/payment logic unchanged; no self-approval or live publication. Full-prepay client-cancellation remainder policy not invented; clarification pending."
       }
     },
     "wirewalktech/forensics-wirewalk": {
@@ -250,7 +270,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T02:40:26Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-19-ob3-selected-triage.md",
-  "latest_poll_scope": "Forensics WW009 independently reviewed/merged by coordinator; exact Pages f02c52f and live 19-case fixture corroborated. Studio 25% whole-dollar retainer draft orders PR1 at 2fed469 submitted; remaining terms consistency and test-mode payment proof open. New OB3 source selected triage: 30 local tests pass, but WIA017 pre-enable publication blocker identified (GITHUB_TOKEN commits do not trigger current legacy Pages). Owner public key publication e1c2982 observed, not release/conformance approval. Full site/Worker/content and target E2E scopes remain outstanding, whole reviewed cursors retained. All own blueprints, standards PR and agency remain independently unapproved; no Codex deployment, real charge, credential/key installation or learner-data action."
+  "last_check_started_utc": "2026-10-19T02:55:26Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/ai/board/20261019T0259-codex-wia017-withdrawn-live-counterevidence.md",
+  "latest_poll_scope": "Coordinator reports OB3 enabled. Codex independently verified initial bot09f5d1c exact Pages publication, matching custom-domain status, issuer/key authorization and public signature/tamper rejection; WIA017 earlier categorical publication inference withdrawn on runtime counter-evidence. Scheduled changed-bit/latency and real learner badge/wallet/full conformance scope remain open. Studio terms draft PR2 f8bb67f handed to coordinator with338viewport/633link/22confirmation author checks; retainer PR1 2fed469 still open, coupled release and full-prepay cancellation remainder policy need review. No new blueprint/standards/agency review; CI unchanged. Full course/content/runtime/target E2E review scopes retained; no whole reviewed cursor advancement or Codex release/data/real credential action."
 }
