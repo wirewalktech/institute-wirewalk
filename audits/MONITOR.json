@@ -86,7 +86,8 @@
         "WIA_012_exact_lesson_execution_CJK_Arabic_and_strict_validation": "6745b76",
         "WIA_013_current_head_missing_schema_and_failed_settlement_mock_reproductions": "0d8daa7998246f94928d5bc5a25bed2c3a197e6d",
         "agency_plan_pricing_delta_only": "622b6846eba9974668e53356eb1b96458dfc688f",
-        "coordinator_WIA016_provenance_AEA001_acknowledgement_only": "14a992f2b4844ba952497bb383a2b2c9fcc49676"
+        "coordinator_WIA016_provenance_AEA001_acknowledgement_only": "14a992f2b4844ba952497bb383a2b2c9fcc49676",
+        "studio_forensics_handoff_reminder_only": "78eca0e"
       },
       "branches_examined": {
         "lx-wave1": {
@@ -102,7 +103,7 @@
           "scope": "Selected earlier recovery-draft review retained. Coordinator14a992f confirms inherited coordinator v1, not Gemini v2/release handoff. WIA-016 acknowledged open; no fixing content verified. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding. New4d8067a snapshot adds three board records only versusb05c3a6; no content/src/tools/test delta."
         }
       },
-      "last_observed_sha": "0a66ae2183745ecdf4f03563bca6e8f830e53cc8",
+      "last_observed_sha": "ffe8d689001840b251703a4810413eaa4c66c45a",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -127,11 +128,16 @@
       "draft_assessment_sha": "8273995945896eb7b6625b9c5d5201b40254d2c8",
       "latest_handoff": "https://github.com/wirewalktech/ai-education-assurance/blob/main/ai/board/20261018T2057-codex-a7-calibration-and-expert-evidence-draft.md",
       "outstanding_pricing_review": "AEA-001 P3 acknowledged open by coordinator14a992f; revision3 and final pricing choice pending, no quotes or billing changes.",
-      "latest_ci_status": "0572877 completed success; new98e464c board-only commit not yet checked"
+      "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
+    },
+    "wirewalktech/wirewalk-web-ops": {
+      "last_observed_sha": "5edfda141c53ed23457d163349321ebd87c9f030",
+      "scope": "Owner-requested latest-message check found missed Studio/Forensics handoff and reminder. Read protocol/property notes, claimed both site lanes in AGENTS.md and posted acknowledgement. No site implementation, payment lifecycle, mail delivery, Turnstile hostname or broad factual approval. Queue: pro130/pro150 revisions, gov001/cyb001, then sites. Shared services retain coordinator ownership.",
+      "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md"
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T00:21:56Z",
+  "last_check_started_utc": "2026-10-19T00:38:21Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "Coordinator board-only14a992f reviewed: WIA-016 accepted as inherited coordinator v1 defect, not Gemini v2; AEA-001 acknowledged open. No fixing course or pricing-plan delta, no independent agency implementation review. Fixed-SHA correction criteria and separate agency review scope replied on both private boards. All full review cursors and outstanding scope preserved; no deployment/billing/data change."
+  "latest_poll_scope": "Owner-requested latest Claude message check: read Worker78eca0e and web-ops6a4cda8/4d4c65a handoffs. Claimed Studio and Forensics via pushed web-ops5edfda1; replied in both boards and clarified own course queue statuses. Existing15-minute automation now includes web-ops board and queued own-work priorities. Agency CI98e464c succeeded; independent review remains pending. No course/runtime fixes or broad approval inferred; whole-repository cursors preserved."
 }
