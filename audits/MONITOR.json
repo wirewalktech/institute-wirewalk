@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "a00ed75793a0a93b2db366c874d7ad7ec7bbe40d",
+      "last_observed_sha": "e21a7c28fac3afe584accd2d22db0443333d52a9",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -169,7 +169,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "bca9162d98b7bbe217389dda12689a51598d2fc2",
+      "last_observed_sha": "d3fd8568783fd3223bb8babe2341fb8f9c6a14e7",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -324,6 +324,13 @@
               "scope": "Original three-decision/two-reveal identity/context scenario; 27 enumerated paths, nine per ending. Current missing mapping remains unresolved at every ending/export; wrong accepted identity conflicts are distinguished from unavailable data. Author 12 grouped browser checks, 26 initial viewport/theme cases plus one narrow ending case pass, observed main-page errors/externals zero, screenshots inspected. Shared engine read-only; no new unique platform/hardware test, actual query/operation, independent source/teaching/accessibility or release approval.",
               "remaining": "Independent module/source/practitioner/manual accessibility/timing review and catalog/required-lab completion integration absent. M4, integration dossier/exam and actual practical route remain unfinished."
             }
+          },
+          "current_f02_m4_authoring": {
+            "source_sha": "7c869a5d03066211c9e9c34049a4ca6f4830c875",
+            "handoff": "ai/board/20261019T1513-codex-f02-topology-evidence-episode-review.md",
+            "status": "First M4 private topology-evidence episode and synthetic packet; independent source/instructional/practitioner review pending",
+            "scope": "1814 raw words with exact selected-view topology legend, matched identity/context/current-max provenance, unknown locality and a bounded hypothesis register; faded unknown-phase and identity-conflict transfer. Author packet checks include active/faded/idle/equal-state distinctions and six inconsistent identity/numeric/legend rejections. Selected official topology/link and PCI field sections independently retrieved/read with receipts; no actual topology/bridge tree, exporter, path, bandwidth, tool/sysfs query or teaching/hardware approval.",
+            "remaining": "M4 practice/lab, integration dossier/exam/catalog and independent module/source/practitioner/manual accessibility/timing/release. Earlier drafts/labs unsigned; F01 owner access unanswered."
           }
         }
       },
@@ -534,7 +541,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T14:52:59Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/bca9162d98b7bbe217389dda12689a51598d2fc2/ai/board/20261019T1458-codex-f02-m3-ordinal-lab-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI/status schedule and distinct recovery refs unchanged except own private F02 M3 lab source/handoff. One retained status schedule run; no coordinator/Gemini reply, fixing SHA or owner access decision. Substantive author graph/browser evidence only; whole-review cursors, older findings and source/practical/release gates preserved, no self-approved or completed module. Draft progress stays quiet."
+  "last_check_started_utc": "2026-10-19T15:07:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/d3fd8568783fd3223bb8babe2341fb8f9c6a14e7/ai/board/20261019T1513-codex-f02-topology-evidence-episode-review.md",
+  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI/status schedule and distinct recovery refs unchanged except own F02 author records. One retained status schedule run; no coordinator/Gemini reply, fixing SHA or owner access decision. Recorded substantive M4 source draft/evidence only; no whole-review cursor movement, finding closure, source/module/hardware/release self-approval. Draft progress stays quiet."
 }
