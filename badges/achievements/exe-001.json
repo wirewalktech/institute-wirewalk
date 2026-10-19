@@ -1,0 +1,102 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/exe-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Leaders: The One-Hour Briefing",
+  "description": "A plain-English hour on what AI is, where it helps and where it fails, the risks leaders actually own, and what to do in your first 90 days. Free, practical, and short enough for one sitting.",
+  "humanCode": "EXE-001",
+  "fieldOfStudy": "Executive Leadership",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "leadership",
+    "executive",
+    "ai strategy",
+    "generative ai",
+    "ai risk",
+    "introduction"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/exe-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Leaders: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/exe-001/",
+    "narrative": "To earn this certificate a learner must: complete all 6 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the difference between predictive and generative AI using an example from your own organization",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-1",
+      "targetCode": "exe-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recognize tasks where today's AI tools are reliable and tasks where their output needs checking or should not be used",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-2",
+      "targetCode": "exe-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a sensible first AI use case using value, data, error-cost and ownership criteria",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-3",
+      "targetCode": "exe-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Name the main risks leaders retain when using AI, including accuracy, data leakage, prompt injection and regulatory exposure",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-4",
+      "targetCode": "exe-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply six screening questions to an AI funding proposal and draft a 90-day starting plan",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-001/#outcome-5",
+      "targetCode": "exe-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/exe-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

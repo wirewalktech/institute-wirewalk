@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/dev-303.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "C++ for AI: LibTorch, ONNX Runtime, TensorRT and CUDA Integration",
+  "description": "Expert C++ for AI inference: exporting PyTorch models for C++ with torch.export and AOTInductor, LibTorch, the ONNX Runtime C++ API, building and running TensorRT engines, writing CUDA kernels and custom plugins, and designing concurrent, memory-safe inference services with measured performance.",
+  "humanCode": "DEV-303",
+  "fieldOfStudy": "AI in Software Development",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "c++",
+    "libtorch",
+    "aotinductor",
+    "torch.export",
+    "onnx runtime",
+    "tensorrt",
+    "tensorrt for rtx",
+    "cuda",
+    "cuda graphs",
+    "cutlass",
+    "nsight",
+    "triton inference server",
+    "openvino",
+    "inference",
+    "performance"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/dev-303.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: C++ for AI: LibTorch, ONNX Runtime, TensorRT and CUDA Integration"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/dev-303/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose an export and runtime path (AOTInductor/LibTorch, ONNX Runtime, TensorRT, OpenVINO or llama.cpp) for a model, hardware target and latency budget, and justify it",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-1",
+      "targetCode": "dev-303.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Export a PyTorch model with torch.export, package it with AOTInductor and run it from C++, validating outputs numerically against the Python reference",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-2",
+      "targetCode": "dev-303.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run models through the ONNX Runtime C++ API with execution providers, I/O binding and session configuration tuned for throughput or latency",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-3",
+      "targetCode": "dev-303.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and run a TensorRT engine with dynamic shapes, optimization profiles and reduced precision, and diagnose accuracy loss from calibration or precision choices",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-4",
+      "targetCode": "dev-303.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write and integrate a CUDA kernel or TensorRT plugin, using streams, pinned memory and CUDA graphs to remove launch and copy overhead",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-5",
+      "targetCode": "dev-303.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a concurrent C++ inference service with batching, bounded queues, RAII-managed GPU resources and graceful overload behavior",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-6",
+      "targetCode": "dev-303.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Profile an end-to-end inference path with Nsight Systems and Nsight Compute and turn the findings into measured improvements",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/#outcome-7",
+      "targetCode": "dev-303.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/dev-303.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/exe-502.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Governance for Boards and Directors",
+  "description": "A practical briefing on what boards owe on AI and how to discharge it. Covers oversight duties, committee ownership, NIST AI RMF and ISO/IEC 42001 at board level, the EU AI Act after the 2026 Digital Omnibus, US federal, state and sector rules, disclosure, risk appetite, inventory and dashboards, third-party AI, incident escalation and an annual oversight calendar.",
+  "humanCode": "EXE-502",
+  "fieldOfStudy": "Executive Leadership",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "board",
+    "directors",
+    "ai governance",
+    "oversight",
+    "caremark",
+    "eu ai act",
+    "digital omnibus",
+    "nist ai rmf",
+    "iso 42001",
+    "risk appetite",
+    "sec disclosure",
+    "audit committee",
+    "executive"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/exe-502.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Governance for Boards and Directors"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/exe-502/",
+    "narrative": "To earn this certificate a learner must: complete all 14 lessons in 5 modules; and pass the final exam: 15 questions, 30 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Explain the board's oversight duty for AI, including the two Caremark prongs, and what evidence shows a board has discharged it",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-1",
+      "targetCode": "exe-502.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Allocate AI oversight across the full board and its committees and draft the charter language that makes ownership clear",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-2",
+      "targetCode": "exe-502.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Summarize the EU AI Act timeline after the 2026 Digital Omnibus, the US federal, state and sector picture, and the disclosure risks of AI washing",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-3",
+      "targetCode": "exe-502.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft an AI risk appetite statement with measurable tolerances and connect it to an AI inventory and a board dashboard",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-4",
+      "targetCode": "exe-502.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Challenge management with targeted questions on AI strategy, risk, third-party AI and incidents, and recognize weak answers",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-5",
+      "targetCode": "exe-502.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Define incident escalation thresholds that bring the right AI events to the board at the right time",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-6",
+      "targetCode": "exe-502.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan director AI literacy, set rules for AI use in the board's own work, and run an annual AI oversight calendar",
+      "targetUrl": "https://institute.wirewalk.com/courses/exe-502/#outcome-7",
+      "targetCode": "exe-502.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/exe-502.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

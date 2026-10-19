@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-001.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI in Health and Life Sciences: The One-Hour Briefing",
+  "description": "A free one-hour briefing built on eight real jobs, not an overview: auditing an ambient-scribe note, answering a portal message from an AI draft, acting on a sepsis alert, reading a triage-flagged CT worklist, reviewing a prior-authorization request, checking AI-suggested codes, and triaging drug and device safety reports. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
+  "humanCode": "HLS-001",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "intro",
+    "healthcare",
+    "life sciences",
+    "ambient documentation",
+    "prior authorization",
+    "clinical decision support",
+    "radiology",
+    "sepsis",
+    "medical coding",
+    "pharmacovigilance",
+    "medical devices",
+    "hipaa",
+    "fda",
+    "section 1557"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-001.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI in Health and Life Sciences: The One-Hour Briefing"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-001/",
+    "narrative": "To earn this certificate a learner must: complete all 8 lessons in 3 modules; and pass the final exam: 10 questions, 15 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit an AI-drafted visit note or portal reply against its source and identify fabricated findings, changed doses, omitted facts and missed red flags before signing or sending",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-1",
+      "targetCode": "hls-001.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish an FDA-authorized AI device, such as a radiology triage tool or Prenosis Sepsis ImmunoScore, from an EHR-embedded model whose regulatory status and local validation the hospital must confirm, and explain what a flag or a missing flag does and does not mean",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-2",
+      "targetCode": "hls-001.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute a tool's local positive predictive value and alert burden from a worklist or alert log, and decide what to escalate to an AI governance committee",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-3",
+      "targetCode": "hls-001.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Identify, for a named health-plan, coding or safety task, the decision AI may support and the decision a qualified human must make, citing the governing rule (Medicare Advantage individualized review, California SB 1120, E/M medical decision making, the False Claims Act, 21 CFR 314.80 and 600.80, 21 CFR 803.50 and 803.53)",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-4",
+      "targetCode": "hls-001.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply HIPAA business associate and minimum-necessary requirements, Section 1557 (45 CFR 92.210 for decision support tools and 92.201(c)(3) for machine translation) and California AB 3030 disclosure to a proposed use of AI in a specific workflow",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-5",
+      "targetCode": "hls-001.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose the Wirewalk course that covers your role and industry in depth",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-6",
+      "targetCode": "hls-001.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-001.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

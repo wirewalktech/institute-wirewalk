@@ -1,0 +1,124 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/bld-210.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Retrieval-Augmented Generation Systems",
+  "description": "A practitioner's course on retrieval-augmented generation: when to use it, how to ingest, chunk, embed and index documents, how to combine BM25 and vector search with reranking, and how to measure, debug and operate the result. Every module includes working Python sketches.",
+  "humanCode": "BLD-210",
+  "fieldOfStudy": "Building AI Applications",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "rag",
+    "retrieval",
+    "embeddings",
+    "vector search",
+    "hnsw",
+    "bm25",
+    "hybrid search",
+    "reranking",
+    "evaluation",
+    "llm applications"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/bld-210.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Retrieval-Augmented Generation Systems"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/bld-210/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 6 modules; and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide between RAG, fine-tuning and long-context prompting for a given use case and justify the choice on freshness, scale, access control and cost",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-1",
+      "targetCode": "bld-210.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an ingestion pipeline that parses, cleans and chunks documents while preserving structure and metadata needed for citations and permissions",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-2",
+      "targetCode": "bld-210.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select an embedding model and configure a vector index such as HNSW, explaining the recall, latency and memory trade-offs of its parameters",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-3",
+      "targetCode": "bld-210.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Implement hybrid retrieval with BM25 and dense vectors fused by reciprocal rank fusion, followed by cross-encoder reranking and query rewriting",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-4",
+      "targetCode": "bld-210.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble grounded prompts that produce checkable citations and enforce document-level permissions before any content reaches the model",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-5",
+      "targetCode": "bld-210.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a labeled evaluation set and measure recall@k, MRR and faithfulness to compare pipeline changes objectively",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-6",
+      "targetCode": "bld-210.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Diagnose RAG failures by isolating the failing stage, and operate the system through re-indexing, freshness monitoring and cost control",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-210/#outcome-7",
+      "targetCode": "bld-210.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/bld-210.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

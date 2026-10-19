@@ -1,0 +1,57 @@
+# Mirror the Open Badges revocation list to https://institute.wirewalk.com/badges/status/1.json,
+# the permanent statusListCredential URL signed into every badge (wirewalk-institute-worker
+# ai/plans/open-badges-3.md section 14). The learning Worker signs the list
+# ({api_base}/api/ob3/status/1, api_base from _config.yml); this job fetches it about every
+# 10 minutes, validates it (.github/scripts/badges-status.mjs) and commits it only when the
+# revocation bits or the signing key changed. A revocation therefore reaches badge verifiers in
+# about 10 minutes, later when GitHub delays scheduled runs (it does under load).
+#
+# Uses only the default GITHUB_TOKEN (contents: write); no other secrets. Scheduled runs happen on
+# the default branch only, and GitHub disables a schedule after 60 days without repository activity.
+name: Badges status list
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: badges-status
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Fetch and validate the signed status list
+        id: mirror
+        run: node .github/scripts/badges-status.mjs
+
+      - name: Commit and push when it changed
+        if: steps.mirror.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git add badges/status/1.json
+          if git diff --cached --quiet; then
+            echo "No change to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Badges: update the revocation status list"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then exit 0; fi
+            echo "Push rejected (attempt ${attempt}); rebasing on the latest ${GITHUB_REF_NAME}."
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+          done
+          echo "Could not push the status list after 3 attempts." >&2
+          exit 1

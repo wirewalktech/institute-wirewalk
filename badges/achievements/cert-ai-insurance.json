@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cert-ai-insurance.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Insurance Professional",
+  "description": "AI in claims, underwriting and fraud across US property and casualty insurance, under state insurance law.",
+  "humanCode": "CERT-AI-INSURANCE",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cert-ai-insurance.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Insurance Professional"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-insurance/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Property and Casualty Claims Adjusters (FIN-135); AI for Insurance Professionals (FIN-130); Building AI for Insurance Underwriting and Rating under State Insurance Law (FIN-235); Building AI for Insurance Fraud Detection and SIU Investigations (FIN-245). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Property and Casualty Claims Adjusters",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/",
+      "targetCode": "fin-135",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Insurance Professionals",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-130/",
+      "targetCode": "fin-130",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building AI for Insurance Underwriting and Rating under State Insurance Law",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/",
+      "targetCode": "fin-235",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building AI for Insurance Fraud Detection and SIU Investigations",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/",
+      "targetCode": "fin-245",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

@@ -76,7 +76,7 @@
               W.verifyPanel(me.learner, function () { window.location.reload(); }, true)),
         h("h2", { class: "wl-badge-h" }, "How to add it to a wallet"),
         h("p", { class: "wl-hint" }, "Import the .json or the .svg file into any Open Badges 3.0 wallet or backpack. Both carry the same signed credential: your name, the course or program, the dates and your score. Your email address is included only as a salted hash: it does not show the address, but anyone who knows or guesses the address can check it against the badge. To check it, enter the address in lowercase."),
-        h("p", { class: "wl-hint" }, "The file also contains a link that lets anyone who has the file download the current version of the badge while the certificate is valid. If the name on your certificate is corrected, that link stops working; download the badge again and delete the old file. Download it again after a renewal too."),
+        h("p", { class: "wl-hint" }, "The file is a copy of your certificate as it is today and does not update itself. After a renewal, download your badge again (and if the name on your certificate is corrected, download it again too), then delete the old file: the new copy has the later \u201cvalid from\u201d date."),
         h("p", { class: "wl-hint" }, "The badge keeps the limits of the certificate: it is a certificate of completion and assessment, not an accreditation. ",
           h("a", { href: "/certification/#open-badges" }, "About Open Badges")));
       var toggle = W.btn("Add to wallet / Download badge", { class: "wl-btn-ghost", "aria-expanded": "false", "aria-controls": "wl-badge-panel",

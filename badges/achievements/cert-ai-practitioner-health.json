@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cert-ai-practitioner-health.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Practitioner — Health and Life Sciences",
+  "description": "Safe clinical and operational AI use, deployment and privacy in health care.",
+  "humanCode": "CERT-AI-PRACTITIONER-HEALTH",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cert-ai-practitioner-health.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Practitioner — Health and Life Sciences"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-practitioner-health/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: AI for Healthcare Clinicians (WRK-121); Building and Deploying AI in Healthcare Delivery (HLS-210); Building and Deploying AI in Health Plans and Revenue Cycle (HLS-250); Privacy Law and AI: GDPR, CCPA and HIPAA (GOV-340). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "AI for Healthcare Clinicians",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-121/",
+      "targetCode": "wrk-121",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Healthcare Delivery",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/",
+      "targetCode": "hls-210",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building and Deploying AI in Health Plans and Revenue Cycle",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-250/",
+      "targetCode": "hls-250",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Privacy Law and AI: GDPR, CCPA and HIPAA",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-340/",
+      "targetCode": "gov-340",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

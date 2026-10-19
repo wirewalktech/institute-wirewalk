@@ -414,10 +414,10 @@
             "<dt>Certificate ID</dt><dd><code>" + esc(c.id) + "</code></dd>";
           /* [ob3] Only when the Worker says the certificate is also issued as an Open Badge. The
              achievement link is used only if it is our own static definition. */
-          var ach = typeof c.achievementUrl === "string" && /^https:\/\/institute\.wirewalk\.com\/ob3\/achievements\/[a-z0-9-]{1,40}\.json$/.test(c.achievementUrl) ? c.achievementUrl : null;
+          var ach = typeof c.achievementUrl === "string" && /^https:\/\/institute\.wirewalk\.com\/badges\/achievements\/[a-z0-9-]{1,40}\.json$/.test(c.achievementUrl) ? c.achievementUrl : null;
           /* The Worker sends openBadge only once a badge was downloaded for this certificate. On a
              revoked or expired certificate the note says what that means for the badge file. */
-          var badgeLinks = (ach ? '<a href="' + esc(ach) + '">achievement definition</a>, ' : "") + '<a href="/ob3/issuer.json">issuer profile</a>; ' +
+          var badgeLinks = (ach ? '<a href="' + esc(ach) + '">achievement definition</a>, ' : "") + '<a href="/badges/issuer.json">issuer profile</a>; ' +
             '<a href="/certification/#open-badges">what that means</a>';
           var badge = c.openBadge !== true ? ""
             : c.revoked || c.expired

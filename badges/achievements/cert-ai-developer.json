@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/cert-ai-developer.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "Certificate",
+  "name": "Certified AI Systems Developer",
+  "description": "Integrates AI into production software across languages.",
+  "humanCode": "CERT-AI-DEVELOPER",
+  "inLanguage": "en-US",
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/cert-ai-developer.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Certified AI Systems Developer"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/programs/cert-ai-developer/",
+    "narrative": "To earn this certificate a learner must hold a current course certificate for each of these courses: Python AI Integration: SDKs, Async, Pydantic, Packaging and Testing (DEV-201); Rust for AI: Candle, Burn, ONNX Runtime and High-Performance Services (DEV-301); C++ for AI: LibTorch, ONNX Runtime, TensorRT and CUDA Integration (DEV-303); Building with LLM APIs Across Vendors (BLD-201). Every course certificate must be current (not revoked or expired) when the program certificate is issued; the program certificate is renewed when every course certificate is current again.\n\nEach course exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a program certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Python AI Integration: SDKs, Async, Pydantic, Packaging and Testing",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-201/",
+      "targetCode": "dev-201",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Rust for AI: Candle, Burn, ONNX Runtime and High-Performance Services",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/",
+      "targetCode": "dev-301",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "C++ for AI: LibTorch, ONNX Runtime, TensorRT and CUDA Integration",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-303/",
+      "targetCode": "dev-303",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Building with LLM APIs Across Vendors",
+      "targetUrl": "https://institute.wirewalk.com/courses/bld-201/",
+      "targetCode": "bld-201",
+      "targetFramework": "Wirewalk Institute of AI catalog"
+    }
+  ]
+}

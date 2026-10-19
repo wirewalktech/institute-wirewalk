@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/inf-310.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "HPC Cluster Design for AI: Compute, Fabric and Storage",
+  "description": "How to design a GPU cluster for AI from requirements to acceptance: compute node selection, rail-optimized fat-tree fabrics with real port and switch counts, InfiniBand versus RoCE, parallel storage sized for checkpoints and data loading, provisioning and scheduling, burn-in, power and cooling. Ends with a full 128-node reference design and an architecture review.",
+  "humanCode": "INF-310",
+  "fieldOfStudy": "AI Infrastructure and HPC",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "hpc",
+    "cluster design",
+    "gpu",
+    "infiniband",
+    "roce",
+    "spectrum-x",
+    "fat-tree",
+    "storage",
+    "gpfs",
+    "lustre",
+    "weka",
+    "vast",
+    "slurm",
+    "kubernetes",
+    "base command manager",
+    "nccl",
+    "ior",
+    "power and cooling",
+    "ai infrastructure"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/inf-310.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: HPC Cluster Design for AI: Compute, Fabric and Storage"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/inf-310/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Translate an AI workload brief into quantitative design targets for GPU count, memory, checkpoint bandwidth, data-loading bandwidth and availability",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-1",
+      "targetCode": "inf-310.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a compute node platform and justify its GPU, CPU, memory, NIC and PCIe topology choices for a stated workload",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-2",
+      "targetCode": "inf-310.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a rail-optimized fat-tree fabric and calculate leaf, spine, cable and transceiver counts and oversubscription for a given node count",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-3",
+      "targetCode": "inf-310.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between InfiniBand and RoCE/Spectrum-X for a cluster and explain the role of adaptive routing, SHARP and the subnet manager",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-4",
+      "targetCode": "inf-310.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Size a tiered storage design for checkpoint and data-loading throughput and run storage benchmarks that defeat cache effects and under-driven concurrency",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-5",
+      "targetCode": "inf-310.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Configure provisioning and topology-aware scheduling with Base Command Manager, Slurm and Kubernetes GPU operators",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-6",
+      "targetCode": "inf-310.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write an acceptance plan using HPL, NCCL tests, IOR and mdtest, and size power, cooling and rack layout for the design",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-7",
+      "targetCode": "inf-310.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce and defend a complete reference design with a bill of materials, risk register and acceptance criteria",
+      "targetUrl": "https://institute.wirewalk.com/courses/inf-310/#outcome-8",
+      "targetCode": "inf-310.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/inf-310.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

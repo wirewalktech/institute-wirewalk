@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/dev-301.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Rust for AI: Candle, Burn, ONNX Runtime and High-Performance Services",
+  "description": "Expert-level Rust for AI: in-process inference with Candle, Burn and ONNX Runtime (ort), bindings to llama.cpp through FFI, GPU integration with CUDA, PyO3 bridges to Python, and high-performance async services with batching, backpressure and observability. Emphasizes unsafe-code discipline, zero-copy data paths and measured performance.",
+  "humanCode": "DEV-301",
+  "fieldOfStudy": "AI in Software Development",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "rust",
+    "candle",
+    "burn",
+    "cubecl",
+    "onnx runtime",
+    "ort",
+    "llama.cpp",
+    "gguf",
+    "safetensors",
+    "ffi",
+    "bindgen",
+    "cxx",
+    "cuda",
+    "cudarc",
+    "tokio",
+    "axum",
+    "pyo3",
+    "performance",
+    "inference"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/dev-301.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Rust for AI: Candle, Burn, ONNX Runtime and High-Performance Services"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/dev-301/",
+    "narrative": "To earn this certificate a learner must: complete all 22 lessons in 6 modules; and pass the final exam: 25 questions, 60 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between Candle, Burn, ONNX Runtime (ort), llama.cpp bindings and mistral.rs for a given model, target hardware and deployment constraint, and defend the choice",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-1",
+      "targetCode": "dev-301.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Implement in-process transformer inference in Rust that loads safetensors or GGUF weights, tokenizes with the tokenizers crate and runs on CPU or CUDA",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-2",
+      "targetCode": "dev-301.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a sound safe wrapper around a C inference API, documenting the invariants behind every unsafe block and handling ownership, lifetimes, thread safety and error mapping",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-3",
+      "targetCode": "dev-301.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Integrate GPU execution with CUDA streams and device memory without blocking the async runtime or leaking device allocations",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-4",
+      "targetCode": "dev-301.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an Axum/Tokio inference service with dynamic batching, backpressure, cancellation, streaming responses and Prometheus-style metrics",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-5",
+      "targetCode": "dev-301.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Expose a Rust inference or preprocessing component to Python with PyO3 and maturin, releasing the GIL and avoiding unnecessary copies",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-6",
+      "targetCode": "dev-301.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Profile and optimize a Rust AI workload using flamegraphs, allocation tracking, SIMD and quantization, and verify gains with reproducible benchmarks",
+      "targetUrl": "https://institute.wirewalk.com/courses/dev-301/#outcome-7",
+      "targetCode": "dev-301.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/dev-301.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
