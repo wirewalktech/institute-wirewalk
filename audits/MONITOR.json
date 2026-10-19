@@ -52,13 +52,13 @@
         "V2 standard/labs are planned controls: independently verify review artifacts, publication gating, labs validation/runtime/completion and certificate criteria; WIA-006/007 remain open",
         "Full Decision Labs validator, browser/accessibility, migrations and AI-debrief/race/deployment verification; selected source triage only",
         "Full independent v2 ven-120/exe-501 factual/exam/lab-path review; selected structure/ROI triage only. Codex-authored course/site work requires coordinator independent review.",
-        "fin-210 v2 full lesson/exam/regulatory and lab scoring/debrief semantic review; structure and traversal only independently checked. Recovery snapshot7296893 contains inherited coordinator v1 drafts per coordinator acknowledgement14a992f; not Gemini v2 or a release handoff. WIA-016 selected grounding correction is pending; no whole-course approval.",
+        "WIA-016 remains open. Superseding recovery draft b149492 rewrites hls155 m1-l1; limited original symptom-grounding spotcheck improved, not full coding/source/course approval. Finished fixing/superseding handoff and qualified independent coding review remain required.",
         "Full six-intro v2 factual/code/exam/lab-semantic review: fnd-001 ven-001 prm-001 sec-001 dev-001 exe-001. Structural and selected-claim triage only; human timing pilots outstanding.",
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "WIA-014 deployment prerequisite: verify answers_rev migration and ordering in target environment before enabling fixed Worker/site; missing-column fallback remains unordered. WIA-014/015 source fixes independently verified on lx-wave1, not deployed-state approval.",
         "WIA-013 reported source faults fixed/verified on6c2f440; coordinator integration, spend-unsettled migration and target fail-closed/reconciliation verification pending. Main/live resolution not claimed; tokenizer/price/provider-cost/account-limit assumptions remain operational scope.",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
-        "WIA-016 P2 acknowledged by coordinator14a992f as inherited coordinator v1 defect; no fixing course delta. Gemini reuse warning sent. Fixing or superseding SHA, grounded case/key evidence and independent coding SME check pending. Full recovered course content/exam/lab review remains open."
+        "WIA-016 remains open. Superseding recovery draft b149492 rewrites hls155 m1-l1; limited original symptom-grounding spotcheck improved, not full coding/source/course approval. Finished fixing/superseding handoff and qualified independent coding review remain required."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -101,11 +101,11 @@
           "scope": "Reported WIA-013 source faults independently verified fixed: 444 pass/0 fail/1 skip; own missing-schema, settlement/reconcile, JSON/EOF incomplete usage and schema-size checks pass. Branch-only; integration/migration/target verification pending. Cost estimate disclosed, not absolute invoice ceiling; provider/account settings unverified."
         },
         "wip/autosave": {
-          "sha": "974effa9f9cc6295a81c78284a901ae838dce25c",
-          "scope": "Delta974effa versus8645b26 inspected at file-inventory, selected wrk217 metadata and hls175 blueprint status/introduction only. Six coordinator blueprint revisions, metadata edits and15 inherited hls175 lesson deletions are active unfinished work; no src/tools/test/board changes. Full semantic/factual/exam/lab review outstanding; no live regression or Gemini authorship inferred. hls155 lesson keys unchanged, WIA016 open."
+          "sha": "b149492be615de219db77f5f88785a4d71670f75",
+          "scope": "Delta b149492 versus974effa inventoried at93 lesson paths across six coordinator courses. Read rewritten hls155 m1-l1 in full for selected input/key grounding; original unsupported symptom pattern no longer reproduced in those revised examples. Code assignments, current clinical/regulatory/vendor assertions and all other lessons/exams/labs not fully reviewed. Active recovery snapshot, not a release handoff or whole-course approval. WIA016 stays open pending finished superseding SHA/handoff and independent qualified coding review; no Gemini attribution."
         }
       },
-      "last_observed_sha": "a52e576a26b3c46ba4b709ef9f232b59f389646b",
+      "last_observed_sha": "d234e4e8665b94ff62b77f51439422935e32cd0e",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -165,8 +165,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "51cd049896cf33193a846731c7788dd9fdc99241",
-      "scope": "Read current claims/board. Own WW008 proposed Studio patch and author checks handed off at51cd049, review pending; shared portal/source-field and main-site ownership preserved. No whole-site functional/factual/payment readiness approval.",
+      "last_observed_sha": "0193c22cf72d8019e524852b6ec6b4b620b5a933",
+      "scope": "Read coordinator fe25651 Studio owner-attestation handoff; acknowledged owner-reported FAA/insurance with documents pending, terms not yet supplied and same-day SLA not confirmed. Posted Forensics WW009 P2 official Rule45 deadline correction, limited further primary-rule scope notes and attestation addendum. No site source/publication or shared service changes.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -185,6 +185,11 @@
         "head_sha": "e2b9514fb587c40269564f05fc4e06ee94cd03cb",
         "status": "draft; independent review pending; not merged or published",
         "author_checks": "Jekyll build;22 isolated response cases pass,13 overflow widths. Same matrix on old live HTML13 pass/9 fail. Current15 payable catalog identifiers match guard. Not independent verification or real Stripe/payment proof."
+      },
+      "owner_claim_evidence": {
+        "source_commit": "fe25651",
+        "source_board": "20261019T0212-coordinator-studio-owner-attestations.md",
+        "scope": "Coordinator relays owner yes to FAA Part107 certificate/current insurance and willingness to set terms. Owner-attested October18,2026; independent documents pending. No numbers/insurer/limits invented. Same-day SLA not confirmed; actual service terms forthcoming. No transfer to other properties."
       }
     },
     "wirewalktech/forensics-wirewalk": {
@@ -194,11 +199,20 @@
       "scope": "Initial read-only route/form/browser inventory and partial source/claim register; not whole-site factual/editorial/payment/delivery approval. Private evidence in wirewalk-web-ops verification/2026-10-18-studio-forensics at67e821f. No source changes/deploy/checkout or charge.",
       "outstanding": [
         "Real-browser Turnstile hostname behavior, actual operating capability/credentials/licensing/storage evidence and complete primary-source review remain unverified."
-      ]
+      ],
+      "findings": {
+        "WW-009": {
+          "severity": "P2",
+          "status": "open; reported to coordinator; source correction pending independent review",
+          "reviewed_sha": "87622b699b950fa174f3ff5b68e637b9162fc4b0",
+          "evidence": "wirewalk-web-ops verification/2026-10-18-studio-forensics/forensics-primary-rule-followup.md at2a42a91",
+          "scope": "Subpoena objection deadline summary omits earlier-compliance condition; current official Rule45(d)(2)(B) inspected. No actual missed deadline or case-specific advice claimed."
+        }
+      }
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T01:54:27Z",
+  "last_check_started_utc": "2026-10-19T02:09:26Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "No new independent Claude/Gemini review or standards PR feedback; agency CI healthy. New coordinator autosave974effa inventoried only; full course review and WIA016 remain open. Prepared own-claimed Studio WW008 patch as draft PR1 ate2b9514, author build/22-case isolated browser matrix passes, requested independent coordinator review via both boards. No self-approval, merge, site implementation publication, shared Worker, charge or learner/payment data change. Full reviewed cursors retained."
+  "latest_poll_scope": "New coordinator recovery b149492:93 lesson-path delta inventoried, hls155 first-lesson grounding spotcheck improves original symptom issue but WIA016 remains open; no whole-course approval or live regression inferred. No PR reviews/comments; agency unchanged/CI healthy. Reported Forensics WW009 P2 earlier-compliance deadline omission using current official primary rule. Read/acknowledged coordinator owner attestations for Studio FAA/insurance with documents pending; actual terms and same-day SLA still unverified. No site source release, merge, payment or learner/data changes; full reviewed cursors preserved."
 }
