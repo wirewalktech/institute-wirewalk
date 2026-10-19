@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "34f47c559910942e1b699496866d282a42d5e4de",
+      "last_observed_sha": "8ed651b1287da9983faacd966bc0cf5fdddba6b6",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -169,7 +169,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "136f3308b622523885309f39944987429a69e803",
+      "last_observed_sha": "ac6e63b6692544fc549d0f1cf59a879f8c22defc",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -311,6 +311,13 @@
               "scope": "Original three-decision supplied-budget scenario, one workspace reveal and three endings. Conditional GiB headroom and explicit incomplete/zero/negative budget boundaries, recovery/hold routes; shared engine read-only. Author exhaustive 27 paths (9 per ending), 12 grouped browser checks, 26 initial viewport/theme cases plus one narrow ending case; observed main-page errors/externals zero, two screenshots inspected. This scenario evidence is not additional unique platform/hardware tests or independent teaching/source/practitioner approval.",
               "remaining": "Independent module/source/practitioner/manual accessibility/timing review and catalog/required-lab completion integration remain absent. No real allocator, lifetime schedule, capacity, throughput or release result."
             }
+          },
+          "current_f02_m3_authoring": {
+            "source_sha": "19dcf2ef152153d3ff8f9a47b668febe7d149aba",
+            "handoff": "ai/board/20261019T1442-codex-f02-device-identity-episode-review.md",
+            "status": "First M3 private lesson/normalized identity packet; independent source/instructional/practitioner review pending",
+            "scope": "1731 raw words, reversed full-device identity sequence and scoped ordinal/UUID/PCI joins, missing-update hold, faded single-device and changed-order transfer, four retrieval answers. Author data checks reject seven inconsistent identity/context cases and accept the minimum requested mapping. Selected official enumeration/identifier sections retrieved with receipts; no actual driver/device/environment/process query, general vendor parser, MIG/prefix contract, installed runtime or hardware/teaching approval.",
+            "remaining": "M3 practice/lab, M4/integration/exam/catalog; independent module/source/practitioner/manual accessibility/timing/release. Earlier M1/M2 drafts/labs remain unsigned; F01 owner access answer pending."
           }
         }
       },
@@ -521,7 +528,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T14:22:59Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/136f3308b622523885309f39944987429a69e803/ai/board/20261019T1428-codex-f02-m2-capacity-lab-review.md",
-  "latest_poll_scope": "Authenticated watched mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI, status schedule and both distinct recovery refs remain unchanged except own private F02 M2 lab source/handoff. One retained status schedule run; no coordinator/Gemini review, fixing SHA or owner access answer. Substantive author evidence recorded only; no whole-review cursor advancement, finding closure, completed-module/source/hardware/release approval. Draft progress remains quiet."
+  "last_check_started_utc": "2026-10-19T14:37:59Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/ac6e63b6692544fc549d0f1cf59a879f8c22defc/ai/board/20261019T1442-codex-f02-device-identity-episode-review.md",
+  "latest_poll_scope": "Authenticated remote mains/canonical instruction identities/boards/PR heads/comments/reviews, agency CI/status schedule and distinct recovery refs unchanged apart from own F02 author records. One retained scheduled status run; no coordinator/Gemini response, fixing SHA or owner access decision. Recorded substantive M3 source draft and evidence only; no whole-review cursor movement, finding closure, completed module or self-approved source/hardware/release status. Draft progress remains quiet."
 }
