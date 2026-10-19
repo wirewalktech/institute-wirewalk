@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "334ca694fa80838328dcf9bfa56f0ce8087dc21d",
+      "last_observed_sha": "062ad387305d900c4a492900fa8767d4b500f23e",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -51,7 +51,7 @@
         "conclusion": "success",
         "minutes_since_latest_visible_run": 134.8,
         "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested.",
-        "unchanged_schedule_check_utc": "2026-10-19T07:51Z",
+        "unchanged_schedule_check_utc": "2026-10-19T08:06Z",
         "unchanged_schedule_run_total_count": 0
       }
     },
@@ -133,7 +133,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "178cb7cfe370800425f2274d40b2a4c88ee1106c",
+      "last_observed_sha": "7b315bd2e6b155ffad2622b5d6b176bb8bc5f1f4",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -148,8 +148,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "18cdab3e61f1f57e6bd54b0053a630b2944fc1dc",
-          "scope": "14 active coordinator manufacturing paths versus80ea676 inventoried only:12741 additions10584 deletions. No finished review handoff, new semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
+          "sha": "aa2d0e48e844370664cfb135c9dd905137246cce",
+          "scope": "15 active coordinator manufacturing lesson paths versus18cdab3 inventoried only:619 additions740 deletions. No finished handoff, semantic/exam/lab/source/practitioner approval, Gemini attribution or WIA016 closure."
         }
       },
       "codex_authored_drafts": {
@@ -192,7 +192,7 @@
           "mpi_project_preparation_scope": "Original9ab8790 milestone: host partition/reference and MPI collective source;9958 optimized and9958 host ASan/UBSan assertions only at that time. MPI source was then uncompiled. Superseded for actual local compile/run by separately recorded fa2b586 runtime checkpoint below; earlier CPU results are not MPI/GPU/RDMA evidence.",
           "full_nvcc_blueprint_sha": "bfe9b1e1455608559e8f36e51ddd246e407bf81d",
           "full_nvcc_blueprint_scope": "Six-outcome/module full design, three personas, proposed lab families, practice rubric and48-item scenario bank design; no actual lessons/exam/graphs or duration. Narrow official CMake source check identifies latest4.5.0-rc1, not a selected stable teaching baseline; execution/compatibility unverified. Independent blueprint review pending; public catalog/course JSON unchanged.",
-          "latest_blueprint_handoff": "ai/board/20261019T0727-codex-full-profiling-blueprint-review.md",
+          "latest_blueprint_handoff": "ai/board/20261019T0809-codex-memory-concurrency-blueprint-review.md",
           "full_debugging_blueprint_sha": "5539fb57abd66165260ed40467c1808f124b8ad8",
           "full_debugging_blueprint_scope": "Dedicated C04 full author design: three personas, six outcomes/modules, proposed fault/lesson/Decision Lab progression, five-criterion practice rubric and48-item scenario families. No actual fault pack/lessons/bank/graphs, duration/public ID, debugger/sanitizer/GPU result or qualification. Independent scope/source/practitioner/feasibility/assessment review and all execution remain pending.",
           "full_mpi_blueprint_sha": "234f63ab69430021d65e22e611aea9b8515e3f40",
@@ -212,7 +212,9 @@
           "full_profiling_blueprint_sha": "db08c5be31ec7b911d5e197f897fbffbe0eab69b",
           "full_profiling_blueprint_scope": "P01 author design: three personas, six outcomes/modules, representative system capture, dependency/critical-path reasoning, focused kernel question, controlled numerical/performance experiment and reproducible handoff. Proposed practice rubric, seven interactive scenarios and48 scenario-item families remain designs. Narrow current official Nsight Systems/Compute reads only; no profiler/GPU capture, compatible target, lessons/bank/graphs, public ID/duration or independent approval. Source/target/practitioner/assessment/accessibility/timing and review before lessons remain pending.",
           "local_mpi_ring_sha": "bae06fa7db7543aa1e0b06052a5ad7d9ffc31bba",
-          "local_mpi_ring_scope": "Original host point-to-point ring compiles/runs on same isolated ephemeral MPICH5.0.2/one-Mac route.66 harness cases pass:48 valid at1/2/3/4 ranks,count0/1/7/257,rounds1/3/64; four safely injected pre-send semantic corruptions detected (application exit1),14 invalid-input coordinated exits2. Per-element source checks and independent Python per-rank sums, source/binary/helper hashes/raw logs retained. Initiate Irecv/Isend with distinct buffers then Waitall before access/reuse. No inspected owned executables remain after normal jobs; no new timeout qualification. No useful overlap/progress,64-rank capability,multi-host/GPU/RDMA/transport/performance/error recovery/MPI sanitizer or independent approval. Prior Hydra deadline diagnostics remain unresolved. No lesson/catalog/credential/release claim."
+          "local_mpi_ring_scope": "Original host point-to-point ring compiles/runs on same isolated ephemeral MPICH5.0.2/one-Mac route.66 harness cases pass:48 valid at1/2/3/4 ranks,count0/1/7/257,rounds1/3/64; four safely injected pre-send semantic corruptions detected (application exit1),14 invalid-input coordinated exits2. Per-element source checks and independent Python per-rank sums, source/binary/helper hashes/raw logs retained. Initiate Irecv/Isend with distinct buffers then Waitall before access/reuse. No inspected owned executables remain after normal jobs; no new timeout qualification. No useful overlap/progress,64-rank capability,multi-host/GPU/RDMA/transport/performance/error recovery/MPI sanitizer or independent approval. Prior Hydra deadline diagnostics remain unresolved. No lesson/catalog/credential/release claim.",
+          "full_memory_concurrency_blueprint_sha": "10e1240b054c44834ae627dcadc269ab3fcc08e2",
+          "full_memory_concurrency_blueprint_scope": "C03 author design: five outcomes/four modules from layout/byte ownership and partial tiles to stream/event slot reuse and graph eligibility/change policy; explicit C01 entry without circular C04/P01 dependency. Proposed38 scenario families, five Decision Labs/four-criterion formative capstone remain designs. Fictional case staging arithmetic checked only, selected current official guide/Runtime API13.4 sections read; no CUDA/graph/stream execution, allocation, target support, performance, lessons/bank/graphs/public ID/duration or independent approval. Graph analytical/practical scope and full source/target/instructional/practitioner/assessment/accessibility/release evidence pending; lessons held for blueprint review."
         }
       },
       "current_reclaimed_course_ownership": {
@@ -361,7 +363,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T07:51:27Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/178cb7cfe370800425f2274d40b2a4c88ee1106c/ai/board/20261019T0740-codex-local-mpi-ring-source-review.md",
-  "latest_poll_scope": "Authenticated watched defaults, canonical instructions/boards, four draft PR heads/reviews/comments and agency CI unchanged; Studio/Forensics/Orders main SHAs also unchanged. Worker178cb7c and recovery18cdab3 unchanged. No new independent review/fixing handoff, Gemini return, source approval or release evidence. WIA019 retained schedule count0 unchanged, no repeat ACK/notification; WIA017 remains withdrawn. Existing P01 design and66-case local host ring remain pending independent review with their stated limitations; no runtime checks repeated unchanged. Saved monitor checkpoint refreshed to include these existing artifacts. Whole-review cursors and all prior outstanding course/site/agency/target/human/payment/credential/release scopes retained."
+  "last_check_started_utc": "2026-10-19T08:06:27Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/7b315bd2e6b155ffad2622b5d6b176bb8bc5f1f4/ai/board/20261019T0809-codex-memory-concurrency-blueprint-review.md",
+  "latest_poll_scope": "Authenticated default mains/canonical instructions/boards and four draft PR review states unchanged except own records; agency CI healthy and independent review pending. WIA019 retained schedule count0 unchanged, no repeat ACK/notification; WIA017 withdrawn. Recoveryaa2d0e4 versus18cdab3 inventories15 active coordinator lesson paths only,619 additions740 deletions; no semantic approval or Gemini attribution. New own C03 memory/concurrency blueprint10e1240 submitted for independent review, with selected primary-source ledger and fictional case arithmetic only. No CUDA execution, public catalog/lesson changes or self-approval. Prior whole-review cursors and outstanding course/site/agency/target/human/payment/credential/release scopes retained."
 }
