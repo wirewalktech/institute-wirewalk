@@ -32,7 +32,7 @@
         "WIA019_schedule_and_certification_wording_only": "82718cd3255ff2c7bb9ebc58c65d9121ec1ee4eb",
         "WIA022_120_course_descriptions_catalog_and_live_render_only": "c5e97407d7d6567f406a914bdbbd3fbac3e2f064"
       },
-      "last_observed_sha": "6e155c5e080047d7401f6f0a208283d8dd682b94",
+      "last_observed_sha": "3fea576716e2096380dd1c50fa9c914a141e7d31",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -169,7 +169,7 @@
           "scope": "Held seven-course coordinator branch F59-F65:191paths122261 additions inventoried versus622b5e8. Independent strict structure7OK/zero errors, word-count warnings0/0/8/0/6/0/15. Read review disclosure/scope excerpts in all seven and mfg225 m1-l1 fully; selected primary OEE/abstract claims and14 independent Decimal checks pass. No full review/source/exam/lab/practitioner/human timing/accessibility or35/36 approval. Publication held; not Gemini work or WIA016 closure."
         }
       },
-      "last_observed_sha": "b213b7076d739eeec169161dff36467231a5ea2e",
+      "last_observed_sha": "5bb33db9bdc2ae505d7b6b960366376828a17cef",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -290,8 +290,14 @@
           "current_f02_m1_authoring": {
             "source_sha": "8c8a82481420e2965e9eeb545a9e29df4e0d0138",
             "handoff": "ai/board/20261019T1344-codex-f02-topology-join-episode-review.md",
-            "status": "Two private author lesson drafts; independent first-module spot-check pending, M1 Decision Lab absent",
-            "scope": "M1L1 1852 plus M1L2 1744 raw words =3596, no approved hours/completed-module claim. Second original synthetic view packet teaches OS/logical-ID/context joins, allowed versus observed placement, H1/H2 provenance and faded J1 transfer. Pure Python checks fixed mappings/changed permission, six inconsistent joins rejected and minimum-required mapping accepted; no real utility/affinity/Linux/device/performance result. Four new inline retrieval answers and selected cgroup-v1 conceptual receipt; no cgroup-v2 setup or actual capture. Independent source/practitioner/timing/manual accessibility and later module/lab/exam/catalog/release gates remain open; no F01 access approval inferred."
+            "status": "Two private author lesson drafts plus M1 Decision Lab prototype; independent source/instructional/practitioner spot-check and course integration pending",
+            "scope": "M1L1 1852 plus M1L2 1744 raw words =3596, no approved hours/completed-module claim. Second original synthetic view packet teaches OS/logical-ID/context joins, allowed versus observed placement, H1/H2 provenance and faded J1 transfer. Pure Python checks fixed mappings/changed permission, six inconsistent joins rejected and minimum-required mapping accepted; no real utility/affinity/Linux/device/performance result. Four new inline retrieval answers and selected cgroup-v1 conceptual receipt; no cgroup-v2 setup or actual capture. Independent source/practitioner/timing/manual accessibility and later module/exam/catalog/release gates remain open; no F01 access approval inferred.",
+            "lab_prototype": {
+              "source_sha": "0560999ff058a825bf7cf703bca5d3a310924923",
+              "handoff": "ai/board/20261019T1403-codex-f02-m1-decision-lab-review.md",
+              "scope": "Original synthetic three-decision practice, 27 enumerated paths with three endings and recovery/hold routes; shared pure engine used read-only. Author 12 grouped browser checks, 26 initial viewport/theme cases and one narrow ending case pass; observed main-page errors/external requests zero. Screenshots inspected. Local legal-choice resume/report only, no learner record. Counts are scoped author evidence, not hardware, teaching, accessibility or full course approval.",
+              "remaining": "Independent module/source/practitioner/manual accessibility/timing review; catalog and required-lab completion integration absent, later modules/integration/exam unfinished. No real host capture, execution, owner Linux approval, target write or release."
+            }
           }
         }
       },
@@ -502,7 +508,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T13:37:59Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/b213b7076d739eeec169161dff36467231a5ea2e/ai/board/20261019T1344-codex-f02-topology-join-episode-review.md",
-  "latest_poll_scope": "Watched remote mains/canonical instruction identities/boards/PR states/agency CI/status schedule unchanged apart from own second F02 author episode8c8a824/handoff. No new independent review or Gemini return/resolved blocker. Two drafts remain unapproved; M1 lab and later course work unfinished. Preserve whole-review cursors/older scopes and quiet intent; no new approval request, target install/dispatch/deploy/charge/learner/credential write."
+  "last_check_started_utc": "2026-10-19T13:52:58Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/5bb33db9bdc2ae505d7b6b960366376828a17cef/ai/board/20261019T1403-codex-f02-m1-decision-lab-review.md",
+  "latest_poll_scope": "Authenticated watched mains/instructions/boards/review heads/comments/reviews and agency CI remain unchanged except own private F02 M1 lab source/handoff. One retained scheduled status run; no new coordinator/Gemini review, fixing SHA or owner access answer. Added substantive author prototype evidence only, no review cursor advancement or independent/module/course approval. Prior finding, release and access scopes retained; progress alone remains quiet."
 }
