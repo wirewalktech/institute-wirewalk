@@ -30,7 +30,7 @@
         "OB3_status_mirror_workflow_and_legacy_Pages_config_WIA017_only": "bcbea4c5d80f0f1b03d45efab62c50cc458dab3c",
         "OB3_initial_bot_commit_exact_Pages_and_public_status_signature_verified": "09f5d1cf2c4a1a8e75abaa7c71fe4fe2f2b1d2b9"
       },
-      "last_observed_sha": "5499ea8a97e90b238476d8dfe21aa01a3c0c8b96",
+      "last_observed_sha": "8badbc1d6c2d89b5d34adada5cdd775813d193ba",
       "branches_observed": {
         "feature/iso-standards-transparency": {
           "sha": "6f7d7cff160542583cb87c2445bd67b31241f0be",
@@ -39,11 +39,18 @@
       },
       "status_workflow_observation": {
         "workflow": ".github/workflows/badges-status.yml",
-        "poll_utc": "2026-10-19T04:09Z",
+        "poll_utc": "2026-10-19T05:10Z",
+        "workflow_id": 388951848,
+        "workflow_state": "active",
+        "default_branch": "main",
+        "cron": "*/10 * * * *",
+        "scheduled_run_total_count": 0,
+        "all_run_total_count": 1,
         "latest_run": 39192258852,
         "event": "workflow_dispatch",
         "conclusion": "success",
-        "scope": "Only the previously verified initial manual-dispatch run is listed. Scheduled changed-bit/latency/failure monitoring remains unverified, not a new observed failure. WIA017 remains withdrawn."
+        "minutes_since_latest_visible_run": 134.8,
+        "scope": "WIA019 P2 operational follow-up: no retained schedule-event execution despite ten-minute configuration and extended observation. Cause unknown, no failed conclusion or stale real learner badge observed. Initial manual publication remains verified, WIA017 remains withdrawn. Coordinator investigation/acknowledgement and freshness monitoring evidence requested."
       }
     },
     "wirewalktech/wirewalk-institute-worker": {
@@ -68,7 +75,8 @@
         "LX Wave 1 full changed course/lab/retrieval content semantics, remaining admin/build changes and human NVDA/VoiceOver verification",
         "Coordinator-disclosed invalid_json duplicate usage-record overcount remains a separate correctness follow-up; not independently reproduced or resolved.",
         "OB3 initial manual-dispatch mirror publication and public status-list signature verified; original WIA-017 publication inference withdrawn as contradicted by exact runtime evidence. Scheduled changed-bit revocation latency/failure monitoring, actual learner badge/wallet interoperability, full implementation/definitions/privacy/accessibility/conformance and target lifecycle remain unverified. No blanket credential or course approval.",
-        "WIA-018 hw001 wording/assumption correction and independent fixing-SHA verification. Six lesson files,32 stems/options/keys, selected primary specifications and15 local arithmetic checks reviewed; full explanations/source coverage, human timing/accessibility/target assessment and v2 approval remain outstanding. No GPU execution or learner writes."
+        "WIA-018 hw001 wording/assumption correction and independent fixing-SHA verification. Six lesson files,32 stems/options/keys, selected primary specifications and15 local arithmetic checks reviewed; full explanations/source coverage, human timing/accessibility/target assessment and v2 approval remain outstanding. No GPU execution or learner writes.",
+        "WIA-019 P2 operational follow-up: retained API history has no schedule-event execution at05:10UTC despite active ten-minute cron; only initial manual dispatch134.8minutes earlier. Investigate cause and establish repeated automatic execution/freshness monitoring. No stale real badge or failed-run incident observed; WIA017 remains withdrawn."
       ],
       "last_examined_sha": "46544302159b87e33dbbc98c5ed0eb785f21d3fb",
       "scoped_checkpoints": {
@@ -123,7 +131,7 @@
           "scope": "Held six-course coordinator branch:166files85264insertions inventoried. Independent structural validation sixOK/zero errors with word-count warning counts10/14/9/9/11/0. Read selected hls155 first lesson/review and AI/human disclosures in all six reviews; selected official outpatient documentation rules checked. Original unsupported-input pattern not reproduced in selected revised examples, but WIA016 remains open. No full lesson/code/exam/lab/source/qualified practitioner or release approval; AI gate scores are not human review."
         }
       },
-      "last_observed_sha": "2fcc93631700f94521577397642e537d0f181943",
+      "last_observed_sha": "64e9c643d68c22fc0cf26d6b5c4dd13e914e4de6",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -138,8 +146,8 @@
           "scope": "Recovery snapshot metadata only; no source/content approval."
         },
         "wip/autosave": {
-          "sha": "005710f74087b1f33fc9f68b957a3a26d2dd31d6",
-          "scope": "Six-path active coordinator draft delta versus5457805 inventoried only:2317 additions164 deletions across mfg120/mfg235/mob245 blueprint/course metadata. No new factual/semantic/exam/lab/practitioner or release approval; no Gemini attribution."
+          "sha": "411d3ad0978fd4df3f55c3d8627d38f2681b3ad7",
+          "scope": "11-path coordinator active draft delta versus005710f inventoried only (4235 additions605 deletions), manufacturing/mobility blueprints/metadata. No finished handoff or new semantic/exam/lab/source/human approval or Gemini attribution."
         }
       },
       "codex_authored_drafts": {
@@ -179,7 +187,10 @@
           "nvcc_project_preparation_sha": "eb33dd0138f2fba051fe07087c349574eb645dc6",
           "nvcc_project_preparation_scope": "Original multi-file host/kernel/device-operation sources and plan-only build/link CLI. Six host CLI boundary controls pass, fake compiler never invoked, no build directories created. All CUDA files and complete/missing-definition device-link outcomes uncompiled/unexecuted;27 runtime cases planned, zero GPU-result claim. Actual isolated source/build/diagnostic/hardware and independent blueprint review pending.",
           "mpi_project_preparation_sha": "9ab8790807439e99236d186af05fb6cd23b08524",
-          "mpi_project_preparation_scope": "Original bounded host partition/reference and uncompiled MPI collective source. Optimized and host ASan/UBSan builds each9958 assertions pass, including direct coverage and omitted/duplicate/corrupt-work controls. These are CPU checks only; MPI compilation, collective execution, invalid-input coordinated exit and timeout/cleanup remain unverified. No RDMA/GPU/transport/cluster/scaling result or independent blueprint approval."
+          "mpi_project_preparation_scope": "Original bounded host partition/reference and uncompiled MPI collective source. Optimized and host ASan/UBSan builds each9958 assertions pass, including direct coverage and omitted/duplicate/corrupt-work controls. These are CPU checks only; MPI compilation, collective execution, invalid-input coordinated exit and timeout/cleanup remain unverified. No RDMA/GPU/transport/cluster/scaling result or independent blueprint approval.",
+          "full_nvcc_blueprint_sha": "bfe9b1e1455608559e8f36e51ddd246e407bf81d",
+          "full_nvcc_blueprint_scope": "Six-outcome/module full design, three personas, proposed lab families, practice rubric and48-item scenario bank design; no actual lessons/exam/graphs or duration. Narrow official CMake source check identifies latest4.5.0-rc1, not a selected stable teaching baseline; execution/compatibility unverified. Independent blueprint review pending; public catalog/course JSON unchanged.",
+          "latest_blueprint_handoff": "ai/board/20261019T0509-codex-full-nvcc-blueprint-review.md"
         }
       },
       "current_reclaimed_course_ownership": {
@@ -222,6 +233,13 @@
           "reviewed_sha": "5881dce7edc1c9f7284b057b4fc56fce81f65e78",
           "evidence_sha": "28a6596cd7f21aa50b89e27f290f976cfca62430",
           "scope": "Existing v1 hardware assessment needs an explicit fixed-precision/all-GPU-resident memory assumption before drawing a mandatory GPU-count conclusion; official CPU/disk offloading documentation supplies a counterexample to the unconditional statement. Arithmetic correct. No target learner incident or new recovery regression asserted. Detailed exam evidence remains private; acceptance requires defensible assumptions/key/explanation and independent follow-up of fixing SHA."
+        },
+        "WIA-019": {
+          "severity": "P2",
+          "status": "open operational follow-up/recommendation; acknowledgement and automatic-execution/freshness evidence pending",
+          "reviewed_sha": "8badbc1d6c2d89b5d34adada5cdd775813d193ba",
+          "evidence_sha": "64e9c643d68c22fc0cf26d6b5c4dd13e914e4de6",
+          "scope": "Active ten-minute badge mirror has zero retained schedule-event runs; only successful manual dispatch from134.8minutes earlier at05:10UTC. Operational cadence remains undemonstrated. No root cause, failed run or stale actual credential asserted; separate from withdrawn WIA017. Acceptance requires actual repeated automatic execution or reviewed alternative and appropriate freshness/isolated propagation evidence, no real learner writes."
         }
       },
       "vendor_review_research": {
@@ -242,8 +260,8 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "a0ada85eec7edab9d91bac574ae42b0171f86138",
-      "scope": "Latest coordination and claims read; existing Studio/Orders drafts remain pending independent review. New append-only cross-board pointer to private Institute WIA018 hardware assessment recommendation at a0ada85; no acknowledgement inferred. Existing Studio/Forensics release and real payment/delivery gates retained.",
+      "last_observed_sha": "ff6855befeeadd32d7866233531e332c2ac21b6e",
+      "scope": "Claims and coordinator messages unchanged. New append-only cross-site pointer atff6855b links WIA019 automatic badge-refresh schedule evidence follow-up and requests coordinator acknowledgement; not an acknowledgement itself. WIA018 pointer retained. No Studio/Forensics/Orders ownership or review/release change.",
       "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
       "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     },
@@ -321,7 +339,7 @@
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T04:50:56Z",
-  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/2fcc93631700f94521577397642e537d0f181943/ai/board/20261019T0455-codex-mpi-partition-cpu-evidence.md",
-  "latest_poll_scope": "Coordinator/default mains, four open draft PR reviews/comments and agency review remain unchanged; agency CI healthy. Studio/Forensics/Orders main SHAs unchanged. Status mirror only initial successful manual dispatch remains observed, no new failure. Coordinator recovery005710f adds six active blueprint/metadata paths, inventory only. Continued own E17 MPI project preparation with actual host partition checks and explicitly uncompiled/unexecuted MPI source. No new actionable audit finding or self-approval. Keep full-review cursors, WIA016/WIA018, WIA013/014/015 target gates, WIA017 withdrawal, held batchA human review and all older unfinished/release boundaries. No deployment/merge/real charge/learner/payment/credential writes."
+  "last_check_started_utc": "2026-10-19T05:05:57Z",
+  "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/64e9c643d68c22fc0cf26d6b5c4dd13e914e4de6/ai/board/20261019T0510-codex-wia019-schedule-evidence-followup.md",
+  "latest_poll_scope": "New WIA019 P2 operational evidence follow-up quantifies zero retained schedule-event badge mirror runs at05:10UTC despite active ten-minute configuration; only successful manual run134.8minutes earlier. Cause/stale real credentials not inferred; WIA017 withdrawal stands. Sent coordinator exact private records and cross-site pointer; no configuration/dispatch/learner change. Existing review PRs/agency CI unchanged. Recovery411d3ad inventoried11paths only. Own full C02 NVCC designbfe9b1e adds source/assessment scope awaiting independent review, no lessons/public catalog/duration or execution claims. All whole-review cursors and older outstanding release/target gates retained."
 }
