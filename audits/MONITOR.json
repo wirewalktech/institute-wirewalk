@@ -103,7 +103,7 @@
           "scope": "Selected earlier recovery-draft review retained. Coordinator14a992f confirms inherited coordinator v1, not Gemini v2/release handoff. WIA-016 acknowledged open; no fixing content verified. Full lessons/exams/labs/timing/clinical/vendor/legal review remains outstanding. New4d8067a snapshot adds three board records only versusb05c3a6; no content/src/tools/test delta."
         }
       },
-      "last_observed_sha": "af9a3892a420660d65a08a87432734cee257a353",
+      "last_observed_sha": "850ce294d1e23af1e140e347dc3fead745754934",
       "branches_observed": {
         "ob3": {
           "sha": "4b395c73a8fc3174319e687795cf9e8c18522605",
@@ -123,6 +123,11 @@
           "sha": "f6643fe9f31b6ed08418e0c527843a5ef599e374",
           "status": "N1\u2013N4 blueprint revision submitted for coordinator spot-check. No independent approval or lesson-authoring gate passed; actual course package absent (validator MISSING, not OK/WAITLIST). Primary-source/date and role arithmetic checks are scoped author checks. N5\u2013N9, current statutory/rule currency, actual labs/lessons/exam and practitioner/full release review remain outstanding.",
           "handoff": "ai/board/20261019T0043-codex-pro130-n1-n4-spotcheck-request.md"
+        },
+        "pro-150": {
+          "sha": "42a5da8da5520d51deb66323ac9c65e9244f6d1a",
+          "status": "P1\u2013P7 blueprint revision plus synthetic KRI fixture submitted for coordinator independent re-review. Author arithmetic/data assertions only, no executable lab graph or full course approval; course validator MISSING, not OK/WAITLIST. Remaining exhibits/sidebars, course/lesson/lab/exam package, qualified practitioner and learner validation open.",
+          "handoff": "ai/board/20261019T0059-codex-pro150-p1-p7-rereview-request.md"
         }
       }
     },
@@ -138,13 +143,14 @@
       "latest_ci_status": "98e464c25b87ee51ef103a642ffdc0b123ba22c7: completed success"
     },
     "wirewalktech/wirewalk-web-ops": {
-      "last_observed_sha": "5edfda141c53ed23457d163349321ebd87c9f030",
+      "last_observed_sha": "14089e49cb51119b05b77fccde642809c9af91bb",
       "scope": "Owner-requested latest-message check found missed Studio/Forensics handoff and reminder. Read protocol/property notes, claimed both site lanes in AGENTS.md and posted acknowledgement. No site implementation, payment lifecycle, mail delivery, Turnstile hostname or broad factual approval. Queue: pro130/pro150 revisions, gov001/cyb001, then sites. Shared services retain coordinator ownership.",
-      "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md"
+      "handoff": "ai/board/20261019T0036-codex-studio-forensics-claim-and-priority.md",
+      "additional_claim_observed": "Main-site session owns www content/SEO under b6e69f4; read board20261019T0051 and preserve claim. No independent source/live verification of its in-progress work."
     }
   },
   "findings_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-17-baseline.md",
-  "last_check_started_utc": "2026-10-19T00:39:26Z",
+  "last_check_started_utc": "2026-10-19T00:54:26Z",
   "latest_followup_record": "https://github.com/wirewalktech/wirewalk-institute-worker/blob/main/audits/2026-10-18-followup-2155.md",
-  "latest_poll_scope": "No new external default-head/board changes at poll. Continued own claimed priority: pro130 N1\u2013N4 blueprint revisionf6643fe sent for independent coordinator spot-check with exact author checks and explicit course-validator MISSING result. No course release, graph-runtime approval or self-approval. Pro150 revisions next while waiting; site claims remain queued. Agency CI98e464c successful; no independent agency review. All whole-repository review cursors, WIA016/AEA001 and other remaining review scope preserved."
+  "latest_poll_scope": "Authenticated four-repository fetch/boards: new web-ops main-site content/SEO claim read, ownership preserved; no new Claude/Gemini correction or agency review. Continued own priority pro150 P1\u2013P7 blueprint/KRI revision42a5da8, sent for independent re-review at board0059 with reproducible arithmetic/data checks and explicit validator MISSING boundary. Pro130 spot-check pending; gov001/cyb001 next. All whole-repository review cursors and remaining course/engineering findings preserved; no release/deploy/billing/data operation."
 }
