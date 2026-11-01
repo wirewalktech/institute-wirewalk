@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-235.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI into Quality Management: SPC, CAPA, ISO 9001 and IATF 16949",
+  "description": "Follow one composite tier-1 supplier under controlled shipping through six quality jobs: an SPC layer that routes every signal without moving limits, an 8D grounded in evidence, PFMEA linkage and predictive quality, warranty coding behind a safety bypass, validating vendor AI and an AI vision station, and the AI-in-QMS procedure. Every exercise uses synthetic plant data, and every module ends in a Decision Lab.",
+  "humanCode": "MFG-235",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "manufacturing",
+    "quality management",
+    "spc",
+    "capa",
+    "8d",
+    "pfmea",
+    "control plan",
+    "iso 9001",
+    "iatf 16949",
+    "warranty analytics",
+    "nhtsa",
+    "cpsc",
+    "msa",
+    "eqms",
+    "automotive suppliers",
+    "controlled shipping"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-235.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI into Quality Management: SPC, CAPA, ISO 9001 and IATF 16949"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-235/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an SPC monitoring layer on a replay, comparing run rules with a multivariate or drift detector on detection delay and false alarms, routing each signal to the reaction plan without moving control limits, and auditing an automatically chosen capability distribution",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-1",
+      "targetCode": "mfg-235.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and evaluate a retrieval-grounded 8D draft in which every number traces to a record, D4 explains both occurrence and escape and how each was verified, and a similar past 8D is not copied",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-2",
+      "targetCode": "mfg-235.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze PFMEA, control-plan and work-instruction linkage with a script and an LLM, reject unsupported rating changes, and decide whether a predictive-quality model may enter the control plan",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-3",
+      "targetCode": "mfg-235.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a warranty-narrative classifier against expert codes and place a deterministic safety bypass ahead of any model so that product-safety decisions and US reporting clocks never wait on a model",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-4",
+      "targetCode": "mfg-235.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze requirements documents with AI by diffing customer-specific requirements revisions against a gold list and checking audit findings for edition-correct ISO 9001 and IATF 16949 citations",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-5",
+      "targetCode": "mfg-235.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Validate vendor AI for a stated intended use with thresholds fixed before testing, decide go or no-go with re-test triggers, and qualify an AI vision station on plant parts, including borderline ones, before it is credited as a detection control",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-6",
+      "targetCode": "mfg-235.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a quality AI business case and a management-review narrative by separating booked cost-of-poor-quality reductions from avoided temporary costs and freed hours, net of run costs, and by reading monthly and rolling ppm correctly",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-7",
+      "targetCode": "mfg-235.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create an AI-in-QMS procedure and a release decision for one quality AI use, and test the procedure against scenarios from the course",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-235/#outcome-8",
+      "targetCode": "mfg-235.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-235.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

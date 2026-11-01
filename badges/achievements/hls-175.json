@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-175.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Medical Practice Managers and Administrators",
+  "description": "Follow one composite Texas physician group through six months of real decisions: fixing its phones with an AI agent, reaching no-show patients without overbooking the wrong ones, clearing a fax backlog with document AI, piloting ambient scribes, and finding the denial cause an AI analysis got wrong, while keeping patient data where it belongs and reporting honestly to the physician owners.",
+  "humanCode": "HLS-175",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "healthcare ai",
+    "practice management",
+    "medical practice manager",
+    "ai phone agent",
+    "patient scheduling",
+    "no-show prediction",
+    "patient reminders",
+    "tcpa",
+    "fax automation",
+    "document ai",
+    "good faith estimate",
+    "ambient documentation",
+    "ai scribe",
+    "denial management",
+    "ai policy",
+    "ai inventory",
+    "hipaa",
+    "section 1557",
+    "texas ai law"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-175.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Medical Practice Managers and Administrators"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-175/",
+    "narrative": "To earn this certificate a learner must: complete all 14 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify staff AI uses against HIPAA minimum necessary, business associate and de-identification rules, and record each AI feature in an inventory with an owner, metric and review date",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-1",
+      "targetCode": "hls-175.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare AI phone-agent, staffing and overflow options on year-one cost, escalation control and language coverage, and write the agent's routing, red-flag, identity and disclosure rules",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-2",
+      "targetCode": "hls-175.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit an AI phone agent with a stratified weekly sample, compute its error rates and trace each failure to a cause, and check outbound AI calls and texts against the TCPA health-care exemption",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-3",
+      "targetCode": "hls-175.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a no-show model by patient group (share flagged, precision, who waits) before choosing between overbooking, targeted outreach and a limited mix",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-4",
+      "targetCode": "hls-175.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set auto-file rules for document AI, compute a misfile rate, run the breach-assessment steps for a misfiled result, and check an AI-drafted Good Faith Estimate against 45 CFR 149.610 and 149.620",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-5",
+      "targetCode": "hls-175.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an ambient-scribe pilot with a comparison group, consent workflow, note audit and stop rules, and write a keep, expand or stop memo that reports the change net of the comparison group",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-6",
+      "targetCode": "hls-175.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile an AI-produced financial analysis to the source system before reporting it, and report AI results to owners with measured and projected, cash and capacity kept separate",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-175/#outcome-7",
+      "targetCode": "hls-175.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-175.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

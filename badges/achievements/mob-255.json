@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mob-255.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "ADAS and Automated Driving Safety Assurance: NHTSA, FMVSS and UL 4600",
+  "description": "One composite automaker and its driverless subsidiary, six problems with a legal clock or a release gate: a five-day crash report, a five-working-day defect report, the 2029 AEB standard, a UL 4600 assessor visit, a software release and a Part 555 exemption filing. AI extracts, clusters and drafts; a named person decides. Every exercise uses synthetic data written by Wirewalk.",
+  "humanCode": "MOB-255",
+  "fieldOfStudy": "AI in Transport, Logistics and Mobility",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "automotive",
+    "adas",
+    "automated driving",
+    "nhtsa",
+    "fmvss",
+    "fmvss 127",
+    "standing general order",
+    "part 573",
+    "early warning reporting",
+    "ul 4600",
+    "safety case",
+    "exemptions",
+    "part 555",
+    "ota updates",
+    "scenario-based testing",
+    "safety performance indicators",
+    "release gates"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mob-255.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: ADAS and Automated Driving Safety Assurance: NHTSA, FMVSS and UL 4600"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mob-255/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate incident packets for SGO 2021-01 reportability: quote the source text for each criterion or mark it not stated, reconstruct the timeline from offset EDR, log and video sources to answer the 30-second engagement question, assign the request and due date from first notice, and route every missing fact to a query",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-1",
+      "targetCode": "mob-255.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Judge whether an AI tool is fit for a safety-compliance role from gold-set or agreement results, with an acceptance rule set before the results, false negatives weighted by consequence, the confidence the sample supports, and version pinning and re-test triggers",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-2",
+      "targetCode": "mob-255.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze complaints, warranty claims, field reports and exposure data with AI clustering and de-duplicated, exposure-normalized rates by software version, and write a committee brief that states facts, uncertainty and the open Part 573 determination without recommending an outcome",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-3",
+      "targetCode": "mob-255.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an AI-generated FMVSS No. 127 test matrix clause by clause against 49 CFR 571.127, judge results for contact, thin margins and false activation, and decide where simulation can and cannot substitute for track time",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-4",
+      "targetCode": "mob-255.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a UL 4600 safety-case fragment by classifying claim-to-evidence links for version and vehicle match, rating AI-proposed defeaters with recorded reasons, and computing ODD coverage against a stated taxonomy with synthetic and real-world evidence counted separately",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-5",
+      "targetCode": "mob-255.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a scenario-class release gate and a field safety-performance-indicator monitor that catch a rare, severe regression an improved aggregate hides, and write the go/no-go memo and investigation ticket",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-6",
+      "targetCode": "mob-255.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a Part 555 exemption case for an ADS vehicle without manual controls with a clause-by-clause traceability table, rating each equivalence claim against evidence from the deployed configuration and checking the deployment plan and launch date against statutory limits, grant-style conditions and precedent",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-7",
+      "targetCode": "mob-255.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a safety readiness package that combines module deliverables, names the decider for each item, states open risks and the honest effect on the business plan, and gives a safety board a recommendation it can act on",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-255/#outcome-8",
+      "targetCode": "mob-255.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mob-255.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

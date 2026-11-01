@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-275.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI into Practice Management and EHR Workflows",
+  "description": "Follow one fictional 16-provider group practice through a year of AI projects: connect vendors to the PM and EHR without shared logins, score a voice agent's call log, test referral-fax extraction, bake off ambient scribes, catch E/M drift before a payer does, and tell the partners what the program really returned. Every exercise uses synthetic data.",
+  "humanCode": "HLS-275",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "healthcare ai",
+    "practice management",
+    "ambulatory ehr",
+    "ai integration",
+    "fhir",
+    "ai voice agent",
+    "patient scheduling",
+    "referral intake",
+    "document ai",
+    "ambient documentation",
+    "in-basket",
+    "eligibility verification",
+    "e/m coding",
+    "value measurement",
+    "hipaa",
+    "tcpa",
+    "42 cfr part 2",
+    "section 1557",
+    "ai governance"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-275.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI into Practice Management and EHR Workflows"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-275/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate how an AI tool should connect to a practice's PM and EHR given what it must read and write, and specify least-privilege scopes, an attributable service account, audit logging and business associate terms",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-1",
+      "targetCode": "hls-275.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate whether an AI patient-access agent is ready to go live and to place outbound calls, against gates set in advance and scored by caller language, with each call type's TCPA consent basis set by its purpose",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-2",
+      "targetCode": "hls-275.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and test a document-AI design for faxed referrals with source-page links, field-level accuracy, a patient-match gate, 42 CFR Part 2 routing and an exception queue sized to its staff",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-3",
+      "targetCode": "hls-275.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate ambient documentation and portal-message triage tools on the practice's own notes and messages against gates fixed before results are seen, weighing contract terms and cost, and design the per-visit recording-consent workflow an all-party-consent state requires",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-4",
+      "targetCode": "hls-275.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze revenue-cycle AI output for integrity risk and evaluate the review gate and overpayment response each finding requires under that payer's rules",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-5",
+      "targetCode": "hls-275.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a practice AI program's value by separating cost removed, measured incremental collections and capacity, netting run and review cost, and treating vendor ROI figures as claims",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-6",
+      "targetCode": "hls-275.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and run a practice AI inventory and quarterly review covering EHR-native features and staff chatbot use, with owner, BAA, risk-analysis entry, Section 1557 screen, a monitoring metric and a retirement trigger",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-7",
+      "targetCode": "hls-275.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a go/no-go package for one practice AI use case that partners can act on, with evidence against preset gates, consent controls, monitoring, rollback and an honest value line",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-275/#outcome-8",
+      "targetCode": "hls-275.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-275.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

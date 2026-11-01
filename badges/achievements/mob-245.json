@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mob-245.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Functional Safety for Automotive AI: ISO 26262, ISO 21448 (SOTIF) and ISO/PAS 8800",
+  "description": "A standards-engineering course built on one running case: a Tier 1 supplier (a fictional composite) delivering an ML pedestrian AEB camera to a US automaker against a signed development interface agreement, a safety release gate and a start-of-production date. Learners produce the HARA, the SOTIF catalog and acceptance criteria, the dataset specification, the validation exposure ledger, the target-equivalence report, the field escalation and the safety argument, and practice the trade-offs in six Decision Labs.",
+  "humanCode": "MOB-245",
+  "fieldOfStudy": "AI in Transport, Logistics and Mobility",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "adas",
+    "automotive",
+    "automotive spice",
+    "dataset specification",
+    "functional safety",
+    "hara",
+    "iso 21448",
+    "iso 26262",
+    "iso/pas 8800",
+    "machine learning assurance",
+    "pedestrian aeb",
+    "perception",
+    "safety case",
+    "sotif",
+    "tool confidence",
+    "validation"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mob-245.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Functional Safety for Automotive AI: ISO 26262, ISO 21448 (SOTIF) and ISO/PAS 8800"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mob-245/",
+    "narrative": "To earn this certificate a learner must: complete all 16 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an LLM-drafted HARA for an ML feature: route the work to the right standard and owner, remove invalid events, add missed ones, and rate S, E and C yourself with a sourced rationale",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-1",
+      "targetCode": "mob-245.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify each LLM, ML framework and compiler use for tool confidence with its compensating verification, and judge an LLM co-pilot by its measured recall and precision",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-2",
+      "targetCode": "mob-245.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a triggering-condition catalog in which every item has evidence, and set SOTIF acceptance criteria for missed pedestrians and phantom braking from risk and baseline data before testing",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-3",
+      "targetCode": "mob-245.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a safety measure and threshold from trade-off data, and write an independence argument that names every shared cause before claiming an ASIL decomposition",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-4",
+      "targetCode": "mob-245.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write per-ODD-bin AI safety requirements with lower bounds and minimum sizes, and find the coverage gaps, leakage and circular label evidence an Automotive SPICE assessor would raise",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-5",
+      "targetCode": "mob-245.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate the failure-free exposure a target needs, count only independent in-ODD hours on the frozen release software, and decide target equivalence from per-bin bounds",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-6",
+      "targetCode": "mob-245.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Escalate a fleet signal against a concurrent control within the contract window without a defect determination, and stop a retrain whose per-bin results regress",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-7",
+      "targetCode": "mob-245.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create the safety argument and release recommendation for an ML component, flagging unsupported and stale claims and stating gaps on the summary page",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-245/#outcome-8",
+      "targetCode": "mob-245.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mob-245.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-245.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Plant Safety and EHS under OSHA",
+  "description": "One fictional two-plant manufacturer, one hard year: a late amputation report, a 300 log that is wrong in nine places, 61 machines without lockout procedures, a camera vendor's free pilot, the HazCom 2024 deadline and a customer audit. You build and test AI for each safety job, measure it on the plant's own data, and keep a named person as the decider of record.",
+  "humanCode": "MFG-245",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "ehs",
+    "osha",
+    "workplace safety",
+    "recordkeeping",
+    "osha 300",
+    "lockout/tagout",
+    "confined space",
+    "hazard communication",
+    "sif prevention",
+    "incident investigation",
+    "computer vision",
+    "ergonomics",
+    "worker monitoring",
+    "business case",
+    "manufacturing"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-245.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Plant Safety and EHS under OSHA"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-245/",
+    "narrative": "To earn this certificate a learner must: complete all 17 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an AI-assisted recordability triage on a held-out test set with a preset target of zero false \"not recordable\" calls, state what that result can and cannot show, and decide each case as the person of record",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-1",
+      "targetCode": "mfg-245.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide each severe-injury report under 1904.39 (whether it is reportable, when its clock started and which agency receives it, including a State Plan) and correct current- and prior-year logs before certification and submission",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-2",
+      "targetCode": "mfg-245.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate AI support for serious-injury prevention: an EEI SCL classifier's recall on high-energy, no-direct-control events measured on an untuned sample, and an AI-drafted investigation whose facts, causes and corrective actions trace to sources and rank by the hierarchy of controls",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-3",
+      "targetCode": "mfg-245.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate AI-drafted lockout procedures and AI-checked confined-space permits against 1910.147 and 1910.146, find missing stored-energy steps and unsafe step order, and design outputs that never authorize work",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-4",
+      "targetCode": "mfg-245.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a camera-analytics or ergonomic AI system on local evidence: precision from a labeled alert sample, recall from reviewed footage, and a NIOSH Revised Lifting Equation hand check",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-5",
+      "targetCode": "mfg-245.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write deployment conditions for camera and wearable monitoring that meet anti-retaliation (1904.35 for injury reports, OSH Act 11(c) for hazard and near-miss reports), Illinois biometric and AI-in-employment law, a union contract and evidence-retention duties",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-6",
+      "targetCode": "mfg-245.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate AI-extracted SDS data and AI-produced training for the HazCom 2024 employer updates, with zero tolerance on hazard fields, substance-or-mixture routing to the right date, and bilingual review of critical steps",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-7",
+      "targetCode": "mfg-245.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create an audit-ready deployment package and program decision for one EHS AI use case: person of record, data boundary, evidence against preset thresholds, monitoring and a tested rollback, and a three-year cost with review time that reports hours freed as net capacity",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-245/#outcome-8",
+      "targetCode": "mfg-245.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-245.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
