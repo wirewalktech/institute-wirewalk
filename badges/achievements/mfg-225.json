@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-225.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI for Production Planning, Scheduling and OEE",
+  "description": "One fictional US snack-bar plant, one decision: can trustworthy OEE, realistic durations and a solver-built schedule recover enough capacity to defer a $12.4 million new line? Machine learning predicts the inputs, a constraint solver builds the plan, and language models explain and triage under approval, with allergen, lockout and labor rules held as hard limits.",
+  "humanCode": "MFG-225",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "manufacturing",
+    "oee",
+    "production scheduling",
+    "production planning",
+    "constraint programming",
+    "or-tools",
+    "aps",
+    "mes",
+    "changeover",
+    "downtime",
+    "mrp",
+    "ai agents",
+    "food safety",
+    "allergen",
+    "lockout",
+    "osha",
+    "crew scheduling",
+    "capacity planning",
+    "business case"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-225.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI for Production Planning, Scheduling and OEE"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-225/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute shift and line OEE from machine-state events against a written plant definition within 0.5 points, name the data defects and definition choices behind conflicting numbers, and justify the ideal rate from demonstrated capability",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-1",
+      "targetCode": "mfg-225.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate downtime reason suggestions and micro-stop attribution against an audited sample rather than operator acceptance, and set where a human must confirm",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-2",
+      "targetCode": "mfg-225.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate changeover, run-rate and purchase-order on-time predictions by interval coverage and calibration on held-out weeks, choose the quantile per resource, and route changes so costing standards stay with the controller",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-3",
+      "targetCode": "mfg-225.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and exhaustively verify a four-order, two-line finite-grid schedule from the complete supplied Python example; evaluate its maintenance, allergen, QA and shared-resource constraints, compare its baseline on identical inputs, and explain how industrial CP-SAT modeling extends beyond this bounded example",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-4",
+      "targetCode": "mfg-225.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an agent around the plan for least privilege, approval before dispatch, minimal-change repair, injected instructions, stale data and untraceable numbers, and specify controls that do not depend on the prompt",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-5",
+      "targetCode": "mfg-225.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a crew-assignment model for qualification, rest and overtime distribution, and scope it in writing away from pay, discipline and operator ranking, with legal questions routed to HR and counsel",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-6",
+      "targetCode": "mfg-225.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a scheduling program like for like with fixed KPIs, costed replay and shadow mode, and build a business case that separates projected cash, opportunity cost and realized expenditure evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-7",
+      "targetCode": "mfg-225.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a go/no-go package with baseline, evidence, constraint register, agent controls, labor scope, staged rollout, tested rollback trigger and a recommendation an investment committee can act on",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-225/#outcome-8",
+      "targetCode": "mfg-225.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-225.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
