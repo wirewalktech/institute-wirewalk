@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-255.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI for Claims, Denials and Prior Authorization",
+  "description": "One Texas health system and its own health plan, followed through six months of building AI into claims, denials and prior authorization on both sides of the request. You classify remits, prevent denials, ground appeals in the chart, automate provider prior authorization, build a payer approve-or-route pipeline, and prove it all with notices, metrics and an honest value count.",
+  "humanCode": "HLS-255",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "revenue cycle",
+    "prior authorization",
+    "utilization management",
+    "denial management",
+    "medical necessity appeals",
+    "claims",
+    "x12 835",
+    "carc rarc",
+    "cdi",
+    "cms-0057-f",
+    "medicare advantage",
+    "wiser",
+    "texas sb 815",
+    "hipaa",
+    "section 1557",
+    "business case"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-255.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI for Claims, Denials and Prior Authorization"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-255/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a week of remittance denials by mapping group code, CARC and RARC combinations to root causes with deterministic rules, using a language model only for free-text letters, reporting coverage and accuracy against a labeled sample, and setting a worklist priority that protects appeal deadlines and low-dollar payers",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-1",
+      "targetCode": "hls-255.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a pre-submission denial-risk model by detecting post-adjudication leakage, choosing a threshold that fits coder capacity, proving its effect with a holdout, and limiting its action to documented correction or a compliant, non-leading CDI query",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-2",
+      "targetCode": "hls-255.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate and correct an AI-drafted medical-necessity appeal so every clinical statement traces to a dated chart entry, unsupported criteria are conceded, the filing deadline comes from the governing rule or contract, and attachments meet the minimum-necessary standard",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-3",
+      "targetCode": "hls-255.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a provider prior-authorization workflow with questionnaire prefill (answer, source quote and confidence per item) and a status agent with read-only permissions, logging and escalation, and decide between prior authorization and pre-payment review for a WISeR service, weighing cash timing, patient scheduling and the exemption pathway",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-4",
+      "targetCode": "hls-255.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a payer approve-or-route pipeline and a cited clinical summary against a gold set, confirming no output makes or shapes an adverse determination and mapping each control to the federal or Texas rule that requires it for that product",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-5",
+      "targetCode": "hls-255.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a payer decision log and its notices for clock compliance, overturn rates and subgroup differences, check notices against 42 CFR 422.568(e) and Texas Insurance Code 4201.303, and write an escalation memo for a disparity",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-6",
+      "targetCode": "hls-255.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate the business case and sourcing choice for a claims, denial or prior-authorization AI tool by separating write-offs avoided from denied dollars avoided, cash acceleration and capacity, correcting for overlap between levers and for rates borrowed from another population, netting run and review cost, and weighing buy, build or EHR-native options",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-7",
+      "targetCode": "hls-255.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a release decision package for one claims, denial or prior-authorization AI use case with a rule map by line of business, own-data evidence, adverse-outcome controls, monitoring, a tested rollback and an honest value line",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-255/#outcome-8",
+      "targetCode": "hls-255.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-255.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

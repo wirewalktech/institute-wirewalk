@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-155.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Medical Billing and Coding Specialists: CPT, ICD-10-CM, HCPCS and Claim Edits",
+  "description": "Follow one composite health system's coding and billing teams through ninety days of AI in every queue: validating an autonomous engine's codes, reviewing HCC suspects in both directions, fixing leading AI-drafted queries, refusing scrubber shortcuts, triaging denials and correcting AI-drafted appeals, and auditing the machine before it is expanded. Every exercise uses synthetic notes, claims and remits.",
+  "humanCode": "HLS-155",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "medical coding",
+    "medical billing",
+    "revenue cycle",
+    "computer-assisted coding",
+    "autonomous coding",
+    "icd-10-cm",
+    "cpt",
+    "hcpcs",
+    "ncci",
+    "risk adjustment",
+    "hcc",
+    "cdi",
+    "provider queries",
+    "denial management",
+    "coding audit",
+    "false claims act",
+    "hipaa",
+    "hcpcs level ii"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-155.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Medical Billing and Coding Specialists: CPT, ICD-10-CM, HCPCS and Claim Edits"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-155/",
+    "narrative": "To earn this certificate a learner must: complete all 14 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Validate AI-suggested ICD-10-CM, CPT and HCPCS codes and modifiers against the note or report for the setting (Sections IV.H, IV.K, II.H, I.B.14, and the procedure the report documents rather than the order), correcting or querying each and citing the deciding source with facts from the record only",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-1",
+      "targetCode": "hls-155.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use an approved AI assistant for coding research with a minimum-necessary, de-identified question and record the official source and code-set version that confirms or refutes the answer",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-2",
+      "targetCode": "hls-155.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify AI-flagged HCC suspects and AI-supported E/M levels as supported, unsupported, query-needed or delete, and identify where a scribe-drafted note overstates the visit",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-3",
+      "targetCode": "hls-155.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Revise an LLM-drafted provider query or physician prompt so it passes a non-leading checklist from the AHIMA/ACDIS brief and avoids what the OIG names as a risk",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-4",
+      "targetCode": "hls-155.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Resolve NCCI PTP, MUE and coverage holds by removing a code, adding a modifier the indicator allows with its documentation sentence, checking the ABN, or holding for query, and reject unsupported AI suggestions",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-5",
+      "targetCode": "hls-155.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage a week of coding denials by group code, CARC, RARC and predictive score, route root causes, and correct an AI-drafted appeal so every statement traces to the record",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-6",
+      "targetCode": "hls-155.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit AI-coded output with a stratified sample and exact 95% intervals, recognize a payment-affecting pattern, and write the escalation that starts a timely overpayment investigation",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-7",
+      "targetCode": "hls-155.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run a code-set and edit currency check on every tool for October 1, January 1 and each NCCI quarter, and decide whether an AI-enabled clinical service has its own CPT code",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-155/#outcome-8",
+      "targetCode": "hls-155.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-155.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

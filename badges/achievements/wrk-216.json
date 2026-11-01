@@ -1,0 +1,130 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/wrk-216.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Project Managers: Planning, Scheduling, Risk and Status Reporting",
+  "description": "One fictional federal program runs through six modules: a weekly status report where code computes every number and a validator blocks the rest, lawful meeting capture and RAID logs with evidence quotes, a returned schedule fixed without gaming the metrics, a schedule risk analysis and release forecast that keep their ranges, variance explanations and an EAC the customer can trust, and a read-only change-board agent. Each module ends in a Decision Lab, and a capstone simulation ties them together.",
+  "humanCode": "WRK-216",
+  "fieldOfStudy": "AI at Work",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "project management",
+    "scheduling",
+    "schedule risk analysis",
+    "status reporting",
+    "raid log",
+    "earned value management",
+    "variance analysis",
+    "dcma 14-point",
+    "gao schedule assessment guide",
+    "monte carlo",
+    "primavera p6",
+    "cui",
+    "recording consent",
+    "ai agents",
+    "federal contracts",
+    "construction"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/wrk-216.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Project Managers: Planning, Scheduling, Risk and Status Reporting"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/wrk-216/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a reporting pipeline in which code computes every figure, the model drafts only from a facts table, a validator blocks any unsupported number or date, and a named person approves, using a tool setup that keeps controlled data inside an authorized boundary",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-1",
+      "targetCode": "wrk-216.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate meeting and field-record automation by choosing a lawful capture method from participants' locations and site rules, extracting RAID entries with evidence quotes, and measuring precision and recall before trusting the output",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-2",
+      "targetCode": "wrk-216.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze DCMA 14-point and GAO-16-89G schedule findings and produce a prioritized fix list that rejects fixes which game a metric or damage the critical path, and compare schedule tools for a stated job",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-3",
+      "targetCode": "wrk-216.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a schedule risk analysis and an agile release forecast: map risks to the activities they drive, state P50 and P80 with their assumptions, and rewrite any sentence that overstates certainty",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-4",
+      "targetCode": "wrk-216.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze control-account earned-value data and audit AI-drafted variance explanations and estimate-at-completion narratives for number consistency, causes supported by evidence, and corrective actions with owners and dates",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-5",
+      "targetCode": "wrk-216.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a read-only agent for change-impact memos and an obligations register with clause citations, specifying what it may read, what it may never write, how injected instructions are contained, and which notices stay with named people",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-6",
+      "targetCode": "wrk-216.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an AI pilot in project controls against a baseline for accuracy, cycle time, edit rate and harm checks, classify analyst-only tasks such as delay entitlement and decisions about individuals, and report the result honestly against the sponsor's target",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-216/#outcome-7",
+      "targetCode": "wrk-216.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/wrk-216.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mob-145.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Fleet Safety Managers: Telematics, Video Safety and FMCSA Compliance",
+  "description": "Ninety days at Bramblecreek Freight Lines, a composite 150-truck Illinois carrier facing an 18% insurance increase and an FMCSA warning letter. You clear the AI dash-cam backlog, answer a 2:14 a.m. drowsiness alert, coach from reviewed facts, resolve unidentified driving, audit DQ files, build a post-crash evidence pack and turn on driver-facing cameras in three states. AI sorts, extracts and drafts; the FMCSRs keep each decision with a named person.",
+  "humanCode": "MOB-145",
+  "fieldOfStudy": "AI in Transport, Logistics and Mobility",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "fleet safety",
+    "fmcsa",
+    "fmcsr",
+    "telematics",
+    "dash cams",
+    "video safety",
+    "eld",
+    "hours of service",
+    "driver qualification",
+    "mvr",
+    "csa",
+    "dataqs",
+    "driver coaching",
+    "dvir",
+    "trucking",
+    "transport-logistics",
+    "decision labs",
+    "insurance renewal",
+    "driver-facing cameras",
+    "bipa"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mob-145.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Fleet Safety Managers: Telematics, Video Safety and FMCSA Compliance"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mob-145/",
+    "narrative": "To earn this certificate a learner must: complete all 17 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage a queue of AI dash-cam events into dispositions with checkable reasons, applying the 392.80 and 392.82 definition of driving, and answer a live drowsiness alert with a hands-free contact and safe-stop playbook under 392.3",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-1",
+      "targetCode": "mob-145.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Measure an AI-assisted safety process with your own data (false positives from a double-reviewed sample, reviewer agreement, the 24-hour critical-review rate, coaching completion), stating each rate's numerator, denominator and window and keeping vendor figures separate",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-2",
+      "targetCode": "mob-145.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft coaching and driver messages grounded only in a reviewed-events facts table, and find every unsupported claim, coercive statement (390.5, 390.6), harassment risk (390.36) or pressure to certify falsely (395.30) in an AI draft",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-3",
+      "targetCode": "mob-145.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Resolve unidentified driving with named evidence and driver confirmation without altering original ELD records, reproduce any plain-language fleet-data answer from the raw report, and route safety-critical DVIR defects to a person (395.30, 395.32, 396.11)",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-4",
+      "targetCode": "mob-145.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit DQ files and annual MVR reviews with document extraction checked on a sample, producing a gap list against 391.51, 391.23, 391.25 and 382.701 signed by a named reviewer, and turn a vendor risk list into interventions rather than employment decisions",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-5",
+      "targetCode": "mob-145.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check every number in an AI summary of SMS data, draft a DataQs or crash preventability request that states only documented facts, and build a post-crash timeline that finds a clock offset and supports the 390.5, 382.303 and 390.15 decisions",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-6",
+      "targetCode": "mob-145.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Plan a driver-facing camera rollout across states with different laws (notice, written release, retention, settings and counsel questions), hold the line that an AI event cannot ground a 382.307 test, and turn vendor claims into written contract terms",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-145/#outcome-7",
+      "targetCode": "mob-145.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mob-145.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
