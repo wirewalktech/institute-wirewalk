@@ -1,0 +1,145 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-120.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Plant Managers and Production Supervisors",
+  "description": "One fictional Illinois co-packer, Corliss Bend Foods, runs through the course toward a customer review that decides $31 million of volume. You produce a handover brief that reconciles to the MES, grade a BI copilot's OEE answers, triage camera alerts, classify injuries against the OSHA clocks, verify a translated work instruction, check an AI schedule and attendance memo, write the plant's AI rule and design a 90-day vendor pilot, then decide under pressure in five Decision Labs and a capstone simulation. Every exercise uses synthetic plant data.",
+  "humanCode": "MFG-120",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "manufacturing",
+    "plant management",
+    "production supervisor",
+    "shift handover",
+    "oee",
+    "mes",
+    "power bi copilot",
+    "osha",
+    "osha 300",
+    "forklift training",
+    "lockout tagout",
+    "work instructions",
+    "translation",
+    "camera analytics",
+    "knowledge capture",
+    "ai in employment decisions",
+    "illinois",
+    "acceptable use",
+    "trade secrets",
+    "vendor evaluation",
+    "co-packer",
+    "allergen changeover"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-120.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Plant Managers and Production Supervisors"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-120/",
+    "narrative": "To earn this certificate a learner must: complete all 12 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a shift handover brief with an assistant from an MES downtime export and shift log in which every figure reconciles to the export, open lockouts and quality holds are carried forward word for word, and mismatches are flagged to their owner rather than guessed",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-1",
+      "targetCode": "mfg-120.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute availability, performance, quality and OEE by hand, diagnose BI-copilot answers as grounded, wrong-definition, wrong-period or general knowledge, and attach a source for every number to a weekly operations review whose recordables match the OSHA 300 log",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-2",
+      "targetCode": "mfg-120.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage a camera-analytics alert log by zone and time, rank an engineering control ahead of coaching, identify which confirmed events trigger forklift refresher training under 29 CFR 1910.178(l)(4)(ii), keep clips out of automatic discipline, and draft the employee notice",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-3",
+      "targetCode": "mfg-120.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify incident facts against the 29 CFR 1904.7 first-aid list and the 1904.39 eight- and 24-hour clocks, identify the facts still missing, route to EHS at once, and edit an AI-drafted narrative to documented facts without blame",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-4",
+      "targetCode": "mfg-120.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Verify an AI rewrite and translation of a work instruction by back-translation and qualified review under document control, and turn a retiring expert's recorded interviews into a reviewed draft that routes unsafe shortcuts to EHS",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-5",
+      "targetCode": "mfg-120.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Review an AI-suggested crew schedule and attendance memo, removing uncertified assignments and protected occurrences, and analyze which uses of a proficiency score are covered employment decisions needing notice and HR review in an Illinois plant",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-6",
+      "targetCode": "mfg-120.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Sort plant data into green, amber and red tool tiers and write a one-page plant AI acceptable-use rule a supervisor can apply at 2 a.m., covering customer formulas, trade secrets, people data and control systems",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-7",
+      "targetCode": "mfg-120.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a vendor's AI pitch by turning its claims into tests and designing a 90-day pilot with a pre-registered baseline, go/no-go criteria and go-live conditions for OT connections and people-data features",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-120/#outcome-8",
+      "targetCode": "mfg-120.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-120.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

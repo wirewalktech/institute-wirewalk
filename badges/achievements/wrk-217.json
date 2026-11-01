@@ -1,0 +1,143 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/wrk-217.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for PMOs and Portfolio Management",
+  "description": "One company, one planning year, six real PMO problems: catching watermelon projects before they turn red, cutting a portfolio to budget with a solver instead of a chatbot, staffing 64 roles under California's ADMT rules, forecasting a defense program without leaking CUI, governing PPM agents, and reporting what PMO AI is really worth. Every module ends in a Decision Lab where the fast option has a delayed cost.",
+  "humanCode": "WRK-217",
+  "fieldOfStudy": "AI at Work",
+  "inLanguage": "en-US",
+  "version": "2026-10",
+  "tag": [
+    "pmo",
+    "portfolio management",
+    "ppm",
+    "demand management",
+    "prioritization",
+    "resource management",
+    "capacity planning",
+    "status reporting",
+    "raid log",
+    "earned value management",
+    "project controls",
+    "ccpa admt",
+    "asc 350-40",
+    "ai agents",
+    "planview",
+    "servicenow spm",
+    "business case",
+    "prompt injection",
+    "cui",
+    "monte carlo"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/wrk-217.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for PMOs and Portfolio Management"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/wrk-217/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 45 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a portfolio early-warning system on held-out labeled history (flag precision, recall and lead time with their uncertainty, RAID themes and extracted dependencies) and accept an AI-drafted summary only when every claim has a checked evidence link",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-1",
+      "targetCode": "wrk-217.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze AI-assisted demand intake for field accuracy, agreement with the governance panel measured against the panel's own agreement, and length bias, and decide what the panel must still score itself",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-2",
+      "targetCode": "wrk-217.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a portfolio with a mixed-integer optimizer under budget, skill, mandatory, dependency and exclusion constraints, use an LLM only to explain results and run what-ifs through the solver, and present scenarios with a faithful decision log",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-3",
+      "targetCode": "wrk-217.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a skill forecast and an assignment-shortlist process for stale data and disparity, and design the risk assessment, real human review, pre-use notice and disparity check California's ADMT regulations require for allocation of work",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-4",
+      "targetCode": "wrk-217.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a defense program's schedule health, Monte Carlo forecast and earned-value position, audit AI-drafted variance narratives for invented causes, and choose where AI may process CUI",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-5",
+      "targetCode": "wrk-217.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate PPM platforms and agents on data fit, license prerequisites, permissions, audit logging, cost and exit, gate agent releases with a prompt-injection test pack, and tier the company's AI uses in an owned inventory",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-6",
+      "targetCode": "wrk-217.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate AI-touched financial numbers: a capitalization control under ASC 350-40 and ASU 2025-06, benefits variance without causal claims, and PMO AI value split into booked, capacity and risk in year-one and steady-state views",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-7",
+      "targetCode": "wrk-217.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a PMO AI operating plan that sequences use cases by value, data readiness and legal exposure, with evaluation thresholds fixed before testing, controls, owners, monitoring, a tested rollback and an honest value statement",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-217/#outcome-8",
+      "targetCode": "wrk-217.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/wrk-217.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
