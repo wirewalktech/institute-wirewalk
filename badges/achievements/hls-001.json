@@ -8,8 +8,8 @@
     "Achievement"
   ],
   "achievementType": "CertificateOfCompletion",
-  "name": "AI in Health and Life Sciences: The One-Hour Briefing",
-  "description": "A free one-hour briefing built on eight real jobs, not an overview: auditing an ambient-scribe note, answering a portal message from an AI draft, acting on a sepsis alert, reading a triage-flagged CT worklist, reviewing a prior-authorization request, checking AI-suggested codes, and triaging drug and device safety reports. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
+  "name": "AI in Health and Life Sciences: A Practical Introduction",
+  "description": "A free introduction built on eight healthcare jobs: auditing an ambient-scribe note, answering a portal message from an AI draft, acting on a sepsis alert, reading a triage-flagged CT worklist, reviewing a prior-authorization request, checking AI-suggested codes, and triaging drug and device safety reports. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
   "humanCode": "HLS-001",
   "fieldOfStudy": "AI in Health and Life Sciences",
   "inLanguage": "en-US",
@@ -33,7 +33,7 @@
   "image": {
     "id": "https://institute.wirewalk.com/badges/img/hls-001.svg",
     "type": "Image",
-    "caption": "Wirewalk Institute of AI badge: AI in Health and Life Sciences: The One-Hour Briefing"
+    "caption": "Wirewalk Institute of AI badge: AI in Health and Life Sciences: A Practical Introduction"
   },
   "creator": {
     "id": "https://institute.wirewalk.com/badges/issuer.json",
@@ -88,7 +88,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Apply HIPAA business associate and minimum-necessary requirements, Section 1557 (45 CFR 92.210 for decision support tools and 92.201(c)(3) for machine translation) and California AB 3030 disclosure to a proposed use of AI in a specific workflow",
+      "targetName": "Apply HIPAA business-associate requirements and identify when the minimum-necessary standard does and does not apply, Section 1557 (45 CFR 92.210 for decision support tools and 92.201(c)(3) for machine translation) and California AB 3030 disclosure to a proposed use of AI in a specific workflow",
       "targetUrl": "https://institute.wirewalk.com/courses/hls-001/#outcome-5",
       "targetCode": "hls-001.O5",
       "targetFramework": "Wirewalk Institute of AI course outcomes"

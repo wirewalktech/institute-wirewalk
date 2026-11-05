@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-01T12:18:48.984Z",
+  "generated": "2026-11-05T11:51:31.436Z",
   "levels": {
     "intro": {
       "label": "Free intro",
       "order": 0,
       "listPrice": 0,
-      "blurb": "Free, about an hour, with a short exam and certificate. A starting point for anyone."
+      "blurb": "Free introductions with a short exam and certificate. Check each course's estimated study time."
     },
     "basic": {
       "label": "Basic",
@@ -26170,7 +26170,7 @@
     },
     {
       "id": "hls-001",
-      "title": "AI in Health and Life Sciences: The One-Hour Briefing",
+      "title": "AI in Health and Life Sciences: A Practical Introduction",
       "track": "health-life-sciences",
       "level": "intro",
       "levelLabel": "Free intro",
@@ -26179,9 +26179,9 @@
       "listPrice": 0,
       "hasSyllabus": true,
       "subtitle": "For clinicians, nurses, health-plan reviewers, coders and drug and device safety staff who want to see, task by task, where AI already sits in their daily work, what they must check before relying on it, and which rules apply.",
-      "summary": "A free one-hour briefing built on eight real jobs, not an overview: auditing an ambient-scribe note, answering a portal message from an AI draft, acting on a sepsis alert, reading a triage-flagged CT worklist, reviewing a prior-authorization request, checking AI-suggested codes, and triaging drug and device safety reports. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
-      "description": "AI in health care is not one thing. It is an ambient scribe drafting a primary-care note, a draft reply waiting in a triage nurse's in-basket, a risk score that fires on a med-surg floor at 3 a.m., a flag that moves a head CT to the top of a radiologist's worklist, a criteria match in a health plan's prior-authorization queue, a code set proposed to an outpatient coder, and a pre-filled adverse-event case on a drug-safety associate's screen. This free hour walks through those tasks one at a time, as the person who does them sees them.\n\nFor each task you see how the work is done today, what the AI actually does and with which data, the categories of tools in use and some of the named products (Microsoft Dragon Copilot, Epic AI Charting, Abridge, Viz.ai, Aidoc, Prenosis, Cohere Health, Solventum 360 Encompass, ArisGlobal LifeSphere), where the human decision must stay human, and the specific control that applies: HIPAA business associate agreements and minimum necessary, the FDA's line between device and non-device clinical decision support, Section 1557's rule on patient care decision support tools (45 CFR 92.210), Medicare Advantage rules on individualized coverage decisions, California's AB 3030 and SB 1120, CMS's WISeR model of AI-assisted review in traditional Medicare, the False Claims Act, and the fixed reporting clocks for drug adverse events and device malfunctions. Products are named to show what exists, not to endorse them, and vendor performance claims are labeled as claims. Every lesson ends with an exercise on fully synthetic data with an expected result or answer key, such as finding three planted errors in a drafted sore-throat note, spotting a buried cauda equina red flag in a prior-authorization attachment, or computing a triage tool's local positive predictive value from a fabricated worklist. This course is educational and is not legal or regulatory advice. A 10-question exam earns a free Wirewalk Institute certificate of completion and assessment, and the last lesson maps each role to the paid course that goes deeper. The certificate records completion of this course and a 10-question automated assessment. It is not CME or CE credit, does not satisfy HIPAA workforce training, GxP or QMS training requirements, and does not demonstrate workplace competence.",
-      "hours": 1,
+      "summary": "A free introduction built on eight healthcare jobs: auditing an ambient-scribe note, answering a portal message from an AI draft, acting on a sepsis alert, reading a triage-flagged CT worklist, reviewing a prior-authorization request, checking AI-suggested codes, and triaging drug and device safety reports. Each lesson shows where AI helps, where it must not decide, and the rule that governs that exact task.",
+      "description": "AI in health care is not one thing. It is an ambient scribe drafting a primary-care note, a draft reply waiting in a triage nurse's in-basket, a risk score that fires on a med-surg floor at 3 a.m., a flag that moves a head CT to the top of a radiologist's worklist, a criteria match in a health plan's prior-authorization queue, a code set proposed to an outpatient coder, and a pre-filled adverse-event case on a drug-safety associate's screen. This free course walks through those tasks one at a time, as the person who does them sees them.\n\nFor each task you see how the work is done today, what the AI actually does and with which data, the categories of tools in use and some of the named products (Microsoft Dragon Copilot, Epic AI Charting, Abridge, Viz.ai, Aidoc, Prenosis, Cohere Health, Solventum 360 Encompass, ArisGlobal LifeSphere), where the human decision must stay human, and the specific control that applies: HIPAA business associate agreements and minimum necessary with statutory exceptions, the FDA's line between device and non-device clinical decision support, Section 1557's rule on patient care decision support tools (45 CFR 92.210), Medicare Advantage rules on individualized coverage decisions, California's AB 3030 and SB 1120, CMS's WISeR model of AI-assisted review in traditional Medicare, the False Claims Act, and the reporting criteria and applicable clocks for drug adverse events and device malfunctions. Products are named to show what exists, not to endorse them, and vendor performance claims are labeled as claims. Every lesson ends with an exercise on fully synthetic data with an expected result or answer key, such as finding three planted errors in a drafted sore-throat note, spotting a buried cauda equina red flag in a prior-authorization attachment, or computing a triage tool's local positive predictive value from a fabricated worklist. Plan approximately three hours for reading, the synthetic exercises and the exam; this is an estimate, not measured learner timing. This course is educational and is not legal or regulatory advice. A 10-question exam earns a free Wirewalk Institute certificate of completion and assessment, and the last lesson maps each role to the paid course that goes deeper. The certificate records completion of this course and a 10-question automated assessment. It is not CME or CE credit, does not satisfy HIPAA workforce training, GxP or QMS training requirements, and does not demonstrate workplace competence.",
+      "hours": 3,
       "audience": [
         "Primary-care physicians, advanced practice providers and triage RNs whose EHR now offers ambient notes or drafted portal replies",
         "Medical-surgical primary nurses, charge nurses and rapid-response nurses who receive sepsis or deterioration risk alerts",
@@ -26208,7 +26208,7 @@
         "Distinguish an FDA-authorized AI device, such as a radiology triage tool or Prenosis Sepsis ImmunoScore, from an EHR-embedded model whose regulatory status and local validation the hospital must confirm, and explain what a flag or a missing flag does and does not mean",
         "Compute a tool's local positive predictive value and alert burden from a worklist or alert log, and decide what to escalate to an AI governance committee",
         "Identify, for a named health-plan, coding or safety task, the decision AI may support and the decision a qualified human must make, citing the governing rule (Medicare Advantage individualized review, California SB 1120, E/M medical decision making, the False Claims Act, 21 CFR 314.80 and 600.80, 21 CFR 803.50 and 803.53)",
-        "Apply HIPAA business associate and minimum-necessary requirements, Section 1557 (45 CFR 92.210 for decision support tools and 92.201(c)(3) for machine translation) and California AB 3030 disclosure to a proposed use of AI in a specific workflow",
+        "Apply HIPAA business-associate requirements and identify when the minimum-necessary standard does and does not apply, Section 1557 (45 CFR 92.210 for decision support tools and 92.201(c)(3) for machine translation) and California AB 3030 disclosure to a proposed use of AI in a specific workflow",
         "Choose the Wirewalk course that covers your role and industry in depth"
       ],
       "prerequisites": [
