@@ -2,5 +2,5 @@
 layout: track
 track_id: governance
 title: "Governance, Risk and Compliance"
-description: "AI regulation, management systems, risk frameworks, audit and responsible AI."
+description: "US federal, state and sector AI rules, governance frameworks, management systems and audit, with cross-border coverage where relevant."
 ---

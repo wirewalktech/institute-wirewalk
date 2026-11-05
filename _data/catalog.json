@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T11:51:31.436Z",
+  "generated": "2026-11-05T13:26:20.018Z",
   "levels": {
     "intro": {
       "label": "Free intro",
@@ -1003,9 +1003,9 @@
       "id": "governance",
       "prefix": "gov",
       "title": "Governance, Risk and Compliance",
-      "summary": "AI regulation, management systems, risk frameworks, audit and responsible AI.",
+      "summary": "US federal, state and sector AI rules, governance frameworks, management systems and audit, with cross-border coverage where relevant.",
       "courseCount": 14,
-      "onSale": 5,
+      "onSale": 6,
       "vendors": [
         "AI Fairness 360",
         "Anthropic",
@@ -18466,7 +18466,7 @@
       "track": "governance",
       "level": "intermediate",
       "levelLabel": "Intermediate",
-      "flagship": true,
+      "flagship": false,
       "status": "on_sale",
       "listPrice": 26175,
       "hasSyllabus": true,
@@ -18581,13 +18581,13 @@
       "track": "governance",
       "level": "intermediate",
       "levelLabel": "Intermediate",
-      "flagship": false,
-      "status": "waitlist",
+      "flagship": true,
+      "status": "on_sale",
       "listPrice": 26175,
       "hasSyllabus": true,
       "subtitle": "For compliance, legal and product teams who must map a fast-moving patchwork of US federal policy, state AI statutes and sector rules onto the AI systems they build or buy.",
-      "summary": "A practitioner's map of US AI regulation as of October 2026: federal executive orders and the preemption push, enforcement under existing FTC, civil rights and sector law, the state statutes from Colorado, Texas, California and New York, and employment, insurance and healthcare rules. Ends with a multi-state compliance tracker you can maintain.",
-      "description": "The US has no single AI statute. Instead, organizations face federal executive policy that changed direction in 2025, an Executive Order (EO 14365) and a March 2026 National Policy Framework that push Congress toward preempting state law, active enforcement of existing consumer protection and civil rights statutes, and a growing body of state laws that are being enacted, amended, delayed and challenged in court at the same time. This course teaches you to tell what is in force from what is proposed, paused or under challenge.\n\nYou will work through federal policy (EO 14179, EO 14365, America's AI Action Plan and OMB memoranda M-25-21 and M-25-22), FTC Section 5 enforcement and AI-washing actions, credit and employment law, sector regulators, the Colorado AI Act and its 2026 repeal-and-reenactment as SB 26-189 (signed May 2026, effective January 1, 2027), Texas TRAIGA, the California CCPA automated decisionmaking technology regulations, California SB 53 and the New York RAISE Act for frontier developers, content provenance and deepfake laws, NYC Local Law 144 and other hiring-tool rules, the NAIC model bulletin for insurers, and state healthcare AI disclosure laws. Content reflects the position as of October 2026 and dates are stated as such; it is educational, not legal advice.",
+      "summary": "Map US federal, state and sector AI requirements to actual workflows, distinguish binding duties from policy and proposals, and defend a conditional release with evidence. Includes a maintained applicability dossier, case-based assessment and branching Decision Labs.",
+      "description": "Work through a fictional US services group staging hiring, financing, insurance and clinic AI workflows. Analyze federal policy and existing enforcement law, state ADMT and disclosure requirements, frontier developer and synthetic-media rules, and sector-specific controls. Build a versioned compliance dossier with a legal-status ledger, evidence gaps, operational rights paths and release conditions.\n\nPrimary sources were checked on November 5, 2026. The course distinguishes verified published text from unresolved implementation and litigation status; it does not promise exhaustive coverage or current legal clearance. Instruction is educational, not legal advice. Completion follows lessons, Decision Labs and the course exam; the written dossier is practice with a model response and observable rubric. California training-data, provenance and companion-system coverage is explicitly limited to verified enactment/status and governance analysis; current SB942/AB853/SB1000/AB2713 duties, exceptions and operative dates are not taught as a reconciled statutory checklist.",
       "hours": 12,
       "audience": [
         "Compliance and privacy professionals",
@@ -18597,12 +18597,12 @@
       ],
       "vendors": [],
       "outcomes": [
-        "Explain the current federal AI policy position, including EO 14179, EO 14365 and the preemption debate, and what it does and does not change for existing state law",
-        "Apply FTC Section 5, ECOA/Regulation B, Title VII and the ADA to AI products and decisions",
-        "Determine whether the Colorado, Texas and California comprehensive or ADMT rules apply to a given system and what they require",
-        "Distinguish frontier-developer obligations under California SB 53 and the New York RAISE Act from obligations on ordinary deployers",
-        "Identify employment, insurance and healthcare AI rules that apply in specific states and sectors",
-        "Build and maintain a multi-state applicability matrix with dates, triggers and owners"
+        "Analyze the authority, addressees and operational effects of federal AI policy and claimed preemption",
+        "Evaluate AI claims and decisions under federal consumer protection, credit, employment and sector law",
+        "Analyze state applicability from entity, activity, role, location, exceptions and operative dates",
+        "Analyze model-development and distribution roles, apply verified frontier baselines, and distinguish media/transparency controls from unresolved statutory scope",
+        "Evaluate employment, insurance and healthcare controls for the relevant entity, population and use",
+        "Create and maintain an evidence-supported multi-state compliance dossier and conditional release recommendation"
       ],
       "prerequisites": [
         "gov-101",
@@ -18629,6 +18629,15 @@
             "From EO 14110 to EO 14179: Revocation and the Pro-Innovation Turn",
             "EO 14365, the DOJ AI Litigation Task Force and the National Policy Framework",
             "America's AI Action Plan and OMB M-25-21 and M-25-22 for Agencies and Their Vendors"
+          ],
+          "labs": [
+            {
+              "id": "m1-authority",
+              "title": "The Order the Vendor Cannot Produce",
+              "summary": "The board offers to cancel the state implementation workstream after seeing a preemption headline. A federal customer also wants a bid response tomorrow. Choose what your team can responsibly commit to. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            }
           ]
         },
         {
@@ -18638,6 +18647,15 @@
             "FTC Section 5: Deceptive AI Claims, Unfair Practices and Algorithmic Disgorgement",
             "Credit and Employment: ECOA Adverse Action Notices, Title VII, the ADA and the Disparate Impact Shift",
             "Sector Regulators: FDA AI-Enabled Device Software, HHS Section 1557 and SEC AI-Washing Cases"
+          ],
+          "labs": [
+            {
+              "id": "m2-claims",
+              "title": "The Benchmark Behind the Claim",
+              "summary": "Marketing needs a page today. The only test measures handling time on 40 synthetic resumes; financing also wants a new explanation generator. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            }
           ]
         },
         {
@@ -18647,15 +18665,33 @@
             "Colorado: SB 24-205, Its Court Challenge and the SB 26-189 Repeal and Reenactment",
             "Texas TRAIGA and Utah's AI Disclosure Law",
             "California's CCPA ADMT Regulations: Coverage Triggers and the January 2027 Compliance Date"
+          ],
+          "labs": [
+            {
+              "id": "m3-states",
+              "title": "The Checklist From the Wrong Year",
+              "summary": "The state workbook is marked complete. It combines a 2024 Colorado checklist, a Texas annual-audit assertion and one California date. Launch configuration starts tomorrow. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            }
           ]
         },
         {
           "title": "Frontier Models, Transparency and Synthetic Media",
-          "summary": "Laws aimed at large model developers, content provenance and deepfakes.",
+          "summary": "Apply verified frontier baselines and analyze transparency, provenance and media controls; California transparency amendments are a bounded status/governance overview, not a current-duty checklist.",
           "lessons": [
             "California SB 53 and the New York RAISE Act: Frontier AI Frameworks and Incident Reporting",
-            "California Training Data Transparency (AB 2013), the AI Transparency Act (SB 942) and Companion Chatbot Rules",
+            "California Training Transparency, Provenance and Companion Systems: Verified Status and Governance Analysis",
             "Deepfakes and Digital Replicas: The TAKE IT DOWN Act, Election Laws and State Likeness Statutes"
+          ],
+          "labs": [
+            {
+              "id": "m4-role",
+              "title": "From API Customer to Model Seller",
+              "summary": "Luis wants to sell a proprietary model. Engineering says the current product calls an API plus retrieval, but one developer recalls an undocumented fine-tune. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            }
           ]
         },
         {
@@ -18665,6 +18701,15 @@
             "Hiring Tools: NYC Local Law 144 Bias Audits, Illinois HB 3773 and California's Automated-Decision System Employment Regulations",
             "Insurance: The NAIC Model Bulletin and Colorado's SB 21-169 Framework",
             "Healthcare AI: State Patient Disclosure and Utilization Review Laws"
+          ],
+          "labs": [
+            {
+              "id": "m5-sector",
+              "title": "One Audit, Three Different Queues",
+              "summary": "The hiring vendor supplies an R4 audit for an R5 launch. Clinic reviewers have only half the assumed capacity. Insurance has not identified its product line. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            }
           ]
         },
         {
@@ -18674,6 +18719,22 @@
             "Building a State-Law Applicability Matrix: Triggers, Thresholds and Effective Dates",
             "Harmonizing Notices, Assessments and Opt-Outs Across Jurisdictions",
             "Planning for Preemption and Litigation Without Pausing Compliance"
+          ],
+          "labs": [
+            {
+              "id": "m6-maintenance",
+              "title": "The Release Candidate Changes Overnight",
+              "summary": "The dossier is nearly complete. Engineering swaps the model endpoint overnight, and procurement discovers the vendor files lack complete change-notification terms. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 12,
+              "kind": "module"
+            },
+            {
+              "id": "capstone-board",
+              "title": "The Eight-Week Board Decision",
+              "summary": "Integrate the full Cedar Bridge dossier, respond to changed distribution and staffing facts, and defend four separate release recommendations. Metrics are projected simulation outcomes, not spent-to-date accounting or legal compliance scores.",
+              "minutes": 30,
+              "kind": "capstone"
+            }
           ]
         }
       ],
@@ -18684,7 +18745,7 @@
         "attempts": 3
       },
       "lessonCount": 18,
-      "reviewed": "2026-10"
+      "reviewed": "2026-11"
     },
     {
       "id": "gov-230",

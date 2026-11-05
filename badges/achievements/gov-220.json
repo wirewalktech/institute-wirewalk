@@ -1,0 +1,116 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/gov-220.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "US AI Regulation: Federal, State and Sector Rules",
+  "description": "Map US federal, state and sector AI requirements to actual workflows, distinguish binding duties from policy and proposals, and defend a conditional release with evidence. Includes a maintained applicability dossier, case-based assessment and branching Decision Labs.",
+  "humanCode": "GOV-220",
+  "fieldOfStudy": "Governance, Risk and Compliance",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "us ai regulation",
+    "state ai laws",
+    "colorado ai act",
+    "traiga",
+    "ccpa admt",
+    "sb 53",
+    "raise act",
+    "preemption",
+    "ftc",
+    "nyc local law 144",
+    "compliance"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/gov-220.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: US AI Regulation: Federal, State and Sector Rules"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/gov-220/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze the authority, addressees and operational effects of federal AI policy and claimed preemption",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-1",
+      "targetCode": "gov-220.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate AI claims and decisions under federal consumer protection, credit, employment and sector law",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-2",
+      "targetCode": "gov-220.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze state applicability from entity, activity, role, location, exceptions and operative dates",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-3",
+      "targetCode": "gov-220.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze model-development and distribution roles, apply verified frontier baselines, and distinguish media/transparency controls from unresolved statutory scope",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-4",
+      "targetCode": "gov-220.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate employment, insurance and healthcare controls for the relevant entity, population and use",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-5",
+      "targetCode": "gov-220.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create and maintain an evidence-supported multi-state compliance dossier and conditional release recommendation",
+      "targetUrl": "https://institute.wirewalk.com/courses/gov-220/#outcome-6",
+      "targetCode": "gov-220.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/gov-220.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
