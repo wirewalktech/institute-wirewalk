@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T13:42:08.094Z",
+  "generated": "2026-11-05T14:03:03.662Z",
   "levels": {
     "intro": {
       "label": "Free intro",
@@ -1122,7 +1122,7 @@
       "title": "AI in Financial Services",
       "summary": "AI in banking and lending, capital markets, wealth management, insurance, payments and fintech — under model risk, fair lending, conduct and financial-crime rules.",
       "courseCount": 15,
-      "onSale": 3,
+      "onSale": 4,
       "vendors": [
         "AlphaSense",
         "Amazon Web Services",
@@ -1131,21 +1131,30 @@
         "BioCatch",
         "Bloomberg",
         "CCC Intelligent Solutions",
+        "CLARA Analytics",
         "Cytora",
+        "Duck Creek",
+        "EagleView",
         "Early Warning Services (Zelle)",
         "Entrust",
+        "EvenUp",
         "FairPlay AI",
         "Fannie Mae",
         "Featurespace",
         "Federato",
         "Feedzai",
+        "Five Sigma",
         "Freddie Mac",
         "Global Relay",
+        "Guidewire",
+        "Hi Marley",
+        "Hover",
         "ICE Mortgage Technology",
         "Jump",
         "MSCI",
         "Mastercard",
         "Microsoft",
+        "Mitchell",
         "Moody's",
         "NICE Actimize",
         "Nasdaq Verafin",
@@ -1157,6 +1166,7 @@
         "S&P Global",
         "SAS",
         "Salient",
+        "Shift Technology",
         "Sixfold",
         "Smarsh",
         "Socure",
@@ -1164,6 +1174,7 @@
         "Tegus",
         "Tractable",
         "ValidMind",
+        "Verisk",
         "Visa",
         "Wolters Kluwer",
         "Zest AI",
@@ -1803,7 +1814,7 @@
       ],
       "bundleBps": 2000,
       "status": "waitlist",
-      "hours": 0,
+      "hours": 14,
       "separately": 74700
     }
   ],
@@ -33673,22 +33684,186 @@
       "level": "basic",
       "levelLabel": "Basic",
       "flagship": false,
-      "status": "waitlist",
+      "status": "on_sale",
       "listPrice": 11175,
-      "hasSyllabus": false,
-      "subtitle": null,
-      "summary": "AI for Property and Casualty Claims Adjusters: a basic course in the AI in Financial Services track. Syllabus in preparation.",
-      "description": null,
-      "hours": null,
-      "audience": [],
-      "vendors": [],
-      "outcomes": [],
-      "prerequisites": [],
-      "tags": [],
-      "modules": [],
-      "exam": null,
-      "lessonCount": 0,
-      "reviewed": null
+      "hasSyllabus": true,
+      "subtitle": "For licensed and trainee P&C adjusters who use their carrier's AI tools to summarize files, draft letters, compare estimates, review photo estimates and medical records, and keep state claim clocks, while checking, documenting and deciding what AI must never decide.",
+      "summary": "Practice 15 adjuster tasks in one composite insurer's quality pilot using synthetic claim records, six branching module labs and a strategic simulation. Leave with source-audited work products and a bounded pilot recommendation; US claim examples are educational, not legal advice.",
+      "description": "Cedar Crossing Mutual is a fictional composite US insurer running a six-week claims-quality pilot. Across property, CAT, auto, BI and workers' compensation desks, you build sourced summaries, checked diary dates, issued-policy citation audits, estimate reconciliations, valuation explanations, medical and statement audits, and independently supported score-response notes. Supplied synthetic materials show both a first attempt and its defects; later tasks require your own judgment.\n\nCalifornia, Texas and Florida are worked examples, with insurer/coverage/trigger assumptions stated. NAIC models are distinguished from state adoption; Medicare status screening is distinguished from RRE and reportable-event analysis. Six module Decision Labs and a final strategic simulation expose workload, inspection, communication and audit trade-offs. A self-assessed pilot packet supplies practice feedback using an observable rubric. The certificate follows lesson, listed-lab and exam completion; it is not adjuster licensing, continuing-education accreditation or proof of workplace competence. All claim data and policy forms are synthetic. Educational, not legal advice.",
+      "hours": 14,
+      "audience": [
+        "Property desk adjusters (homeowners and commercial property)",
+        "Field and catastrophe (CAT) property adjusters",
+        "Auto physical damage appraisers",
+        "Auto total-loss adjusters",
+        "Bodily-injury and casualty adjusters",
+        "Workers' compensation adjusters at carriers and TPAs",
+        "Claims supervisors and team leads who review AI-assisted files"
+      ],
+      "vendors": [
+        "CCC Intelligent Solutions",
+        "CLARA Analytics",
+        "Duck Creek",
+        "EagleView",
+        "EvenUp",
+        "Five Sigma",
+        "Guidewire",
+        "Hi Marley",
+        "Hover",
+        "Mitchell",
+        "Shift Technology",
+        "Tractable",
+        "Verisk"
+      ],
+      "outcomes": [
+        "Produce a dated claim-file timeline and supervisor report with an AI assistant, then audit it against the source log so that every date, open request and outstanding document is correct and the file can be reconstructed under 10 CCR 2695.3",
+        "Compute CA/TX/FL worked claim-clock dates with recorded state, insurer, coverage and trigger assumptions, distinguishing operational reminders and statutory exceptions",
+        "Draft and audit issued-policy coverage/status language, distinguish reservation from denial, and verify translated commitments before authorized communication",
+        "Reconcile property-estimate lines and draft an accurate payment/difference explanation, distinguishing Florida's insurer-estimate rule from Cedar's contractor-comparison practice",
+        "Triage AI-built auto photo estimates into approve, review or field-inspect with a written reason for each, and write an itemized plain-language explanation of a total-loss valuation that flags any mismatched comparable",
+        "Build page-cited medical and demand audits and a corrected statement summary, preserving uncertainty and routing Medicare screening and reportability questions to the right owner",
+        "Write WC action plans and independently supported score-response notes, document human authority and interpret task-specific quality samples to propose a bounded pilot next step"
+      ],
+      "prerequisites": [
+        "fnd-101",
+        "sec-101",
+        "Working knowledge of P&C claim handling, or current adjuster licensing or training"
+      ],
+      "tags": [
+        "insurance",
+        "claims",
+        "adjusters",
+        "property and casualty",
+        "unfair claims settlement",
+        "naic",
+        "auto physical damage",
+        "bodily injury",
+        "workers compensation",
+        "catastrophe claims",
+        "generative ai"
+      ],
+      "modules": [
+        {
+          "title": "Every Adjuster: Claim File Summaries and State Claim Clocks You Can Defend",
+          "summary": "Use an approved assistant to turn a long claim log into a dated timeline and supervisor report, and to propose diary dates, then catch the errors before they become a missed clock or a misstated fact in the file.",
+          "lessons": [
+            "Property Desk Adjuster: Turning a 60-Entry Water-Loss Claim Log Into a Dated Timeline and Supervisor Report",
+            "Auditing the AI Summary Against the File: Reconstructable Records Under 10 CCR 2695.3 and Florida 627.70131",
+            "Keeping California, Texas and Florida Claim Clocks With an AI Diary Assistant and Logging Its Date Errors"
+          ],
+          "labs": [
+            {
+              "id": "m1-reserve-review",
+              "title": "The Reserve Review Cannot Wait",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Property Adjuster: Coverage Letters and Claimant Messages",
+          "summary": "Draft coverage-position letters and claimant status messages with AI while proving every policy citation, listing every basis and keeping the content each state requires.",
+          "lessons": [
+            "Drafting a Sewer-Backup Reservation-of-Rights Letter and Running a Verbatim Policy-Citation Audit",
+            "Status Texts, Document Requests and Spanish Translation: Required Elements, Adjuster License Numbers and Back-Translation Checks"
+          ],
+          "labs": [
+            {
+              "id": "m2-letter-under-pressure",
+              "title": "A Letter Ready Except for Its Meaning",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Desk and CAT Property Adjusters: Estimate Comparisons, Aerial Imagery and Roof Measurement",
+          "summary": "Compare a contractor's or public adjuster's estimate with the carrier's line by line, and decide when an aerial or smartphone roof measurement is enough and when a field inspection is required.",
+          "lessons": [
+            "Comparing a Contractor's Estimate With the Carrier's Line by Line and Writing the Florida Difference Explanation",
+            "CAT Adjuster: Using Aerial Imagery, Drone Flights and AI Roof Measurement Without Misreading the Loss Date"
+          ],
+          "labs": [
+            {
+              "id": "m3-roof-scope",
+              "title": "The Storm Queue and the Missing Scope",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Auto Physical Damage Appraiser and Total-Loss Adjuster: Photo Estimates and Valuations",
+          "summary": "Review AI-built photo estimates before approval and explain a vendor total-loss valuation to the owner in itemized, plain language under California's comparable-automobile rules.",
+          "lessons": [
+            "Reviewing an AI-Built Photo Estimate: Approve, Review or Field-Inspect Across 20 Synthetic Vehicles",
+            "Explaining a Total-Loss Valuation Report to the Owner and Catching the Mismatched Comparable"
+          ],
+          "labs": [
+            {
+              "id": "m4-auto-exceptions",
+              "title": "When a High Score Meets a Hidden Bracket",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Bodily-Injury and Workers' Comp Adjusters: Medical Records, Demands and Recorded Statements",
+          "summary": "Use document AI and transcription on the casualty desk with page-level traceability, lawful recording consent and no causation or compensability judgment delegated to a model.",
+          "lessons": [
+            "Building a Medical Chronology and Specials Summary With Page Citations, Including Section 111 Medicare Checks",
+            "Evaluating an AI-Generated Plaintiff Demand Package: The Assertion-to-Evidence Table and the Records Request",
+            "Recorded Statements With AI Transcription: The Consent Opening, the Transcript of Record and the Summary Audit",
+            "Workers' Comp Adjuster: Turning Triage and Document-Intelligence Alerts Into a 30-Day Claim Plan"
+          ],
+          "labs": [
+            {
+              "id": "m5-records-and-rights",
+              "title": "The Demand Arrives Before the Missing Page",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Every Adjuster: Fraud and Severity Scores, and Defending an AI-Assisted File",
+          "summary": "Act on fraud and severity scores without delaying or denying on the score alone, and measure and document AI use so the file stands up to a supervisor, a market-conduct exam or a bad-faith claim.",
+          "lessons": [
+            "Acting on a Fraud or Severity Score: What to Verify, What to Document and When to Refer to SIU",
+            "Defending the File: Recording What AI Did and What You Decided, and Measuring Accuracy, Edit Rate and Missed Clocks"
+          ],
+          "labs": [
+            {
+              "id": "m6-scores-and-samples",
+              "title": "The Dashboard That Looks Better Than the File",
+              "summary": "Choose a defensible Cedar pilot response when evidence, deadlines and limited reviewer capacity collide.",
+              "minutes": 10,
+              "kind": "module"
+            },
+            {
+              "id": "capstone-december-review",
+              "title": "Cedar's December Pilot Review",
+              "summary": "Defend a six-desk pilot recommendation when a source correction, a board question and scarce inspection capacity change the evidence.",
+              "minutes": 30,
+              "kind": "capstone"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": 20,
+        "passPct": 80,
+        "minutes": 40,
+        "attempts": 3
+      },
+      "lessonCount": 15,
+      "reviewed": "2026-11"
     },
     {
       "id": "fin-235",

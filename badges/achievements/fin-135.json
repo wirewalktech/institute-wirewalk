@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-135.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Property and Casualty Claims Adjusters",
+  "description": "Practice 15 adjuster tasks in one composite insurer's quality pilot using synthetic claim records, six branching module labs and a strategic simulation. Leave with source-audited work products and a bounded pilot recommendation; US claim examples are educational, not legal advice.",
+  "humanCode": "FIN-135",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "insurance",
+    "claims",
+    "adjusters",
+    "property and casualty",
+    "unfair claims settlement",
+    "naic",
+    "auto physical damage",
+    "bodily injury",
+    "workers compensation",
+    "catastrophe claims",
+    "generative ai"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-135.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Property and Casualty Claims Adjusters"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-135/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a dated claim-file timeline and supervisor report with an AI assistant, then audit it against the source log so that every date, open request and outstanding document is correct and the file can be reconstructed under 10 CCR 2695.3",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-1",
+      "targetCode": "fin-135.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute CA/TX/FL worked claim-clock dates with recorded state, insurer, coverage and trigger assumptions, distinguishing operational reminders and statutory exceptions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-2",
+      "targetCode": "fin-135.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft and audit issued-policy coverage/status language, distinguish reservation from denial, and verify translated commitments before authorized communication",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-3",
+      "targetCode": "fin-135.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile property-estimate lines and draft an accurate payment/difference explanation, distinguishing Florida's insurer-estimate rule from Cedar's contractor-comparison practice",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-4",
+      "targetCode": "fin-135.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Triage AI-built auto photo estimates into approve, review or field-inspect with a written reason for each, and write an itemized plain-language explanation of a total-loss valuation that flags any mismatched comparable",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-5",
+      "targetCode": "fin-135.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build page-cited medical and demand audits and a corrected statement summary, preserving uncertainty and routing Medicare screening and reportability questions to the right owner",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-6",
+      "targetCode": "fin-135.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write WC action plans and independently supported score-response notes, document human authority and interpret task-specific quality samples to propose a bounded pilot next step",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-135/#outcome-7",
+      "targetCode": "fin-135.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-135.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
