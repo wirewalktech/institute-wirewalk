@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T14:03:03.662Z",
+  "generated": "2026-11-05T14:23:15.467Z",
   "levels": {
     "intro": {
       "label": "Free intro",
@@ -18200,10 +18200,10 @@
       "status": "on_sale",
       "listPrice": 0,
       "hasSyllabus": true,
-      "subtitle": "A free one-hour introduction for anyone who uses AI at work and wants to understand, without jargon, which rules apply and what they mean day to day.",
-      "summary": "A plain-English tour of the rules around AI: the difference between laws, standards, frameworks and company policies, the handful of ideas they all share, what the EU AI Act and the US approach actually do, and how to use AI at work without creating problems for yourself or your organization.",
-      "description": "Rules about AI are everywhere in the news, and most of the coverage assumes you already know the vocabulary. This free course starts from zero. In about an hour you will learn the four kinds of AI rules and how they fit together, the shared ideas (risk, transparency, accountability, human oversight, fairness and privacy) that show up in almost every one of them, and what the major rulebooks actually say: the EU AI Act and its amended timeline, the US mix of federal direction, state laws and long-standing consumer protection and anti-discrimination law, and the voluntary NIST AI Risk Management Framework and ISO/IEC 42001.\n\nThe final module brings it down to your desk: what not to paste into a chatbot, when to say that AI helped, why you must check what it produces, and how to recognize and raise a problem. The lessons take about 40 minutes to read, and each ends with an optional five-minute exercise. Content reflects the position as of October 2026 and is educational, not legal advice. The course ends with a 10-question check and pointers to the paid courses that go deeper.",
-      "hours": 1,
+      "subtitle": "A free, plain-English introduction to US AI rules and practical decisions at work. Allow about two hours, including practice and the final check.",
+      "summary": "Start with existing US law, learn when state and sector requirements need review, and distinguish voluntary frameworks from binding obligations. Practice checking an AI-assisted task and raising a useful concern.",
+      "description": "This free introduction starts with US workplace decisions: a public customer draft, an unsupported assurance, a proposed hiring use and a concern that needs a clear report. Learn how existing consumer-protection and employment law remain relevant, how state, local and sector rules depend on scope, and how NIST and ISO differ from legal or contractual permission. A short optional aside points to specialist crossborder study; EU dates are not examined.\n\nAllow about two hours for seven lessons with worked examples and short self-checks, a 15-minute integrated note with model/self-feedback, one five-minute Decision Lab, and a ten-question exam with a 20-minute limit. This is an estimated learning budget, not a measured pilot result. No AI-graded submission is required or provided. The course is educational and does not establish legal compliance or professional authorization. Author sources were checked November 5, 2026.",
+      "hours": 2,
       "audience": [
         "Employees who use AI tools such as chat assistants at work",
         "Managers and team leads fielding questions about what is allowed",
@@ -18212,46 +18212,54 @@
       ],
       "vendors": [],
       "outcomes": [
-        "Distinguish laws, standards, voluntary frameworks and internal company policies, and explain which ones bind you",
-        "Explain the shared ideas behind most AI rules: risk-based treatment, transparency, accountability, human oversight, fairness and privacy",
-        "Describe in outline what the EU AI Act does, its risk tiers and its key dates as amended in 2026",
-        "Explain why the US has no single AI law and which existing laws still apply to AI use",
-        "Apply everyday safe-use habits to AI tools at work: protecting data, disclosing AI help, verifying outputs and escalating concerns"
+        "Classify a supplied law, guidance document, contract clause, framework and internal policy, and identify the scope of the claimed obligation",
+        "Recognize a federal consumer-protection, employment, accessibility or lending concern and select an evidence-based next action",
+        "Identify missing actor, use, geography, sector and source-status facts before applying a state, local or sector rule",
+        "Choose permitted inputs and proportionate output and disclosure checks under explicit account, policy and contract facts",
+        "Write an evidence-based concern report that separates facts from uncertainty and names a feasible action and owner"
       ],
       "prerequisites": [],
       "tags": [
-        "ai regulation",
+        "us ai regulation",
         "ai governance",
-        "eu ai act",
-        "responsible ai",
         "ai policy",
+        "safe ai use",
         "free",
         "intro"
       ],
       "modules": [
         {
-          "title": "What counts as an AI rule",
-          "summary": "The four kinds of AI rules and the shared ideas that run through almost all of them.",
+          "title": "Know what binds you",
+          "summary": "Sort authority and recognize a change in the stakes of an AI task.",
           "lessons": [
-            "Laws, standards, frameworks and policies: the four kinds of AI rules",
-            "The shared ideas behind almost every AI rule"
+            "Which AI rules bind your US workplace?",
+            "Recognize the stakes before you use AI"
           ]
         },
         {
-          "title": "The big rulebooks, briefly",
-          "summary": "What the EU AI Act, the US approach and the main voluntary frameworks actually ask for.",
+          "title": "Find the US rule and check its scope",
+          "summary": "Recognize existing federal concerns and check state, local, sector and framework scope.",
           "lessons": [
-            "The EU AI Act in fifteen minutes",
-            "The United States: no single AI law, plenty of rules",
-            "Voluntary frameworks: NIST AI RMF, ISO/IEC 42001 and the OECD principles"
+            "Existing US law still applies to AI",
+            "State, local and sector rules: check the fit",
+            "NIST and ISO: useful methods, different obligations"
           ]
         },
         {
-          "title": "What the rules mean for you at work",
-          "summary": "Everyday habits that keep your AI use within the rules, and how to raise a concern well.",
+          "title": "Use the tool and raise concerns well",
+          "summary": "Check the actual input and output, then practice a useful handoff under a deadline.",
           "lessons": [
-            "Using AI tools safely: data, disclosure and checking the output",
-            "Spotting a problem and raising it well"
+            "Before you paste or send: check data, claims and disclosure",
+            "Raise a useful concern and choose the next step"
+          ],
+          "labs": [
+            {
+              "id": "safe-summary",
+              "title": "Safe Summary",
+              "summary": "Deliver a supported public summary and route a possible restricted-data upload under a short business deadline.",
+              "minutes": 5,
+              "kind": "intro"
+            }
           ]
         }
       ],
@@ -18262,7 +18270,7 @@
         "attempts": 3
       },
       "lessonCount": 7,
-      "reviewed": "2026-10"
+      "reviewed": "2026-11"
     },
     {
       "id": "gov-101",

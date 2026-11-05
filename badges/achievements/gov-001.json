@@ -9,17 +9,16 @@
   ],
   "achievementType": "CertificateOfCompletion",
   "name": "AI Rules in Plain English: What Everyone Should Know",
-  "description": "A plain-English tour of the rules around AI: the difference between laws, standards, frameworks and company policies, the handful of ideas they all share, what the EU AI Act and the US approach actually do, and how to use AI at work without creating problems for yourself or your organization.",
+  "description": "Start with existing US law, learn when state and sector requirements need review, and distinguish voluntary frameworks from binding obligations. Practice checking an AI-assisted task and raising a useful concern.",
   "humanCode": "GOV-001",
   "fieldOfStudy": "Governance, Risk and Compliance",
   "inLanguage": "en-US",
-  "version": "2026-10",
+  "version": "2026-11",
   "tag": [
-    "ai regulation",
+    "us ai regulation",
     "ai governance",
-    "eu ai act",
-    "responsible ai",
     "ai policy",
+    "safe ai use",
     "intro"
   ],
   "image": {
@@ -37,14 +36,14 @@
   },
   "criteria": {
     "id": "https://institute.wirewalk.com/courses/gov-001/",
-    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules; and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+    "narrative": "To earn this certificate a learner must: complete all 7 lessons in 3 modules, play the course's Decision Lab to an ending (the lab score does not count); and pass the final exam: 10 questions, 20 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
   },
   "alignment": [
     {
       "type": [
         "Alignment"
       ],
-      "targetName": "Distinguish laws, standards, voluntary frameworks and internal company policies, and explain which ones bind you",
+      "targetName": "Classify a supplied law, guidance document, contract clause, framework and internal policy, and identify the scope of the claimed obligation",
       "targetUrl": "https://institute.wirewalk.com/courses/gov-001/#outcome-1",
       "targetCode": "gov-001.O1",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -53,7 +52,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Explain the shared ideas behind most AI rules: risk-based treatment, transparency, accountability, human oversight, fairness and privacy",
+      "targetName": "Recognize a federal consumer-protection, employment, accessibility or lending concern and select an evidence-based next action",
       "targetUrl": "https://institute.wirewalk.com/courses/gov-001/#outcome-2",
       "targetCode": "gov-001.O2",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -62,7 +61,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Describe in outline what the EU AI Act does, its risk tiers and its key dates as amended in 2026",
+      "targetName": "Identify missing actor, use, geography, sector and source-status facts before applying a state, local or sector rule",
       "targetUrl": "https://institute.wirewalk.com/courses/gov-001/#outcome-3",
       "targetCode": "gov-001.O3",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -71,7 +70,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Explain why the US has no single AI law and which existing laws still apply to AI use",
+      "targetName": "Choose permitted inputs and proportionate output and disclosure checks under explicit account, policy and contract facts",
       "targetUrl": "https://institute.wirewalk.com/courses/gov-001/#outcome-4",
       "targetCode": "gov-001.O4",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
@@ -80,7 +79,7 @@
       "type": [
         "Alignment"
       ],
-      "targetName": "Apply everyday safe-use habits to AI tools at work: protecting data, disclosing AI help, verifying outputs and escalating concerns",
+      "targetName": "Write an evidence-based concern report that separates facts from uncertainty and names a feasible action and owner",
       "targetUrl": "https://institute.wirewalk.com/courses/gov-001/#outcome-5",
       "targetCode": "gov-001.O5",
       "targetFramework": "Wirewalk Institute of AI course outcomes"
