@@ -3,7 +3,7 @@ description: >-
   Professional AI training with automated exams and certificates: AI models and
   vendors, building AI applications, model development, training at scale, AI
   infrastructure and hardware, AI security, governance and executive programs.
-search_indexing_enabled: false   # Preserve the existing pre-launch hold until the owner selects the launch state.
+search_indexing_enabled: true    # Owner authorized public search launch on 2026-11-05.
 author: Wirewalk Institute of AI
 email: sales@wirewalk.com
 
