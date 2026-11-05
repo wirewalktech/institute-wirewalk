@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T13:36:29.391Z",
+  "generated": "2026-11-05T13:42:08.094Z",
   "levels": {
     "intro": {
       "label": "Free intro",
@@ -1122,7 +1122,7 @@
       "title": "AI in Financial Services",
       "summary": "AI in banking and lending, capital markets, wealth management, insurance, payments and fintech — under model risk, fair lending, conduct and financial-crime rules.",
       "courseCount": 15,
-      "onSale": 2,
+      "onSale": 3,
       "vendors": [
         "AlphaSense",
         "Amazon Web Services",
@@ -1143,16 +1143,19 @@
         "Global Relay",
         "ICE Mortgage Technology",
         "Jump",
+        "MSCI",
         "Mastercard",
         "Microsoft",
         "Moody's",
         "NICE Actimize",
         "Nasdaq Verafin",
+        "ORX",
         "Ocrolus",
         "Onfido",
         "OpenAI",
         "Quantexa",
         "S&P Global",
+        "SAS",
         "Salient",
         "Sixfold",
         "Smarsh",
@@ -33742,22 +33745,169 @@
       "level": "intermediate",
       "levelLabel": "Intermediate",
       "flagship": false,
-      "status": "waitlist",
+      "status": "on_sale",
       "listPrice": 26175,
-      "hasSyllabus": false,
-      "subtitle": null,
-      "summary": "Building AI for Quantitative Risk Analysis: Credit, Market and Operational Risk: an intermediate course in the AI in Financial Services track. Syllabus in preparation.",
-      "description": null,
-      "hours": null,
-      "audience": [],
-      "vendors": [],
-      "outcomes": [],
-      "prerequisites": [],
-      "tags": [],
-      "modules": [],
-      "exam": null,
-      "lessonCount": 0,
-      "reviewed": null
+      "hasSyllabus": true,
+      "subtitle": "For US risk teams evaluating PD challengers, fixed-LGD ECL, severe-path projections, bank and fund VaR controls, and operational-loss classification with reproducible evidence.",
+      "summary": "Specific risk-measurement jobs at US banks and fund complexes, each taught as one task: the CECL modeler evaluating ML PD with fixed-LGD ECL, the stress-test modeler building a challenger the Fed's severe scenario will push past history, the market-risk quant explaining backtesting exceptions, and the op-risk analyst classifying loss events with an LLM. Each lesson covers the rule for that task, how to measure success, and an exercise on synthetic data.",
+      "description": "This course is not an overview of AI in risk management. It follows the people who build the numbers behind the allowance, the capital plan and the market-risk capital charge through tasks they actually own. A CECL modeler evaluates loan-level PD challengers and projects illustrative ECL using fixed LGD and a PD response driven by a reasonable-and-supportable macro forecast and reversion under ASC 326-20. A stress-test modeler builds a monotonic gradient-boosted challenger to a regression champion and finds where it flattens under a severe path beyond history, in the setting of the Fed's February 4, 2026 scenarios and its September 30, 2026 final rules on public comment, two global market shocks and SCB averaging calculated after the 2028 test and effective January 1, 2029. A market-risk quant counts backtesting exceptions over 250 business days under 12 CFR 217.204, ties each to a root cause, and has an LLM draft commentary only from a computed fact table. A fund derivatives risk manager runs the Rule 18f-4 relative and absolute VaR tests and weekly backtesting. An operational risk analyst compares supplied simulated LLM responses (or approved live inference) with a supervised baseline for mapping loss narratives to the seven Basel Level 1 event types, and a scenario lead builds cited workshop packs and fits severity distributions.\n\nFor every task you learn what the work looks like today, where AI helps and where it must not decide, which data and systems are involved, how to compare build-versus-buy choices (optional vendor names are inherited context, with current features unverified and no performance claims), and which rule applies to that step. Basel OPE25 is taught as the international reference and the March 19, 2026 US capital proposals as pending, not final. SR 26-2 basics are covered in fin-210; here you apply SR 26-2 to risk-measurement models and govern the generative coding and documentation tools that its footnote 3 leaves out of scope. Every exercise uses synthetic data about fictional loans, desks, funds and loss events. The course ends with a validation-ready package for one model. Regulatory status is stated as of November 2026. The course is educational, not legal or accounting advice. The certificate attests to completion and an automated assessment only; it is not a regulatory or professional credential. The running case is Lakeshore Bancorp, a fictional Ohio banking group, with a separately governed advised fund. Completion requires the lessons, all listed Decision Labs and the automated exam; the package rubric supplies practice feedback, not independent validation approval.",
+      "hours": 14,
+      "audience": [
+        "CECL and allowance (ACL) credit risk modelers",
+        "Stress-testing and capital-planning modelers at banks in or near the Federal Reserve's stress-test program",
+        "Market-risk quants and analysts in second-line market risk",
+        "Market-data and risk-data analysts supporting VaR and stress engines",
+        "Derivatives risk managers at registered funds subject to SEC Rule 18f-4",
+        "Operational risk analysts and scenario-analysis leads maintaining internal loss data",
+        "Wholesale and CRE credit portfolio analysts building early-warning and stress tools",
+        "Model owners and model validators (MRM) responsible for risk-measurement models"
+      ],
+      "vendors": [
+        "SAS",
+        "Moody's",
+        "MSCI",
+        "ORX"
+      ],
+      "outcomes": [
+        "Evaluate a gradient-boosted PD challenger against a logistic baseline on a synthetic loan panel, project illustrative lifetime ECL with fixed LGD and documented reversion, and distinguish computed drivers from committee judgments",
+        "Diagnose where a tree-based stress-test challenger flattens beyond the training range under a severe scenario, and write an effective-challenge memo that reconciles champion and challenger projections",
+        "Compute the 250-business-day backtesting exception count and resulting multiplication-factor zone under 12 CFR 217.204, classify each exception's root cause, and grade LLM commentary for claims not in the fact table",
+        "Run the Rule 18f-4 relative or absolute VaR test and weekly backtest for a synthetic fund, and identify the steps a derivatives risk manager must not delegate to AI",
+        "Measure precision and recall of threshold rules versus an anomaly detector on risk-factor data with planted defects, and document a proxy choice for a short-history factor",
+        "Evaluate a supplied simulated LLM arm against a supervised baseline for seven-category loss-event classification, compute macro-F1 and boundary/workload measures on aligned event IDs, and defend a review-routing rule",
+        "Assemble a validation-ready package for one risk-measurement model, including SR 26-2 tiering, out-of-time and out-of-range tests, monitoring thresholds, and controls on the generative tools used to build and document it",
+        "Evaluate early-warning scores at a fixed review capacity and resolve news-entity collisions before proposing a watch-list review"
+      ],
+      "prerequisites": [
+        "fin-110",
+        "gov-330",
+        "fin-210 or equivalent knowledge of model risk management; key SR 26-2 scope is restated here",
+        "fin-120 may replace fin-110 for asset-manager risk staff",
+        "Comfortable with Python and pandas, and with basic probability and regression (exercises use pandas, NumPy, scikit-learn and SciPy; versions are stated in each exercise)"
+      ],
+      "tags": [
+        "quantitative risk",
+        "cecl",
+        "credit risk",
+        "stress testing",
+        "market risk",
+        "value at risk",
+        "backtesting",
+        "rule 18f-4",
+        "operational risk",
+        "basel",
+        "model risk management",
+        "sr 26-2",
+        "banking",
+        "asset management"
+      ],
+      "modules": [
+        {
+          "title": "The CECL Modeler and the Wholesale Credit Officer: ML Loss Forecasting for the Allowance and Early Warning",
+          "summary": "Move an allowance pool from a loss-rate method to ML PD/LGD under ASC 326-20, and deploy an early-warning score the watch-list committee can challenge.",
+          "lessons": [
+            "Rebuilding an Allowance Pool as Loan-Level ML PD and LGD Models: Segmentation, Leakage and Reversion Under ASC 326-20",
+            "Macro Scenarios, Qualitative Adjustments and the Quarterly Allowance Narrative: What the Model Computes and What the ACL Committee Decides",
+            "A Wholesale Early-Warning Score with News NLP: Review Capacity, Entity Collisions and Why It Must Not Change Risk Ratings"
+          ],
+          "labs": [
+            {
+              "id": "m1-allowance-close",
+              "title": "Nine days to close the allowance",
+              "summary": "The controller needs a $500M pool allowance in nine business days. The challenger has stronger training AUC but weaker prospective AUC. The CFO expects the model upgrade to lower the allowance.",
+              "minutes": 15,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "The Stress-Test Modeler and the CRE Portfolio Analyst: ML Challengers Under the Fed's 2026 Scenarios",
+          "summary": "Build and defend an ML challenger for loss projections in a stress test whose severe path goes beyond history, and stress CRE loans from extracted rent rolls.",
+          "lessons": [
+            "How Supervisory and Company-Run Stress Tests Work After the February and September 2026 Federal Reserve Actions",
+            "A Monotonic Gradient-Boosted Challenger to the Loss-Rate Regression: Out-of-Range Flattening and the Effective-Challenge Memo",
+            "Extracting Rent Rolls and Operating Statements to Stress DSCR and LTV, and a Regime-Aware Deposit Beta Challenger"
+          ],
+          "labs": [
+            {
+              "id": "m2-severe-path",
+              "title": "The challenger that stops rising",
+              "summary": "Lakeshore is a $180B Category IV composite conducting internal stress analysis. A GBM shows 42% lower nine-quarter losses. The CRO asks whether this reflects better risk selection.",
+              "minutes": 15,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "The Market-Risk Quant, the Market-Data Analyst and the Fund Derivatives Risk Manager: VaR, Backtesting and Data",
+          "summary": "Evaluate risk-factor controls and bank exception counts, then illustrate fund VaR/backtesting within the broader Rule 18f-4 program.",
+          "lessons": [
+            "Detecting Stale, Spiked and Missing Risk-Factor Data Before the VaR Run, and Documenting Proxies",
+            "Backtesting Exceptions Under 12 CFR 217.204: The 250-Day Count, the Multiplier and LLM Commentary Written Only From a Fact Table",
+            "Running the Rule 18f-4 Relative and Absolute VaR Tests and Weekly Backtests, and Grounded Explanations of Portfolio Risk"
+          ],
+          "labs": [
+            {
+              "id": "m3-two-var-regimes",
+              "title": "Eight exceptions and a fund breach",
+              "summary": "Lakeshore Bank and the separately governed Cedar Ridge advised fund share a data vendor. You coordinate operational controls, but each legal entity retains its own risk owners and rule set.",
+              "minutes": 15,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "The Operational Risk Analyst and the Scenario Lead: Loss-Event Classification and Scenario Analysis",
+          "summary": "Classify loss narratives into Basel Level 1 event types with an LLM checked against a supervised baseline, and build cited scenario workshops with fitted severity models.",
+          "lessons": [
+            "The Loss-Data Standard: Basel OPE25 Thresholds, Ten-Year History, Comprehensiveness and the Pending March 2026 US Proposal",
+            "LLM Versus Supervised Classification of Loss-Event Narratives: Gold Sets, Macro-F1, Boundary Events and Review Routing",
+            "Scenario Workshop Packs From External Loss Events With Citations, and Fitting Lognormal and Generalized Pareto Severities"
+          ],
+          "labs": [
+            {
+              "id": "m4-loss-boundaries",
+              "title": "The missing operational losses",
+              "summary": "At Lakeshore, 150 loss events and near misses arrive monthly. The business wants an LLM to reduce coding time. Finance also needs the quarterly reconciliation finished.",
+              "minutes": 15,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "The Model Owner and the Validator: Governing and Shipping Risk-Measurement AI",
+          "summary": "Apply SR 26-2 to risk-measurement models, control the generative tools footnote 3 leaves out of scope, and assemble a validation-ready package.",
+          "lessons": [
+            "SR 26-2 Applied to CECL, Stress-Test, VaR and Op-Risk Models: Tiering, Benchmarking and Ongoing Monitoring",
+            "Generative Coding Assistants and Documentation Drafters in the Model Lifecycle: Footnote 3, Third-Party Risk Guidance and Doc-to-Code Checks",
+            "Capstone: A Validation-Ready Package for One Risk Model, From Out-of-Time Tests to Monitoring Owners and Thresholds"
+          ],
+          "labs": [
+            {
+              "id": "m5-validation-handoff",
+              "title": "The package that cannot sign itself",
+              "summary": "The CRO wants one risk model ready for independent validation. Your twelve-section package exists, but one monitoring metric has no owner and an LLM-written document reports AUC 0.71 rather than 0.687.",
+              "minutes": 15,
+              "kind": "module"
+            },
+            {
+              "id": "capstone-risk-committee",
+              "title": "Six weeks to a defensible risk package",
+              "summary": "The CRO gives you six weeks and a $120,000 planning envelope to integrate the allowance, internal stress, bank/fund VaR and operational-loss controls. You must present one reproducible model package and identify dependencies across the others. Select each scope explicitly; not every pilot must reach production.",
+              "minutes": 30,
+              "kind": "capstone"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": 20,
+        "passPct": 80,
+        "minutes": 40,
+        "attempts": 3
+      },
+      "lessonCount": 15,
+      "reviewed": "2026-11"
     },
     {
       "id": "pro-150",

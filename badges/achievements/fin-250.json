@@ -1,0 +1,137 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-250.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI for Quantitative Risk Analysis: Credit, Market and Operational Risk",
+  "description": "Specific risk-measurement jobs at US banks and fund complexes, each taught as one task: the CECL modeler evaluating ML PD with fixed-LGD ECL, the stress-test modeler building a challenger the Fed's severe scenario will push past history, the market-risk quant explaining backtesting exceptions, and the op-risk analyst classifying loss events with an LLM. Each lesson covers the rule for that task, how to measure success, and an exercise on synthetic data.",
+  "humanCode": "FIN-250",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "quantitative risk",
+    "cecl",
+    "credit risk",
+    "stress testing",
+    "market risk",
+    "value at risk",
+    "backtesting",
+    "rule 18f-4",
+    "operational risk",
+    "basel",
+    "model risk management",
+    "sr 26-2",
+    "banking",
+    "asset management"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-250.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI for Quantitative Risk Analysis: Credit, Market and Operational Risk"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-250/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a gradient-boosted PD challenger against a logistic baseline on a synthetic loan panel, project illustrative lifetime ECL with fixed LGD and documented reversion, and distinguish computed drivers from committee judgments",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-1",
+      "targetCode": "fin-250.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Diagnose where a tree-based stress-test challenger flattens beyond the training range under a severe scenario, and write an effective-challenge memo that reconciles champion and challenger projections",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-2",
+      "targetCode": "fin-250.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute the 250-business-day backtesting exception count and resulting multiplication-factor zone under 12 CFR 217.204, classify each exception's root cause, and grade LLM commentary for claims not in the fact table",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-3",
+      "targetCode": "fin-250.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run the Rule 18f-4 relative or absolute VaR test and weekly backtest for a synthetic fund, and identify the steps a derivatives risk manager must not delegate to AI",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-4",
+      "targetCode": "fin-250.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Measure precision and recall of threshold rules versus an anomaly detector on risk-factor data with planted defects, and document a proxy choice for a short-history factor",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-5",
+      "targetCode": "fin-250.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a supplied simulated LLM arm against a supervised baseline for seven-category loss-event classification, compute macro-F1 and boundary/workload measures on aligned event IDs, and defend a review-routing rule",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-6",
+      "targetCode": "fin-250.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble a validation-ready package for one risk-measurement model, including SR 26-2 tiering, out-of-time and out-of-range tests, monitoring thresholds, and controls on the generative tools used to build and document it",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-7",
+      "targetCode": "fin-250.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate early-warning scores at a fixed review capacity and resolve news-entity collisions before proposing a watch-list review",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-250/#outcome-8",
+      "targetCode": "fin-250.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-250.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
