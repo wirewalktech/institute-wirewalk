@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T13:26:20.018Z",
+  "generated": "2026-11-05T13:36:29.391Z",
   "levels": {
     "intro": {
       "label": "Free intro",
@@ -1059,7 +1059,7 @@
       "title": "AI in Health and Life Sciences",
       "summary": "AI in hospitals, clinics, imaging, health plans, public health, pharma and biotech R&D, and medical devices — with HIPAA, FDA and EU rules built in.",
       "courseCount": 21,
-      "onSale": 5,
+      "onSale": 6,
       "vendors": [
         "AKASA",
         "Abridge",
@@ -1070,6 +1070,7 @@
         "ArisGlobal",
         "Assort Health",
         "Availity",
+        "Basil Systems",
         "Chai Discovery",
         "CodaMetrix",
         "Cohere Health",
@@ -1078,11 +1079,17 @@
         "EvolutionaryScale",
         "Experian Health",
         "Fathom",
+        "Finite State",
+        "Flywheel",
         "Google DeepMind",
         "Hugging Face",
+        "IBM (DOORS)",
         "Infinitus",
         "Isomorphic Labs",
+        "Jama Software",
+        "Ketryx",
         "Luma Health",
+        "Medcrypt",
         "Meta",
         "Microsoft",
         "Microsoft (Copilot Chat, Dragon Copilot)",
@@ -1097,8 +1104,11 @@
         "Oracle",
         "Phreesia",
         "Prenosis",
+        "Siemens (Polarion)",
         "Solventum",
         "Tennr",
+        "V7",
+        "Veeva Systems",
         "Viz.ai",
         "Waystar",
         "athenahealth",
@@ -26743,22 +26753,197 @@
       "level": "intermediate",
       "levelLabel": "Intermediate",
       "flagship": true,
-      "status": "waitlist",
+      "status": "on_sale",
       "listPrice": 26175,
-      "hasSyllabus": false,
-      "subtitle": null,
-      "summary": "Building and Deploying AI-Enabled Medical Devices: an intermediate course in the AI in Health and Life Sciences track. Syllabus in preparation.",
-      "description": null,
-      "hours": null,
-      "audience": [],
-      "vendors": [],
-      "outcomes": [],
-      "prerequisites": [],
-      "tags": [],
-      "modules": [],
-      "exam": null,
-      "lessonCount": 0,
-      "reviewed": null
+      "hasSyllabus": true,
+      "subtitle": "For RA, QA, ML, biostatistics, risk, security and post-market staff at device manufacturers who must take an AI-enabled SaMD from design controls to clearance, change control and field monitoring under FDA rules.",
+      "summary": "A job-by-job course for the people inside a device manufacturer who build, clear, change and monitor AI-enabled software. You carry one fictional CT hemorrhage-triage device through the predicate table, the sequestered test set, the ISO 14971 and IEC 62304 files, the performance study, the Section 524B package, a PCCP, drift monitoring and MDR complaint triage, using synthetic data throughout.",
+      "description": "This is not an overview of how AI devices are regulated. Each module is one or two concrete jobs done by a named role at a device manufacturer, applied to a single running case: NeuroFlag, a fictional software device from the fictional Northbank Imaging AI, Inc. that flags suspected intracranial hemorrhage on non-contrast head CT to re-prioritize a radiologist worklist. For every task you see how the work is done today, where AI helps and where it must not be used, the data and systems the work depends on, the tool categories and historical product-category examples (no current feature or endorsement claim), the controls that apply to that exact task, how to measure success, and a hands-on exercise built on synthetic data. No real patient, complaint or submission data appear anywhere in the course.\n\nThe course keeps two kinds of AI apart: AI as the product (the device's own model, where FDA's good machine learning practice principles, the predetermined change control plan (PCCP) guidance and the January 2025 AI-enabled device software functions draft guidance apply) and AI as a tool inside the quality system (an LLM drafting a trace matrix or pre-sorting complaints, where QMSR, ISO 13485 clause 4.1.6 and FDA's computer software assurance guidance apply). Controls covered include the QMSR (21 CFR 820 incorporating ISO 13485:2016, effective February 2, 2026), Section 515C and the PCCP final guidance, 21 CFR 807.81(a)(3)(i) and FDA's software-change 510(k) guidance, ISO 14971:2019 with AAMI TIR34971, IEC 62304, Section 524B and FDA's cybersecurity guidance (February 2026 version, which superseded the June 2025 version), 21 CFR 803, 806 and 820.35, and an optional evidence handoff for US firms considering EU expansion. No current EU transition-date rule is tested in the US exam. Historical examples use October 17, 2026; current US authority checks are dated November 5, 2026, and documents that are still draft or discussion papers are labeled as such. The course is educational, not legal or regulatory advice.\n\nUS authority checks and independent factual, instructional and assessment reviews were completed November 5, 2026. Completion requires the lessons, all seven listed Decision Labs and the exam. The integrated evidence packet is practice with a self/facilitator rubric, not a separate certificate gate.\n\nWorkload: 16 planned hours is the US core, with supplied-output/no-code practice, packet assembly and AI-feedback time explicitly budgeted. Full optional scripting/tool extensions add nine hours; optional cross-border reading/practice adds 50 minutes. The core includes 383 minutes reading, 300 core practice (including final packet iteration), 90 packet assembly, 45 feedback, 102 labs and 40 exam. These are planning estimates, not measured guarantees.",
+      "hours": 16,
+      "audience": [
+        "Regulatory affairs specialists and RA leads at SaMD and medtech manufacturers",
+        "ML leads and clinical data managers building device models",
+        "Biostatisticians and clinical affairs scientists running device performance studies",
+        "Risk management and software systems engineers working to ISO 14971 and IEC 62304",
+        "Quality assurance and computer software assurance (CSA) leads",
+        "Product-security engineers preparing Section 524B cyber-device packages",
+        "Post-market surveillance engineers and complaint handling specialists"
+      ],
+      "vendors": [
+        "Flywheel",
+        "V7",
+        "Ketryx",
+        "Jama Software",
+        "Veeva Systems",
+        "Medcrypt",
+        "Finite State",
+        "Basil Systems",
+        "Siemens (Polarion)",
+        "IBM (DOORS)"
+      ],
+      "outcomes": [
+        "Build a predicate comparison table for an AI triage device from openFDA and public 510(k) summaries, verifying every row against the source document and logging each assistant error",
+        "Audit a dataset manifest for patient-level leakage, scanner confounding and out-of-scope populations, and write the data management section a reviewer would read",
+        "Write ML hazard/control records with explicit planned/implemented/verified status, and separately justify software classification, FDA documentation and QMS-tool assurance",
+        "Compute standalone sensitivity and specificity with 95% confidence intervals overall and by subgroup, and report a subgroup that misses its pre-specified threshold",
+        "Produce a model card and labeling statements in which every performance number traces to the validation report and no limitation is dropped",
+        "Classify proposed software changes as letter-to-file, within an authorized PCCP or new 510(k), citing the regulation or guidance question that drives each call",
+        "Draft the three parts of a PCCP with quantitative aggregate and per-subgroup acceptance criteria for a planned retraining",
+        "Evaluate cyber vulnerabilities, privacy-limited field monitoring and synthetic complaints for investigation, CAPA, Part 806 correction reporting and both MDR branches with their clocks"
+      ],
+      "prerequisites": [
+        "mod-330",
+        "gov-201",
+        "Working familiarity with medical device design controls or regulatory submissions"
+      ],
+      "tags": [
+        "medical devices",
+        "samd",
+        "fda",
+        "pccp",
+        "510k",
+        "qmsr",
+        "iso 13485",
+        "iso 14971",
+        "iec 62304",
+        "gmlp",
+        "cybersecurity",
+        "sbom",
+        "postmarket surveillance",
+        "mdr reporting",
+        "radiology ai",
+        "eu ai act"
+      ],
+      "modules": [
+        {
+          "title": "RA Specialist and ML Lead: The Pathway File and the Sequestered Test Set",
+          "summary": "Building the predicate table and the data management plan for NeuroFlag before any model is trained for submission.",
+          "lessons": [
+            "The NeuroFlag Case File: Who Owns Which Job at a SaMD Manufacturer Under QMSR, and AI as Product vs. AI as QMS Tool",
+            "RA Specialist Task: Building a Verified Predicate Table from openFDA, Public 510(k) Summaries and FDA's AI-Enabled Device List",
+            "ML Lead and Clinical Data Manager Task: The Data Management Plan Under the AI-DSF Draft Guidance, GMLP and HIPAA De-identification",
+            "Exercise: Finding Patient Leakage, a Training-Only Scanner Vendor and Out-of-Scope Pediatric Studies in a Synthetic 3,000-Study Manifest"
+          ],
+          "labs": [
+            {
+              "id": "m1-evidence-lock",
+              "title": "The Friday Test-Set Lock",
+              "summary": "Friday source lock: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Risk Manager, Software Systems Engineer and CSA Lead: Design Controls with a Model Inside",
+          "summary": "Adding ML hazards to the risk file, making the model a traceable IEC 62304 software item, and validating the AI tools the team itself uses.",
+          "lessons": [
+            "Risk Manager Task: Adding Data Drift, Automation Bias and False-Negative Delay to the ISO 14971 File with AAMI TIR34971",
+            "Software Systems Engineer Task: Treating the Model as an IEC 62304 Software Item and ML Frameworks as SOUP",
+            "Exercise: AI-Assisted Trace Gap Analysis on a Synthetic Requirements Export, Scoring the Assistant's False Links and Missed Gaps",
+            "QA/CSA Lead Task: Validating an LLM Complaint-Summary Feature Under ISO 13485 Clause 4.1.6 and FDA's Computer Software Assurance Guidance"
+          ],
+          "labs": [
+            {
+              "id": "m2-control-evidence",
+              "title": "The Control That Exists Only in a Draft",
+              "summary": "The design-review control record: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Biostatistician and Labeling Lead: Proving NeuroFlag Works and Saying So Honestly",
+          "summary": "Designing the standalone and reader studies with pre-specified subgroup endpoints, then turning the results into a model card and labeling without over-claims.",
+          "lessons": [
+            "Biostatistician Task: Pre-Specifying Standalone Endpoints, Reference Standard and Subgroups Before Unblinding",
+            "When a Reader Study Is Needed: MRMC Designs, FDA's CADe Clinical Performance Guidance and Why Triage Devices Differ",
+            "Exercise: Wilson Intervals by Site, Scanner, Age, Sex and Hemorrhage Subtype on 1,200 Synthetic Cases, and Reporting the Subgroups That Fail",
+            "Labeling Lead Task: The Model Card, Instructions for Use and Public 510(k) Summary Under FDA's Transparency Principles"
+          ],
+          "labs": [
+            {
+              "id": "m3-claim-review",
+              "title": "A Strong Aggregate and a Weak SAH Result",
+              "summary": "A claim without its denominator: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Product-Security Engineer: The Section 524B Cyber-Device Package for an ML Device",
+          "summary": "Building an SBOM that includes the model and its runtime, threat-modeling AI-specific attacks, and triaging vulnerabilities without filing unsupported VEX statements.",
+          "lessons": [
+            "What Section 524B and FDA's February 2026 Cybersecurity Guidance Require from a Cloud-Connected Triage SaMD",
+            "Putting Model Weights, the Inference Runtime and the ML Framework into a CycloneDX SBOM",
+            "Exercise: Threat-Modeling Data Poisoning, Model Inversion and Evasion, and Triaging Ten Synthetic Vulnerabilities to VEX Decisions"
+          ],
+          "labs": [
+            {
+              "id": "m4-vulnerability-window",
+              "title": "The Shared Model Registry Advisory",
+              "summary": "Who owns the shared registry gap?: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "RA Lead and ML Lead: Changing the Model Without Losing Clearance",
+          "summary": "Deciding which changes need a new 510(k) and writing a PCCP that pre-authorizes the retraining the business actually plans.",
+          "lessons": [
+            "RA Specialist Task: Running Six NeuroFlag Change Requests Through 21 CFR 807.81(a)(3)(i) and FDA's Software-Change 510(k) Guidance",
+            "RA Lead and ML Lead Task: Writing the Description of Modifications, Modification Protocol and Impact Assessment of a PCCP Under Section 515C",
+            "Exercise: Turning a Vague Retraining Memo into Quantitative Aggregate and Per-Subgroup Acceptance Criteria",
+            "US Manufacturer Handoff for an EU Expansion: Evidence Boundaries and Literature-Screening Recall"
+          ],
+          "labs": [
+            {
+              "id": "m5-retrain-boundary",
+              "title": "The Candidate That Improves the Average",
+              "summary": "The failed candidate stays failed: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            }
+          ]
+        },
+        {
+          "title": "Post-Market Engineer and Complaint Handler: Living with NeuroFlag in the Field",
+          "summary": "Detecting drift after a scanner firmware change, deciding on CAPA and field action, triaging missed-bleed complaints for reportability, and scoping a generative-AI feature.",
+          "lessons": [
+            "Post-Market Engineer Task: Monitoring Flag Rates, Input Metadata and Report-Concordance Sensitivity After a Scanner Firmware Change",
+            "Exercise: Control Charts on 18 Months of Synthetic Six-Site Data, and the CAPA, Part 806 and Within-PCCP Decision Memo",
+            "Complaint Handler Task: Triaging 'The AI Missed a Bleed' Complaints for MDR Reportability Under 21 CFR 803 and 820.35",
+            "Capstone: The NeuroFlag Evidence Packet and a Proposed LLM Findings Feature"
+          ],
+          "labs": [
+            {
+              "id": "m6-field-response",
+              "title": "The Quiet Outage and the Missing Study ID",
+              "summary": "The field handoff under interruption: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 12,
+              "kind": "module"
+            },
+            {
+              "id": "capstone-review-board",
+              "title": "The Northbank Review Board",
+              "summary": "The board receives the actual six-domain register: preserve real owner/action receipts and pending verification through competing priorities.",
+              "minutes": 30,
+              "kind": "capstone"
+            }
+          ]
+        }
+      ],
+      "exam": {
+        "questions": 20,
+        "passPct": 80,
+        "minutes": 40,
+        "attempts": 3
+      },
+      "lessonCount": 23,
+      "reviewed": "2026-11"
     },
     {
       "id": "hls-540",

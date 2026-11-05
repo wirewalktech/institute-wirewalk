@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-240.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI-Enabled Medical Devices",
+  "description": "A job-by-job course for the people inside a device manufacturer who build, clear, change and monitor AI-enabled software. You carry one fictional CT hemorrhage-triage device through the predicate table, the sequestered test set, the ISO 14971 and IEC 62304 files, the performance study, the Section 524B package, a PCCP, drift monitoring and MDR complaint triage, using synthetic data throughout.",
+  "humanCode": "HLS-240",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "medical devices",
+    "samd",
+    "fda",
+    "pccp",
+    "510k",
+    "qmsr",
+    "iso 13485",
+    "iso 14971",
+    "iec 62304",
+    "gmlp",
+    "cybersecurity",
+    "sbom",
+    "postmarket surveillance",
+    "mdr reporting",
+    "radiology ai",
+    "eu ai act"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-240.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI-Enabled Medical Devices"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-240/",
+    "narrative": "To earn this certificate a learner must: complete all 23 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a predicate comparison table for an AI triage device from openFDA and public 510(k) summaries, verifying every row against the source document and logging each assistant error",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-1",
+      "targetCode": "hls-240.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit a dataset manifest for patient-level leakage, scanner confounding and out-of-scope populations, and write the data management section a reviewer would read",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-2",
+      "targetCode": "hls-240.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write ML hazard/control records with explicit planned/implemented/verified status, and separately justify software classification, FDA documentation and QMS-tool assurance",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-3",
+      "targetCode": "hls-240.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute standalone sensitivity and specificity with 95% confidence intervals overall and by subgroup, and report a subgroup that misses its pre-specified threshold",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-4",
+      "targetCode": "hls-240.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a model card and labeling statements in which every performance number traces to the validation report and no limitation is dropped",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-5",
+      "targetCode": "hls-240.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify proposed software changes as letter-to-file, within an authorized PCCP or new 510(k), citing the regulation or guidance question that drives each call",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-6",
+      "targetCode": "hls-240.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft the three parts of a PCCP with quantitative aggregate and per-subgroup acceptance criteria for a planned retraining",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-7",
+      "targetCode": "hls-240.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate cyber vulnerabilities, privacy-limited field monitoring and synthetic complaints for investigation, CAPA, Part 806 correction reporting and both MDR branches with their clocks",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-240/#outcome-8",
+      "targetCode": "hls-240.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-240.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
