@@ -39,6 +39,9 @@
 <link rel="stylesheet" href="/assets/css/{{ c }}.css">
 {%- endfor %}
 <script src="/assets/js/site.js" defer></script>
+{%- if wia_page_event != "" and wia_page_event -%}
+<script src="/assets/js/traffic.js" defer></script>
+{%- endif -%}
 {%- comment -%} Source fields (first-party; no cookie, no network request of its own): keeps how a
   visitor arrived for 30 days in localStorage "ww_src" and, at submit, adds hidden _src_* fields to the
   /teams/ and /teams/enterprise/ enquiry forms ONLY (the ww-src-forms meta); waitlist and every other form are untouched. {%- endcomment %}

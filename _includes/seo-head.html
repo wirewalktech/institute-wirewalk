@@ -9,7 +9,7 @@
 {%- assign doc_desc = seo_topic.description | default: seo_course.summary | default: page.description | default: site.description | strip_html | normalize_whitespace | truncate: 165 -%}
 {%- assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url -%}
 {%- assign private_search = false -%}
-{%- if page.url contains "/learn/" or page.url contains "/admin/" or page.url contains "/email/" or page.url contains "/waitlist/" or page.url contains "/verify/" or page.url contains "/go/" or page.url == "/teams/thanks/" or page.url == "/teams/enterprise/thanks/" or page.url == "/404.html" or page.redirect_to -%}{%- assign private_search = true -%}{%- endif -%}
+{%- if page.private_search == true or page.url contains "/learn/" or page.url contains "/admin/" or page.url contains "/email/" or page.url contains "/waitlist/" or page.url contains "/verify/" or page.url contains "/go/" or page.url == "/teams/thanks/" or page.url == "/teams/enterprise/thanks/" or page.url == "/404.html" or page.redirect_to -%}{%- assign private_search = true -%}{%- endif -%}
 {%- assign planned_search = false -%}
 {%- if page.course_id and seo_course.status != "on_sale" -%}{%- assign planned_search = true -%}{%- endif -%}
 {%- if page.program_id and seo_program.status != "on_sale" -%}{%- assign planned_search = true -%}{%- endif -%}
@@ -48,4 +48,43 @@
 {{ seo_crumbs | replace: "<", "\u003c" }}
 </script>
 {%- endif -%}
+{%- endunless -%}
+
+{%- comment -%} Anonymous page-load name from public server-known metadata only. Never derive it from a visitor URL, query or referrer. Campaign landing/button counters remain separate. {%- endcomment -%}
+{%- assign wia_page_event = "" -%}
+{%- assign wia_page_suffix = "" -%}
+{%- unless private_search or page.no_pixel == true -%}
+  {%- if page.course_id and seo_course.id -%}
+    {%- assign wia_page_suffix = "course-" | append: seo_course.id -%}
+  {%- elsif page.track_id and seo_track.prefix -%}
+    {%- assign wia_track_prefix = seo_track.prefix | downcase -%}
+    {%- assign wia_page_suffix = "track-" | append: wia_track_prefix -%}
+  {%- elsif page.program_id and seo_program.id -%}
+    {%- assign wia_page_suffix = "program-" | append: seo_program.id -%}
+  {%- else -%}
+    {%- case page.url -%}
+      {%- when "/" -%}{%- assign wia_page_suffix = "page-home" -%}
+      {%- when "/courses/" -%}{%- assign wia_page_suffix = "page-courses" -%}
+      {%- when "/industries/" -%}{%- assign wia_page_suffix = "page-industries" -%}
+      {%- when "/technologies/" -%}{%- assign wia_page_suffix = "page-technologies" -%}
+      {%- when "/tracks/" -%}{%- assign wia_page_suffix = "page-tracks" -%}
+      {%- when "/programs/" -%}{%- assign wia_page_suffix = "page-programs" -%}
+      {%- when "/pricing/" -%}{%- assign wia_page_suffix = "page-pricing" -%}
+      {%- when "/certification/" -%}{%- assign wia_page_suffix = "page-certification" -%}
+      {%- when "/teams/" -%}{%- assign wia_page_suffix = "page-teams" -%}
+      {%- when "/about/" -%}{%- assign wia_page_suffix = "page-about" -%}
+      {%- when "/faq/" -%}{%- assign wia_page_suffix = "page-faq" -%}
+      {%- when "/standards/" -%}{%- assign wia_page_suffix = "page-standards" -%}
+      {%- when "/errata/" -%}{%- assign wia_page_suffix = "page-errata" -%}
+    {%- endcase -%}
+  {%- endif -%}
+  {%- assign wia_invalid_chars = wia_page_suffix -%}
+  {%- assign wia_allowed_chars = "abcdefghijklmnopqrstuvwxyz0123456789_-" | split: "" -%}
+  {%- for wia_char in wia_allowed_chars -%}
+    {%- assign wia_invalid_chars = wia_invalid_chars | remove: wia_char -%}
+  {%- endfor -%}
+  {%- if wia_page_suffix.size > 0 and wia_page_suffix.size <= 24 and wia_invalid_chars == "" -%}
+    {%- assign wia_page_event = "inst." | append: wia_page_suffix -%}
+<meta name="wia-page-event" content="{{ wia_page_event | escape }}">
+  {%- endif -%}
 {%- endunless -%}
