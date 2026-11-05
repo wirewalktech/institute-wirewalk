@@ -1,0 +1,596 @@
+{
+  "foundations": {
+    "category": "technology",
+    "seo_title": "AI Foundations Courses and Training for Teams",
+    "description": "Browse AI foundations courses covering model basics, practical prompting, data privacy and machine learning concepts. Compare levels and course status.",
+    "heading": "AI foundations courses for practical understanding",
+    "overview": "Begin with the vocabulary needed to judge an AI task before choosing a tool. The catalog spans introductory literacy, language model concepts, creative media, Python and machine learning mathematics. Compare prerequisites to decide whether your next step is everyday use or technical study. Look for topics that address the mistakes you encounter, such as unsupported answers or sensitive data handling. Check each course page for its current availability and expected study time.",
+    "audiences": [
+      "Team supervisors",
+      "Office managers",
+      "New data analysts"
+    ],
+    "use_cases": [
+      "Classify a task as rules, predictive AI or generative AI",
+      "Revise a prompt with context and constraints",
+      "Identify information that should stay out of an AI tool"
+    ],
+    "related_tracks": [
+      "prompting",
+      "work",
+      "security"
+    ]
+  },
+  "vendors": {
+    "category": "technology",
+    "seo_title": "AI Models and Vendors: Courses for Platform Choices",
+    "description": "Compare AI model and platform courses for workplace tools, APIs and local models. Browse public syllabuses, prerequisites and current enrollment status.",
+    "heading": "AI courses for comparing models and platforms",
+    "overview": "Choose a starting point based on how you expect to use a model: through a workplace assistant, an application API or a local runtime. Public course topics cover individual platforms as well as model selection and routing across providers. Compare the syllabus with your existing tools and technical experience. Treat product coverage as a learning topic rather than an endorsement, and check course status before planning study around a particular platform.",
+    "audiences": [
+      "Application developers",
+      "IT procurement leads",
+      "Workplace technology trainers"
+    ],
+    "use_cases": [
+      "Compare model selection criteria for a proposed task",
+      "Explore API integration topics across providers",
+      "Compare local runtime and hosted platform learning paths"
+    ],
+    "related_tracks": [
+      "building",
+      "development",
+      "executive"
+    ]
+  },
+  "prompting": {
+    "category": "technology",
+    "seo_title": "Prompt and Context Engineering: AI Training",
+    "description": "Browse AI prompting courses on context, structured outputs and data extraction. Compare introductory and advanced topics, prerequisites and course status.",
+    "heading": "AI prompting and context engineering courses",
+    "overview": "Start with the kind of output you need to improve: a clearer draft, a structured record or an answer grounded in supplied context. The track moves from prompting basics toward context engineering, extraction and reasoning model topics. Compare course prerequisites before choosing advanced material. Use the published syllabuses to identify where your current requests fail and what you need to practice next. Availability is shown on each individual course page.",
+    "audiences": [
+      "Business analysts",
+      "Technical writers",
+      "LLM application developers"
+    ],
+    "use_cases": [
+      "Add task constraints and context to a request",
+      "Compare structured output and extraction approaches",
+      "Choose context engineering topics for long documents"
+    ],
+    "related_tracks": [
+      "foundations",
+      "building",
+      "data"
+    ]
+  },
+  "work": {
+    "category": "technology",
+    "seo_title": "AI at Work: Practical Courses for Professional Teams",
+    "description": "Browse role-based AI training for finance, HR, marketing, support and operations. Compare workflow topics, study requirements and individual course status.",
+    "heading": "AI training for everyday professional workflows",
+    "overview": "Browse by the work you perform rather than by a particular model. Public topics include team workflows, spreadsheet analysis, research, customer support and project reporting. Compare a role focused course with automation topics if your task crosses several systems or departments. Review the audience and prerequisites to choose an appropriate starting point. The catalog includes courses at different stages of availability, so check the individual listing before arranging training for a team.",
+    "audiences": [
+      "Finance team analysts",
+      "Customer support supervisors",
+      "Project managers"
+    ],
+    "use_cases": [
+      "Compare AI approaches to project status reporting",
+      "Explore spreadsheet and business intelligence workflows",
+      "Identify automation topics for support operations"
+    ],
+    "related_tracks": [
+      "prompting",
+      "professional-services",
+      "product"
+    ]
+  },
+  "building": {
+    "category": "technology",
+    "seo_title": "Building AI Applications: Courses and Training",
+    "description": "Browse AI application courses on APIs, retrieval, agents and evaluation. Compare reliability, guardrail and cost topics with prerequisites and course status.",
+    "heading": "Courses for building and evaluating AI applications",
+    "overview": "Use the application you want to build to narrow the learning path. A document assistant points toward retrieval and embeddings, while a tool using agent calls for orchestration and safety topics. Public syllabuses also cover evaluation, gateways, voice and operational reliability. Compare these subjects with your current development experience before selecting a course. Check individual availability and prerequisites; a listed production topic does not mean a course is open for enrollment.",
+    "audiences": [
+      "Application engineers",
+      "Conversational AI developers",
+      "Technical product leads"
+    ],
+    "use_cases": [
+      "Compare retrieval approaches for a document assistant",
+      "Plan evaluation topics for an LLM application",
+      "Explore tool use and agent guardrail design"
+    ],
+    "related_tracks": [
+      "development",
+      "data",
+      "security"
+    ]
+  },
+  "product": {
+    "category": "technology",
+    "seo_title": "AI Product and Design Courses for Product Teams",
+    "description": "Compare AI product courses on discovery, user experience, evaluation and unit economics. Browse public syllabuses and check each course for current status.",
+    "heading": "AI product management and design training",
+    "overview": "Begin with the product decision you need to make: whether a use case is worthwhile, how people should interact with it or how to measure its behavior. The public catalog connects discovery and user experience with evaluation, experimentation and unit economics. Compare the four subject areas against your role and current project stage. Read each syllabus for prerequisites and expected study time, and confirm its current enrollment status before choosing a course.",
+    "audiences": [
+      "Product managers",
+      "UX designers",
+      "Product analytics leads"
+    ],
+    "use_cases": [
+      "Compare evaluation metrics for an AI feature",
+      "Explore user experience choices for uncertain outputs",
+      "Assess learning topics for AI product unit economics"
+    ],
+    "related_tracks": [
+      "building",
+      "executive",
+      "work"
+    ]
+  },
+  "models": {
+    "category": "technology",
+    "seo_title": "AI Model Development Courses and Technical Training",
+    "description": "Browse AI model development courses on deep learning, fine-tuning, evaluation and alignment. Compare technical prerequisites and individual course status.",
+    "heading": "AI model development and evaluation courses",
+    "overview": "Choose technical study according to the model problem you face. Public topics span classical machine learning, transformers, vision, speech, fine tuning, alignment and model evaluation. More specialized listings address multimodal systems, interpretability and robotics. Compare prerequisites carefully rather than treating every topic as a beginner starting point. Use the published outcomes to separate learning about model behavior from implementing a training method, and check course availability before committing to a sequence.",
+    "audiences": [
+      "Machine learning engineers",
+      "Applied research scientists",
+      "Computer vision developers"
+    ],
+    "use_cases": [
+      "Compare fine tuning and model compression topics",
+      "Explore evaluation methods for model selection",
+      "Choose a study path for vision or speech models"
+    ],
+    "related_tracks": [
+      "data",
+      "training",
+      "serving"
+    ]
+  },
+  "training": {
+    "category": "technology",
+    "seo_title": "AI Training at Scale: GPU and Distributed Courses",
+    "description": "Compare AI training courses on GPU programming, distributed systems, profiling and fault tolerance. Browse prerequisites and check individual course status.",
+    "heading": "Courses for GPU programming and distributed AI training",
+    "overview": "Focus on the bottleneck you need to understand before selecting an advanced training topic. The catalog covers GPU programming, precision and memory, distributed training, collective communication and profiling. Compute planning and checkpointing provide related paths for longer runs. Compare prerequisites with your programming and systems background, and read the syllabus to identify the methods addressed. Check each course listing for availability and study requirements before planning a technical training sequence.",
+    "audiences": [
+      "Distributed training engineers",
+      "GPU performance engineers",
+      "Research computing specialists"
+    ],
+    "use_cases": [
+      "Compare memory and precision tradeoffs in training",
+      "Explore profiling methods for throughput bottlenecks",
+      "Plan study of checkpointing and collective communication"
+    ],
+    "related_tracks": [
+      "models",
+      "infrastructure",
+      "hardware"
+    ]
+  },
+  "infrastructure": {
+    "category": "technology",
+    "seo_title": "AI Infrastructure and HPC Courses for Engineers",
+    "description": "Browse AI infrastructure training on GPU clusters, networks, storage and operations. Compare capacity, energy and cost topics with individual course status.",
+    "heading": "AI infrastructure and HPC training",
+    "overview": "Select a path around the infrastructure responsibility you hold: cluster administration, scheduling, storage, networking or facility planning. Public topics connect individual components to monitoring, incident handling, capacity and cost decisions. Compare the systems prerequisites with your current experience before choosing a specialized course. Energy and cooling topics can complement operations study when facility limits affect compute plans. Consult each course page for its availability and workload rather than assuming the entire track is open.",
+    "audiences": [
+      "HPC administrators",
+      "Platform operations engineers",
+      "Data center capacity planners"
+    ],
+    "use_cases": [
+      "Compare scheduling topics for AI workloads",
+      "Explore cluster monitoring and incident workflows",
+      "Compare cloud and on premises capacity planning topics"
+    ],
+    "related_tracks": [
+      "hardware",
+      "training",
+      "energy-resources"
+    ]
+  },
+  "hardware": {
+    "category": "technology",
+    "seo_title": "AI Hardware Courses: GPUs, Memory and Systems",
+    "description": "Compare AI hardware courses on GPUs, CPUs, memory, networks and storage. Browse architecture, validation and edge topics, then check current course status.",
+    "heading": "AI hardware training for component and system choices",
+    "overview": "Start with the hardware decision behind your workload rather than a vendor name. Public topics cover compute devices, memory capacity, network components, storage, server design and validation. Edge systems and robotics offer additional paths for work outside the data center. Compare the syllabus with the component knowledge you already have, then choose the depth you need. Check individual prerequisites and availability; the listings describe study topics rather than guaranteed hardware performance.",
+    "audiences": [
+      "Systems architects",
+      "Hardware validation engineers",
+      "Edge computing engineers"
+    ],
+    "use_cases": [
+      "Compare memory capacity and interconnect topics",
+      "Explore hardware burn in and failure analysis",
+      "Choose study topics for edge or robotics hardware"
+    ],
+    "related_tracks": [
+      "infrastructure",
+      "training",
+      "models"
+    ]
+  },
+  "development": {
+    "category": "technology",
+    "seo_title": "AI Software Development Courses Across Languages",
+    "description": "Browse AI integration courses for Python, TypeScript, Java, Rust and other languages. Compare API, testing and deployment topics with current course status.",
+    "heading": "AI integration courses for software developers",
+    "overview": "Choose the language and runtime already used by your application, then compare the integration topics that match your task. Public listings range from an initial API call to typed services, database integration, embedded inference and event driven systems. Scientific and enterprise platform paths address more specialized environments. Review prerequisites before moving between languages or execution models. Course pages describe the intended learning scope and current availability, helping you plan study without assuming every listing is open.",
+    "audiences": [
+      "Backend software engineers",
+      "Enterprise integration developers",
+      "Scientific software developers"
+    ],
+    "use_cases": [
+      "Compare language specific AI API integration paths",
+      "Explore testing and typed output handling",
+      "Choose topics for embedded inference or event driven integration"
+    ],
+    "related_tracks": [
+      "building",
+      "serving",
+      "prompting"
+    ]
+  },
+  "serving": {
+    "category": "technology",
+    "seo_title": "AI Inference and MLOps Courses for Production Teams",
+    "description": "Browse AI inference and MLOps courses on deployment, quantization, monitoring and edge systems. Compare prerequisites, study scope and current course status.",
+    "heading": "AI inference, serving and MLOps training",
+    "overview": "Compare courses according to the stage of operation you need to understand: packaging a model, exposing an API, optimizing inference or observing production behavior. The public catalog also includes edge deployment and MLOps foundations. Read the syllabus to distinguish application integration from model serving responsibilities. Choose prerequisites that fit your existing engineering background, and check each listing for availability and expected workload before arranging a sequence of technical study.",
+    "audiences": [
+      "MLOps engineers",
+      "Model serving engineers",
+      "Edge deployment developers"
+    ],
+    "use_cases": [
+      "Compare container and autoscaling deployment topics",
+      "Explore quantization tradeoffs for inference",
+      "Plan study of model monitoring and observability"
+    ],
+    "related_tracks": [
+      "models",
+      "infrastructure",
+      "development"
+    ]
+  },
+  "data": {
+    "category": "technology",
+    "seo_title": "Data for AI: Engineering and Data Quality Courses",
+    "description": "Compare data for AI courses on pipelines, documents, annotation, synthetic data and lineage. Browse public topics, prerequisites and current course status.",
+    "heading": "Data engineering and quality training for AI",
+    "overview": "Begin with the data work that limits your AI project. Documents may need an extraction pipeline, training sets may need annotation, and reused data may need clearer lineage. Public course topics cover these areas alongside synthetic data and quality governance. Compare the syllabus with your data sources and responsibilities to choose a suitable starting point. Read prerequisites and individual availability before planning study, especially when a specialist topic depends on engineering experience.",
+    "audiences": [
+      "Data engineers",
+      "Annotation operations leads",
+      "Data governance analysts"
+    ],
+    "use_cases": [
+      "Compare document processing pipeline topics",
+      "Explore annotation quality and labeling operations",
+      "Identify lineage and quality checks for AI data"
+    ],
+    "related_tracks": [
+      "building",
+      "models",
+      "governance"
+    ]
+  },
+  "security": {
+    "category": "technology",
+    "seo_title": "AI Security Courses for Protecting Models and Agents",
+    "description": "Browse AI security training on prompt injection, agent tools, privacy and infrastructure. Compare threat modeling topics and check current course status.",
+    "heading": "AI security training for systems, data and agents",
+    "overview": "Use the system you need to protect to select your learning focus. Public topics address workplace data handling, prompt injection, agent tools, model attacks, supply chains and infrastructure. Compare introductory safety material with deeper engineering courses according to your role. Read the syllabus for the assets and threats covered rather than assuming one course addresses every risk. Individual pages show availability and prerequisites so you can choose an appropriate security study path.",
+    "audiences": [
+      "Application security engineers",
+      "AI platform security leads",
+      "Privacy engineers"
+    ],
+    "use_cases": [
+      "Explore threat modeling for an LLM application",
+      "Compare prompt injection and agent tool risks",
+      "Identify data leakage and AI supply chain topics"
+    ],
+    "related_tracks": [
+      "building",
+      "cyber",
+      "governance"
+    ]
+  },
+  "cyber": {
+    "category": "technology",
+    "seo_title": "AI for Cyber Defense: Security Operations Courses",
+    "description": "Compare AI cyber defense courses on SOC triage, threat intelligence, forensics and detection. Browse public syllabuses and check individual course status.",
+    "heading": "AI courses for cyber defense and security operations",
+    "overview": "Browse this track when your goal is to use AI in defensive security work. Public topics include alert triage, threat intelligence, detection models, vulnerability management and incident investigation. Other listings examine phishing, deepfakes and guarded automation in security operations. Compare course scope with the data and decisions your team handles, then review prerequisites for technical depth. Check each listing for current availability before choosing study for a particular analyst or engineering role.",
+    "audiences": [
+      "SOC analysts",
+      "Threat intelligence analysts",
+      "Detection engineers"
+    ],
+    "use_cases": [
+      "Compare AI assisted alert triage workflows",
+      "Explore evidence handling in incident investigation",
+      "Choose topics for phishing defense or detection models"
+    ],
+    "related_tracks": [
+      "security",
+      "data",
+      "governance"
+    ]
+  },
+  "governance": {
+    "category": "technology",
+    "seo_title": "AI Governance, Risk and Compliance Training Courses",
+    "description": "Browse AI governance courses on policy, vendor risk, audit and US regulation. Compare sector and cross-border topics, prerequisites and current course status.",
+    "heading": "AI governance, risk and compliance courses",
+    "overview": "Start with the governance responsibility you need to support, such as writing an acceptable use policy, assessing a supplier or preparing audit evidence. Public topics include US federal, state and sector rules alongside management frameworks and relevant cross border subjects. Compare the jurisdiction and audience in each syllabus before choosing a course. Read the availability and prerequisites on the course page; a catalog topic does not establish legal compliance for your organization.",
+    "audiences": [
+      "AI governance managers",
+      "Compliance officers",
+      "Internal auditors"
+    ],
+    "use_cases": [
+      "Compare AI policy and acceptable use topics",
+      "Explore vendor due diligence and audit evidence",
+      "Choose US or cross border regulatory study topics"
+    ],
+    "related_tracks": [
+      "executive",
+      "security",
+      "professional-services"
+    ]
+  },
+  "executive": {
+    "category": "technology",
+    "seo_title": "AI Training for Executives, Boards and Decision Makers",
+    "description": "Compare AI leadership courses on strategy, investment, procurement, governance and risk. Browse executive topics and check individual course availability.",
+    "heading": "AI training for executives and board members",
+    "overview": "Choose study around a decision you own, from assessing an investment case to setting governance responsibilities or buying a service. The public catalog covers strategy, operating models, procurement, data and infrastructure decisions, with additional perspectives for finance, people and risk leaders. Compare the audience and scope before selecting a broad briefing or a specialized topic. Check current availability and expected study time on each course page when planning leadership development.",
+    "audiences": [
+      "Board directors",
+      "Chief financial officers",
+      "Chief information officers"
+    ],
+    "use_cases": [
+      "Compare investment and ROI assessment topics",
+      "Explore procurement and vendor negotiation decisions",
+      "Plan study of AI governance responsibilities"
+    ],
+    "related_tracks": [
+      "governance",
+      "product",
+      "infrastructure"
+    ]
+  },
+  "health-life-sciences": {
+    "category": "industry",
+    "seo_title": "AI Training for Healthcare and Life Sciences Teams",
+    "description": "Browse AI courses for healthcare, public health, pharma and medical devices. Compare clinical, technical and leadership topics with current course status.",
+    "heading": "AI courses for healthcare and life sciences",
+    "overview": "Choose a branch that reflects your setting: care delivery, imaging, health administration, public health, life sciences research or medical devices. The public catalog separates professional workflows from technical development and leadership topics. Compare the intended audience, prerequisites and regulatory scope before selecting a course. Use the syllabus to identify where data handling and review responsibilities enter your work. Availability varies by course, so confirm the listing before planning clinical or research team study.",
+    "audiences": [
+      "Nursing team leaders",
+      "Medical imaging developers",
+      "Life sciences research managers"
+    ],
+    "use_cases": [
+      "Compare AI topics for imaging and care workflows",
+      "Explore claims and revenue cycle learning paths",
+      "Choose study topics for life sciences R&D or devices"
+    ],
+    "related_tracks": [
+      "data",
+      "governance",
+      "models"
+    ]
+  },
+  "financial-services": {
+    "category": "industry",
+    "seo_title": "AI Training for Banking, Insurance and Finance",
+    "description": "Compare AI courses for banking, insurance, wealth management and fintech. Browse model risk, lending and claims topics, then check current course status.",
+    "heading": "AI courses for financial services professionals",
+    "overview": "Browse according to the financial activity you support: lending, markets, advice, insurance or payments. Public listings distinguish professional use from technical implementation and leadership decisions. Compare model risk and regulatory topics with the responsibilities of your role, especially where customer decisions or investigations are involved. Read the syllabus and prerequisites to choose the right depth. Check each course for current availability before planning study across a banking, insurance or fintech team.",
+    "audiences": [
+      "Banking risk analysts",
+      "Insurance claims managers",
+      "Wealth management professionals"
+    ],
+    "use_cases": [
+      "Compare AI learning topics for lending decisions",
+      "Explore insurance claims and fraud investigation workflows",
+      "Choose study topics for quantitative risk analysis"
+    ],
+    "related_tracks": [
+      "governance",
+      "data",
+      "professional-services"
+    ]
+  },
+  "public-sector-defense": {
+    "category": "industry",
+    "seo_title": "AI Training for Government, Defense and Public Safety",
+    "description": "Browse AI courses for government, defense, courts and public safety. Compare accountability, operational and civil liberties topics with course availability.",
+    "heading": "AI courses for government, defense and public safety",
+    "overview": "Start with your public service setting and the decisions it involves. The catalog spans agency work, defense support, public safety, courts and nonprofits, with separate professional, technical and leadership subjects. Compare the published scope for accountability, lawful use and civil liberties rather than treating all public sector applications alike. Review prerequisites and course status before choosing a learning path. Technical topics should be read alongside the oversight questions attached to their operational setting.",
+    "audiences": [
+      "Agency program managers",
+      "Defense logistics professionals",
+      "Public safety oversight leads"
+    ],
+    "use_cases": [
+      "Compare AI topics for government service workflows",
+      "Explore defense maintenance and logistics applications",
+      "Identify civil liberties questions in public safety AI"
+    ],
+    "related_tracks": [
+      "governance",
+      "security",
+      "executive"
+    ]
+  },
+  "education-research": {
+    "category": "industry",
+    "seo_title": "AI Training for Education and Research Professionals",
+    "description": "Compare AI courses for schools, universities, research and workplace learning. Browse student support, integrity and computing topics with course status.",
+    "heading": "AI courses for education and research teams",
+    "overview": "Choose learning material according to whether you support students, manage an institution, design instruction or conduct research. Public topics cover school and university deployment, student services, scientific research and research computing. Compare audience and prerequisites before selecting a professional or technical path. Review the syllabus for privacy, integrity and policy questions relevant to your setting. Individual course status distinguishes current enrollment options from planned study topics when arranging training for an education or research team.",
+    "audiences": [
+      "Academic-integrity officers",
+      "Instructional designers",
+      "Research computing specialists"
+    ],
+    "use_cases": [
+      "Compare classroom feedback and academic-integrity learning topics",
+      "Explore AI deployment topics for research computing",
+      "Choose study of school or university AI policy"
+    ],
+    "related_tracks": [
+      "work",
+      "data",
+      "infrastructure"
+    ]
+  },
+  "manufacturing-industrial": {
+    "category": "industry",
+    "seo_title": "AI Training for Manufacturing and Plant Operations",
+    "description": "Browse AI manufacturing courses on maintenance, quality, robotics and production planning. Compare industrial learning paths and current course availability.",
+    "heading": "AI courses for manufacturing and industrial operations",
+    "overview": "Begin with the plant responsibility you need to understand, such as maintenance, inspection, scheduling or quality management. The public catalog includes general industrial topics and branches for discrete production, process operations, semiconductors and regulated manufacturing. Compare the process context in each syllabus before choosing a specialized course. Review audience, prerequisites and availability to match study with your role. Keep operational safety and review responsibilities in view when comparing technical implementation topics with management training.",
+    "audiences": [
+      "Plant managers",
+      "Quality engineers",
+      "Industrial automation engineers"
+    ],
+    "use_cases": [
+      "Compare machine vision and inspection topics",
+      "Explore production planning and scheduling applications",
+      "Choose study topics for maintenance or quality management"
+    ],
+    "related_tracks": [
+      "models",
+      "hardware",
+      "data"
+    ]
+  },
+  "energy-resources": {
+    "category": "industry",
+    "seo_title": "AI Training for Energy, Utilities and Natural Resources",
+    "description": "Compare AI courses for utilities, oil and gas, mining, water and agriculture. Browse grid, data center energy and monitoring topics with course availability.",
+    "heading": "AI courses for energy, utilities and natural resources",
+    "overview": "Browse by the system you work with: a power network, water operation, extraction business, farm or environmental monitoring program. Public topics cover operational AI alongside the energy demands of data centers and leadership decisions in utilities. Compare each syllabus with your technical role and sector responsibilities before choosing a path. Check prerequisites, expected workload and current availability on the individual listing. Use the catalog to distinguish energy infrastructure learning from broader model development study.",
+    "audiences": [
+      "Utility planning analysts",
+      "Water operations engineers",
+      "Environmental monitoring specialists"
+    ],
+    "use_cases": [
+      "Compare AI topics for power and utility operations",
+      "Explore data center energy planning study topics",
+      "Choose learning paths for agriculture or environmental monitoring"
+    ],
+    "related_tracks": [
+      "infrastructure",
+      "data",
+      "governance"
+    ]
+  },
+  "transport-logistics": {
+    "category": "industry",
+    "seo_title": "AI Training for Transport, Logistics and Mobility",
+    "description": "Browse AI courses for logistics, aviation, maritime, fleets and rail. Compare operations, maintenance and safety assurance topics with current course status.",
+    "heading": "AI courses for transport, logistics and mobility",
+    "overview": "Choose a learning path around the transport operation you support rather than treating all mobility systems as equivalent. Public topics span logistics, aviation maintenance, ports, fleet operations, rail and satellite systems. Specialized listings address vehicle safety and assurance. Compare the operational setting, prerequisites and intended audience before selecting technical or leadership material. Check individual course availability when planning study, and use the published syllabus to identify the safety questions relevant to your work.",
+    "audiences": [
+      "Logistics operations managers",
+      "Aviation maintenance planners",
+      "Fleet safety managers"
+    ],
+    "use_cases": [
+      "Compare AI topics for supply chain operations",
+      "Explore aviation maintenance and operational planning",
+      "Choose study of fleet safety or vehicle assurance"
+    ],
+    "related_tracks": [
+      "data",
+      "models",
+      "governance"
+    ]
+  },
+  "built-environment": {
+    "category": "industry",
+    "seo_title": "AI Training for Construction, Design and Real Estate",
+    "description": "Compare AI courses for architecture, construction, real estate and facilities. Browse design and property operations topics with individual course status.",
+    "heading": "AI courses for the built environment and real estate",
+    "overview": "Start with the stage of the building lifecycle you work in: design, construction, property management or ongoing facilities operations. The public catalog offers professional introductions and technical implementation topics across those settings. Compare the audience and scope to decide whether you need workflow understanding or development detail. Read prerequisites and individual availability before selecting a course. Use the published topics to connect your learning to a specific project responsibility rather than assuming one application fits every building role.",
+    "audiences": [
+      "Architectural designers",
+      "Construction project managers",
+      "Facilities managers"
+    ],
+    "use_cases": [
+      "Compare AI learning topics for design workflows",
+      "Explore construction planning and implementation topics",
+      "Choose study of property management or smart buildings"
+    ],
+    "related_tracks": [
+      "work",
+      "data",
+      "product"
+    ]
+  },
+  "consumer-media": {
+    "category": "industry",
+    "seo_title": "AI Training for Retail, Media and Consumer Businesses",
+    "description": "Browse AI courses for retail, hospitality, media, gaming and telecoms. Compare creative, operational and rights topics with individual course availability.",
+    "heading": "AI courses for consumer businesses, media and communications",
+    "overview": "Choose a branch based on the customers, content or operations your team supports. Public listings include retail, consumer brands, fashion, hospitality, media, games, sports and telecommunications. Compare professional workflows with technical implementation and leadership topics before choosing a course. For creative work, read the syllabus for rights and governance questions as well as production subjects. Check each listing for prerequisites and current availability when planning study for a consumer business or media team.",
+    "audiences": [
+      "Retail operations managers",
+      "Publishing editors",
+      "Hospitality technology leads"
+    ],
+    "use_cases": [
+      "Compare AI topics for retail and ecommerce workflows",
+      "Explore media production and content rights learning paths",
+      "Choose study topics for hospitality or telecommunications"
+    ],
+    "related_tracks": [
+      "product",
+      "work",
+      "governance"
+    ]
+  },
+  "professional-services": {
+    "category": "industry",
+    "seo_title": "AI Training for Legal, Accounting and Advisory Teams",
+    "description": "Compare AI courses for legal, accounting, tax, audit, HR and consulting teams. Browse professional duties and workflow topics with current course status.",
+    "heading": "AI courses for professional services and advisory work",
+    "overview": "Browse according to the professional duty behind your task, whether it involves legal work, tax preparation, assurance, recruiting or client advice. Public topics include practitioner workflows, technical development and leadership decisions, with specialized branches for tax and risk analysis. Compare the syllabus with your area of practice and existing experience. Review prerequisites and current availability before choosing a course. Use the public scope to identify relevant study without treating course participation as professional authorization.",
+    "audiences": [
+      "Tax practice managers",
+      "Internal audit professionals",
+      "Legal operations managers"
+    ],
+    "use_cases": [
+      "Compare AI topics for audit and assurance workflows",
+      "Explore tax practice learning paths by specialty",
+      "Choose study of legal practice or recruiting applications"
+    ],
+    "related_tracks": [
+      "governance",
+      "work",
+      "financial-services"
+    ]
+  }
+}

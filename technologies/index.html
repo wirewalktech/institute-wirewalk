@@ -1,0 +1,25 @@
+---
+title: AI Technology and Skills Courses
+description: "Find AI learning paths in generative AI, prompting, applications, machine learning, GPUs, MLOps, security and governance. Compare courses and prerequisites."
+---
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Technologies and skills</p>
+    <h1>AI courses by technology and skill</h1>
+    <p class="lead">Choose a subject that matches the work you want to do, from understanding AI models to building applications, operating infrastructure and leading responsible adoption.</p>
+    <p>Each learning path shows its available courses and planned curriculum. For examples from your field, explore <a href="/industries/">AI training by industry</a>, or <a href="/tracks/">see all learning tracks</a>.</p>
+  </header>
+  <div class="tmap" style="padding-bottom:64px">
+    {% for track in site.data.catalog.tracks %}
+    {% assign guide = site.data["learning-seo"][track.id] %}
+    {% if guide.category == "technology" %}
+    <section class="tile" aria-labelledby="technology-{{ track.id }}">
+      <h2 class="tile-h" id="technology-{{ track.id }}"><a href="/tracks/{{ track.id }}/">{{ guide.heading | escape }}</a></h2>
+      <p>{{ guide.description | escape }}</p>
+      <p class="small">{% if track.onSale > 0 %}{{ track.onSale }} course{% if track.onSale != 1 %}s{% endif %} available now{% else %}Planned curriculum · no courses open yet{% endif %}</p>
+      <a href="/tracks/{{ track.id }}/">Explore this learning path</a>
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

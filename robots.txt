@@ -1,2 +1,12 @@
+---
+layout: raw
+sitemap: false
+---
 User-agent: *
-Disallow: /
+{% if site.search_indexing_enabled == true %}Allow: /
+# Application and token pages carry noindex, nofollow and are omitted from the sitemap.
+# Allow their HTML to be fetched so crawlers can read that directive.
+Disallow: /badges/
+Sitemap: {{ site.url }}/sitemap.xml
+{% else %}Disallow: /
+{% endif %}

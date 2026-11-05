@@ -4,11 +4,12 @@ layout: default
 {%- assign t = site.data.catalog.tracks | where: "id", page.track_id | first -%}
 {%- assign tc = site.data.catalog.courses | where: "track", t.id -%}
 {%- assign live = tc | where: "status", "on_sale" -%}
+{%- assign topic = site.data["learning-seo"][t.id] -%}
 <div class="wrap">
   <header class="page-head">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/tracks/">Tracks</a></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{% if topic.category == "industry" %}<a href="/industries/">Industries</a>{% else %}<a href="/technologies/">Technologies and skills</a>{% endif %}</nav>
     <p class="eyebrow"><span class="code">{{ t.prefix | escape }}</span>&nbsp; Track</p>
-    <h1>{{ t.title | escape }}</h1>
+    <h1>{{ topic.heading | default: t.title | escape }}</h1>
     <p class="lead">{{ t.summary | escape }}</p>
     <div class="cta-row" style="margin-top:22px">
       <span class="pill">{{ tc.size }} courses</span>
@@ -19,6 +20,8 @@ layout: default
     </div>
   </header>
 </div>
+
+{% include learning-guide.html %}
 
 {%- comment -%} [bundles] "Buy the whole track": live price from the API (assets/js/bundles.js).
   Hidden until billing answers with a bundle price; no price is ever written here. {%- endcomment %}
@@ -65,3 +68,9 @@ layout: default
   </div>
   {%- endif %}
 </div>
+{% if live.size >= 3 %}
+<script type="application/ld+json">
+{% capture course_list %}{"@context":"https://schema.org","@type":"ItemList","itemListOrder":"https://schema.org/ItemListUnordered","numberOfItems":{{ live.size }},"itemListElement":[{% for course in live %}{"@type":"ListItem","position":{{ forloop.index }},"item":{"@type":"Course","name":{{ course.title | jsonify }},"description":{{ course.summary | jsonify }},"url":"{{ site.url }}/courses/{{ course.id }}/","provider":{"@type":"Organization","name":{{ site.title | jsonify }},"url":"{{ site.url }}/"}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% endcapture %}
+{{ course_list | replace: "<", "\u003c" }}
+</script>
+{% endif %}

@@ -1,0 +1,14 @@
+---
+layout: raw
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% if site.search_indexing_enabled == true %}
+{% assign public_paths = "/,/courses/,/tracks/,/industries/,/technologies/,/programs/,/pricing/,/certification/,/teams/,/teams/enterprise/,/about/,/faq/,/standards/,/errata/,/privacy/,/terms/" | split: "," %}
+{% for public_path in public_paths %}{% assign target = site.pages | where: "url", public_path | first %}{% if target %}<url><loc>{{ site.url }}{{ public_path }}</loc></url>{% endif %}{% endfor %}
+{% for course in site.data.catalog.courses %}{% if course.status == "on_sale" %}<url><loc>{{ site.url }}/courses/{{ course.id }}/</loc></url>{% endif %}{% endfor %}
+{% for track in site.data.catalog.tracks %}{% if track.onSale > 0 %}<url><loc>{{ site.url }}/tracks/{{ track.id }}/</loc></url>{% endif %}{% endfor %}
+{% for program in site.data.catalog.programs %}{% if program.status == "on_sale" %}<url><loc>{{ site.url }}/programs/{{ program.id }}/</loc></url>{% endif %}{% endfor %}
+{% endif %}
+</urlset>

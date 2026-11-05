@@ -7,10 +7,12 @@ layout: default
 {%- capture nl2 %}
 
 {% endcapture -%}
+{%- if c.status == 'on_sale' %}
 <script type="application/ld+json">
 {%- capture ld_ -%}{"@context":"https://schema.org","@type":"Course","name":{{ c.title | jsonify }},"description":{{ c.summary | jsonify }},"courseCode":{{ c.id | jsonify }},"educationalLevel":{{ c.levelLabel | jsonify }},"timeRequired":"PT{{ c.hours }}H","url":"{{ site.url }}/courses/{{ c.id }}/","provider":{"@type":"Organization","name":"Wirewalk Institute of AI","url":"{{ site.url }}/"}}{%- endcapture -%}
 {{ ld_ | replace: "<", "\u003c" }}
 </script>
+{%- endif %}
 <div class="c-hero">
   <div class="wrap c-grid">
     <div>
@@ -23,12 +25,14 @@ layout: default
       </div>
       <h1>{{ c.title | escape }}</h1>
       <p class="lead">{{ c.subtitle | escape }}</p>
+      {% if c.status == 'on_sale' %}
       <dl class="c-facts">
         <div><dt>Level</dt><dd>{{ c.levelLabel | escape }}</dd></div>
         <div><dt>Study time</dt><dd>{{ c.hours }} hours</dd></div>
         <div><dt>Lessons</dt><dd>{{ c.lessonCount }} in {{ c.modules | size }} modules</dd></div>
         <div><dt>Exam</dt><dd>{{ c.exam.questions }} questions</dd></div>
       </dl>
+      {% else %}<p class="muted">The curriculum is being prepared and reviewed. Enrollment is not open yet.</p>{% endif %}
     </div>
 
     <aside class="buy" aria-label="Enrollment">

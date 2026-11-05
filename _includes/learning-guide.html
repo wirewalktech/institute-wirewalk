@@ -1,0 +1,29 @@
+{%- assign guide = site.data["learning-seo"][t.id] -%}
+{%- if guide -%}
+<section class="section tight" aria-labelledby="learning-guide-h">
+  <div class="wrap">
+    <h2 id="learning-guide-h">Choose an AI learning path for your work</h2>
+    <p class="lead">{{ guide.overview | escape }}</p>
+    {% if guide.category == "industry" or t.id == "governance" %}<p class="small">Regulatory examples are primarily US-focused; check each syllabus for jurisdiction and any cross-border topics.</p>{% endif %}
+    <div class="tmap">
+      <div class="tile"><h3>Who these courses are for</h3><ul>{% for role in guide.audiences %}<li>{{ role | escape }}</li>{% endfor %}</ul></div>
+      <div class="tile"><h3>Learning questions to explore</h3><ul>{% for task in guide.use_cases %}<li>{{ task | escape }}</li>{% endfor %}</ul></div>
+      <div class="tile">
+        <h3>Find your starting point</h3>
+        {%- assign entry = live | where: "level", "intro" | first -%}
+        {%- unless entry -%}{%- assign entry = live | where: "level", "basic" | first -%}{%- endunless -%}
+        {%- if entry -%}
+        <p>Start with <a href="/courses/{{ entry.id }}/">{{ entry.title | escape }}</a>, then compare the specialist courses below by prerequisites and role.</p>
+        {%- elsif live.size > 0 -%}
+        <p>Build your grounding with <a href="/tracks/foundations/">AI foundations</a>, then check prerequisites for this track’s available courses.</p>
+        {%- else -%}
+        <p>This curriculum is planned; no courses in this track are open yet. Explore <a href="/tracks/foundations/">available AI foundation courses</a> while you compare the planned syllabuses.</p>
+        {%- endif -%}
+        <p>Available courses are open for enrollment. Waitlisted courses are still being prepared or reviewed.</p>
+        <a href="/courses/?track={{ t.id }}">Compare this track in the course catalog</a>
+      </div>
+    </div>
+    <p style="margin-top:24px">Related learning: {% for related_id in guide.related_tracks %}{% assign related = site.data.catalog.tracks | where: "id", related_id | first %}{% if related %}<a href="/tracks/{{ related.id }}/">{{ related.title | escape }}</a>{% unless forloop.last %} · {% endunless %}{% endif %}{% endfor %}</p>
+  </div>
+</section>
+{%- endif -%}

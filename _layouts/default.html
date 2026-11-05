@@ -3,32 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{%- if page.url == "/" -%}
-{%- assign doc_title = site.title | append: " — Professional AI training, assessed and certified" -%}
-{%- elsif page.title -%}
-{%- assign doc_title = page.title | append: " · " | append: site.title -%}
-{%- else -%}
-{%- assign doc_title = site.title -%}
-{%- endif -%}
-{%- assign doc_desc = page.description | default: site.description | strip_html | normalize_whitespace | truncate: 200 -%}
-<title>{{ doc_title | escape }}</title>
-<meta name="description" content="{{ doc_desc | escape }}">
-<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.url }}">
-{%- comment -%} Pre-launch: noindex on every page, and robots.txt disallows all. The coordinator flips both at launch. {%- endcomment %}
-<meta name="robots" content="noindex">
-{%- comment -%} [marketing] A page with `redirect_to` (e.g. /admin/) is a pure redirect: refresh to that URL and
-  stay out of search indexes even after the site-wide noindex above is removed at launch. {%- endcomment %}
-{%- if page.redirect_to %}
-<meta http-equiv="refresh" content="0; url={{ page.redirect_to | escape }}">
-<meta name="robots" content="noindex, nofollow">
-{%- endif %}
+{% include seo-head.html %}
 <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
-<meta property="og:site_name" content="{{ site.title | escape }}">
-<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
-<meta property="og:description" content="{{ doc_desc | escape }}">
-<meta property="og:url" content="{{ page.url | replace: 'index.html', '' | prepend: site.url }}">
-<meta property="og:type" content="website">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 {%- comment -%}
   Content-Security-Policy. GitHub Pages cannot send response headers, so it is a meta tag.
