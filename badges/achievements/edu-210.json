@@ -1,0 +1,149 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/edu-210.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in K-12 Schools",
+  "description": "Evaluate a California district’s AI deployment through privacy intake, tested access and minimum data, a cautious tutor evaluation, funded safety response, subgroup model/scoring audits and usable individualized communications. Build a cumulative board dossier using synthetic materials, six module Decision Labs and a strategic capstone.",
+  "humanCode": "EDU-210",
+  "fieldOfStudy": "AI in Education and Research",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "k-12",
+    "school district",
+    "student data privacy",
+    "ferpa",
+    "coppa",
+    "ppra",
+    "cipa",
+    "sopipa",
+    "ndpa",
+    "edtech vetting",
+    "gemini in classroom",
+    "copilot chat",
+    "chatgpt for teachers",
+    "rostering",
+    "oneroster",
+    "ai tutor pilot",
+    "essa evidence tiers",
+    "student safety monitoring",
+    "early warning system",
+    "automated scoring",
+    "iep",
+    "family translation",
+    "ada title ii",
+    "take it down act",
+    "weapons screening",
+    "ai detectors"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/edu-210.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in K-12 Schools"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/edu-210/",
+    "narrative": "To earn this certificate a learner must: complete all 22 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Review an AI vendor's terms and data privacy agreement against FERPA, COPPA as amended, PPRA and one state student-privacy law, and issue an approve, approve-with-conditions or deny memo that cites each finding",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-1",
+      "targetCode": "edu-210.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an OU-by-feature settings matrix for Gemini, Copilot Chat and ChatGPT for Teachers that matches district policy, and find directory accounts whose age data puts students in the wrong group",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-2",
+      "targetCode": "edu-210.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a field-by-field share/withhold table and offboarding checklist for connecting an AI app through Clever, ClassLink or OneRoster with no unjustified fields",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-3",
+      "targetCode": "edu-210.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze an AI tutor pilot’s balance, attrition, adjusted uncertainty, subgroup access and transcript quality, and distinguish a local association from a verified ESSA or EDGAR evidence claim",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-4",
+      "targetCode": "edu-210.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write an escalation matrix for AI online-safety alerts that sets response times, after-hours coverage, emergency and police-referral conditions, mandated-reporting steps and access controls on flagged content",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-5",
+      "targetCode": "edu-210.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run the first 24 hours of an AI-generated intimate-image incident and test an AI safety vendor's performance claims before purchase",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-6",
+      "targetCode": "edu-210.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute positive predictive value, false-positive rate and calibration by subgroup for an early-warning model, and exact agreement, adjacent agreement and quadratic weighted kappa for an automated scorer",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-7",
+      "targetCode": "edu-210.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Set district procedures for AI drafting in IEP and 504 documents, machine translation of family messages and AI-assisted accessibility remediation, including who reviews what before it is used",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-210/#outcome-8",
+      "targetCode": "edu-210.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/edu-210.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
