@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/enr-215.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Powering AI: Data Center Energy for Utilities and Developers",
+  "description": "Work through a fictional Texas utility/campus diligence case and labeled alternatives: cited intake, honest load forecasts, settings and flexibility evidence, comparable tariffs, bounded procurement profiles and engine records. Five module Decision Labs and a committee simulation practice conditional decisions; planned workload is 16 hours.",
+  "humanCode": "ENR-215",
+  "fieldOfStudy": "AI in Energy, Utilities and Natural Resources",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "data centers",
+    "large loads",
+    "interconnection",
+    "load forecasting",
+    "ride-through",
+    "nerc",
+    "ferc",
+    "ercot",
+    "pjm",
+    "texas sb 6",
+    "co-location",
+    "tariffs",
+    "demand response",
+    "gpu flexibility",
+    "ppa",
+    "hourly matching",
+    "on-site generation",
+    "utilities"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/enr-215.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Powering AI: Data Center Energy for Utilities and Developers"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/enr-215/",
+    "narrative": "To earn this certificate a learner must: complete all 17 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 45 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Extract a set of large-load request packets into a cited schema, find duplicate campuses filed under different names, convert MVA to MW at a stated power factor, and list deficiencies against the Texas PURA §37.0561 disclosure elements",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-1",
+      "targetCode": "enr-215.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build and check an internal probability-weighted large-load sensitivity, distinguish its P10/P50/P90 limits from official ERCOT forecast eligibility, and prepare a method note identifying the §25.370 evidence and submission route",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-2",
+      "targetCode": "enr-215.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify disturbance events that caused customer-initiated load loss, fit a simple ride-through (count-and-trip) model to synthetic PMU data, and draft the data request a planner sends to a campus",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-3",
+      "targetCode": "enr-215.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a UPS and transfer-settings register with source references, flag settings that differ from the utility's requirements, and draft a commissioning test plan without changing any setting",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-4",
+      "targetCode": "enr-215.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a curtailment plan that meets a requested MW reduction for a stated duration without touching latency-bound inference or backup generators, and compute the baseline and measured reduction for settlement",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-5",
+      "targetCode": "enr-215.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare large-load tariff terms like for like and estimate unrecovered fixed cost under ramp and exit scenarios, including the effect of collateral",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-6",
+      "targetCode": "enr-215.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Model charges, curtailment exposure and approval timelines for PJM co-location services and a Texas §39.169 net-metering path, and answer docket questions with pinpoint citations to enrolled or final text",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-7",
+      "targetCode": "enr-215.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Score candidate sites for time-to-power, compute annual versus hourly clean-energy matching, and classify backup-engine runs against federal hour limits, stating which decisions stay with a named person",
+      "targetUrl": "https://institute.wirewalk.com/courses/enr-215/#outcome-8",
+      "targetCode": "enr-215.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/enr-215.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
