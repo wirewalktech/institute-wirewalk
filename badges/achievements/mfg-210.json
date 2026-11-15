@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-210.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Industrial Operations",
+  "description": "Evaluate plant AI through a cumulative synthetic US food-manufacturing case: data lineage, alert-to-work-order evidence, causal soft sensors, controlled-document RAG, control-model tests and read-only gateways. Assemble a reviewable decision dossier; no production authority or safety qualification is granted.",
+  "humanCode": "MFG-210",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "manufacturing ai",
+    "industrial operations",
+    "ot security",
+    "iec 62443",
+    "isa-95",
+    "unified namespace",
+    "predictive maintenance",
+    "cmms",
+    "soft sensors",
+    "advanced process control",
+    "management of change",
+    "plc code copilot",
+    "rag",
+    "ai agents",
+    "edge mlops"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-210.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Industrial Operations"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-210/",
+    "narrative": "To earn this certificate a learner must: complete all 23 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Map a synthetic tag list to an ISA-95 asset hierarchy and unified-namespace topics, accept or reject each AI-suggested mapping with a reason, and write data-quality rules that catch unit changes, flatlines and stale tags",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-1",
+      "targetCode": "mfg-210.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate site-initiated telemetry, management, update and support paths separately, and specify evidence and approval conditions for any write request",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-2",
+      "targetCode": "mfg-210.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Adapt a supplied per-asset vibration prototype, distinguish sensor and machine evidence, and prepare a taxonomy-valid draft work order for planner review",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-3",
+      "targetCode": "mfg-210.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose between thresholds, Weibull-based PM intervals and ML remaining-useful-life for a pump fleet with censored data, and defend the choice in a one-page decision memo",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-4",
+      "targetCode": "mfg-210.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a lag-aligned soft sensor and causal update schedule, prepare an unsigned scope-appropriate MOC request, and defend cause-specific fallback and energy-baseline limitations",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-5",
+      "targetCode": "mfg-210.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a source-controlled RAG troubleshooting candidate on citation, revision, redirection, unanswerable and injection evidence, with missing-evidence rules and uncertainty",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-6",
+      "targetCode": "mfg-210.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Repair a supplied basic-control requirements model against transfer and interruption tests, and enforce a bounded read-only gateway on synthetic tool requests",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-7",
+      "targetCode": "mfg-210.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble a fleet decision dossier that qualifies synthetic twin evidence, names monitoring and rollback owners, and escalates US OEM export-law questions to specialists",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-210/#outcome-8",
+      "targetCode": "mfg-210.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-210.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
