@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-210.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Healthcare Delivery",
+  "description": "Evaluate clinical AI through a fictional US health-system case: procurement, source audits, silent validation, monitoring, privacy and integration. Produce a bounded evidence portfolio using synthetic materials and branching decisions.",
+  "humanCode": "HLS-210",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "healthcare ai",
+    "health systems",
+    "clinical informatics",
+    "ambient documentation",
+    "sepsis model validation",
+    "local validation",
+    "drift monitoring",
+    "fda cds guidance",
+    "hti-1",
+    "section 1557",
+    "hipaa",
+    "42 cfr part 2",
+    "cds hooks",
+    "smart on fhir",
+    "clinical ai governance",
+    "vendor selection",
+    "cms-0057-f",
+    "operational ai"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-210.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Healthcare Delivery"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-210/",
+    "narrative": "To earn this certificate a learner must: complete all 24 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Tier a clinical AI intake request by patient impact, autonomy, time-criticality, FDA status and protected-attribute inputs, and select a vendor with pre-signed gates and weights, security attestations, total cost of ownership and an ROI case built on local measures",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-1",
+      "targetCode": "hls-210.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an ambient-documentation pilot with a stepped-wedge arm, a fixed exposure window, pre-set go/no-go thresholds and a sampled note-versus-audio error audit, and write the go/no-go memo",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-2",
+      "targetCode": "hls-210.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit an AI-generated discharge summary or portal reply with an inaccuracy, hallucination and omission taxonomy, and test red-flag routing rules for sensitivity on a held-out message set",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-3",
+      "targetCode": "hls-210.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Run a silent-mode validation of a vendor deterioration model with physiologic onset and clinician recognition times, and select an alert threshold from sensitivity, PPV, horizon-based calibration and lead time within a unit alert budget",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-4",
+      "targetCode": "hls-210.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reproduce a label-choice bias pattern in a risk score, compare enrollment at equal need across groups, and write the 45 CFR 92.210 inventory and mitigation entry",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-5",
+      "targetCode": "hls-210.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Investigate drift with complete outcome denominators and competing explanations; compare recalibration, manufacturer-led change and retirement, and distinguish operational proxy exposure from actual waiting/capacity evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-6",
+      "targetCode": "hls-210.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a vendor PHI flow, de-identification release method, Part 2 provenance/disclosure packet and contract conditions without treating detector accuracy as legal approval",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-7",
+      "targetCode": "hls-210.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify a CDS Hooks prefetch template and card that meet FDA criterion 4 transparency, and confirm hooks, prefetch, feedback and silent scoring against what your EHR version actually supports",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-210/#outcome-8",
+      "targetCode": "hls-210.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-210.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
