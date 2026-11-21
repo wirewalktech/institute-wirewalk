@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/edu-110.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Special Education and Student Support Professionals",
+  "description": "Work through a fictional student-support case using supplied instructional materials, observations and draft records. Practice useful AI drafting while preserving student participation, data boundaries, evaluation authority and measurable evidence.",
+  "humanCode": "EDU-110",
+  "fieldOfStudy": "AI in Education and Research",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "special-education",
+    "student-support",
+    "accessibility",
+    "evidence",
+    "privacy"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/edu-110.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Special Education and Student Support Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/edu-110/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a task and permission boundary that keeps unsupported student-record disclosures out of an AI draft",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-1",
+      "targetCode": "edu-110.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish observed evidence, provisional interpretations and authorized evaluation or team decisions",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-2",
+      "targetCode": "edu-110.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Adapt supplied instructional material while preserving its learning target and checking model errors",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-3",
+      "targetCode": "edu-110.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a student-informed access-support trial with training, a fallback and observable measures",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-4",
+      "targetCode": "edu-110.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate and communicate progress using comparable opportunities, missing-data rules and actual prompt conditions",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-5",
+      "targetCode": "edu-110.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Construct an observable behavior record and a positive support hypothesis without assigning diagnosis or eligibility",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-6",
+      "targetCode": "edu-110.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a family-access and staff-handoff record that preserves language, participation and decision ownership",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-7",
+      "targetCode": "edu-110.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Defend a priced, capacity-bound workflow recommendation and revise it after changed evidence and fallible feedback",
+      "targetUrl": "https://institute.wirewalk.com/courses/edu-110/#outcome-8",
+      "targetCode": "edu-110.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/edu-110.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
