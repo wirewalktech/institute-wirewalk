@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-235.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Corporate Income Tax and the ASC 740 Provision",
+  "description": "Evaluate AI-assisted corporate provision work through a cumulative fictional US manufacturer case. Preserve calculation, source, professional judgment and data-permission boundaries while creating reviewable records and a priced evidence-work recommendation.",
+  "humanCode": "PRO-235",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "corporate tax",
+    "asc 740",
+    "tax provision",
+    "effective tax rate",
+    "asu 2023-09",
+    "rate reconciliation",
+    "uncertain tax positions",
+    "schedule utp",
+    "valuation allowance",
+    "circular 230",
+    "section 7216",
+    "obbba",
+    "section 174a",
+    "bonus depreciation",
+    "form 6765",
+    "sox controls",
+    "tax technology"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-235.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Corporate Income Tax and the ASC 740 Provision"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-235/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a typed number/line/version and prose-coverage check for AI commentary and diagnose a seeded error against supplied provision outputs",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-1",
+      "targetCode": "pro-235.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate category adjudication and threshold/population checks for the supplied rate-reconciliation and cash-tax disclosures",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-2",
+      "targetCode": "pro-235.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate mapping proposals using missing-fact gates, held-out routing metrics and a separately sampled accepted-label error record",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-3",
+      "targetCode": "pro-235.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a source/status/owner record for position, valuation-allowance and IDR work that preserves actual accounting, tax and privilege boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-4",
+      "targetCode": "pro-235.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze supplied capex, interest and research scenarios while preserving acquisition/location/method facts and authorized election ownership",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-5",
+      "targetCode": "pro-235.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a source-linked research-credit component entry and a bounded foreign-data follow-up record without inferring tax eligibility from labels",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-6",
+      "targetCode": "pro-235.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create information/review-control rows and a version-bound regression/fresh-evidence decision with actual versus planned results explicit",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-7",
+      "targetCode": "pro-235.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate vendor data flows, role-specific tax-information permission and two feasible priced scopes after changed terms/configuration evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-235/#outcome-8",
+      "targetCode": "pro-235.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-235.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

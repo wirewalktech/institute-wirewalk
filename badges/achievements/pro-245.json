@@ -1,0 +1,137 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-245.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Payroll and Employment Tax",
+  "description": "Complete Juniper Hospitality Group’s synthetic payroll evidence packet across engine responses, earnings codes, W-2 validation, variances, deposits, notices, worker questions and employee service. Six module Decision Labs and a capstone rehearse choices under changed evidence.",
+  "humanCode": "PRO-245",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "payroll",
+    "payroll tax",
+    "employment tax",
+    "form 941",
+    "form w-2",
+    "qualified overtime",
+    "no tax on tips",
+    "tax engine",
+    "pre-payroll variance",
+    "irs notices",
+    "multistate withholding",
+    "worker classification",
+    "fringe benefits",
+    "supplemental withholding"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-245.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Payroll and Employment Tax"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-245/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze earnings-code proposals and retain premium, workweek, service-charge and source dependencies in a reviewed mapping queue",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-1",
+      "targetCode": "pro-245.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create and challenge a typed mock response contract with twenty offline cases, separating numeric provenance from authorization and tax correctness",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-2",
+      "targetCode": "pro-245.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate register changes and AI explanations against cited evidence, preserving unresolved causes and honest measurement denominators",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-3",
+      "targetCode": "pro-245.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile supported quarter liabilities, confirmations, return and ledger, and identify scoped deposit timing and amount exceptions",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-4",
+      "targetCode": "pro-245.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate notice versions and correction evidence, distinguishing payment gaps, adjustment and claim routes and unresolved filing conditions",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-5",
+      "targetCode": "pro-245.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a bounded exception log over two hundred synthetic W-2 rows and link mapping changes to controlled correction impacts",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-6",
+      "targetCode": "pro-245.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate location, worker and fringe questions with distinct legal scopes, fictional arithmetic boundaries and concrete missing-fact requests",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-7",
+      "targetCode": "pro-245.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create an employee-assistant and source-change specification, then defend a budgeted controller recommendation with explicit access, privacy and evidence limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-245/#outcome-8",
+      "targetCode": "pro-245.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-245.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
