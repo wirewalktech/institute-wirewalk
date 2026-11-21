@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pub-130.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Law Enforcement and Public Safety Professionals",
+  "description": "Practice bounded report review, citation checking, records handling and aggregate administrative planning through a fully synthetic US agency case. Preserve original evidence, contrary information and actual decision authority while challenging fallible AI drafts.",
+  "humanCode": "PUB-130",
+  "fieldOfStudy": "AI in Government, Defense and Public Safety",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "public-safety",
+    "law-enforcement",
+    "records",
+    "evidence",
+    "ai-review"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pub-130.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Law Enforcement and Public Safety Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pub-130/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a task-and-data boundary that excludes person scoring, surveillance and tactical actions.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-1",
+      "targetCode": "pub-130.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a source-linked administrative narrative that preserves contradictions, uncertainty and version.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-2",
+      "targetCode": "pub-130.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish operative legal sources, agency policy, proposed rules and unsupported citation claims.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-3",
+      "targetCode": "pub-130.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a source-preserving records/redaction review with actual authority and delivery states.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-4",
+      "targetCode": "pub-130.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate and qualify aggregate workload measures without individual predictions or causal claims.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-5",
+      "targetCode": "pub-130.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a supplied routing fixture using complete populations, relevant denominators and fresh-version limits.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-6",
+      "targetCode": "pub-130.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify configuration, data-flow, accessibility and change controls without inventing permission or operation.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-7",
+      "targetCode": "pub-130.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare feasible evidence-work scopes and revise a bounded internal recommendation after changed evidence.",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-130/#outcome-8",
+      "targetCode": "pub-130.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pub-130.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
