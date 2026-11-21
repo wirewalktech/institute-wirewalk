@@ -1,0 +1,131 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/wrk-115.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Customer Support Operations",
+  "description": "Analyze contact episodes, policy readiness, action states, resolution measures and complete costs. Practice with supplied fictional records and outputs; the core route requires no commercial support platform or real customer data.",
+  "humanCode": "WRK-115",
+  "fieldOfStudy": "AI at Work",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "customer support",
+    "knowledge base",
+    "ticket analysis",
+    "resolution metrics",
+    "service automation",
+    "human handoff",
+    "ai evaluation",
+    "cost modeling"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/wrk-115.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Customer Support Operations"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/wrk-115/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a contact-reason taxonomy with explicit episode identity, coverage and uncertain labels",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-1",
+      "targetCode": "wrk-115.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Match support replies to actual policy bodies, order facts, source versions and missing dependencies",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-2",
+      "targetCode": "wrk-115.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify answer, clarification and escalation procedures while separating requests, acknowledgments, approvals and completed actions",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-3",
+      "targetCode": "wrk-115.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recompute attempts, resolution labels, containment, reopens and survey measures using actual cohorts and observation windows",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-4",
+      "targetCode": "wrk-115.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare seat and billable-event planning contracts using matching volume, invoice rules and complete work boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-5",
+      "targetCode": "wrk-115.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Inspect information flows and customer claims against supplied local permissions while preserving unresolved legal applicability",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-6",
+      "targetCode": "wrk-115.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Repair policy or event corrections through dependent replies, procedures, measures and stored records",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-7",
+      "targetCode": "wrk-115.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Defend and revise a feasible preparation portfolio with explicit exclusions, two feasible alternatives and two source-backed feedback decisions",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-115/#outcome-8",
+      "targetCode": "wrk-115.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/wrk-115.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
