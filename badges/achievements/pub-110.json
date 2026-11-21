@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pub-110.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Public Servants",
+  "description": "Use approved AI for public-service drafting and evidence work while keeping decisions, privacy, records and review authority explicit. Preserve and correct concrete source artifacts, carry six module outputs into a synthetic pilot recommendation, and practice trade-offs in six module Decision Labs plus a capstone simulation.",
+  "humanCode": "PUB-110",
+  "fieldOfStudy": "AI in Government, Defense and Public Safety",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "government ai",
+    "public servants",
+    "omb m-25-21",
+    "federal records",
+    "nara",
+    "foia",
+    "public records",
+    "privacy act",
+    "plain language",
+    "section 508",
+    "snap",
+    "constituent services",
+    "public comments",
+    "texas traiga",
+    "cui"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pub-110.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Public Servants"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pub-110/",
+    "narrative": "To earn this certificate a learner must: complete all 20 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft a constituent reply with an approved AI tool that removes unneeded PII, keeps Privacy Act and CUI data out of tools not covered for it, verifies every factual claim against the policy source, and identifies which prompts and outputs must be captured as records under NARA AC 11.2026 or a state public-records act",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-1",
+      "targetCode": "pub-110.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Rewrite a public notice into plain language and translate it so that every legal condition and critical field (dates, amounts, deadlines) survives, verified by a condition checklist and back-translation",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-2",
+      "targetCode": "pub-110.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce a public-comment summary, FOIA redaction pass or briefing memo in which every quote and citation traces to its source, seeded substantive comments or PII items are recalled, and the AI search prompts are documented for the case file",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-3",
+      "targetCode": "pub-110.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit AI-extracted fields and virtual-agent transcripts in a benefits or contact-center queue, route errors and urgent contacts to a human, and write the appeal-trace note the FNS automation memo expects",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-4",
+      "targetCode": "pub-110.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Decide, for a given task, whether AI output would be a principal basis for a benefits, employment or translation decision presumed high-impact under OMB M-25-21 section 6, and name the human review and appeal step that must remain",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-5",
+      "targetCode": "pub-110.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare procurement, hiring, minutes or permit documents with AI while keeping proposal data, applicant ranking, unapproved minutes and permit decisions out of the tool, and correct planted errors in an AI draft",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-6",
+      "targetCode": "pub-110.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design a measured pilot for one task in your own unit (baseline, accuracy or recall check, error and appeal rates) and write a one-page use-case note for your Chief AI Officer or IT office",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-110/#outcome-7",
+      "targetCode": "pub-110.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pub-110.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

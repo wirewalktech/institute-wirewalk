@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-130.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Individual Tax Preparers: Form 1040, Circular 230 and IRS Data Security",
+  "description": "Follow Cedar Bridge Tax Services through tool authorization, document reconciliation, preparer review, source-linked research and incident response. Fifteen worked lessons, five module Decision Labs and an integrated simulation lead to a conditional next-season recommendation. All records and tool contracts are synthetic; current primary sources and tax-year-specific forms control the exercises.",
+  "humanCode": "PRO-130",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "tax",
+    "form 1040",
+    "tax preparation",
+    "circular 230",
+    "section 7216",
+    "rev proc 2013-14",
+    "section 6694",
+    "section 6695(g)",
+    "eitc due diligence",
+    "form 8867",
+    "ftc safeguards rule",
+    "wisp",
+    "publication 5708",
+    "form 1099-da",
+    "cp2000",
+    "enrolled agent",
+    "cpa"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-130.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Individual Tax Preparers: Form 1040, Circular 230 and IRS Data Security"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-130/",
+    "narrative": "To earn this certificate a learner must: complete all 15 lessons in 5 modules, play each of the course's 6 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a supplied purpose/recipient/location register to identify an evidenced return-information permission path or a specific hold, separately from firm security approval",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-1",
+      "targetCode": "pro-130.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile AI extraction with synthetic document identity, year, version and high-risk fields, recording unresolved exceptions before reviewer handoff",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-2",
+      "targetCode": "pro-130.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile tax-year-2025 broker and digital-asset proceeds to source records without inventing basis, deleting unproved duplicates or treating confirmed self-transfers as sales",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-3",
+      "targetCode": "pro-130.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Correct unsupported Schedule C classifications and prior-year variance explanations using supplied records, with a named preparer inquiry and review disposition",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-4",
+      "targetCode": "pro-130.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a contemporaneous covered-benefit inquiry record that distinguishes client answers, reasonable follow-up and the preparer’s eligibility determination",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-5",
+      "targetCode": "pro-130.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Correct AI research, client letters and projections using opened primary sources, explicit tax-year assumptions and documented advice boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-6",
+      "targetCode": "pro-130.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile a synthetic CP2000-style proposal with filed-return/source records and select a supported response within the preparer’s representation authority",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-7",
+      "targetCode": "pro-130.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare an AI-tool security, incident and rollout recommendation that separates notification tests, operational controls, role-weighted capacity and incremental costs",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-130/#outcome-8",
+      "targetCode": "pro-130.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-130.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
