@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-150.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Enterprise Risk Management and Risk Analysts",
+  "description": "Build a cumulative fictional US logistics risk-committee packet from register, KRI, provider, incident/control, source-change and renewal evidence. Compare deterministic checks and AI drafts, play six Decision Labs and a capstone, and revise a self-contained packet with optional fallible AI practice feedback.",
+  "humanCode": "PRO-150",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "enterprise risk management",
+    "erm",
+    "operational risk",
+    "third-party risk",
+    "tprm",
+    "kri",
+    "rcsa",
+    "soc 2",
+    "risk register",
+    "grc",
+    "loss events",
+    "regulatory change",
+    "cyber risk",
+    "ai governance",
+    "rmis"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-150.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Enterprise Risk Management and Risk Analysts"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-150/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply data and recipient restrictions and log source-preserving register changes, disputed merges and owner questions",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-1",
+      "targetCode": "pro-150.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile KRI values, units, periods and contributing populations, then correct a source-linked committee narrative",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-2",
+      "targetCode": "pro-150.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Correct provider opinion, scope, exception and user-control extraction without inventing assurance or risk acceptance",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-3",
+      "targetCode": "pro-150.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify incident evidence with actor and loss limitations and preserve conflicting control testimony",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-4",
+      "targetCode": "pro-150.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Trace emerging-risk sources and map actual obligation content to matching control scope, trigger and deadline",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-5",
+      "targetCode": "pro-150.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Preserve system-level cyber severity and applicability limits in an enterprise risk roll-up",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-6",
+      "targetCode": "pro-150.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare AI-intake, scenario, continuity and loss-run records with source-owned numbers and explicit uncertainty",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-7",
+      "targetCode": "pro-150.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble and revise a cross-linked committee packet with accountable gaps, authority limits and a bounded recommendation",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-150/#outcome-8",
+      "targetCode": "pro-150.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-150.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
