@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mfg-110.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Manufacturing and Plant Professionals",
+  "description": "Practice with a fictional Ohio components plant using complete inline records. Check AI summaries, quality-review metrics, maintenance evidence, schedule feasibility and controlled-document claims before recommending a bounded next step.",
+  "humanCode": "MFG-110",
+  "fieldOfStudy": "AI in Manufacturing and Industrial Operations",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "manufacturing",
+    "plant-professionals",
+    "quality",
+    "maintenance",
+    "read-only-analysis"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mfg-110.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Manufacturing and Plant Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mfg-110/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a read-only AI task and specify its decision owner, inputs and staffed fallback.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-1",
+      "targetCode": "mfg-110.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile identifiers, units and weighted plant measures against a supplied source roster.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-2",
+      "targetCode": "mfg-110.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a quality-review aid using missed defects, false alarms, population limits and available review time.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-3",
+      "targetCode": "mfg-110.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a maintenance evidence queue that distinguishes symptoms, actual tests and proposed work.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-4",
+      "targetCode": "mfg-110.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare production-support plans against stated time, setup, material and inspection constraints.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-5",
+      "targetCode": "mfg-110.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Trace document and supplier claims to the applicable revision, lot and missing evidence.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-6",
+      "targetCode": "mfg-110.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify a minimal-data, read-only evaluation and a changed-version stop/review condition.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-7",
+      "targetCode": "mfg-110.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recommend and revise a costed evidence-work scope while preserving uncertainty and current plant responsibilities.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mfg-110/#outcome-8",
+      "targetCode": "mfg-110.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mfg-110.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
