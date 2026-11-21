@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-210.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Legal Practice",
+  "description": "Analyze legal AI outputs, current US authority, review uncertainty and confidentiality controls; carry eight worked artifacts through six module Decision Labs and one cumulative committee capstone.",
+  "humanCode": "PRO-210",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "legal ai",
+    "aba opinion 512",
+    "citation verification",
+    "ediscovery",
+    "generative review",
+    "recall and elusion",
+    "privilege review",
+    "contract playbook",
+    "due diligence",
+    "ethical walls",
+    "legal ai vendor diligence",
+    "legal ethics",
+    "law firm supervision"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-210.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Legal Practice"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-210/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze a draft brief and design a version-bound citation and proposition-support workflow with a responsible signer and correction route",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-1",
+      "targetCode": "pro-210.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate legal AI task fit using predeclared gold/error criteria, blind product mapping, observed grading limits and changed-version retest needs",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-2",
+      "targetCode": "pro-210.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze positive/null-set validation, joint recall uncertainty, custodian weighting and scope changes; draft ESI language that reports evidence without unsupported guarantees",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-3",
+      "targetCode": "pro-210.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate privilege/log quality and exhibit authentication plans, distinguishing waiver orders, provenance, operative evidence rules and pending proposals",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-4",
+      "targetCode": "pro-210.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate clause tiers, document type, amendment precedence and diligence sampling; preserve confidentiality when designing a precedent bank",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-5",
+      "targetCode": "pro-210.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze and test matter access across direct retrieval, derived objects, shared spaces and stale permission feeds without treating technical isolation as a conflict-law decision",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-6",
+      "targetCode": "pro-210.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate vendor data flows, client restrictions and specific-consent needs; distinguish historical privilege/work-product holdings from a blanket enterprise safe harbor",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-7",
+      "targetCode": "pro-210.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design an observable supervision, reasonable-fee and bounded-intake recommendation with a feasible budget, exception owners and changed-evidence revision",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-210/#outcome-8",
+      "targetCode": "pro-210.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-210.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
