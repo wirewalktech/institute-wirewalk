@@ -1,0 +1,131 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/ven-150.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Perplexity and AI Search for Research",
+  "description": "Use Perplexity as a research instrument while checking the evidence behind its answers. Build a fictional US association research brief, compare five research approaches on supplied sources, and revise scope after a source correction and staff-hour loss.",
+  "humanCode": "VEN-150",
+  "fieldOfStudy": "AI Models and Vendors",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "perplexity",
+    "ai search",
+    "research",
+    "citations",
+    "source verification",
+    "projects",
+    "comet",
+    "research methods"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/ven-150.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Perplexity and AI Search for Research"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/ven-150/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Frame an answerable research question with population, time and decision limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-1",
+      "targetCode": "ven-150.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select and refine a Perplexity research route with an auditable query and follow-up log",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-2",
+      "targetCode": "ven-150.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit source existence, passage, date/version and attached proposition",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-3",
+      "targetCode": "ven-150.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recompute supplied quantities and distinguish sampling description, association and intervention claims",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-4",
+      "targetCode": "ven-150.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Organize research artifacts with explicit source-copy, access and refresh boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-5",
+      "targetCode": "ven-150.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare research methods on matched tasks without inventing vendor performance",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-6",
+      "targetCode": "ven-150.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish raw search results, generated answers and actual enterprise information-use evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-7",
+      "targetCode": "ven-150.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Revise a priced evidence-work recommendation after source and capacity changes",
+      "targetUrl": "https://institute.wirewalk.com/courses/ven-150/#outcome-8",
+      "targetCode": "ven-150.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/ven-150.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

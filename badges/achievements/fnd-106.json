@@ -1,0 +1,131 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fnd-106.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Safety and Alignment Concepts",
+  "description": "Apply AI safety and alignment concepts to a supplied US nonprofit case: repair proxies, compare behavior-shaping/control methods, challenge evidence and prepare a bounded recommendation.",
+  "humanCode": "FND-106",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "ai safety",
+    "alignment",
+    "preference training",
+    "constitutional ai",
+    "interpretability",
+    "frontier frameworks",
+    "evidence",
+    "US applicability"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fnd-106.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Safety and Alignment Concepts"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-106/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply overlapping alignment/safety/security/misuse lenses to a source/action boundary",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-1",
+      "targetCode": "fnd-106.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Repair a proxy and distinguish observed behavior from claims about learned internal objectives",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-2",
+      "targetCode": "fnd-106.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare demonstrations, preferences, principle-guided training, written policies and runtime controls",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-3",
+      "targetCode": "fnd-106.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Interpret sycophancy/context/autonomy observations with rival explanations and discriminating test plans",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-4",
+      "targetCode": "fnd-106.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate evidence fractions and distinguish regression, fresh evaluation, association and intervention",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-5",
+      "targetCode": "fnd-106.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare attributed publisher framework roles, triggers and evidence without false equivalence",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-6",
+      "targetCode": "fnd-106.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Separate source force, actor, task and version with US applicability questions explicit",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-7",
+      "targetCode": "fnd-106.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Defend and revise a feasible priced strategy with concrete evidence, trade-offs and feedback decisions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-106/#outcome-8",
+      "targetCode": "fnd-106.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fnd-106.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

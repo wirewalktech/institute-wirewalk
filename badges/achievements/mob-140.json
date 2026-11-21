@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/mob-140.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Automotive Retail and Fleet Professionals",
+  "description": "Use a fictional Ohio retail and fleet-support case to reconcile vehicle records, prepare supported customer drafts and compare service appointment offers. Build a source-bound evidence recommendation with supplied fixtures and manual alternatives.",
+  "humanCode": "MOB-140",
+  "fieldOfStudy": "AI in Transport, Logistics and Mobility",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "automotive-retail",
+    "fleet-records",
+    "service-coordination",
+    "source-verification",
+    "ai-evaluation"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/mob-140.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Automotive Retail and Fleet Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/mob-140/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a bounded retail or fleet assistance task with a named source, owner and manual route.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-1",
+      "targetCode": "mob-140.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile vehicle identity, source coverage, units and weighted fleet measures before interpreting a record.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-2",
+      "targetCode": "mob-140.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a source-supported retail reply while preserving quote, document and delivery states.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-3",
+      "targetCode": "mob-140.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Route maintenance evidence questions without inventing diagnosis, received parts or completed service.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-4",
+      "targetCode": "mob-140.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare appointment offers against stated shop capacity and preserve displaced work and acceptance conditions.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-5",
+      "targetCode": "mob-140.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check vehicle-specific source support, recall-result limits and approved information flows.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-6",
+      "targetCode": "mob-140.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a proposed aid using fixed reference labels, misses, false flags and actual review effort.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-7",
+      "targetCode": "mob-140.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Revise a priced evidence-work scope with feasible alternatives, explicit exclusions and checkable feedback.",
+      "targetUrl": "https://institute.wirewalk.com/courses/mob-140/#outcome-8",
+      "targetCode": "mob-140.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/mob-140.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
