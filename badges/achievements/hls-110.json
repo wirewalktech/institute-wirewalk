@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/hls-110.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Nursing and Care Team Professionals",
+  "description": "Use a synthetic US care-team case to check AI drafts against source records, preserve nursing judgment and coordinate accountable follow-up. Build a practical evidence packet without patient data or a model account.",
+  "humanCode": "HLS-110",
+  "fieldOfStudy": "AI in Health and Life Sciences",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "nursing",
+    "care coordination",
+    "handoff",
+    "patient education",
+    "documentation",
+    "ai verification"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/hls-110.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Nursing and Care Team Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/hls-110/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a task-and-authority screen to select a bounded AI-assisted care-team workflow",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-1",
+      "targetCode": "hls-110.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Check a handoff draft against source identity, time, status and an explicit unresolved-fact list",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-2",
+      "targetCode": "hls-110.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile documentation and medication-list differences into a review record without inventing assessment, administration or orders",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-3",
+      "targetCode": "hls-110.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Adapt approved education into plain language and a teach-back exchange while preserving critical meaning and access needs",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-4",
+      "targetCode": "hls-110.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply owner, acknowledgment and fallback states to a follow-up queue without autonomously changing clinical priority",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-5",
+      "targetCode": "hls-110.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate and interpret missed-fact, unsupported-claim and review-work measures on supplied synthetic cases",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-6",
+      "targetCode": "hls-110.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply an information-flow and incident record that preserves authorization, evidence and local escalation boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-7",
+      "targetCode": "hls-110.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble a priced, version-bound workflow recommendation with explicit stop/resume criteria and remaining evidence gaps",
+      "targetUrl": "https://institute.wirewalk.com/courses/hls-110/#outcome-8",
+      "targetCode": "hls-110.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/hls-110.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
