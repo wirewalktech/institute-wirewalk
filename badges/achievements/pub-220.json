@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pub-220.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Defense: Logistics, Maintenance, Intelligence Analysis and Training",
+  "description": "Build a scoped defense sustainment AI demonstration from synthetic supplier, maintenance, manual, supply, source-analysis and training records. Produce a cumulative evidence packet, play six module Decision Labs and a strategic board simulation, and distinguish useful decision support from operational authority.",
+  "humanCode": "PUB-220",
+  "fieldOfStudy": "AI in Government, Defense and Public Safety",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "defense ai",
+    "dod",
+    "cbm+",
+    "predictive maintenance",
+    "technical manuals",
+    "rag",
+    "cui",
+    "itar",
+    "cmmc",
+    "dfars 252.204-7012",
+    "demand forecasting",
+    "readiness",
+    "pai",
+    "icd 203",
+    "test and evaluation",
+    "responsible ai",
+    "dodd 3000.09",
+    "simulation training"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pub-220.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Defense: Logistics, Maintenance, Intelligence Analysis and Training"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pub-220/",
+    "narrative": "To earn this certificate a learner must: complete all 19 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a policy applicability register separating cited baseline, current-source gaps, binding obligations, policy announcements and local controls, with owners and recheck triggers",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-1",
+      "targetCode": "pub-220.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify a CBM+ failure-risk deployment for a synthetic fleet, including the model card's out-of-scope uses, drift and out-of-distribution checks, a concrete time-based fallback trigger, and success measures such as alert precision and lead time",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-2",
+      "targetCode": "pub-220.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify and evaluate a technical-manual retrieval assistant using synthetic citation, current-revision, supplement, effectivity and verbatim-safety tests, including correct abstention and the limits of numeric/citation screens",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-3",
+      "targetCode": "pub-220.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a component data-flow boundary and two focused SSP control paragraphs from supplied CDI/ITARrecords,with permission/security gaps,authorized citizenship-or-residence determinations and incident handoffs explicit",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-4",
+      "targetCode": "pub-220.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select an intermittent-demand method from supplied rolling-origin MASE and lead-time bias, define a fair comparison for an unvalidated ML candidate, and write a forecast exception/readiness handoff that preserves purchase authority and missing-data limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-5",
+      "targetCode": "pub-220.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit a synthetic PAI source pipeline for duplicate inflation, translation/provenance and current access, and separate source support, analyst judgment and the authorities governing the cell’s actual activity",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-6",
+      "targetCode": "pub-220.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a compact decision-linked CBM+test record with scope,mature-label/split rules,two evaluation decisions,monitoring owner and fallback/resume conditions",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-7",
+      "targetCode": "pub-220.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft an after-action review from a synthetic convoy-resupply exercise log in which every finding cites a log line",
+      "targetUrl": "https://institute.wirewalk.com/courses/pub-220/#outcome-8",
+      "targetCode": "pub-220.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pub-220.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}

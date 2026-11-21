@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-230.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building and Deploying AI in Insurance",
+  "description": "Build and challenge specific US insurance AI workflows with synthetic worked examples, six cumulative module decision labs and a committee capstone. Preserve evidence across pricing, fairness, claims, extraction, generative assistance and governance. Planned supplied-output core: 16 hours; optional coding is additional.",
+  "humanCode": "FIN-230",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "insurance ai",
+    "rate filing",
+    "gbm",
+    "shap",
+    "unfair discrimination testing",
+    "bifsg",
+    "accelerated underwriting",
+    "siu fraud referral",
+    "photo estimating",
+    "fnol",
+    "submission intake",
+    "aerial imagery",
+    "naic model bulletin",
+    "ny circular letter 7",
+    "colorado regulation 10-1-1",
+    "model drift"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-230.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building and Deploying AI in Insurance"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-230/",
+    "narrative": "To earn this certificate a learner must: complete all 21 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare GLM/GBM pricing evidence, selected rating terms and impact while identifying independent confirmation and state/source-use limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-1",
+      "targetCode": "fin-230.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute and interpret aggregate inferred-group disparity with proxy error, uncertainty and no insurance legal pass threshold",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-2",
+      "targetCode": "fin-230.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare less discriminatory alternatives and accelerated life cutoffs with loss, slippage, workload and specific notice evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-3",
+      "targetCode": "fin-230.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design staffed SIU, photo-estimate and FNOL routing with claim-specific evidence, applicable running clocks and escalation",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-4",
+      "targetCode": "fin-230.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile field/location extraction and loss conventions, then assess imagery using parcel, date and dispute evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-5",
+      "targetCode": "fin-230.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Repair generated coverage answers against issued forms and test category-complete evaluation and bounded UM routing without clinical approval claims",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-6",
+      "targetCode": "fin-230.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build an entity/use inventory, vendor evidence controls and a candid versioned regulator-response index",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-7",
+      "targetCode": "fin-230.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish source-unit drift and immature outcomes from model failure and design impact review, monitoring and fallback",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-230/#outcome-8",
+      "targetCode": "fin-230.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-230.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
