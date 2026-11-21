@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/prm-101.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Prompting Fundamentals",
+  "description": "Practice task contracts, relevant context, examples, structured output and targeted revision. Compare complete authored outputs against source references and whole-task effort; no paid AI account is required.",
+  "humanCode": "PRM-101",
+  "fieldOfStudy": "Prompt and Context Engineering",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "prompting",
+    "prompt engineering",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "few-shot",
+    "iteration",
+    "templates",
+    "hallucination",
+    "beginner"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/prm-101.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Prompting Fundamentals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/prm-101/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Write a task contract with audience, artifact, deciding inputs, constraints and observable acceptance checks",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-1",
+      "targetCode": "prm-101.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select and delimit relevant context while preserving identity, units, source versions and instruction/data boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-2",
+      "targetCode": "prm-101.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design representative examples and inspect structured outputs against an explicit local schema",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-3",
+      "targetCode": "prm-101.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Revise a specific failed output through targeted feedback and staged work while retaining supported fields",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-4",
+      "targetCode": "prm-101.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Interpret supplied documents, tables and image-description records without assuming unavailable source access",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-5",
+      "targetCode": "prm-101.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare matched candidate outputs for content, format, appropriate clarification and whole-task effort",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-6",
+      "targetCode": "prm-101.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Maintain reusable templates with placeholders, source versions, tool assumptions and refresh checks",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-7",
+      "targetCode": "prm-101.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose a feasible preparation strategy and revise it using actual supplied feedback and resource limits",
+      "targetUrl": "https://institute.wirewalk.com/courses/prm-101/#outcome-8",
+      "targetCode": "prm-101.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/prm-101.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
