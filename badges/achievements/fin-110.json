@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-110.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Banking Professionals",
+  "description": "Practice banking work on a self-contained fictional bank packet: repair service drafts, reconcile credit facts and reason records, summarize investigation leads, compare review burdens and prepare a scoped recommendation. Supplied outputs let you complete the work without a model account, code installation or real customer records.",
+  "humanCode": "FIN-110",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "banking",
+    "customer-service",
+    "credit-operations",
+    "privacy",
+    "evaluation"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-110.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Banking Professionals"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-110/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select a bounded banking-assistance task and document the data, user, action and acceptance boundaries",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-1",
+      "targetCode": "fin-110.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare a minimum-data synthetic packet and test whether a proposed output remains within its authorized scope",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-2",
+      "targetCode": "fin-110.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Repair customer-service drafts using the correct policy record and preserve complaints or alleged errors for the responsible process",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-3",
+      "targetCode": "fin-110.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile credit facts and stated decision reasons without inventing missing information, explanations or legal conclusions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-4",
+      "targetCode": "fin-110.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare an alert-investigation handoff that separates observed transactions, hypotheses, missing evidence and authorized actions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-5",
+      "targetCode": "fin-110.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare an assistant with a rules or manual baseline using defined units, denominators, errors and review workload",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-6",
+      "targetCode": "fin-110.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Inspect a third-party proposal and route privacy, security, credit and model-governance gaps to accountable owners",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-7",
+      "targetCode": "fin-110.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble and revise a feasible assistance recommendation with source observations, alternatives, costs, limits and observable re-entry conditions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-110/#outcome-8",
+      "targetCode": "fin-110.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-110.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
