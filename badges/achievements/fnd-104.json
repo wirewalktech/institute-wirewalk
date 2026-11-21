@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fnd-104.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI Literacy for Teams",
+  "description": "Practice team AI literacy through a synthetic US distributor rollout: classify tasks, check source claims, rehearse role-specific work and measure review effort as well as drafting time.",
+  "humanCode": "FND-104",
+  "fieldOfStudy": "AI Foundations",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "ai literacy",
+    "team practice",
+    "source checking",
+    "measurement",
+    "data boundaries",
+    "role-based learning"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fnd-104.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI Literacy for Teams"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fnd-104/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Classify a supplied team task and select its permitted manual, draft-only or separately authorized route",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-1",
+      "targetCode": "fnd-104.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate participation, observed practice and work-quality measures using their actual denominators",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-2",
+      "targetCode": "fnd-104.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Apply a role-specific checklist to a fallible AI output",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-3",
+      "targetCode": "fnd-104.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Resolve a source, version or unit contradiction and retain unsupported claims as unresolved",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-4",
+      "targetCode": "fnd-104.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Select the supplied data, service and purpose boundary and document unresolved authorization questions",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-5",
+      "targetCode": "fnd-104.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Use faded practice and source-based feedback to correct an artifact and test transfer to another task",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-6",
+      "targetCode": "fnd-104.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Calculate selected preparation costs and aggregate hours and revise scope after a capacity change",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-7",
+      "targetCode": "fnd-104.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Complete a source-bound 30/60/90-day plan with owners, evidence, exclusions and refresh triggers",
+      "targetUrl": "https://institute.wirewalk.com/courses/fnd-104/#outcome-8",
+      "targetCode": "fnd-104.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fnd-104.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
