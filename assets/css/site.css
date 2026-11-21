@@ -371,9 +371,9 @@ input::placeholder,textarea::placeholder{color:var(--tx3)}
 .c-aside{display:flex;flex-direction:column;gap:20px}
 .c-aside .box{border:1px solid var(--ln);border-radius:var(--r);padding:20px;background:var(--srf)}
 .c-aside h3{font:600 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin:0 0 12px}
-@media (max-width:980px){.c-body{grid-template-columns:1fr}}
+@media (max-width:980px){.c-body{grid-template-columns:minmax(0,1fr)}}
 .prose p{max-width:68ch}
-.prose{font-size:17.5px}
+.prose{font-size:17.5px;overflow-wrap:anywhere}
 .outcomes{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .outcomes li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;line-height:1.5}
 .outcomes li{position:relative}
@@ -387,10 +387,11 @@ input::placeholder,textarea::placeholder{color:var(--tx3)}
 .modules{border:1px solid var(--ln);border-radius:var(--r2);overflow:hidden;background:var(--srf)}
 .modules details{border-bottom:1px solid var(--ln)}
 .modules details:last-child{border-bottom:0}
-.modules summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:18px 20px}
+.modules summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;padding:18px 20px}
 .modules summary::-webkit-details-marker{display:none}
 .modules summary:hover{background:var(--alt)}
 .mod-n{font:600 15px/1 var(--mono);color:var(--ac);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--acbg)}
+.mod-t{min-width:0;overflow-wrap:anywhere}
 .mod-t h3{font-size:18px;margin:0 0 3px}
 .mod-t .mod-sum{display:block;margin:0;font-size:14.5px;color:var(--tx2);line-height:1.45}
 .mod-c{font-size:13.5px;color:var(--tx3);display:flex;align-items:center;gap:10px;white-space:nowrap}
@@ -406,7 +407,7 @@ input::placeholder,textarea::placeholder{color:var(--tx3)}
 .mod-lab-t{font-weight:600;color:var(--tx)}
 .mod-lab-s{font-size:14px;color:var(--tx2)}
 @media (max-width:560px){.mod-labs{padding:0 16px 16px}}
-@media (max-width:560px){.modules summary{grid-template-columns:36px 1fr;padding:16px}.mod-c{grid-column:2}.modules ol{padding:0 16px 16px 66px}}
+@media (max-width:560px){.modules summary{grid-template-columns:36px minmax(0,1fr);padding:16px}.mod-c{grid-column:2}.modules ol{padding:0 16px 16px 66px}}
 .mod-tools{display:flex;justify-content:flex-end;margin:-6px 0 10px}
 
 .disclaimer{font-size:14px;color:var(--tx2);border-left:3px solid var(--ln2);padding:4px 0 4px 16px;margin:0}
