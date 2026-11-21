@@ -1,0 +1,140 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-245.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI for Insurance Fraud Detection and SIU Investigations",
+  "description": "Evaluate fraud referrals, evidence and AI-assisted investigations through twenty lessons and a cumulative fictional US insurer case. Build a capacity-aware queue, audit entity and media signals, preserve claimant safeguards, and reconcile validation and antifraud-plan records.",
+  "humanCode": "FIN-245",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "insurance",
+    "insurance fraud",
+    "siu",
+    "special investigations unit",
+    "claims",
+    "property and casualty",
+    "fraud detection",
+    "entity resolution",
+    "graph analytics",
+    "media forensics",
+    "deepfakes",
+    "workers compensation",
+    "no-fault pip",
+    "naic",
+    "model validation",
+    "generative ai",
+    "agents"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-245.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI for Insurance Fraud Detection and SIU Investigations"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-245/",
+    "narrative": "To earn this certificate a learner must: complete all 20 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a rules baseline and learned ranking for leakage, selected labels and a capacity-aware SIU queue using supplied synthetic outputs",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-1",
+      "targetCode": "fin-245.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Distinguish entity identity, graph association and peer-provider anomalies in a source-cited review memo",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-2",
+      "targetCode": "fin-245.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Design proportionate media and payee-change verification with neutral communication and a correction route",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-3",
+      "targetCode": "fin-245.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate quote, public-post and voice workflows for purpose, identity/date provenance, verification burden and procurement evidence",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-4",
+      "targetCode": "fin-245.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Audit a grounded claim-file assistant and specify approval-gated action permissions with explicit failure handling",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-5",
+      "targetCode": "fin-245.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft a source-supported synthetic state referral and compute a New York reporting deadline from a recorded determination",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-6",
+      "targetCode": "fin-245.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate selection bias, referral/payment disparities, drift and fast-track uncertainty with independent audit samples",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-7",
+      "targetCode": "fin-245.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile an AI detection-methods description and annual antifraud metrics to actual supplied operations and evidence status",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-245/#outcome-8",
+      "targetCode": "fin-245.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-245.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
