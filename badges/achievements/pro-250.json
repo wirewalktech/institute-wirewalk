@@ -1,0 +1,137 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/pro-250.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI Risk Analytics: Scenario Analysis, Monte Carlo and Key Risk Indicators",
+  "description": "Build and challenge a synthetic risk-analytics evidence packet: elicitation, seeded annual-loss simulation, dependence and control sensitivities, indicator/extraction evaluation and typed number tracing. Recommend a bounded board use with explicit gaps rather than turn a simulated result into approval.",
+  "humanCode": "PRO-250",
+  "fieldOfStudy": "AI in Professional Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "enterprise risk management",
+    "monte carlo",
+    "scenario analysis",
+    "key risk indicators",
+    "open fair",
+    "cyber risk quantification",
+    "sec item 106",
+    "orsa",
+    "operational resilience",
+    "third-party risk",
+    "internal audit",
+    "copulas",
+    "risk reporting",
+    "model validation"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/pro-250.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI Risk Analytics: Scenario Analysis, Monte Carlo and Key Risk Indicators"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/pro-250/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze elicited event definitions,units and severity ranges;repair a seeded annual-loss simulation and document its12-of25-risk scope",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-1",
+      "targetCode": "pro-250.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate dependence-family and latent-correlation sensitivities,verify matrix/factorization conditions and preserve marginal samples without presenting an assumption as measured correlation",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-2",
+      "targetCode": "pro-250.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate cyber-control and recovery sensitivities with conditional/annual scope,insurance simplifications and actual disclosure/continuity authority kept separate",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-3",
+      "targetCode": "pro-250.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze workshop,parameter and horizon-source records for unsourced claims,shared causes,changed evidence and overlap before proposing register updates",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-4",
+      "targetCode": "pro-250.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate mature rolling-origin KRI evidence and incident/provider extraction errors against explicit denominators and propose bounded human-review routes",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-5",
+      "targetCode": "pro-250.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create a typed figure-trace record and supported board,audit-priority and insurer-stress narratives that preserve statistic,unit,period,scenario and authority",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-6",
+      "targetCode": "pro-250.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate numerical convergence,seeds and sensitivity separately from assumptions,predictive validity and model fitness for intended use",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-7",
+      "targetCode": "pro-250.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Create and revise a scoped validation recommendation with actual evidence,lineage,alternative strategy,owned gaps and a concrete independent-review request",
+      "targetUrl": "https://institute.wirewalk.com/courses/pro-250/#outcome-8",
+      "targetCode": "pro-250.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/pro-250.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
