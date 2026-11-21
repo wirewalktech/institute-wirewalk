@@ -1,0 +1,131 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/fin-235.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "Building AI for Insurance Underwriting and Rating under State Insurance Law",
+  "description": "Analyze US P&C underwriting and rating decisions using synthetic model outputs, notice records, imagery, catastrophe loads and commercial submissions. Build a cumulative committee evidence file, test fallible AI drafts, and practice six module Decision Labs plus a strategic capstone. Primary-source refresh: November 21, 2026; state and line scope remain explicit.",
+  "humanCode": "FIN-235",
+  "fieldOfStudy": "AI in Financial Services",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "insurance ai",
+    "p&c pricing",
+    "rate filing",
+    "underwriting",
+    "gbm",
+    "shap",
+    "unfair discrimination testing",
+    "bifsg",
+    "credit-based insurance score",
+    "fcra adverse action",
+    "catastrophe modeling",
+    "aerial imagery",
+    "submission intake",
+    "loss runs",
+    "naic model bulletin",
+    "ny circular letter 7",
+    "colorado regulation 10-1-1"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/fin-235.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: Building AI for Insurance Underwriting and Rating under State Insurance Law"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/fin-235/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate an interaction selection, disruption analysis and state-specific input-lineage screen using supplied modeling records",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-1",
+      "targetCode": "fin-235.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Analyze proxy uncertainty, outcome metrics and alternative-model tradeoffs without treating a screening heuristic as insurance law",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-2",
+      "targetCode": "fin-235.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Diagnose state-line, consumer-report and score-definition notice obligations and imagery verification gaps",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-3",
+      "targetCode": "fin-235.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile modeled average annual loss and evaluate Florida and California filing prerequisites with explicit model/version and commitment scope",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-4",
+      "targetCode": "fin-235.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile extracted commercial records and justify classification and referral questions from supplied sources",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-5",
+      "targetCode": "fin-235.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Evaluate a filing draft and assistant boundary using adverse counterexamples and source/authority records",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-6",
+      "targetCode": "fin-235.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Assemble a dated model/vendor evidence index and prioritize a bounded response to material change",
+      "targetUrl": "https://institute.wirewalk.com/courses/fin-235/#outcome-7",
+      "targetCode": "fin-235.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/fin-235.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
