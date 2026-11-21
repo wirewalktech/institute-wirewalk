@@ -1,0 +1,131 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/wrk-113.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Marketing and Content",
+  "description": "Use AI assistance for a scoped marketing workflow: reconcile claims and voice, adapt checked assets, inspect search and measurement evidence, and revise a feasible source-backed preparation plan.",
+  "humanCode": "WRK-113",
+  "fieldOfStudy": "AI at Work",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "marketing",
+    "content",
+    "brand",
+    "seo",
+    "ai-search",
+    "measurement",
+    "ftc",
+    "source-review"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/wrk-113.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Marketing and Content"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/wrk-113/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Build a source-bearing content brief with audience, voice and acceptance criteria.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-1",
+      "targetCode": "wrk-113.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Reconcile offer, entity, version, date and action state in a candidate draft.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-2",
+      "targetCode": "wrk-113.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Adapt checked material across channels while preserving facts and use scope.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-3",
+      "targetCode": "wrk-113.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Prepare useful owned content and bound an AI-answer observation.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-4",
+      "targetCode": "wrk-113.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compute defined campaign and review-effort measures with population limits.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-5",
+      "targetCode": "wrk-113.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Inspect supplied US-focused relationship, authorship and use-scope evidence.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-6",
+      "targetCode": "wrk-113.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Trace actual service, prompt, output, log and recipient boundaries.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-7",
+      "targetCode": "wrk-113.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Defend and revise a feasible preparation portfolio with observable next evidence.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-113/#outcome-8",
+      "targetCode": "wrk-113.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/wrk-113.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
