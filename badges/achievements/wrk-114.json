@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "https://institute.wirewalk.com/badges/achievements/wrk-114.json",
+  "type": [
+    "Achievement"
+  ],
+  "achievementType": "CertificateOfCompletion",
+  "name": "AI for Sales Teams",
+  "description": "Practical AI-assisted sales preparation from complete supplied fictional records: CRM identity, source-based research, channel-specific drafts, discovery, proposals, funnel measures and whole-cost decisions.",
+  "humanCode": "WRK-114",
+  "fieldOfStudy": "AI at Work",
+  "inLanguage": "en-US",
+  "version": "2026-11",
+  "tag": [
+    "sales",
+    "prospecting",
+    "crm",
+    "discovery",
+    "proposals",
+    "outreach",
+    "ai-workflows",
+    "commercial-email",
+    "funnel-measurement",
+    "cost-comparison"
+  ],
+  "image": {
+    "id": "https://institute.wirewalk.com/badges/img/wrk-114.svg",
+    "type": "Image",
+    "caption": "Wirewalk Institute of AI badge: AI for Sales Teams"
+  },
+  "creator": {
+    "id": "https://institute.wirewalk.com/badges/issuer.json",
+    "type": [
+      "Profile"
+    ],
+    "name": "Wirewalk Institute of AI",
+    "url": "https://institute.wirewalk.com"
+  },
+  "criteria": {
+    "id": "https://institute.wirewalk.com/courses/wrk-114/",
+    "narrative": "To earn this certificate a learner must: complete all 18 lessons in 6 modules, play each of the course's 7 Decision Labs to an ending (the lab score does not count); and pass the final exam: 20 questions, 40 minutes, pass mark 80%, at most 3 attempts, with a 24-hour wait after a failed attempt.\n\nThe exam is taken online and is not proctored. The holder's identity is not verified; the name is the one on their account. This is a certificate of completion and assessment issued by Wirewalk Institute of AI. It is not an accreditation, academic credit, license, or a certification from any vendor. Details: https://institute.wirewalk.com/certification/#limits"
+  },
+  "alignment": [
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Join account, site, person and buying-project records; retain unresolved identities and distinguish duplicate rows from distinct projects.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-1",
+      "targetCode": "wrk-114.O1",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Produce and repair a source-bearing brief using actual entity, body, date, product and version dependencies.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-2",
+      "targetCode": "wrk-114.O2",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Draft a useful channel-specific sales message under supplied local recipient/permission/suppression conditions, separating those conditions from unresolved legal applicability.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-3",
+      "targetCode": "wrk-114.O3",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Convert supplied discovery into a proposal with correct quantities, prices, exclusions, authority and typed request/approval/acceptance states.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-4",
+      "targetCode": "wrk-114.O4",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Recompute mature funnel measures from actual member sets and distinguish booked, held, qualified and accepted outcomes from immature observations.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-5",
+      "targetCode": "wrk-114.O5",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Compare matched cost, contribution and whole-work boundaries without substituting revenue, gross contribution or unsupplied labor for one another.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-6",
+      "targetCode": "wrk-114.O6",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Specify an assistance procedure with identity/source tests, useful manual fallback, bounded handoffs and propagated repairs across dependent copies.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-7",
+      "targetCode": "wrk-114.O7",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    },
+    {
+      "type": [
+        "Alignment"
+      ],
+      "targetName": "Choose and revise a feasible preparation portfolio, defend exclusions and two feasible alternatives, and incorporate or reject two source-specific feedback requests with reasons.",
+      "targetUrl": "https://institute.wirewalk.com/courses/wrk-114/#outcome-8",
+      "targetCode": "wrk-114.O8",
+      "targetFramework": "Wirewalk Institute of AI course outcomes"
+    }
+  ],
+  "resultDescription": [
+    {
+      "id": "https://institute.wirewalk.com/badges/achievements/wrk-114.json#exam-score",
+      "type": [
+        "ResultDescription"
+      ],
+      "name": "Final exam score",
+      "resultType": "Percent",
+      "valueMin": "0",
+      "valueMax": "100",
+      "requiredValue": "80"
+    }
+  ]
+}
